@@ -1,3 +1,18 @@
 {
-  "docsets_to_publish": []
+  "docsets_to_publish": [
+    {
+      "docset_name": "m365-copilot-connectors",
+      "build_source_folder": "copilot-connectors",
+      "build_output_subfolder": "m365-copilot-connectors",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    }
+  ],
+  "notification_subscribers": [],
+  "need_preview_pull_request": true
 }
