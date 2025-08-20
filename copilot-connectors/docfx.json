@@ -43,7 +43,7 @@
     "globalMetadata": {
       "uhfHeaderId": "MSDocs-Header-Copilot",
       "titleSuffix": "Microsoft 365 Copilot connectors",
-      "breadcrumb_path": "~/breadcrumb/m365-copilot-connectors/toc.json",
+      "breadcrumb_path": "/microsoft-365-copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json",
       "feedback_system": "Standard",
       "permissioned-type": "public",
       "contributors_to_exclude": [ 
