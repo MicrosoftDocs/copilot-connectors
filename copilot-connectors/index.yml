@@ -23,7 +23,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is [service]?
+          - text: What are Copilot connectors?
             url: index.yml
           - text: linktext2
             url: index.yml
