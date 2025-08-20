@@ -27,7 +27,7 @@ landingContent:
             url: index.yml
           - text: linktext2
             url: index.yml
-      - linkListType: linkListType
+      - linkListType: concept
         links:
           - text: linktext1
             url: index.yml
@@ -37,13 +37,13 @@ landingContent:
   # Card 
   - title: Get started
     linkLists:
-      - linkListType: linkListType
+      - linkListType: get-started
         links:
           - text: linktext1
             url: index.yml
           - text: linktext2
             url: index.yml
-      - linkListType: linkListType
+      - linkListType: quickstart
         links:
           - text: linktext1
             url: index.yml
@@ -53,13 +53,13 @@ landingContent:
   # Card
   - title: cardtitle3
     linkLists:
-      - linkListType: linkListType
+      - linkListType: tutorial
         links:
           - text: linktext1
             url: index.yml
           - text: linktext2
             url: index.yml
-      - linkListType: linkListType
+      - linkListType: how-to-guide
         links:
           - text: linktext1
             url: index.yml
@@ -69,13 +69,13 @@ landingContent:
   # Card (Optional; Remove if not applicable.)
   - title: cardtitle4
     linkLists:
-      - linkListType: linkListType
+      - linkListType: architecture
         links:
           - text: linktext1
             url: index.yml
           - text: linktext2
             url: index.yml
-      - linkListType: linkListType
+      - linkListType: reference
         links:
           - text: linktext1
             url: index.yml
