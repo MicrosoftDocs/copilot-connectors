@@ -24,7 +24,10 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.jpeg",
+          "**/*.gif",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -38,9 +41,22 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/m365-copilot-connectors/toc.yml",
+      "uhfHeaderId": "MSDocs-Header-Copilot",
+      "titleSuffix": "Microsoft 365 Copilot connectors",
+      "breadcrumb_path": "/microsoft-365-copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json",
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "permissioned-type": "public",
+      "contributors_to_exclude": [ 
+        "rjagiewich", 
+        "claydetels19",
+        "jborsecnik",
+        "garycentric",
+        "alexbuckgit", 
+        "dstrome",
+        "padmagit77",
+        "aditisrivastava07",
+        "Ruchika-mittal01"
+      ]
     },
     "fileMetadata": {},
     "template": []

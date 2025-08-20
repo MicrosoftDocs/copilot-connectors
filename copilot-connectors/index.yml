@@ -1,0 +1,83 @@
+### YamlMime:Landing
+
+title: Microsoft 365 Copilot connectors # < 60 chars
+summary: Information about connectors for Microsoft 365 Copilot. # < 160 chars
+
+metadata:
+  title: Microsoft 365 Copilot connectors # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Information about connectors for Microsoft 365 Copilot. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: microsoft-365-copilot #Required; use either service or product per approved list. 
+  ms.topic: landing-page # Required
+  ms.collection: collection # Optional; Remove if no collection is used.
+  author: garycentric #Required; your GitHub user alias, with correct capitalization.
+  ms.author: v-garymoore #Required; microsoft alias of author; optional team alias.
+  ms.date: 08/19/2025 #Required; mm/dd/yyyy format.
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card 
+  - title: About [service]
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is [service]?
+            url: index.yml
+          - text: linktext2
+            url: index.yml
+      - linkListType: concept
+        links:
+          - text: linktext1
+            url: index.yml
+          - text: linktext2
+            url: index.yml
+
+  # Card 
+  - title: Get started
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: linktext1
+            url: index.yml
+          - text: linktext2
+            url: index.yml
+      - linkListType: quickstart
+        links:
+          - text: linktext1
+            url: index.yml
+          - text: linktext2
+            url: index.yml
+
+  # Card
+  - title: cardtitle3
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: linktext1
+            url: index.yml
+          - text: linktext2
+            url: index.yml
+      - linkListType: how-to-guide
+        links:
+          - text: linktext1
+            url: index.yml
+          - text: linktext2
+            url: index.yml
+
+  # Card (Optional; Remove if not applicable.)
+  - title: cardtitle4
+    linkLists:
+      - linkListType: architecture
+        links:
+          - text: linktext1
+            url: index.yml
+          - text: linktext2
+            url: index.yml
+      - linkListType: reference
+        links:
+          - text: linktext1
+            url: index.yml
+          - text: linktext2
+            url: index.yml

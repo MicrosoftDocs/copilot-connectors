@@ -1,1 +1,0 @@
-# Welcome to m365-copilot-connectors!
