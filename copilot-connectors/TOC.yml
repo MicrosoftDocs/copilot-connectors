@@ -1,2 +1,75 @@
-- name: Index
-  href: index.yml
+items:
+- name: Microsoft 365 Copilot connectors overview
+  href: overview.md
+- name: Get started
+  items:
+  - name: Prerequisites
+    href: prerequisites.md
+  - name: Deployment overview
+    href: deployment-overview.md
+- name: Connectors gallery
+  href: connectors-gallery.md
+- name: Deploy prebuilt connectors
+  items:
+  - name: Delegate administration
+    href: 
+  - name: Staged rollout
+    href: 
+  - name: Map Entra identities
+    href: 
+  - name: Map non-Entra identities
+    href:
+  - name: Enhance Copilot discovery of connector content
+    href: 
+  - name: Prebuilt connectors
+    items:
+    - name: Confluence Cloud
+      items: 
+      - name: Overview
+        href: confluence-cloud-connector-overview.md
+      - name: Deployment guide
+        href: confluence-cloud-connector-deployment.md
+      - name: Troubleshooting
+        href: confluence-cloud-connector-troubleshooting.md
+- name: Deploy on-premises connectors
+  items:
+  - name: Set up the Microsoft Graph connector agent
+    href:
+  - name: Connector agent release notes
+    href:
+- name: Build custom Copilot connectors
+  items:
+  - name: Build with Agents Toolkit
+    href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=/copilot-connectors/context
+  - name: Build with SDK
+    href: /graph/custom-connector-sdk-sample-overview?context=/copilot-connectors/context 
+  - name: Use the Copilot Connectors API
+    items:
+    - name: Overview
+      href: /graph/connecting-external-content-connectors-api-overview?context=/copilot-connectors/context
+    - name: Manage connections
+      href: /graph/connecting-external-content-manage-connections?context=/copilot-connectors/context
+    - name: Manage schema
+      href: /graph/connecting-external-content-manage-schema?context=/copilot-connectors/context
+    - name: Manage items
+      href: /graph/connecting-external-content-manage-items?context=/copilot-connectors/context
+    - name: Use external groups
+      href: /graph/connecting-external-content-external-groups?context=/copilot-connectors/context  
+  - name: Manage connections
+    items:
+    - name: Monitor connections
+      href:
+    - name: View connection details
+      href:
+    - name: Search and validate indexed content
+      href:
+    - name: Error responses
+      href:
+    - name: Item delete notification
+      href:
+- name: Frequently asked questions
+  href:
+- name: Known issues
+  href: known-issues.md
+- name: Terms of use
+  href: terms-of-use.md
