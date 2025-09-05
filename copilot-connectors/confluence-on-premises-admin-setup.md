@@ -119,10 +119,12 @@ You can deploy Confluence Data Center in a highly available configuration by usi
 
 The Microsoft Graph Connector Agent must be configured to communicate with the load-balanced Confluence web URL, not individual nodes. This ensures consistent access and failover support. Verify that the load-balanced URL is accessible from the internal network where the Graph Connector Agent is hosted.
 
+<!--
 The following example shows a clustered deployment that uses a hardware load balancer to distribute traffic across Confluence nodes. The Copilot connector that connects to the Confluence instance must be able to communicate with the hardware load balancer.
 
-[Placeholder for Data Center diagram]
 
+[Placeholder for Data Center diagram]
+-->
 For more information, see [Clustering with Confluence Data Center](https://confluence.atlassian.com/doc/clustering-with-confluence-data-center-790795847.html).
 
 ### Enable JavaScript on the Apache server
@@ -131,7 +133,14 @@ To ensure that the Confluence consent screen displays correctly, verify the TCP 
 
 Open the `<confluence-install-dir>/conf/server.xml` file and add the missing `secure="true"` attribute to the connector associated with Confluence’s base URL, as shown in the following example.
 
-[Placeholder for code example]
+```xml
+<Connector port="8090" connectionTimeout="20000" redirectPort="8443"
+    maxThreads="48" minSpareThreads="10"
+    enableLookups="false" acceptCount="10" debug="0" URIEncoding="UTF-8"
+    protocol="org.apache.coyote.http11.Http11NioProtocol"
+    scheme="https" secure="true" proxyName="<CONFLUENCE_PROXY_NAME_HERE>" proxyPort="443"
+    compression="on" compressibleMimeType="text/html,text/xml,text/plain,text/css,applicat" />
+```
 
 ### Configure Entra ID sync in Crowd
 
@@ -147,8 +156,6 @@ To reduce the number of requests sent by the connector, you can submit a support
 
 - Requests allowed per node
 - Maximum requests
-
-[Placeholder for screenshot]
 
 ## Set up prerequisites
 
