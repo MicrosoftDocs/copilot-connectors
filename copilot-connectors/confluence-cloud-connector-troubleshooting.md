@@ -6,8 +6,8 @@ author: lauragra
 manager: calvind
 audience: Admin
 ms.audience: Admin
-ms.topic: install-set-up-deploy
-ms.service: mssearch
+ms.topic: troubleshooting-general
+ms.service: copilot-connectors
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Confluence Cloud Microsoft 365 Copilot connector."
 ---

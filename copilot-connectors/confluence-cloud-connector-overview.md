@@ -6,8 +6,8 @@ author: lauragra
 manager: calvind
 audience: Admin
 ms.audience: Admin
-ms.topic: install-set-up-deploy
-ms.service: mssearch
+ms.topic: concept-article
+ms.service: copilot-connectors
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Confluence Cloud Copilot connector."
 ---
