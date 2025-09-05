@@ -5,8 +5,14 @@ metadata:
   author: lauragra
   ms.author: lauragra
   ms.topic: faq
-  ms.service: copilot-connectors
+  ms.service: 
   ms.date: 09/05/2025
+
+title: "Microsoft 365 Copilot Connectors FAQ"
+summary: |
+  Microsoft 365 Copilot connectors increase the discoverability of and engagement with your enterprise data by integrating your data into the Microsoft 365 Copilot experience. With Copilot connectors, you can make the most of your external data for functions like enriched data analysis to allow Copilot to access and summarize diverse datasets from different sources and provide more comprehensive insights.
+
+  This article provides answers to frequently asked questions related to Copilot connectors.
 
 sections:
   - name: "General questions"
@@ -175,7 +181,7 @@ sections:
 additionalContent: |
 
   ## Related content
-  
+
     - [Connectors overview](overview.md)
     - [Connectors gallery](connectors-gallery.md)
 
