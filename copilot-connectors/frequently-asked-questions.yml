@@ -172,8 +172,10 @@ sections:
           You can install the Microsoft Graph Connector Agent on multiple computers, for multiple connections. One agent can handle multiple connections. The crawl performance depends on the number of connections used, crawl frequency, and number of items. We recommend using no more than three connections per agent.
 
 
-additionalContent:
+additionalContent: |
+
   ## Related content
+  
     - [Connectors overview](overview.md)
     - [Connectors gallery](connectors-gallery.md)
 
