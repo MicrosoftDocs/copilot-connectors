@@ -80,11 +80,7 @@ For more information about mapping identities that aren’t in Microsoft Entra I
 
 Confluence administrators can integrate LDAP directories—such as Microsoft Entra ID—to centrally manage user access and permissions. By syncing LDAP groups into Confluence, administrators can assign those groups to spaces and pages to control view and edit access to align with enterprise-wide identity governance.
 
-Microsoft doesn't currently support access control lists (ACLs) based on nested LDAP groups synced through Crowd. To manage user permissions on spaces and pages, use one of the following methods:
-
-- Confluence native groups
-- LDAP groups directly synced to Confluence
-- Direct user-level permissions on spaces and pages
+You can use synced nested groups to manage access control lists (ACLs), provided the nested group's members are part of a Confluence user group.
 
 The following table provides a comparison of LDAP groups and Confluence native groups for Confluence user access permissions.
 

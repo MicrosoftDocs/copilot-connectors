@@ -112,7 +112,7 @@ The following table lists the default values that are set. These values work bes
 | Users | Access permissions | Only people with access to the content in the data source. |
 | Users | Map identities |  Data source identities mapped using Microsoft Entra IDs. |
 | Content | Include/exclude space | All |
-| Content | Manage properties | To see default properties and schemas, see [](). |
+| Content | Manage properties | To see default properties and schemas, see [Manage properties](#manage-properties). |
 | Sync | Incremental crawl | Frequency: Every 15 minutes |
 | Sync | Full crawl | Frequency: Every day |
 

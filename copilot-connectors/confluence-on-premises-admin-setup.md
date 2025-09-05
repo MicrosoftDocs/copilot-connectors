@@ -36,7 +36,6 @@ The following checklists list the steps involved in configuring the environment 
 | [Configure servers for high availability](#configure-confluence-servers-for-high-availability) | Confluence admin |  |
 | [Enable JavaScript on the Apache server](#enable-javascript-on-the-apache-server) | Confluence admin |  |
 | [Configure Entra ID sync in Crowd](#configure-entra-id-sync-in-crowd) | Confluence admin |  |
-| [Enable admin scope for Data Center](#enable-admin-scope-for-confluence-data-center-version-84-and-later) | Confluence admin |  |
 | [Check API throttling configurations](#check-api-throttling-configurations-to-manage-compute-resources) | Confluence admin |  |
 
 ### Set up prerequisites
@@ -45,7 +44,6 @@ The following checklists list the steps involved in configuring the environment 
 | ---- | ---- | ------ |
 | [Create service account](#create-service-account) | Confluence admin |  |
 | [Identify item count for ingestion](#identify-item-count-for-ingestion) | Confluence admin |  |
-| [Set up CQL for advanced search](#set-up-cql-for-advanced-search) | Confluence admin |  |
 | [Provision an OAuth endpoint](#provision-an-oauth-endpoint) | Confluence admin |  |
 | [Add IP address to allow list](#add-ip-address-to-allow-list) | Confluence admin/Network admin |  |
 | [Install the Confluence connector plugin](#install-the-confluence-connector-plugin) | Confluence admin |  |
@@ -99,11 +97,7 @@ For more information about mapping identities that aren’t in Microsoft Entra I
 
 Confluence administrators can integrate LDAP directories—such as Microsoft Entra ID—to centrally manage user access and permissions. By syncing LDAP groups into Confluence, administrators can assign those groups to spaces and pages to control view and edit access to align with enterprise-wide identity governance.
 
-Microsoft doesn't currently support access control lists (ACLs) based on nested LDAP groups synced through Crowd. To manage user permissions on spaces and pages, use one of the following methods:
-
-- Confluence native groups
-- LDAP groups directly synced to Confluence
-- Direct user-level permissions on spaces and pages
+You can use synced nested groups to manage access control lists (ACLs), provided the nested group's members are part of a Confluence user group.
 
 The following table provides a comparison of LDAP groups and Confluence native groups for Confluence user access permissions.
 
@@ -122,6 +116,8 @@ Copilot uses the descriptions and short descriptions in Confluence to semantical
 ### Configure Confluence servers for high availability
 
 You can deploy Confluence Data Center in a highly available configuration by using a hardware load balancer—either on-premises or by using AWS services. Make sure to record the Confluence web URL and verify that all clients on the internal network can access it.
+
+The Microsoft Graph Connector Agent must be configured to communicate with the load-balanced Confluence web URL, not individual nodes. This ensures consistent access and failover support. Verify that the load-balanced URL is accessible from the internal network where the Graph Connector Agent is hosted.
 
 The following example shows a clustered deployment that uses a hardware load balancer to distribute traffic across Confluence nodes. The Copilot connector that connects to the Confluence instance must be able to communicate with the hardware load balancer.
 
@@ -142,10 +138,6 @@ Open the `<confluence-install-dir>/conf/server.xml` file and add the missing `se
 You can configure Microsoft Entra ID as a directory in Crowd. When you configure Microsoft Entra ID, all changes to your users, groups, and memberships sync between Microsoft Entra ID and Crowd periodically, or whenever you request it. You can view information about your users directly in Crowd by using the User browser and Group browser.
 
 For more information, see [Configuring Microsoft Entra ID](https://confluence.atlassian.com/crowd060/configuring-microsoft-entra-id-1442841864.html).
-
-### Enable admin scope for Confluence Data Center (version 8.4 and later)
-
-If you're using Confluence Data Center version 8.4 or later, submit a Microsoft support case to enable the admin scope. This allows the Confluence connector to read pages in the configured spaces. After support confirms that the admin scope ECS configuration is deployed, continue with the connector setup.
 
 ### Check API throttling configurations to manage compute resources
 
@@ -221,47 +213,7 @@ To verify the expected item count for ingestion across all applicable connectors
 1. Choose **System Information**.
 1. Search for **Confluence Usage**. This section provides detailed metrics about your Confluence instance.
 
-You can also access the system information directly at: `https://<yoursitename>/confluence/admin/systeminfo.action`
-
-### Set up CQL for advanced search
-
-To retrieve pages from a specific space in Confluence Cloud that have certain labels and were last modified within a defined timeframe, use Confluence Query Language (CQL).
-
-Include the following components in your query:
-
-- **Space key** - Identifies the space you want to search.
-- **Page type** - Filters results to include only pages.
-- **Labels** - Filters pages by one or more labels.
-- **Last modified date** - Limits results to pages modified within a specific timeframe.
-
-The following example shows a CQL query.
-
-`CQLtype = page AND space = "SPACEKEY" AND label in ("label1", "label2") AND lastmodified >= "2025-01-01"`
-
-In the previous example:
-
-- `type` = page: Returns only pages.
-- `space` = "SPACEKEY": Replace "SPACEKEY" with the actual key for your space.
-- `label` in ("label1", "label2"): Returns pages with either label1 or label2.
-- `lastmodified` >= "2025-01-01": Returns pages modified on or after January 1, 2025.
-
-You can adjust the date format to `yyyy-MM-dd` or `yyyy-MM-dd HH:mm` to include time.
-
-> [!TIP]
-> - For label filtering, use label in (...) to match multiple labels.
-> - For date functions, CQL supports dynamic functions like `startOfYear()` or `endOfMonth()` to simplify date filtering. For example, `lastmodified >= startOfYear()` returns pages modified since the beginning of the current year.
-
-To run the query using the Confluence Cloud REST API, use the following POST request.
-
-[Placeholder for code block]
-
-Replace:
-
-- `yourUsername` and `yourPassword` with your credentials or use token-based authentication.
-- `https://your-confluence-url` with your Confluence base URL.
-- `SPACEKEY` with your space key.
-- `your-label` with the desired label.
-- Adjust the date and pagination as needed.
+You can also access the system information directly at: `https://<yoursitename>/confluence/admin/systeminfo.action`.
 
 ### Provision an OAuth endpoint
 
