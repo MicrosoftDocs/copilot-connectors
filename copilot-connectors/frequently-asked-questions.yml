@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: "Microsoft 365 Copilot Connectors FAQ"
+  title: Microsoft 365 Copilot Connectors FAQ
   description: "Find answers to frequently asked questions about Copilot connectors and connectors for Copilot Search."
   author: lauragra
   ms.author: lauragra
@@ -10,7 +10,7 @@ metadata:
 
 sections:
   - name: "General questions"
-    faqs:
+    questions:
       - question: "How do I set up a Microsoft 365 Copilot connector?"
         answer: |
           To set up a Copilot connector:
@@ -66,7 +66,7 @@ sections:
           - Use the Index browser to verify that an item is indexed.
 
   - name: "Prebuilt and custom Copilot connectors questions"
-    faqs:
+    questions:
       - question: "What are prebuilt Copilot connectors?"
         answer: |
           Prebuilt connectors are connectors that Microsoft and partner organizations provide that allow you to integrate external content sources like Salesforce, ServiceNow, Confluence, and more into Microsoft 365. These connectors help you bring external data into Microsoft 365.
@@ -118,7 +118,7 @@ sections:
           - **Custom verticals** - Create a custom vertical for each data source to help with troubleshooting and ensure that the data is indexed correctly.
 
   - name: "Copilot Search results page questions"
-    faqs:
+    questions:
       - question: "How are connector names and icons generated in the data source filter?"
         answer: |
           Prebuilt connectors display standard connector names and icons as data sources. For custom connectors built with the Copilot connectors SDK, the connection name and icon that the developer supplies is displayed as the data source. For custom connectors built with the Connectors API, a default connection name and icon are displayed as the data source.
@@ -154,7 +154,7 @@ sections:
           The type filter is populated with default values for the most common Copilot connectors, such as Confluence, Google Drive, and Jira.
 
   - name: "Microsoft Graph Connector Agent questions"
-    faqs:
+    questions:
       - question: "How does the Microsoft Graph Connector agent interact with its system, and where is the indexed data stored?"
         answer: |
           The agent is installed on-premises and needs access to the data source. When the account is authorized, the agent crawls the data and communicates with the Microsoft 365 Copilot connector services to push data to the index. The data indexed through Microsoft 365 Copilot connectors is in the same location.
@@ -173,11 +173,7 @@ sections:
 
 
 additionalContent:
-  links:
-    - text: "Connectors overview"
-      url: "./connectors-overview.md"
-    - text: "Connectors gallery"
-      url: "/microsoftsearch/connectors-gallery"
-    - text: "Copilot Search overview"
-      url: "/microsoftsearch/connectors-copilot-search"
+  ## Related content
+    - [Connectors overview](overview.md)
+    - [Connectors gallery](connectors-gallery.md)
 
