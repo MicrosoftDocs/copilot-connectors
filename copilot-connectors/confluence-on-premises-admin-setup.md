@@ -1,5 +1,5 @@
 ---
-ms.date: 08/29/2025
+ms.date: 09/05/2025
 title: "Set up the Confluence On-premises Service for Connector Ingestion"
 ms.author: lauragra
 author: lauragra
@@ -121,7 +121,6 @@ The Microsoft Graph Connector Agent must be configured to communicate with the l
 
 <!--
 The following example shows a clustered deployment that uses a hardware load balancer to distribute traffic across Confluence nodes. The Copilot connector that connects to the Confluence instance must be able to communicate with the hardware load balancer.
-
 
 [Placeholder for Data Center diagram]
 -->

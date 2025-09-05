@@ -1,5 +1,5 @@
 ---
-ms.date: 08/29/2025
+ms.date: 09/05/2025
 title: "Set up the Confluence Cloud Service for Connector Ingestion"
 ms.author: lauragra
 author: lauragra
@@ -198,7 +198,16 @@ You can adjust the date format to `yyyy-MM-dd` or `yyyy-MM-dd HH:mm` to include 
 
 To run the query using the Confluence Cloud REST API, use the following POST request.
 
-[Placeholder for code block]
+```http
+curl -u yourUsername:yourPassword \
+     -X POST "https://your-confluence-url/rest/api/search" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "cql": "type=page AND space=\"SPACEKEY\" AND label=\"your-label\" AND lastmodified >= \"2025-01-01\"",
+           "limit": 25,
+           "start": 0
+         }'
+```
 
 Replace:
 
@@ -216,7 +225,16 @@ For detailed instructions, see [Register an app in Confluence Cloud]().
 
 Use the following table to determine which scopes to select when you configure access through the Confluence API.
 
-[Placeholder for table]
+| Scope name | Code |
+| ---------- | ---- |
+| View content details<br />View details regarding content and its associated properties. | read:content-details:confluence|
+| View audit records<br />View and export audit records for Confluence events. | read:audit-log:confluence |
+| View pages<br />View page content. | read:page:confluence |
+| View groups<br />View details about groups including its members. | read:group:confluence |
+| View user details<br />View user details.  | read:user:confluence |
+| View spaces<br />View space details. | read:space:confluence |
+| View content summaries<br />View information about the content. Note that this does not provide access to the content itself. | read:content.metadata:confluence |
+
 
 ### Add IP address to allow list
 

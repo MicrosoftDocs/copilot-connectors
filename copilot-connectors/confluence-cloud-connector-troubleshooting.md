@@ -1,5 +1,5 @@
 ---
-ms.date: 08/12/2025
+ms.date: 09/05/2025
 title: "Troubleshoot issues with the Confluence Cloud Microsoft 365 Copilot connector"
 ms.author: lauragra
 author: lauragra
@@ -35,3 +35,4 @@ You might encounter the following errors when you deploy the Confluence Cloud co
 
 - [Confluence Cloud connector overview](confluence-cloud-connector-overview.md)
 - [Deploy the Confluence Cloud connector](confluence-cloud-connector-deployment.md)
+- [Set up the Confluence Cloud service for connector ingestion](confluence-cloud-admin-setup.md)

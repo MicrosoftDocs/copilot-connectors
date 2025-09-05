@@ -1,5 +1,5 @@
 ---
-ms.date: 08/29/2025
+ms.date: 09/05/2025
 title: "Confluence Cloud Microsoft 365 Copilot Connector Overview"
 ms.author: lauragra
 author: lauragra
