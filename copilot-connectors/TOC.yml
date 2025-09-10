@@ -33,7 +33,9 @@ items:
         href: confluence-cloud-connector-troubleshooting.md
 - name: Deploy on-premises connectors
   items:
-  - name: Set up the Microsoft Graph connector agent
+  - name: Set up the Graph Connector Agent
+    href:
+  - name: Troubleshoot the Graph Connector Agent
     href:
   - name: Connector agent release notes
     href:
