@@ -25,17 +25,17 @@ Copilot connectors provide the following key benefits:
 
 - **More complete Copilot answers** - Copilot can retrieve and reason over all relevant company information—including content from systems like Salesforce or Confluence—when answering questions or performing tasks.
 
-- **Security and compliance** - Connectors respect the source system's access controls. Only authorized users can view or use external content. After it's indexed, the data benefits from Microsoft 365's security, privacy, and compliance standards.
+- **Security and compliance** - Connectors respect the source system's access controls. Only authorized users can view or use external content. After the data is indexed, it benefits from Microsoft 365's security, privacy, and compliance standards.
 
 ## How Copilot connectors work
 
-A cCopilot connector defines a connection to an external data source and syncs content into Microsoft 365. It uses the Microsoft Graph connectors API to ingest items into the Microsoft Graph index. Each item includes content, metadata (like title and URL), and an access control list (ACL) that enforces permissions.
+A Copilot connector defines a connection to an external data source and syncs content into Microsoft 365. It uses the Microsoft Graph connectors API to ingest items into the Microsoft Graph index. Each item includes content, metadata (like title and URL), and an access control list (ACL) that enforces permissions.
 
 After the content is ingested:
 
 - **Unified index** - The item becomes part of your organization’s cloud search index. It's full-text searchable and processed by semantic indexing AI for relevance.
 
-- **Permission trimming** - Search and Copilot only show items to users who have access in the source system.
+- **Permission-based filtering** - Search and Copilot only show items to users who have access in the source system.
 
 - **Continuous sync** - Connectors periodically check for changes. New, updated, or deleted content is reflected in the index. Admins can configure sync frequency and trigger full crawls as needed.
 
@@ -43,17 +43,17 @@ Microsoft hosts the indexing pipeline in the cloud for most connectors. After se
 
 ## Prebuilt and custom connectors
 
-Microsoft offers over 100 prebuilt connectors for popular third-party services, including:
+Microsoft offers over 100 prebuilt connectors for popular services, including:
 
 - **File sharing and content management** - Box, Dropbox, Google Drive, Confluence, MediaWiki, network file shares.
 
-- **Enterprise apps and databases** - Salesforce, ServiceNow, Dynamics 365, Azure DevOps, SQL/Oracle databases, SAP.
+- **Enterprise apps and databases** - Salesforce, ServiceNow, Dynamics 365, Azure services, SQL/Oracle databases, SAP.
 
 - **Other platforms** - Workday, Zendesk, Jira, and more.
 
-To use a prebuilt connector, select the connector in the Microsoft 365 admin center, provide credentials and configuration details, and the Microsoft connector service handles the rest. These connectors are maintained by Microsoft or certified partners and updated regularly.
+To use a prebuilt connector, select the connector in the Microsoft 365 admin center, provide credentials and configuration details, and the Microsoft connector service handles the rest. Microsoft or certified partners maintain and update these connectors regularly.
 
-If no prebuilt connector exists for your system, you can build a custom connector by using the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-your-first-connector) or the [Microsoft Graph connectors API](/graph/connecting-external-content-connectors-api-overview). This requires a developer to define a schema, register the connection in Entra ID, and write code to pull and push data.
+If no prebuilt connector exists for your system, you can build a custom connector by using the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-your-first-connector) or the [Microsoft Graph connectors API](/graph/connecting-external-content-connectors-api-overview). Building a custom connector requires a developer to define a schema, register the connection in Microsoft Entra ID, and write code to pull and push data.
 
 For on-premises sources, you can use the [Graph Connector Agent]() to securely index local content.
 
@@ -63,11 +63,11 @@ Custom connectors offer flexibility but require maintenance. Use prebuilt connec
 
 The conversational Copilot Chat experience in Microsoft 365 Copilot, Teams, Outlook, and other Microsoft 365 apps use connector content to respond to user queries. When users ask questions or request help, Copilot retrieves data from internal and external sources.
 
-For example, the user query "Give me a summary of the ACME Corp deal" might return details from a Salesforce record if that system is connected. Copilot cites the source and provides a quick summary without requiring the user to open Salesforce.
+For example, the user query "Give me a summary of the Contoso deal" might return details from a Salesforce record if that system is connected. Copilot cites the source and provides a quick summary without requiring the user to open Salesforce.
 
 Connectors make Copilot Chat a more powerful assistant, capable of answering questions beyond Microsoft 365 content, via the following key features:
 
-- **Multi-turn conversation** - Follow-up questions stay in context and can pull from multiple connectors.
+- **Multiturn conversation** - Follow-up questions stay in context and can pull from multiple connectors.
 
 - **Content previews and links** - Users can open referenced items for more detail.
 
@@ -83,10 +83,10 @@ For example, if a user asks, "How do I file an expense report?", Copilot Search 
 
 Copilot connectors enhance the Copilot Search experience by providing the following benefits:
 
-Copilot connectors provide the following benefits:
-
 - **Unified indexing** - External data is indexed alongside Microsoft 365 content, enabling a single, comprehensive search experience.
+
 - **Personalized results** - Signals from Microsoft Graph and connector-ingested data help tailor results based on user roles, behaviors, and organizational relationships.
+
 - **Copilot extension** - A browser add-on that enhances search relevance by incorporating signals from external work-related sites—without tracking general browsing activity.
 
 The extensive connector ecosystem makes Copilot Search an enterprise-wide knowledge discovery platform that helps users find what they need, when they need it—no matter where the data lives.
@@ -95,7 +95,7 @@ The extensive connector ecosystem makes Copilot Search an enterprise-wide knowle
 
 After connectors are set up, users discover external content through Microsoft Search across Office.com, SharePoint, Outlook, Teams, Bing (work account), and other apps. Connectors enhance the Microsoft Search experience with the following features:
 
-- **Integrated results**  External items appear in the **All** results view alongside internal content. Each result is labeled with its source (for example, **Confluence VPN Access Policy**) and opens in its native app.
+- **Integrated results** - External items appear in the **All** results view alongside internal content. Each result is labeled with its source (for example, Confluence VPN Access Policy) and opens in its native app.
 
 - **Verticals and filters** - Admins can create custom search verticals (tabs) for specific connectors. Users can refine results by source or metadata properties.
 
