@@ -1,5 +1,5 @@
 ---
-title: "Licensing requirements for Microsoft 365 Copilot connectors"
+title: "Prerequisites for deploying Microsoft 365 Copilot connectors"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -11,11 +11,31 @@ description: "Learn about the licensing requirements for deploying Copilot conne
 ms.date: 09/09/2025
 ---
 
-# Licensing requirements for Microsoft 365 Copilot connectors
+# Prerequisites for deploying Microsoft 365 Copilot connectors
 
-Microsoft 365 Copilot connectors enable your organization to bring external data into the intelligent experiences within Microsoft 365. Before you deploy Copilot connectors, it's important to understand the licensing requirements and other prerequisites.
+Microsoft 365 Copilot connectors enable your organization to bring external data into the intelligent experiences within Microsoft 365. This article describes the prerequisites required to deploy Copilot connectors in your organization.
 
-## Licenses and quotas
+Some prebuilt connectors also have unique prerequisites and setup steps. For more information, see the deployment guide for that connector.
+
+## Admin roles and access
+
+To configure and deploy Copilot connectors, you must have one of the following roles in the Microsoft 365 admin center:
+
+- Global Admin
+- Search Admin
+- Copilot Admin
+
+In addition, for prebuilt connectors (such as Google Drive, Confluence, ServiceNow), you must have admin access to the external service (Google Workspace Super Admin, Confluence Admin).
+
+## Data source credentials and configuration
+
+To deploy connectors, you'll also need access to the data source, including:
+
+- Data source authentication credentials (API keys, service account tokens).
+- Proper configuration of the external environment (Google Cloud Project for Google Drive, Confluence site URL). See the deployment guide for the specific connector for more details.
+- Permissions to access the content you want indexed (wiki pages, catalog items, meeting transcripts, and so on).
+
+## License requirements and quotas
 
 All eligible Microsoft 365 and Office 365 enterprise customers receive a default index quota of 50 million items at no additional cost. This applies to the following license tiers:
 

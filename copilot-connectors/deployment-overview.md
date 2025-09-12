@@ -19,8 +19,6 @@ This article describes how to set up Microsoft 365 Copilot connectors in the Mic
 > [!NOTE]
 > The setup process is similar for all Copilot connectors, with some differences. We recommend that you reference the deployment guide specific to your data source.
 
-
-
 ## Prerequisites
 
 Before you begin, make sure you have the following:
