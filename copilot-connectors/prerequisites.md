@@ -4,63 +4,60 @@ ms.author: lauragra
 author: lauragra
 manager: calvind
 ms.audience: Admin
-ms.topic: overview
+ms.topic: concept-article
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-description: ""
+description: "Learn about the licensing requirements for deploying Copilot connectors in your organization."
 ms.date: 09/09/2025
 ---
 
 # Licensing requirements for Microsoft 365 Copilot connectors
 
-Copilot connectors allow Microsoft 365 Copilot to index and reason over external data sources—such as SaaS apps, file shares, and on-prem systems—via Microsoft Graph. Understanding the licensing requirements is essential for deploying connectors effectively and managing costs.
+Microsoft 365 Copilot connectors enable your organization to bring external data into the intelligent experiences within Microsoft 365. Before you deploy Copilot connectors, it's important to understand the licensing requirements and other prerequisites.
 
-Included Licensing
+## Licenses and quotas
+
 All eligible Microsoft 365 and Office 365 enterprise customers receive a default index quota of 50 million items at no additional cost. This applies to the following license tiers:
 
-Microsoft 365: E3, E5, F1, F3, Business Basic, Standard, Premium
-Office 365: E1, E3, E5, F3
-Education: A3, A5
-Government: G1, G3, G5
+- Microsoft 365: E3, E5, F1, F3, Business Basic, Standard, Premium
+- Office 365: E1, E3, E5, F3
+- Education: A3, A5
+- Government: G1, G3, G5
 
+> [!NOTE]
+> Connectors in preview status don't count against the quota until they reach general availability.
 
-Note: Connectors in preview status do not count against the quota until they reach general availability.
+Organizations that require additional quota beyond the standard 50 million items can purchase it through the Microsoft 365 admin center. Admins can monitor and adjust quota allocations as needed.
 
+Pricing for additional quota is $1,000 USD per 1 million items per month.
 
-Add-On Licensing
-Organizations requiring additional quota can purchase it through the Microsoft 365 admin center:
+### What represents items in an index quota?
 
-Pricing: $1,000 USD per 1 million items per month
-Management: Admins can monitor and adjust quota allocations as needed
+An item represents one unit of index quota. Each entity (or record) from the source system that is added to Microsoft Graph is considered an item. In Microsoft Graph, each item appears as a unique citation in Microsoft 365 Copilot responses and as a distinct search result in Microsoft Search.
 
+Depending on the type of data source, an item is defined as:
 
-Copilot Studio & Agent Licensing
-When using Copilot Studio to build agents that leverage connectors:
+- One document (Word, Excel, PPT, PDF) in a file share
+- One wiki page in Confluence
+- One webpage on a website
+- One ticket or issue in Jira
 
-A Copilot Studio license or Pay-As-You-Go (PAYGO) billing setup is required.
-PAYGO users can access agents grounded in tenant data (e.g., SharePoint, Graph).
-Advanced features like semantic search require the maker to have a Microsoft 365 Copilot license in the same tenant.
+The total quota utilized is based on the number of items stored in the index. The frequency of updates or changes to an item doesn't affect the quota calculation.
 
+## Copilot Studio and agent licensing
 
-Connector Deployment & Access Control
-Connectors are configured in the Microsoft 365 admin center and can be scoped using Rollout to limited audience to control access.
-Once deployed, connectors can be added as knowledge sources in Copilot Studio.
+If you're using Copilot Studio to build agents that use connectors, you need either:
 
-Indexing Delay: Connectors may take up to 48 hours to appear in Studio after deployment.
+- A Copilot Studio license
+- Usage billing (pay-as-you-go) set up in the tenant
 
+Advanced features like semantic search require the maker to have a Microsoft 365 Copilot license in the tenant.
 
-Developer & ISV Considerations
-Independent Software Vendors (ISVs) can build custom connectors using the Copilot connectors REST API, which consumes item quota.
-Publishing a connector requires:
+For more information, see [Agent capabilities and licensing models](microsoft-365-copilot/extensibility/prerequisites).
 
-Schema registration
-Packaging and validation
-Compliance with Microsoft marketplace policies
+For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
+## Related content
 
-Cost & Metering for Copilot Chat
-For agents using Copilot Chat:
-
-PAYGO pricing: $0.01 per message or $200 for 25,000 messages/month
-Typical usage: Queries involving Graph connectors consume ~12 messages
-(10 for grounding, 2 for generation)
+- [Microsoft 365 Copilot connectors overview](overview.md)
+- [Deploy Microsoft 365 Copilot connectors](deployment-overview.md)
