@@ -48,91 +48,67 @@ Use the following steps to deploy a connector:
 5. Provide the URL of your data source. For example: `https://your-organization-name.service-now.com`.
 6. Choose an authentication method to access the data source.
 7. Deploy the connector to a subset of users for validation before a broader rollout.
+8. Choose **Create** to deploy the connection. The connector begins indexing content using default settings.
 
 [IMAGE PLACEHOLDER]
 
 > [!NOTE]
-> Most connectors use optimized default settings for access permissions, schema, and sync frequency. To edit these settings, choose #step-4-customize-connector-configuration-optional.
+> Most connectors use optimized default settings for access permissions, schema, and sync frequency. To customize the default settings, see [Customize connector settings](#customize-connector-settings-optional).
 
----
-
-## Step 3: Create the connection
-
-Click **Create** to set up the connection. The connector begins indexing content using default settings.
-
-On the success screen, add a description that briefly answers:
+On the success screen, add a description that answers the following:
 
 - What kind of content does this connection include?
 - How do users refer to this content source?
 - When do users access this content in their workflow?
 - What are key characteristics of the content?
 
-For more guidance, see enhancing-microsoft-copilot-discovery-with-graph-connector-content.md.
+For guidance, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
 
-## Customize connector configuration (optional)
+## Customize connector settings (optional)
 
-Choose **Custom setup** for more control. This option includes three tabs:
+You can customize the default values for connector settings. On the connector page in the admin center, choose **Custom setup**. This option includes three tabs:
 
 - **Users**
 - **Content**
 - **Sync**
 
-### Users
+### User settings
 
-media/servicenow-knowledge-connector/servicenow-knowledge-users-page.png
+[IMAGE PLACEHOLDER]
 
-1. **Access permissions**  
-   Choose whether indexed data is visible to:
-   - Everyone in the organization
-   - Only users with access to the content
+On the **Users** tab, under **Access Permissions**, choose whether indexed data is visible to:
 
-2. **Map identities**  
-   By default, users are mapped by matching their email to `UserPrincipalName` or `Mail` in Microsoft Entra ID. You can provide a custom mapping formula if needed.
+- Only users with access to the content
+- Everyone in the organization
 
----
+By default, users are mapped by matching their email to `UserPrincipalName` or `Mail` in Microsoft Entra ID. In the **Map Identities** section, you can provide a custom mapping formula.
 
-### Content
 
-media/servicenow-knowledge-connector/servicenow-knowledge-content-page.png
+### Content settings
 
-1. **Manage properties**  
-   Configure properties to be searchable, queryable, or refinable. Assign semantic labels and aliases to improve search relevance.
+[IMAGE PLACEHOLDER]
+
+On the **Content** tab, under **Manage properties**, you can:
+
+- Configure properties to be searchable, queryable, or refinable.
+- Assign semantic labels and aliases to improve search relevance.
+- Customize values for properties for certain connectors, like **URL**.
 
 For details, see #guidelines-for-manage-properties-settings.
 
----
-
-### Sync
-
-media/servicenow-knowledge-connector/servicenow-knowledge-sync-page.png
-
-**Refresh intervals**  
-Configure how often data syncs between the source and the connector index.
-
-- **Full crawl**: Syncs all data at scheduled intervals.
-- **Incremental crawl**: Syncs only new or changed data.
-
-Adjust sync settings as needed. For more information, see #guidelines-for-sync-settings.
-
----
-
-## Guidelines for Manage Properties settings
-
-### Content property
+#### Content property
 
 Select a **Content property** from the dropdown or use the default. This property supports full-text indexing, snippet generation, language detection, and relevance ranking.
 
-If selected, you can use the system-generated **ResultSnippet** property in your result type to display dynamic snippets.
+You can use the system-generated **ResultSnippet** property in your result type to display dynamic snippets.
 
-### Aliases
+#### Aliases
 
-Add aliases under the "Alias" column to normalize property names across multiple connections. This enables unified filters and queries.
+In the **Alias** column, add aliases to normalize property names across multiple connections. This enables unified filters and queries.
 
-See customize-search-page.md for more info.
+#### Semantic labels
 
-### Semantic labels
-
-Assign semantic labels to source properties to integrate connector data into Microsoft 365 experiences. Supported labels include:
+Assign semantic labels to source properties to integrate connector data into Microsoft 365 experiences. The following table lists the supported labels.
 
 | Label | Description |
 |-------|-------------|
@@ -146,16 +122,18 @@ Assign semantic labels to source properties to integrate connector data into Mic
 | **File name** | Name of the file |
 | **File extension** | File type (PDF, DOC, etc.) |
 
-The **title** label is essential for participating in the result-cluster.md.
+We recommend that you assign a property to the **title** label.
 
----
+Incorrect mapping labels can affect search experiences. Not all labels need to have a property assigned.
 
-## Search schema attributes
+#### Search schema attributes
+
+You can set the search schema attributes to control the search functionality of each source property. A search schema helps determine what results are displayed on the search results page and what information end users can view and access.
+
+Search schema attributes include options to **Query**, **Search**, **Retrieve**, and **Refine**. The following table lists the supported attributes.
 
 > [!NOTE]
 > Properties with the `int` datatype can't be refined, even if marked as refinable.
-
-Search schema attributes control search functionality. Supported attributes include:
 
 | Attribute | Function |
 |----------|----------|
@@ -166,16 +144,14 @@ Search schema attributes control search functionality. Supported attributes incl
 
 Only string properties can be marked as searchable.
 
-To update the schema after connection creation, see manage-search-schema.md.
+### Sync settings
 
----
+[IMAGE PLACEHOLDER]
 
-## Guidelines for Sync settings
+On the **Sync** tab, you can configure how often data syncs between the source and the connector index.
 
-Refresh intervals determine how often data syncs. Choose between:
-
-- **Full refresh**: Indexes all changed items.
-- **Incremental refresh**: Indexes only new or modified items.
+- **Full crawl**: Syncs all data at scheduled intervals.
+- **Incremental crawl**: Syncs only new or changed data.
 
 > [!NOTE]
 > Incremental crawls don't support permission updates. Run full crawls periodically to maintain sync accuracy.
@@ -192,10 +168,12 @@ Configure crawl frequency and timing:
 
 If fields are left blank, Copilot connectors choose optimal crawl times.
 
----
-
-## IP firewall rules
+### IP firewall rules
 
 To secure access, configure your firewall to allow Copilot connector service IP ranges.
 
-RegionMicrosoft 365 EnterpriseMicrosoft 365 GovernmentNAM52.250.92.252/30, 52.224.250.216/3052.245.230.216/30, 20.141.117.64/30EUR20.54.41.208/30, 51.105.159.88/30NA| APC | 52.139.188.212/30, 20.43.146.44/30 | NA |
+| Region | Microsoft 365 Enterprise | Microsoft 365 Government |
+| ------ | ------------------------ | ------------------------ |
+| NAM | 52.250.92.252/30, 52.224.250.216/30 | 52.245.230.216/30, 20.141.117.64/30 |
+| EUR | 20.54.41.208/30, 51.105.159.88/30 | NA|
+| APC | 52.139.188.212/30, 20.43.146.44/30 | NA |
