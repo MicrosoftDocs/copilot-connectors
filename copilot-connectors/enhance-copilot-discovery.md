@@ -65,3 +65,6 @@ The following table shows some examples of effective connector descriptions.
 | Salesforce | Salesforce CRM stores a wide range of data to support various business functions. Types of data stored in Salesforce CRM include common record categories such as Leads, Accounts, Contacts, Opportunities, and Cases. Salesforce CRM's data model is designed to make data understandable and accessible, representing database tables as objects, columns as fields, and rows as records.<br /><br />The content in this connection can also be referred to as SFDC, Salesforce data or Salesforce Sales cloud. |
 | BambooHR | This connection to BambooHR people data populates profiles of people in Microsoft 365 Copilot experiences like Teams or CoPilot. It's used to see or query about e.g., titles, emails, managers, and other people-related data. |
 
+## Related content
+
+- [Deploy Copilot connectors](deployment-overview.md)

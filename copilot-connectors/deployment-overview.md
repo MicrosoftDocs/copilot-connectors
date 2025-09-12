@@ -1,5 +1,4 @@
 ---
-
 title: "Deploy Microsoft 365 Copilot connectors in the Microsoft 365 admin center"
 description: Learn how to deploy and customize Copilot connectors in the Microsoft 365 admin center.
 ms.author: souravpoddar
@@ -20,9 +19,7 @@ This article describes how to set up Microsoft 365 Copilot connectors in the Mic
 > [!NOTE]
 > The setup process is similar for all Copilot connectors, with some differences. We recommend that you reference the deployment guide specific to your data source.
 
-> [!TIP]
-> **Product survey**  
-> Help us prioritize new data sources for connectors by completing this [survey](https://forms.office.com/r/0Hh4GJNsJe).
+
 
 ## Prerequisites
 
@@ -177,3 +174,8 @@ To secure access, configure your firewall to allow Copilot connector service IP 
 | NAM | 52.250.92.252/30, 52.224.250.216/30 | 52.245.230.216/30, 20.141.117.64/30 |
 | EUR | 20.54.41.208/30, 51.105.159.88/30 | NA|
 | APC | 52.139.188.212/30, 20.43.146.44/30 | NA |
+
+## Related content
+
+- [Prerequisites](prerequisites.md)
+- [Connectors gallery](connectors-gallery.md)

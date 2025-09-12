@@ -2,6 +2,7 @@ items:
 - name: Microsoft 365 Copilot connectors overview
   href: overview.md
 - name: Get started
+  expanded: true
   items:
   - name: Prerequisites
     href: prerequisites.md
@@ -20,7 +21,7 @@ items:
   - name: Map non-Entra identities
     href:
   - name: Enhance Copilot discovery of connector content
-    href: 
+    href: enhance-copilot-discovery.md
   - name: Prebuilt connectors
     items:
     - name: Confluence Cloud
@@ -39,8 +40,6 @@ items:
     href:
   - name: Connector agent release notes
     href:
-- name: Enhance Copilot discovery of connector content
-  href: enhance-copilot-discovery.md
 - name: Build custom Copilot connectors
   items:
   - name: Build with Agents Toolkit

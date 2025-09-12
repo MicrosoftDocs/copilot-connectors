@@ -5,12 +5,8 @@ author: danielabom
 manager: calvind
 ms.audience: Admin
 ms.topic: landing-page
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Find a list of over 100 prebuilt Microsoft 365 Copilot connectors, organized by categories, including a description and link to each connector website."
 ms.date: 07/16/2025
 ---
@@ -19,7 +15,13 @@ ms.date: 07/16/2025
 
 Microsoft 365 Copilot connectors allow you to ingest unstructured line-of-business data into your organization's implementation of Microsoft 365 Copilot. For more information, see [Microsoft 365 Copilot connectors overview](/microsoft-365-copilot/extensibility/overview-copilot-connector). 
 
-Developers can use the [Connectors API](/graph/connecting-external-content-connectors-api-overview) to create custom connectors. In addition, Microsoft and partner organizations provide more than 100 prebuilt connectors that connect to popular Microsoft and non-Microsoft services, including Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more. This article provides a list of the prebuilt connectors that are available across various categories, along with a description of each and a link to the connector website where available.
+Microsoft and partner organizations provide more than 100 prebuilt connectors that connect to popular Microsoft and non-Microsoft services, including Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more. This article provides a list of the prebuilt connectors that are available across various categories, along with a description of each and a link to the connector website where available.
+
+> [!TIP]
+> **Product survey**  
+> Help us prioritize new data sources for connectors by completing this [survey](https://forms.office.com/r/0Hh4GJNsJe).
+
+For information about how to build custom connectors, see [Build connectors with the Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-your-first-connector?context=microsoft-365-copilot/connectors) and [Build connectors with the connectors SDK](/graph/custom-connector-sdk-sample-overview?context=microsoft-365-copilot/connectors).
 
 ## Collaboration and communications
 

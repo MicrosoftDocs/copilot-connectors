@@ -7,7 +7,7 @@ ms.audience: Admin
 ms.topic: overview
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-description: ""
+description: "Get an introduction to Microsoft 365 Copilot connectors, how they enhance Copilot, Copilot Search, and Microsoft Search experiences, and how they work with Copilot extensibility solutions."
 ms.date: 09/09/2025
 ---
 
@@ -120,3 +120,6 @@ Admins control which connectors and actions each agent can use to ensure governa
 For example, a Sales agent might use a Salesforce connector for data and a Power Platform connector to update records—all within a conversational interface.
 
 ## Related content
+
+- [Connectors gallery](connectors-gallery.md)
+- [Deploy connectors in the admin center](deployment-overview.md)
