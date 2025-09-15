@@ -12,7 +12,7 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Legal terms and conditions for Microsoft 365 Copilot connectors public preview for Microsoft Search."
+description: "Learn about the legal terms and conditions for Microsoft 365 Copilot connectors."
 ---
 
 # Microsoft 365 Copilot connectors: Terms of use
