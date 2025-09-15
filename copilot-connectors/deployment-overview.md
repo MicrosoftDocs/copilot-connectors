@@ -32,7 +32,7 @@ Before you begin, make sure you have the following:
 
 ## Deploy a connector
 
-<img src="media/add-connector.png" alt="Data sources available include: ADLS Gen2, Enterprise websites, Microsoft SQL server, Azure SQL, Oracle SQL database, ServiceNow Knowledge, ServiceNow Catalog, File share, Azure DevOps, and MediaWiki." data-linktype="relative-path">
+[IMAGE PLACEHOLDER]
 
 Use the following steps to deploy a connector:
 
