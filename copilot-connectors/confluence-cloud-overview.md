@@ -124,4 +124,4 @@ You can configure the Confluence Cloud connector to enforce that only users who 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Confluence Cloud connector](confluence-cloud-connector-deployment.md)
+> [Deploy the Confluence Cloud connector](confluence-cloud-deployment.md)

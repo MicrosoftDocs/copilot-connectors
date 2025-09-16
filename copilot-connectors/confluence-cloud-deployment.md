@@ -1,5 +1,5 @@
 ---
-ms.date: 09/05/2025
+ms.date: 09/16/2025
 title: "Deploy the Confluence Cloud Microsoft 365 Copilot connector in the Microsoft 365 Admin Center"
 ms.author: lauragra
 author: lauragra
@@ -14,7 +14,7 @@ description: "Find information about how to deploy the Confluence Cloud Microsof
 
 # Deploy the Confluence Cloud Copilot connector in the Microsoft 365 admin center
 
-The Confluence Cloud Microsoft 365 Copilot connector integrates Confluence content into Microsoft 365, enabling Copilot and Microsoft Search to surface relevant wiki pages, blogs, and attachments directly within apps like Teams, Outlook, and SharePoint.
+The Confluence Cloud Microsoft 365 Copilot connector integrates Confluence content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant wiki pages and blogs directly within apps like Teams, Outlook, and SharePoint.
 
 This article describes the steps to deploy, customize, and troubleshoot the Confluence Cloud Copilot connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
 
@@ -84,8 +84,6 @@ To authenticate and synchronize content from Confluence, choose one of the fol
     | View spaces                                     | read:space:confluence            | Access space details to support permissions.                             |
     | View content summaries                          | read:content.metadata:confluence | Access information about the content to support permissions.             |
     | View content restrictions and space permissions | read:permission:confluence       | Access content restrictions and space permission details to support permissions. |
-    | View comments                                   | read:comment:confluence          | View comments on pages or blog posts.                                        |
-    | View and download content attachments           | read:attachment:confluence       | View and download attachments of a page or blogpost that you have access to.|
 
     1. Choose **Save**.
     1. In the left pane, go to **Authorization**. Add the callback URL for Microsoft 365, as follows:
@@ -192,8 +190,8 @@ You can change the default values of the refresh intervals. For more information
 
 ## Related content
 
-- [Confluence Cloud connector overview](confluence-cloud-connector-overview.md)
+- [Confluence Cloud connector overview](confluence-cloud-overview.md)
 - [Set up the Confluence Cloud service for connector ingestion](confluence-cloud-admin-setup.md)
-- [Troubleshoot issues with the Confluence Cloud connector](confluence-cloud-connector-troubleshooting.md)
+- [Troubleshoot issues with the Confluence Cloud connector](confluence-cloud-troubleshooting.md)
 - [Set up Copilot connectors in the Microsoft 365 admin center](configure-connector.md)
 - [Monitor connections](manage-connector.md)

@@ -27,11 +27,11 @@ items:
     - name: Confluence Cloud
       items: 
       - name: Overview
-        href: confluence-cloud-connector-overview.md
+        href: confluence-cloud-overview.md
       - name: Deployment guide
-        href: confluence-cloud-connector-deployment.md
+        href: confluence-cloud-deployment.md
       - name: Troubleshooting
-        href: confluence-cloud-connector-troubleshooting.md
+        href: confluence-cloud-troubleshooting.md
 - name: Deploy on-premises connectors
   items:
   - name: Set up the Graph Connector Agent
