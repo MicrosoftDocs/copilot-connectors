@@ -1,5 +1,5 @@
 ---
-ms.date: 09/05/2025
+ms.date: 09/16/2025
 title: "Confluence Cloud Microsoft 365 Copilot Connector Overview"
 ms.author: lauragra
 author: lauragra
@@ -7,20 +7,20 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
+ms.service: mssearch
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Confluence Cloud Copilot connector."
 ---
 
 # Confluence Cloud Copilot connector overview
 
-The Confluence Cloud Microsoft 365 Copilot connector integrates Confluence content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant wiki pages, blogs, and attachments directly within apps like Teams, Outlook, and SharePoint.
+The Confluence Cloud Microsoft 365 Copilot connector integrates Confluence content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant wiki pages and blogs directly within apps like Teams, Outlook, and SharePoint.
 
 When you configure the Confluence Cloud connector for your organization and index data from the Confluence site, users can search for Confluence content in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. The Confluence Cloud connector content can bring improved operational efficiency, faster response times for user requests, and enhanced request management.
 
 ## Why use the Confluence Cloud connector to index your data?
 
-Organizations that use Atlassian Confluence for internal wikis and documentation often face knowledge silos and inefficient search workflows. The Confluence Cloud Copilot connector addresses these problems by integrating Confluence content into Microsoft 365. This allows employees to surface Confluence pages, blogs, and even comments through Copilot, Copilot Search, and Microsoft Search – in everyday apps like Teams, Outlook, or SharePoint – without leaving their flow of work. The result is a more connected knowledge ecosystem that drives productivity and collaboration.
+Organizations that use Atlassian Confluence for internal wikis and documentation often face knowledge silos and inefficient search workflows. The Confluence Cloud Copilot connector addresses these problems by integrating Confluence content into Microsoft 365. This allows employees to surface Confluence pages and blogs through Copilot, Copilot Search, and Microsoft Search – in everyday apps like Teams, Outlook, or SharePoint – without leaving their flow of work. The result is a more connected knowledge ecosystem that drives productivity and collaboration.
 
 The Confluence Cloud Copilot connector provides the following benefits:
 
@@ -98,18 +98,17 @@ The Confluence Cloud connector has the following limitations:
 - **Supports Confluence Cloud only** – This connector works with Atlassian Confluence Cloud. It doesn't support Confluence Server or Data Center deployments – those require a separate on-premises connector.
 - **Permission updates latency** – Changes to user or group access in Confluence are not reflected immediately in the Copilot index. Permission changes are picked up only during a full crawl (once every 24 hours by default), not during the 15-minute incremental syncs. This means there can be a delay (up to the next full reindex) before Copilot results fully reflect newly changed permissions.
 - **Identity mapping requirement** – The connector relies on matching Confluence user identities to Microsoft Entra ID accounts to enforce permissions. If your Confluence users’ email IDs do not exactly match their Entra ID user principal names (UPNs), an admin must configure a manual identity mapping so the system knows which Microsoft 365 user corresponds to each Confluence account. Without this mapping, some content might not appear for intended users because the service can't verify that they have access.
-- **Focused on wiki content** – The connector indexes Confluence pages, blog posts, and their comments and attachments. It doesn't index certain Confluence metadata or app-specific content outside of pages. For example, it doesn’t pull in Confluence user profile information, page history versions, or content from third-party Confluence apps (like Questions, calendars, or other add-ons). It also only indexes published content – content that is archived, unpublished drafts, or in the recycle bin is not ingested. This ensures Copilot draws from the official current knowledge base, but it means historical or deleted content won’t surface in answers. 
+- **Focused on wiki content** – The connector indexes Confluence pages and blog posts. It doesn't index certain Confluence metadata or app-specific content outside of pages. For example, it doesn’t pull in Confluence user profile information, page history versions, or content from third-party Confluence apps (like Questions, calendars, or other add-ons). It also only indexes published content – content that is archived, unpublished drafts, or in the recycle bin is not ingested. This ensures Copilot draws from the official current knowledge base, but it means historical or deleted content won’t surface in answers. 
 
 ## Data types indexed from Confluence Cloud
 
-The Confluence Cloud connector indexes key Confluence content types so they can be used in Copilot, Copilot Search, and Microsoft Search. By default, the connector crawls all Confluence pages and blog posts in your Confluence Cloud site. It can also index comments and file attachments on pages and posts.
+The Confluence Cloud connector indexes key Confluence content types so they can be used in Copilot, Copilot Search, and Microsoft Search. By default, the connector crawls all Confluence pages and blog posts in your Confluence Cloud site. 
 
 | Confluence content type | Indexed and surfaced in Copilot and search |
 | ----------------------- | ------------------------------------------ |
 | **Pages** | Main content pages in Confluence spaces. The connector indexes page titles and body text. These appear as search results or referenced content in Copilot responses.| 
 | **Blog posts** | Confluence blog entries (news or updates). Copilot can retrieve the content and show it in results by title. Users can query Copilot for information contained in blog posts. |
-| **Attachments** | Files attached to pages or blog posts (PDFs, documents, images). If the connector is configured with attachment access scopes, these files are indexed. Copilot can surface the attachment names and use the text content to answer questions, provided the user has rights to view them. |
-| **Comments** | User comments on pages or posts. With the appropriate configuration, comment text is indexed. This allows Copilot to include relevant information from discussion threads when formulating answers. Comments typically appear as part of the context of a page or post rather than standalone results. |
+
 
 ## Permissions model and access control
 
@@ -117,11 +116,11 @@ You can configure the Confluence Cloud connector to enforce that only users who 
 
 - **Space permissions and page restrictions** – If a page has specific view restrictions, the page is only visible to authorized users in responses and search results. If no page-level restriction exists, the connector applies the Confluence space permissions settings. If a space is open to all Confluence users (or has anonymous access enabled), content from that space is available to all users in the organization. If the space is restricted to certain groups, only those groups members get results from that space. Content with no applicable permission information is not shown to any users to prevent accidental exposure.
 
-- **User identity mapping** - The connector maps Confluence user accounts to Microsoft 365 (Entra ID) identities. If Confluence users’ emails match their Entra ID UPNs, this mapping is automatic. If they differ, you can provide a mapping rule to map identities in Confluence to identities in Microsoft 365. This ensures that that the system provides appropriate access to Confluence content in responses.
+- **User identity mapping** - The connector maps Confluence user accounts to Microsoft 365 (Entra ID) identities. If Confluence users’ emails match their Entra ID UPNs, this mapping is automatic. If they differ, you can provide a mapping rule to map identities in Confluence to identities in Microsoft 365. This ensures that the system provides appropriate access to Confluence content in responses.
 
 - **Visible to everyone option** - You can choose not to enforce per-user permissions (setting the connector to index content as **Visible to everyone**). In that case, all indexed Confluence data is searchable by any user in the tenant. This works for non-confidential knowledge bases. However, for most scenarios, we recommend using the restricted mode so that results mirror the Confluence permission boundaries.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Confluence Cloud connector](confluence-cloud-deployment.md)
+> [Deploy the Confluence Cloud connector](confluence-cloud-connector-deployment.md)
