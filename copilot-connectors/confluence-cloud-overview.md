@@ -48,8 +48,6 @@ The following table lists common uses cases for the Confluence Cloud connector.
 
 Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Copilot Studio agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
-To get started building agents, see the [Agent templates in Github].
-
 ### Agent prompts
 
 The following examples show prompts that agent builders can use to help their users retrieve information from Confluence Cloud.
