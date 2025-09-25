@@ -20,6 +20,8 @@ items:
     href: 
   - name: Map non-Entra identities
     href:
+  - name: Customize schema property values
+    href:
   - name: Enhance Copilot discovery of connector content
     href: enhance-copilot-discovery.md
   - name: Prebuilt connectors
@@ -32,6 +34,14 @@ items:
         href: confluence-cloud-deployment.md
       - name: Troubleshooting
         href: confluence-cloud-troubleshooting.md
+    - name: ServiceNow Knowledge
+      items: 
+      - name: Overview
+        href: servicenow-knowledge-overview.md
+      - name: Deployment guide
+        href: servicenow-knowledge-deployment.md
+      - name: Troubleshooting
+        href: servicenow-knowledge-troubleshooting.md
 - name: Deploy on-premises connectors
   items:
   - name: Set up the Graph Connector Agent

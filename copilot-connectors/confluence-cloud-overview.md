@@ -86,7 +86,7 @@ The following examples show prompts that agent builders can use to help their us
 
 The Confluence Cloud connector has the following key capabilities:
 
-- **Indexes core Confluence content** – Crawls Confluence Cloud wiki pages and blog posts (from all spaces by default), including file attachments and comments on pages and posts.
+- **Indexes core Confluence content** – Crawls Confluence Cloud wiki pages and blog posts (from all spaces by default).
 - **Integrates with Copilot** – Enables Copilot and Microsoft Search to find and use Confluence content. Users can ask questions in natural language and get answers that include information from Confluence pages or files, with reference links back to the source. 
 - **Respects Confluence permissions** – The connector only shows content to users who have access in Confluence. It honors Confluence’s space permissions and page restrictions, so responses and search results don't expose pages to unauthorized users. 
 - **Configurable content scope** – Admins can control what Confluence data is indexed. For example, you can include or exclude specific spaces or filter by metadata using Confluence Query Language (CQL) queries.
