@@ -34,6 +34,16 @@ items:
         href: confluence-cloud-deployment.md
       - name: Troubleshooting
         href: confluence-cloud-troubleshooting.md
+    - name: Confluence On-premises
+      items:
+      - name: Overview
+        href: confluence-onpremises-overview.md
+      - name: Deployment guide
+        href: confluence-onpremises-deployment.md
+      - name: Troubleshooting
+        href: confluence-onpremises-troubleshooting.md
+      - name: Plugin license agreement
+        href: atlassian-plugin-eula.md
     - name: ServiceNow Knowledge
       items: 
       - name: Overview

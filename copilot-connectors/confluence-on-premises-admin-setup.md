@@ -7,9 +7,10 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
+ms.service: mssearch
 ms.localizationpriority: Medium
 description: "Get the steps that the Confluence admin needs to complete to configure the service for your organization so you can enable the Confluence On-premises Microsoft 365 Copilot connector."
+ROBOTS: NOINDEX, NOFOLLOW
 ---
 
 # Set up the Confluence on-premises service for connector ingestion
@@ -57,7 +58,7 @@ The following sections describe the admin tasks to configure the Confluence envi
 
 The Confluence On-premises instance URL generally has the following format:
 
-- `http(s)://<your-company-domain>/confluence`
+- `https://<your-company-domain>/confluence`
 
 To identify the instance URL for Confluence on-premises:
 
@@ -115,7 +116,7 @@ Copilot uses the descriptions and short descriptions in Confluence to semantical
 
 ### Configure Confluence servers for high availability
 
-You can deploy Confluence Data Center in a highly available configuration by using a hardware load balancer—either on-premises or by using AWS services. Make sure to record the Confluence web URL and verify that all clients on the internal network can access it.
+You can deploy Confluence Data Center in a highly available configuration by using a hardware load balancer. Make sure to record the Confluence web URL and verify that all clients on the internal network can access it.
 
 The Microsoft Graph Connector Agent must be configured to communicate with the load-balanced Confluence web URL, not individual nodes. This ensures consistent access and failover support. Verify that the load-balanced URL is accessible from the internal network where the Graph Connector Agent is hosted.
 
@@ -172,15 +173,6 @@ Grant read permissions on all applicable tables. For more information, see [Give
 > [!NOTE]
 > Changes to the service account can affect data synchronization with Microsoft 365. If the account is modified, you might need to reauthenticate the connector in Microsoft 365.
 
-Make sure that the service account is correctly configured. If no page-level restrictions exist, the connector checks space-level permissions and serves content as follows:
-
-- If anonymous access is enabled for a space, its content is visible to all users in your tenant.
-- If anonymous access is disabled, space-level permissions are enforced.
-- If no space-level permissions are defined, the content isn't visible to any users in your tenant.
-
-> [!NOTE]
-> Permissions are managed only at the space and page level. Parent page permissions aren't considered.
-
 #### OAuth failure due to invalid credentials
 
 If the Microsoft 365 admin isn't also a Confluence On-premises admin, the connection authorization fails with the error "Invalid connection credentials". To resolve this error, the Microsoft 365 admin can follow these steps:
@@ -195,22 +187,12 @@ If the Microsoft 365 admin isn't also a Confluence On-premises admin, the connec
 1. After the Confluence admin confirms approval, return to the pop-up window.
 1. Right-click the pop-up window and select **Inspect** > **Console**.
 1. In the console, paste the following command: `window.opener.postMessage({type: 'oauthFinish', isSuccess: true}, '*')`
-    > **Note:** If pasting is disabled, type `allow pasting` in the console first, then paste the command again.
+    > [!Note]
+    > If pasting is disabled, type `allow pasting` in the console first, then paste the command again.
 1. A success message appears in the connection creation screen, and the **Create** button becomes active.
 1. You can now close the pop-up window.
 
 ### Identify item count for ingestion
-
-To verify the expected item count for ingestion across all applicable connectors in Confluence Cloud:
-
-1. Go to `https://<Confluence instance name>.atlassian.net/wiki/admin/space-reports`.
-1. Under **Space report**, select **Create report**.
-1. Select **Download** to export the report.
-1. Open the downloaded .csv file.
-1. In the **Content Count** column, review the number of pages that will sync in each space.
-
-> [!Note]
-> AI-generated content in the report might be inaccurate. Review the content before proceeding.
 
 To verify the expected item count for ingestion across all applicable connectors in your Confluence On-premises instance:
 
@@ -241,7 +223,7 @@ To set up OAuth 2.0 (recommended):
 
 To ensure that the connector can access Confluence APIs, add the required Microsoft 365 IP addresses to the allow list in your firewall, proxy, or other network configurations.
 
-For Confluence on-premises, make sure that the server hosting your Confluence on-premises instance can reach all required Microsoft 365 URLs and IP addresses. For more information, see - [IP Firewall rules](configure-connector.md#ip-firewall-rules).
+For Confluence on-premises, make sure that the server hosting your Confluence on-premises instance can reach all required Microsoft 365 URLs and IP addresses. For more information, see [IP Firewall rules](configure-connector.md#ip-firewall-rules).
 
 ### Configure a machine for the connector agent
 
