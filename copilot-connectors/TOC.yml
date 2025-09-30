@@ -91,7 +91,7 @@ items:
     - name: Item delete notification
       href:
 - name: Frequently asked questions
-  href:
+  href: frequently-asked-questions.yml
 - name: Known issues
   href: known-issues.md
 - name: Terms of use
