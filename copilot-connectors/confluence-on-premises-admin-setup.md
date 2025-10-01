@@ -172,8 +172,10 @@ Grant read permissions on all applicable tables. For more information, see [Give
 
 > [!IMPORTANT]
 > We recommend that you make the service accoount a Confluence Global Administrator. Confluence Global Administrators have full administrative permissions. To verify the permissions:
+>
 > - Go to **Administration** > **General Configuration** > **Global Permissions**.
 > - Look for the group **Confluence-administrators**. This group has all permissions enabled: Can Use, Personal Space, Create Space, Confluence Administrator, and System Administrator.
+>
 > Any user who creates a token must be a member of this group.
 
 > [!NOTE]
