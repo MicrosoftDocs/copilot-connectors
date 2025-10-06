@@ -11,6 +11,7 @@ items:
 - name: Connectors gallery
   href: connectors-gallery.md
 - name: Deploy prebuilt connectors
+  href: prebuilt-connectors-overview.md
   items:
   - name: Delegate administration
     href: 
