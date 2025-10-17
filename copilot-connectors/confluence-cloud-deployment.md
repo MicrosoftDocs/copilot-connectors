@@ -1,5 +1,5 @@
 ---
-ms.date: 09/16/2025
+ms.date: 10/17/2025
 title: "Deploy the Confluence Cloud Microsoft 365 Copilot connector in the Microsoft 365 Admin Center"
 ms.author: lauragra
 author: lauragra
@@ -83,7 +83,8 @@ To authenticate and synchronize content from Confluence, choose one of the fol
     | View pages                                      | read:page:confluence             | Access page content details to support permissions.                      |
     | View spaces                                     | read:space:confluence            | Access space details to support permissions.                             |
     | View content summaries                          | read:content.metadata:confluence | Access information about the content to support permissions.             |
-    | View content restrictions and space permissions | read:permission:confluence       | Access content restrictions and space permission details to support permissions. |
+    | View comments | read:comment:confluence       | View comments on pages or blogposts. |
+    | View and download content attachments | read:attachment:confluence       | View and download attachments of a page or blogpost that you have access to. |
 
     1. Choose **Save**.
     1. In the left pane, go to **Authorization**. Add the callback URL for Microsoft 365, as follows:
