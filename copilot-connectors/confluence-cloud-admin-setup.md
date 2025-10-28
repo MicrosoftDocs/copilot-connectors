@@ -1,5 +1,5 @@
 ---
-ms.date: 09/05/2025
+ms.date: 10/24/2025
 title: "Set up the Confluence Cloud Service for Connector Ingestion"
 ms.author: lauragra
 author: lauragra
@@ -221,7 +221,7 @@ Replace:
 
 To enable the Confluence Cloud connector to access your Confluence Cloud instance, a Confluence administrator must provision an OAuth endpoint to enable the Microsoft Search app and Microsoft 365 Copilot to access the instance.
 
-For detailed instructions, see [Register an app in Confluence Cloud]().
+For detailed instructions, see [Register an app in Confluence Cloud](/microsoftsearch/confluence-cloud-connector-deployment#choose-authentication-type).
 
 Use the following table to determine which scopes to select when you configure access through the Confluence API.
 
@@ -234,6 +234,8 @@ Use the following table to determine which scopes to select when you configure a
 | View user details<br />View user details.  | read:user:confluence |
 | View spaces<br />View space details. | read:space:confluence |
 | View content summaries<br />View information about the content. Note that this does not provide access to the content itself. | read:content.metadata:confluence |
+| View comments<br />View comments on pages or blogposts. | read:comment:confluence |
+| View and download content attachments<br />View and download attachments of a page or blogpost that you have access to. | read:attachment:confluence |
 
 
 ### Add IP address to allow list
