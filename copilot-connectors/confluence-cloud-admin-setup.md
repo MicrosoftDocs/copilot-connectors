@@ -16,9 +16,9 @@ description: "Get the steps that the Confluence admin needs to complete to confi
 
 The Confluence Cloud Microsoft 365 Copilot connector integrates Confluence content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant wiki pages, blogs, and attachments directly within apps like Teams, Outlook, and SharePoint.
 
-This article provides information about the configuration steps that Confluence admins need to complete to set up Confluence Cloud for your organization, including configuring the environment and setting up prerequisites for the [Confluence Cloud connector](confluence-cloud-connector-overview.md).
+This article provides information about the configuration steps that Confluence admins need to complete to set up Confluence Cloud for your organization, including configuring the environment and setting up prerequisites for the [Confluence Cloud connector](confluence-cloud-overview.md).
 
-For information about how to deploy the connector, see [Deploy the Confluence Cloud connector](confluence-cloud-connector-deployment.md).
+For information about how to deploy the connector, see [Deploy the Confluence Cloud connector](confluence-cloud-deployment.md).
 
 ## Setup checklist
 
@@ -214,7 +214,7 @@ Replace:
 
 To enable the Confluence Cloud connector to access your Confluence Cloud instance, a Confluence administrator must provision an OAuth endpoint to enable the Microsoft Search app and Microsoft 365 Copilot to access the instance.
 
-For detailed instructions, see [Register an app in Confluence Cloud](/microsoftsearch/confluence-cloud-connector-deployment#choose-authentication-type).
+For detailed instructions, see [Register an app in Confluence Cloud](/microsoftsearch/confluence-cloud-deployment#choose-authentication-type).
 
 Use the following table to determine which scopes to select when you configure access through the Confluence API.
 
@@ -252,4 +252,4 @@ To confirm that Microsoft 365 Copilot can access the required content from Confl
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Confluence Cloud connector](confluence-cloud-connector-deployment.md)
+> [Deploy the Confluence Cloud connector](confluence-cloud-deployment.md)

@@ -131,4 +131,4 @@ You can control permissions in the following ways:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Confluence Cloud connector](confluence-cloud-connector-deployment.md)
+> [Deploy the Confluence Cloud connector](confluence-cloud-deployment.md)

@@ -1,18 +1,17 @@
 items:
 - name: Microsoft 365 Copilot connectors overview
   href: overview.md
-- name: Get started
+- name: Connectors gallery
+  href: connectors-gallery.md
+- name: Federated connectors (early access preview)
+  href: federated-connectors-overview.md
+- name: Synced connectors
   expanded: true
   items:
   - name: Prerequisites
     href: prerequisites.md
   - name: Deployment overview
     href: deployment-overview.md
-- name: Connectors gallery
-  href: connectors-gallery.md
-- name: Deploy prebuilt connectors
-  href: prebuilt-connectors-overview.md
-  items:
   - name: Delegate administration
     href: 
   - name: Staged rollout
@@ -25,7 +24,9 @@ items:
     href:
   - name: Enhance Copilot discovery of connector content
     href: enhance-copilot-discovery.md
-  - name: Prebuilt connectors
+  - name: Frequently asked questions
+    href: frequently-asked-questions.yml
+  - name: Microsoft-built synced connectors
     items:
     - name: Confluence Cloud
       items: 
@@ -35,33 +36,33 @@ items:
         href: confluence-cloud-deployment.md
       - name: Troubleshooting
         href: confluence-cloud-troubleshooting.md
-    - name: Confluence On-premises
+      - name: Confluence On-premises
+        items:
+        - name: Overview
+          href: confluence-onpremises-overview.md
+        - name: Deployment guide
+          href: confluence-onpremises-deployment.md
+        - name: Troubleshooting
+          href: confluence-onpremises-troubleshooting.md
+        - name: Plugin license agreement
+          href: atlassian-plugin-eula.md
+      - name: ServiceNow Knowledge
+        items: 
+        - name: Overview
+          href: servicenow-knowledge-overview.md
+        - name: Deployment guide
+          href: servicenow-knowledge-deployment.md
+        - name: Troubleshooting
+          href: servicenow-knowledge-troubleshooting.md
+    - name: On-premises synced connectors
       items:
-      - name: Overview
-        href: confluence-onpremises-overview.md
-      - name: Deployment guide
-        href: confluence-onpremises-deployment.md
-      - name: Troubleshooting
-        href: confluence-onpremises-troubleshooting.md
-      - name: Plugin license agreement
-        href: atlassian-plugin-eula.md
-    - name: ServiceNow Knowledge
-      items: 
-      - name: Overview
-        href: servicenow-knowledge-overview.md
-      - name: Deployment guide
-        href: servicenow-knowledge-deployment.md
-      - name: Troubleshooting
-        href: servicenow-knowledge-troubleshooting.md
-- name: Deploy on-premises connectors
-  items:
-  - name: Set up the Graph Connector Agent
-    href:
-  - name: Troubleshoot the Graph Connector Agent
-    href:
-  - name: Connector agent release notes
-    href:
-- name: Build custom Copilot connectors
+      - name: Set up the Graph Connector Agent
+        href:
+      - name: Troubleshoot the Graph Connector Agent
+        href:
+      - name: Connector agent release notes
+        href:
+- name: Build custom synced connectors
   items:
   - name: Build with Agents Toolkit
     href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=/microsoft-365-copilot/connectors/context
@@ -79,21 +80,17 @@ items:
       href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/connectors/context
     - name: Use external groups
       href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/connectors/context  
-  - name: Manage connections
-    items:
-    - name: Monitor connections
-      href:
-    - name: View connection details
-      href:
-    - name: Search and validate indexed content
-      href:
-    - name: Error responses
-      href:
-    - name: Item delete notification
-      href:
-- name: Frequently asked questions
-  href: frequently-asked-questions.yml
-- name: Known issues
-  href: known-issues.md
+- name: Manage connections
+  items:
+  - name: Monitor connections
+    href:
+  - name: View connection details
+    href:
+  - name: Search and validate indexed content
+    href:
+  - name: Error responses
+    href:
+  - name: Item delete notification
+    href:
 - name: Terms of use
   href: terms-of-use.md

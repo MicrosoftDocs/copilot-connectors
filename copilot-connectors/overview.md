@@ -8,7 +8,7 @@ ms.topic: overview
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Get an introduction to Microsoft 365 Copilot connectors, how they enhance Copilot, Copilot Search, and Microsoft Search experiences, and how they work with Copilot extensibility solutions."
-ms.date: 09/09/2025
+ms.date: 01/29/2026
 ---
 
 # What are Microsoft 365 Copilot connectors?
