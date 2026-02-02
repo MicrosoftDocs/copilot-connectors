@@ -43,7 +43,7 @@ Before you deploy the connector, make sure that the following prerequisites are 
 To add the ServiceNow Knowledge connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-2. Go to the **Connectors** tab, and in the left pane, choose **Gallery**.
+2. Choose the **Gallery** tab.
 3. From the list of available connectors, choose **ServiceNow Knowledge**.
 
 ### Set display name

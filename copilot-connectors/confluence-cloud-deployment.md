@@ -41,7 +41,7 @@ To deploy the connector, you must meet the following prerequisites:
 To add the Confluence Cloud connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-1. Go to the **Connectors** tab, and in the left pane, choose **Gallery**.
+1. Choose the **Connectors** tab, and in the left pane, choose **Gallery**.
 1. From the list of available connectors, choose **Confluence Cloud**.
 
 ### Set display name
