@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 09/19/2025
+ms.date: 01/05/2026
 ms.localizationpriority: Medium
 ---
 
@@ -83,7 +83,7 @@ For OAuth 2.0 setup:
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The Confluence On-premises Copilot connector starts indexing content right away.
 
@@ -94,7 +94,7 @@ The following table lists the default values that are set.
 | Users    | Access permissions | Only people with access to content in the data source. |
 | Users    | Map identities | Data source identities are mapped using Microsoft Entra IDs. |
 | Content  | Include/exclude space | All spaces included. |
-| Content  | Manage properties | For default properties and schemas, see [Manage properties](#customize-content settings). |
+| Content  | Manage properties | For default properties and schemas, see [Manage properties](#customize-content-settings). |
 | Sync     | Incremental crawl | Every 15 minutes.
 | Sync     | Full crawl | Daily. |
 
@@ -121,7 +121,8 @@ In Confluence On-premises, security permissions for users and groups are defined
 - Compute the intersection of the previous three configurations to determine the effective permission on the page. This final permission set is synchronized to Microsoft 365 Copilot.
 
 > [!IMPORTANT]
-> Anonymous access settings defined at the space level aren't considered.
+> - For Microsoft Graph Connector Agent versions earlier than 3.1.14, anonymous access settings defined at the space level aren't considered.
+> - For versions of the Microsoft Graph Connector Agent starting with version 3.1.14, anonymous access settings defined at the space level are considered.
 
 If you choose **Only people with access to this data source**, choose whether your Confluence site has Microsoft Entra ID provisioned users or non-Microsoft Entra ID users:
 
@@ -156,8 +157,8 @@ You can customize content settings in the following ways:
 
 You can adjust the synchronization frequency:
 
-- **Incremental crawl**: Default is every 15 minutes.
-- **Full crawl**: Default is daily.
+- **Incremental crawl**: Syncs new and modified content. Incremental crawls don't pick up ACL changes or deleted items. Default is every 15 minutes.
+- **Full crawl**: Performs a complete synchronization of all content. Full crawls detect deleted items and sync access control list (ACL) changes. Default is daily.
 
 For more information, see [Guidelines for sync settings](configure-connector.md#guidelines-for-sync-settings).
 

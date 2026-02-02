@@ -5,7 +5,7 @@ ms.author: danielabo
 author: danielabom
 manager: calvind
 ms.topic: article
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Get an overview of the prebuilt Microsoft 365 Copilot connectors that are available for integration with Microsoft Search and Microsoft 365 Copilot."
 ---

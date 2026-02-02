@@ -1,5 +1,5 @@
 ---
-ms.date: 10/17/2025
+ms.date: 01/05/2026
 title: "Deploy the Confluence Cloud Microsoft 365 Copilot connector in the Microsoft 365 Admin Center"
 ms.author: lauragra
 author: lauragra
@@ -24,12 +24,12 @@ For advanced Confluence Cloud configuration information, see [Set up the Conflue
 
 Before you deploy the Confluence Cloud connector, make sure that the Confluence environment is configured in your organization. The following table summarizes the steps to configure the Confluence environment and deploy the connector.
 
-| Role | Task |
+| Task | Role |
 | ---- | ---- |
-| Confluence admin | [Configure the environment](confluence-cloud-admin-setup.md#configure-the-confluence-environment) |
-| Confluence admin/Network admin | [Set up prerequisites](confluence-cloud-admin-setup.md#set-up-connector-prerequisites) |
-| Microsoft 365 admin | [Deploy the connector in the Microsoft 365 admin center](#deploy-the-connector) |
-| Microsoft 365 admin | [Customize connector settings](#customize-settings-optional) (optional) |
+| [Configure the environment](confluence-cloud-admin-setup.md#configure-the-confluence-environment) | Confluence admin |
+| [Set up prerequisites](confluence-cloud-admin-setup.md#set-up-connector-prerequisites) | Confluence admin/Network admin |
+| [Deploy the connector in the Microsoft 365 admin center](#deploy-the-connector) | Microsoft 365 admin |
+| [Customize connector settings](#customize-settings-optional) (optional) | Microsoft 365 admin |
 
 To deploy the connector, you must meet the following prerequisites:
 
@@ -50,12 +50,12 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Confluence Cloud** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions,, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
 To connect to your Confluence site, use your site URL, which is typically the following: 
-`https://<organization_name>.atlassian.net/wiki`.
+`https://<organization_name>.atlassian.net`.
 
 The `<organization_name>` value is the unique identifier for your Confluence Cloud site.
 
@@ -74,17 +74,18 @@ To authenticate and synchronize content from Confluence, choose one of the fol
     1. On the left pane, choose **Permissions**, and next to **Confluence API**, choose **Add**.
     1. Choose **Configure** > **Edit scopes**, and select the scopes listed in the following table.
 
-    | Scope name      | Code                              | Description    |
-    |----------------|------------------------------------|----------------|
-    | View content details                           | read:content-details:confluence  | Crawl content that satisfies the criteria.                                           |
-    | View groups                                     | read:group:confluence            | Access group permissions of content.                                     |
-    | View user details                               | read:user:confluence             | Access individual user details to support permissions.                   |
-    | View audit records                              | read:audit-log:confluence        | Access audit records for Confluence events to support permissions.       |
-    | View pages                                      | read:page:confluence             | Access page content details to support permissions.                      |
-    | View spaces                                     | read:space:confluence            | Access space details to support permissions.                             |
-    | View content summaries                          | read:content.metadata:confluence | Access information about the content to support permissions.             |
-    | View comments | read:comment:confluence       | View comments on pages or blogposts. |
-    | View and download content attachments | read:attachment:confluence       | View and download attachments of a page or blogpost that you have access to. |
+        | Scope name      | Code                              | Description    |
+        |----------------|------------------------------------|----------------|
+        | View content details                           | read:content-details:confluence  | Crawl content that satisfies the criteria.                                           |
+        | View groups                                     | read:group:confluence            | Access group permissions of content.                                     |
+        | View user details                               | read:user:confluence             | Access individual user details to support permissions.                   |
+        | View audit records                              | read:audit-log:confluence        | Access audit records for Confluence events to support permissions.       |
+        | View pages                                      | read:page:confluence             | Access page content details to support permissions.                      |
+        | View spaces                                     | read:space:confluence            | Access space details to support permissions.                             |
+        | View content restrictions and space permissions | read:permission:confluence            | View content restrictions and space permissions.                             |
+        | View content summaries                          | read:content.metadata:confluence | Access information about the content to support permissions.             |
+        | View comments | read:comment:confluence       | View comments on pages or blog posts. |
+        | View and download content attachments | read:attachment:confluence       | View and download attachments of a page or blog post that you have access to. |
 
     1. Choose **Save**.
     1. In the left pane, go to **Authorization**. Add the callback URL for Microsoft 365, as follows:
@@ -111,7 +112,7 @@ The following table lists the default values that are set. These values work bes
 | Users | Access permissions | Only people with access to the content in the data source. |
 | Users | Map identities |  Data source identities mapped using Microsoft Entra IDs. |
 | Content | Include/exclude space | All |
-| Content | Manage properties | To see default properties and schemas, see [Manage properties](#manage-properties). |
+| Content | Manage properties | For default properties and schemas, see [Manage properties](#manage-properties). |
 | Sync | Incremental crawl | Frequency: Every 15 minutes |
 | Sync | Full crawl | Frequency: Every day |
 
@@ -125,7 +126,7 @@ You can customize the default values for the Confluence Cloud connector settings
 
 ### Customize user settings
 
-The confluence Cloud Copilot connector supports the following user search permissions:
+The Confluence Cloud connector supports the following user search permissions:
 
 - Everyone
 - Only people with access to this data source (default)
@@ -157,7 +158,7 @@ You can customize what data is included and excluded and customize the default c
 
 #### Include or exclude data
 
-By default, the Confluence Cloud connector indexes all blogs and pages. You can include or exclude data that you want to index. You can use a Confluence Query Language (CQL) string to specify conditions for syncing pages. For example, you can choose to index only the pages that were modified in the last two years. For more information, see [Advance Searching using CQL](https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/).
+By default, the Confluence Cloud connector indexes all blogs and pages. You can include or exclude data that you want to index. You can use a Confluence Query Language (CQL) string to specify conditions for syncing pages. For example, you can choose to index only the pages that were modified in the last two years. For more information, see [Advanced Searching using CQL](https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/).
 
 > [!TIP]
 > You can use the CQL filter to index content modified after a certain time by using, for example, `lastModified >= "2024/12/31"`.
@@ -170,11 +171,11 @@ To add or remove available properties from your Confluence Cloud connector, assi
 
 | Default property | Label | Description |
 | ---------------- | ----- | ----------- |
-| Authors | `authors` | Name of people who participated/collaborated on the item in the data source. |
-| CreatedByName | `createdBy` | Name of the person who most recently edited the item in the data source. |
+| Authors | `authors` | Public name of people who participated/collaborated on the item in the data source. |
+| CreatedByName | `createdBy` | Public name of the person who most recently edited the item in the data source. |
 | IconUrl | `iconUrl` | The associated icon URL of the item. |
 | Title | `title` | The title of the item that you want to be shown in search and other experiences. |
-| UpdatedByName | `lastModifiedBy` | Name of the person who most recently edited the item in the data source. |
+| UpdatedByName | `lastModifiedBy` | Public name of the person who most recently edited the item in the data source. |
 | UpdatedOn | `lastModifiedDateTime` | Date and time the item was last modified in the data source. |
 | Url | `url` | The target URL of the item in the data source. |
 
@@ -184,15 +185,15 @@ Choose the **Preview results** button to verify the selected properties and filt
 
 The refresh interval determines how often your data is synchronized between the data source and the Confluence Cloud connector index. Copilot connectors use two types of refresh intervals:
 
-- Full crawl
-- Incremental crawl
+- **Full crawl** - Performs a complete synchronization of all content. Full crawls detect deleted items and sync access control list (ACL) changes. By default, full crawls run every 24 hours.
+- **Incremental crawl** - Syncs new and modified content. Incremental crawls do not pick up ACL changes or deleted items. By default, incremental crawls run every 15 minutes.
 
 You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](configure-connector.md#guidelines-for-sync-settings).
 
 ## Related content
 
-- [Confluence Cloud connector overview](confluence-cloud-overview.md)
+- [Confluence Cloud connector overview](confluence-cloud-connector-overview.md)
 - [Set up the Confluence Cloud service for connector ingestion](confluence-cloud-admin-setup.md)
-- [Troubleshoot issues with the Confluence Cloud connector](confluence-cloud-troubleshooting.md)
+- [Troubleshoot issues with the Confluence Cloud connector](confluence-cloud-connector-troubleshooting.md)
 - [Set up Copilot connectors in the Microsoft 365 admin center](configure-connector.md)
 - [Monitor connections](manage-connector.md)

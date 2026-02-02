@@ -33,6 +33,6 @@ You might encounter the following errors when you deploy the Confluence Cloud co
 
 ## Related content
 
-- [Confluence Cloud connector overview](confluence-cloud-overview.md)
-- [Deploy the Confluence Cloud connector](confluence-cloud-deployment.md)
+- [Confluence Cloud connector overview](confluence-cloud-connector-overview.md)
+- [Deploy the Confluence Cloud connector](confluence-cloud-connector-deployment.md)
 - [Set up the Confluence Cloud service for connector ingestion](confluence-cloud-admin-setup.md)

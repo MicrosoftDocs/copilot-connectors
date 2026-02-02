@@ -6,7 +6,7 @@ author: lauragra
 manager: calvind
 ms.audience: Admin
 ms.topic: article
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 search.appverid:
 - BFB160

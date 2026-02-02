@@ -7,7 +7,7 @@ manager: harshkum
 audience: Admin 
 ms.audience: Admin
 ms.topic: how-to
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 search.appverid:
 - BFB160

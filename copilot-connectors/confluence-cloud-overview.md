@@ -1,5 +1,5 @@
 ---
-ms.date: 09/16/2025
+ms.date: 12/19/2025
 title: "Confluence Cloud Microsoft 365 Copilot Connector Overview"
 ms.author: lauragra
 author: lauragra
@@ -7,7 +7,7 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Confluence Cloud Copilot connector."
 ---
@@ -33,7 +33,7 @@ The Confluence Cloud Copilot connector provides the following benefits:
 
 ### Use cases
 
-The following table lists common uses cases for the Confluence Cloud connector.
+The following table lists common use cases for the Confluence Cloud connector.
 
 | Department/role | Use case | Business benefit |
 | --------------- | -------- | ---------------- |
@@ -46,7 +46,7 @@ The following table lists common uses cases for the Confluence Cloud connector.
 
 ## Build agents with the Confluence Cloud connector
 
-Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Copilot Studio agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
+Developers can use this connector as a knowledge source in declarative agents they build with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
 ### Agent prompts
 
@@ -106,15 +106,25 @@ The Confluence Cloud connector indexes key Confluence content types so they can 
 | ----------------------- | ------------------------------------------ |
 | **Pages** | Main content pages in Confluence spaces. The connector indexes page titles and body text. These appear as search results or referenced content in Copilot responses.| 
 | **Blog posts** | Confluence blog entries (news or updates). Copilot can retrieve the content and show it in results by title. Users can query Copilot for information contained in blog posts. |
+| **Attachments** | Files attached to pages or blog posts. Attachments are indexed together with Confluence page contents into the content property of the data schema.|
 
+## Custom data filters
+
+The Confluence Cloud connector includes the following custom data filter for Copilot Search:
+
+- Space
 
 ## Permissions model and access control
 
-You can configure the Confluence Cloud connector to enforce that only users who have access to a Confluence item can see it in Copilot responses and search results. The system uses the Confluence access control list (ACL) for spaces and pages. You can control permissions in the following ways:
+You can configure the Confluence Cloud connector to enforce that only users who have access to a Confluence item can see it in Copilot responses and search results. The system uses the Confluence access control list (ACL) for spaces and pages.
+
+The Confluence Cloud connector (and the Confluence on-premises connector) honor the same permission setup as the data source. This means that if a user can see content in Confluence, they can see it in Copilot and Microsoft Search results. If they don't have access in Confluence, the content won't appear in their results.
+
+You can control permissions in the following ways:
 
 - **Space permissions and page restrictions** – If a page has specific view restrictions, the page is only visible to authorized users in responses and search results. If no page-level restriction exists, the connector applies the Confluence space permissions settings. If a space is open to all Confluence users (or has anonymous access enabled), content from that space is available to all users in the organization. If the space is restricted to certain groups, only those groups members get results from that space. Content with no applicable permission information is not shown to any users to prevent accidental exposure.
 
-- **User identity mapping** - The connector maps Confluence user accounts to Microsoft 365 (Entra ID) identities. If Confluence users’ emails match their Entra ID UPNs, this mapping is automatic. If they differ, you can provide a mapping rule to map identities in Confluence to identities in Microsoft 365. This ensures that the system provides appropriate access to Confluence content in responses.
+- **User identity mapping** - The connector maps Confluence user accounts to Microsoft 365 (Entra ID) identities. If Confluence users' emails match their Entra ID UPNs, this mapping is automatic. If they differ, you can provide a mapping rule to map identities in Confluence to identities in Microsoft 365. For more information, see [Map your non-Entra ID identities](map-non-aad.md). This ensures that the system provides appropriate access to Confluence content in responses.
 
 - **Visible to everyone option** - You can choose not to enforce per-user permissions (setting the connector to index content as **Visible to everyone**). In that case, all indexed Confluence data is searchable by any user in the tenant. This works for non-confidential knowledge bases. However, for most scenarios, we recommend using the restricted mode so that results mirror the Confluence permission boundaries.
 

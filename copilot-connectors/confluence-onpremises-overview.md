@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 09/19/2025
+ms.date: 01/05/2026
 ms.localizationpriority: Medium
 ---
 
@@ -35,7 +35,7 @@ Common use cases include:
 
 ## Build agents with the Confluence On-premises connector
 
-Developers can use this connector as a knowledge source in declarative agents they build with the [Copilot Studio full experience](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), the [Copilot Studio lite experience](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
+Developers can use this connector as a knowledge source in declarative agents they build with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
 ### Agent prompts
 
@@ -94,7 +94,7 @@ Permissions are evaluated using:
 - Parent page restrictions
 - Space-level permissions
 
-Space name and space effective permission is computed as the intersection of these configurations. Anonymous access settings aren't considered.
+Space name and space effective permission is computed as the intersection of these configurations. For Microsoft Graph Connector Agent versions earlier than 3.1.14, anonymous access settings aren't considered. Starting with Microsoft Graph Connector Agent version 3.1.14, anonymous access settings defined at the space level are considered.
 
 ## Next step
 

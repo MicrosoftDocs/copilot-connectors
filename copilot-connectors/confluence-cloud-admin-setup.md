@@ -1,5 +1,5 @@
 ---
-ms.date: 10/24/2025
+ms.date: 11/20/2025
 title: "Set up the Confluence Cloud Service for Connector Ingestion"
 ms.author: lauragra
 author: lauragra
@@ -16,35 +16,35 @@ description: "Get the steps that the Confluence admin needs to complete to confi
 
 The Confluence Cloud Microsoft 365 Copilot connector integrates Confluence content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant wiki pages, blogs, and attachments directly within apps like Teams, Outlook, and SharePoint.
 
-This article provides information about the configuration steps that Confluence admins need to complete to set up Confluence Cloud for your organization, including configuring the environment and setting up prerequisites for the [Confluence Cloud connector](confluence-cloud-overview.md).
+This article provides information about the configuration steps that Confluence admins need to complete to set up Confluence Cloud for your organization, including configuring the environment and setting up prerequisites for the [Confluence Cloud connector](confluence-cloud-connector-overview.md).
 
-For information about how to deploy the connector, see [Deploy the Confluence Cloud connector](confluence-cloud-deployment.md).
+For information about how to deploy the connector, see [Deploy the Confluence Cloud connector](confluence-cloud-connector-deployment.md).
 
 ## Setup checklist
 
-The following checklists lists the step involved in configuring the environment and setting up the connector prerequisites.
+The following checklists list the step involved in configuring the environment and setting up the connector prerequisites.
 
 ### Configure the environment
 
-| Task | Role | Status |
-| ---- | ------ | ------- |
-| [Identify the instance URL](#configure-the-confluence-environment) | Confluence admin |  |
-| [Review the spaces and pages configuration](#review-the-confluence-spaces-and-pages-configuration) | Confluence admin |  |
-| [Define attribute mapping](#define-confluence-attribute-mapping) | Confluence admin |  |
-| [Configure user access permissions](#configure-user-access-permissions) | Confluence admin |  |
-| [Add descriptions to spaces and pages](#add-descriptions-for-spaces-and-pages) | Confluence admin |  |
-| [Configure Entra ID sync in Crowd](#configure-entra-id-sync-in-crowd) | Confluence admin |  |
+| Task | Role |
+| ---- | ------ |
+| [Identify the instance URL](#configure-the-confluence-environment) | Confluence admin |
+| [Review the spaces and pages configuration](#review-the-confluence-spaces-and-pages-configuration) | Confluence admin |
+| [Define attribute mapping](#define-confluence-attribute-mapping) | Confluence admin |
+| [Configure user access permissions](#configure-user-access-permissions) | Confluence admin |
+| [Add descriptions to spaces and pages](#add-descriptions-for-spaces-and-pages) | Confluence admin |
+| [Configure Entra ID sync in Crowd](#configure-entra-id-sync-in-crowd) | Confluence admin |
 
 ### Set up prerequisites
 
-| Task | Role | Status |
-| ---- | ------ | ------- |
-| [Create service account](#create-service-account) | Confluence admin |  |
-| [Identify item count for ingestion](#identify-item-count-for-ingestion) | Confluence admin |  |
-| [Set up CQL for advanced search](#set-up-cql-for-advanced-search) | Confluence admin |  |
-| [Provision an OAuth endpoint](#provision-an-oauth-endpoint) | Confluence admin |  |
-| [Add IP address to allow list](#add-ip-address-to-allow-list) | Confluence admin/Network admin |  |
-| [Validate Copilot indexing](#validate-copilot-indexing-for-confluence) | Confluence admin |  |
+| Task | Role |
+| ---- | ------ |
+| [Create service account](#create-service-account) | Confluence admin |
+| [Identify item count for ingestion](#identify-item-count-for-ingestion) | Confluence admin |
+| [Set up CQL for advanced search](#set-up-cql-for-advanced-search) | Confluence admin |
+| [Provision an OAuth endpoint](#provision-an-oauth-endpoint) | Confluence admin |
+| [Add IP address to allow list](#add-ip-address-to-allow-list) | Confluence admin/Network admin |
+| [Validate Copilot indexing](#validate-copilot-indexing-for-confluence) | Confluence admin |
 
 ## Configure the Confluence environment
 
@@ -102,7 +102,6 @@ You can configure Microsoft Entra ID as a directory in Crowd. When you configure
 
 For more information, see [Configuring Microsoft Entra ID](https://confluence.atlassian.com/crowd060/configuring-microsoft-entra-id-1442841864.html).
 
-
 ## Set up connector prerequisites
 
 The following sections describe the prerequisite steps to complete before deploying the Confluence connector.
@@ -142,7 +141,10 @@ If the Microsoft 365 admin isn't also a Confluence Cloud admin, the connection a
 1. After the Confluence admin confirms approval, return to the pop-up window.
 1. Right-click the pop-up window and select **Inspect** > **Console**.
 1. In the console, paste the following command: `window.opener.postMessage({type: 'oauthFinish', isSuccess: true}, '*')`
-    > **Note:** If pasting is disabled, type `allow pasting` in the console first, then paste the command again.
+
+     > [!Note]
+     > If pasting is disabled, type `allow pasting` in the console first, then paste the command again.
+   
 1. A success message appears in the connection creation screen, and the **Create** button becomes active.
 1. You can now close the pop-up window.
 
@@ -158,15 +160,6 @@ To verify the expected item count for ingestion across all applicable connectors
 
 > [!Note]
 > AI-generated content in the report might be inaccurate. Review the content before proceeding.
-
-To verify the expected item count for ingestion across all applicable connectors in your Confluence On-premises instance:
-
-1. Go to **Administration** > **Confluence Administration**.
-1. Select **General Configuration**.
-1. Choose **System Information**.
-1. Search for **Confluence Usage**. This section provides detailed metrics about your Confluence instance.
-
-You can also access the system information directly at: `https://<yoursitename>/confluence/admin/systeminfo.action`
 
 ### Set up CQL for advanced search
 
@@ -233,9 +226,10 @@ Use the following table to determine which scopes to select when you configure a
 | View groups<br />View details about groups including its members. | read:group:confluence |
 | View user details<br />View user details.  | read:user:confluence |
 | View spaces<br />View space details. | read:space:confluence |
+| View content restrictions and space permissions<br />View content restrictions and space permissions details. | read:permission:confluence |
 | View content summaries<br />View information about the content. Note that this does not provide access to the content itself. | read:content.metadata:confluence |
-| View comments<br />View comments on pages or blogposts. | read:comment:confluence |
-| View and download content attachments<br />View and download attachments of a page or blogpost that you have access to. | read:attachment:confluence |
+| View comments<br />View comments on pages or blog posts. | read:comment:confluence |
+| View and download content attachments<br />View and download attachments of a page or blog post that you have access to. | read:attachment:confluence |
 
 
 ### Add IP address to allow list
@@ -258,4 +252,4 @@ To confirm that Microsoft 365 Copilot can access the required content from Confl
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Confluence Cloud connector](confluence-cloud-deployment.md)
+> [Deploy the Confluence Cloud connector](confluence-cloud-connector-deployment.md)

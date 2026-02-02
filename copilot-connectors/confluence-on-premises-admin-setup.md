@@ -1,5 +1,5 @@
 ---
-ms.date: 09/05/2025
+ms.date: 12/02/2025
 title: "Set up the Confluence On-premises Service for Connector Ingestion"
 ms.author: lauragra
 author: lauragra
@@ -7,10 +7,9 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: Medium
 description: "Get the steps that the Confluence admin needs to complete to configure the service for your organization so you can enable the Confluence On-premises Microsoft 365 Copilot connector."
-ROBOTS: NOINDEX, NOFOLLOW
 ---
 
 # Set up the Confluence on-premises service for connector ingestion
@@ -27,28 +26,28 @@ The following checklists list the steps involved in configuring the environment 
 
 ### Configure the environment
 
-| Task | Role | Status |
-| ---- | ---- | ------ |
-| [Identify the instance URL](#configure-the-confluence-environment) | Confluence admin |  |
-| [Review the spaces and pages configuration](#review-the-confluence-spaces-and-pages-configuration) | Confluence admin |  |
-| [Define attribute mapping](#define-confluence-attribute-mapping) | Confluence admin |  |
-| [Configure user access permissions](#configure-user-access-permissions) | Confluence admin |  |
-| [Add descriptions to spaces and pages](#add-descriptions-for-spaces-and-pages) | Confluence admin |  |
-| [Configure servers for high availability](#configure-confluence-servers-for-high-availability) | Confluence admin |  |
-| [Enable JavaScript on the Apache server](#enable-javascript-on-the-apache-server) | Confluence admin |  |
-| [Configure Entra ID sync in Crowd](#configure-entra-id-sync-in-crowd) | Confluence admin |  |
-| [Check API throttling configurations](#check-api-throttling-configurations-to-manage-compute-resources) | Confluence admin |  |
+| Task | Role |
+| ---- | ---- |
+| [Identify the instance URL](#configure-the-confluence-environment) | Confluence admin |
+| [Review the spaces and pages configuration](#review-the-confluence-spaces-and-pages-configuration) | Confluence admin |
+| [Define attribute mapping](#define-confluence-attribute-mapping) | Confluence admin |
+| [Configure user access permissions](#configure-user-access-permissions) | Confluence admin |
+| [Add descriptions to spaces and pages](#add-descriptions-for-spaces-and-pages) | Confluence admin |
+| [Configure servers for high availability](#configure-confluence-servers-for-high-availability) | Confluence admin |
+| [Enable JavaScript on the Apache server](#enable-javascript-on-the-apache-server) | Confluence admin |
+| [Configure Entra ID sync in Crowd](#configure-entra-id-sync-in-crowd) | Confluence admin |
+| [Check API throttling configurations](#check-api-throttling-configurations-to-manage-compute-resources) | Confluence admin |
 
 ### Set up prerequisites
 
-| Task | Role | Status |
-| ---- | ---- | ------ |
-| [Create service account](#create-service-account) | Confluence admin |  |
-| [Identify item count for ingestion](#identify-item-count-for-ingestion) | Confluence admin |  |
-| [Provision an OAuth endpoint](#provision-an-oauth-endpoint) | Confluence admin |  |
-| [Add IP address to allow list](#add-ip-address-to-allow-list) | Confluence admin/Network admin |  |
-| [Install the Confluence connector plugin](#install-the-confluence-connector-plugin) | Confluence admin |  |
-| [Validate Copilot indexing](#validate-copilot-indexing-for-confluence) | Confluence admin |  |
+| Task | Role |
+| ---- | ---- |
+| [Create service account](#create-service-account) | Confluence admin |
+| [Identify item count for ingestion](#identify-item-count-for-ingestion) | Confluence admin |
+| [Provision an OAuth endpoint](#provision-an-oauth-endpoint) | Confluence admin |
+| [Add IP address to allow list](#add-ip-address-to-allow-list) | Confluence admin/Network admin |
+| [Install the Confluence connector plugin](#install-the-confluence-connector-plugin) | Confluence admin |
+| [Validate Copilot indexing](#validate-copilot-indexing-for-confluence) | Confluence admin |
 
 ## Configure the Confluence environment
 
@@ -171,8 +170,8 @@ Make sure the service account has read permissions for the following required ta
 Grant read permissions on all applicable tables. For more information, see [Give users admin permissions](https://support.atlassian.com/user-management/docs/give-users-admin-permissions/).
 
 > [!IMPORTANT]
-> We recommend that you make the service accoount a Confluence Global Administrator. Confluence Global Administrators have full administrative permissions. To verify the permissions:
->
+> Make the service account a Confluence Global Administrator. Confluence Global Administrators have full administrative permissions. To verify the permissions:
+> 
 > - Go to **Administration** > **General Configuration** > **Global Permissions**.
 > - Look for the group **Confluence-administrators**. This group has all permissions enabled: Can Use, Personal Space, Create Space, Confluence Administrator, and System Administrator.
 >
@@ -287,4 +286,4 @@ To confirm that Microsoft 365 Copilot can access the required content from Confl
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Confluence On-premises Copilot connector](confluence-onpremises-connector.md)
+> [Deploy the Confluence On-premises connector](confluence-onpremises-deployment.md)
