@@ -12,8 +12,6 @@ items:
     href: prerequisites.md
   - name: Deployment overview
     href: deployment-overview.md
-  - name: Delegate administration
-    href: 
   - name: Staged rollout
     href: 
   - name: Map Entra identities
@@ -24,6 +22,11 @@ items:
     href:
   - name: Enhance Copilot discovery of connector content
     href: enhance-copilot-discovery.md
+  - name: Set up on-premises connectors
+    href: connector-agent.md
+    items:
+    - name: Connector agent release notes
+      href: connector-agent-releases.md
   - name: Frequently asked questions
     href: frequently-asked-questions.yml
   - name: Microsoft-built synced connectors
