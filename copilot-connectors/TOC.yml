@@ -1,6 +1,6 @@
 items:
 - name: Microsoft 365 Copilot connectors overview
-  href: overview.md
+  href: connetors-overview.md
 - name: Connectors gallery
   href: connectors-gallery.md
 - name: Federated connectors (early access preview)

@@ -21,7 +21,7 @@ This article describes how to set up Microsoft 365 Copilot connectors in the Mic
 
 ## Prerequisites
 
-Before you begin, make sure you have the following:
+Before you begin, make sure you have the following prerequisites:
 
 - **Admin access**: You must have one of the following roles in the Microsoft 365 admin center:
   - Global admin
@@ -32,7 +32,7 @@ Before you begin, make sure you have the following:
 
 ## Deploy a connector
 
-[IMAGE PLACEHOLDER]
+:::image type="content" alt-text="Screenshot of the connector gallery in the Microsoft 365 admin center." source="media/deployment-overview/add-connector.png" lightbox="media/deployment-overview/add-connector.png":::
 
 Use the following steps to deploy a connector:
 
@@ -45,12 +45,12 @@ Use the following steps to deploy a connector:
 7. Deploy the connector to a subset of users for validation before a broader rollout.
 8. Choose **Create** to deploy the connection. The connector begins indexing content using default settings.
 
-[IMAGE PLACEHOLDER]
+:::image type="content" alt-text="Screenshot that shows Connection creation screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/servicenow-knowledge-create-page.png" lightbox="media/deployment-overview/servicenow-knowledge-create-page.png":::
 
 > [!NOTE]
 > Most connectors use optimized default settings for access permissions, schema, and sync frequency. To customize the default settings, see [Customize connector settings](#customize-connector-settings-optional).
 
-On the success screen, add a description that answers the following:
+On the success screen, add a description that answers the following questions:
 
 - What kind of content does this connection include?
 - How do users refer to this content source?
@@ -69,7 +69,7 @@ You can customize the default values for connector settings. On the connector pa
 
 ### User settings
 
-[IMAGE PLACEHOLDER]
+:::image type="content" alt-text="Screenshot that shows the User configuration screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/servicenow-knowledge-users-page.png" lightbox="media/deployment-overview/servicenow-knowledge-users-page.png":::
 
 On the **Users** tab, under **Access Permissions**, choose whether indexed data is visible to:
 
@@ -81,15 +81,13 @@ By default, users are mapped by matching their email to `UserPrincipalName` or `
 
 ### Content settings
 
-[IMAGE PLACEHOLDER]
+:::image type="content" alt-text="Screenshot that shows the Content configuration screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/servicenow-knowledge-content-page.png" lightbox="media/deployment-overview/servicenow-knowledge-content-page.png":::
 
 On the **Content** tab, under **Manage properties**, you can:
 
 - Configure properties to be searchable, queryable, or refinable.
 - Assign semantic labels and aliases to improve search relevance.
 - Customize values for properties for certain connectors, like **URL**.
-
-For details, see #guidelines-for-manage-properties-settings.
 
 #### Content property
 
@@ -99,7 +97,7 @@ You can use the system-generated **ResultSnippet** property in your result type 
 
 #### Aliases
 
-In the **Alias** column, add aliases to normalize property names across multiple connections. This enables unified filters and queries.
+In the **Alias** column, add aliases to normalize property names across multiple connections. This alias enables unified filters and queries.
 
 #### Semantic labels
 

@@ -7,25 +7,75 @@ ms.audience: Admin
 ms.topic: overview
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-description: "Get an introduction to Microsoft 365 Copilot connectors, how they enhance Copilot, Copilot Search, and Microsoft Search experiences, and how they work with Copilot extensibility solutions."
+description: "Learn how your organization can use Microsoft 365 Copilot connectors to extend Microsoft Search and Microsoft 365 Copilot experiences. Get information about the types of Copilot connectors, requirements, and management and licensing information."
 ms.date: 01/29/2026
 ---
 
-# What are Microsoft 365 Copilot connectors?
+# Microsoft 365 Copilot connectors overview
 
-Microsoft 365 Copilot connectors enable your organization to bring external data into the intelligent experiences within Microsoft 365. Copilot connectors index content from external systems into Microsoft Graph and make it accessible search experiences and  AI-powered tools like Microsoft 365 Copilot, Copilot Search, and Microsoft Search.
+Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using **synced connectors** or connect to data in real time by using **federated connectors (early access preview)**. This flexibility ensures that users can securely search and interact with both enterprise and external data sources within Microsoft 365 apps and Copilot experiences.
 
-By using connectors, you can surface information from across apps and data silos in a unified experience—whether in search results or Copilot answers—while maintaining the source system’s permissions. Connectors help bridge content silos and expand the knowledge base available to Microsoft 365.
+> [!NOTE]
+> Federated connectors are in early access preview and are available only to [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) and [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release) members. Early access preview features are still in development and are subject to change.
 
-## Key benefits of Copilot connectors
+## Types of Copilot connectors
 
-Copilot connectors provide the following key benefits:
+The following types of Copilot connectors are available:
 
-- **Unified search** - External data appears alongside your emails, files, and SharePoint content. Users can search once in Microsoft 365 and get results from all connected sources.
+- **Synced connectors:** Index data into Microsoft Graph for Copilot and search.
+- **Federated connectors (private preview):** Use a Model Context Protocol (MCP) model to fetch data in real time, without indexing content into Microsoft 365. For more information, see [Federated connectors overview](federated-connectors-overview.md).
 
-- **More complete Copilot answers** - Copilot can retrieve and reason over all relevant company information—including content from systems like Salesforce or Confluence—when answering questions or performing tasks.
+The following table summarizes the key differences between synced connectors and federated connectors.
 
-- **Security and compliance** - Connectors respect the source system's access controls. Only authorized users can view or use external content. After the data is indexed, it benefits from Microsoft 365's security, privacy, and compliance standards.
+| Feature                | Synced connectors         | Federated connectors          |
+|------------------------|--------------------------|--------------------------|
+| Data                   | Indexed into Microsoft 365 | Fetched live |
+| Access model           | Organization-level       | User-level   |
+| Setup                  | Admin configures         | Admin enables; users authenticate |
+| Use cases              | Broad indexing           | Sensitive, dynamic, or live data sources         |
+| Default connectors     | Yes                      | Yes                      |
+| Custom connectors      | Yes                      | No                      |
+
+
+### Synced connectors
+
+Synced connectors crawl and index content from external sources into Microsoft Graph. This indexed data is discoverable in Copilot and Microsoft Search experiences. Synced connectors support organization-level use, with admins configuring and managing connections in the Microsoft 365 admin center.
+
+Synced connectors have the following key features:
+
+- Index external data so it appears in Copilot and Microsoft Search results.
+- Support connections to cloud-based (SaaS) and on-premises data sources.
+- Respect source permissions; users only access content for which they have appropriate permissions.
+- Microsoft and ecosystem partners provide a wide range of ready-to-use connectors.
+- You can build custom synced connectors to ingest your business data.
+
+The following video provides an overview of the synced connector setup process.
+
+> [!VIDEO 4f4668c6-445a-4895-8627-92880eafad68]
+
+For more information, see [Set up synced connectors in the admin center](configure-connector.md).
+
+### Federated connectors (private preview)
+
+Federated connectors use an MCP model to fetch data in real time, without indexing content into Microsoft 365. Federated connectors are ideal for connecting to live, dynamic, or sensitive data sources that shouldn't be indexed.
+
+Federated connectors have the following key features:
+
+- No indexing required; data remains in the source system.
+- Connector fetches responses in real time through MCP APIs.
+- Secure by design; federated access respects source permissions and authentication (OAuth 2.0).
+- Default federated connectors are provided by Microsoft and appear as **Ready** in your connections list in the Microsoft 365 admin center.
+- Federated connectors are read-only; they can search and fetch content but can't write data back.
+
+## Connector architecture
+
+The following diagram shows how both types of connectors integrate external data into Copilot and Microsoft Search experiences:
+
+- **Synced connectors:** Data flows from the source, is indexed in Microsoft Graph, and becomes available in search and Copilot.
+- **Federated connectors (early access preview):** Data remains in the source system and is fetched in real time when users query Copilot or Search.
+
+:::image type="content" source="media/connectors-overview/highlevel-connectors.png" alt-text="Diagram: Synced connectors index data into Microsoft Graph; federated connectors fetch data live." lightbox="media/connectors-overview/highlevel-connectors.png":::
+
 
 ## How Copilot connectors work
 
@@ -46,18 +96,20 @@ Microsoft hosts the indexing pipeline in the cloud for most connectors. After se
 Microsoft offers over 100 prebuilt connectors for popular services, including:
 
 - **File sharing and content management** - Box, Dropbox, Google Drive, Confluence, MediaWiki, network file shares.
-
 - **Enterprise apps and databases** - Salesforce, ServiceNow, Dynamics 365, Azure services, SQL/Oracle databases, SAP.
-
 - **Other platforms** - Workday, Zendesk, Jira, and more.
 
 To use a prebuilt connector, select the connector in the Microsoft 365 admin center, provide credentials and configuration details, and the Microsoft connector service handles the rest. Microsoft or certified partners maintain and update these connectors regularly.
 
 If no prebuilt connector exists for your system, you can build a custom connector by using the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-your-first-connector) or the [Microsoft Graph connectors API](/graph/connecting-external-content-connectors-api-overview). Building a custom connector requires a developer to define a schema, register the connection in Microsoft Entra ID, and write code to pull and push data.
 
-For on-premises sources, you can use the [Graph Connector Agent]() to securely index local content.
+For on-premises sources, you can use the [Microsoft Graph connector agent](connector-agent.md) to securely index local content.
 
 Custom connectors offer flexibility but require maintenance. Use prebuilt connectors when possible, and reserve custom development for unique or critical sources.
+
+### Copilot connectors for people data
+
+Copilot connectors for people data integrate people data into Microsoft 365 applications to enhance and unify individual profiles. They provide a synchronized view of people data while keeping the original data authoritative in its source system. These connectors improve identity cohesion, Copilot response relevance, and data discoverability within Microsoft 365, including updated profile cards and search capabilities. For more information, see [Copilot connectors for people data](/graph/peopleconnectors). 
 
 ## Microsoft 365 Copilot and connectors
 
@@ -84,9 +136,7 @@ For example, if a user asks, "How do I file an expense report?", Copilot Search 
 Copilot connectors enhance the Copilot Search experience by providing the following benefits:
 
 - **Unified indexing** - External data is indexed alongside Microsoft 365 content, enabling a single, comprehensive search experience.
-
 - **Personalized results** - Signals from Microsoft Graph and connector-ingested data help tailor results based on user roles, behaviors, and organizational relationships.
-
 - **Copilot extension** - A browser add-on that enhances search relevance by incorporating signals from external work-related sites—without tracking general browsing activity.
 
 The extensive connector ecosystem makes Copilot Search an enterprise-wide knowledge discovery platform that helps users find what they need, when they need it—no matter where the data lives.
@@ -96,11 +146,8 @@ The extensive connector ecosystem makes Copilot Search an enterprise-wide knowle
 After connectors are set up, users discover external content through Microsoft Search across Office.com, SharePoint, Outlook, Teams, Bing (work account), and other apps. Connectors enhance the Microsoft Search experience with the following features:
 
 - **Integrated results** - External items appear in the **All** results view alongside internal content. Each result is labeled with its source (for example, Confluence VPN Access Policy) and opens in its native app.
-
 - **Verticals and filters** - Admins can create custom search verticals (tabs) for specific connectors. Users can refine results by source or metadata properties.
-
 - **Result display** - Connector results show a title, snippet, and metadata. Admins can customize layouts, but the default display is clean and consistent.
-
 - **Contextual suggestions** - Connector content appears in features like Microsoft Editor or messaging extensions, helping users find and use external knowledge without switching apps.
 
 Search relevance algorithms rank external and internal results equally, based on query match, freshness, and user context.
@@ -112,7 +159,6 @@ Connectors are essential knowledge sources for custom agents built with [Copilot
 Connectors enhance agents for Copilot with the following features:
 
 - **Domain-specific knowledge** - Agents can use Copilot connectors to answer questions from relevant sources.
-
 - **Action-taking capability** - Agents can be extended with Power Platform connectors or API plugins to perform tasks (for example, reset passwords, create tickets).
 
 Admins control which connectors and actions each agent can use to ensure governance and security.
