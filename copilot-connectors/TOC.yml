@@ -496,13 +496,13 @@ items:
       - name: Setup
         href: unily-intranet-connector.md
     - name: Veeva Vault RIM
-          items: 
-          - name: Overview
-            href: veeva-rim-overview.md
-          - name: Deployment guide
-            href: veeva-rim-deployment.md
-          - name: Troubleshooting
-            href: veeva-rim-troubleshooting.md
+      items: 
+      - name: Overview
+        href: veeva-rim-overview.md
+      - name: Deployment guide
+        href: veeva-rim-deployment.md
+      - name: Troubleshooting
+        href: veeva-rim-troubleshooting.md
     - name: Veeva PromoMats
       items:
       - name: Overview
