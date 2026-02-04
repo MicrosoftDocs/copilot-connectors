@@ -59,7 +59,7 @@ The Coda Enterprise connector enables users to:
 - Index documents and pages from a Coda Enterprise environment while maintaining access control.
 - Use content filters to index only selected Coda content.
 - Apply semantic search in Copilot to improve content relevance.
-- Retrieve Coda content through Microsoft Copilot and Microsoft Search.
+- Retrieve Coda content through Microsoft 365 Copilot and Microsoft Search.
 
 The Coda Enterprise connector has the following limitations:
 

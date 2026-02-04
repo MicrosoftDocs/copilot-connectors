@@ -8,10 +8,6 @@ ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Troubleshooting the Atlassian Jira Cloud Microsoft 365 Copilot connector."
 ms.date: 07/22/2021
 ---

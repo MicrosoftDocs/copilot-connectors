@@ -8,10 +8,6 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Set up the SharePoint Server Microsoft 365 Copilot connector."
 ms.date: 08/15/2025
 ---
@@ -47,7 +43,7 @@ SharePoint Server Copilot Connector (Graph Connector) allows users in your organ
 
 - The exclusion rules exclude only the specified sites. They can't be used to exclude certain lists, libraries, or content types inside a site.
 
-- [Staged rollout](staged-rollout-for-graph-connectors.md) is not supported in SharePoint On-premises connections.
+- [Staged rollout](staged-rollout.md) is not supported in SharePoint On-premises connections.
 
 - Creating a Declarative Agent (DA) for SharePoint On-premises currently requires a pro code approach using Visual Studio Code and a manually authored DA manifest, [Declarative agent schema 1.2 for Microsoft 365 Copilot | Microsoft Learn](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.2?tabs=json).
 

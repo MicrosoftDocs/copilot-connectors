@@ -74,7 +74,7 @@ To authenticate, choose **OAuth 2.0**:
 
 ### Roll out
 
-You can optionally roll out the connector to a limited audience before full deployment. To roll out to a limited audience, choose the toggle next to **Rollout to limited audience**, and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+You can optionally roll out the connector to a limited audience before full deployment. To roll out to a limited audience, choose the toggle next to **Rollout to limited audience**, and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Bitbucket Knowledge connector starts indexing content immediately.
 

@@ -99,7 +99,7 @@ To authenticate and synchronize content from Confluence, choose one of the fol
 
 ### Roll out
 
-Deploy the connection to a limited set of users to validate it in Copilot and other search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+Deploy the connection to a limited set of users to validate it in Copilot and other search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
 
@@ -149,7 +149,7 @@ If you choose **Only people with access to this data source**, you also need t
 
 > [!NOTE]
 > - If you choose Microsoft Entra ID as the identity source, the connector maps user email IDs from Confluence to the UPN property in Microsoft Entra ID.
-> - If you choose non-Entra ID as the identity source, provide a regular expression to map email ID to UPN. For more information, see [Map your non-Entra ID identities](map-non-aad.md).
+> - If you choose non-Entra ID as the identity source, provide a regular expression to map email ID to UPN. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
 > - Updates to users or groups that govern access permissions are synced in full crawls only. Incremental crawls don't currently support processing updates to permissions.
 
 ### Customize content settings

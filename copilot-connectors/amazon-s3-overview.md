@@ -7,7 +7,6 @@ manager: zezhangzhao
 ms.topic: overview
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
 ms.date: 12/02/2025
 ---
 

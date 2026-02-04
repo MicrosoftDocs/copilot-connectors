@@ -96,8 +96,8 @@ To prevent token expiration:
 
 Your data source can include:
 
-- **Microsoft Entra identities** (federated users). For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-aad) and [Configure Salesforce for Single sign-on in Microsoft Entra ID](/entra/identity/saas-apps/salesforce-tutorial).
-- **Non-Microsoft Entra identities** (native Salesforce users). For more information, see [Map non-Microsoft Entra identities](/microsoft-365-copilot/connectors/map-non-aad).
+- **Microsoft Entra identities** (federated users). For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-entra-id) and [Configure Salesforce for Single sign-on in Microsoft Entra ID](/entra/identity/saas-apps/salesforce-tutorial).
+- **Non-Microsoft Entra identities** (native Salesforce users). For more information, see [Map non-Microsoft Entra identities](/microsoft-365-copilot/connectors/map-non-entra-id).
 
 ## Determine data to ingest
 

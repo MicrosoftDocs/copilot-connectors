@@ -201,7 +201,7 @@ On the **Users** tab, the ServiceNow Tickets connector supports search permissio
 Choose whether your ServiceNow instance has Microsoft Entra ID provisioned users or non-Microsoft Entra ID users:
 
 1. Choose the default mapping option **Microsoft Entra ID** if the email ID of ServiceNow users is the same as the user principal name (UPN), or email of the users in Microsoft Entra ID.
-2. Choose the **Non-Microsoft Entra ID** option if the email ID of ServiceNow users is different from the UPN of users in Microsoft Entra ID. You can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](map-non-aad.md).
+2. Choose the **Non-Microsoft Entra ID** option if the email ID of ServiceNow users is different from the UPN of users in Microsoft Entra ID. You can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](map-non-entra-id.md).
 
 ### Customize content settings
 
@@ -316,13 +316,13 @@ For more information about full and incremental crawls, see [Guidelines for sync
 
 ## Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
 Choose **Create** to deploy the connection. The ServiceNow Tickets Copilot connector starts indexing content right away.
 
 After you create your connection, you can review the status (including count of indexed users and items) by selecting the connector in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-When the connection status is ready, you can validate the indexed ticket item using the index browser by providing the `sys_id` of any ticket item and checking its permissions for users. For more information, see [Search and validate indexed content](connectors-index-search.md).
+When the connection status is ready, you can validate the indexed ticket item using the index browser by providing the `sys_id` of any ticket item and checking its permissions for users. For more information, see [Search and validate indexed content](indexed-search.md).
 
 ## Related content
 

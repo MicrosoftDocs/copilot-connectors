@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Set up the Enterprise Websites cloud Microsoft 365 Copilot connector."
 ---
 
@@ -262,7 +258,7 @@ To illustrate an example, let us look at configuring OIDC client credentials aut
     - Use this endpoint to request access tokens.
 
 ### 4. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
 At this point, you're ready to create the connection for your cloud websites. You can click **Create** to publish your connection and index webpages from your websites.
 

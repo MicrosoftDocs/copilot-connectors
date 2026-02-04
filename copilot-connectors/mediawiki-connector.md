@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Set up the MediaWiki Copilot connector for Microsoft Search and Microsoft 365 Copilot"
 ---
 <!---Previous ms.author: monaray --->

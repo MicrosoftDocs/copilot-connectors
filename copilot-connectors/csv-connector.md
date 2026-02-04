@@ -8,10 +8,6 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Set up the CSV Microsoft 365 Copilot connector for SharePoint or Azure Data Lake Storage sources." 
 ms.date: 03/08/2022
 ---

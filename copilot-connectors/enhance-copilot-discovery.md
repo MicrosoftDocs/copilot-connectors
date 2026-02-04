@@ -9,11 +9,7 @@ ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
-description: "Enhance the discoverability of Microsoft 365 Copilot connectors' content within Microsoft Copilot."
+description: "Enhance the discoverability of Microsoft 365 Copilot connectors' content within Microsoft 365 Copilot."
 ---
 
 # Enhance Copilot discovery with Microsoft 365 Copilot connectors content

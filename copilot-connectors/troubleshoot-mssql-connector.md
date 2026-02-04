@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Troubleshooting the Azure SQL and Microsoft SQL Microsoft 365 Copilot connectors."
 ---
 

@@ -59,7 +59,7 @@ After the OAuth app is created, enter the client ID and client secret in the con
 
 ### Roll out
 
-To validate the connector before you deploy it to your organization, you can roll it out to a limited audience. Choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+To validate the connector before you deploy it to your organization, you can roll it out to a limited audience. Choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The WordPress.com connector starts indexing content right away.
 

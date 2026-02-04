@@ -8,10 +8,6 @@ ms.audience: Admin
 ms.topic: how-to
 ms.service: mssearch 
 ms.localizationpriority: Medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Set up the Azure DevOps Wiki Microsoft 365 Copilot connector"
 ms.date: 12/11/2025
 ---
@@ -146,7 +142,7 @@ To revoke access to any app registered in Azure DevOps, go to User settings at t
 The Azure DevOps Wiki Copilot connector allows indexing of one organization per connection. To connect to your Azure DevOps service, select the right organization from the list of organizations accessible to the service account.
 
 ### Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
 At this point, you're ready to create the connection for Azure DevOps wikis. You can click **Create** to publish your connection and index wikis from your Azure DevOps organization.
 

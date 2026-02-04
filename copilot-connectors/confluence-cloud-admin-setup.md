@@ -74,7 +74,7 @@ In Confluence Cloud, make sure spaces follow clear naming conventions, use label
 
 The default method for mapping your data source identities to Microsoft Entra ID is to determine whether the email address of each Confluence user matches the user principal name (UPN) or email address in Microsoft Entra ID. If this default mapping doesn’t meet your organization's needs, you can define a custom mapping formula.
 
-For more information about mapping identities that aren’t in Microsoft Entra ID, see [Map your non-Azure AD identities](/microsoft-365-copilot/connectors/map-non-aad).
+For more information about mapping identities that aren’t in Microsoft Entra ID, see [Map your non-Azure AD identities](/microsoft-365-copilot/connectors/map-non-entra-id).
 
 ### Configure user access permissions
 

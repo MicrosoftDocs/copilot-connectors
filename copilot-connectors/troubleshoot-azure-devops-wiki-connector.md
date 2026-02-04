@@ -8,10 +8,6 @@ ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: Medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Troubleshooting the Azure DevOps Wiki Microsoft 365 Copilot connector."
 ms.date: 06/03/2022
 ---

@@ -8,17 +8,13 @@ ms.audience: Admin
 ms.topic: article 
 ms.service: mssearch 
 ms.localizationpriority: medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Set up the Gong Copilot connector for Microsoft 365 Copilot and Microsoft Search" 
 ms.date: 12/25/2025
 ---
 
 # Gong Copilot connector
 
-With the Microsoft Copilot connector for Gong, your organization can index calls and meeting-related content like summaries, action items, and call metadata. The connector enables Gong users to retrieve this information through Microsoft Copilot and any Microsoft Search client.
+With the Microsoft 365 Copilot connector for Gong, your organization can index calls and meeting-related content like summaries, action items, and call metadata. The connector enables Gong users to retrieve this information through Microsoft 365 Copilot and any Microsoft Search client.
 
 This article is intended for Microsoft 365 administrators and anyone responsible for configuring, operating, or monitoring the Gong Copilot connector.
 
@@ -59,7 +55,7 @@ Enter the Gong base URL that you copied during the [Prerequisites step](#prerequ
 [![Screenshot that shows completion of OAuth flow.](media/gong-connector/gong-oauth.png)](media/gong-connector/gong-oauth.png#lightbox)
 
 ### 4. Rollout to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, click [here](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, click [here](staged-rollout.md).
 
 At this stage, you're ready to create the connection to Gong. To proceed, review and agree to the terms by selecting the checkbox next to the **Notice** section.
 Then, click the **Create** button. The Copilot connector begins indexing calls and meeting-related content from your Gong instance.
@@ -91,7 +87,7 @@ By default, the system attempts to match users by comparing the **user's email i
 2. **Non-Microsoft Entra ID (non ME-ID) mapping (custom):** <br>
 If the default mapping doesn't work for your organization (for example, if email formats differ) you can define a custom mapping formula to link users across systems.
 
-[Click here](map-non-aad.md) to learn more about mapping non-Entra ID identities.
+[Click here](map-non-entra-id.md) to learn more about mapping non-Entra ID identities.
 
 >[!Important]
 >- Access is based on Gong user profiles: <br>

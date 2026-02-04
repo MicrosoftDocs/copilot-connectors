@@ -8,10 +8,6 @@ ms.audience: Admin
 ms.topic: article
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Learn about the legal terms and conditions for Microsoft 365 Copilot connectors."
 ---
 

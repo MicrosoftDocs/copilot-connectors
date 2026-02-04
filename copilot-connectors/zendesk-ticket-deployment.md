@@ -64,7 +64,7 @@ Enter the client ID and secret to connect to your instance. After you connect, u
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Zendesk Ticket connector starts indexing content right away.
 
@@ -94,7 +94,7 @@ The Zendesk Ticket Copilot connector supports **Everyone** or **Only people with
 
 #### Map identities
 
-The default method for mapping your data source identities with Microsoft Entra ID is to verify that the email ID of Zendesk users is the same as the user principal name (UPN) or email address of the users in Microsoft Entra. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Entra ID identities](/microsoft-365-copilot/connectors/map-non-aad).
+The default method for mapping your data source identities with Microsoft Entra ID is to verify that the email ID of Zendesk users is the same as the user principal name (UPN) or email address of the users in Microsoft Entra. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Entra ID identities](/microsoft-365-copilot/connectors/map-non-entra-id).
 
 To identify which option to choose:
 

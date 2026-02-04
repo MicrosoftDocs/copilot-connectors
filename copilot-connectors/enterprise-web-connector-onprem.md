@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Set up the Enterprise Websites on-premises Microsoft 365 Copilot connector."
 ---
 
@@ -253,7 +249,7 @@ Once you select this authentication method in the admin center, provide the user
 > This auth method requires MFA to be switched off for the user account.
 
 ### 4. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
 At this point, you're ready to create the connection for your on-premises websites. You can click **Create** to publish your connection and index webpages from your websites.
 
@@ -372,7 +368,7 @@ To learn more about regex expressions, see [.NET regular expressions](/dotnet/st
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/enterprise-web-connector/enterprise-website-onprem-sync-tab.png)](media/enterprise-web-connector/enterprise-website-onprem-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Microsoft Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Microsoft 365 Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 

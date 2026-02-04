@@ -8,17 +8,13 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Set up the Stack Overflow Microsoft 365 Copilot connector." 
 ms.date: 12/25/2025
 ---
 
 # Stack Overflow Microsoft 365 Copilot connector
 
-The Stack Overflow Copilot connector allows your organization to index questions and answers from Stack Overflow. After you configure the connector, end users can search for these posts from Stack Overflow in Microsoft Copilot and from any Microsoft Search client. 
+The Stack Overflow Copilot connector allows your organization to index questions and answers from Stack Overflow. After you configure the connector, end users can search for these posts from Stack Overflow in Microsoft 365 Copilot and from any Microsoft Search client. 
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Stack Overflow Copilot connector.
 
@@ -56,7 +52,7 @@ To authenticate and sync content from Stack Overflow, choose one of the two supp
    - If you use Stack Overflow for Teams **Business**, select Basic authentication. To learn more about authentication and authorization in Stack Overflow for Teams **Business**, [click here](https://stackoverflowteams.help/articles/7913768-stack-overflow-for-teams-api-v3#authentication-and-authorization).
  
 ### 4. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
 At this point, you're ready to create the connection for Stack Overflow. You can click on the "Create" button to publish your connection and index posts from your Stack Overflow account.
 

@@ -175,13 +175,13 @@ To validate the connector before a full deployment, roll it out to a limited aud
 1. Select the toggle next to **Rollout to limited audience**.
 1. Specify the users or groups for pilot rollout.
 
-For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The ServiceNow Catalog connector begins indexing content immediately.
 
 After you create your connection, you can review the status (including count of indexed users and items) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-When the connection status is ready, you can validate the indexed content item using the index browser by providing the `sys_id` of any catalog item that you want to test for and checking its permissions for users. For more information, see [Search and validate indexed content](connectors-index-search.md).
+When the connection status is ready, you can validate the indexed content item using the index browser by providing the `sys_id` of any catalog item that you want to test for and checking its permissions for users. For more information, see [Search and validate indexed content](indexed-search.md).
 
 The following sections list default values that are set. To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 
@@ -226,7 +226,7 @@ If you choose **Everyone**, indexed data appears in the search results for all u
 
 #### Map identities
 
-By default, ServiceNow maps users' email IDs in ServiceNow to their corresponding Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-aad.md).
+By default, ServiceNow maps users' email IDs in ServiceNow to their corresponding Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-entra-id.md).
 
 ### Customize content settings
 

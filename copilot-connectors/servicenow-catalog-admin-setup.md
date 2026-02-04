@@ -70,7 +70,7 @@ If your organization uses a different URL, you can customize the URL when you de
 
 By default, Microsoft Entra ID maps identities from your data source by checking whether the email ID of ServiceNow users matches the user principal name (UPN) or **Mail** attribute in Microsoft Entra ID.
 
-If this default mapping doesn’t meet your organization’s needs, you can define a custom mapping formula. For more information, see [Map your non-Entra ID identities](map-non-aad.md).
+If this default mapping doesn’t meet your organization’s needs, you can define a custom mapping formula. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
 
 ### Check for advanced scripts in ServiceNow
 
@@ -163,7 +163,7 @@ To verify the item count expected for ingestion:
 
 1. Note the item count.
 
-When the connector is set up and item sync is completed, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](connector-view-details.md#view-connection-statistics).
+When the connector is set up and item sync is completed, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](view-details.md#view-connection-statistics).
 
 ### Set up REST API
 
@@ -179,7 +179,7 @@ To set up access control:
 
     **Type**: REST_Endpoint 
     **Operation**: Execute 
-    **Name**: Microsoft Copilot 
+    **Name**: Microsoft 365 Copilot 
     **Role**: admin *(or the same role assigned to the crawling account)* 
 
 1.  Choose **Submit**. 
@@ -190,12 +190,12 @@ Create the scripted REST API:
 1.  Choose **New**. 
 1.  Enter the following information: 
 
-    **Name**: Microsoft Copilot 
+    **Name**: Microsoft 365 Copilot 
     **API ID**: microsoft_copilot 
 
 1.  Choose **Submit**. 
-1.  From the **Scripted REST API** list page, choose **Microsoft Copilot**. 
-1.  Set **Default ACLs** to **Microsoft Copilot**. To avoid any issues with authorization, also add the **Scripted REST External Default** ACL. 
+1.  From the **Scripted REST API** list page, choose **Microsoft 365 Copilot**. 
+1.  Set **Default ACLs** to **Microsoft 365 Copilot**. To avoid any issues with authorization, also add the **Scripted REST External Default** ACL. 
 
 Add a resource to the API: 
 
@@ -219,7 +219,7 @@ Add a resource to the API:
     **Requires authentication** 
     **Requires ACL authorization** 
 
-1.  Make sure that **ACLs** is set to **Microsoft Copilot**. To avoid any issues with authorization, also add the **Scripted REST External Default** ACL. 
+1.  Make sure that **ACLs** is set to **Microsoft 365 Copilot**. To avoid any issues with authorization, also add the **Scripted REST External Default** ACL. 
 1.  Choose **Update**. 
 
 To verify the setup: 

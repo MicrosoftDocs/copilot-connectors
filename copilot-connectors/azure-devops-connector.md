@@ -117,7 +117,7 @@ The Azure DevOps Work Items Copilot connector only indexes content from an ADO o
 Your Entra app should automatically get authenticated with the logged-in Admin account due to single sign-on. Microsoft Entra issues an access token to the application. This access token contains information about the user and the delegated permissions that have been granted. The application uses the access token to make requests to Azure DevOps. The application can only access data and perform actions that the signed-in user is also authorized to do.
 
 ### 4. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
 At this point, you're ready to create the connection for Azure DevOps work items. You can click **Create** to publish your connection and index work items from your Azure DevOps organization.
 

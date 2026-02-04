@@ -8,17 +8,13 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Set up the Salesforce Knowledge Microsoft 365 Copilot connector for Microsoft Search and Microsoft 365 Copilot" 
 ms.date: 12/25/2025
 ---
 
 # Salesforce Knowledge Copilot connector
 
-The Salesforce Knowledge Copilot connector allows your organization to index articles from Salesforce Knowledge. After you configure the connector, end users can search for Knowledge articles from Salesforce in Microsoft Copilot and from any Microsoft Search client. 
+The Salesforce Knowledge Copilot connector allows your organization to index articles from Salesforce Knowledge. After you configure the connector, end users can search for Knowledge articles from Salesforce in Microsoft 365 Copilot and from any Microsoft Search client. 
 
 This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Salesforce Knowledge Copilot connector. 
 
@@ -102,7 +98,7 @@ The first time you've attempted to sign in with these settings, you'll get a pop
   > - Ensure the user logging in has all the necessary object permissions for the organization.
  
 ### 4. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
 At this point, you're ready to create the connection for Salesforce Knowledge. You can click on the "Create" button to publish your connection and index posts from your Salesforce Knowledge account.
 
@@ -140,9 +136,9 @@ You can choose to ingest Access Control Lists (ACLs) from your Salesforce instan
 >[!NOTE]
 >If you use a third-party Identity Provider like Ping ID or secureAuth, you should select "non-Microsoft Entra" as the identity type.
 
-If you chose to ingest an ACL from your Salesforce instance and selected "non-ME ID" for the identity type, see [Map your non-Microsoft Entra Identities](map-non-aad.md) for instructions on mapping the identities.
+If you chose to ingest an ACL from your Salesforce instance and selected "non-ME ID" for the identity type, see [Map your non-Microsoft Entra Identities](map-non-entra-id.md) for instructions on mapping the identities.
 
-If you chose to ingest an ACL from your Salesforce instance and selected "ME-ID" for the identity type, see [Map your Microsoft Entra Identities](map-aad.md) for instructions on mapping the identities. To learn how to set up Microsoft Entra SSO for Salesforce, see this [tutorial](/azure/active-directory/saas-apps/salesforce-tutorial).
+If you chose to ingest an ACL from your Salesforce instance and selected "ME-ID" for the identity type, see [Map your Microsoft Entra Identities](map-entra-id.md) for instructions on mapping the identities. To learn how to set up Microsoft Entra SSO for Salesforce, see this [tutorial](/azure/active-directory/saas-apps/salesforce-tutorial).
 
 >[!NOTE]
 >

@@ -9,13 +9,12 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: Medium
-search.appverid:
 description: "Set up the iManage Cloud Microsoft 365 Copilot connector."
 ---
 
 # iManage Cloud Microsoft 365 Copilot connector (preview)
 
-The iManage Cloud Microsoft 365 Copilot connector enables your organization to index content from iManage Cloud so users can discover it in Microsoft Copilot experiences and Microsoft Search clients. This connector is part of the Microsoft 365 Copilot connectors platform and supports Copilot extensibility scenarios.
+The iManage Cloud Microsoft 365 Copilot connector enables your organization to index content from iManage Cloud so users can discover it in Microsoft 365 Copilot experiences and Microsoft Search clients. This connector is part of the Microsoft 365 Copilot connectors platform and supports Copilot extensibility scenarios.
 
 > [!IMPORTANT]
 > **Preview scope & gating**  
@@ -26,7 +25,7 @@ The iManage Cloud Microsoft 365 Copilot connector enables your organization to i
 ## Capabilities
 
 - Indexes content from iManage Cloud workspaces, documents, and metadata.
-- Enables semantic search and retrieval in Microsoft Copilot experiences.
+- Enables semantic search and retrieval in Microsoft 365 Copilot experiences.
 - Supports incremental crawls for updated content.
 - Supports **matter filters** to **include or exclude** specific matters from the crawl.
 - Integrates with Microsoft Search, Microsoft 365 apps, and Copilot extensibility APIs.
@@ -148,9 +147,9 @@ The connector maps Entra ID identities to the corresponding iManage user account
 > - **Access Permissions** control which users can retrieve indexed iManage content.  
 > These settings operate at different layers and must be configured separately.
 
-- For testing, you can choose [publish to limited audience](./staged-rollout-for-graph-connectors.md#modify-or-stop-staged-rollout)
-- Search and validate your indexed content and permissions using [Index browser](./connectors-index-search.md)
-- You may find answers to common questions in our [FAQ section](./frequently-asked-questions.md)
+- For testing, you can choose [publish to limited audience](./staged-rollout.md#modify-or-stop-staged-rollout)
+- Search and validate your indexed content and permissions using [Index browser](./indexed-search.md)
+- You might find answers to common questions in the [FAQ](./frequently-asked-questions.md)
 
 For Microsoft Search, if you need to customize the search results page, see [Customize the search results page](customize-search-page.md).
 

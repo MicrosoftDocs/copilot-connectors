@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Set up the Trello Microsoft 365 Copilot connector." 
 ms.date: 08/15/2025
 ---
@@ -60,7 +56,7 @@ Enter the Consumer key and Private secret you got from your Trello app console. 
 
 ### 3. Roll out to limited audience
 
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you expand the rollout to a broader audience. For more information, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you expand the rollout to a broader audience. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
 Now you're ready to create the connection for Trello. Choose **Create** to publish your connection and index tickets from your Trello account.
 

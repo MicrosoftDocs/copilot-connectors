@@ -72,7 +72,7 @@ The connector indexes the following data types and surfaces them in Copilot and 
 
 ## Permissions model and access control
 
-Visibility of indexed content respects your configuration in the Microsoft 365 admin center: you can scope results to **Only people with access to this data source** (default) or make them visible to **Everyone**. Identity mapping aligns GitLab identities to Microsoft Entra ID using email, sign in, or name; if direct mapping fails, you can apply regex-based transforms. For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-aad).
+Visibility of indexed content respects your configuration in the Microsoft 365 admin center: you can scope results to **Only people with access to this data source** (default) or make them visible to **Everyone**. Identity mapping aligns GitLab identities to Microsoft Entra ID using email, sign in, or name; if direct mapping fails, you can apply regex-based transforms. For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-entra-id).
 
 ## Next step
 

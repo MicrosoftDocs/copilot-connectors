@@ -59,7 +59,7 @@ The connector indexes the following data types from Aha!:
 - Features: Includes properties such as assigned user, created date, description, epic name, status, tags, and more.
 - Ideas: Includes properties such as assigned user, categories, created date, description, status, votes, and more.
 
-Indexed content is surfaced in Microsoft Copilot and Microsoft Search results, making it accessible to users with appropriate permissions.
+Indexed content is surfaced in Microsoft 365 Copilot and Microsoft Search results, making it accessible to users with appropriate permissions.
 
 ## Permissions model and access control
 

@@ -53,7 +53,7 @@ The connector supports **basic authentication** using a WordPress **application 
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to validate the connector before broad deployment. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to validate the connector before broad deployment. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The WordPress.org Copilot connector starts indexing content right away.
 

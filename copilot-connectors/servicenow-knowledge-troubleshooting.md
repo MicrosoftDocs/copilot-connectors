@@ -10,10 +10,6 @@ ms.audience: Admin
 ms.topic: article
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Find troubleshooting information for the ServiceNow Knowledge Copilot connector."
 ---
 

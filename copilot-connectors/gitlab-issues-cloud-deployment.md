@@ -66,7 +66,7 @@ For information about how to create OAuth apps in GitLab, see [Configure GitLab 
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The GitLab Issues Cloud connector starts indexing content right away.
 
@@ -103,7 +103,7 @@ To ensure permissions are applied correctly, map GitLab user identities to Micro
 - **Login:** Maps GitLab logins with Microsoft Entra ID user properties. 
 - **Name:** Maps GitLab name with Microsoft Entra ID user properties. 
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-aad.md). 
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md). 
 
 ### Customize content settings
 

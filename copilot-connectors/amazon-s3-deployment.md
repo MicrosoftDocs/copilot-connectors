@@ -64,7 +64,7 @@ As a best practice, create a dedicated IAM user with the **AmazonS3ReadOnlyAcces
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Amazon S3 Copilot connector starts indexing content right away. After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
@@ -120,7 +120,7 @@ To view available properties from your S3 objects, assign a schema to the proper
 
 ### Customize sync intervals
 
-The refresh interval determines how often your data is synced between Amazon S3 and the Microsoft Copilot connector index. The S3 Copilot connector supports both full crawl and incremental crawls. The following are the default values:
+The refresh interval determines how often your data is synced between Amazon S3 and the Microsoft 365 Copilot connector index. The S3 Copilot connector supports both full crawl and incremental crawls. The following are the default values:
 
 - **Incremental crawl:** Every 15 minutes.
 - **Full crawl:** Every day.

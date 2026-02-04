@@ -9,15 +9,11 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Set up the Oracle SQL Microsoft 365 Copilot connector."
 ---
 # Oracle SQL Microsoft 365 Copilot connector
 
-The Oracle SQL Microsoft 365 Copilot connector allows your organization to discover and index data from an on-premises Oracle database. The connector indexes specified content in Microsoft Search and Microsoft Copilot 365. To keep the index up to date with source data, it supports periodic full and incremental crawls. With the Oracle SQL Copilot connector, you can also restrict access to search results for certain users.
+The Oracle SQL Microsoft 365 Copilot connector allows your organization to discover and index data from an on-premises Oracle database. The connector indexes specified content in Microsoft Search and Microsoft 365 Copilot. To keep the index up to date with source data, it supports periodic full and incremental crawls. With the Oracle SQL Copilot connector, you can also restrict access to search results for certain users.
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Oracle SQL Copilot connector.
 
@@ -71,7 +67,7 @@ a. Basic authentication
 b. Windows authentication
 
 ### 5. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the roll-out to a broader audience. To know more about limited rollout, [click here](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the roll-out to a broader audience. To know more about limited rollout, [click here](staged-rollout.md).
 
 ## Content
 To search your database content, you must specify SQL queries when you configure the connector. These SQL queries need to name all the database columns that you want to index (source properties). This query includes any SQL joins that need to be performed to get all the columns. To restrict access to search results, you must specify Access Control Lists (ACLs) within SQL queries when you configure the connector.
@@ -83,7 +79,7 @@ a. **Select data columns (Required) and ACL columns (Optional)** <br>
 <details>
 <summary>[Click to expand] Selecting data columns for full crawl query.</summary><br>
 
-In this step, you configure the SQL query that runs a full crawl of the database. The full crawl selects all the columns or properties that need to be presented in Microsoft Copilot or Search. You can also specify ACL columns to restrict access to search results to specific users or groups.
+In this step, you configure the SQL query that runs a full crawl of the database. The full crawl selects all the columns or properties that need to be presented in Microsoft 365 Copilot or Search. You can also specify ACL columns to restrict access to search results to specific users or groups.
 
 > [!Tip]
 > To get all the columns that you need, you can join multiple tables.

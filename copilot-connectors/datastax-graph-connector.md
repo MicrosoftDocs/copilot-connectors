@@ -8,7 +8,6 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: medium 
-search.appverid: 
 description: "Set up the DataStax Microsoft 365 Copilot connector." 
 ms.date: 08/15/2025
 ---
@@ -59,7 +58,7 @@ To use **DataStax Application Token** for authentication, a DataStax admin needs
 Copy the generated application token from the token details, which is typically a long string that  starts with "AstraCS:..." and paste it in the connector setup. Choose **Authorize**, and use the same token to authenticate permission to crawl.
 
 ### 5. Roll out to a limited audience
-Deploy the connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for connectors](staged-rollout-for-graph-connectors.md).
+Deploy the connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for connectors](staged-rollout.md).
 
 At this point, you're ready to create the connection for DataStax. Choose **Create** to publish your connection and index articles from your DataStax account.
 
@@ -92,7 +91,7 @@ The DataStax Copilot connector supports search permissions visible to **Everyo
 
 #### Mapping identities
 
-The default method to map your data source identities with Microsoft Entra ID is to verify that the email ID of DataStax users is the same as the user principal name (UPN) of the users in Microsoft Entra ID. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](map-non-aad.md).
+The default method to map your data source identities with Microsoft Entra ID is to verify that the email ID of DataStax users is the same as the user principal name (UPN) of the users in Microsoft Entra ID. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](map-non-entra-id.md).
 
 To identify which option is best for your organization:
 

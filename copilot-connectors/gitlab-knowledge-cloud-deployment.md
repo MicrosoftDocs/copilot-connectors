@@ -52,7 +52,7 @@ The GitLab Knowledge Cloud connector supports **OAuth 2.0** authentication. Choo
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The GitLab Knowledge Cloud connector starts indexing content right away.
 
@@ -91,7 +91,7 @@ To ensure that permissions are applied correctly, map GitLab user identities to 
 - **Login:** Maps GitLab logins with Microsoft Entra ID user properties. 
 - **Name:** Maps GitLab name with Microsoft Entra ID user properties. 
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-aad.md). 
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md). 
 
 ### Customize content settings
 

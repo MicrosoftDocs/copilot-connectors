@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Set up the 15Five High Fives Microsoft 365 Copilot connector (preview)." 
 ms.date: 08/15/2025
 ---

@@ -9,11 +9,6 @@ ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
-ROBOTS: NOINDEX, NOFOLLOW
 description: "Find troubleshooting information for the BambooHR Microsoft 365 Copilot connector."
 ---
 

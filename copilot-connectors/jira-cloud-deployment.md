@@ -93,7 +93,7 @@ To authenticate and sync issues from Jira, choose one of the following supported
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Atlassian Jira Cloud Copilot connector starts indexing content right away.
 
@@ -134,7 +134,7 @@ The Atlassian Jira Cloud Copilot connector supports search permissions visible t
 
 #### Mapping identities
 
-The default method for mapping your data source identities with Microsoft Entra ID is to make the email ID of Jira users the same as the user principal name (UPN) or email address of the users in Microsoft Entra ID. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](map-non-aad.md).
+The default method for mapping your data source identities with Microsoft Entra ID is to make the email ID of Jira users the same as the user principal name (UPN) or email address of the users in Microsoft Entra ID. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](map-non-entra-id.md).
 
 - Choose the **Microsoft Entra ID** option if the email ID of Jira users is the same as the UPN of users in Microsoft Entra ID.
 - Choose the **Non-Microsoft Entra ID** option if the email ID of Jira users is different from the UPN and email of users in Entra ID.

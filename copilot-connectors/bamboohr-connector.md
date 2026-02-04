@@ -8,10 +8,6 @@ ms.audience: Admin
 ms.topic: article
 ms.service: mssearch
 ms.localizationpriority: Medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Set up the BambooHR Microsoft 365 Copilot connector."
 ms.date: 11/14/2025
 ---

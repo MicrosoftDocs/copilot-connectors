@@ -9,12 +9,6 @@ audience: Admin
 ms.audience: Admin
 ms.date: 7/31/2023 
 ms.localizationpriority: medium
-ms.collection:
-- scotvorg
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Review Microsoft Search Answer Analytics Reports"
 recommendations: false
 ---

@@ -9,18 +9,13 @@ ms.audience: Admin
 ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
-ROBOTS: NoIndex
 description: "Set up the File Share Microsoft 365 Copilot connector"
 ---
 # File Share Microsoft 365 Copilot connector
 
 The File Share Microsoft 365 Copilot connector allows users in your organization to search on premises Windows file shares. After you configure the connector and index data from the file path, end users can search for that content in Microsoft Search and Microsoft 365 Copilot. 
  
-This article is intended for Microsoft 365 administrators who are responsible for configuring, running, and monitoring the File Share Copilot connector. It supplements the general instructions provided for setting up Microsoft Copilot connectors in the Microsoft 365 admin center.
+This article is intended for Microsoft 365 administrators who are responsible for configuring, running, and monitoring the File Share Copilot connector. It supplements the general instructions provided for setting up Microsoft 365 Copilot connectors in the Microsoft 365 admin center.
 
 ## Capabilities
 
@@ -120,8 +115,8 @@ The refresh interval determines how often your data is synchronized between the 
 ## Review and test your connection
 
 - Follow the general [setup instructions](./deployment-overview.md).
-- Search and validate your indexed content and permissions using [Index browser](/microsoft-365-copilot/connectors/connectors-index-search).
-- Find answers to common questions in our [FAQ section](/microsoft-365-copilot/connectors/connectors-index-search).
+- Search and validate your indexed content and permissions using [Index browser](/microsoft-365-copilot/connectors/indexed-search).
+- Find answers to common questions in the [FAQ section](/microsoft-365-copilot/connectors/frequently-asked-questions).
 
 For Microsoft Search, if you need to customize the search results page. To learn about customizing search results, see [Customize the search results page](/microsoft-365-copilot/connectors/deployment-overview#step-11-customize-the-search-results-page).
 

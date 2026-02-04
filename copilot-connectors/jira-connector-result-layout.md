@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: how-to
 ms.service: mssearch 
 ms.localizationpriority: medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Result layout JSON for the Jira Microsoft 365 Copilot." 
 ms.date: 05/28/2022
 ---

@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Troubleshooting the Enterprise websites on-premises Microsoft 365 Copilot connector."
 ---
 

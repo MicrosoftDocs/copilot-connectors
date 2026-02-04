@@ -88,7 +88,7 @@ For information about how to create a GitLab OAuth app, see [Configure GitLab as
 
 ### Roll out
 
-To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users or groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users or groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 The GitLab Merge Requests Server connector begins indexing content immediately after deployment.
 
@@ -119,7 +119,7 @@ Map GitLab user identities to Microsoft Entra ID. Options include:
 - **Login**: Maps GitLab logins with Microsoft Entra ID user properties. 
 - **Name**: Maps GitLab name with Microsoft Entra ID user properties. 
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-aad.md). 
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md). 
 
 ### Customize content settings
 

@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: how-to
 ms.service: mssearch 
 ms.localizationpriority: medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Result layout JSON for Azure DevOps Wiki Microsoft 365 Copilot connector" 
 ms.date: 06/03/2022
 ---

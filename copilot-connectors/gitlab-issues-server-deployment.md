@@ -109,7 +109,7 @@ Map GitLab user identities to Microsoft Entra ID. Options include:
 - **Login**: Maps GitLab logins with Microsoft Entra ID user properties. 
 - **Name**: Maps GitLab name with Microsoft Entra ID user properties. 
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-aad.md). 
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md). 
 
 ### Customize content settings
 

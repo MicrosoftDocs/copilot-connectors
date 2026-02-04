@@ -109,7 +109,7 @@ In Atlassian Asana, security permissions are defined via project permission sche
 
 #### Map identities
 
-The default method to map your data source identities with Microsoft Entra ID is to verify that the email ID of Asana users is the same as the user principal name (UPN) of the users in Microsoft Entra ID. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](map-non-aad.md).
+The default method to map your data source identities with Microsoft Entra ID is to verify that the email ID of Asana users is the same as the user principal name (UPN) of the users in Microsoft Entra ID. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](map-non-entra-id.md).
 
 To identify which option is best for your organization:
 

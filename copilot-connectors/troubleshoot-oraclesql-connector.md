@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 ROBOTS: NoIndex
 description: "Troubleshoot issues with the Oracle SQL Microsoft 365 Copilot connector."
 ---

@@ -174,7 +174,7 @@ If you're using the **Advanced** flow, enter the API namespace that you created 
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
 Choose **Create** to deploy the connection. The ServiceNow Knowledge Copilot connector starts indexing content right away.
 
@@ -189,7 +189,7 @@ The following table lists the default values that are set. To customize these va
 | Sync | Incremental crawl | Frequency: Every 15 minutes |
 | Sync | Full crawl | Frequency: Every day |
 
-After you create your connection, you can review the status (including count of indexed users & articles) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/). When the connection status is **Ready**, you can validate the connection by providing the `sys_id` of any knowledge article and verifying its user permissions. For more information, see [Searching and validating indexed content Microsoft 365 Copilot connectors](connectors-index-search.md).
+After you create your connection, you can review the status (including count of indexed users & articles) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/). When the connection status is **Ready**, you can validate the connection by providing the `sys_id` of any knowledge article and verifying its user permissions. For more information, see [Search and validate indexed content](indexed-search.md).
 
 ## Customize settings
 
@@ -220,7 +220,7 @@ If you select the **Advanced** flow for reading user criteria permission, both k
 
 #### Map identities
 
-By default, ServiceNow maps email IDs to Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-aad.md).
+By default, ServiceNow maps email IDs to Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-entra-id.md).
 
 ### Customize content settings
 

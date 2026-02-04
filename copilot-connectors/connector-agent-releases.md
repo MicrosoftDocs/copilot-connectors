@@ -8,7 +8,6 @@ ms.audience: Admin
 ms.topic: article 
 ms.service: mssearch 
 ms.localizationpriority: medium 
-search.appverid: 
 description: "Release history of Microsoft Graph connector agent, which is used to index the on-premises data sources using Microsoft-built connectors" 
 ms.date: 12/16/2025
 --- 
@@ -98,7 +97,7 @@ For help on installation, refer to [this page](graph-connector-agent.md#installa
 ## Version 2.4.0.0 (*July 05, 2024*)
 
 * Support for .NET 8. The .NET 8 upgrade flow for the host machine will kick in after you hit the Upgrade button in the connection pane. Make sure to upgrade the machine's version to .NET 8 to avoid unexpected behavior. If there is a failure in the upgrade process, do a manual upgrade to the .NET version before upgrading the agent.
-* Feature to show elaborate index statistics for a connection. This feature gives more information about the current state of items in the index. [Learn more.](connector-view-details.md#view-connection-statistics)
+* Feature to show elaborate index statistics for a connection. This feature gives more information about the current state of items in the index. For more information, see [View details](view-details.md#view-connection-statistics).
 * Bug fixes and reliability improvements.
 
 ## Version 2.3.7.0 (*June 12, 2024*)

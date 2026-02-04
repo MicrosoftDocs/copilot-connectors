@@ -67,7 +67,7 @@ If your organization uses a different URL, you can customize the URL when you de
 
 By default, Microsoft Entra ID maps identities from your data source by checking whether the email ID of ServiceNow users matches the user principal name (UPN) or **Mail** attribute in Microsoft Entra ID.
 
-If this default mapping doesn’t meet your organization’s needs, define a custom mapping formula. For more information, see [Map your non-Entra ID identities](map-non-aad.md).
+If this default mapping doesn’t meet your organization’s needs, define a custom mapping formula. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
 
 ## Set up connector prerequisites
 
@@ -131,7 +131,7 @@ To verify the item count expected for ingestion:
 
 1. Note the item count.
 
-When the connector is deployed and item sync is completed, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](connector-view-details.md#view-connection-statistics).
+When the connector is deployed and item sync is completed, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](view-details.md#view-connection-statistics).
 
 ### Add Microsoft 365 IP address to the allowlist
 

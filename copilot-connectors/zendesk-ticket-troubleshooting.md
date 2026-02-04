@@ -15,7 +15,7 @@ description: "Find troubleshooting information for the Zendesk Ticket Microsoft 
 
 # Troubleshoot issues with the Zendesk Ticket Microsoft 365 Copilot connector
 
-The Zendesk Ticket Microsoft 365 Copilot connector allows your organization to index tickets from Zendesk. After you configure the connector, end users can search for these tickets from Zendesk in Microsoft Copilot and from any Microsoft Search client.
+The Zendesk Ticket Microsoft 365 Copilot connector allows your organization to index tickets from Zendesk. After you configure the connector, end users can search for these tickets from Zendesk in Microsoft 365 Copilot and from any Microsoft Search client.
 
 This article provides troubleshooting information for common errors that you might encounter when deploying or managing the Zendesk Ticket connector.
 

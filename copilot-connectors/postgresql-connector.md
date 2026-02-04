@@ -9,16 +9,12 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Set up the PostgreSQL Microsoft 365 Copilot connector for Microsoft Search and Copilot"
 ---
 
 # PostgreSQL Microsoft 365 Copilot connectors (Preview)
 
-The PostgreSQL Microsoft 365 Copilot connector allows your organization to index records from a PostgreSQL database. After you configure the connector, end users can search for these records from PostgreSQL in Microsoft Copilot and from any Microsoft Search client.
+The PostgreSQL Microsoft 365 Copilot connector allows your organization to index records from a PostgreSQL database. After you configure the connector, end users can search for these records from PostgreSQL in Microsoft 365 Copilot and from any Microsoft Search client.
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a PostgreSQL Graph connector.
 
@@ -58,7 +54,7 @@ To connect to your PostgreSQL data, you need your PostgreSQL server address, por
 PostgreSQL connector only supports password based authentication to connect to the database.
 
 ### 4. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, [click here](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, [click here](staged-rollout.md).
 
 ## Content
 To search your database content, you must specify SQL queries when you configure the connector. These SQL queries need to name all the database columns that you want to index (source properties). This query includes any SQL joins that need to be performed to get all the columns. To restrict access to search results, you must specify Access Control Lists (ACLs) within SQL queries when you configure the connector.
@@ -70,7 +66,7 @@ a. **Select data columns (Required) and ACL columns (Optional)** <br>
 <details>
 <summary>[Click to expand] Selecting data columns for full crawl query.</summary><br>
 
-In this step, you configure the SQL query that runs a full crawl of the database. The full crawl selects all the columns or properties that need to be presented in Microsoft Copilot or Search. You can also specify ACL columns to restrict access of search results to specific users or groups.
+In this step, you configure the SQL query that runs a full crawl of the database. The full crawl selects all the columns or properties that need to be presented in Microsoft 365 Copilot or Search. You can also specify ACL columns to restrict access of search results to specific users or groups.
 
 > [!Tip]
 > To get all the columns that you need, you can join multiple tables.

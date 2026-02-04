@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Grant table access to a service account in ServiceNow that can be used to set up ServiceNow Microsoft 365 Copilot connectors."
 ---
 
@@ -48,7 +44,7 @@ To create a role:
 To assign the role to a user:
 
 1. Go to **User Administration > Users**.
-1. Open the user record for the intended user (for example, `Microsoft Copilot`).
+1. Open the user record for the intended user (for example, `Microsoft 365 Copilot`).
 1. In the **Roles** related list, select **Edit**.
 1. Add the newly created role (`Microsoft 365 Copilot Connector Account`).
 1. Select **Save** to finalize the assignment.
@@ -70,7 +66,7 @@ To grant access to rows within a specific table, follow these steps:
 
 ## Verification
 
-1. Impersonate the user (for example, `Microsoft Copilot`).
+1. Impersonate the user (for example, `Microsoft 365 Copilot`).
 1. Access the target table (for example, `sys_dictionary`) and confirm that rows are visible. 
 
 If the user can view the rows, but the field values aren't visible, you need to [grant field-level access](#grant-field-level-access).
@@ -92,7 +88,7 @@ If the user can view rows but not field values, configure field-level access:
 
 To verify access to the table:
 
-1. Impersonate the user (for example, `Microsoft Copilot`).
+1. Impersonate the user (for example, `Microsoft 365 Copilot`).
 1. Confirm that both rows and field values within the target table are now visible.
 
 You successfully granted table access to a service account in ServiceNow.

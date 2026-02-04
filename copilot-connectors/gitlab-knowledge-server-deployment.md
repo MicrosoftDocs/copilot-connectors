@@ -117,7 +117,7 @@ To ensure that GitLab permissions are honored, map GitLab user identities to Mic
 - **Login**
 - **Name**
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-aad.md). 
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md). 
 
 ### Customize content settings
 

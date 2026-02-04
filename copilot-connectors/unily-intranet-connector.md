@@ -8,17 +8,13 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Set up the Unily Microsoft 365 Copilot connector." 
 ms.date: 12/25/2025
 ---
 
 # Unily Microsoft 365 Copilot connector
 
-The Unily Microsoft 365 Copilot connector allows your organization to index content from the Unily intranet. After you configure the connector, end users can search for this content in Microsoft Copilot and from any Microsoft Search client. 
+The Unily Microsoft 365 Copilot connector allows your organization to index content from the Unily intranet. After you configure the connector, end users can search for this content in Microsoft 365 Copilot and from any Microsoft Search client. 
 
 This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Unily Microsoft 365 Copilot connector.
 
@@ -53,7 +49,7 @@ For the Unily Copilot connector, use OAuth 2.0 for authentication.
 To authenticate, enter the Client ID and Client Secret. The Client ID is a unique identifier assigned to your application for making requests to the Unily API. The Client Secret is a confidential key used alongside the Client ID to securely authenticate your application with the Unily API.
  
 ### 4. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
 At this point, you're ready to create the connection for Unily. You can click on the "Create" button to publish your connection and index posts from your Unily account.
 
@@ -75,7 +71,7 @@ By default, the system attempts to match users by comparing the **user's email i
 2. **Non-Microsoft Entra ID (non ME-ID) mapping (custom):** <br>
 If the default mapping doesn't work for your organization (for example, if email formats differ) you can define a custom mapping formula to link users across systems.
 
-[Click here](map-non-aad.md) to learn more about mapping non-Entra ID identities.
+[Click here](map-non-entra-id.md) to learn more about mapping non-Entra ID identities.
 
 ### Content
 
@@ -107,7 +103,7 @@ The refresh interval determines how often your data is synced between the data s
 ## Troubleshooting
 
 ### Copilot does not recognize branded Unily Intranet names
-To ensure optimal relevance and accuracy in Microsoft Copilot responses, administrators should update the connector description to include the branded name of your organization’s Unily intranet. Many Unily customers rebrand their intranet, and Copilot prioritizes results more effectively when these branded names are explicitly listed in the connector description. To update this setting, go to **Admin Center → Copilot → Connectors**, select your Unily connection, choose **Edit description**, and add a clear reference to your Unily intranet’s branded name in the description. This helps Copilot recognize user queries that refer to the intranet by its custom name and improves the discoverability and ranking of Unily content.
+To ensure optimal relevance and accuracy in Microsoft 365 Copilot responses, administrators should update the connector description to include the branded name of your organization’s Unily intranet. Many Unily customers rebrand their intranet, and Copilot prioritizes results more effectively when these branded names are explicitly listed in the connector description. To update this setting, go to **Admin Center → Copilot → Connectors**, select your Unily connection, choose **Edit description**, and add a clear reference to your Unily intranet’s branded name in the description. This helps Copilot recognize user queries that refer to the intranet by its custom name and improves the discoverability and ranking of Unily content.
 
 After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). 
 

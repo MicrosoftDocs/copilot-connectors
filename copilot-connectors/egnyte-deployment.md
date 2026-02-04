@@ -10,7 +10,7 @@ ms.topic: how-to
 ms.service: copilot-connectors
 ms.date: 12/16/2025
 ms.localizationpriority: Medium
-description: "Find information about how to deploy the Egnyte Microsoft Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
+description: "Find information about how to deploy the Egnyte Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
 # Deploy the Egnyte Microsoft 365 Copilot connector
@@ -63,7 +63,7 @@ Enter the **client ID** and **secret** from your Egnyte developer account. Make 
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Egnyte connector starts indexing content right away.
 
@@ -105,7 +105,7 @@ Choose whether your users are Microsoft Entra ID provisioned users or non-Micros
 
 > [!IMPORTANT]
 > If you choose Microsoft Entra ID, the connector maps the email IDs of users from Egnyte to the UPN property from Microsoft Entra ID.
-> If you choose non-Microsoft Entra ID, provide a regular expression to map identities from email ID to UPN. For more information, see [Map your non-Microsoft Entra ID identities](/microsoft-365-copilot/connectors/map-non-aad).
+> If you choose non-Microsoft Entra ID, provide a regular expression to map identities from email ID to UPN. For more information, see [Map your non-Microsoft Entra ID identities](/microsoft-365-copilot/connectors/map-non-entra-id).
 > Updates to users or groups that govern access permissions are synced in full crawls only. Incremental crawls don't currently support processing updates to permissions.
 
 ### Customize content settings

@@ -9,10 +9,6 @@ ms.audience: Admin
 ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Set up the Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector"
 ---
 # Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector

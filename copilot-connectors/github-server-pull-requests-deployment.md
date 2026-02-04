@@ -82,7 +82,7 @@ The GitHub Server Pull Requests connector supports the following authentication 
 ### Roll out
 
 To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups who should have early access. For more information, see  
-[Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+[Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The connector begins indexing content immediately.
 
@@ -116,7 +116,7 @@ To ensure that permissions are applied correctly, map GitHub user identities to 
   - **Login:** Maps GitHub logins with Microsoft Entra ID user properties.
   - **Name:** Maps GitHub name with Microsoft Entra ID user properties.
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-aad).
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-entra-id).
 
 ### Customize content settings
 

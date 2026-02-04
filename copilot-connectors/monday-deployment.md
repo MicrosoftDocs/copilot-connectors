@@ -160,7 +160,7 @@ To ensure correct permission enforcement, map Monday.com user identities to Micr
 
 > [!IMPORTANT]
 > - If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users from Monday.com directly to the **UPN** property from Microsoft Entra ID.
-> - If you chose **non-Entra ID** for the identity type, provide the mapping regular expression from email ID to UPN. For more information, see [Map your non-Entra ID identities](map-non-aad.md). 
+> - If you chose **non-Entra ID** for the identity type, provide the mapping regular expression from email ID to UPN. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md). 
 > - Updates to users or groups that govern access permissions are synced in full crawls only. Incremental crawls don't currently support processing updates to permissions.
 
 ### Customize content settings
