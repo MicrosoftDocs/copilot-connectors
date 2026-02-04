@@ -23,7 +23,7 @@ sections:
           1. Create a connection.
           2. Register your schema.
           3. Ingest your content into Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in Microsoft 365 Copilot app.
-          For more information, see /microsoftsearch/configure-connector.
+          For more information, see /microsoft-365-copilot/connectors/deployment-overview.
 
       - question: "Can I edit the query string after the connection is published?"
         answer: |
@@ -76,7 +76,7 @@ sections:
       - question: "What are prebuilt Copilot connectors?"
         answer: |
           Prebuilt connectors are connectors that Microsoft and partner organizations provide that allow you to integrate external content sources like Salesforce, ServiceNow, Confluence, and more into Microsoft 365. These connectors help you bring external data into Microsoft 365.
-          For more information, see /microsoftsearch/connectors-gallery.
+          For more information, see /microsoft-365-copilot/connectors/connectors-gallery.
 
       - question: "What are the benefits of using prebuilt Copilot connectors?"
         answer: |
@@ -110,7 +110,7 @@ sections:
           - Only updates items that changed since the last crawl.
           - Doesn't handle deletions, so items removed from the data source remain in the index.
           - Incremental crawls don't currently support processing of updates to permissions.
-          For more information about crawl schedules and refresh settings, see /microsoftsearch/configure-connector#crawl-scheduling.
+          For more information about crawl schedules and refresh settings, see /microsoft-365-copilot/connectors/deployment-overview#crawl-scheduling.
 
       - question: "Why aren't results displayed in Microsoft Search?"
         answer: |

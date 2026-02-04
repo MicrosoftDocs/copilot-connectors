@@ -43,7 +43,7 @@ To index your Windows file shares, you must install and register the connector a
 
 ### Choose display name
 
-The display name helps users easily recognize the associated file or item in Copilot, signifying trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize. 
+The display name helps users easily recognize the associated file or item in Copilot, signifying trusted content. Display name is also used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize. 
 
 ### File Share on-premises URL
 
@@ -95,12 +95,12 @@ To add a custom property:
 
 ## Property labels
 
-Follow the general [setup instructions](./configure-connector.md).
+Follow the general [setup instructions](./deployment-overview.md).
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup instructions.-->
 
 ## Manage schema
 
-Follow the general [setup instructions](./configure-connector.md).
+Follow the general [setup instructions](./deployment-overview.md).
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup instructions.-->
 
 ## Manage search permissions
@@ -115,15 +115,15 @@ You can choose to share ACLs only if the share path you provided follows UNC pat
 
 ## Synchronization
 
-The refresh interval determines how often your data is synchronized between the data source and the Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/microsoftsearch/configure-connector#guidelines-for-sync-settings). You can change the default values of the refresh interval from here if you want to. 
+The refresh interval determines how often your data is synchronized between the data source and the Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings). You can change the default values of the refresh interval from here if you want to. 
 
 ## Review and test your connection
 
-- Follow the general [setup instructions](./configure-connector.md).
-- Search and validate your indexed content and permissions using [Index browser](/microsoftsearch/connectors-index-search).
-- Find answers to common questions in our [FAQ section](/microsoftsearch/connectors-index-search).
+- Follow the general [setup instructions](./deployment-overview.md).
+- Search and validate your indexed content and permissions using [Index browser](/microsoft-365-copilot/connectors/connectors-index-search).
+- Find answers to common questions in our [FAQ section](/microsoft-365-copilot/connectors/connectors-index-search).
 
-For Microsoft Search, if you need to customize the search results page. To learn about customizing search results, see [Customize the search results page](/microsoftsearch/configure-connector#step-11-customize-the-search-results-page).
+For Microsoft Search, if you need to customize the search results page. To learn about customizing search results, see [Customize the search results page](/microsoft-365-copilot/connectors/deployment-overview#step-11-customize-the-search-results-page).
 
 ## Troubleshooting
 After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).

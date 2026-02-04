@@ -37,11 +37,11 @@ To update the connector description:
 2. Select [Data sources](https://admin.microsoft.com/#/copilot/connectors).
 3. Select the connector that you want to update the description for and choose **Edit** on the bottom right.
 
-      [![Screenshot that shows Connection details pane.](/MicrosoftSearch/media/connection-details-pane.png)](/MicrosoftSearch/media/connection-details-pane.png#lightbox)
+      [![Screenshot that shows Connection details pane.](/microsoft-365-copilot/connectors/media/connection-details-pane.png)](/microsoft-365-copilot/connectors/media/connection-details-pane.png#lightbox)
 
 4. The **Name the connection** page includes fields for the **Connection name** and **Description**. Update the name or description to best fit your organization's scenarios.
 
-      [![Screenshot that shows Update the connection description](/MicrosoftSearch/media/update-the-connection-description.png)](/MicrosoftSearch/media/update-the-connection-description.png#lightbox)
+      [![Screenshot that shows Update the connection description](/microsoft-365-copilot/connectors/media/update-the-connection-description.png)](/microsoft-365-copilot/connectors/media/update-the-connection-description.png#lightbox)
 
 > [!Note]
 > Copilot connectors for Jira, ServiceNow Tickets, ADO Work Items, and Salesforce have default generic descriptions. We recommend that you review and modify the descriptions to use the specific terms and language that apply to your organization.

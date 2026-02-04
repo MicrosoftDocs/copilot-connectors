@@ -21,7 +21,7 @@ recommendations: false
 
 # Microsoft Search Usage Reports - Answer Analytics
 
-In the [Microsoft Search Usage Report](/microsoftsearch/usage-reports), the Answer analytics section gives you information on how the editorial Bookmarks, Acronyms, and Q&A are performing within the organization.  
+In the [Microsoft Search Usage Report](/microsoft-365-copilot/connectors/usage-reports), the Answer analytics section gives you information on how the editorial Bookmarks, Acronyms, and Q&A are performing within the organization.  
 
 :::image type="content" source="media/usage-reports/answer-analytics.png" alt-text="A dashboard showing usage reports for answer analytics." lightbox="media/usage-reports/answer-analytics.png":::
 
@@ -115,7 +115,7 @@ A detailed list of user queries for a bookmark is available in the details panel
 
 ## Acronyms Usage Report  
 
-The Acronyms section provides information on impressions trends for acronyms as whole and for individual acronyms that have impressed in the selected time period. Acronyms can include both admin curated and system curated acronyms. [Learn more about acronym curation](/microsoftsearch/manage-acronyms#set-up-acronyms-answers).
+The Acronyms section provides information on impressions trends for acronyms as whole and for individual acronyms that have impressed in the selected time period. Acronyms can include both admin curated and system curated acronyms. [Learn more about acronym curation](/microsoft-365-copilot/connectors/manage-acronyms#set-up-acronyms-answers).
 
 :::image type="content" source="media/usage-reports/answer-analytics-acronyms-usage-reports.png" alt-text="A dashboard showing acronyms usage reports." lightbox="media/usage-reports/answer-analytics-acronyms-usage-reports.png":::
 

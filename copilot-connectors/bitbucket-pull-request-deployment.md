@@ -112,10 +112,10 @@ You can configure **incremental** and **full** crawls. The following are the def
 - Incremental crawl: every 15 minutes
 - Full crawl: daily
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Bitbucket Pull Request connector overview](bitbucket-pull-request-overview.md)
 - [Troubleshoot issues with the Bitbucket Pull Request connector](bitbucket-pull-request-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

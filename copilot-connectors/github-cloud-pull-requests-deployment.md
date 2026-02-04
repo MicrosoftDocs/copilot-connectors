@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 
 # Deploy the GitHub Cloud Pull Requests Microsoft 365 Copilot connector
 
-The GitHub Cloud Pull Requests Microsoft 365 Copilot connector enables your organization to index pull requests stored in GitHub repositories into Microsoft 365 Copilot and Microsoft Search experiences. This article describes the steps to deploy and customize the connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
+The GitHub Cloud Pull Requests Microsoft 365 Copilot connector enables your organization to index pull requests stored in GitHub repositories into Microsoft 365 Copilot and Microsoft Search experiences. This article describes the steps to deploy and customize the connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview).
 
 For advanced GitHub configuration information, see [Set up the GitHub service for connector ingestion](github-cloud-pull-requests-admin-setup.md).
 
@@ -49,7 +49,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **GitHub Cloud Pull Requests** display name or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Choose authentication type
 
@@ -73,7 +73,7 @@ For information about how to create a GitHub app, see [Use a custom GitHub app f
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The GitHub Cloud Pull Requests Copilot connector starts indexing content right away.
 
@@ -143,7 +143,7 @@ The refresh interval determines how often your data is synced. You can customize
 - Incremental crawl: Every 15 minutes
 - Full crawl: Daily
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 > [!NOTE]
 > Webhook support is now available in preview. Be sure to set the Webhooks (Read and Write) permissions at both the Repository and Organization levels. Webhooks allow you to take advantage of enhanced automation and real-time updates to ensure a more seamless and responsive integration experience.
@@ -152,4 +152,4 @@ For more information, see [Guidelines for sync settings](/microsoftsearch/config
 
 - [GitHub Cloud Pull Requests connector overview](github-cloud-pull-requests-overview.md)
 - [Troubleshoot issues with the GitHub Cloud Pull Requests connector](github-cloud-pull-requests-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

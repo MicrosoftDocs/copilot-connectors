@@ -60,7 +60,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Atlassian Jira Cloud** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -93,7 +93,7 @@ To authenticate and sync issues from Jira, choose one of the following supported
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The Atlassian Jira Cloud Copilot connector starts indexing content right away.
 
@@ -194,10 +194,10 @@ The refresh interval determines how often your data is synced between the data s
 - Incremental crawl: Every 15 mins
 - Full crawl: Every day
 
-You can change the default values of the refresh interval. For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+You can change the default values of the refresh interval. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Atlassian Jira Cloud connector overview](jira-cloud-overview.md)
 - [Troubleshoot issues with the Atlassian Jira Cloud connector](jira-cloud-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

@@ -53,7 +53,7 @@ To add the GitHub Server Pull Requests connector for your organization:
 
 The display name is used to identify references in Copilot responses so users can recognize content sources. You can keep the default name **GitHub Server Pull Requests**, or replace it with a custom display name that's relevant to your organization.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -82,7 +82,7 @@ The GitHub Server Pull Requests connector supports the following authentication 
 ### Roll out
 
 To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups who should have early access. For more information, see  
-[Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+[Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The connector begins indexing content immediately.
 
@@ -116,7 +116,7 @@ To ensure that permissions are applied correctly, map GitHub user identities to 
   - **Login:** Maps GitHub logins with Microsoft Entra ID user properties.
   - **Name:** Maps GitHub name with Microsoft Entra ID user properties.
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](/microsoftsearch/map-aad).
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-aad).
 
 ### Customize content settings
 
@@ -148,10 +148,10 @@ Two crawl types are available:
 - **Full crawl:** Runs daily to refresh the PR index.
 
 You can customize these values according to the needs of your organization. For more information, see  
-[Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+[Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
 - [GitHub Server Pull Requests connector overview](github-server-pull-requests-overview.md)  
 - [Troubleshoot issues with the GitHub Server Pull Requests connector](github-server-pull-requests-troubleshooting.md)  
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

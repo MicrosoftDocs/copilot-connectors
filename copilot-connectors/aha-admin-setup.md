@@ -39,7 +39,7 @@ The following checklist lists the steps involved in configuring the environment 
 
 - Confirm that no network restrictions or API access limitations block the connector.
 - If your organization enforces network-level restrictions, add Microsoft 365 Copilot connector IP addresses.
-- Go to **Account** > **Security and single sign-on** > **IP address–based access control** and add Microsoft IPs to the allow list. For the list of IP addresses, see [Set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center](configure-connector.md).
+- Go to **Account** > **Security and single sign-on** > **IP address–based access control** and add Microsoft IPs to the allow list. For the list of IP addresses, see [Set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center](deployment-overview.md).
 
 ## Create OAuth application
 

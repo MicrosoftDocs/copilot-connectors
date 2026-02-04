@@ -91,7 +91,7 @@ In Confluence Data Center, verify that the required plugin is installed and that
 
 The default method for mapping your data source identities to Microsoft Entra ID is to determine whether the email address of each Confluence user matches the user principal name (UPN) or email address in Microsoft Entra ID. If this default mapping doesn’t meet your organization's needs, you can define a custom mapping formula.
 
-For more information about mapping identities that aren’t in Microsoft Entra ID, see [Map your non-Azure AD identities](/MicrosoftSearch/map-non-aad).
+For more information about mapping identities that aren’t in Microsoft Entra ID, see [Map your non-Azure AD identities](/microsoft-365-copilot/connectors/map-non-aad).
 
 ### Configure user access permissions
 
@@ -230,7 +230,7 @@ To set up OAuth 2.0 (recommended):
 
 To ensure that the connector can access Confluence APIs, add the required Microsoft 365 IP addresses to the allow list in your firewall, proxy, or other network configurations.
 
-For Confluence on-premises, make sure that the server hosting your Confluence on-premises instance can reach all required Microsoft 365 URLs and IP addresses. For more information, see [IP Firewall rules](configure-connector.md#ip-firewall-rules).
+For Confluence on-premises, make sure that the server hosting your Confluence on-premises instance can reach all required Microsoft 365 URLs and IP addresses. For more information, see [IP Firewall rules](deployment-overview.md#ip-firewall-rules).
 
 ### Configure a machine for the connector agent
 

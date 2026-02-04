@@ -48,7 +48,7 @@ If a user can't find Confluence Data Center pages in Microsoft 365 Copilot or Mi
 #### Verify that the user is correctly mapped to a Microsoft Entra identity
 
 Incorrect user identity mapping prevents Copilot and Search from resolving permissions. To verify identity mapping:
-- Review the mapping configuration based on your environment. For more information, see [Map non-Entra ID identities](/microsoftsearch/map-non-aad) and [Map Microsoft Entra identities](/microsoftsearch/map-aad).
+- Review the mapping configuration based on your environment. For more information, see [Map non-Entra ID identities](/microsoft-365-copilot/connectors/map-non-aad) and [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-aad).
 - Check the user mapping formula and update as needed. On the **Error** tab for the connector, mapping problems typically appear as a `2006 error`.
 
 :::image type="content" source="media/user-mapping.png#lightbox" alt-text="Screenshot of the Error list for the Confluence On-premises connector with the 2006 error highlighted."::: 

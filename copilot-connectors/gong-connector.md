@@ -47,7 +47,7 @@ This article is intended for Microsoft 365 administrators and anyone responsible
 ## Get Started
 
 ### 1. Display name
-A display name is used to identify each reference in Copilot, making it easier for users to recognize the associated file or item. It also indicates that the content is trusted and serves as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). While a default value is provided, you can customize the display name to something more familiar and meaningful for users in your organization.
+A display name is used to identify each reference in Copilot, making it easier for users to recognize the associated file or item. It also indicates that the content is trusted and serves as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). While a default value is provided, you can customize the display name to something more familiar and meaningful for users in your organization.
 
 ### 2. Gong URL
 Enter the Gong base URL that you copied during the [Prerequisites step](#prerequisites).
@@ -110,6 +110,6 @@ By default, data is crawled from all available dates. To limit the crawl to more
 [![Screenshot that shows Gong date selection.](media/gong-connector/gong-date.png)](media/gong-connector/gong-date.png#lightbox)
 
 ### Sync
-The refresh interval determines how often your data is synced between the data source and the Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more details, click [here](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more details, click [here](deployment-overview.md#guidelines-for-sync-settings).
 You can change the default refresh interval values from here if needed.
 [![Screenshot that shows sync and refresh frequency settings.](media/gong-connector/gong-sync.png)](media/gong-connector/gong-sync.png#lightbox)

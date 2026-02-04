@@ -55,7 +55,7 @@ The Azure DevOps Work Items connector includes the following custom data filters
 [![Screenshot that shows connection creation screen for the Azure DevOps Work Items Copilot connector.](media/ado-workitems-create-page.png)](media/ado-workitems-create-page.png#lightbox)
 
 ### Choose display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Add the ADO Organization
 The Azure DevOps Work Items Copilot connector allows indexing of one organization per connection. To connect to your Azure DevOps service, provide the name of the organization to be indexed.
@@ -200,14 +200,14 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/ado-workitems-sync-tab.png)](media/ado-workitems-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Azure DevOps Work Items Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Azure DevOps Work Items Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 
 > [!TIP]
 > **Default result type**
 > The Azure DevOps Work Items Copilot connector automatically registers a [result type](./customize-search-page.md#step-2-create-result-types) once the connector is published. The result type uses a dynamically generated [result layout](./customize-results-layout.md) based on the fields selected in step 3. 
-> You can manage the result type by navigating to [**Result types**](https://admin.microsoft.com/Adminportal/Home#/MicrosoftSearch/resulttypes) in the [Microsoft 365 admin center](https://admin.microsoft.com). The default result type is named "`ConnectionId`Default". For example, if your connection ID is `AzureDevOps`, your result layout is named: "AzureDevOpsDefault"
+> You can manage the result type by navigating to [**Result types**](https://admin.microsoft.com/Adminportal/Home#/microsoft-365-copilot/connectors/resulttypes) in the [Microsoft 365 admin center](https://admin.microsoft.com). The default result type is named "`ConnectionId`Default". For example, if your connection ID is `AzureDevOps`, your result layout is named: "AzureDevOpsDefault"
 > Also, you can choose to create your own result type if needed.
 
 ## Troubleshooting

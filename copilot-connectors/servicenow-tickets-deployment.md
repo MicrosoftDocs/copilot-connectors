@@ -52,7 +52,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **ServiceNow** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -296,7 +296,7 @@ You can override the default expression for specific ticket items using rules ba
 > [!NOTE]
 > If multiple rules apply to an item, the first rule in the list is used. Changes take effect after the next full crawl. 
 
-For more information, see [Customize values for certain schema properties](configure-connector.md#customize-values-for-certain-schema-properties). 
+For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties). 
 
 ### Customize sync intervals
 
@@ -312,7 +312,7 @@ Note the following points:
 - During subsequent periodic full crawls, content and identity sync happens in parallel. The full crawl is complete when both content and identity sync are completed.  
 - The periodic full crawls are faster than the first full crawl because the first crawl includes first-time discovery and ingestion of users, permissions, and content items. Periodic full crawls only ingest the newly discovered items, users, and user criteria. 
 
-For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Roll out
 

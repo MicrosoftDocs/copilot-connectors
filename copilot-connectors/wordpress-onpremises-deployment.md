@@ -24,7 +24,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 - You must be the search admin for your organization's Microsoft 365 tenant.
 - You have the URL of your WordPress.org website.
 - You have an admin account for your WordPress.org website with permission to create an application password (used for REST API authentication with external services).
-- You installed and configured the [Microsoft Graph connector agent](/microsoftsearch/graph-connector-agent) on a host that can reach your WordPress.org instance.
+- You installed and configured the [Microsoft Graph connector agent](/microsoft-365-copilot/connectors/graph-connector-agent) on a host that can reach your WordPress.org instance.
 
 ## Deploy the connector
 
@@ -37,7 +37,7 @@ To add the WordPress.org connector for your organization:
 ### Set display name
 
 The display name is used to identify references in Copilot responses to help users recognize the associated item. The display name also signifies trusted content and is used as a content source filter.  
-You can accept the default **WordPress.org** display name or customize the value to a name that users in your organization recognize. For more information, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+You can accept the default **WordPress.org** display name or customize the value to a name that users in your organization recognize. For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -53,7 +53,7 @@ The connector supports **basic authentication** using a WordPress **application 
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to validate the connector before broad deployment. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to validate the connector before broad deployment. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The WordPress.org Copilot connector starts indexing content right away.
 
@@ -111,10 +111,10 @@ The following table lists default properties and their schema.
 
 ### Customize sync intervals
 
-Configure **Full crawl** and **Incremental crawl** schedules to fit your refresh needs. By default, incremental crawl runs every 15 minutes and full crawl runs every day. For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+Configure **Full crawl** and **Incremental crawl** schedules to fit your refresh needs. By default, incremental crawl runs every 15 minutes and full crawl runs every day. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
 - [WordPress.org connector overview](wordpress-onpremises-overview.md)
 - [Troubleshoot issues with the WordPress.org connector](wordpress-onpremises-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

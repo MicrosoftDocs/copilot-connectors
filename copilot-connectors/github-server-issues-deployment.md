@@ -48,7 +48,7 @@ To add the GitHub Server Issues connector for your organization:
 
 The display name is used to identify references in Copilot responses to help users recognize the associated file or item. You can accept the default **GitHub Server Issues** display name or customize the value to use a display name that users in your organization recognize.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -65,7 +65,7 @@ For information about how to create a GitHub app, see [Use a custom GitHub app f
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The GitHub Server Issues Copilot connector starts indexing content right away.
 
@@ -97,7 +97,7 @@ To ensure that permissions are applied correctly, map GitHub user identities to 
   - **Login:** Maps GitHub logins with Microsoft Entra ID user properties.
   - **Name:** Maps GitHub name with Microsoft Entra ID user properties.
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](/microsoftsearch/map-aad).
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-aad).
 
 If the organization admin sets default member permissions to restrict repository access, the connector respects this setting. Users can't view organization repositories unless they're explicitly added as collaborators.
 
@@ -119,9 +119,9 @@ You can configure incremental and full crawls. The default values are:
 - Incremental crawl runs every 15 minutes.
 - Full crawl runs daily.
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 - [GitHub Server Issues connector overview](github-server-issues-overview.md)
 - [Troubleshoot issues with the GitHub Server Issues connector](github-server-issues-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

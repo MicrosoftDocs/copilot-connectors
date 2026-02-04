@@ -41,7 +41,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Get started
 
 ### 1. Choose a display name 
-The display name is used to identify each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters).
+The display name is used to identify each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters).
 
 A default value is provided; you can customize it to a name that users in your organization recognize.
 
@@ -123,7 +123,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/DataStax-sync-tab.png)](media/DataStax-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the DataStax Copilot connector index. The DataStax graph connector only supports the refresh interval - full crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the DataStax Copilot connector index. The DataStax graph connector only supports the refresh interval - full crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval.
 

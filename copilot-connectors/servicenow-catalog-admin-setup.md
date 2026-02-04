@@ -64,7 +64,7 @@ By default, Copilot-generated links for ServiceNow Catalog items follow the stan
 
 `https://<your-organization-name>.service-now.com/sp?id=sc_cat_item&sys_id=<sysid>`
 
-If your organization uses a different URL, you can customize the URL when you deploy the connector. For more information, see [Customize values for certain schema properties](configure-connector.md#customize-values-for-certain-schema-properties).
+If your organization uses a different URL, you can customize the URL when you deploy the connector. For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties).
 
 ### Define ServiceNow attribute mapping
 
@@ -130,7 +130,7 @@ To connect to ServiceNow and allow the ServiceNow Catalog connector to update it
 
 You can create and assign a role for the service account you use to connect with Microsoft Search. For more information, see [Assign a role to a user](https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Read access to the tables can be assigned on the created role. 
 
-For information about how to create a user, assign a role, and grant read permissions to all the applicable table records, see [Grant table access to a user in ServiceNow](/microsoftsearch/granting-table-access-servicenow). 
+For information about how to create a user, assign a role, and grant read permissions to all the applicable table records, see [Grant table access to a user in ServiceNow](/microsoft-365-copilot/connectors/granting-table-access-servicenow). 
 
 If the service account doesn’t have the required permissions—or if row or field-level permissions are restricted—specific items are excluded from indexing on the Microsoft side.
 
@@ -141,7 +141,7 @@ If the service account doesn’t have access to the full User Criteria table, in
 
 ### Identify item count for ingestion
 
-The following default filter is applied during indexing. If you need to make changes, edit the query string during connector setup. For more information, see [Customize query string](/microsoftsearch/servicenow-knowledge-deployment#query-string). 
+The following default filter is applied during indexing. If you need to make changes, edit the query string during connector setup. For more information, see [Customize query string](/microsoft-365-copilot/connectors/servicenow-knowledge-deployment#query-string). 
 
 `type!=bundle^sys_class_name!=sc_cat_item_guide^type!=package^active=true` 
 
@@ -233,7 +233,7 @@ The Microsoft 365 admin enters the **API Namespace** when they [deploy the S
 
 ### Add Microsoft 365 IP address to the allowlist
 
-If any network configurations—such as firewall or proxy settings—block access to ServiceNow, make sure to add the IP addresses listed in [IP firewall rules](configure-connector.md#ip-firewall-rules) to the allowlist.
+If any network configurations—such as firewall or proxy settings—block access to ServiceNow, make sure to add the IP addresses listed in [IP firewall rules](deployment-overview.md#ip-firewall-rules) to the allowlist.
 
 For information about ServiceNow-specific controls, see [IP Address Access Control](https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/login/task/t_AccessControl.html).
 

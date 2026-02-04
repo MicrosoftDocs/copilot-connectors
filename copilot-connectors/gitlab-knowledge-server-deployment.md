@@ -134,10 +134,10 @@ The following sync intervals are available:
 - **Incremental crawl**: Default is every 15 minutes.
 - **Full crawl**: Default is daily.
 
-You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for sync settings](configure-connector.md#guidelines-for-sync-settings). 
+You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings). 
 
 ## Related content
 
 - [GitLab Knowledge Server connector overview](gitlab-knowledge-server-overview.md)
 - [Troubleshoot issues with the GitLab Knowledge Server connector](gitlab-knowledge-server-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

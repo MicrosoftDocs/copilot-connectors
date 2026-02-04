@@ -17,7 +17,7 @@ description: "Find information about how to deploy the Zendesk Help Center Copil
 
 The Zendesk Help Center Microsoft 365 Copilot connector enables your organization to index published articles from Zendesk Help Center (also known as Zendesk Guide). After you configure the connector, users can search for these articles in Microsoft 365 Copilot and Microsoft Search clients. 
 
-This article describes the steps to deploy and customize the Zendesk Help Center connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
+This article describes the steps to deploy and customize the Zendesk Help Center connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview).
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ To add the Zendesk Help Center connector for your organization:
 
 The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter. You can accept the default **Zendesk Help Center** display name, or customize the value to use a display name that users in your organization recognize. 
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -55,7 +55,7 @@ Enter the client ID (unique identifier) and client secret to connect to your ins
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The Zendesk Help Center Copilot connector starts indexing content right away.
 
@@ -116,10 +116,10 @@ The refresh interval determines how often your data is synced between the data s
 - **Incremental crawl:** Every 15 minutes.
 - **Full crawl:** Every day.
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Zendesk Help Center connector overview](zendesk-help-center-overview.md)
 - [Troubleshoot issues with the Zendesk Help Center connector](zendesk-help-center-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

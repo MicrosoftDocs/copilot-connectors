@@ -122,7 +122,7 @@ You can now use the [Microsoft 365 Admin Center](https://admin.microsoft.com/) t
 
 ### 1. Display name
 
-A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. Salesforce CRM URL
 
@@ -250,14 +250,14 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/salesforce-connector/SalesforceSyncTab.png)](media/salesforce-connector/SalesforceSyncTab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
 
 You can change the default values of refresh interval from here if you want to.
 
 >[!TIP]
 >**Default result type**
 >* The Salesforce connector automatically registers a [result type](./customize-search-page.md#step-2-create-result-types) once the connector is published. The result type uses a dynamically generated [result layout](./customize-results-layout.md) based on the fields selected in step 3.
->* You can manage the result type by navigating to [**Result types**](https://admin.microsoft.com/Adminportal/Home#/MicrosoftSearch/resulttypes) in the [Microsoft 365 admin center](https://admin.microsoft.com). The default result type is named "`ConnectionId`Default". For example, if your connection ID is `Salesforce`, your result layout is named: "SalesforceDefault".
+>* You can manage the result type by navigating to [**Result types**](https://admin.microsoft.com/Adminportal/Home#/microsoft-365-copilot/connectors/resulttypes) in the [Microsoft 365 admin center](https://admin.microsoft.com). The default result type is named "`ConnectionId`Default". For example, if your connection ID is `Salesforce`, your result layout is named: "SalesforceDefault".
 >* Also, you can choose to create your own result type if needed.
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup instructions.-->
 

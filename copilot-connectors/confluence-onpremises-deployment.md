@@ -16,7 +16,7 @@ ms.localizationpriority: Medium
 
 The Confluence On-premises connector enables Microsoft 365 to index and retrieve content from self-hosted Confluence Data Center or Server instances. It brings enterprise wiki content into Microsoft Search and Copilot, enhancing visibility and usability within the Microsoft 365 ecosystem.
 
-This article describes the steps to deploy, customize, and troubleshoot the Confluence On-premises connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](configure-connector.md). 
+This article describes the steps to deploy, customize, and troubleshoot the Confluence On-premises connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md). 
 
 For advanced Confluence On-premises configuration information, see [Set up the Confluence On-premises service for connector ingestion](confluence-on-premises-admin-setup.md). 
 
@@ -83,7 +83,7 @@ For OAuth 2.0 setup:
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The Confluence On-premises Copilot connector starts indexing content right away.
 
@@ -160,7 +160,7 @@ You can adjust the synchronization frequency:
 - **Incremental crawl**: Syncs new and modified content. Incremental crawls don't pick up ACL changes or deleted items. Default is every 15 minutes.
 - **Full crawl**: Performs a complete synchronization of all content. Full crawls detect deleted items and sync access control list (ACL) changes. Default is daily.
 
-For more information, see [Guidelines for sync settings](configure-connector.md#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
 
 ## Related content
 

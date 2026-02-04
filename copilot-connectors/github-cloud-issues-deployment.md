@@ -46,7 +46,7 @@ To add the GitHub Cloud Issues connector for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize the associated content source. You can accept the default **GitHub Cloud Issues** display name or customize it.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Choose authentication type
 
@@ -69,7 +69,7 @@ For information about how to create a GitHub app, see [Use a custom GitHub app f
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The GitHub Cloud Issues connector starts indexing content immediately.
 
@@ -103,7 +103,7 @@ To ensure that permissions are applied correctly, map GitHub user identities to 
   - **Login:** Maps GitHub logins with Microsoft Entra ID user properties.
   - **Name:** Maps GitHub name with Microsoft Entra ID user properties.
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](/microsoftsearch/map-aad).
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-aad).
 
 If the organization admin sets default member permissions to restrict repository access, the connector respects this setting. Users can't view organization repositories unless they're explicitly added as collaborators.
 
@@ -135,7 +135,7 @@ Configure the full and incremental crawl sync intervals. The following are the d
 - **Incremental crawl:** Every 15 minutes
 - **Full crawl:** Daily
 
-You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 > [!NOTE]
 > Webhook support is now available in preview. Be sure to set the Webhooks (Read and Write) permissions at both the Repository and Organization levels. Webhooks allow you to take advantage of enhanced automation and real-time updates to ensure a more seamless and responsive integration experience.
@@ -144,4 +144,4 @@ You can adjust these intervals to meet your organization's needs. For more infor
 
 - [GitHub Cloud Issues connector overview](github-cloud-issues-overview.md)
 - [Troubleshoot issues with the GitHub Cloud Issues connector](github-cloud-issues-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

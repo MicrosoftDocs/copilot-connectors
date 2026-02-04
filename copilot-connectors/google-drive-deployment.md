@@ -60,11 +60,11 @@ Enter the email address of a Google Workspace administrator account, in the form
 
 ## Service account key
 
-Paste the entire contents of the JSON key file you generated when you created the Google Cloud service account. For information about how to generate the service account key, see [Create a Google Cloud project](/microsoftsearch/google-drive-admin-setup#create-a-google-cloud-project).
+Paste the entire contents of the JSON key file you generated when you created the Google Cloud service account. For information about how to generate the service account key, see [Create a Google Cloud project](/microsoft-365-copilot/connectors/google-drive-admin-setup#create-a-google-cloud-project).
 
 ## Roll out 
 
-Deploy the connector to a limited audience if you want to validate it in Copilot and other search surfaces before you deploy it to your organization. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+Deploy the connector to a limited audience if you want to validate it in Copilot and other search surfaces before you deploy it to your organization. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
 
@@ -97,7 +97,7 @@ The Google Drive connector supports the following user search permissions:
 If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it, and you need to further choose how to map user identities:
 
   - **Microsoft Entra ID**: Use when Google Drive emails match Entra ID user principal names (UPNs). The connector maps the email IDs of users in Google Drive to the UPN property from Microsoft Entra ID.
-  - **Non-Entra ID**: Use regex-based mapping when Google Drive emails differ from UPNs. For more information, see [Map non-Entra ID IDs](/microsoftsearch/map-non-aad).
+  - **Non-Entra ID**: Use regex-based mapping when Google Drive emails differ from UPNs. For more information, see [Map non-Entra ID IDs](/microsoft-365-copilot/connectors/map-non-aad).
 
 > [!NOTE]
 > Updates to user or group access permissions are synced in full crawls only. Incremental crawls don't currently support the processing of updates to permissions.

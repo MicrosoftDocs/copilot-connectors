@@ -244,7 +244,7 @@ By default, incremental crawls run every four hours and full crawls run daily. Y
 >
 > If crawl frequency is set too high, your organization might reach Monday.com daily API limits, which can result in crawl failures.
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 

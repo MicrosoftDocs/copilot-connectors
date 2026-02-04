@@ -49,7 +49,7 @@ The connector supports **technical account authentication** for Adobe Experience
 
 ### Roll out
 
-To validate the connector before deployment, use a staged rollout. To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To validate the connector before deployment, use a staged rollout. To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The connector starts indexing published webpages immediately.
 
@@ -127,7 +127,7 @@ The refresh interval determines how often your data is synchronized between th
 - Full crawl: Default value is every day.
 - Incremental crawl: Default value is every 15 minutes.
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 

@@ -16,7 +16,7 @@ description: "Find information about how to deploy the Confluence Cloud Microsof
 
 The Confluence Cloud Microsoft 365 Copilot connector integrates Confluence content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant wiki pages and blogs directly within apps like Teams, Outlook, and SharePoint.
 
-This article describes the steps to deploy, customize, and troubleshoot the Confluence Cloud Copilot connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
+This article describes the steps to deploy, customize, and troubleshoot the Confluence Cloud Copilot connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview).
 
 For advanced Confluence Cloud configuration information, see [Set up the Confluence Cloud service for connector ingestion](confluence-cloud-admin-setup.md).
 
@@ -50,7 +50,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Confluence Cloud** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -99,7 +99,7 @@ To authenticate and synchronize content from Confluence, choose one of the fol
 
 ### Roll out
 
-Deploy the connection to a limited set of users to validate it in Copilot and other search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+Deploy the connection to a limited set of users to validate it in Copilot and other search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
 
@@ -188,12 +188,12 @@ The refresh interval determines how often your data is synchronized between the 
 - **Full crawl** - Performs a complete synchronization of all content. Full crawls detect deleted items and sync access control list (ACL) changes. By default, full crawls run every 24 hours.
 - **Incremental crawl** - Syncs new and modified content. Incremental crawls do not pick up ACL changes or deleted items. By default, incremental crawls run every 15 minutes.
 
-You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](configure-connector.md#guidelines-for-sync-settings).
+You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Confluence Cloud connector overview](confluence-cloud-overview.md)
 - [Set up the Confluence Cloud service for connector ingestion](confluence-cloud-admin-setup.md)
 - [Troubleshoot issues with the Confluence Cloud connector](confluence-cloud-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](configure-connector.md)
+- [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md)
 - [Monitor connections](manage-connector.md)

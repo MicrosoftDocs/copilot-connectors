@@ -43,7 +43,7 @@ To add the Egnyte connector for your organization:
 The display name appears in Copilot responses and helps users recognize content coming from Egnyte.  
 You can accept the default **Egnyte** display name or customize it to something more recognizable for your organization.
 
-For more information about display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -63,7 +63,7 @@ Enter the **client ID** and **secret** from your Egnyte developer account. Make 
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The Egnyte connector starts indexing content right away.
 
@@ -105,7 +105,7 @@ Choose whether your users are Microsoft Entra ID provisioned users or non-Micros
 
 > [!IMPORTANT]
 > If you choose Microsoft Entra ID, the connector maps the email IDs of users from Egnyte to the UPN property from Microsoft Entra ID.
-> If you choose non-Microsoft Entra ID, provide a regular expression to map identities from email ID to UPN. For more information, see [Map your non-Microsoft Entra ID identities](/microsoftsearch/map-non-aad).
+> If you choose non-Microsoft Entra ID, provide a regular expression to map identities from email ID to UPN. For more information, see [Map your non-Microsoft Entra ID identities](/microsoft-365-copilot/connectors/map-non-aad).
 > Updates to users or groups that govern access permissions are synced in full crawls only. Incremental crawls don't currently support processing updates to permissions.
 
 ### Customize content settings
@@ -145,11 +145,11 @@ You can adjust the crawl frequency to fit your data refresh needs:
 
 Choose a schedule that balances content freshness with Egnyte API rate limits.
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 
 ## Related content
 
 - [Egnyte connector overview](egnyte-overview.md)
 - [Troubleshoot issues with the Egnyte connector](egnyte-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

@@ -59,7 +59,7 @@ For more information, see [Configure GitLab as an OAuth 2.0 authentication ident
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to include. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to include. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The GitLab Merge Requests Cloud connector starts indexing content right away.
 
@@ -98,7 +98,7 @@ To ensure permissions are applied correctly, map GitLab identities to Microsoft 
 - **Sign in** – Maps GitLab usernames to Entra ID user properties.
 - **Name** – Maps GitLab display names to Entra ID user properties.
 
-If direct mapping fails, you can use regular expressions (regex) to transform values. For more information, see [Map Microsoft Entra identities](/microsoftsearch/map-aad).
+If direct mapping fails, you can use regular expressions (regex) to transform values. For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-aad).
 
 ### Customize content settings
 
@@ -116,7 +116,7 @@ Configure the full and incremental crawl sync intervals. The following are the d
 - **Full crawl:** Daily.
 
 You can adjust these intervals to meet your organization’s needs. For more information, see  
-[Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+[Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 The following table lists the rate limits for the GitLab Merge Requests Cloud connector content ingestion.
 
@@ -130,4 +130,4 @@ The following table lists the rate limits for the GitLab Merge Requests Cloud co
 
 - [GitLab Merge Requests Cloud connector overview](gitlab-merge-requests-cloud-overview.md)
 - [Troubleshoot issues with the GitLab Merge Requests Cloud connector](gitlab-merge-requests-cloud-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

@@ -67,7 +67,7 @@ For information about how to create a GitHub app, see [Use a custom GitHub app f
 
 ### Roll out to a limited audience
 
-Deploy this connection to a limited user base if you want to validate it in Copilot and Microsoft Search before you expand the rollout. To learn more, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+Deploy this connection to a limited user base if you want to validate it in Copilot and Microsoft Search before you expand the rollout. To learn more, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The GitHub Server Knowledge connector starts indexing content right away.
 
@@ -104,7 +104,7 @@ To ensure that permissions are applied correctly, map GitHub user identities to 
 - **Login:** Maps GitHub logins with Microsoft Entra ID user properties.
 - **Name:** Maps GitHub name with Microsoft Entra ID user properties.
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](/microsoftsearch/map-aad).
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-aad).
 
 If the organization admin sets default member permissions to restrict repository access, the connector respects this setting. Users can't view organization repositories unless they're explicitly added as collaborators.
 
@@ -125,7 +125,7 @@ The refresh interval determines how often your data is synced between the data s
 - Incremental crawl: Every 15 minutes
 - Full crawl: Daily
 
-You can change these defaults in the **Sync** tab. For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+You can change these defaults in the **Sync** tab. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 

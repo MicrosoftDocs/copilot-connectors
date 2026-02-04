@@ -21,7 +21,7 @@ The Smartsheet Sheet Microsoft 365 Copilot connector allows your organization to
 
 Organizations that use Smartsheet often need to make project plans, schedules, and other sheet data accessible to users within their daily workflow. The Smartsheet Sheet connector helps bridge this gap. Common benefits include:
 
-- **Unified search**: Enable users to find relevant Smartsheet content based on keywords, personal preferences, and social connections using [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot).
+- **Unified search**: Enable users to find relevant Smartsheet content based on keywords, personal preferences, and social connections using [Semantic search in Copilot](/microsoft-365-copilot/connectors/semantic-index-for-copilot).
 - **Productivity**: Users can access sheet information directly within Microsoft 365 apps, reducing the need to switch between applications.
 - **Security**: The connector supports access controls to ensure only authorized users see sensitive content.
 

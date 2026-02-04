@@ -39,7 +39,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Asana** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -153,10 +153,10 @@ You can configure the frequency of full and incremental crawls:
 - **Full crawl**: Recommended every 24 hours to ensure complete data refresh.
 - **Incremental crawl**: Recommended every 15 minutes to capture recent changes.
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Asana Copilot connector overview](asana-overview.md)
 - [Troubleshoot issues with the Asana connector](asana-troubleshooting.md)
-- [Set up Copilot connectors in the admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the admin center](/microsoft-365-copilot/connectors/deployment-overview)

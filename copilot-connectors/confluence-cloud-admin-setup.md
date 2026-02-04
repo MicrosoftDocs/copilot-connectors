@@ -74,7 +74,7 @@ In Confluence Cloud, make sure spaces follow clear naming conventions, use label
 
 The default method for mapping your data source identities to Microsoft Entra ID is to determine whether the email address of each Confluence user matches the user principal name (UPN) or email address in Microsoft Entra ID. If this default mapping doesn’t meet your organization's needs, you can define a custom mapping formula.
 
-For more information about mapping identities that aren’t in Microsoft Entra ID, see [Map your non-Azure AD identities](/MicrosoftSearch/map-non-aad).
+For more information about mapping identities that aren’t in Microsoft Entra ID, see [Map your non-Azure AD identities](/microsoft-365-copilot/connectors/map-non-aad).
 
 ### Configure user access permissions
 
@@ -214,7 +214,7 @@ Replace:
 
 To enable the Confluence Cloud connector to access your Confluence Cloud instance, a Confluence administrator must provision an OAuth endpoint to enable the Microsoft Search app and Microsoft 365 Copilot to access the instance.
 
-For detailed instructions, see [Register an app in Confluence Cloud](/microsoftsearch/confluence-cloud-deployment#choose-authentication-type).
+For detailed instructions, see [Register an app in Confluence Cloud](/microsoft-365-copilot/connectors/confluence-cloud-deployment#choose-authentication-type).
 
 Use the following table to determine which scopes to select when you configure access through the Confluence API.
 
@@ -238,7 +238,7 @@ To ensure that the connector can access Confluence APIs, add the required Micros
 
 For Confluence Cloud, if your network configuration blocks access to Confluence APIs, make sure the IP addresses listed in the following documentation pages are allowed:
 
-- [IP Firewall rules](configure-connector.md#ip-firewall-rules)
+- [IP Firewall rules](deployment-overview.md#ip-firewall-rules)
 - [IP addresses and domains to allowlist in your corporate firewall](https://support.atlassian.com/security-and-access-policies/docs/specify-ip-addresses-for-product-access/)
 
 ### Validate Copilot indexing for Confluence

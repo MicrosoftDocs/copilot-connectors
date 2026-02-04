@@ -181,7 +181,7 @@ UrlName | | A unique URL-friendly name generated for the article. | Query, Retri
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Salesforce Knowledge Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Salesforce Knowledge Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
 
 ## Troubleshooting
 

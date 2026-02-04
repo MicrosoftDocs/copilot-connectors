@@ -55,7 +55,7 @@ The connector supports Smartsheet Basic Authentication using an API access token
 
 ### Roll out
 
-To validate the connection before a full rollout, select **Roll out to limited audience** and specify the users or groups for the staged deployment. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To validate the connection before a full rollout, select **Roll out to limited audience** and specify the users or groups for the staged deployment. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connector. The Smartsheet Sheet connector starts indexing content right away.
 
@@ -90,7 +90,7 @@ The connector supports two access options:
 If you choose **Only people with access to this data source,** you must map identities:
 
 - **Microsoft Entra ID**: Choose this option if the email ID of Smartsheet users is the same as the user principal name (UPN) or email of users in Microsoft Entra ID.
-- **Non-Microsoft Entra ID**: Choose this option if the IDs differ. You can provide a custom mapping formula. For more information, see [Map your non-Entra ID identities](/microsoftsearch/map-non-aad).
+- **Non-Microsoft Entra ID**: Choose this option if the IDs differ. You can provide a custom mapping formula. For more information, see [Map your non-Entra ID identities](/microsoft-365-copilot/connectors/map-non-aad).
 
 ### Customize content settings
 
@@ -125,10 +125,10 @@ You can adjust the crawl frequency to fit your data refresh needs. The following
 - **Full crawl**: Every day
 - **Incremental crawl**: Every 15 minutes
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Smartsheet Sheet connector overview](smartsheet-sheet-overview.md)
 - [Troubleshoot issues with the Smartsheet Sheet connector](smartsheet-sheet-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

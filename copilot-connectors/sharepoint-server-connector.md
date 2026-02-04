@@ -71,15 +71,15 @@ To get you quickly started with Copilot connectors, the steps in the setup proce
 
 ## Get started
 
-[Add the SharePoint Server Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add).
+[Add the SharePoint Server Copilot connector](https://admin.microsoft.com/adminportal/home#/microsoft-365-copilot/connectors/Connectors/add).
 
-For more information, see general [setup instructions](./configure-connector.md).
+For more information, see general [setup instructions](./deployment-overview.md).
 
 [![Screenshot that shows connection creation screen for Microsoft 365 Copilot Connector for SharePoint Server.](media/sharepoint-server/firstscreen.png)](media/sharepoint-server/firstscreen.png#lightbox).
 
 ### 1. Display name
 
-A display name is a user-facing name in Copilot. Choose the right display name for your users to identify with the content of the data source. The name is also useful for users who wish to add Graph connectors knowledge to their Copilot Agents. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is a user-facing name in Copilot. Choose the right display name for your users to identify with the content of the data source. The name is also useful for users who wish to add Graph connectors knowledge to their Copilot Agents. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. SharePoint Instance URL
 
@@ -223,7 +223,7 @@ You can add custom properties defined in your sites to better manage the search 
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
 
 Default values of refresh interval:
 

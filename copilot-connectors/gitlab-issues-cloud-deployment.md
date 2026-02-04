@@ -45,7 +45,7 @@ To add the GitLab Issues Cloud connector for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize the associated content source. You can accept the default **GitLab Issues Cloud** display name, or customize it to meet the needs of your organization.  
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -66,7 +66,7 @@ For information about how to create OAuth apps in GitLab, see [Configure GitLab 
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The GitLab Issues Cloud connector starts indexing content right away.
 
@@ -131,7 +131,7 @@ You can customize the full and incremental crawl intervals. The following are th
 - **Incremental crawl:** Every 15 minutes.
 - **Full crawl:** Daily.
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 #### Rate limits
 
@@ -147,4 +147,4 @@ The following table lists the rate limits that apply to the GitLab Issues Cloud 
 
 - [GitLab Issues Cloud connector overview](gitlab-issues-cloud-overview.md)
 - [Troubleshoot issues with the GitLab Issues Cloud connector](gitlab-issues-cloud-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

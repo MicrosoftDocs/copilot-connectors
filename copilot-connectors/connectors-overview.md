@@ -53,7 +53,7 @@ The following video provides an overview of the synced connector setup process.
 
 > [!VIDEO 4f4668c6-445a-4895-8627-92880eafad68]
 
-For more information, see [Set up synced connectors in the admin center](configure-connector.md).
+For more information, see [Set up synced connectors in the admin center](deployment-overview.md).
 
 ### Federated connectors (private preview)
 

@@ -41,13 +41,13 @@ Binary files like images (.jpg, .bmp, etc.) aren't supported. For example, if a 
 ## Get started
 ### Add a connector in the Microsoft 365 admin center
 
-[Add Azure Data Lake Storage Gen2 Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ADLSGen2&type=ADLSGen2)
+[Add Azure Data Lake Storage Gen2 Copilot connector](https://admin.microsoft.com/adminportal/home#/microsoft-365-copilot/connectors/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ADLSGen2&type=ADLSGen2)
 
-(See general [setup instructions](./configure-connector.md) for more details)
+(See general [setup instructions](./deployment-overview.md) for more details)
 
 ### Name the connection
 
-Follow the general [setup instructions](./configure-connector.md).
+Follow the general [setup instructions](./deployment-overview.md).
 
 ### Configure the connection settings
 
@@ -103,7 +103,7 @@ On the **Refresh settings** screen, you can set the incremental crawl interval a
 
 #### Review connection
 
-Follow the general [setup instructions](./configure-connector.md).
+Follow the general [setup instructions](./deployment-overview.md).
 
 ## Troubleshooting
 After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).

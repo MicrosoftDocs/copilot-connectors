@@ -142,15 +142,15 @@ When you set up the CSV Microsoft 365 Copilot connector, you'll need to provide 
 
 ## Step 1: Add a CSV Microsoft 365 Copilot connector in the Microsoft 365 admin center
 
-[Add CSV Microsoft 365 Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_CSV&type=CSV)
+[Add CSV Microsoft 365 Copilot connector](https://admin.microsoft.com/adminportal/home#/microsoft-365-copilot/connectors/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_CSV&type=CSV)
 
-Follow the general [setup instructions](./configure-connector.md).
+Follow the general [setup instructions](./deployment-overview.md).
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 
 instructions.-->
 
 ## Step 2: Name the connection
 
-Follow the general [setup instructions](./configure-connector.md).
+Follow the general [setup instructions](./deployment-overview.md).
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 
 instructions.-->
 
@@ -215,14 +215,14 @@ To control access on an item level, select columns mapped to allowed users and a
 
 ## Step 6: Assign property labels
 
-Follow the general [setup instructions](./configure-connector.md).
+Follow the general [setup instructions](./deployment-overview.md).
 
 > [!NOTE]
 > IconURL label is populated by default, and the mapping cannot be changed.
 
 ## Step 7: Manage schema
 
-Follow the general [setup instructions](./configure-connector.md).
+Follow the general [setup instructions](./deployment-overview.md).
 
 ## Step 8: Manage search permissions
 
@@ -233,11 +233,11 @@ Follow the general [setup instructions](./configure-connector.md).
 
 ## Step 9: Choose refresh settings
 
-Follow the general [setup instructions](./configure-connector.md).
+Follow the general [setup instructions](./deployment-overview.md).
 
 ## Step 10: Review connection
 
-Follow the general [setup instructions](./configure-connector.md).
+Follow the general [setup instructions](./deployment-overview.md).
 
 ## Troubleshooting
 After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).

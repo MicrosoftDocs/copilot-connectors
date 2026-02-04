@@ -17,7 +17,7 @@ description: "Find information about how to deploy the Veeva QualityDocs Microso
 
 The Veeva QualityDocs Microsoft 365 Copilot connector enables organizations to index controlled quality documents—such as Standard Operating Procedures (SOPs), work instructions, policies, CAPAs, and batch records—from Veeva Vault QualityDocs into Microsoft Graph. This integration makes them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot   and Microsoft Search. The connector respects Vault QualityDocs' granular permission model, ensuring that only authorized users can see or interact with relevant documents. By pairing Microsoft's AI capabilities with QualityDocs' single source of truth, quality, regulatory, manufacturing, and supply-chain teams can collaborate more efficiently while maintaining compliance.
 
-This article describes the steps to deploy and customize the Veeva QualityDocs connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
+This article describes the steps to deploy and customize the Veeva QualityDocs connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview).
 
 ## Prerequisites
 
@@ -74,7 +74,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Veeva QualityDocs** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -95,7 +95,7 @@ Select **Authorize** to sign in with your Entra ID account, and select **Consent
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The Veeva QualityDocs Copilot connector starts indexing content right away.
 
@@ -181,10 +181,10 @@ The following table lists the properties that the Veeva QualityDocs connector in
 
 ### Customize sync intervals
 
-You can modify the frequency of full crawls to fit your organization's requirements. The default is a full crawl every day. For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+You can modify the frequency of full crawls to fit your organization's requirements. The default is a full crawl every day. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Veeva QualityDocs connector overview](veeva-qualitydocs-overview.md)
 - [Troubleshoot issues with the Veeva QualityDocs connector](veeva-qualitydocs-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

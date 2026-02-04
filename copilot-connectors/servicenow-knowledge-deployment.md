@@ -307,7 +307,7 @@ You can override the default expression for specific knowledge articles by using
 > [!NOTE]
 > If multiple rules apply to an item, the first rule in the list is used. Changes take effect after the next full crawl.
 
-For more information, see [Customize values for certain schema properties](configure-connector.md#customize-values-for-certain-schema-properties).
+For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties).
 
 ### Customize sync intervals
 
@@ -322,7 +322,7 @@ Configure the sync schedule to keep indexed content up to date:
 > - During subsequent periodic full crawls, content and identity sync happens in parallel. The periodic full crawl is complete when both content and identity sync is finished.
 > - The periodic full crawls are faster than the first full crawls because the first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Periodic full crawls only ingest new items, users, and user criteria.  
 
-For more information, see [Guidelines for sync settings](configure-connector.md#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
 
 ## Related content
 

@@ -31,4 +31,4 @@ For more information about index browser search and Smartsheet IDs, see [How to 
 
 - [Smartsheet Sheet connector overview](smartsheet-sheet-overview.md)
 - [Deploy the Smartsheet Sheet connector](smartsheet-sheet-deployment.md)
-- [Manage your connector](/microsoftsearch/manage-connector)
+- [Manage your connector](/microsoft-365-copilot/connectors/manage-connector)

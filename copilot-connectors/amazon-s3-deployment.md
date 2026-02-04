@@ -16,7 +16,7 @@ description: "Find information about how to deploy the Amazon S3 Copilot connect
 
 The Amazon S3 Microsoft 365 Copilot connector indexes content from Amazon S3 buckets into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant files directly within apps like Microsoft Teams, Outlook, and SharePoint.
 
-This article describes the steps to deploy and customize the Amazon S3 connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
+This article describes the steps to deploy and customize the Amazon S3 connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview).
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Amazon S3** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Choose authentication type
                                                 
@@ -64,7 +64,7 @@ As a best practice, create a dedicated IAM user with the **AmazonS3ReadOnlyAcces
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The Amazon S3 Copilot connector starts indexing content right away. After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
@@ -125,10 +125,10 @@ The refresh interval determines how often your data is synced between Amazon S3 
 - **Incremental crawl:** Every 15 minutes.
 - **Full crawl:** Every day.
 
-You can customize these values. For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+You can customize these values. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Amazon S3 connector overview](amazon-s3-overview.md)
 - [Troubleshoot issues with the Amazon S3 connector](amazon-s3-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)

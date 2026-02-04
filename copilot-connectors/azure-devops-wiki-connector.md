@@ -60,7 +60,7 @@ The Azure DevOps Wiki connector includes the following custom data filters for C
 [![Screenshot that shows connection creation screen for the Azure DevOps Wiki Copilot connector.](media/ado-wiki-create-page.png)](media/ado-wiki-create-page.png#lightbox)
 
 ### Choose display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Provide authentication type
 To authenticate and sync wikis from Azure DevOps, choose **one of the two** supported methods:<br>
@@ -230,7 +230,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/ado-wiki-sync-tab.png)](media/ado-wiki-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Azure DevOps Wiki Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Azure DevOps Wiki Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 

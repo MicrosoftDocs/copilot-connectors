@@ -100,7 +100,7 @@ These are the supported  MIME types.
 [![Screenshot that shows connection creation screen for the Enterprise Websites on-premises Microsoft 365 Copilot connector.](media/enterprise-web-connector/enterprise-website-onprem-create-page.png)](media/enterprise-web-connector/enterprise-website-onprem-create-page.png#lightbox)
 
 ### Display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Add website URLs to the index
 Specify the root of the website that you'd like to crawl. The Enterprise Websites on-premises Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection.
@@ -372,7 +372,7 @@ To learn more about regex expressions, see [.NET regular expressions](/dotnet/st
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/enterprise-web-connector/enterprise-website-onprem-sync-tab.png)](media/enterprise-web-connector/enterprise-website-onprem-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Microsoft Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Microsoft Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 

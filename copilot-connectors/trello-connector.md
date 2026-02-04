@@ -51,7 +51,7 @@ After you register your app, go to the **API key** tab to get the unique app key
 
 ### 1. Display name
 
-The display name identifies each citation in Copilot to help users recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/MicrosoftSearch/custom-filters#Content-source-filters). A default value is provided for this field; you can customize it to a name that users in your organization recognize.
+The display name identifies each citation in Copilot to help users recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#Content-source-filters). A default value is provided for this field; you can customize it to a name that users in your organization recognize.
 
 ### 2. Authentication Type
 
@@ -118,7 +118,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Trello Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Trello Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval.
 

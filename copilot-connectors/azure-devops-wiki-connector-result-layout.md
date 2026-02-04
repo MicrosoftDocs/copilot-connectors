@@ -29,7 +29,7 @@ In this document, we have provided a sample result layout JSON required for sett
 
 ## Before you get started
 
-You must have configured the Azure DevOps Wiki Copilot connector. To consume the sample result layout JSON as is, you must select the following properties for indexing with the mentioned [search schema](configure-connector.md).
+You must have configured the Azure DevOps Wiki Copilot connector. To consume the sample result layout JSON as is, you must select the following properties for indexing with the mentioned [search schema](deployment-overview.md).
 
 > [!NOTE]
 > * **Retrieve** search attribute is required for displaying a property in the search result template. A property can have other search attributes also.  
