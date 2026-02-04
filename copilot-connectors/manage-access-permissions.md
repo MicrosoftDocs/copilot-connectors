@@ -5,7 +5,7 @@ ms.author: vivg
 author: vivg
 manager: harshkum
 ms.topic: article
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Learn how to update and manage access permissions for Microsoft 365 Copilot connectors in the Microsoft 365 admin center."
 ---

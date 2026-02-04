@@ -7,7 +7,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Troubleshooting the Enterprise Websites Cloud Microsoft 365 Copilot connector."
 ---

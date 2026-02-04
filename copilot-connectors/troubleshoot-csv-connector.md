@@ -7,7 +7,7 @@ manager: brian.jackett
 audience: Admin 
 ms.audience: Admin 
 ms.topic: troubleshooting-general
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Troubleshooting the CSV Microsoft 365 Copilot connector" 
 --- 

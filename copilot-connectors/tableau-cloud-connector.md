@@ -6,7 +6,7 @@ manager: jecui
 audience: Admin
 ms.audience: Admin 
 ms.topic: install-set-up-deploy
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: Medium 
 description: "Set up the Tableau Cloud  Microsoft 365 Copilot connector" 
 ms.date: 08/15/2025

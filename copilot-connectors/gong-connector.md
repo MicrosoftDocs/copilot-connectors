@@ -6,7 +6,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin 
 ms.topic: article 
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Set up the Gong Copilot connector for Microsoft 365 Copilot and Microsoft Search" 
 ms.date: 12/25/2025

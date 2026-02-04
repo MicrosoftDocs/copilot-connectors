@@ -6,7 +6,7 @@ manager: ereza
 audience: Admin
 ms.audience: Admin 
 ms.topic: install-set-up-deploy
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Set up the Salesforce Knowledge Microsoft 365 Copilot connector for Microsoft Search and Microsoft 365 Copilot" 
 ms.date: 12/25/2025

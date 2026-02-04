@@ -7,7 +7,7 @@ manager: laugra
 audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: Medium
 description: "Set up the iManage Cloud Microsoft 365 Copilot connector."
 ---

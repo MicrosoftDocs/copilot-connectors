@@ -6,7 +6,7 @@ manager: umas
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Troubleshooting the Atlassian Jira Cloud Microsoft 365 Copilot connector."
 ms.date: 07/22/2021

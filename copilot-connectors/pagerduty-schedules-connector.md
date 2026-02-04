@@ -7,7 +7,7 @@ manager: zezhangzhao
 audience: Admin
 ms.audience: Admin 
 ms.topic: install-set-up-deploy
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: Medium 
 description: "Set up the PagerDuty Schedules Copilot connector for Microsoft Search and Microsoft 365 Copilot." 
 ms.date: 08/15/2025

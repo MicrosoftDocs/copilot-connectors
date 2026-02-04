@@ -7,7 +7,7 @@ manager: brian.jackett
 audience: Admin 
 ms.audience: Admin 
 ms.topic: troubleshooting-general
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Troubleshoot issues with the Media Wiki Microsoft 365 Copilot connector." 
 --- 

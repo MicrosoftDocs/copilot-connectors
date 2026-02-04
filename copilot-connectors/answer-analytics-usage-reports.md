@@ -4,7 +4,7 @@ ms.author: misvenso
 author: wobba
 manager: scotv
 ms.topic: concept-article
-ms.service: mssearch
+ms.service: copilot-connectors
 audience: Admin
 ms.audience: Admin
 ms.date: 7/31/2023 

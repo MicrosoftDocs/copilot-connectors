@@ -7,7 +7,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Result layout JSON for Azure DevOps Wiki Microsoft 365 Copilot connector" 
 ms.date: 06/03/2022

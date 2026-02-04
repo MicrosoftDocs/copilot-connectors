@@ -6,7 +6,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: Medium
 description: "Troubleshooting the Azure DevOps Wiki Microsoft 365 Copilot connector."
 ms.date: 06/03/2022

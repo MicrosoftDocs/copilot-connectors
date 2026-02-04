@@ -6,7 +6,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin 
 ms.topic: install-set-up-deploy
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Set up the CSV Microsoft 365 Copilot connector for SharePoint or Azure Data Lake Storage sources." 
 ms.date: 03/08/2022

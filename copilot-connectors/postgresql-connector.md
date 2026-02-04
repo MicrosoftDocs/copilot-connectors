@@ -7,7 +7,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the PostgreSQL Microsoft 365 Copilot connector for Microsoft Search and Copilot"
 ---

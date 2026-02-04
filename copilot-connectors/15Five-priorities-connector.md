@@ -7,7 +7,7 @@ manager: zezhangzhao
 audience: Admin
 ms.audience: Admin 
 ms.topic: install-set-up-deploy
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: Medium 
 description: "Set up the 15Five Priorities Microsoft 365 Copilot connector." 
 ms.date: 08/15/2025

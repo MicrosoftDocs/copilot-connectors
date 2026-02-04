@@ -7,7 +7,7 @@ manager: umas
 audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the Oracle SQL Microsoft 365 Copilot connector."
 ---

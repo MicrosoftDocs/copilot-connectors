@@ -5,7 +5,7 @@ ms.author: lauragra
 author: Kai-Cloud
 manager: zezhangzhao
 ms.topic: overview
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 ms.date: 12/02/2025
 ---

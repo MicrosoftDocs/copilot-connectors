@@ -6,7 +6,7 @@ manager: jameslau
 audience: Admin
 ms.audience: Admin 
 ms.topic: install-set-up-deploy
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Overview of the Microsoft Graph connector agent to index on-premises content using Microsoft-built connectors for File-shares, SQL, Confluence, etc." 
 ms.date: 12/16/2025

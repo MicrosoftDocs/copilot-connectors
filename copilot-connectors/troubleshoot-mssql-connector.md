@@ -7,7 +7,7 @@ manager: umas
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Troubleshooting the Azure SQL and Microsoft SQL Microsoft 365 Copilot connectors."
 ---

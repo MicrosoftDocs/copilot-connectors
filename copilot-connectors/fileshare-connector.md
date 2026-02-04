@@ -7,7 +7,7 @@ manager: SteveWilkins1123
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the File Share Microsoft 365 Copilot connector"
 ---

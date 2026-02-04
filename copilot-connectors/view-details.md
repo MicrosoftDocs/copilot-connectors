@@ -5,7 +5,7 @@ ms.author: danielabo
 author: danielabom
 manager: SteveWilkins1123
 ms.topic: article
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Access and manage your Microsoft 365 Copilot connectors as a search administrator for your tenant."
 ---

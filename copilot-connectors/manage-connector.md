@@ -6,7 +6,7 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Manage your Microsoft 365 Copilot connector connection state and index quota utilization."
 ms.date: 07/02/2025

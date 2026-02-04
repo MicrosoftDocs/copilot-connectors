@@ -7,7 +7,7 @@ manager: srramam
 audience: Admin
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Use Stage Rollout to gradually roll out a Microsoft 365 Copilot connector to your users." 
 ---

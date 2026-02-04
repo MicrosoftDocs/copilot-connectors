@@ -7,7 +7,7 @@ manager: umas
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector"
 ---

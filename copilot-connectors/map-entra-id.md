@@ -5,7 +5,7 @@ author: monaray97
 manager: jameslau 
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Steps on how to map Microsoft Entra identities" 
 ms.date: 11/05/2020

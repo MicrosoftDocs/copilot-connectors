@@ -6,7 +6,7 @@ manager: Siva
 audience: Admin
 ms.audience: Admin 
 ms.topic: article 
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Release history of Microsoft Graph connector agent, which is used to index the on-premises data sources using Microsoft-built connectors" 
 ms.date: 12/16/2025
