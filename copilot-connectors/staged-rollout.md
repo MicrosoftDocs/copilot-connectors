@@ -61,35 +61,22 @@ instructions.-->
 
 ## Modify or stop staged rollout
 
-1. Go to the Data Sources tab. In the **Display all connections** section, you see a column in the connection table named **Staged rollout**.
+To modify the staged rollout settings for a connector:
 
-   ![Data Sources table with Staged Rollout column.](media/Staged_Rollout_connection_table.png)
-
-<!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 
-instructions.-->
-
-2. Check the status in the Staged rollout column. Connections that are currently staged show the status **Staged** in the **Staged rollout** column.
-
-3. Click on **Edit** to add or remove users from the staged rollout.
-
+1. On the **Connectors** page of the admin center, on the **Your connections** tab, check the status in the **Staged rollout** column. Connections that are currently staged show the status **Staged**.
+2. Choose **Edit** to add or remove users from the staged rollout.
 
 ### Stop the staged rollout
-If you want to stop the staged rollout and you're ready to deploy the connection to the entire organization, in the **Staged rollout** column, choose **Edit**. On the **Staged rollout** settings panel, choose **End staging**.
+If you want to stop the staged rollout and you're ready to deploy the connection to the organization, in the **Staged rollout** column, choose **Edit**. On the **Staged rollout** settings panel, choose **End staging**.
 
-In the confirmation modal, choose **End** to confirm the action. Note that when you end staging, the connection results start ***appearing to everyone in the organization or those who have access to the items***. This depends on the option you chose in the **Manage search permissions** section when you [deploy the connection](deployment-overview.md).
+In the confirmation modal, choose **End** to confirm the action. Note that when you end staging, the connection results start appearing to everyone in the organization or those who have access to the items. This depends on the option you chose when you [deploy the connection](deployment-overview.md).
 
 ![End staging option.](media/Staged_Rollout_end_staging.png)
 
 ## Limitations
 
-The staged rollout feature has the following limitations in the current release:
+The staged rollout feature has the following limitations:
 
 - You can only add up to 100 users and 15 Microsoft 365 groups to the staged rollout list.
 - The staged rollout settings are currently only applicable to Search and Copilot experiences.
-
-## Conclusion
-
-Staged rollout is a powerful and flexible way to introduce Copilot connectors to your organization. It also reduces the risk of disrupting your existing search experience and allows you to fine-tune your connection settings before you roll it out to the entire organization. We hope you find this feature useful and valuable.
-
-<!---Insert limitations for this data source-->
 

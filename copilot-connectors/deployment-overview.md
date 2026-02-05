@@ -139,7 +139,7 @@ Only string properties can be marked as searchable.
 
 ### Sync settings
 
-[IMAGE PLACEHOLDER]
+:::image type="content" alt-text="Screenshot of the connector gallery in the Microsoft 365 admin center." source="media/deployment-overview/servicenow-knowledge-sync-page.png" lightbox="media/deployment-overview/servicenow-knowledge-sync-page.png":::
 
 On the **Sync** tab, you can configure how often data syncs between the source and the connector index.
 
