@@ -23,7 +23,7 @@ Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and M
 The following types of Copilot connectors are available:
 
 - **Synced connectors:** Index data into Microsoft Graph for Copilot and search.
-- **Federated connectors (private preview):** Use a Model Context Protocol (MCP) model to fetch data in real time, without indexing content into Microsoft 365. For more information, see [Federated connectors overview](federated-connectors-overview.md).
+- **Federated connectors (early access preview):** Use a Model Context Protocol (MCP) model to fetch data in real time, without indexing content into Microsoft 365. For more information, see [Federated connectors overview](federated-connectors-overview.md).
 
 The following table summarizes the key differences between synced connectors and federated connectors.
 
@@ -55,7 +55,7 @@ The following video provides an overview of the synced connector setup process.
 
 For more information, see [Set up synced connectors in the admin center](deployment-overview.md).
 
-### Federated connectors (private preview)
+### Federated connectors (early access preview)
 
 Federated connectors use an MCP model to fetch data in real time, without indexing content into Microsoft 365. Federated connectors are ideal for connecting to live, dynamic, or sensitive data sources that shouldn't be indexed.
 

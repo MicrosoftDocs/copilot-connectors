@@ -29,6 +29,7 @@ items:
   - name: Frequently asked questions
     href: frequently-asked-questions.yml
   - name: Microsoft-built synced connectors
+    href: prebuilt-connectors-overview.md
     items:
     - name: 15Five High Fives
       items:
