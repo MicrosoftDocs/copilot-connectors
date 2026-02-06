@@ -100,7 +100,7 @@ In PowerShell ([SharePoint Online Management Shell](/powershell/sharepoint/share
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
 # Enter a work or school account that has only the permissions required for this procedure.
-$userUpn = Read-Host -Prompt "Enter the UPN (for example, user@contoso.onmicrosoft.com)"
+$userUpn = Read-Host -Prompt "Enter the UPN"
 $orgName="<contoso>"
 $userCredential = Get-Credential -UserName $adminUPN -Message "Enter your password."
 Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $userCredential
