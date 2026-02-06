@@ -99,18 +99,17 @@ In PowerShell ([SharePoint Online Management Shell](/powershell/sharepoint/share
 
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
-$adminUPN=”<admin@contoso.onmicrosoft.com>”
-$orgName=“<contoso>”
+# Enter a work or school account that has only the permissions required for this procedure.
+$userUpn = Read-Host -Prompt "Enter the UPN (for example, user@contoso.onmicrosoft.com)"
+$orgName="<contoso>"
 $userCredential = Get-Credential -UserName $adminUPN -Message "Enter your password."
 Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $userCredential
 Set-spotenant –DisableCustomAppAuthentication $false
 ```
 
 > [!NOTE]
-> If you're using PowerShell 7, use this command first `Import-Module microsoft.online.sharepoint.powershell -UseWindowsPowerShell`
-
-> [!NOTE]
-> If you're using multifactor authentication, use `Connect-SPOService -Url https://$orgName-admin.sharepoint.com`.
+> - If you're using PowerShell 7, use this command first `Import-Module microsoft.online.sharepoint.powershell -UseWindowsPowerShell`.
+> - If you're using multifactor authentication, use `Connect-SPOService -Url https://$orgName-admin.sharepoint.com`.
 
 ##### Complete the app configuration
 
