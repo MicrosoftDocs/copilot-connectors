@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Monday.com Microsoft 365 Copilot connector"
+title: "Deploy the monday.com Microsoft 365 Copilot connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -10,80 +10,76 @@ ms.topic: how-to
 ms.service: copilot-connectors
 ms.date: 01/13/2026
 ms.localizationpriority: Medium
-description: "Find information about how to deploy the Monday.com Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and rollout guidance."
+description: "Find information about how to deploy the monday.com Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and rollout guidance."
 ---
 
-# Deploy the Monday.com Microsoft 365 Copilot connector
+# Deploy the monday.com Microsoft 365 Copilot connector
 
-The Monday.com Microsoft 365 Copilot connector integrates Monday.com items into the Microsoft 365 ecosystem, allowing Microsoft 365 Copilot, Copilot Search, and Microsoft Search to surface project and task data from Monday.com across Microsoft 365 experiences.
+The monday.com Microsoft 365 Copilot connector integrates monday.com items into the Microsoft 365 ecosystem, allowing Microsoft 365 Copilot, Copilot Search, and Microsoft Search to surface project and task data from monday.com across Microsoft 365 experiences.
 
-This article describes how to deploy and configure the Monday.com connector in the Microsoft 365 admin center.
+This article describes how to deploy and configure the monday.com connector in the Microsoft 365 admin center.
 
 ## Prerequisites
 
-Before you deploy the Monday.com connector, make sure that you meet the following prerequisites:
+Before you deploy the monday.com connector, make sure that you meet the following prerequisites:
 
 - You're a Microsoft 365 search admin for your organization.
-- You have access to your organization’s Monday.com instance URL (for example, `https://contoso.monday.com`).
-- You have the required permissions in Monday.com to create or manage OAuth applications.
-- You understand your Monday.com plan limits, including daily API call limits.
+- You have access to your organization’s monday.com instance URL (for example, `https://contoso.monday.com`).
+- You have the required permissions in monday.com to create or manage OAuth applications.
+- You understand your monday.com plan limits, including daily API call limits.
 
 ## Deploy the connector
 
-To add the Monday.com connector for your organization:
+To add the monday.com connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, select **Copilot** > **Connectors**.
 1. Go to the **Connectors** tab, and then select **Gallery**.
-1. From the list of available connectors, select **Monday.com**.
+1. From the list of available connectors, select **monday.com**.
 
 ### Set display name
 
 The display name is used to identify references in Copilot responses and search results to help users recognize the source of the content. The display name also indicates trusted content and is used as a content source filter.
 
-You can accept the default **Monday** display name, or customize it to use a name that users in your organization recognize.
+You can accept the default **monday** display name, or customize it to use a name that users in your organization recognize.
 
 ### Set instance URL
 
-Enter the instance URL of your Monday.com tenant. The URL typically follows this format:
+Enter the instance URL of your monday.com tenant. The URL typically follows this format:
 
 - `https://<your-instance>.monday.com`
 
 ### Choose authentication type
 
-The Monday.com connector supports the following authentication options:
+The monday.com connector supports the following authentication options:
 
 - OAuth (recommended).
-- OAuth 2.0 with a customized Monday.com app.
+- OAuth 2.0 with a customized monday.com app.
 
 #### OAuth (recommended)
 
-With OAuth authentication, you install and authorize the Microsoft 365 Copilot Monday app in your Monday.com workspace. During authorization, you sign in to Monday.com and grant read permissions required for content ingestion.
+With OAuth authentication, you install and authorize the Microsoft 365 Copilot monday app in your monday.com workspace. During authorization, you sign in to monday.com and grant read permissions required for content ingestion.
 
 This option requires minimal configuration and is recommended for most organizations.
 
-1. Install the Microsoft 365 Copilot Monday app on your Monday Workspaces via this [link](https://auth.monday.com/oauth2/authorize?client_id=1347fa4e96575c4b06f577e8fd06407b&response_type=install).
-
-    :::image type="content" source="media/monday-deployment/monday-app-installation.png" alt-text="Screenshot of the Microsoft 365 installation page for Monday Workspaces." lightbox="media/monday-deployment/monday-app-installation.png":::
+1. Install the Microsoft 365 Copilot monday app on your monday Workspaces via this [link](https://auth.monday.com/oauth2/authorize?client_id=1347fa4e96575c4b06f577e8fd06407b&response_type=install).
 
 1. Review the workspaces you want to use and the corresponding Microsoft 365 Copilot access level before you choose the install button in the pop-up window.
-
-    :::image type="content" source="media/monday-deployment/workspace-selection-window.png" alt-text="Screenshot of the workspace review and Microsoft 365 Copilot access level selection window." lightbox="media/monday-deployment/workspace-selection-window.png":::
 
 1.  Choose **Authorize** to sign in and grant access.
 
 #### OAuth 2.0 with customized app
 
-With OAuth 2.0, you create and configure your own OAuth app in the Monday.com Developer Center. You record the client ID and client secret, enable required read scopes, configure redirect URLs, and promote the app to live status before you use it with the connector.
+With OAuth 2.0, you create and configure your own OAuth app in the monday.com Developer Center. You record the client ID and client secret, enable required read scopes, configure redirect URLs, and promote the app to live status before you use it with the connector.
 
 Use this option when your organization requires a custom OAuth app configuration.
 
-1. Sign in your Monday.com account and go to the **Monday.com Developer Center**.
+1. Sign in your monday.com account and go to the **monday.com Developer Center**.
 
-    :::image type="content" source="media/monday-deployment/monday-dev-center.png" alt-text="Screenshot of the Monday.com Developer Center page." lightbox="media/monday-deployment/monday-dev-center.png":::
+    :::image type="content" source="media/monday-deployment/monday-dev-center.png" alt-text="Screenshot of the monday.com Developer Center page." lightbox="media/monday-deployment/monday-dev-center.png":::
 
 1. Choose **Create app**.
 
-    :::image type="content" source="media/monday-deployment/create-app.png" alt-text="Screenshot of the Create app button in the Monday.com Developer Center." lightbox="media/monday-deployment/create-app.png":::
+    :::image type="content" source="media/monday-deployment/create-app.png" alt-text="Screenshot of the Create app button in the monday.com Developer Center." lightbox="media/monday-deployment/create-app.png":::
 
 1. In the **General Settings** section, locate and note down your **client ID** and **client secret**.
 
@@ -106,7 +102,7 @@ Use this option when your organization requires a custom OAuth app configuration
 
 Next:
 
-1.  Enter your client ID and client secret from Monday.com.
+1.  Enter your client ID and client secret from monday.com.
 1.  Choose **Authorize** to sign in and grant access.
 1.  Grant the required API scopes.
 
@@ -121,7 +117,7 @@ To roll out to a limited set of users:
 
 When you’re ready, choose **Create** to publish the connection. The connector starts indexing content right away.
 
-The Monday.com connector provides default settings that are optimized for typical Monday.com usage. The following table lists the default values that are set when you create the connection:
+The monday.com connector provides default settings that are optimized for typical monday.com usage. The following table lists the default values that are set when you create the connection:
 
 | Category | Setting | Default value |
 | --- | --- | --- |
@@ -131,7 +127,7 @@ The Monday.com connector provides default settings that are optimized for typica
 | Crawl | Incremental crawl | Every four hours. |
 | Crawl | Full crawl | Every day. |
 
-These values help balance content freshness while respecting Monday.com API limits.
+These values help balance content freshness while respecting monday.com API limits.
 
 To customize the default values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 
@@ -149,17 +145,17 @@ You can customize the default values after you create the connection by choosing
 
 #### Access permissions
 
-The Monday.com Copilot connector supports data visible to **Only people with access to this data source (recommended)** or **Everyone**. If you choose **Everyone**, indexed data appears in the search results for all users.
+The monday.com Copilot connector supports data visible to **Only people with access to this data source (recommended)** or **Everyone**. If you choose **Everyone**, indexed data appears in the search results for all users.
 
 #### Map identities
 
-To ensure correct permission enforcement, map Monday.com user identities to Microsoft Entra ID.
+To ensure correct permission enforcement, map monday.com user identities to Microsoft Entra ID.
 
-- Choose the Microsoft Entra ID option if the email ID of Monday.com users is same as the user principal name (UPN) of users in Microsoft Entra ID.
-- Choose the non-Entra ID option if the email ID of Monday.com users is different from the UPN of users in Microsoft Entra ID.
+- Choose the Microsoft Entra ID option if the email ID of monday.com users is same as the user principal name (UPN) of users in Microsoft Entra ID.
+- Choose the non-Entra ID option if the email ID of monday.com users is different from the UPN of users in Microsoft Entra ID.
 
 > [!IMPORTANT]
-> - If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users from Monday.com directly to the **UPN** property from Microsoft Entra ID.
+> - If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users from monday.com directly to the **UPN** property from Microsoft Entra ID.
 > - If you chose **non-Entra ID** for the identity type, provide the mapping regular expression from email ID to UPN. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md). 
 > - Updates to users or groups that govern access permissions are synced in full crawls only. Incremental crawls don't currently support processing updates to permissions.
 
@@ -181,7 +177,7 @@ Choose **Preview results** to verify sample values of the selected properties an
 
 #### Manage properties
 
-Check available properties from your Monday.com instance. Assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), review the semantic label, and add an alias to the property. The following table lists properties that are selected by default.
+Check available properties from your monday.com instance. Assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), review the semantic label, and add an alias to the property. The following table lists properties that are selected by default.
 
 | **Default Property** | **Label** | **Description** | **Schema** |
 |----|----|----|----|
@@ -229,12 +225,12 @@ The connector supports two crawl types:
 - **Incremental crawl**, which captures recent changes.
 - **Full crawl**, which refreshes all indexed content.
 
-By default, incremental crawls run every four hours and full crawls run daily. You can adjust these values, but consider Monday.com daily API call limits if you configure more frequent sync schedules. 
+By default, incremental crawls run every four hours and full crawls run daily. You can adjust these values, but consider monday.com daily API call limits if you configure more frequent sync schedules. 
 
 > [!IMPORTANT]
-> **Monday.com daily API call limits**
+> **monday.com daily API call limits**
 >
-> Monday.com enforces daily API call limits that vary by plan. All API calls made by the connector count toward this daily limit. The following call limits apply:
+> monday.com enforces daily API call limits that vary by plan. All API calls made by the connector count toward this daily limit. The following call limits apply:
 >
 > - Standard/Basic plan: 1,000 API calls per day
 > - Free/Trial: 200 API calls per day
@@ -242,11 +238,11 @@ By default, incremental crawls run every four hours and full crawls run daily. Y
 >
 > For more information, see [Rate limits](https://developer.monday.com/api-reference/docs/rate-limits#daily-call-limit).
 >
-> If crawl frequency is set too high, your organization might reach Monday.com daily API limits, which can result in crawl failures.
+> If crawl frequency is set too high, your organization might reach monday.com daily API limits, which can result in crawl failures.
 
 For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
-- [Monday.com connector overview](monday-overview.md)
-- [Troubleshoot issues with the Monday.com connector](monday-troubleshooting.md)
+- [monday.com connector overview](monday-overview.md)
+- [Troubleshoot issues with the monday.com connector](monday-troubleshooting.md)

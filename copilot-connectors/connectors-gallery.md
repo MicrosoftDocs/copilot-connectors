@@ -305,7 +305,7 @@ The following table lists the project management connectors that are available.
 |Connector name|Publisher|Description| Learn more |
 |:------ |:----------- |:----------- | :----------- |
 | Asana | Microsoft | Allows your organization to integrate with Asana's project management platform. | [Asana connector](asana-graph-connector.md) |
-| Monday.com | Microsoft | Allows organizations to integrate with Monday.com for project and workflow management. | [Monday.com connector](monday-overview.md) |
+| monday.com | Microsoft | Allows organizations to integrate with monday.com for project and workflow management. | [monday.com connector](monday-overview.md) |
 | Shortcut Story | Microsoft | Enables teams to manage agile software development projects with Shortcut. | [Shortcut Story connector](shortcut-story-overview.md) |
 | Smartsheet Sheet | Microsoft | Enables organizations to index and search Smartsheet data. | [Smartsheet Sheet connector](smartsheet-sheet-connector.md) |
 
