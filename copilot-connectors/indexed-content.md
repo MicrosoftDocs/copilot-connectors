@@ -3,7 +3,7 @@ ms.date: 10/02/2019
 title: "Search and validate indexed Microsoft 365 Copilot connector content"
 ms.author: danielabo
 author: danielabom
-manager: SteveWilkins1123
+manager: calvind
 audience: Admin
 ms.topic: article
 ms.service: copilot-connectors
