@@ -32,7 +32,7 @@ Before you deploy the Coda Enterprise connector, make sure you meet the followin
 To add the Coda Enterprise connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-1. Go to the **Connectors** tab, and in the left pane, choose **Gallery**.
+1. Choose the **Gallery** tab.
 1. From the list of available connectors, choose **Coda Enterprise**.
 
 ### Set display name

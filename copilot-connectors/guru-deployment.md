@@ -28,7 +28,7 @@ Before you deploy the Guru connector, make sure that you meet the following prer
 To add the Guru connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-1. Go to the **Connectors** tab, and in the left pane, choose **Gallery**.
+1. Choose the **Gallery** tab.
 1. From the list of available connectors, choose **Guru**.
 
 ### Set display name
@@ -105,17 +105,23 @@ Use the preview results button to verify the sample values of the selected prope
 
 You can check the available properties from your Guru instance. Assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. The following table lists the properties that the connector indexes by default.
 
-| Default property | Semantic Label      | Description                                 | Schema |
-|------------------|--------------------|----------------------------------------------|--------| 
-| Title            | title              | Title of the card                           | Query, Search, Retrieve |
-| Link             | URL                | URL of the item                             | Retrieve |
-| CreatedTime      | createdDateTime    | Date/Time when the card was created         | Query, Retrieve |
-| ModifiedTime     | lastModifiedDateTime| Date/Time when the card was last updated    | Query, Retrieve, Refine |
-| Owner            | createdBy          | Owner of the card | Query, Search, Retrieve |
-| LastModifiedBy   | lastModifiedBy     | Name of the person who last modified the card | Query, Search, Retrieve |
-| Collection       | containerName      | Name of the collection the card belongs to  | Query, Search, Retrieve |
-| CollectionUrl    | containerUrl       | URL of the collection the card belongs to   | Retrieve |
-| Content          | content            | Rendered HTML content of the page           | Query, Search |
+| **Default property** | **Semantic Label** | **Description** | **Schema attributes** |
+|----------------------|--------------------|-----------------|
+| Authors | authors | List of all the users who contributed to the card | Query, Retrieve, Search |
+| CollectionDescription | | Description of the collection | Query, Retrieve, Search |
+| CollectionLink | containerUrl | URL of the collection the card belongs to | Retrieve |
+| CollectionName | containerName  | Name of the collection the card belongs to | Query, Retrieve, Search |
+| Content | content | Rendered HTML content of the card | Search |
+| CreatedTime | createdDateTime  | Date/Time when the card was created | Query, Retrieve |
+| IconUrl | | URL of the icon | Retrieve |
+| Itempath | itemPath  | The path of the item in the data source represented by `/` separated values. Holds the display value of each level in the hierarchy separated by `/`. | Query, Retrieve, Search |
+| LastModifiedBy | lastModifiedBy | Email ID of the user who last updated the card | Query, Retrieve, Search |
+| Link | url | URL of the item | Retrieve |
+| ModifiedTime | lastModifiedDateTime | Date/Time when the card was last updated | Query, Retrieve, Refine |
+| Owner | createdBy  | Email ID of the user who created the card | Query, Retrieve, Search |
+| Status | state | Status of the card - verified or unverified | Query, Retrieve, Search, Refine |
+| Title | title | Title of the card | Query, Retrieve, Search |
+| Type | itemType | Type of the item (item type identifier for Guru cards) | Query, Retrieve, Search |
 
 ### Customize sync intervals
 

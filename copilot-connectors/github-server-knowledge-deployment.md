@@ -43,7 +43,7 @@ Before you deploy the connector, make sure that:
 To add the GitHub Server Knowledge connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-2. Go to the **Connectors** tab, and in the left pane, choose **Gallery**.
+2. Choose the **Gallery** tab.
 3. From the list of available connectors, choose **GitHub Server Knowledge**.
 
 ### Set display name
