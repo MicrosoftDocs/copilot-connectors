@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 12/02/2025
+ms.date: 02/09/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Veeva PromoMats Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -164,6 +164,19 @@ You can view and manage properties crawled from your Veeva PromoMats instance. T
 | Url                  | url              | Direct URL to access or preview the document  | Query, Retrieve          |
 | VersionId            |                  | Unique identifier for a specific document version | Query, Retrieve      |
 | VersionModifiedDate  | lastModifiedDateTime | Date and time when this version was last modified | Query, Retrieve      |
+| title       | title | The title of the document            | Search, Retrieve           |
+| tags       | tags | The tags of the document            | Query, Retrieve           |
+| authors       | authors | The authors of the document            | Query, Retrieve           |
+| keyMessage       |  | The key message of the document            | Search, Retrieve           |
+| brand       |  | The brand of the document            | Search, Query, Retrieve           |
+| secondaryBrand       |  | The secondary brand of the document            | Search, Query, Retrieve           |
+| description       |  | The description of the document            | Retrieve           |
+| itemType       | itemType | The itemType of the document            | Query, Retrieve           |
+| owner       |  | The owner of the document            | Search, Query, Retrieve           |
+| documentNumber       |  | The document number of the document            | Query, Retrieve           |
+| globalID       |  | The global identifier of the document            | Query, Retrieve           |
+| itemPath       | itemPath | The item path of the document            | Query, Retrieve           |
+| version       |  | the version of the document | Query, Retrieve           |
 
 ### Customize sync intervals
 

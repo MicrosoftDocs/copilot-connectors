@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 12/02/2025
+ms.date: 02/09/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Veeva Vault RIM Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -133,15 +133,66 @@ You can use query string conditions to precisely control the synchronization of 
 
 #### Manage properties
 
-You can view properties crawled from your Veeva RIM instance. The connector indexes metadata such as document name, owner, lifecycle stage, title, created by, and last modified by.
+You can view properties crawled from your Veeva RIM instance. The connector indexes metadata such as document name, owner, lifecycle stage, title, created by, and last modified by. The following table lists the properties that the Veeva QualityDocs connector indexes by default.
 
-| Property        | Semantic label | Description                        | Schema attributes |
-|-----------------|---------------|------------------------------------|------------------|
-| Document name   | Title         | Name of the regulatory document    | title            |
-| Owner           | Author        | Document owner                     | author           |
-| Lifecycle stage | Status        | Stage in regulatory lifecycle      | status           |
-| Created by      | Creator       | User who created the document      | createdBy        |
-| Last modified by| Modifier      | User who last modified the document| lastModifiedBy   |
+| Properties             | Semantic label         | Description                                                    | Schema                 |
+|------------------------|------------------------|----------------------------------------------------------------|------------------------|
+| Id |  | Unique identifier of the document version in Veeva RIM. | Query, Retrieve |
+| Name | title | Display name of the regulatory document. | Query, Retrieve |
+| FileName | filename | Original file name of the uploaded document. | Query, Search, Retrieve |
+| Extension | fileExtension | File type extension (e.g., .pdf, .docx). | Query, Search, Retrieve |
+| Url | url | Direct link to open the document in Veeva RIM. | Query, Retrieve |
+| Status | state | Current lifecycle state of the document (e.g., Draft, Approved). | Query, Retrieve |
+| DocumentId |  | Unique identifier of the document (without version). | Query, Retrieve |
+| MajorVersion |  | Major version number assigned to the document. | Query, Retrieve |
+| MinorVersion |  | Minor version number of the document. | Query, Retrieve |
+| Type |  | Regulatory document type (e.g., Submission, Report). | Query, Retrieve |
+| Subtype |  | Sub-classification of the document type. | Query, Retrieve |
+| Product |  | Associated product(s) linked to the document. | Query, Retrieve |
+| Country |  | Country or region relevant to the document. | Query, Retrieve |
+| Format |  | Defined format of the regulatory document. | Query, Retrieve |
+| DocumentCreationDate | createdDateTime | Original creation date of the document. | Query, Retrieve |
+| VersionModifiedDate | lastModifiedDateTime | Date when the document version was last modified. | Query, Retrieve |
+| CreatedBy | createdBy | Name of the user who created the document. | Query, Retrieve |
+| CreatedByUserId |  | System ID of the user who created the document. | Query, Retrieve |
+| LastModifiedByUserId |  | System ID of the user who last modified the document. | Query, Retrieve |
+| LastModifiedBy | lastModifiedBy | Name of the user who last modified the document. | Query, Retrieve |
+| Lifecycle |  | Document lifecycle phase within RIM. | Query, Retrieve |
+| Size |  | File size of the document in bytes. |  |
+| Content |  | Extracted text/content of the document. | Retrieve |
+| ApprovedDate |  | Date when the document was approved. | Query, Retrieve |
+| AnnotationsAll |  | Total count of annotations in the document. | Query, Retrieve |
+| AnnotationsAnchors |  | Count of anchor annotations. | Query, Retrieve |
+| AnnotationsApproved |  | Count of approved annotations. | Query, Retrieve |
+| AnnotationsAuto |  | Count of automatically generated annotations. | Query, Retrieve |
+| AnnotationsClaim |  | Count of claim annotations. | Query, Retrieve |
+| AnnotationsLines |  | Count of line-level annotations. | Query, Retrieve |
+| AnnotationsLinks |  | Count of link annotations. | Query, Retrieve |
+| AnnotationsNotes |  | Count of note annotations. | Query, Retrieve |
+| AnnotationsPermalink |  | Count of permalink annotations. | Query, Retrieve |
+| AnnotationsResolved |  | Count of resolved annotations. | Query, Retrieve |
+| AnnotationsUnresolved |  | Count of unresolved annotations. | Query, Retrieve |
+| FileCreatedBy |  | System name of the file’s original author. | Query, Retrieve |
+| FileCreatedDate |  | Date when the file was originally created. | Query, Retrieve |
+| FileMetaAuthor |  | Metadata field capturing the file’s author. | Query, Retrieve |
+| FileMetaKeywords |  | Metadata keywords associated with the file. | Query, Retrieve |
+| FileModifiedBy |  | System name of the user who last modified the file. | Query, Retrieve |
+| FileModifiedDate |  | Date when the file was last modified. | Query, Retrieve |
+| SourceDocumentId |  | ID of the source or parent document (if derived). | Query, Retrieve |
+| SourceDocumentName |  | Name of the source or parent document. | Query, Retrieve |
+| VersionCreatedBy |  | User who created the current version. | Query, Retrieve |
+| VersionLink |  | Link to the specific document version in RIM. | Query, Retrieve |
+| HealthAuthorityVersion |  | Version identifier used for health authority submissions. | Query, Retrieve |
+| IdmpSubmissionDate |  | Date of IDMP (Identification of Medicinal Products) submission. | Query, Retrieve |
+| IncludeForAllLanguages |  | Indicates whether the document is applicable across all languages. | Query, Retrieve |
+| MasterFileCode |  | Code used to classify the master file. | Query, Retrieve |
+| MasterFileIdentifier |  | Identifier for the master file record. | Query, Retrieve |
+| RIMAutoClassification |  | Auto-classification category assigned by RIM. | Query, Retrieve |
+| TemplateDocument |  | Flag indicating if the document is a template. | Query, Retrieve |
+| XevmpdSubmissionStatus |  | Status of XEVMPD (Extended EudraVigilance Medicinal Product Dictionary) submission. | Query, Retrieve |
+| Version |  | the version number of a file | Query, Retrieve |
+| ItemPath |  |  | Search, Retrieve |
+| ItemType |  |  | Search, Retrieve |
 
 ### Customize sync intervals
 
