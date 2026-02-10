@@ -1,17 +1,17 @@
 ---
-ms.date: 10/08/2019
-title: "View your connection details"
+ms.date: 02/10/2026
+title: "View connection details"
 ms.author: danielabo
 author: danielabom
-manager: SteveWilkins1123
+manager: calvind
 ms.topic: article
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-description: "Access and manage your Microsoft 365 Copilot connectors as a search administrator for your tenant."
+description: "Access and manage your Microsoft 365 Copilot connectors as an AI administrator for your tenant."
 ---
 <!-- markdownlint-disable no-inline-html -->
 
-# View your connection details
+# View connection details
 
 To access and manage your Microsoft 365 Copilot connectors, you must be designated as a search administrator for your tenant. Contact your tenant administrator to provision your account for the search administrator role.
 
@@ -19,7 +19,7 @@ To see your connections in the [Microsoft 365 admin center](https://admin.micros
 
 You can view the connection details and errors by selecting the connection.  
 
-:::image type="content" source="media/datasourcestab.png" alt-text="Screenshot that shows the connectors list with a connector selected and details pane showing information about this connector.":::
+:::image type="content" source="media/view-details/data-sources-tab-1.png" alt-text="Screenshot that shows the connectors list with a connector selected and details pane showing information about this connector." lightbox="media/view-details/data-sources-tab-1.png":::
 
 ## View connection statistics 
 
@@ -45,7 +45,7 @@ How to read the data in connection statistics:
 
 ## View index status
 
-During the initial setup, the index displays real-time progress, including the number of items indexed and the number of users at any given moment. You can use the **Refresh** action to retrieve the latest counts. Post-setup, the index continues to reflect the current number of searchable items, ensuring visibility into indexing completeness and availability at any point in time.
+During the initial setup, the index status displays real-time progress, including the number of items, users, groups, group memberships at any given moment. You can use the **Refresh** action to retrieve the latest counts. Post-setup, it continues to reflect the current number of searchable items, ensuring visibility into indexing completeness and availability at any point in time.
 
 The following values are available in the index for each connection:
 
@@ -53,6 +53,8 @@ The following values are available in the index for each connection:
 |:--- |:---|
 | Updated at| Date and time when the data was last updated.|
 | Items| Number of items that have been successfully ingested.| 
-| Users| Number of users successfully mapped.|  
+| Users| Number of users successfully mapped.|
+| Groups| Number of groups interpreted from the datasource.|  
+| Group memberships| Number of users to group mapping instances.|  
 | Item Errors| Number of items that produced an error and failed to ingest.| 
 | User & group Errors| Number of user and group mapping failures.| 
