@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 01/08/2026
+ms.date: 02/09/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Tickets Copilot connector."
 ---
@@ -75,7 +75,7 @@ The following sections describe the prerequisite steps to complete before deploy
 
 ### Create service account and assign read permissions
 
-Create a ServiceNow service account with read access to the table records listed in the following table.
+Create a ServiceNow service account with the **itil role** assigned and read access to the table records listed in the following table.
 
 **Feature** | **Read access required tables** | **Description**
 --- | :---: | ---
@@ -84,7 +84,9 @@ Sync user tables | `sys_user` | Read user access details for tickets
 | | `sys_user_has_role` | Read role information of users
 | | `sys_user_grmember` | Read group membership of users
 | | `sys_user_group` | Read user group segments
+| | `sys_group_has_role` | Read  group roles
 | | `sys_user_role` | Read user roles
+| | `sys_user_role_contains` | Reads role inheritence 
 | | `cmn_location` | Read location information
 | | `cmn_department` | Read department information
 | | `core_company` | Read company attributes

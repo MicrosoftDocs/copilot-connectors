@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 01/07/2026
+ms.date: 02/09/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Tickets Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -195,6 +195,9 @@ On the **Users** tab, the ServiceNow Tickets connector supports search permissio
 
 - Users in either the added roles or the user fields get access to the table records. 
 - Choose **Save** for each table.
+
+> [!NOTE]
+> The Preview section displays sample tickets without enforcing ServiceNow ACLs or user permissions. After deployment, the connector applies all ServiceNow access controls when returning results.
 
 #### Mapping identities
 

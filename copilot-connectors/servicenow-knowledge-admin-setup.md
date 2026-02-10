@@ -209,6 +209,9 @@ Add a resource to the API:
     })(request, response);
     ```
 
+    > [!NOTE]
+    > The `getAllUserCriteria()` function is deprecated due to potential performance issues. For an alternative script that you can use, see [Issue reading all user criteria from ServiceNow](/microsoftsearch/servicenow-knowledge-troubleshooting#issue-reading-all-user-criteria-from-servicenow). 
+
 3. Make sure both of the following are checked:
    - **Requires authentication**
    - **Requires ACL authorization**

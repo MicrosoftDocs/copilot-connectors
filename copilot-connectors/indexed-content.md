@@ -1,5 +1,5 @@
 ---
-ms.date: 10/02/2019
+ms.date: 02/09/2026
 title: "Search and validate indexed Microsoft 365 Copilot connector content"
 ms.author: danielabo
 author: danielabom
@@ -13,7 +13,7 @@ description: "Learn how to search and validate whether Microsoft 365 Copilot con
 
 # Search and validate indexed content
 
-You can use the index browser to test indexing when you can't find a particular item during connection testing. If you need to verify properties and user access, it helps to review the metadata and access control lists (ACLs) of indexed items. It's also helpful for troubleshooting search issues. If users report issues accessing items, you can verify whether the item was indexed correctly and includes the correct data.
+When you're testing a Microsoft 365 Copilot connection, you can use the index browser to test and verify connector content indexing. If you need to verify properties and user access, it helps to review the metadata and access control lists (ACLs) of indexed items. It's also helpful for troubleshooting search issues. If users report issues accessing items, you can verify whether the item was indexed correctly and includes the correct data.
 
 :::image type="content" source="media/manage-connector/index-search.png" alt-text="Screenshot that shows the connector what users can see when they enter an item ID of an indexed item.":::
 
@@ -29,30 +29,30 @@ When you enter an item ID to check its index status, you can view the following 
 
 >[!NOTE]
 >- In permissions, you can see users shown individually (outside of a group) in the data source and groups within the data source. To check for a user present in a group, use **Check user access**. 
->- If a user doesn't appear in **Check user access**, it may be due to a failed user mapping or the user not being discovered (e.g., the AAD user ID wasn't found). To resolve this, check if the user has access in the data source, review the user mapping formula, and the error reports.
+>- If a user doesn't appear in **Check user access**, it might be due to a failed user mapping or the user not being discovered (for example, the Microsoft Entra ID user ID wasn't found). To resolve this, verify that the user has access in the data source and review the user mapping formula and the error reports.
 
 To search for indexed content, enter the unique identifier of the item in the index browser. 
 
 |Connector name|Input per item ID|Where to find the item ID|
 |:---|:---|:---|
-|ADO WI|ID|The ID is the work item ID.|	
-|ADO Wiki|Organization name, page ID|It can be found in the URL. For example, in this URL `https://dev.azure.com/IdentityDivision/DevEx/_wiki/wikis/DevEx.wiki/74398/Passkey-FAQ`, OrgName is IdentityDivision, and Page Id is 74398.|
-|ServiceNow KB|Sys_Id.DisplayValue|Navigate to the record where you are looking for a sys_id, right-click the header bar, and select Copy sys_id.You can also click the Hamburger > Copy sys_id. For more information, see [ServiceNow documentation](https://docs.servicenow.com/csh?topicname=c_UniqueRecordIdentifier.html&version=latest).|
-|ServiceNow Catalog|Sys_Id.value|Navigate to the record where you are looking for a sys_id, right-click the header bar, and select Copy sys_id.You can also click the Hamburger > Copy sys_id. For more information, see [ServiceNow documentation](https://docs.servicenow.com/csh?topicname=c_UniqueRecordIdentifier.html&version=latest).|
-|ServiceNow Tickets|Sys_Id.value|Navigate to the record where you are looking for a sys_id, right-click the header bar, and select Copy sys_id.You can also click the Hamburger > Copy sys_id. For more information, see [ServiceNow documentation](https://docs.servicenow.com/csh?topicname=c_UniqueRecordIdentifier.html&version=latest).|
-|Salesforce|ID|It can be found in the URL.|
-|Intranet (Cloud/OnPrem)|URL|Final Url in lowercase.| 
-|Jira| issue ID| Follow the link (https://confluence.atlassian.com/jirakb/how-to-get-issue-id-from-the-jira-user-interface-1115156394.html#:~:text=User%20needs%20to%20get%20the%20issue%20id%20in%20an%20easier).|
-|Confluence (Cloud/OnPrem)|page blog post ID|It can be found in the item ID of the URL. Examples can be found in the Confluence Cloud URL from the data source.|
+|ADO WI|ID|Use the work item ID.|	
+|ADO Wiki|Organization name, page ID|Found in the URL. For example, in this URL: `https://dev.azure.com/IdentityDivision/DevEx/_wiki/wikis/DevEx.wiki/74398/Passkey-FAQ`, the organization name is `IdentityDivision`, and the page ID is 74398.|
+|ServiceNow KB|Sys_Id of the knowledge article<br><br>Article number<br><br>Syd ID of the knowledge base| For the Sys_id of the article, go to the record, right-click the header bar, and select **Copy sys_id**. You can also select the **menu (three-line)** button > **Copy sys_id**.<br><br>For article number, copy the KB number of the article; for example, `KB0123456`.<br><br>For the sys_id of the knowledge base, go to the knowledge base that contains the article, right-click the header bar, and select **Copy sys_id**. You can also select the **menu (three-line)** button > **Copy sys_id**.<br><br>For more information, see [ServiceNow documentation](https://docs.servicenow.com/csh?topicname=c_UniqueRecordIdentifier.html&version=latest).|
+|ServiceNow Catalog|Sys_Id.value|Go to the record, right-click the header bar, and select Copy sys_id. You can also select the **menu (three-line)** button > **Copy sys_id**. For more information, see [ServiceNow documentation](https://docs.servicenow.com/csh?topicname=c_UniqueRecordIdentifier.html&version=latest).|
+|ServiceNow Tickets|Sys_Id.value|Go to the record, right-click the header bar, and select **Copy sys_id**. You can also select the **menu (three-line)** button > **Copy sys_id**. For more information, see [ServiceNow documentation](https://docs.servicenow.com/csh?topicname=c_UniqueRecordIdentifier.html&version=latest).|
+|Salesforce|ID|Found in the URL.|
+|Intranet (Cloud/OnPrem)|URL|Final URL, all lowercase.| 
+|Jira| Issue ID| For information, see [How to get issue id from the Jira User Interface](https://confluence.atlassian.com/jirakb/how-to-get-issue-id-from-the-jira-user-interface-1115156394.html#:~:text=User%20needs%20to%20get%20the%20issue%20id%20in%20an%20easier).|
+|Confluence (Cloud/OnPrem)|Page blog post ID|Found in the item ID of the URL. Examples can be found in the Confluence Cloud URL from the data source.|
 |CSV|Unique identifier list, item key|Admin configured details.|
 |Azure SQL, Oracle DB, MS SQL|Values to all the columns in unique key columns|Admin configured details.|
-|Mediawiki|page ID, namespace, sourceUrl|Admin configured details.|
+|Mediawiki|Page ID, namespace, sourceUrl|Admin configured details.|
 |ADLS gen 2|File URI|Admin configured details.|
 |Sharepoint|GUID|Admin configured details.|
-|FileShare|filepath|Admin configured details.|
-|Custom connector|item ID|Admin configured details.|
+|FileShare|Filepath|Admin configured details.|
+|Custom connector|Item ID|Admin configured details.|
 |SAP|user ID|Admin configured details.|
-|BambooHR|Employee ID (EeId) |Navigate to the user profile in BambooHR. The Employee ID (EeId) can be found in the URL (for example, `https://contoso.bamboohr.com/employees/employee.php?id=4&page=2078`), where the Employee ID (EeId) is `4`.|
+|BambooHR|Employee ID (EeId) |Go to the user profile in BambooHR. The Employee ID (EeId) is found in the URL. For example, in this URL: `https://contoso.bamboohr.com/employees/employee.php?id=4&page=2078`), the Employee ID (EeId) is `4`.|
 
 ## Examples
 ### Example 1: The item status is partially indexed
@@ -69,7 +69,7 @@ In the case of a ServiceNow Knowledge connector, the **Deny all** status may res
 
 - **Advanced user criteria applied on knowledge base & simple flow used during connection setup instead of advanced flow** - In case the connection setup is configured with simple flow & advanced user criteria  and applied on a knowledge base in the "Cannot read" or "Cannot contribute" section, it results in a `Deny all` status for the articles within that knowledge base. To resolve it, identify the knowledge base the article belongs to and remove the advanced criteria, or complete the connection setup using the [advanced flow method](servicenow-knowledge-advanced-flow.md). For more information, see the troubleshooting section of each connector. 
 
-Additionally, temporary issues may cause a **Deny all** status, which could be resolved during the next full crawl.
+Also, temporary issues might cause a **Deny all** status, which can be resolved during the next full crawl.
 
 ### Example 3: The item status is allowed for everyone
 
@@ -78,7 +78,7 @@ When an item is configured to be visible to everyone, it's accessible to all use
 If an item is discovered but not indexed, check the Errors tab for any issues that prevented the indexing process.
 
 >[!NOTE]
->- Changes to user or group permissions (ACL) may take up to 24 hours to reflect in Microsoft Search and Microsoft 365 Copilot.
+>- Changes to user or group permissions (ACL) might take up to 24 hours to reflect in Microsoft Search and Microsoft 365 Copilot.
 >- Permissions updates occur during a full crawl, not an incremental crawl.
 >- If your data source permissions change after the last full crawl, a new full crawl must be triggered on-demand or scheduled to update the index.
 >- When testing in Microsoft Search or Microsoft 365 Copilot, make sure that you're searching with a searchable or queryable property. For more information, see [Manage schema](/microsoftsearch/manage-search-schema). 

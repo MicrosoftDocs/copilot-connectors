@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
-ms.date: 01/06/2026
+ms.date: 02/09/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the ServiceNow Catalog Copilot connector."
 ---
@@ -95,49 +95,42 @@ Use the following script when you [Set up the REST API](servicenow-catalog-admin
 
 ```javascript
 (function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
-    // Get query parameters from the request
-    var queryParams = request.queryParams;
-    // Extract the 'user' sys_id, ensure it's a string or null if not provided
-    var userSysId = queryParams.user ? String(queryParams.user) : null;
-    // Check if userSysId was provided
-    if (!userSysId) {
-        gs.warn("UserCriteriaLoader API: 'user' parameter was not provided in the request.");
-        response.setStatus(400);
-        return { "error": "User sys_id is required." };
-    }
-    try {
-        var userCriterias = [];
-        var userCriteriaGr = new GlideRecord('user_criteria');
-        userCriteriaGr.addQuery('active', true); // Select active records
-        userCriteriaGr.query();
-        while (userCriteriaGr.next()) {
-            userCriterias.push(userCriteriaGr.getUniqueValue());
-        }
-
-        // Impersonate the logged in user
-        var imp = new GlideImpersonate();
-        // Store the original user who logged in to serviceUser variable, needed to end impersonation.
-        var serviceUser = imp.impersonate(userSysId);
-
-        // Call the recommended API to get only matching criteria sys_ids
-        var matchingCriteriaIds = sn_uc.UserCriteriaLoader.getMatchingCriteria(userSysId, userCriterias);
-
-        // End impersonation: Change it back to logged in user
-        if (serviceUser) imp.impersonate(serviceUser);
-
-        // Return the array of matching criteria objects
-        return matchingCriteriaIds;
-    } catch (e) {
-        // Log any errors that occur during the process
-        gs.error("UserCriteriaLoader API: Error processing user criteria for user " + userSysId + ". Error: " + e.message);
-        response.setStatus(500); // Internal Server Error
-        return {
-            error_message: "Error processing user criteria for user " + userSysId,
-            error_details: e.message
-        };
-    }
+   // Get query parameters from the request
+   var queryParams = request.queryParams;
+   // Extract the 'user' sys_id, ensure it's a string or null if not provided
+   var userSysId = queryParams.user ? String(queryParams.user) : null;
+   var result = []; // Initialize an empty array for the results
+   // Check if userSysId was provided
+   if (!userSysId) {
+       gs.warn("UserCriteriaLoader API: 'user' parameter was not provided in the request.");
+       response.setStatus(400);
+       return { "error": "User sys_id is required." };
+   }
+   try {
+       // Instantiate the UserCriteriaLoader
+       var userCriteriaLoader = new sn_uc.UserCriteriaLoader();
+       var userCriterias = [];
+       var userCriteriaGr = new GlideRecord('user_criteria');
+       userCriteriaGr.addQuery('active', true); // Select active records
+       userCriteriaGr.query();
+       while (userCriteriaGr.next()) {
+           userCriterias.push(userCriteriaGr.getUniqueValue());
+       }
+       // Call the recommended API to get only matching criteria sys_ids
+       var matchingCriteriaIds = sn_uc.UserCriteriaLoader.getMatchingCriteria(userSysId, userCriterias);
+       // Return the array of matching criteria objects
+       return matchingCriteriaIds;
+   } catch (e) {
+       // Log any errors that occur during the process
+       gs.error("UserCriteriaLoader API: Error processing user criteria for user " + userSysId + ". Error: " + e.message);
+       response.setStatus(500); // Internal Server Error
+       return {
+           error_message: "Error processing user criteria for user " + userSysId,
+           error_details: e.message
+       };
+   }
 })(request, response);
-``` 
+```
 
 ## Unable to sign in due to SSO enabled ServiceNow instance
 
