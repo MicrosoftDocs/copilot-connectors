@@ -72,6 +72,7 @@
           "**/*.png", 
           "**/*.svg" 
         ] 
+       }, 
     "image-structure-incorrect": { 
         "exclude": [ 
           "**/*.gif", 
