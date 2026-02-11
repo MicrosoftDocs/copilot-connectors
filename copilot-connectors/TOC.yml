@@ -585,5 +585,7 @@ items:
     href: indexed-content.md
   - name: Error responses
     href: error-responses.md
+  - name: Item delete notification
+    href: item-delete-notification.md
 - name: Terms of use
   href: terms-of-use.md
