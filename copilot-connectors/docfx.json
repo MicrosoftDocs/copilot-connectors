@@ -58,6 +58,7 @@
         "Ruchika-mittal01"
       ]
     },
+    "rules": {
     "filename-incomplete": { 
         "exclude": [ 
           "**/*.md", 
@@ -88,6 +89,7 @@
           "**.*.yml"
        ] 
       },
+    },
     "fileMetadata": {},
     "template": []
   }
