@@ -52,7 +52,7 @@ The display name is used to identify references in Copilot responses and helps u
 
 You can accept the default **ServiceNow** display name or customize it to use a name that users in your organization recognize.
 
-For more information, see [Enhance Copilot discovery of connector content](enhancing-microsoft-copilot-discovery-with-graph-connector-content.md).
+For more information, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
 
 ### Choose flow based on user criteria
 
@@ -322,7 +322,7 @@ Configure the sync schedule to keep indexed content up to date:
 > - During subsequent periodic full crawls, content and identity sync happens in parallel. The periodic full crawl is complete when both content and identity sync is finished.
 > - The periodic full crawls are faster than the first full crawls because the first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Periodic full crawls only ingest new items, users, and user criteria.  
 
-For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 

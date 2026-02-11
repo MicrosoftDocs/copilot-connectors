@@ -224,7 +224,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/ado-wiki-sync-tab.png)](media/ado-wiki-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Azure DevOps Wiki Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Azure DevOps Wiki Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 

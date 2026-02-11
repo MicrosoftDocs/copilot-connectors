@@ -55,7 +55,7 @@ To add the Bitbucket Knowledge connector for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize the associated content source. You can accept the default **Bitbucket Knowledge** display name or customize it so it's familiar to your organization.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -128,7 +128,7 @@ You can configure the sync intervals:
 - **Incremental crawl**: Default is every 15 minutes.
 - **Full crawl**: Default is daily.
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

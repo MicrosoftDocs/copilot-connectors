@@ -15,7 +15,7 @@ description: "Find information about how to deploy the Adobe Experience Manager 
 
 # Deploy the Adobe Experience Manager Assets Microsoft 365 Copilot connector
 
-The Adobe Experience Manager (AEM) Assets Copilot connector integrates AEM Assets content into the Microsoft 365 ecosystem, enabling Copilot and Microsoft Search to surface published assets. This article describes the steps to deploy and customize the connector.
+The Adobe Experience Manager (AEM) Assets Copilot connector integrates AEM Assets content into the Microsoft 365 ecosystem to enable Copilot and search experiences to surface published assets. This article describes the steps to deploy and customize the connector.
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ To add the Adobe Experience Manager Assets connector for your organization:
 
 The display name identifies references in Copilot responses and acts as a content source filter. You can accept the default display name or customize it to a name that users in your organization recognize.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -195,7 +195,7 @@ The refresh interval determines how often your data is synchronized between th
 - Full crawl: Default value is every day.
 - Incremental crawl: Default value is every 15 minutes.
 
-You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 
 ## Related content

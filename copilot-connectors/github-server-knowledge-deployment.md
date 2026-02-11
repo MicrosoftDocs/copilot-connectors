@@ -125,7 +125,7 @@ The refresh interval determines how often your data is synced between the data s
 - Incremental crawl: Every 15 minutes
 - Full crawl: Daily
 
-You can change these defaults in the **Sync** tab. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+You can change these defaults in the **Sync** tab. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

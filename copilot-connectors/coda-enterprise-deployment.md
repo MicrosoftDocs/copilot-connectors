@@ -39,7 +39,7 @@ To add the Coda Enterprise connector for your organization:
 
 The display name identifies references in Copilot responses to help users recognize the associated file or item. You can accept the default **Coda Enterprise** display name or customize it.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -150,7 +150,7 @@ The refresh interval determines how often your data is synced between the data s
 - **Full crawl** - Default value is every day. 
 - **Incremental crawl** - Default value is every 15 minutes.
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

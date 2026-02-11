@@ -53,7 +53,7 @@ To add the ServiceNow Catalog connector for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize trusted content. You can accept the default **ServiceNow** display name or customize it to match your organization's terminology.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Choose flow based on user criteria 
 
@@ -326,7 +326,7 @@ You can define the frequency of incremental and full crawls:
 > - Subsequent full crawls are faster than the first full crawl. The first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Subsequent full crawls only ingest the newly discovered items, users, and user criteria. 
 
 
-For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

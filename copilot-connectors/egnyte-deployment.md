@@ -43,7 +43,7 @@ To add the Egnyte connector for your organization:
 The display name appears in Copilot responses and helps users recognize content coming from Egnyte.  
 You can accept the default **Egnyte** display name or customize it to something more recognizable for your organization.
 
-For more information about display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -145,7 +145,7 @@ You can adjust the crawl frequency to fit your data refresh needs:
 
 Choose a schedule that balances content freshness with Egnyte API rate limits.
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 
 ## Related content

@@ -104,6 +104,6 @@ By default, data is crawled from all available dates. To limit the crawl to more
 [![Screenshot that shows Gong date selection.](media/gong-connector/gong-date.png)](media/gong-connector/gong-date.png#lightbox)
 
 ### Sync
-The refresh interval determines how often your data is synced between the data source and the Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more details, click [here](deployment-overview.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more details, click [here](deployment-overview.md#guidelines-for-crawl-settings).
 You can change the default refresh interval values from here if needed.
 [![Screenshot that shows sync and refresh frequency settings.](media/gong-connector/gong-sync.png)](media/gong-connector/gong-sync.png#lightbox)

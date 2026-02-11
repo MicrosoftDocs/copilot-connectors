@@ -69,7 +69,7 @@ To add the Veeva Vault RIM connector for your organization:
 
 The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.  
 You can accept the default **Veeva Vault RIM** display name, or customize the value to use a display name that users in your organization recognize.  
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -199,7 +199,7 @@ You can view properties crawled from your Veeva RIM instance. The connector inde
 You can modify the frequency of full crawls to fit your organization's requirements. The following are the default crawls:
 - Full crawl—daily.
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

@@ -366,7 +366,7 @@ To learn more about regex expressions, see [.NET regular expressions](/dotnet/st
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/enterprise-web-connector/enterprise-website-onprem-sync-tab.png)](media/enterprise-web-connector/enterprise-website-onprem-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Microsoft 365 Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Microsoft 365 Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 

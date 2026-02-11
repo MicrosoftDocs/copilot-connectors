@@ -68,7 +68,7 @@ To add the **GitLab Merge Requests Server connector** for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize the associated content source. You can accept the default **GitLab Merge Requests Server** display name or customize it.
 
-For more information about connector display names, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -140,7 +140,7 @@ Configure full and incremental crawl intervals. The default values are:
 - **Incremental crawl:** Every 15 minutes  
 - **Full crawl:** Daily  
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

@@ -60,7 +60,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Atlassian Jira Cloud** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -194,7 +194,7 @@ The refresh interval determines how often your data is synced between the data s
 - Incremental crawl: Every 15 mins
 - Full crawl: Every day
 
-You can change the default values of the refresh interval. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+You can change the default values of the refresh interval. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

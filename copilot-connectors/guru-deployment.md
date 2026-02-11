@@ -35,7 +35,7 @@ To add the Guru connector for your organization:
 
 The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter. You can accept the default **Guru** display name or customize the value to use a display name that users in your organization recognize. 
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -130,7 +130,7 @@ The refresh interval determines how often your data is synchronized between the 
 - **Full crawl**: Default is every day.
 - **Incremental crawl**: Default is every 15 minutes.
 
-You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

@@ -112,7 +112,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Trello Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Trello Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 You can change the default values of the refresh interval.
 

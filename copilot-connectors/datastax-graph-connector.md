@@ -120,7 +120,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/DataStax-sync-tab.png)](media/DataStax-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the DataStax Copilot connector index. The DataStax graph connector only supports the refresh interval - full crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the DataStax Copilot connector index. The DataStax graph connector only supports the refresh interval - full crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 You can change the default values of the refresh interval.
 

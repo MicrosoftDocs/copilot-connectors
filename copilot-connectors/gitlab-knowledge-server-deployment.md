@@ -134,7 +134,7 @@ The following sync intervals are available:
 - **Incremental crawl**: Default is every 15 minutes.
 - **Full crawl**: Default is daily.
 
-You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings). 
+You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings). 
 
 ## Related content
 

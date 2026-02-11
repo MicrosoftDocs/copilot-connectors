@@ -54,7 +54,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Confluence On-premises** display name, or customize the value to use a name that users in your organization recognize.
 
-For more information, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](enhancing-microsoft-copilot-discovery-with-graph-connector-content.md)
+For more information, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](enhance-copilot-discovery.md)
 
 ### Set instance URL
 
@@ -163,7 +163,7 @@ You can adjust the synchronization frequency:
 - **Incremental crawl**: Syncs new and modified content. Incremental crawls don't pick up ACL changes or deleted items. Default is every 15 minutes.
 - **Full crawl**: Performs a complete synchronization of all content. Full crawls detect deleted items and sync access control list (ACL) changes. Default is daily.
 
-For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 

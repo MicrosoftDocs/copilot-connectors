@@ -50,7 +50,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Aha!** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -161,7 +161,7 @@ You can customize the sync intervals for full crawl and incremental crawl. Defau
 - Incremental crawl: Every 15 minutes
 - Full crawl: Every day
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-crawl-settings).
 
 #### Rate limits
 

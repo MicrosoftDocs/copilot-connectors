@@ -116,7 +116,7 @@ Configure the full and incremental crawl sync intervals. The following are the d
 - **Full crawl:** Daily.
 
 You can adjust these intervals to meet your organization’s needs. For more information, see  
-[Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+[Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 The following table lists the rate limits for the GitLab Merge Requests Cloud connector content ingestion.
 

@@ -46,7 +46,7 @@ To add the GitHub Cloud Issues connector for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize the associated content source. You can accept the default **GitHub Cloud Issues** display name or customize it.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Choose authentication type
 
@@ -135,7 +135,7 @@ Configure the full and incremental crawl sync intervals. The following are the d
 - **Incremental crawl:** Every 15 minutes
 - **Full crawl:** Daily
 
-You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 > [!NOTE]
 > Webhook support is now available in preview. Be sure to set the Webhooks (Read and Write) permissions at both the Repository and Organization levels. Webhooks allow you to take advantage of enhanced automation and real-time updates to ensure a more seamless and responsive integration experience.

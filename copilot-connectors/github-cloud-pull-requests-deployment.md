@@ -49,7 +49,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **GitHub Cloud Pull Requests** display name or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Choose authentication type
 
@@ -143,7 +143,7 @@ The refresh interval determines how often your data is synced. You can customize
 - Incremental crawl: Every 15 minutes
 - Full crawl: Daily
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 > [!NOTE]
 > Webhook support is now available in preview. Be sure to set the Webhooks (Read and Write) permissions at both the Repository and Organization levels. Webhooks allow you to take advantage of enhanced automation and real-time updates to ensure a more seamless and responsive integration experience.

@@ -48,7 +48,7 @@ To add the GitHub Server Issues connector for your organization:
 
 The display name is used to identify references in Copilot responses to help users recognize the associated file or item. You can accept the default **GitHub Server Issues** display name or customize the value to use a display name that users in your organization recognize.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -119,7 +119,7 @@ You can configure incremental and full crawls. The default values are:
 - Incremental crawl runs every 15 minutes.
 - Full crawl runs daily.
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 - [GitHub Server Issues connector overview](github-server-issues-overview.md)

@@ -35,7 +35,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 The display name is used to identify references in Copilot responses so users can recognize the associated item. The display name also signifies trusted content and is used as a content source filter.
 
-You can accept the default WordPress.com display name or customize the value to use a name that users in your organization recognize. For more information about display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+You can accept the default WordPress.com display name or customize the value to use a name that users in your organization recognize. For more information about display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -123,7 +123,7 @@ The connector indexes the properties listed in the following table by default. T
 
 You can configure full and incremental crawls to meet your data refresh needs. By default, incremental crawls run every 15 minutes, and full crawls run daily. 
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
