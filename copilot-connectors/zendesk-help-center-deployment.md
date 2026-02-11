@@ -23,7 +23,7 @@ This article describes the steps to deploy and customize the Zendesk Help Center
 
 Before you deploy the Zendesk Help Center connector, make sure that you meet the following prerequisites:
 
-- You must be the search admin for your organization's Microsoft 365 tenant.
+- You must be the AI administrator for your organization's Microsoft 365 tenant.
 - You need your organization's Zendesk Help Center instance URL. The typical format is `https://<your-organization-domain>.zendesk.com`. If you don't have an instance, see [How do I create a Support trial account](https://support.zendesk.com/hc/articles/4408823799962-How-do-I-create-a-Support-trial-account).
 - You need a service account with read permissions. The service account must have either the Admin, Agent, or *Light agent role. The Contributor role doesn't allow read permissions in Zendesk.
 

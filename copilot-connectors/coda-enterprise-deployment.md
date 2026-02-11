@@ -21,7 +21,7 @@ The Coda Enterprise Microsoft 365 Copilot connector allows your organization to 
 
 Before you deploy the Coda Enterprise connector, make sure you meet the following prerequisites:
 
-- You must be a search admin for your organization’s Microsoft 365 tenant.
+- You must be a AI administrator for your organization’s Microsoft 365 tenant.
 - You must have a Coda org administrator account to obtain the API token for indexing content.
 - The connector supports only the Coda Enterprise edition. Coda Free, Pro, and Team editions aren't supported due to API restrictions.
 - You must generate a Coda Enterprise API token from **Account settings** > **API settings** in the Coda Org Admin account.

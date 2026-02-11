@@ -21,7 +21,7 @@ The WordPress.com Microsoft 365 Copilot connector indexes published posts and pa
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- You're a Microsoft 365 search admin or an administrator with permissions to create Copilot connectors.
+- You're a Microsoft 365 AI administrator or an administrator with permissions to create Copilot connectors.
 - You have your organization's WordPress.com website URL.
 - You have OAuth 2.0 credentials in the WordPress.com Developer Center for the site or sites that you plan to index.
 

@@ -20,7 +20,7 @@ The Guru Microsoft 365 Copilot connector integrates Guru content into Microsoft 
 ## Prerequisites
 
 Before you deploy the Guru connector, make sure that you meet the following prerequisites:
-- You must be the **search admin** for your organization's Microsoft 365 tenant.
+- You must be the **AI administrator** for your organization's Microsoft 365 tenant.
 - **Guru Instance Admin Account**: To connect to your Guru instance and allow the Guru Microsoft 365 Copilot connector to update Guru cards regularly, you need an admin user account of your Guru instance with the permission to create a user token. Find more details [here](https://help.getguru.com/docs/gurus-api).
 
 ## Deploy the connector

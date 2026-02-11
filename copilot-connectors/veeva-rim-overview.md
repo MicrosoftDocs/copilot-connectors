@@ -26,8 +26,6 @@ The following are the key benefits of the Veeva Vault RIM Copilot connector:
 - **Productivity boost:** Minimizes time spent searching for information across multiple sources by integrating Microsoft 365 Copilot and Microsoft Search with RIM data.
 - **Efficient content preparation:** Improves efficiency by referencing existing regulatory submissions and compliance documents to help generate new materials effectively.
 
-This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the Veeva Vault RIM Copilot connector.
-
 ## Build agents with the Veeva Vault RIM connector
 
 Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).

@@ -23,7 +23,7 @@ This article describes the steps to deploy and customize the Zendesk Ticket conn
 
 Before you deploy the Zendesk Ticket connector, make sure that you meet the following prerequisites:
 
-- You must be the **Microsoft 365 search admin** for your organization's tenant.
+- You must be the **Microsoft 365 AI administrator** for your organization's tenant.
 - To connect to your Zendesk Ticket data, you need your organization's Zendesk instance URL, which is typically:  
   `https://<your-organization-domain>.zendesk.com`. If you don't have an instance URL, see [How do I create a Support trial account?](https://support.zendesk.com/hc/en-us/articles/4408823799962-How-do-I-create-a-Support-trial-account).
 - To connect to Zendesk Ticket and allow the connector to update tickets regularly, you need a service account with read permissions. The account must have the Admin role to avoid permission issues for identity data (users, groups, organizations).

@@ -17,7 +17,6 @@ description: "Set up the Salesforce Copilot connector for Microsoft Search and M
 
 The Salesforce CRM Microsoft 365 Copilot connector allows your organization to index contacts, opportunities, leads, cases, and accounts objects in your Salesforce instance. After you configure the connector and index content from Salesforce, end users can search for those items from any Microsoft Search and Microsoft 365 Copilot client.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Salesforce CRM Copilot connector.
 
 >[!IMPORTANT]
 >The Salesforce Copilot connector currently supports Summer '19 or later.

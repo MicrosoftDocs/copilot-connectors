@@ -16,8 +16,6 @@ description: "Set up the Enterprise Websites cloud Microsoft 365 Copilot connect
 
 The Enterprise Websites cloud Microsoft 365 Copilot connector allows your organization to index webpages and **content from your company-owned websites** or public websites on the internet. After you configure the connector and index content from the website, end users can search for that content in Microsoft Search and Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Enterprise Websites cloud Microsoft 365 Copilot connector. 
-
 >[!IMPORTANT]
 >You may utilize the [Enterprise Websites on-premises Copilot connector](enterprise-web-connector-onprem.md) to index websites hosted on-premises or on private clouds.
 
@@ -86,7 +84,7 @@ These are the supported MIME types.
 - Doesn't support crawling of dynamic content in webpages.
 
 ## Prerequisites
-- You must be the **search admin** for your organization's Microsoft 365 tenant.
+- You must be the **AI administrator** for your organization's Microsoft 365 tenant.
 - **Website URLs**: To connect to your website content, you need the URL to the website. You can index multiple websites (up to 50) in a single connection. 
 - **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it is advisable to have a dedicated account to authenticate and crawl the content.
 

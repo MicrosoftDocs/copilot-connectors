@@ -21,7 +21,7 @@ The Smartsheet Sheet Microsoft 365 Copilot connector allows your organization to
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- **Admin Role**: You must be the search admin for your organization's Microsoft 365 tenant.
+- **Admin Role**: You must be the AI administrator for your organization's Microsoft 365 tenant.
 - **Smartsheet instance region**: You need to know the region for your organization's Smartsheet instance:
 - **Smartsheet account**: You need Smartsheet Sheet Access Tokens of System Admin Users to access published content and metadata.
 

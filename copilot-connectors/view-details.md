@@ -13,7 +13,7 @@ description: "Access and manage your Microsoft 365 Copilot connectors as an AI a
 
 # View connection details
 
-To access and manage your Microsoft 365 Copilot connectors, you must be designated as a search administrator for your tenant. Contact your tenant administrator to provision your account for the search administrator role.
+To access and manage your Microsoft 365 Copilot connectors, you must be an AI administrator for your tenant. 
 
 To see your connections in the [Microsoft 365 admin center](https://admin.microsoft.com), go to the [Data sources tab](https://admin.microsoft.com/#/copilot/connectors).
 

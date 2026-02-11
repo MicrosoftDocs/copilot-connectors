@@ -17,8 +17,6 @@ ms.date: 08/15/2025
 
 The PagerDuty Schedules Copilot connector enables your organization to index PagerDuty schedule data to make it available to Microsoft 365 Copilot and Microsoft Search. 
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the PagerDuty Schedules Copilot connector. 
-
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 
 ## Capabilities

@@ -16,8 +16,6 @@ description: "Set up the Enterprise Websites on-premises Microsoft 365 Copilot c
 
 The Enterprise Websites on-premises Microsoft 365 Copilot connector allows your organization to index webpages and **content from your company-owned websites**. After you configure the connector and index content from the websites, end users can search for that content in Microsoft Search and Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Enterprise Websites on-premises Microsoft 365 Copilot connector. 
-
 ## Capabilities
 - Index webpages from on-premises or private cloud-hosted websites.
 - Index up to 50 websites in a single connection.
@@ -83,7 +81,7 @@ These are the supported  MIME types.
 - Doesn't support authentication mechanisms like SAML, JWT token, Forms-based authentication, etc.
 
 ## Prerequisites
-- You must be the **search admin** for your organization's Microsoft 365 tenant.
+- You must be the **AI administrator** for your organization's Microsoft 365 tenant.
 - **Install the Microsoft Graph connector agent**: To access your on-premises websites, you must install and configure the [Microsoft Graph connector agent](https://www.microsoft.com/download/details.aspx?id=104045). [Download the agent installer](https://www.microsoft.com/download/details.aspx?id=104045) and follow the installation instructions to set it up. Once installed, ensure that the agent is configured correctly to connect your on-premises websites with the connector.
 - **Website URLs**: To connect to your website content, you need the URL to the website. You can index multiple websites (up to 50) in a single connection. 
 - **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it's advisable to have a dedicated account to authenticate and crawl the content.

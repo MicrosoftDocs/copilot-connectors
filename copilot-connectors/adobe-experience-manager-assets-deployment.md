@@ -21,7 +21,7 @@ The Adobe Experience Manager (AEM) Assets Copilot connector integrates AEM Asset
 
 Before you deploy the Adobe Experience Manager Assets connector, make sure that you meet the following prerequisites:
 
-- You must be the search admin for your organization's Microsoft 365 tenant.
+- You must be an AI administrator for your organization's Microsoft 365 tenant.
 - You have your organization's Adobe Experience Cloud instance author environment URL and publish environment URL:
   - Author URL format: `https://author-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`
   - Publish URL format: `https://publish-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`

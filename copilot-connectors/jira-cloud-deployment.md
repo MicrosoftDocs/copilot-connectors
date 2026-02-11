@@ -35,7 +35,7 @@ Before you deploy the Atlassian Jira Cloud connector, make sure that the Jira Cl
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- You must be the **search admin** for your organization's Microsoft 365 tenant.
+- You must be the **AI administrator** for your organization's Microsoft 365 tenant.
 - Make sure that you know the Jira Cloud instance URL for your organization. To connect to your Jira data, you need your organization's Jira instance URL.
 - To connect to Jira and allow the Atlassian Jira Cloud Copilot connector to update issues regularly, you need a service account with the following permissions granted to it.
 

@@ -21,7 +21,7 @@ With the Adobe Experience Manager Sites Microsoft 365 Copilot connector, your or
 
 Before you deploy the connector, make sure that:
 
-- You're a Microsoft 365 search admin for your organization.
+- You're a Microsoft 365 AI administrator for your organization.
 - You have your Adobe Experience Cloud instance author environment URL and publish environment URL:  
   - Author URL format: `https://author-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`  
   - Publish URL format: `https://publish-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`

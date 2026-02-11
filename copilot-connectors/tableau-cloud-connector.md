@@ -16,8 +16,6 @@ ms.date: 08/15/2025
 
 With the Tableau Cloud  Microsoft 365 Copilot connector, your organization can index Tableau sheets in your Tableau Cloud. After you configure the connector and index content from Tableau Cloud, end users can search for those sheets in Microsoft 365 Copilot and from any Microsoft Search client.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Tableau Cloud  Microsoft 365 Copilot connector. 
-
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 
 ## Capabilities
@@ -31,7 +29,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Sheets in personal space aren't indexable.
 
 ## Prerequisites
-- You must be the **search admin** for your organization's Microsoft 365 tenant.
+- You must be the **AI administrator** for your organization's Microsoft 365 tenant.
 
 - **Configure Connected Apps with Direct Trust in Tableau**: To connect to Tableau Cloud and enable the Tableau Cloud Copilot connector to sync sheets regularly, you need to configure and enable Connected Apps with Direct Trust on your Tableau site, using credentials that can access the sheets. Tableau Connected Apps provide a seamless and secure authentication experience by establishing an explicit trust relationship between your Tableau Cloud site and external applications. Find more details [here](https://help.tableau.com/current/online/en-us/connected_apps_direct.htm?_gl=1*9bs6y1*_ga*MTk1OTAyNzg0MS4xNzIxMTIwMzA4*_ga_8YLN0SNXVS*MTczNTE5MzU5OS4zNC4xLjE3MzUyMDA1ODEuMC4wLjA.).
 

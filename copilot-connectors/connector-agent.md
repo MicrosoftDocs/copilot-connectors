@@ -38,7 +38,7 @@ Before proceeding with the installation and configuration, confirm you have the 
 
 |Step|RBAC role|
 |:---|:---|
-|Install agent on-premises| Search Admin, Global Admin, Copilot Admin.|
+|Install agent on-premises| AI administrator, Global Admin, Copilot Admin.|
 |Register the app in Entra ID| Global Admin, Azure App Admin, Azure Admin.|
 |Create the service account on the target servers|See the setup page for the connector.|
 
@@ -102,7 +102,7 @@ The Microsoft Graph connector agent can be upgraded in two ways:
 
 ## Create and configure an app for the agent  
 
-First, sign in and note that the minimum required privilege on the account is search administrator. The agent then asks you to provide authentication details.
+First, sign in and note that the minimum required privilege on the account is AI administrator. The agent then asks you to provide authentication details.
 Follow the steps to create an app and generate the required authentication details.
 
 ### Create an app

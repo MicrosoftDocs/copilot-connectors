@@ -16,8 +16,6 @@ description: "Set up the PostgreSQL Microsoft 365 Copilot connector for Microsof
 
 The PostgreSQL Microsoft 365 Copilot connector allows your organization to index records from a PostgreSQL database. After you configure the connector, end users can search for these records from PostgreSQL in Microsoft 365 Copilot and from any Microsoft Search client.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a PostgreSQL Graph connector.
-
 >[!NOTE]
 >The PostgreSQL connector is in preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) ring for your Admin account.
 
@@ -34,7 +32,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Indexing rich content inside database columns isn't supported. Examples of such content are HTML, JSON, XML, blobs, and document parsings that exist as links inside the database columns.
 
 ## Prerequisites
-- You must be the **search admin** for your organization's Microsoft 365 tenant.
+- You must be the **AI administrator** for your organization's Microsoft 365 tenant.
 - **Install the Microsoft Graph connector agent**: To access your PostgreSQL server, you must install and configure the connector agent. See [Install the Microsoft Graph connector agent](graph-connector-agent.md) to learn more.
 - **PostgreSQL Server address**: To connect to your PostgreSQL data, you need your organization's PostgreSQL server address.
 - **Service Account**: To connect to PostgreSQL server and allow Microsoft Graph Connector to update records regularly, you need a service account with read permissions granted to the service account.

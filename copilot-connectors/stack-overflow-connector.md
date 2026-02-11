@@ -16,7 +16,6 @@ ms.date: 12/25/2025
 
 The Stack Overflow Copilot connector allows your organization to index questions and answers from Stack Overflow. After you configure the connector, end users can search for these posts from Stack Overflow in Microsoft 365 Copilot and from any Microsoft Search client. 
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Stack Overflow Copilot connector.
 
 ## Capabilities
 - Index Stack Overflow questions and answers.
@@ -31,7 +30,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - The connector doesn't support [private teams](https://stackoverflowteams.help/articles/9736637-enable-and-set-up-private-teams) in Stack Overflow for Teams **Enterprise**.
 
 ## Prerequisites
-- You must be a search admin for your organization's Microsoft 365 tenant.
+- You must be an AI administrator for your organization's Microsoft 365 tenant.
 - To create a new connection, use your organization's Stack Overflow Instance URL.
    - For Stack Overflow for Teams **Enterprise**, the instance URL is the home page URL, typically `https://<company_name>.stackenterprise.co`. 
    - For Stack Overflow for Teams **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.

@@ -23,7 +23,7 @@ This document guides you through the steps to apply staged rollout to a Microsof
 
 >[!IMPORTANT]
 >* Staged rollout settings are applicable to all Search and Copilot experiences.
->* You must be a Search Admin or a Global Admin to access this feature.
+>* You must be an AI administrator or a Global Admin to access this feature.
 
 
 <!---## Steps to apply staged rollout to a connection-->

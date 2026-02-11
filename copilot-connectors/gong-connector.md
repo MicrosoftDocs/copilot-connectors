@@ -16,8 +16,6 @@ ms.date: 12/25/2025
 
 With the Microsoft 365 Copilot connector for Gong, your organization can index calls and meeting-related content like summaries, action items, and call metadata. The connector enables Gong users to retrieve this information through Microsoft 365 Copilot and any Microsoft Search client.
 
-This article is intended for Microsoft 365 administrators and anyone responsible for configuring, operating, or monitoring the Gong Copilot connector.
-
 ## Capabilities
 - Index calls and meetings content such as brief, key points, and action items.
 - Index calls and meetings metadata, including the title, duration, and basic context from the CRM, such as the Account name and Deal name.
@@ -33,7 +31,7 @@ This article is intended for Microsoft 365 administrators and anyone responsible
 - Access to calls may be impacted when users become inactive or lack workspace permissions. If a user becomes inactive, others may lose access to calls they participated in. Similarly, if a call is linked to a workspace a user cannot access, others might not be able to view it.
 
 ## Prerequisites
-- You must be the search admin for your organization's Microsoft 365 tenant.
+- You must be the AI administrator for your organization's Microsoft 365 tenant.
 - To connect to Gong, the Copilot connector uses OAuth authentication. A **Gong administrator** must sign in with their Gong credentials to authorize the connector.
 - The base URL of your Gong instance is required to complete the setup. Follow the steps below to get the Gong base URL:
     1. In Gong, navigate to **Admin Center → Ecosystem → API** or simply browse to https://app.gong.io/company/api-authentication

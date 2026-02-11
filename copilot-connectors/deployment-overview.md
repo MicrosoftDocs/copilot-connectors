@@ -23,10 +23,7 @@ This article describes how to set up Microsoft 365 Copilot connectors in the Mic
 
 Before you begin, make sure you have the following prerequisites:
 
-- **Admin access**: You must have one of the following roles in the Microsoft 365 admin center:
-  - Global admin
-  - Search admin
-  - Copilot admin
+- **Admin access**: You be an AI administrator in the Microsoft 365 admin center.
 - **Data source credentials**: Gather the required credentials and permissions for the data source.
 - **Service account (if applicable)**: Make sure that the service account has the necessary roles or permissions.
 

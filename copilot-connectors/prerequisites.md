@@ -19,11 +19,7 @@ Some prebuilt connectors also have unique prerequisites and setup steps. For mor
 
 ## Admin roles and access
 
-To configure and deploy Copilot connectors, you must have one of the following roles in the Microsoft 365 admin center:
-
-- Global Admin
-- Search Admin
-- Copilot Admin
+To configure and deploy Copilot connectors, you must be an AI administrator in the Microsoft 365 admin center.
 
 In addition, for prebuilt connectors (such as Google Drive, Confluence, ServiceNow), you must have admin access to the external service (Google Workspace Super Admin, Confluence Admin).
 

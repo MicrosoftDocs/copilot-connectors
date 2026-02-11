@@ -16,8 +16,6 @@ ms.date: 08/15/2025
 
 The DataStax Microsoft 365 Copilot connector allows your organization to index records in your DataStax Astra DB collections. After you configure the connector and index content from the DataStax databases, users can search for those items in Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the DataStax Copilot connector.
-
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 
 ## Capabilities
@@ -33,7 +31,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Doesn't support search verticals.
 
 ## Prerequisites
-- You must be the search admin for your organization's Microsoft 365 tenant.
+- You must be the AI administrator for your organization's Microsoft 365 tenant.
 - To connect to your DataStax database, you need the DataStax API Endpoint and database ID.
 - To connect to DataStax and allow the Copilot connector to update DataStax tasks regularly, you need an application token with read permissions.
 

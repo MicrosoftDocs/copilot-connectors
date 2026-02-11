@@ -21,7 +21,7 @@ The Azure File Share Microsoft 365 Copilot connector enables organizations to in
 
 Before you deploy the Azure File Share connector, make sure that your environment meets the following requirements:
 
-- You must be a Microsoft 365 administrator.
+- You must be a Microsoft 365 AI administrator.
 - Your Azure File Share must be mounted on a device.
 - The Microsoft Graph connector agent must be installed and registered on the same device. Use version 3.1.8.0 or later.
 - Use the same credentials to:

@@ -29,7 +29,7 @@ The following checklist lists the steps involved in configuring the environment 
 | [Ensure API access to the target GitHub instance](#ensure-api-access-to-the-target-github-instance) | GitHub admin    |
 | [Identify Microsoft Entra ID identity mapping rules](#identify-microsoft-entra-id-mapping-rules) | GitHub admin    |
 | [Sign in to the GitHub account](#sign-in-to-the-github-account) | GitHub admin    |
-| [Verify search admin permissions](#verify-search-admin-permissions) | GitHub admin    |
+| [Verify AI administrator permissions](#verify-search-admin-permissions) | GitHub admin    |
 | [Use a custom GitHub app for authentication](#use-a-custom-github-app-for-authentication) | GitHub admin |
 | [Adjust GitHub Server API rate limit](#adjust-github-server-api-rate-limit) | GitHub admin |
 | [Configure firewall settings](#configure-firewall-settings) | Network admin |
@@ -50,9 +50,9 @@ Define the Microsoft Entra ID mapping rules. Make sure that users who access the
 
 For enterprise-managed users who authenticate via single sign-on (SSO), make sure the account is signed in before you perform any setup actions. Currently, the GitHub authentication flow doesn't support SSO-based sign-in during configuration.
 
-## Verify search admin permissions
+## Verify AI administrator permissions
 
-Make sure the person setting up the connector is a Search admin for your organization’s Microsoft 365 tenant.
+Make sure the person setting up the connector is an AI administrator for your organization’s Microsoft 365 tenant.
 
 ## Use a custom GitHub app for authentication
 

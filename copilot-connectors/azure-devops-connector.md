@@ -16,8 +16,6 @@ description: "Set up the Azure DevOps Work Items Microsoft 365 Copilot connector
 
 The Azure DevOps Work Items Microsoft 365 Copilot connector allows your organization to index work items in its instance of the Azure DevOps service. After you configure the connector, end users can search for work items from Azure DevOps in Microsoft Search and Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Azure DevOps Work Items Copilot connector.
-
 >[!IMPORTANT]
 >The Azure DevOps Work Items Copilot connector supports only the Azure DevOps cloud service. Azure DevOps Server 2019, TFS 2018, TFS 2017, TFS 2015, and TFS 2013 are not supported by this connector.
 
@@ -37,7 +35,7 @@ The Azure DevOps Work Items connector includes the following custom data filters
 - Assigned to
 
 ## Prerequisites
-- You must be the **search admin** for your organization's Microsoft 365 tenant.
+- You must be the **AI administrator** for your organization's Microsoft 365 tenant.
 - The connector utilizes the logged-in M365 Admin's account as the crawl service account. To connect to Azure DevOps and allow the Copilot connector to update work items regularly, you need to grant the M365 Admin account the following permissions.
 
     | Permission name | Permission type | Required for |
@@ -85,7 +83,7 @@ The Azure DevOps Work Items Copilot connector only indexes content from an ADO o
 4. Ensure that the organization is connected to your tenant's Microsoft Entra account.
 
 > [!NOTE]
-> The Search admin who creates the connection to Microsoft Entra must have Read access to the relevant project.
+> The AI administrator who creates the connection to Microsoft Entra must have Read access to the relevant project.
 
 **Create an app on Microsoft Entra ID**
 

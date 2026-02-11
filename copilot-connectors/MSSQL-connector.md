@@ -16,8 +16,6 @@ description: "Set up the Azure SQL and Microsoft SQL Server Microsoft 365 Copilo
 The Microsoft SQL Server or Azure SQL Microsoft 365 Copilot connectors allow your organization to discover and index data from an on-premises SQL Server database or a database hosted in your Azure SQL instance in the cloud.
 The connector indexes specified content in Microsoft Search and Microsoft 365 Copilot. To keep the index up to date with source data, it supports periodic full and incremental crawls. With these SQL connectors, you can also restrict access to search results for certain users.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Azure SQL or a Microsoft SQL server Microsoft 365 Copilot connector.
-
 ## Capabilities
 - Index records from your MS SQL server or Azure SQL database using a SQL query.
 - Specify access permissions for every record with a list of users or groups added in the SQL query.
@@ -32,7 +30,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Indexing rich content inside database columns isn't supported. Examples of such content are HTML, JSON, XML, blobs, and document parsings that exist as links inside the database columns.
 
 ## Prerequisites
-- You must be the **search admin** for your organization's Microsoft 365 tenant.
+- You must be the **AI administrator** for your organization's Microsoft 365 tenant.
 - **Install the Microsoft Graph connector agent** (only applicable for MS SQL Copilot connector): To access your Microsoft SQL Server, you must install and configure the connector agent. See [Install the Copilot connector agent](graph-connector-agent.md) to learn more.
 - **Service Account**: To connect to your SQL database and allow the Copilot connector to update records regularly, you need a service account with read permissions granted to the service account.
 

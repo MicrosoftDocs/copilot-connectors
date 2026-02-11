@@ -16,8 +16,6 @@ ms.date: 12/11/2025
 
 The Azure DevOps Wiki Microsoft 365 Copilot connector allows your organization to index wikis in its instance of the Azure DevOps service. After you configure the connector, end users can search for project wikis and code wikis from Azure DevOps in Microsoft Search and Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Azure DevOps Wiki Copilot connector.
-
 >[!IMPORTANT]
 >The Azure DevOps Wiki Copilot connector supports only the Azure DevOps cloud service. Azure DevOps Server 2019, TFS 2018, TFS 2017, TFS 2015, and TFS 2013 are not supported by this connector.
 
@@ -37,7 +35,7 @@ The Azure DevOps Wiki connector includes the following custom data filters for C
 - Assigned to
 
 ## Prerequisites
-- You must be the Search admin for your organization's Microsoft 365 tenant and you must have Read access to the relevant project.
+- You must be the AI administrator for your organization's Microsoft 365 tenant and you must have Read access to the relevant project.
 - To allow the connector to connect to your Azure DevOps organization, you must enable **Third-party application access via OAuth**. For more information, see [manage security policies](/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops#manage-a-policy&preserve-view=true) to learn more.
 
     ![Third-party application access via OAuth](media/ado-workitems-connector-security-policies.png)

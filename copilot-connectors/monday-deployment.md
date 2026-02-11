@@ -23,7 +23,7 @@ This article describes how to deploy and configure the monday.com connector in t
 
 Before you deploy the monday.com connector, make sure that you meet the following prerequisites:
 
-- You're a Microsoft 365 search admin for your organization.
+- You're an AI administrator for your organization.
 - You have access to your organization’s monday.com instance URL (for example, `https://contoso.monday.com`).
 - You have the required permissions in monday.com to create or manage OAuth applications.
 - You understand your monday.com plan limits, including daily API call limits.

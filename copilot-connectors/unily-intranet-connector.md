@@ -16,8 +16,6 @@ ms.date: 12/25/2025
 
 The Unily Microsoft 365 Copilot connector allows your organization to index content from the Unily intranet. After you configure the connector, end users can search for this content in Microsoft 365 Copilot and from any Microsoft Search client. 
 
-This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Unily Microsoft 365 Copilot connector.
-
 ## Capabilities
 - Index Unily content (the following document types are supported: App, Doc Brand Asset, Image Brand Asset, FAQ, Form, Quiz, Idea, Location, Mandatory Read Article, Mandatory Read Doc, Media Content, Story, Knowledge Article, SitePageModern).
 - Enable users within the company to ask questions in natural language using Copilot and receive answers based on content from Unily. Examples:
@@ -30,7 +28,7 @@ This documentation is for Microsoft 365 administrators or anyone who configures,
 - Currently, Copilot responses aren't customized for specific audiences as defined in Unily, such as utilizing the 'target audience' property.
 
 ## Prerequisites
-- To create a new connection, you must be the search admin for your organization's Microsoft 365 tenant.
+- To create a new connection, you must be the AI administrator for your organization's Microsoft 365 tenant.
 - To create a new connection, use your organization’s Unily instance URL. Contact Unily directly to obtain the correct URL. This URL is the specific web address used to access and interact with Unily API services for content retrieval, which usually looks like `https://[your-organization-name]-api.unily.com`.
 - To complete the authentication, you need a Client ID and Client Secret. To get your Unily Client ID and Secret, contact Unily directly. A Unily instance may have multiple applications, each with different permissions. Ensure that you obtain the correct credentials for the application to be used for the Copilot connector.
 

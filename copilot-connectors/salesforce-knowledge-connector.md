@@ -16,8 +16,6 @@ ms.date: 12/25/2025
 
 The Salesforce Knowledge Copilot connector allows your organization to index articles from Salesforce Knowledge. After you configure the connector, end users can search for Knowledge articles from Salesforce in Microsoft 365 Copilot and from any Microsoft Search client. 
 
-This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Salesforce Knowledge Copilot connector. 
-
 ## Capabilities
 - Index Salesforce Knowledge articles.
 - Enable users within the company to ask questions in natural language using Copilot and receive answers based on articles in Salesforce. Examples:
