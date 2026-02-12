@@ -33,7 +33,9 @@ Complete the following steps to apply a staged rollout to a new connection:
 1. Configure the connection settings as described in the [Deployment overview](deployment-overview) article.
 1. Select the toggle next to **Rollout to limited audience**.
 1. Add the users or security groups that you want to have access to the connector. You can add up to 100 users and 15 Microsoft 365 groups.
-5. Choose **Create** create the connection. When the rolout finishes, only the users and groups you specified will see connector data in results, depending on their permissions. On the **Your Connections** tab, the connection shows **Staged** in the **Staged Rollout** column. You can edit the staged rollout there.
+5. Choose **Create** to create the connection. When the rollout finishes, only the users and groups you specified see connector data in results, depending on their permissions. 
+
+:::image type="content" alt-text="Screenshot of the Rollout to a limited audience toggle on the connector setup page." source="media/staged-rollout/staged-rollout.png" lightbox="media/staged-rollout/staged-rollout.png":::
 
 ## Modify staged rollout
 
@@ -44,6 +46,8 @@ To modify the staged rollout settings for a connector:
 1. In the **Staged Rollout** column, next to **Staged**, choose **Edit**.
 1. Add or remove users and groups from the staged rollout, and choose **Save**.
 
+:::image type="content" alt-text="Screenshot of the Staged Rollout pane for a configured connector." source="media/staged-rollout/modify-staged-rollout.png" lightbox="media/modify-staged-rollout/staged-rollout.png":::
+
 ### Stop staged rollout
 
 To stop a staged rollout for a connector:
@@ -52,6 +56,8 @@ To stop a staged rollout for a connector:
 1. Find the connector that you want to modify.
 1. In the **Staged Rollout** column, next to **Staged**, choose **Edit**.
 1. Choose **End Staging**, and when prompted, choose **Remove**.
+
+:::image type="content" alt-text="Screenshot of the Staged Rollout pane with End Staging highlighted." source="media/staged-rollout/end-staged-rollout.png" lightbox="media/end-staged-rollout/staged-rollout.png":::
 
 > [!NOTE]
 > When you remove staged rollout, the connection results start appearing to all users in the organization who have access.
