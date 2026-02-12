@@ -42,6 +42,8 @@ To add the Azure File Share connector for your organization:
 
 The display name identifies the connector in Copilot responses and helps users recognize trusted content sources. You can accept the default **Azure File Share** display name or customize it to match departmental or organizational naming conventions.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set instance URL
 
 Specify the Universal Naming Convention (UNC) path for the Azure File Share. For example: `\\testpath.file.core.windows.net\projectshare\team1`.

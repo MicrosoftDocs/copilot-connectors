@@ -39,6 +39,8 @@ To add the Adobe Experience Manager Sites connector for your organization:
 
 The display name identifies references in Copilot responses and acts as a trusted content source filter. You can accept the default name or customize it to something users recognize.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set instance URLs
 
 Provide both the author and publish environment URLs for your Adobe Experience Cloud instance.

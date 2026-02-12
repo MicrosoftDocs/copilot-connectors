@@ -46,23 +46,25 @@ To add the Google Drive connector for your organization:
 1. In the left pane, select **Copilot** > **Connectors**.
 1. Go to the **Gallery** tab and select **Google Drive**.
 
-## Display name
+### Set display name
 
 Enter a display name to identify the connector in Copilot experiences. The display name also signifies trusted content and is used as a content source filter.
 
-## Google Workspace domain
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
+### Google Workspace domain
 
 Provide your organization's Google Workspace domain (for example, `your-company.com`). For more information, see [What is a domain](https://support.google.com/a/answer/177483?hl=en&ref_topic=3540977&sjid=7603839478714180429-AP).
 
-## Administrator account email
+### Administrator account email
 
 Enter the email address of a Google Workspace administrator account, in the format `user@company.com`.
 
-## Service account key
+### Service account key
 
 Paste the entire contents of the JSON key file you generated when you created the Google Cloud service account. For information about how to generate the service account key, see [Create a Google Cloud project](/microsoft-365-copilot/connectors/google-drive-admin-setup#create-a-google-cloud-project).
 
-## Roll out 
+### Roll out 
 
 Deploy the connector to a limited audience if you want to validate it in Copilot and other search surfaces before you deploy it to your organization. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
 

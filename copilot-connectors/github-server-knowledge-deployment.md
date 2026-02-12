@@ -50,6 +50,8 @@ To add the GitHub Server Knowledge connector for your organization:
 
 The display name identifies references in Copilot responses and signifies trusted content. You can accept the default **GitHub Server Knowledge** display name, or customize it to a name that users in your organization recognize.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set instance URL
 
 Enter the instance URL of your GitHub Enterprise server. This URL is typically the following format:

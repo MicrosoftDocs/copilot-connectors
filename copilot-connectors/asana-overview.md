@@ -82,7 +82,10 @@ The Asana connector indexes key task-related data so it can be used in Copilot, 
 
 | Asana data type | Indexed and surfaced in Copilot and search |
 |------------------|---------------------------------------------|
-| Tasks            | Task details, including name, description, due date, assignee, associated projects, etc. |
+| Tasks  | Task details, including name, description, due date, assignee, associated projects, and so on. |
+| Projects  | Project name, project ID, sections, and so on. |
+| Comments  | Comments text, creator, created date, and so on. |
+| Attachments  | Attachment name, attachment content, uploaded by, and so on. |
 
 ## Permissions model and access control
 

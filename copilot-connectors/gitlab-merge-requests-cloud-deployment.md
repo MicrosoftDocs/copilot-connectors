@@ -48,6 +48,8 @@ To add the GitLab Merge Requests Cloud connector for your organization:
 
 The display name identifies references in Copilot responses to help users recognize the associated content source. You can accept the default **GitLab Merge Requests Cloud** display name or customize it.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Choose authentication type
 
 The connector supports **OAuth 2.0** authentication with GitLab. To authenticate:

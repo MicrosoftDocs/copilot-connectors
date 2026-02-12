@@ -46,6 +46,8 @@ To add the GitLab Knowledge Cloud connector for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize the content source. You can accept the default **GitLab Knowledge Cloud** display name, or customize it.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Choose authentication type
 
 The GitLab Knowledge Cloud connector supports **OAuth 2.0** authentication. Choose **OAuth 2.0**, enter your **client ID** and **client secret**, and choose **Authorize**.

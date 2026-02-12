@@ -52,6 +52,8 @@ To add the Bitbucket Pull Request connector for your organization:
 
 The display name is used to identify references in Copilot responses to help users recognize the associated file or item. You can accept the default **Bitbucket Pull Request** display name, or customize the value to use a display name that users in your organization recognize.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set instance URL
 
 Enter the URL of your Bitbucket instance. For example: `https://bitbucket.org/testinstance`.

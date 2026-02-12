@@ -42,6 +42,8 @@ The display name is used to identify references in Copilot responses and search 
 
 You can accept the default **monday** display name, or customize it to use a name that users in your organization recognize.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set instance URL
 
 Enter the instance URL of your monday.com tenant. The URL typically follows this format:

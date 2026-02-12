@@ -40,6 +40,8 @@ To add the Zendesk Ticket connector for your organization:
 
 The display name identifies each citation in Copilot to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter. You can accept the default **Zendesk Ticket** display name or customize it to a name that users in your organization recognize.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set instance URL
 
 Provide your Zendesk instance URL in the format:  

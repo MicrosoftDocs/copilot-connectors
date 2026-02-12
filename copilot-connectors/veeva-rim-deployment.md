@@ -68,7 +68,9 @@ To add the Veeva Vault RIM connector for your organization:
 ### Set display name
 
 The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.  
-You can accept the default **Veeva Vault RIM** display name, or customize the value to use a display name that users in your organization recognize.  
+
+You can accept the default **Veeva Vault RIM** display name, or customize the value to use a display name that users in your organization recognize.
+
 For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL

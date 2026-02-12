@@ -37,6 +37,8 @@ To add the Smartsheet Sheet connector for your organization:
 
 Choose a display name that helps users easily recognize the associated file or item in a Copilot response. You can accept the default name or customize it.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set Smartsheet Sheet instance region
 
 The Smartsheet Sheet region is essential to correctly access and update data. Enter the URL that corresponds to your region:

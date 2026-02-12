@@ -62,6 +62,8 @@ To add the GitLab Knowledge Server connector for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize the associated content source. You can accept the default **GitLab Knowledge Server** name or customize it for your organization.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set instance URL
 
 Specify the base URL of your GitLab Server instance. This URL is the GitLab endpoint that the connector uses to access documentation and repository content through the GitLab REST APIs. Provide the root URL of your self-managed GitLab installation (for example, `https://gitlab.contoso.com`).

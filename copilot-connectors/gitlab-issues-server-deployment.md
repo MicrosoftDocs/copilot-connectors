@@ -64,6 +64,8 @@ To add the GitLab Issues Server connector for your organization:
 The display name identifies references in Copilot responses and helps users recognize the associated content source.  
 You can accept the default **GitLab Issues Server** display name or customize it.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set instance URL
 
 Provide the base URL of your GitLab Server instance. The base URL is the URL the connector uses to access issue data through the GitLab REST APIs.

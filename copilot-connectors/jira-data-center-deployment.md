@@ -51,6 +51,8 @@ To add the Jira Data Center connector for your organization:
 
 The display name identifies the content source in Copilot responses. You can accept the default **Jira Data Center** name or customize it to help users recognize the data source.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set instance URL
 
 Enter the URL of your Jira Data Center instance. The typical format is: `https://jira.<your-domain>.com`.

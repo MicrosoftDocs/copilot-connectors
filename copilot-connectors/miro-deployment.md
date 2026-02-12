@@ -42,6 +42,8 @@ The display name is used to identify references in Copilot responses. The displa
 
 You can use the default **Miro** display name or customize it to a name that users in your organization recognize.
 
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+
 ### Set Company ID
 
 The Company ID (Organization ID) is the unique identifier for your organization’s Miro account. It appears in the URL when you view your settings in the Miro dashboard. Use this identifier when you configure the connector.
