@@ -20,8 +20,11 @@ items:
   - name: Map non-Entra identities
     href: map-non-entra-id.md
   - name: Install connector agent
-    href: connector-agent.md
     items:
+    - name: Connector agent
+      href: connector-agent.md
+    - name: Connector agent FAQ
+      href: connector-agent-frequently-asked-questions.yml
     - name: Connector agent release notes
       href: connector-agent-releases.md
   - name: Enhance Copilot discovery of connector content

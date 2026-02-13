@@ -1,0 +1,45 @@
+### YamlMime:FAQ
+metadata:
+  title: Microsoft 365 Copilot connectors FAQ
+  description: "Find answers to frequently asked questions about the Microsoft Graph connector agent."
+  author: lauragra
+  ms.author: lauragra
+  ms.topic: faq
+  ms.service: copilot-connectors
+  ms.date: 02/13/2026
+
+title: "Microsoft 365 Copilot connectors FAQ"
+summary: |
+  To use on-premises Microsoft 365 Copilot connectors, you must install the Microsoft Graph connector agent. The connector agent allows for secure data transfer between on-premises data and the Copilot connector APIs. 
+
+  This article provides answers to frequently asked questions related to the Microsoft Graph connector agent.
+
+sections:
+
+  - name: "Microsoft Graph connector agent questions"
+    questions:
+      - question: "How does the Microsoft Graph connector agent interact with its system, and where is the indexed data stored?"
+        answer: |
+          The agent is installed on-premises and needs access to the data source. When the account is authorized, the agent crawls the data and communicates with the Microsoft 365 Copilot connector services to push data to the index. The data indexed through Microsoft 365 Copilot connectors is in the same location.
+
+      - question: "Where should the Microsoft Graph connector agent be installed?"
+        answer: |
+          Install the agent on a computer on the same network as the data source. It doesn't have to be installed on the same computer that hosts the data source. The data source URL must be accessible to the Microsoft Graph Connector Agent.
+
+      - question: "Why does the Microsoft Graph connector agent require the ExternalConnection.ReadWrite.OwnedBy permission?"
+        answer: |
+          The `ExternalConnection.ReadWrite.OwnedBy` permission allows the agent to read and write external connection settings on behalf of the admin, but it can't access or modify anything beyond its granted permissions.
+
+      - question: "Can the Microsoft Graph connector agent be installed on multiple servers, and does the service run on both?"
+        answer: |
+          You can install the Microsoft Graph Connector Agent on multiple computers, for multiple connections. One agent can handle multiple connections. The crawl performance depends on the number of connections used, crawl frequency, and number of items. We recommend using no more than three connections per agent.
+
+
+additionalContent: |
+
+  ## Related content
+
+    - [Microsoft 365 Copilot connectors FAQ](frequently-asked-questions.md)
+    - [Connectors overview](connectors-overview.md)
+    - [Connectors gallery](connectors-gallery.md)
+

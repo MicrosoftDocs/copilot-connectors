@@ -1,14 +1,14 @@
 ### YamlMime:FAQ
 metadata:
-  title: Microsoft 365 Copilot Connectors FAQ
-  description: "Find answers to frequently asked questions about Copilot connectors and connectors for Copilot Search."
+  title: Microsoft 365 Copilot connectors FAQ
+  description: "Find answers to frequently asked questions about Microsoft 365 Copilot connectors."
   author: lauragra
   ms.author: lauragra
   ms.topic: faq
   ms.service: copilot-connectors
   ms.date: 09/05/2025
 
-title: "Microsoft 365 Copilot Connectors FAQ"
+title: "Microsoft 365 Copilot connectors FAQ"
 summary: |
   Microsoft 365 Copilot connectors increase the discoverability of and engagement with your enterprise data by integrating your data into the Microsoft 365 Copilot experience. With Copilot connectors, you can make the most of your external data for functions like enriched data analysis to allow Copilot to access and summarize diverse datasets from different sources and provide more comprehensive insights.
 
@@ -159,29 +159,11 @@ sections:
         answer: |
           The type filter is populated with default values for the most common Copilot connectors, such as Confluence, Google Drive, and Jira.
 
-  - name: "Microsoft Graph Connector Agent questions"
-    questions:
-      - question: "How does the Microsoft Graph Connector agent interact with its system, and where is the indexed data stored?"
-        answer: |
-          The agent is installed on-premises and needs access to the data source. When the account is authorized, the agent crawls the data and communicates with the Microsoft 365 Copilot connector services to push data to the index. The data indexed through Microsoft 365 Copilot connectors is in the same location.
-
-      - question: "Where should the Microsoft Graph Connector Agent be installed?"
-        answer: |
-          Install the agent on a computer on the same network as the data source. It doesn't have to be installed on the same computer that hosts the data source. The data source URL must be accessible to the Microsoft Graph Connector Agent.
-
-      - question: "Why does the Microsoft Graph Connector Agent require the ExternalConnection.ReadWrite.OwnedBy permission?"
-        answer: |
-          The `ExternalConnection.ReadWrite.OwnedBy` permission allows the agent to read and write external connection settings on behalf of the admin, but it can't access or modify anything beyond its granted permissions.
-
-      - question: "Can the Microsoft Graph Connector Agent be installed on multiple servers, and does the service run on both?"
-        answer: |
-          You can install the Microsoft Graph Connector Agent on multiple computers, for multiple connections. One agent can handle multiple connections. The crawl performance depends on the number of connections used, crawl frequency, and number of items. We recommend using no more than three connections per agent.
-
-
 additionalContent: |
 
   ## Related content
 
-    - [Connectors overview](overview.md)
+    - [Microsoft Graph connector agent FAQ](connector-agent-frequently-asked-questions.md)
+    - [Connectors overview](connectors-overview.md)
     - [Connectors gallery](connectors-gallery.md)
 
