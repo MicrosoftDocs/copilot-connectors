@@ -1,5 +1,5 @@
 ---
-title: "Map non-Entra ID Identities" 
+title: "Map non-Microsoft Entra ID Identities" 
 ms.author: misvenso 
 author: monaray97 
 manager: jameslau 
@@ -11,19 +11,13 @@ description: "Find information about how to map non-Entra ID identities when you
 ms.date: 11/05/2020
 ---
 
-# Map non-Entra ID identities  
+# Map non-Microsoft Entra ID identities  
 
-This article describes how to map non-Entra ID identities to your Microsoft Entra identities so that people in your access control list (ACL) with non-Entra ID identities can see connector responses scoped to them.
+This article describes how to map non-Microsoft Entra ID identities to your Microsoft Entra identities. This allows people in your access control list (ACL) with non-Microsoft Entra ID identities to view connector responses scoped to them.
 
-These steps are only relevant to AI administrators who are setting up a [Confluence Cloud](confluence-cloud-connector.md), [Confluence On-premises](confluence-onpremises-connector.md), [ServiceNow Knowledge](servicenow-knowledge-connector.md), [ServiceNow Catalog](servicenow-catalog-connector.md),
-[ServiceNow Tickets](servicenow-tickets-connector.md) or [Salesforce](salesforce-connector.md) connectors by Microsoft with search permissions for **Only people with access to this data source** and identity type **Non-Entra ID.**
-
->[!NOTE]
->If you are setting up a Salesforce connector and select **Only people with access to this data source** and identity type **Microsoft Entra ID** on the search permissions screen, refer to the [Map your Microsoft Entra identities](map-entra-id.md) article for steps on how to map Microsoft Entra identities.  
+These steps are relevant for AI administrators who choose **Only people with access to this data source** when they [Customize connector settings](/microsoft-365-copilot/connectors/deployment-overview#customize-connector-settings-optional) and choose **Non-Entra ID**.
 
 ## Map non-Entra ID properties
-
-<a name='1-select-an-azure-ad-user-property'></a>
 
 ### 1. Select a Microsoft Entra user property  
 

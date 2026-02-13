@@ -42,7 +42,7 @@ Use the following steps to deploy a connector:
 7. Deploy the connector to a subset of users for validation before a broader rollout.
 8. Choose **Create** to deploy the connection. The connector begins indexing content using default settings.
 
-:::image type="content" alt-text="Screenshot that shows Connection creation screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/servicenow-knowledge-create-page.png" lightbox="media/deployment-overview/servicenow-knowledge-create-page.png":::
+:::image type="content" alt-text="Screenshot that shows Connection creation screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/aha-setup.png" lightbox="media/deployment-overview/aha-setup.png":::
 
 > [!NOTE]
 > Most connectors use optimized default settings for access permissions, schema, and sync frequency. To customize the default settings, see [Customize connector settings](#customize-connector-settings-optional).
@@ -66,9 +66,9 @@ You can customize the default values for connector settings. On the connector pa
 
 ### User settings
 
-:::image type="content" alt-text="Screenshot that shows the User configuration screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/servicenow-knowledge-users-page.png" lightbox="media/deployment-overview/servicenow-knowledge-users-page.png":::
+:::image type="content" alt-text="Screenshot that shows the User configuration screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/customize-user.png" lightbox="media/deployment-overview/customize-user.png":::
 
-On the **Users** tab, under **Access Permissions**, choose whether indexed data is visible to:
+On the **User** tab, under **Access Permissions**, choose whether indexed data is visible to:
 
 - Only users with access to the content
 - Everyone in the organization
@@ -78,9 +78,9 @@ By default, users are mapped by matching their email to `UserPrincipalName` or `
 
 ### Data settings
 
-:::image type="content" alt-text="Screenshot that shows the Content configuration screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/servicenow-knowledge-content-page.png" lightbox="media/deployment-overview/servicenow-knowledge-content-page.png":::
+:::image type="content" alt-text="Screenshot that shows the Content configuration screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/customize-data.png" lightbox="media/deployment-overview/customize-data.png":::
 
-On the **Content** tab, under **Manage properties**, you can:
+On the **Data** tab, under **Manage properties**, you can:
 
 - Configure properties to be searchable, queryable, or refinable.
 - Assign semantic labels and aliases to improve search relevance.
@@ -136,7 +136,7 @@ Only string properties can be marked as searchable.
 
 ### Crawl settings
 
-:::image type="content" alt-text="Screenshot of the connector gallery in the Microsoft 365 admin center." source="media/deployment-overview/servicenow-knowledge-sync-page.png" lightbox="media/deployment-overview/servicenow-knowledge-sync-page.png":::
+:::image type="content" alt-text="Screenshot of the connector gallery in the Microsoft 365 admin center." source="media/deployment-overview/customize-crawl.png" lightbox="media/deployment-overview/customize-crawl.png":::
 
 On the **Crawl** tab, you can configure how often data syncs between the source and the connector index.
 
@@ -222,7 +222,7 @@ Copilot connectors support the following search schema attributes.
 
 For all connectors except the File share Copilot connector, custom types must be configured manually. To enable search capabilities, the search schema must be mapped to a set of properties. The connection configuration assistant selects a default schema based on the source properties you choose, but you can modify it by selecting the appropriate attributes for each property on the search schema page.
 
-:::image type="content" alt-text="Screenshot that shows how the schema for a connector can be customized." source="media/manageschema.png" lightbox="media/manageschema.png":::
+:::image type="content" alt-text="Screenshot that shows how the schema for a connector can be customized." source="media/deployment-overview/manageschema.png" lightbox="media/deployment-overview/manageschema.png":::
 
 ### Restrictions and recommendations for search schema settings
 
@@ -344,7 +344,7 @@ Available options include:
 - **Starting time**: The time when the crawl begins.
 - **Reset**: Restore the default schedule for the connector.
 
-:::image type="content" alt-text="Screenshot that shows sample refresh settings configuration." source="media/refresh-settings/incremental-week-view.png":::
+:::image type="content" alt-text="Screenshot that shows a refresh settings configuration." source="media/deployment-overview/incremental-week-view.png" lightbox="media/deployment-overview/incremental-week-view.png":::
 
 Also consider the following:
 
