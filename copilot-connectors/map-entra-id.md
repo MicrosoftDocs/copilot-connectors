@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Find information about how to map users to Microsoft Entra IDs when you customize Microsoft 365 Copilot connectors in the admin center." 
-ms.date: 11/05/2020
+ms.date: 02/13/2026
 ---
 
 # Map Microsoft Entra identities  
@@ -19,13 +19,13 @@ These steps are relevant for AI administrators who choose **Only people with acc
 
 ## Select Microsoft Entra user properties to map
 
-You can select the Microsoft Entra properties you need to map to the Federation ID.
+You can select the Microsoft Entra properties you need to map to the external accounts.
 
-You can select a Microsoft Entra user property from the dropdown. You can also add as many Microsoft Entra user properties as you want if these properties are necessary to create the Federation ID mapping for your organization.
+You can select a Microsoft Entra user property from the dropdown. You can also add as many Microsoft Entra user properties as you want if these properties are necessary to create the mapping for your organization.
 
 ## Create formula to complete mapping
 
-You can combine the values of the Microsoft Entra user properties to form the unique Federation ID.
+You can combine the values of the Microsoft Entra user properties to form the unique ID.
 
 In the formula box, `{0}` corresponds to the *first* Microsoft Entra property you selected. `{1}` corresponds to the *second* Microsoft Entra property you selected. `{2}` corresponds to the *third* Microsoft Entra property, and so on.  
 

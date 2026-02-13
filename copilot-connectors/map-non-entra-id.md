@@ -8,36 +8,34 @@ ms.topic: how-to
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Find information about how to map non-Entra ID identities when you set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center." 
-ms.date: 11/05/2020
+ms.date: 02/13/2026
 ---
 
 # Map non-Microsoft Entra ID identities  
 
-This article describes how to map non-Microsoft Entra ID identities to your Microsoft Entra identities. This allows people in your access control list (ACL) with non-Microsoft Entra ID identities to view connector responses scoped to them.
+This article describes how to map non-Microsoft Entra ID identities to your Microsoft Entra identities. Mapping identities allows people in your access control list (ACL) with non-Microsoft Entra ID identities to view connector responses scoped to them.
 
-These steps are relevant for AI administrators who choose **Only people with access to this data source** when they [Customize connector settings](/microsoft-365-copilot/connectors/deployment-overview#customize-connector-settings-optional) and choose **Non-Entra ID**.
+These steps are relevant for AI administrators who choose **Only people with access to this data source** when you [Customize connector settings](/microsoft-365-copilot/connectors/deployment-overview#customize-connector-settings-optional) and choose **Non-Entra ID**.
 
-## Map non-Entra ID properties
+## Select a Microsoft Entra user property  
 
-### 1. Select a Microsoft Entra user property  
+Select the Microsoft Entra user property you're creating the mapping for. This property is the target property to map your non-Entra ID identities to.  
 
-You can select the Microsoft Entra user property you're creating the mapping for. This is the target property to map your non-Entra ID identities to.  
-
-You can select one of the following Microsoft Entra properties:
+You can select one of the following Microsoft Entra properties.
 
 | Microsoft Entra property    | Definition           | Example         |
 | :------------------- | :------------------- |:--------------- |
 | User Principal Name (UPN)  | A UPN consists of a UPN prefix (the user account name) and a UPN suffix (a DNS domain name). The prefix is joined with the suffix using the "@" symbol. | us1@contoso.onmicrosoft.com |
 | Microsoft Entra ID                 | A Microsoft Entra ID for a given user is the unique GUID of the user.                 | 58006c96-9e6e-45ea-8c88-4a56851eefad            |
-| Active Directory Security ID (SID)                  | SID (Security Identifier) is a unique identifier that Active Directory uses to identify objects as security principal.                  | S-1-5-21-453406510-812318184-4183662089             |
+| Microsoft Entra object ID                 | A unique identifier that Microsoft Entra uses to identify objects as security principal.                  | S-1-5-21-453406510-812318184-4183662089             |
 
-### 2. Select non-Entra ID user properties to map
+## Select non-Entra ID user properties to map
 
-You can select non-Entra ID properties pulled from your data source to apply regular expressions on. To learn more about where to find these properties in your data source, see the [Confluence Cloud](confluence-cloud-connector.md), [Confluence On-premises](confluence-onpremises-connector.md), [ServiceNow Knowledge](servicenow-knowledge-connector.md), [ServiceNow Catalog](servicenow-catalog-connector.md), [ServiceNow Tickets](servicenow-tickets-connector.md) and [Salesforce](salesforce-connector.md) pages.  
+You can select non-Entra ID properties pulled from your data source to apply regular expressions on.
 
-You can select a non-Entra ID user property from the dropdown and provide a regular expression to be applied on those user property values.
+Select a non-Entra ID user property from the dropdown and provide a regular expression to be applied on those user property values.
 
-Following are some examples of regular expressions and their outputs applied to a sample string: 
+The following table shows examples of regular expressions and their outputs applied to a sample string. 
 
 | Sample String        | Regular expression   | Output of regular expression on sample string |
 | :------------------- | :------------------- |:---------------|
@@ -45,38 +43,36 @@ Following are some examples of regular expressions and their outputs applied to 
 | Alexis Vasquez       | `..$`                | ez             |
 | Alexis Vasquez       | `(\w+)$`             | Vasquez        |
 
-You can add as many non-Entra ID user properties as you would like expressions for. You can apply different regular expressions to the same user property if your final formula warrants that.  
+You can add as many non-Entra ID user properties as you want expressions for. You can apply different regular expressions to the same user property if your final formula warrants that.  
 
-### 3. Create formula to complete mapping
+## Create formula to complete mapping
 
-You can combine the outputs of the regular expressions applied to each of your non-Entra ID user properties to form the Microsoft Entra property selected in step 1.
+You can combine the outputs of the regular expressions applied to each of your non-Entra ID user properties to form the Microsoft Entra property.
 
-In the formula box, "{0}" corresponds to the output of the regular expression applied to the *first* non-Entra ID property you selected. "{1}" corresponds to the output of the regular expression applied to the *second* non-Entra ID property you selected. "{2}" corresponds to the output of the regular expression applied to the *third* non-Entra ID property, and so on.  
+In the formula box, `{0}` corresponds to the output of the regular expression applied to the *first* non-Entra ID property you selected. `{1}` corresponds to the output of the regular expression applied to the *second* non-Entra ID property you selected. `{2}` corresponds to the output of the regular expression applied to the *third* non-Entra ID property, and so on.  
 
-Following are some examples of formulas with sample regular expression outputs and formula outputs: 
+The following table shows some examples of formulas with regular expression outputs and formula outputs.
 
 | Sample formula                  | Value of {0} on sample user                 | Value of {1} on sample user           | Output of formula                  |
 | :------------------- | :------------------- |:---------------|:---------------|
 | {0}.{1}@contoso.com  | firstname | lastname |firstname.lastname@contoso.com
 | {0}@domain.com                 | userid                 |             |userid@domain.com
 
-After you provide your formula, you can optionally select **Preview** to see a preview of 5 random users from your data source with their respective user mappings applied. The output of the preview includes the value of the non-Entra ID user properties selected in step 2 for those users and the output of the final formula provided in step 3 for that user. It also indicates whether the output of the formula could be resolved to a Microsoft Entra user in your tenant via a "Success" or "Failed" icon.  
+After you provide your formula, you can optionally select **Preview** to see a preview of five users from your data source with their respective user mappings applied. The output of the preview includes the value of the non-Entra ID user properties for those users and the output of the final formula for that user. It also indicates whether the output of the formula resolves to a Microsoft Entra user in your tenant via a **Success** or **Failed** icon.  
 
 >[!NOTE]
->You can still proceed with creating your connection if one or more user mappings have a "Failed" status after you select **Preview**. The preview shows five random users and their mappings from your data source. If the mapping you provide does not map all users, you may experience this case.
-
-## Sample non-Entra ID mapping
-
-See the following snapshot for a sample non-Entra ID mapping.
-
-:::image type="content" alt-text="Sample snapshot of how to fill out the non-Entra ID mapping page." source="media/non-aad-mapping.png" lightbox="media/non-aad-mapping.png":::
+>You can proceed to create your connection if one or more user mappings have a **Failed** status after you select **Preview**. The preview shows five random users and their mappings from your data source. If the mapping you provide doesn't map all users, a failure can occur.
 
 ## Limitations  
 
+The following limitations apply when you map non-Microsoft Entra IDs:
+
 - Only one mapping is supported for all users. Conditional mappings aren't supported.  
+- You can't change your mapping after the connection is published.  
+- Only regex-based expressions against the non-Entra ID user properties are supported for the transformation.
+- You can choose to map only three Microsoft Entra identities: UPN, Microsoft Entra ID, and object ID.
 
-- You can't change your mapping once the connection is published.  
+## Related content
 
-- Only regex-based expressions against the non-Entra ID user properties are currently supported for the transformation.
-
-- You can choose to map only three Microsoft Entra identities: UPN, Microsoft Entra ID, and AD SID.
+- [Map Microsoft Entra IDs](map-entra-id.md)
+- [Deployment overview](deployment-overview.md)
