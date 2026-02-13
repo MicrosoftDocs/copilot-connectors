@@ -566,7 +566,7 @@ items:
         href: zendesk-ticket-deployment.md
       - name: Troubleshooting
         href: zendesk-ticket-troubleshooting.md
-- name: Configure Microsoft 365 Copilot
+- name: Configure Microsoft 365 Copilot extension
   href: copilot-extension.md
 - name: Build custom synced connectors
   items:
