@@ -93,6 +93,16 @@ items:
         href: azure-devops-connector.md
       - name: Troubleshooting
         href: troubleshoot-azure-devops-connector.md
+    - name: Azure DevOps Work Items
+      items:
+      - name: Overview
+        href: azure-devops-work0items-overview.md
+      - name: Set up the Azure DevOps service
+        href: azure-devops-workitems-admin-setup.md
+      - name: Deploy the connector
+        href: azure-devops-workitems-deployment.md
+      - name: Troubleshooting
+        href: azure-devops-workitems-troubleshooting.md
     - name: Azure DevOps Wiki
       items:
       - name: Setup
