@@ -17,7 +17,7 @@ summary: |
 sections:
   - name: "General questions"
     questions:
-      - question: "How do I set up a Microsoft 365 Copilot connector?"
+      - question: "How do I set up a synced Microsoft 365 Copilot connector?"
         answer: |
           To set up a Copilot connector:
           1. Create a connection.
@@ -31,12 +31,12 @@ sections:
           > [!NOTE]
           > Query strings are available for ServiceNow Knowledge, ServiceNow Catalog, and Confluence Cloud.
 
-      - question: "How do Copilot connectors work with Microsoft 365 Copilot?"
+      - question: "How do synced Copilot connectors work with Microsoft 365 Copilot?"
         answer: |
           Copilot connectors allow external content to be stored in Microsoft Graph, which provides a way to surface external content in various Microsoft 365 experiences. This integration allows for Microsoft 365 Copilot to access and summarize your diverse datasets from different sources, enhancing the ways your users are already searching for answers.
           For more information, see [Connectors overview](connectors-overview.md).
 
-      - question: "Is my data secure when I use connectors?"
+      - question: "Is my data secure when I use synced connectors?"
         answer: |
           When you use connectors to bring your content into Microsoft 365, your security and data access controls are maintained. You map existing access control lists to objects in Microsoft 365 and Microsoft Entra ID to ensure that only individuals with the right permissions can access the content.
 

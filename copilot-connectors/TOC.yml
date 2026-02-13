@@ -21,7 +21,7 @@ items:
     href: map-non-entra-id.md
   - name: Install connector agent
     items:
-    - name: Connector agent
+    - name: Connector agent installation
       href: connector-agent.md
     - name: Connector agent FAQ
       href: connector-agent-frequently-asked-questions.yml

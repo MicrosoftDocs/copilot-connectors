@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Microsoft 365 Copilot connectors FAQ
+  title: Microsoft Graph connector agent FAQ
   description: "Find answers to frequently asked questions about the Microsoft Graph connector agent."
   author: lauragra
   ms.author: lauragra
@@ -8,7 +8,7 @@ metadata:
   ms.service: copilot-connectors
   ms.date: 02/13/2026
 
-title: "Microsoft 365 Copilot connectors FAQ"
+title: "Microsoft Graph connector agent FAQ"
 summary: |
   To use on-premises Microsoft 365 Copilot connectors, you must install the Microsoft Graph connector agent. The connector agent allows for secure data transfer between on-premises data and the Copilot connector APIs. 
 
