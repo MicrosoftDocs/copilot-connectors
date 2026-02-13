@@ -12,7 +12,7 @@ title: "Microsoft 365 Copilot Connectors FAQ"
 summary: |
   Microsoft 365 Copilot connectors increase the discoverability of and engagement with your enterprise data by integrating your data into the Microsoft 365 Copilot experience. With Copilot connectors, you can make the most of your external data for functions like enriched data analysis to allow Copilot to access and summarize diverse datasets from different sources and provide more comprehensive insights.
 
-  This article provides answers to frequently asked questions related to Copilot connectors.
+  This article provides answers to frequently asked questions related to Microsoft 365 Copilot connectors.
 
 sections:
   - name: "General questions"
@@ -22,8 +22,8 @@ sections:
           To set up a Copilot connector:
           1. Create a connection.
           2. Register your schema.
-          3. Ingest your content into Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in Microsoft 365 Copilot app.
-          For more information, see /microsoft-365-copilot/connectors/deployment-overview.
+          3. Ingest your content into Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in Microsoft 365 Copilot.
+          For more information, see [Deployment overview](/microsoft-365-copilot/connectors/deployment-overview).
 
       - question: "Can I edit the query string after the connection is published?"
         answer: |
@@ -34,7 +34,7 @@ sections:
       - question: "How do Copilot connectors work with Microsoft 365 Copilot?"
         answer: |
           Copilot connectors allow external content to be stored in Microsoft Graph, which provides a way to surface external content in various Microsoft 365 experiences. This integration allows for Microsoft 365 Copilot to access and summarize your diverse datasets from different sources, enhancing the ways your users are already searching for answers.
-          For more information, see /microsoft-365-copilot/extensibility/overview-graph-connector.
+          For more information, see [Connectors overview](connectors-overview.md).
 
       - question: "Is my data secure when I use connectors?"
         answer: |
@@ -43,7 +43,7 @@ sections:
       - question: "Where is the data stored when it's ingested?"
         answer: |
           When data enters the Microsoft cloud through the Copilot connectors platform, it's stored in the region where your Microsoft 365 tenant is located.
-          For more information, see /microsoft-365/enterprise/o365-data-locations.
+          For more information, see [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
 
       - question: "Is the data ingested into Microsoft Graph encrypted? What encryption algorithm is used?"
         answer: |
@@ -51,17 +51,17 @@ sections:
           - **Data at rest (in customer's master store)** - Encrypted using DEK (Data Encryption Key) & KEK (Key Encryption Key) supplied to the partner.
           - **Data in transit** - Secure tunnel.
           - **Data at rest (in Microsoft 365)** - Encrypted using Microsoft 365 encryption key by default (you can provide your own encryption key).
-          For more information, see /purview/office-365-encryption-in-the-microsoft-cloud-overview.
+          For more information, see [Encryption in the Microsoft cloud](/purview/office-365-encryption-in-the-microsoft-cloud-overview).
 
       - question: "If data is encrypted, does Microsoft have access to the encryption keys?"
         answer: |
           Microsoft doesn't have (or need) access to partner encryption keys. Content in the Microsoft cloud is encrypted using Microsoft 365 encryption keys by default. You can provide your own encryption key.
-          For more information, see /purview/customer-key-overview.
+          For more information, see [Overview of Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
 
       - question: "How long are copies of the data retained?"
         answer: |
           Content is retained in adherence to the general Microsoft 365 data retention period.
-          For more information, see /compliance/assurance/assurance-data-retention-deletion-and-destruction-overview.
+          For more information, see [Data retention, deletion, and destruction in Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
 
       - question: "What are the best practices for testing a connection?"
         answer: |
@@ -76,7 +76,7 @@ sections:
       - question: "What are prebuilt Copilot connectors?"
         answer: |
           Prebuilt connectors are connectors that Microsoft and partner organizations provide that allow you to integrate external content sources like Salesforce, ServiceNow, Confluence, and more into Microsoft 365. These connectors help you bring external data into Microsoft 365.
-          For more information, see /microsoft-365-copilot/connectors/connectors-gallery.
+          For more information, see [Connectors gallery](connectors-gallery.md).
 
       - question: "What are the benefits of using prebuilt Copilot connectors?"
         answer: |
@@ -88,12 +88,12 @@ sections:
       - question: "What are custom Copilot connectors?"
         answer: |
           Custom connectors allow you to integrate your own data sources into Microsoft Graph to bring external data into Microsoft 365 experiences.
-          For more information, see /graph/connecting-external-content-connectors-overview.
+          For more information, see [Overview of Copilot connectors](overview-copilot-connector.md).
 
       - question: "How do I build a custom Copilot connector?"
         answer: |
           You can use the Microsoft 365 Agents Toolkit or the Copilot connectors SDK to build a custom Copilot connector.
-          For more information, see /microsoft-365-copilot/extensibility/build-your-first-connector and /graph/custom-connector-sdk-sample-overview.
+          For more information, see [Build your first connector](build-your-first-connector.md) and [Custom connector SDK sample overview](custom-connector-sdk-sample-overview.md).
 
       - question: "What are the prerequisites for creating a custom connector?"
         answer: |
@@ -110,7 +110,7 @@ sections:
           - Only updates items that changed since the last crawl.
           - Doesn't handle deletions, so items removed from the data source remain in the index.
           - Incremental crawls don't currently support processing of updates to permissions.
-          For more information about crawl schedules and refresh settings, see /microsoft-365-copilot/connectors/deployment-overview#crawl-scheduling.
+          For more information about crawl schedules and refresh settings, see [Crawl scheduling](deployment-overview.md#crawl-scheduling).
 
       - question: "Why aren't results displayed in Microsoft Search?"
         answer: |
