@@ -294,7 +294,7 @@ Use the service bus namespace provided in the error details to troubleshoot:
 
       The output should contain `StatusCode: 200`:
 
-    :::image type="content" alt-text="[Screenshot of wget 2." source="media/connector-agent/wget_gcs_namespace.png" lightbox="media/connector-agent/wget_gcs_namespace.png"::: 
+    :::image type="content" alt-text="Screenshot of wget 2." source="media/connector-agent/wget_gcs_namespace.png" lightbox="media/connector-agent/wget_gcs_namespace.png"::: 
    
       If it's false, verify that the domain is allowed in your proxy/firewall and that requests are going through the proxy.
 
@@ -304,7 +304,7 @@ Use the service bus namespace provided in the error details to troubleshoot:
 
 This error occurs when an update is already in progress and should resolve after a maximum of 30 minutes.
 
-![Screenshot of update in progress.](media/onprem-agent/AgentUpgradingError_AdminUX.png)
+:::image type="content" alt-text="Screenshot of connector agent update in progress." source="media/connector-agent/AgentUpgradingError_AdminUX.png" lightbox="media/connector-agent/AgentUpgradingError_AdminUX.png"::: 
 
 If the error persists after 30 minutes, follow these steps:
 
