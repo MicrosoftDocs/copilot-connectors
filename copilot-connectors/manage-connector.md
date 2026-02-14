@@ -12,55 +12,52 @@ description: "Manage your Microsoft 365 Copilot connector connection state and i
 ms.date: 07/02/2025
 ---
 
-# Manage your connections
+# Manage Microsoft 365 Copilot connector connections
 
 Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. This article describes how to manage your connections after you [deploy them in the admin center](deployment-overview).
 
 To access and manage your Microsoft 365 Copilot connectors, you must be a an AI administrator for your organization. 
 
-## Connection operations
-
-In the [Microsoft 365 admin center](https://admin.microsoft.com), go to [**connectors**](https://admin.microsoft.com/#/copilot/connectors ).
+## Supported connection operations
 
 For each connector type, the Microsoft 365 admin center supports the following operations.
 
 |Operation | Connectors by Microsoft | Connectors by partners
 |:--- |:-------- |:---|
-|Add a connection | :heavy_check_mark: (see [Deployment overview](deployment-overview.md)) | :x: (refer to your partner or custom-built connector admin UX)|
+|Add a connection | :heavy_check_mark: | :x: (Refer to partner or custom-built connector admin documentation)|
 |Delete a connection | :heavy_check_mark: | :heavy_check_mark:|
-|Edit a published connection | :heavy_check_mark: Name and description<br></br> :heavy_check_mark: Connection settings<br></br> :heavy_check_mark: Property labels<br></br> :heavy_check_mark: Schema<br></br> :heavy_check_mark: Refresh schedule<br></br> :heavy_check_mark: Query string(ServiceNow)<br></br> :heavy_check_mark: Advanced criteria(ServiceNow)<br></br> | :heavy_check_mark: Name<br></br> :heavy_check_mark: Description |
+|Edit a published connection | :heavy_check_mark: Name and description<br></br> :heavy_check_mark: Connection settings<br></br> :heavy_check_mark: Property labels<br></br> :heavy_check_mark: Schema<br></br> :heavy_check_mark: Refresh schedule<br></br> :heavy_check_mark: Query string (as applicable)<br></br> :heavy_check_mark: Advanced criteria (as applicable)<br></br> | :heavy_check_mark: Name<br></br> :heavy_check_mark: Description |
 |Edit a draft connection | :heavy_check_mark: | :x:|
 
 ## Monitor your connection state
 
-This page provides insights into the connector's daily operations, as well as an overview of logs and error history. After creating a connection, the number of processed items is displayed on the **Connectors** tab of the **Microsoft Search** page. Once the initial full crawl is completed successfully, the progress of periodic incremental crawls is shown. 
-
-The **State** column for each connection can display one of five statuses:
+You can view the connection state for your deployed connectors on the **Your Connections** tab in the admin center. The state shows in the **Connection state** column. One of the following states are displayed for each connection:
 
 - Syncing - The connector crawls the data from the source to index the existing items and make any updates.
 - Ready - The connection is ready, and there's no active crawl running against it. **Last sync time** indicates when the last successful crawl happened. The connection is as fresh as the last sync time.
-- Paused - The crawls are paused by the admins through the pause option. The next crawl runs only when it's manually resumed. However, the data from this connection continues to be searchable.
-- Failed - The connection had a critical failure. This error requires manual intervention. The admin needs to take appropriate action based on the error message shown. Data that was indexed until the error occurred is searchable. The next section talks about getting notified if such failures happen in a connection.
-- Delete failed - The deletion of the connection failed. Based on the failure reason, the data might still be indexed, item quota might still be consumed, and crawls might still run for the connection. We recommend that you try deleting the connection again in this state.
+- Paused - The crawls are paused by the admin via the **Pause** button on the connector page. The next crawl runs  when it's manually resumed. However, the data from this connection continues to be searchable.
+- Failed - The connection had a critical failure. This error requires manual intervention. The admin needs to take appropriate action based on the error message shown. Data that was indexed until the error occurred is searchable. 
+- Delete failed - The deletion of the connection failed. Based on the failure reason, the data might still be indexed, item quota might still be consumed, and crawls might still run for the connection. We recommend that you try deleting the connection again when this state occurs.
   
-## Manage visibility of third-party data sources in Copilot
-Admins can now control the visibility of third-party (3P) connectors in Copilot Search and Copilot Chat using a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it can still crawl the data source, but the data won't be used for search results.
+## Manage visibility of partner data sources in Copilot
 
-To manage visibility of third-party data sources in Copilot:
+Admins can control the visibility of partner connectors in Copilot and Copilot Search via a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it can still crawl the data source, but the data won't be used for search results.
 
-- Navigate to Copilot > **Connectors** > **Connection**.
-- Use the Copilot visibility toggle to turn a 3P connector on or off and click **Save**.
+To manage visibility of data sources in Copilot:
+
+- Go to **Copilot** > **Connectors** > **Your Connections**.
+- Use the Copilot visibility toggle to turn a connector on or off and choose **Save**.
   
-When off, the connector is excluded from all Copilot Search and Copilot Chat results and responses.
+When the visibility is off, the connector is excluded from all Copilot Search and Copilot Chat results and responses.
 
-The default behavior includes newly added 3P connectors being visible by default, with changes syncing automatically with Workplace Search, without affecting Declarative Agents and their data.
+The default behavior includes is visible by default, with changes syncing automatically with search, without affecting declarative agents and their data.
 
 > [!Note]
-> After updating the visibility settings at the connection level, please allow up to 30 minutes for the changes to propagate and become effective across all Copilot experiences
+> After you update the visibility settings at the connection level, allow up to 30 minutes for the changes to propagate across all Copilot experiences.
 
 ## Notifications for permanent crawl failures in your connections
 
-Connection crawls are scheduled to run at specific intervals. Failures can occur due to various issues with the connections. Some failures are temporary, and crawls resume automatically, while others are permanent and require administrative intervention to restart. In case of permanent failure, the connection is marked as **Failed**, and notifications are sent to the service health dashboard under the section Issues for your organization to act on.
+Connection crawls are scheduled to run at specific intervals. Failures can occur due to various issues with the connections. Some failures are temporary, and crawls resume automatically, while others are permanent and require administrative intervention to restart. In case of permanent failure, the connection is marked as **Failed**, and notifications are sent to the service health dashboard under the **Issues** section for your organization to act on.
 
 :::image type="content" alt-text="Screenshot that shows issues in your environment section of service health." source="media/manage-connector/shd-notification-home.png" lightbox="media/manage-connector/shd-notification-home.png":::
 
@@ -68,47 +65,49 @@ This information is also available as an advisory in the service status section 
 
 :::image type="content" alt-text="Screenshot that shows service status section" source="media/manage-connector/notification-service-status.png" lightbox="media/manage-connector/notification-bar-mac.png":::
 
-If there are active notifications, admins receive alerts in the form of notification bars on the Microsoft Admin Center home page. These bars display the connection ID associated with the failed crawls. Admins can click on the notification bars to view more details or remove them from the page.
+If there are active notifications, admins receive alerts in the form of notification bars on the Microsoft 365 admin center home page. These bars display the connection ID associated with the failed crawls. Admins can select the notification bars to view more details or remove them from the page.
 
 :::image type="content" alt-text="Screenshot that shows sample notification bar" source="media/manage-connector/notification-bar-mac.png" lightbox="media/manage-connector/notification-bar-mac.png":::
 
-Admins can view the notification details by clicking the notification.
+Admins can select the notification to view the notification details.
 
 :::image type="content" alt-text="Screenshot that shows sample notification" source="media/manage-connector/sample-notification.png" lightbox="media/manage-connector/sample-notification.png":::
 
-The notification remains active in the service health dashboard for six days. After this period, it is automatically moved to **Issue history** where it is retained for up to 30 days. If the connection resumes crawling, the notification is also moved to the Issue history. 
-No new notification is issued for the same connection until crawling restarts. Should the crawls restart and fail again, a new notification is generated. For multiple connections with crawl failures, each connection has a separate notification bar on both the admin center home page and the service health dashboard landing page.
+The notification remains active in the service health dashboard for six days. After this period, it is automatically moved to **Issue history** where it is retained for up to 30 days. If the connection resumes crawling, the notification is also moved to the **Issue history**. 
+No new notification is issued for the same connection until crawling restarts. If the crawls restart and fail again, a new notification is generated. For multiple connections with crawl failures, each connection has a separate notification bar on both the admin center home page and the service health dashboard landing page.
 
 ### Email notifications subscription
 
-To receive failure notifications and updates via email, admins can add up to two email addresses. To configure this:
+To receive failure notifications and updates via email, admins can add up to two email addresses:
 
-1. Navigate to the customize section on service health and open the email tab.
+1. Go to the customize section on service health and open the email tab.
 2. Check the box for **Issues in your environment that require action**.
-3. In **Include these services**, select Microsoft 365 suite. It ensures that admins receive all notifications for the Microsoft 365 suite, including Copilot connector notifications, once they subscribe to service health notifications.
+3. In **Include these services**, select Microsoft 365 suite. This selection ensures that admins receive all notifications for the Microsoft 365 suite, including Copilot connector notifications, when they subscribe to service health notifications.
 4. Save your changes.
 
 :::image type="content" alt-text="Screenshot that shows e-mail subscription for notifications" source="media/manage-connector/notification-mail.png" lightbox="media/manage-connector/on-demand-crawl.png":::
 
 ## Manage crawls in your connections
 
-During connection creation or edit connection flow, you can configure the crawl schedule through Refresh Settings. To learn more about the different types of crawls available see [Setup Overview](deployment-overview.md).
-
-Apart from the scheduled crawls, you can run on-demand crawls for your connection through the connection pane.
+During connection creation or configuration editing, you can configure the crawl schedule. In addition to the scheduled crawls, you can run on-demand crawls for your connection through the connection pane.
 
 :::image type="content" alt-text="Screenshot that shows on-demand crawl connection pane." source="media/manage-connector/on-demand-crawl.png" lightbox="media/manage-connector/on-demand-crawl.png":::
 
-On-demand crawl helps you start a crawl irrespective of the crawl schedule. You can choose to run a full or incremental crawl using the drop-down as shown in the image:
+On-demand crawl helps you start a crawl outside of the crawl schedule. You can choose to run a full or incremental crawl, as shown in the image.
 
 :::image type="content" alt-text="Screenshot that shows on-demand crawl drop-down." source="media/manage-connector/on-demand-dropdown.png" lightbox="media/manage-connector/on-demand-dropdown.png":::
 
 > [!NOTE]
-> The Microsoft Graph connector agent, only from version 2.1.0.0 onwards, supports on-demand crawl.
+> The Microsoft Graph connector agent versions 2.1.0.0 and later support on-demand crawl.
 
-There can be only one category of crawl—scheduled or on-demand—running on a connection at any time. If a connection is in a "Syncing" state, on-demand crawls are disabled. Scheduled crawls are auto-triggered.
+Only one category of crawl—scheduled or on-can run on a connection at any time. If a connection is in a **Syncing** state, on-demand crawls are disabled. Scheduled crawls are triggered automatically.
 
 If a scheduled or on-demand crawl continues beyond the time of the next scheduled full or incremental crawl, the ongoing crawl is stopped, and the next scheduled crawl is skipped and queued. After the ongoing crawl completes, the opposite type of crawl (full or incremental) is picked from the skipped queue and triggered. For example, if the previous crawl was a full crawl, only the incremental crawl, if present in the skipped queue, is triggered—and vice versa.
 
-Identify connections that contain items you no longer want to index. To update this connection, you must delete the existing connection and create a new connection with a data source exclusion filter to exclude the items you no longer wish to index.
+Identify connections that contain items you no longer want to index. To update this connection, you must delete the existing connection and create a new connection with a data source exclusion filter to exclude the items you no longer want to index.
 
 You can permanently delete one or more connections as needed.
+
+## Related content
+
+- [Deploy Microsoft 365 Copilot connectors](deployment-overview.md)

@@ -590,7 +590,7 @@ items:
   href: federated-connectors-overview.md
 - name: Manage connections
   items:
-  - name: Monitor connections
+  - name: Manage connections
     href: manage-connector.md
   - name: View connection details
     href: view-details.md
