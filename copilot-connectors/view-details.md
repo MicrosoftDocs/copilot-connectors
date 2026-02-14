@@ -15,39 +15,40 @@ description: "Access and manage your Microsoft 365 Copilot connectors as an AI a
 
 To access and manage your Microsoft 365 Copilot connectors, you must be an AI administrator for your tenant. 
 
-To see your connections in the [Microsoft 365 admin center](https://admin.microsoft.com), go to the [Data sources tab](https://admin.microsoft.com/#/copilot/connectors).
+To see your connections in the [Microsoft 365 admin center](https://admin.microsoft.com), go to the [Your Connections tab](https://admin.microsoft.com/#/copilot/connectors).
 
-You can view the connection details and errors by selecting the connection.  
+Select a connection to view the connection details and errors.  
 
 :::image type="content" source="media/view-details/data-sources-tab-1.png" alt-text="Screenshot that shows the connectors list with a connector selected and details pane showing information about this connector." lightbox="media/view-details/data-sources-tab-1.png":::
 
 ## View connection statistics 
 
-Connection statistics help you get overall information on what is happening to the data after the first full crawl is completed successfully.
+Connection statistics help you get overall information about what is happening to the data after the first full crawl is completed successfully.
 
-This section includes the data about the total number of items discovered, successfully indexed, or failed across all crawls. The data updates after every crawl and provides a cumulative perspective on the sync between the data source and the Microsoft 365 Copilot connector index. With this information, you can swiftly identify discrepancies and ensure that their connection is up to date. 
-The key perspective at this point is to understand that the sync between the data source and the index is at a cumulative level and not just the last crawl. 
+This section includes the data about the total number of items discovered, successfully indexed, or failed across all crawls. The data updates after every crawl and provides a cumulative perspective on the sync between the data source and the Microsoft 365 Copilot connector index. With this information, you can identify discrepancies and ensure that the connection is up to date. 
+
+The sync between the data source and the index is cumulative and not just the last crawl. 
 
 An item is indexed with the following information - content, properties (default + custom), and access.
-1. We consider an item as completely indexed when all 3 parts of the item are indexed successfully. 
-2. We consider an item as partially indexed when some part of the data is indexed however, some part is missing. The item is still searchable with the remaining properties. E.g. For an item we could index all the content but could not index some properties. 
+- An item as fully indexed when all three parts of the item - content, properties (default + custom), and access - are indexed successfully. 
+- An item is partially indexed when some of the data is indexed, but a part is missing. The item is still searchable with the remaining properties, but all properties might not be indexed. 
 
-How to read the data in connection statistics:
+The following table explains the data in the connection statistics.
 
 | Sr. No |Section | Meaning |
 |:---|:--- |:---|
-|1. |**Total number of discovered items** |Total items discovered in the data source during crawling. This is the number of items that the admin credentials have access to against the data source.|
-|2. |**Items currently in index**|All the items that could be indexed, partially or completely.|
+|1. |**Total number of discovered items** |Total items discovered in the data source during crawling. This number is the number of items that the admin credentials have access to against the data source.|
+|2. |**Items currently in index**|All the items that were indexed, partially or completely.|
 |2.a	|**Completely indexed items**|Total items successfully indexed with complete information attached to it, including content, access, and properties.|
-|2.b	|**Partially indexed items**|Items which are partially indexed<br> a) Partially indexed with incomplete ACL<br> b) Partially indexed with incomplete Data<br> c) Partially indexed with incomplete Properties <br>.|
-|2.c	|**Items in the index but out of sync**|All items that were not updated with the latest information from the data source. This is attempted again in the next crawl.|
-|3. |**Items failed to index**|Items that were discovered but were not processed due to any error. Further details of each error can be seen on the errors tab.|
+|2.b	|**Partially indexed items**|Items that are partially indexed<br> a) Partially indexed with incomplete ACL<br> b) Partially indexed with incomplete data<br> c) Partially indexed with incomplete properties <br>.|
+|2.c	|**Items in the index but out of sync**|All items that weren't updated with the latest information from the data source. The update is attempted again in the next crawl.|
+|3. |**Items failed to index**|Items that were discovered but weren't processed due to any error. You can find more details for each error on the **Errors** tab.|
 
 ## View index status
 
-During the initial setup, the index status displays real-time progress, including the number of items, users, groups, group memberships at any given moment. You can use the **Refresh** action to retrieve the latest counts. Post-setup, it continues to reflect the current number of searchable items, ensuring visibility into indexing completeness and availability at any point in time.
+During the initial setup, the index status displays real-time progress, including the number of items, users, groups, and group memberships at any moment. You can use the **Refresh** action to retrieve the latest counts. After setup, it continues to reflect the current number of searchable items, ensuring visibility into indexing completeness and availability at any time.
 
-The following values are available in the index for each connection:
+The following values are available in the index for each connection.
 
 |Value|Description| 
 |:--- |:---|
@@ -58,3 +59,7 @@ The following values are available in the index for each connection:
 | Group memberships| Number of users to group mapping instances.|  
 | Item Errors| Number of items that produced an error and failed to ingest.| 
 | User & group Errors| Number of user and group mapping failures.| 
+
+## Related content
+
+- [Deploy Microsoft 365 Copilot connectors](deployment-overview.md)

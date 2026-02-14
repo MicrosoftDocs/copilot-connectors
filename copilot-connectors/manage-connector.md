@@ -16,7 +16,7 @@ ms.date: 07/02/2025
 
 Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. This article describes how to manage your connections after you [deploy them in the admin center](deployment-overview).
 
-To access and manage your Microsoft 365 Copilot connectors, you must be a an AI administrator for your organization. 
+To access and manage your Microsoft 365 Copilot connectors, you must be an AI administrator for your organization. 
 
 ## Supported connection operations
 
@@ -31,7 +31,7 @@ For each connector type, the Microsoft 365 admin center supports the following o
 
 ## Monitor your connection state
 
-You can view the connection state for your deployed connectors on the **Your Connections** tab in the admin center. The state shows in the **Connection state** column. One of the following states are displayed for each connection:
+You can view the connection state for your deployed connectors on the **Your Connections** tab in the admin center. The state shows in the **Connection state** column. One of the following states is displayed for each connection:
 
 - Syncing - The connector crawls the data from the source to index the existing items and make any updates.
 - Ready - The connection is ready, and there's no active crawl running against it. **Last sync time** indicates when the last successful crawl happened. The connection is as fresh as the last sync time.
@@ -41,7 +41,7 @@ You can view the connection state for your deployed connectors on the **Your Con
   
 ## Manage visibility of partner data sources in Copilot
 
-Admins can control the visibility of partner connectors in Copilot and Copilot Search via a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it can still crawl the data source, but the data won't be used for search results.
+Admins can control the visibility of partner connectors in Copilot and Copilot Search via a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it can still crawl the data source, but the data isn't used for search results.
 
 To manage visibility of data sources in Copilot:
 
@@ -50,14 +50,14 @@ To manage visibility of data sources in Copilot:
   
 When the visibility is off, the connector is excluded from all Copilot Search and Copilot Chat results and responses.
 
-The default behavior includes is visible by default, with changes syncing automatically with search, without affecting declarative agents and their data.
+The default behavior is visible by default, with changes syncing automatically with search, without affecting declarative agents and their data.
 
 > [!Note]
 > After you update the visibility settings at the connection level, allow up to 30 minutes for the changes to propagate across all Copilot experiences.
 
 ## Notifications for permanent crawl failures in your connections
 
-Connection crawls are scheduled to run at specific intervals. Failures can occur due to various issues with the connections. Some failures are temporary, and crawls resume automatically, while others are permanent and require administrative intervention to restart. In case of permanent failure, the connection is marked as **Failed**, and notifications are sent to the service health dashboard under the **Issues** section for your organization to act on.
+Connection crawls are scheduled to run at specific intervals. Failures can occur due to various issues with the connections. Some failures are temporary, and crawl resume automatically, while others are permanent and require administrative intervention to restart. If a permanent failure occurs, the connection is marked as **Failed**, and notifications are sent to the service health dashboard under the **Issues** section for your organization to act on.
 
 :::image type="content" alt-text="Screenshot that shows issues in your environment section of service health." source="media/manage-connector/shd-notification-home.png" lightbox="media/manage-connector/shd-notification-home.png":::
 
@@ -73,7 +73,7 @@ Admins can select the notification to view the notification details.
 
 :::image type="content" alt-text="Screenshot that shows sample notification" source="media/manage-connector/sample-notification.png" lightbox="media/manage-connector/sample-notification.png":::
 
-The notification remains active in the service health dashboard for six days. After this period, it is automatically moved to **Issue history** where it is retained for up to 30 days. If the connection resumes crawling, the notification is also moved to the **Issue history**. 
+The notification remains active in the service health dashboard for six days. After this period, it's automatically moved to **Issue history** where it's retained for up to 30 days. If the connection resumes crawling, the notification is also moved to the **Issue history**. 
 No new notification is issued for the same connection until crawling restarts. If the crawls restart and fail again, a new notification is generated. For multiple connections with crawl failures, each connection has a separate notification bar on both the admin center home page and the service health dashboard landing page.
 
 ### Email notifications subscription
@@ -104,7 +104,7 @@ Only one category of crawl—scheduled or on-can run on a connection at any time
 
 If a scheduled or on-demand crawl continues beyond the time of the next scheduled full or incremental crawl, the ongoing crawl is stopped, and the next scheduled crawl is skipped and queued. After the ongoing crawl completes, the opposite type of crawl (full or incremental) is picked from the skipped queue and triggered. For example, if the previous crawl was a full crawl, only the incremental crawl, if present in the skipped queue, is triggered—and vice versa.
 
-Identify connections that contain items you no longer want to index. To update this connection, you must delete the existing connection and create a new connection with a data source exclusion filter to exclude the items you no longer want to index.
+Identify connections that contain items you no longer want to index. To update this connection, first delete the existing connection and create a new one with a data source exclusion filter that excludes the items you no longer want to index.
 
 You can permanently delete one or more connections as needed.
 
