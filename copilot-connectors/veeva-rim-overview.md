@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 12/03/2025
+ms.date: 02/18/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Veeva Vault RIM Microsoft 365 Copilot connector."
 ---
@@ -59,8 +59,8 @@ The Veeva Vault RIM Copilot connector enables users to:
 
 The Veeva Vault RIM connector has the following limitations:
 
-- Supports file types including Microsoft Office documents, PDFs, and text-based files only; doesn't support PNG, JPG, or video files.
-- Partially indexes files larger than 4 MB.
+- Supported file types are primarily text-based (Microsoft 365 documents, PDFs); nontext files such as .png, .jpg, or video files aren't supported.
+- Each document can include up to 4 MB of parsed (extracted) text for ingestion and indexing. In most .docx, .pptx, and .pdf files, the extracted text represents roughly 10% of the original file size, which allows many documents of 30–40 MB to be fully indexed. For other file types, this ratio might differ. If the extracted text exceeds the 4 MB limit, only the first portion is indexed, which might result in partial coverage and incomplete answers in Copilot and Search.
 - The indexing speed is constrained by the API rate limits imposed by the Veeva platform. If you have a high volume of documents, you might experience longer completion times. 
 
 ## Data types indexed from Veeva Vault RIM

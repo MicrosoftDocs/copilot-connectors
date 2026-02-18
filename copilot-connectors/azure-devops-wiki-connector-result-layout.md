@@ -18,17 +18,17 @@ ms.date: 06/03/2022
 The [Azure DevOps Wiki Microsoft 365 Copilot connector](azure-devops-wiki-connector.md) allows your organization to index wikis from the Azure DevOps service. After you configure the connector and index content, you need to set up a search result page.
 
 To set up the search result page, you need to:
-1. Set up [search vertical](manage-verticals.md).
-2. Set up [search result type](manage-result-types.md).
+1. Set up [search vertical](/microsoftsearch/manage-verticals).
+2. Set up [search result type](/microsoftsearch/manage-result-types).
 
-In this document, we have provided a sample result layout JSON required for setting up your result layout for the Azure DevOps Wiki Copilot connector.
+This article provides a result layout JSON example to set up your result layout for the Azure DevOps Wiki Copilot connector.
 
 ## Before you get started
 
-You must have configured the Azure DevOps Wiki Copilot connector. To consume the sample result layout JSON as is, you must select the following properties for indexing with the mentioned [search schema](deployment-overview.md).
+You must have configured the Azure DevOps Wiki Copilot connector. To consume the sample result layout JSON, you must select the following properties for indexing.
 
 > [!NOTE]
-> * **Retrieve** search attribute is required for displaying a property in the search result template. A property can have other search attributes also.  
+> The **Retrieve** search attribute is required for displaying a property in the search result template. A property can have other search attributes also.  
 
 | Property | Search schema attribute required |
 | -------- | -------- |
@@ -43,11 +43,11 @@ You must have configured the Azure DevOps Wiki Copilot connector. To consume the
 
 ## Result layout
 
-With this sample, your search results will look like:
+The following example shows what search results look like.
 
-![Example of a layout for Azure DevOps Wiki Copilot connector.](media/azure-devops-wiki-connector-example-layout.png)
+:::image type="content" source="media/ado-wiki/azure-devops-wiki-connector-example-layout.png" alt-text="Example of a layout for Azure DevOps Wiki Copilot connector." lightbox="media/ado-wiki/azure-devops-wiki-connector-example-layout.png"::: 
 
-And here's the layout's associated JSON file:
+The following is the associated JSON file.
 
 
 ```json
@@ -143,8 +143,7 @@ And here's the layout's associated JSON file:
 }
 
 ```
-## Resources
+## Related content
 
-[Customize search result page](customize-search-page.md)
-
-[Manage search result layouts](customize-results-layout.md)
+- [Customize search verticles](/MicrosoftSearch/manage-verticals)
+- [Manage search result layouts](/microsoftsearch/customize-results-layout)

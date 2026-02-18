@@ -92,12 +92,6 @@ items:
         href: troubleshoot-azure-data-lake-connector.md
     - name: Azure DevOps Work Items
       items:
-      - name: Setup
-        href: azure-devops-connector.md
-      - name: Troubleshooting
-        href: troubleshoot-azure-devops-connector.md
-    - name: Azure DevOps Work Items
-      items:
       - name: Overview
         href: azure-devops-work0items-overview.md
       - name: Set up the Azure DevOps service

@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 02/09/2026
+ms.date: 02/18/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Veeva PromoMats Microsoft 365 Copilot connector."
 ---
@@ -68,8 +68,8 @@ The Veeva PromoMats connector enables users to:
 The Veeva PromoMats connector has the following limitations:
 
 - Only indexes the latest version of documents/assets in PromoMats (historical versions might not be surfaced).
-- Supported file types are primarily text-based (Microsoft Office documents, PDFs); nontext files such as PNG, JPG, or video files aren't supported.
-- Files larger than 4 MB might be only partially indexed.
+- Supported file types are primarily text-based (Microsoft 365 documents, PDFs); nontext files such as .png, .jpg, or video files aren't supported.
+- Each document can include up to 4 MB of parsed (extracted) text for ingestion and indexing. In most .docx, .pptx, and .pdf files, the extracted text represents roughly 10% of the original file size, which allows many documents of 30–40 MB to be fully indexed. For other file types, this ratio might differ. If the extracted text exceeds the 4 MB limit, only the first portion is indexed, which might result in partial coverage and incomplete answers in Copilot and Search.
 - The connector works when content is in PromoMats in the cloud (Vault) and might require more setup steps for customized or nonstandard vaults.
 - Updates to user or group permissions in PromoMats might not be reflected immediately in the index (depending on crawl cadence)—there might be a delay before new access restrictions are honored.
 - The indexing speed is constrained by the API rate limits imposed by the Veeva platform. If you have a high volume of documents, you might experience longer completion times. 
