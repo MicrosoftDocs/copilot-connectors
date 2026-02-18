@@ -598,7 +598,7 @@ items:
     href: manage-access-permissions.md
   - name: Search and validate indexed content
     href: indexed-content.md
-  - name: Error responses
+  - name: Monitor errors
     href: error-responses.md
   - name: Item delete notification
     href: item-delete-notification.md
