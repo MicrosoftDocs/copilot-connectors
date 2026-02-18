@@ -41,7 +41,7 @@ To configure a Dropbox app:
 
 - Go to the [Dropbox developer portal](https://www.dropbox.com/developers/apps/) and select **Create app**.
 
-![Screenshot of the Create app button in the Dropbox developer portal.](media/dropbpx-create-app.png)
+  :::image type="content" source="media/dropbox/dropbpx-create-app.png" alt-text="Screenshot of the Create app button in the Dropbox developer portal." lightbox="media/dropbox/dropbpx-create-app.png":::
 
 - Configure the app with:
 
@@ -49,7 +49,7 @@ To configure a Dropbox app:
     - Scoped access
     - Full Dropbox access permissions
     
-![Screenshot of the app configuration fields.](media/dropbox-prerequisites-2.png)
+ :::image type="content" source="media/dropbox/dropbox-prerequisites-2.png" alt-text="Screenshot of the app configuration fields." lightbox="media/dropbox/dropbox-prerequisites-2.png":::
 
 For more information, see [Getting started with Dropbox](https://www.dropbox.com/developers/reference/getting-started).
 
@@ -60,7 +60,7 @@ In the **OAuth 2.0** section of the Dropbox App Console, add the following URLs:
 - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
 - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
 
- ![Screenshot of the Redirect URIs field.](media/dropbox-add-directurl.png)
+ :::image type="content" source="media/dropbox/dropbox-add-directurl.png" alt-text="Screenshot of the Redirect URIs field." lightbox="media/dropbox/dropbox-add-directurl.png":::
 
 ## Add API scopes
 
@@ -85,7 +85,7 @@ Go to the **Permissions** tab and add the following API scopes:
 - groups.read
 - events.read
 
-![Screenshot of the permissions tab.](media/dropbox-api-scopes.png)
+:::image type="content" source="media/dropbox/dropbox-api-scopes.png" alt-text="Screenshot of the permissions tab." lightbox="media/dropbox/dropbox-api-scopes.png"::: 
 
 ## Get app key and app secret
 
