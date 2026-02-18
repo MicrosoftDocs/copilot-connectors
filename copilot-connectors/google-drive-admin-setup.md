@@ -137,4 +137,4 @@ Provide the following information to the admin to authenticate the connector dur
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Google Drive connector](/microsoft-365-copilot/connectors/google-drive-connector)
+> [Deploy the Google Drive connector](google-drive-deployment.md)
