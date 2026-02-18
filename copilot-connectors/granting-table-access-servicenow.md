@@ -1,5 +1,5 @@
 ---
-ms.date: 09/16/2025
+ms.date: 01/16/2026
 title: "Grant table access to a service account in ServiceNow"
 ms.author: souravpoddar
 author: souravpoddar001
@@ -92,3 +92,14 @@ To verify access to the table:
 1. Confirm that both rows and field values within the target table are now visible.
 
 You successfully granted table access to a service account in ServiceNow.
+
+## Verify service account permissions
+
+You can use the **Copilot Connector Checker Tool** to confirm that all required permissions for ServiceNow Knowledge Base (KB) tables are configured correctly:
+
+1. Open the [Copilot Connector Checker Tool](https://testconnectivity.microsoft.com/tests/CopilotServiceNowGraphConnectors/input).
+1. Choose the authentication type in the **Authentication Type** field: Basic or OAuth (recommended).
+1. Complete the fields and choose **Perform Test**.
+1. The tool automatically validates connectivity, verifies credentials, checks table-level permissions, provides a summary of results, and recommends next steps as needed.
+
+If you have feedback about the tool, choose the **Feedback** link at the bottom of the page.

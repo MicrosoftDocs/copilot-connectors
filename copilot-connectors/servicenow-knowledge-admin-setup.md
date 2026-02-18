@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 12/09/2025
+ms.date: 01/16/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Knowledge Copilot connector."
 ---
@@ -37,6 +37,7 @@ The following checklists list the steps involved in configuring the environment 
 | Task | Role | 
 |------|------|
 | [Create service account and set up permissions](#create-service-account-and-set-up-permissions-to-index-items) | ServiceNow admin |
+| [Verify service account permissions](#verify-service-account-permissions) | ServiceNow admin |
 | [Identify item count for ingestion](#identify-item-count-for-ingestion) | ServiceNow admin |
 | [Set up REST API](#set-up-rest-api) | ServiceNow admin |
 | [Set up hierarchical permissions (preview)](#set-up-hierarchical-permissions-preview) | ServiceNow admin |
@@ -138,6 +139,17 @@ If the service account doesn't have the required permissions—or if row or fiel
 > The service account needs write access to the `oauth_credential` table for authentication. 
 
 If the service account doesn’t have access to the full User Criteria table, inconsistent behavior related to user permissions, including unintended content oversharing, can occur.
+
+### Verify service account permissions
+
+You can use the **Copilot Connector Checker Tool** to confirm that all required permissions for ServiceNow Knowledge are configured correctly:
+
+1. Open the [Copilot Connector Checker Tool](https://testconnectivity.microsoft.com/tests/CopilotServiceNowGraphConnectors/input).
+1. Choose the authentication type in the **Authentication Type** field: Basic or OAuth (recommended).
+1. Complete the fields and choose **Perform Test**.
+1. The tool automatically validates connectivity, verifies credentials, checks table-level permissions, provides a summary of results, and recommends next steps as needed.
+
+If you have feedback about the tool, choose the **Feedback** link at the bottom of the page.
 
 ### Identify item count for ingestion
 

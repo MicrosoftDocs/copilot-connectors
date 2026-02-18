@@ -119,11 +119,11 @@ To find and verify the property path, see [Query builder API](https://experience
 3. Choose **search**.
 4. After the results are returned, choose **JSON query builder link** to see the JSON content with all properties.
 
-    :::image type="content" source="media/aem-assets-query-builder-debugger.png#lightbox" alt-text="Screenshot that shows the Adobe Experience Manager Assets Query Builder Debugger."::: 
+    :::image type="content" source="media/aem-assets-deployment/aem-assets-query-builder-debugger.png" alt-text="Screenshot that shows the Adobe Experience Manager Assets Query Builder Debugger." lightbox="media/aem-assets-deployment/aem-assets-query-builder-debugger.png"::: 
 
 5. Find the property and JSON path of the property. For example, the JSON path of the property `dc:format` is `hits.jcr:content.metadata.dc:format`.
 
-    :::image type="content" source="media/aem-assets-jcrpath-sample.png" alt-text="Screenshot of a JCR path with some properties highlighted.":::
+    :::image type="content" source="media/aem-assets-deployment/aem-assets-jcrpath-sample.png" alt-text="Screenshot of a JCR path with some properties highlighted." lightbox="media/aem-assets-deployment/aem-assets-jcrpath-sample.png":::
 
 **Operators**  
 The operator defines the type of comparison applied to a property during content filtering. The supported operators are:
@@ -186,7 +186,7 @@ To add more custom properties:
     c.	JSON path
 3.	Define the schema (searchable, queryable, retrievable, or refinable).
 
-:::image type="content" source="media/aem-assets-metadata-ingestion-filter-sample-input.png" alt-text="Screenshot of the Add a property dialog box in AEM Assets":::
+:::image type="content" source="media/aem-assets-deployment/aem-assets-property-filters.png" alt-text="Screenshot of the Add a property dialog box in AEM Assets" lightbox="media/aem-assets-deployment/aem-assets-property-filters.png":::
 
 ### Customize sync intervals 
 
