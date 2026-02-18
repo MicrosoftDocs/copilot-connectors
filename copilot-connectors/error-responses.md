@@ -35,7 +35,7 @@ You can view a limited set of Microsoft 365 Copilot connector errors in the Micr
 6. Define the batch size for downloading errors. Larger batches are best for thousands of errors to minimize data retrieval time, but might increase the likelihood of failures. The maximum batch size is 5,000 errors. After you sign in with your tenant account, the download process begins.
 7. Depending on batch size and error count, the download duration varies. The generated file is saved in the script's path with the specified name.
 
-    :::image type="content" alt-text="Screenshot that shows a PowerShell script run to download the error report." source="media/errorreport.png" lightbox="media/errorreport.png":::
+    :::image type="content" alt-text="Screenshot that shows a PowerShell script run to download the error report." source="media/errors/errorreport.png" lightbox="media/errors/errorreport.png":::
 
 ## Monitor errors
 

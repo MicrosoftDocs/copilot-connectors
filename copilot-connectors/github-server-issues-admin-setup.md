@@ -29,7 +29,7 @@ The following checklist lists the steps involved in configuring the environment 
 | [Ensure API access to the target GitHub instance](#ensure-api-access-to-the-target-github-instance) | GitHub admin    |
 | [Identify Microsoft Entra ID identity mapping rules](#identify-microsoft-entra-id-mapping-rules) | GitHub admin    |
 | [Sign in to the GitHub account](#sign-in-to-the-github-account) | GitHub admin    |
-| [Verify AI administrator permissions](#verify-search-admin-permissions) | GitHub admin    |
+| [Verify AI administrator permissions](#verify-ai-administrator-permissions) | GitHub admin    |
 | [Use a custom GitHub app for authentication](#use-a-custom-github-app-for-authentication) | GitHub admin |
 | [Adjust GitHub Server API rate limit](#adjust-github-server-api-rate-limit) | GitHub admin |
 | [Configure firewall settings](#configure-firewall-settings) | Network admin |
@@ -73,19 +73,19 @@ To create a GitHub app for use with the GitHub Server Issues connector:
 
 1. In GitHub, select your profile photo on the top right, select **Your organizations**, and choose the organization the connector should pull data from.
 
-:::image type="content" source="./media/github-cloud-issues-admin-setup/github-your-organizations.png" alt-text="Screenshot of GitHub with Your organizations highlighted":::
+:::image type="content" source="/media/github-cloud-issues-admin-setup/github-your-organizations.png" alt-text="Screenshot of GitHub with Your organizations highlighted" lightbox="/media/github-cloud-issues-admin-setup/github-your-organizations.png":::
 
 2. On the organization overview page, select **Settings**.
 
-:::image type="content" source="./media/github-cloud-issues-admin-setup/github-settings.png" alt-text="Screenshot of GitHub with Settings highlighted":::
+:::image type="content" source="./media/github-cloud-issues-admin-setup/github-settings.png" alt-text="Screenshot of GitHub with Settings highlighted" lightbox="/media/github-cloud-issues-admin-setup/github-settings.png":::
 
 3. In the left sidebar, scroll down to **Developer settings** and select **GitHub Apps**.
 
-:::image type="content" source="./media/github-cloud-issues-admin-setup/github-apps.png" alt-text="Screenshot of GitHub with GitHub Apps highlighted":::
+:::image type="content" source="/media/github-cloud-issues-admin-setup/github-apps.png" alt-text="Screenshot of GitHub with GitHub Apps highlighted" lightbox="/media/github-cloud-issues-admin-setup/github-apps.png":::
 
 4.  Select **New GitHub App**.
 
-:::image type="content" source="./media/github-cloud-issues-admin-setup/new-github-app.png" alt-text="Screenshot of GitHub with New GitHub App highlighted":::
+:::image type="content" source="/media/github-cloud-issues-admin-setup/new-github-app.png" alt-text="Screenshot of GitHub with New GitHub App highlighted" lightbox="/media/github-cloud-issues-admin-setup/new-github-app.png":::
 
 5.  Configure the app:
 
@@ -161,7 +161,7 @@ To increase the API request limit:
 1. Under **API requests (per hour) – Authenticated**, enter the rate‑limit value (for example, **30000**).
 1. Select **Save settings**.
 
-:::image type="content" source="./media/github-server-rate-limit.png" alt-text="Screenshot of the Rate limiting tab in GitHub Server with API Requests and Save settings highlighted.":::
+:::image type="content" source="./media/github-cloud-issues-admin-setup/github-server-rate-limit.png" alt-text="Screenshot of the Rate limiting tab in GitHub Server with API Requests and Save settings highlighted." lightbox="/media/github-cloud-issues-admin-setup/github-server-rate-limit.png":::
 
 > [!NOTE]
 > When you save your changes, certain GitHub Server services might restart and cause a brief service interruption. After you save, allow time for the configuration to propagate across the instance.

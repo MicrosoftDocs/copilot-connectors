@@ -23,7 +23,7 @@ The Enterprise Websites cloud Microsoft 365 Copilot connector allows your organi
 - Index webpages from cloud accessible websites.
 - Index up to 50 websites in a single connection.
 - Exclude webpages from crawl using exclusion rules.
-- Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content.
 
 These are the supported file types.
 
