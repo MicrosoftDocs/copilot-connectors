@@ -46,8 +46,11 @@ Admins can control the visibility of partner connectors in Copilot and Copilot S
 To manage visibility of data sources in Copilot:
 
 - Go to **Copilot** > **Connectors** > **Your Connections**.
-- Use the Copilot visibility toggle to turn a connector on or off and choose **Save**.
-  
+- Select the connection that you want to modify.
+- Under **Copilot Visibility**, select the toggle to turn the connector on or off, and choose **Save**.
+
+:::image type="content" alt-text="Screenshot that shows the Copilot Visibility toggle on the connection pane" source="media/manage-connector/copilot-visibility.png" lightbox="media/manage-connector/copilot-visibility.png":::
+
 When the visibility is off, the connector is excluded from all Copilot Search and Copilot Chat results and responses.
 
 The default behavior is visible by default, with changes syncing automatically with search, without affecting declarative agents and their data.
