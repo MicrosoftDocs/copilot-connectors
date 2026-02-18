@@ -172,7 +172,7 @@ To secure access, configure your firewall to allow Copilot connector service IP 
 
 ### Content property
 
-We recommend that you select a **Content property** from the drop-down list, or keep the default selection if one is provided. The content property is used for full-text indexing and supports scenarios such as search result snippet generation, [result cluster](result-cluster.md) participation, language detection, HTML and text processing, ranking and relevance, and query formulation.
+We recommend that you select a **Content property** from the drop-down list, or keep the default selection if one is provided. The content property is used for full-text indexing and supports scenarios such as search result snippet generation, [result cluster](/microsoftsearch/result-cluster) participation, language detection, HTML and text processing, ranking and relevance, and query formulation.
 
 When you select a content property, you can use the system-generated **ResultSnippet** property when you [create your result type](customize-results-layout.md). **ResultSnippet** acts as a placeholder for dynamic snippets that are generated at query time from the content property. When this property is included in a result type, snippets appear in search results automatically.
 

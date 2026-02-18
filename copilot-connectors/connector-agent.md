@@ -18,7 +18,7 @@ To use on-premises Microsoft 365 Copilot connectors, you must install the Micros
 
 ## Install the agent
 
-[Download](https://aka.ms/gca) the latest version of the Microsoft Graph connector agent and install use the installation configuration assistant to install it. For information about the latest connector agent release, see the [Connector agent release notes](connector-agent-released.md).
+[Download](https://aka.ms/gca) the latest version of the Microsoft Graph connector agent and install use the installation configuration assistant to install it. For information about the latest connector agent release, see the [Connector agent release notes](connector-agent-releases.md).
 
 >[!NOTE]
 >We recommend that you always use the latest version of the connector agent to ensure feature completeness.
@@ -240,7 +240,7 @@ The agent is considered offline if it isn't able to contact the Copilot connecto
 
     The response should contain the output `TcpTestSucceeded: True`.
 
-    ![Screenshot of tnc.](media/onprem-agent/tnc_gcs_1.png)
+    :::image type="content" alt-text="Screenshot showing that Tcp test succeeded." source="media/connector-agent/tnc_gcs_1.png" lightbox="media/connector-agent/tnc_gcs_1.png":::
    
     If it's false, verify that the domain is allowed in your proxy/firewall and that requests are going through the proxy.
 

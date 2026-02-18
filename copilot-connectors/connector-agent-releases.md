@@ -16,7 +16,7 @@ ms.date: 12/16/2025
 
 Indexing on-premises data sources requires you to install *Microsoft Graph connector agent* software. It allows for secure data transfer between on-premises data and the connector APIs.
 
-For help with installation, see [Connector agent installation](connector-agent.md#installation).
+For help with installation, see [Install the agent](connector-agent.md#install-the-agent).
 
 [Download latest Graph Connector Agent](https://aka.ms/gca)
 
@@ -83,7 +83,7 @@ For help with installation, see [Connector agent installation](connector-agent.m
 
 ## Version 3.1.0.0 (*September 24, 2024*)
 
-* This update marks the General Availability of [Confluence On-premises](confluence-onpremises-connector.md) connector.
+* This update marks the General Availability of [Confluence On-premises](confluence-onpremises-deployment.md) connector.
 * Bug fixes and reliability improvements.
 
 ## Version 3.0.1.0 (*September 12, 2024*)
@@ -194,7 +194,6 @@ For help with installation, see [Connector agent installation](connector-agent.m
 * Microsoft Graph connectors SDK GA: Updated SDK test utility with more test cases. [Learn more about Graph Connectors SDK](/graph/custom-connector-sdk-overview).
 * Support for .NET 7. This version upgrade requires a manual installation of the Graph Connector Agent and the “Upgrade” feature will not be available until this new version is installed. If you're upgrading from Graph Connector Agent 1.x to 2.x, refer to this [page](connector-agent.md).
 * Improved troubleshooting of common Graph Connector Agent issues through "Health Check" feature in Registration details page. Now, you can click on the "Health check" button, as in the image, to check Graph Connector Agent health.
-:::image type="content" source="media/onprem-agent/health-check-registration.jpg" alt-text="Sample snapshot of Health check success on GCA registration page.":::
 
 * Bug fixes and performance improvements
 
@@ -222,7 +221,6 @@ For help with installation, see [Connector agent installation](connector-agent.m
 ## Version 1.8.2.0 (*October 06, 2022*)
 
 * Upgrade Graph Connector Agent with just one click in the UI. For later builds, if there are any upgrades available for Graph Connector Agent, the one-click upgrade feature is available in the connection details pane. For builds older than this version, there's an option to download and install the GCA build.
-![Sample snapshot of how to upgrade GCA with one-click from the connection pane.](media/gca-releases/one-click-upgrade.png)
 
 * Bug fixes and reliability improvements
 

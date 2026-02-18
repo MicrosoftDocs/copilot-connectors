@@ -51,7 +51,7 @@ To connect to your DataStax database, you need the DataStax database ID. The dat
 ### 4. Generate the Application Token
 To use **DataStax Application Token** for authentication, a DataStax admin needs to generate the application token for the database with a proper user role, such as using "Read Only User".
 
-[![Screenshot that shows the DataStax API Endpoint, Database ID and Generate Token in the Astra DB overview.](media/datastax-api-endpoint.png)](media/datastax-api-endpoint.png#lightbox)
+[![Screenshot that shows the DataStax API Endpoint, Database ID and Generate Token in the Astra DB overview.](media/datastax/datastax-api-endpoint.png)](media/datastax/datastax-api-endpoint.png#lightbox)
 
 Copy the generated application token from the token details, which is typically a long string that  starts with "AstraCS:..." and paste it in the connector setup. Choose **Authorize**, and use the same token to authenticate permission to crawl.
 
@@ -81,7 +81,7 @@ In custom setup you can edit any of the default values for users, content, and s
 
 ### Users
 
-[![Screenshot that shows Users tab where you can configure access permissions and user mapping rules.](media/DataStax-users-tab.png)](media/DataStax-users-tab.png#lightbox)
+[![Screenshot that shows Users tab where you can configure access permissions and user mapping rules.](media/datastax/DataStax-users-tab.png)](media/datastax/DataStax-users-tab.png#lightbox)
 
 #### Access permissions
 
@@ -98,7 +98,7 @@ To identify which option is best for your organization:
 
 ### Content
 
-[![Screenshot that shows Content tab where you can configure properties and schema.](media/DataStax-content-tab.png)](media/DataStax-content-tab.png#lightbox)
+[![Screenshot that shows Content tab where you can configure properties and schema.](media/datastax/DataStax-content-tab.png)](media/datastax/DataStax-content-tab.png#lightbox)
 
 #### Manage properties
 
@@ -118,7 +118,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 ### Sync
 
-[![Screenshot that shows Sync tab where you can configure crawl frequency.](media/DataStax-sync-tab.png)](media/DataStax-sync-tab.png#lightbox)
+[![Screenshot that shows Sync tab where you can configure crawl frequency.](media/datastax/DataStax-sync-tab.png)](media/datastax/DataStax-sync-tab.png#lightbox)
 
 The refresh interval determines how often your data is synced between the data source and the DataStax Copilot connector index. The DataStax graph connector only supports the refresh interval - full crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 
