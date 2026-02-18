@@ -17,12 +17,12 @@ Microsoft 365 Copilot connectors index content from external data sources into M
 
 You can review and validate access permissions for each Microsoft 365 Copilot connector from the connection details pane in the Microsoft 365 admin center. This article describes how to verify whether the configured permissions align with your intended settings, and how to update them.
  
-## Manage access permissions in the admin center
+## View and update access permissions
 
 To manage access permissions for a configured connector:
 
 1. In the [Microsoft 365 Admin Center](https://admin.microsoft.com), go to **Copilot** > **Connectors** > **Your Connections**.
-1. Select the connector you want to review to open the **details pane**. 
+1. Select the connector you want to review to open the details pane. 
 1. Under **Permissions**, you can view the permissions set for the connector. One of the following permissions is applied:
  
     - **Only people with access to this data source**: The connector respects source system access control lists (ACLs).
@@ -39,3 +39,4 @@ If the access permissions configured for the connector don't match your intended
 ## Related content
 
 - [Deploy Microsoft 365 Copilot connectors](deployment-overview.md)
+- [Microsoft-built synced connectors](prebuilt-connectors-overview.md)

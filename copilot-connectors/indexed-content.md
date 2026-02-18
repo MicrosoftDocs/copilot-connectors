@@ -13,13 +13,13 @@ description: "Learn how to search and validate whether Microsoft 365 Copilot con
 
 # Search and validate indexed content
 
-When you're testing a Microsoft 365 Copilot connection, you can use the index browser to test and verify connector content indexing. If you need to verify properties and user access, it helps to review the metadata and access control lists (ACLs) of indexed items. It's also helpful for troubleshooting search issues. If users report issues accessing items, you can verify whether the item was indexed correctly and includes the correct data.
+When you're testing a Microsoft 365 Copilot connection, you can use the index browser to verify connector content indexing. If you need to verify properties and user access, it helps to review the metadata and access control lists (ACLs) of indexed items. It's also helpful for troubleshooting search issues. If users report issues accessing items, you can verify whether the item was indexed correctly and includes the correct data.
 
 :::image type="content" source="media/manage-connector/index-search.png" alt-text="Screenshot that shows the connector what users can see when they enter an item ID of an indexed item.":::
 
 ## Index browser
 
-When you enter an item ID to check its index status, you can view the following details if the item is indexed.
+When you enter an item ID to check its index status, you can view the following details if the item is indexed:
 
 - Name of the Content - The name of the indexed item.
 - Status - The current status of the item and its last refresh time.
@@ -55,30 +55,34 @@ To search for indexed content, enter the unique identifier of the item in the in
 |BambooHR|Employee ID (EeId) |Go to the user profile in BambooHR. The Employee ID (EeId) is found in the URL. For example, in this URL: `https://contoso.bamboohr.com/employees/employee.php?id=4&page=2078`), the Employee ID (EeId) is `4`.|
 
 ## Examples
-### Example 1: The item status is partially indexed
+### Item status is partially indexed
 
-It indicates that the item is missing some information, such as properties, user details, or content, but remains searchable in Microsoft Search and Microsoft 365 Copilot. To ensure the item is complete, review the Errors tab for details.
+An item status of **Partially indexed** indicates that the item is missing some information, such as properties, user details, or content, but remains searchable in Microsoft Search and Microsoft 365 Copilot. To ensure the item is complete, review the **Errors** tab for any errors.
 
-### Example 2: The item status is deny all
+### Item status is deny all
 
-It indicates that the item is indexed but remains inaccessible to all users, as shown by an empty response in the permissions tab. Although the item is present in the index, users can't view it.
+An item status of **Deny all** indicates that the item is indexed but remains inaccessible to all users, as shown by an empty response in the permissions tab. Although the item is present in the index, users can't view it.
 
-In the case of a ServiceNow Knowledge connector, the **Deny all** status may result from different causes
+For ServiceNow Knowledge connectors, the **Deny all** status might occur for the following reasons:
 
-- **Advanced user criteria applied on knowledge article & simple flow used during connection setup instead of advanced flow** - In case the connection setup is configured with simple flow & advanced user criteria and applied to knowledge article in the "Cannot read" section, it may be marked as `Deny all`. To resolve it, try removing the advanced criteria and triggering a full crawl, or complete the connection setup using the [advanced flow method](servicenow-knowledge-advanced-flow.md). For more information, see the troubleshooting section of each connector. 
+- **Advanced user criteria applied on knowledge article and simple flow used during connection setup instead of advanced flow** - If the connection is configured with simple flow and advanced user criteria is applied to knowledge articles in the **Cannot read** section, the item status might be **Deny all**. Try removing the advanced criteria and triggering a full crawl, or complete the connection setup using the [advanced flow method](servicenow-knowledge-advanced-flow.md). 
 
-- **Advanced user criteria applied on knowledge base & simple flow used during connection setup instead of advanced flow** - In case the connection setup is configured with simple flow & advanced user criteria  and applied on a knowledge base in the "Cannot read" or "Cannot contribute" section, it results in a `Deny all` status for the articles within that knowledge base. To resolve it, identify the knowledge base the article belongs to and remove the advanced criteria, or complete the connection setup using the [advanced flow method](servicenow-knowledge-advanced-flow.md). For more information, see the troubleshooting section of each connector. 
+- **Advanced user criteria applied on knowledge base and simple flow used during connection setup instead of advanced flow** - If the connection  is configured with simple flow and advanced user criteria is applied on a knowledge base in the **Cannot read** or **Cannot contribute** section, the item status might be **Deny all** for the articles within that knowledge base. Identify the knowledge base the article belongs to and remove the advanced criteria, or complete the connection setup using the [advanced flow method](servicenow-knowledge-advanced-flow.md). 
 
-Also, temporary issues might cause a **Deny all** status, which can be resolved during the next full crawl.
+Temporary issues might also cause a **Deny all** status that is resolved during the next full crawl.
 
-### Example 3: The item status is allowed for everyone
+### Item status is allowed for everyone
 
 When an item is configured to be visible to everyone, it's accessible to all users within the organization, regardless of the permissions set in the data source.
 
-If an item is discovered but not indexed, check the Errors tab for any issues that prevented the indexing process.
+If an item is discovered but not indexed, check the **Errors** tab for any issues that prevented the indexing process.
 
 >[!NOTE]
->- Changes to user or group permissions (ACL) might take up to 24 hours to reflect in Microsoft Search and Microsoft 365 Copilot.
+>- Changes to user or group permissions (ACLs) might take up to 24 hours to reflect in Microsoft Search and Microsoft 365 Copilot.
 >- Permissions updates occur during a full crawl, not an incremental crawl.
 >- If your data source permissions change after the last full crawl, a new full crawl must be triggered on-demand or scheduled to update the index.
 >- When testing in Microsoft Search or Microsoft 365 Copilot, make sure that you're searching with a searchable or queryable property. For more information, see [Manage schema](/microsoftsearch/manage-search-schema). 
+
+## Related content
+
+- [Deploy Microsoft 365 Copilot connectors](deployment-overview.md)
