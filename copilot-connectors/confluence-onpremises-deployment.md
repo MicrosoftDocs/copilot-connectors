@@ -34,7 +34,7 @@ Before you deploy the Confluence On-premises connector, make sure that the Confl
 Before you deploy the connector, make sure that the following prerequisites are met:
 
 - You must be a Microsoft 365 admin.
-- Install the [Graph Connector Agent (GCA)](graph-connector-agent.md) on a Windows computer on the same network as the Confluence server.
+- Install the [Microsoft Graph connector agent)](connector-agent.md) on a Windows computer on the same network as the Confluence server.
 - Install the Confluence On-prem plugin from the [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1234846?tab=reviews&hosting=datacenter).
 - Validate that the [Confluence Mobile Web Plugin](https://marketplace.atlassian.com/apps/1218250/mobile-plugin-for-confluence-data-center?hosting=server&tab=overview) is installed and enabled.
 - Ensure authentication credentials are available with Confluence admin permissions.

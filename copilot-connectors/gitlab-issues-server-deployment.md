@@ -72,7 +72,7 @@ Provide the base URL of your GitLab Server instance. The base URL is the URL the
 
 ### Choose Graph Connector Agent
 
-Select the Microsoft Graph connector agent that manages GitLab data ingestion into Microsoft 365. For more information, see [Microsoft Graph connector agent](graph-connector-agent.md).
+Select the Microsoft Graph connector agent that manages GitLab data ingestion into Microsoft 365. For more information, see [Microsoft Graph connector agent](connector-agent.md).
 
 ### Choose authentication type
 

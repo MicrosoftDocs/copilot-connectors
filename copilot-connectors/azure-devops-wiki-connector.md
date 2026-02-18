@@ -22,7 +22,7 @@ The Azure DevOps Wiki Microsoft 365 Copilot connector allows your organization t
 ## Capabilities
 - Index wikis from Azure DevOps
 - Enable your end users to ask questions related to project wikis and code wikis.
-- Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - The connector only indexes one ADO organization per connection. 

@@ -33,7 +33,7 @@ The PostgreSQL Microsoft 365 Copilot connector allows your organization to index
 
 ## Prerequisites
 - You must be the **AI administrator** for your organization's Microsoft 365 tenant.
-- **Install the Microsoft Graph connector agent**: To access your PostgreSQL server, you must install and configure the connector agent. See [Install the Microsoft Graph connector agent](graph-connector-agent.md) to learn more.
+- **Install the Microsoft Graph connector agent**: To access your PostgreSQL server, you must install and configure the connector agent. See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more.
 - **PostgreSQL Server address**: To connect to your PostgreSQL data, you need your organization's PostgreSQL server address.
 - **Service Account**: To connect to PostgreSQL server and allow Microsoft Graph Connector to update records regularly, you need a service account with read permissions granted to the service account.
 

@@ -29,7 +29,7 @@ The Oracle SQL Microsoft 365 Copilot connector allows your organization to disco
 
 ## Prerequisites
 - You must be the **AI administrator** for your organization's Microsoft 365 tenant.
-- **Install the Microsoft Graph connector agent**: To access your Oracle SQL Server, you must install and configure the connector agent. See [Install the Microsoft Graph connector agent](graph-connector-agent.md) to learn more.
+- **Install the Microsoft Graph connector agent**: To access your Oracle SQL Server, you must install and configure the connector agent. See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more.
 - **Service Account**: To connect to your SQL database and allow the Copilot connector to update records regularly, you need a service account with read permissions granted to the service account.
 
 >[!NOTE]

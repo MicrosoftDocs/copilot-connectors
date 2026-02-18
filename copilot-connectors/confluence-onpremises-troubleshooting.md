@@ -51,7 +51,7 @@ Incorrect user identity mapping prevents Copilot and Search from resolving permi
 - Review the mapping configuration based on your environment. For more information, see [Map non-Entra ID identities](/microsoft-365-copilot/connectors/map-non-entra-id) and [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-entra-id).
 - Check the user mapping formula and update as needed. On the **Error** tab for the connector, mapping problems typically appear as a `2006 error`.
 
-:::image type="content" source="media/user-mapping.png#lightbox" alt-text="Screenshot of the Error list for the Confluence On-premises connector with the 2006 error highlighted."::: 
+:::image type="content" source="media/confluence-onprem/user-mapping.png" alt-text="Screenshot of the Error list for the Confluence On-premises connector with the 2006 error highlighted." lightbox="media/confluence-onprem/user-mapping.png"::: 
   
 #### Check for invalid characters in Confluence user or group names
 

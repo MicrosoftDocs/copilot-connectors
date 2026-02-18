@@ -31,7 +31,7 @@ The connector indexes specified content in Microsoft Search and Microsoft 365 Co
 
 ## Prerequisites
 - You must be the **AI administrator** for your organization's Microsoft 365 tenant.
-- **Install the Microsoft Graph connector agent** (only applicable for MS SQL Copilot connector): To access your Microsoft SQL Server, you must install and configure the connector agent. See [Install the Copilot connector agent](graph-connector-agent.md) to learn more.
+- **Install the Microsoft Graph connector agent** (only applicable for MS SQL Copilot connector): To access your Microsoft SQL Server, you must install and configure the connector agent. See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more.
 - **Service Account**: To connect to your SQL database and allow the Copilot connector to update records regularly, you need a service account with read permissions granted to the service account.
 
 >[!NOTE]

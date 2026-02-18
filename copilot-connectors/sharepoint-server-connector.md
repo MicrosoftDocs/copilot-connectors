@@ -51,7 +51,7 @@ SharePoint Server Copilot Connector (Graph Connector) allows users in your organ
 
 ### Install the Graph Connector Agent
 
-To index your SharePoint On-premises content, you must install and register the Graph Connector Agent (GCA). See [Install Graph Connector Agent](graph-connector-agent.md) to learn more. The Graph Connector Agent can be installed on the same machine as the SharePoint server or on a machine that has access to the SharePoint On-premises server.
+To index your SharePoint On-premises content, you must install and register the Graph Connector Agent (GCA). See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more. The Graph Connector Agent can be installed on the same machine as the SharePoint server or on a machine that has access to the SharePoint On-premises server.
 
 Each source (SharePoint web application) can be configured in one connection. One Graph Connector Agent can be used to source content from multiple connections of SharePoint On-premises sources. It's advised to limit the number of connections to an agent to three sources to ensure an optimal ingestion rate.
 
@@ -108,7 +108,7 @@ To authenticate with the provided credentials, select Sign-in to load the list o
 
 Before using the Microsoft Entra ID-based authentication method, ensure the following prerequisites are met:
 
-- Microsoft Entra ID-based authentication is supported for Graph Connector Agent versions 3.1.2.0 and above. Upgrade your agent before proceeding. See [Install Graph Connector Agent](graph-connector-agent.md) to learn more.
+- Microsoft Entra ID-based authentication is supported for Graph Connector Agent versions 3.1.2.0 and above. Upgrade your agent before proceeding. See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more.
 - Microsoft Entra ID-based authentication is supported only for SharePoint Server Subscription Edition. Make sure the farm is patched to the November 2024 build (16.0.17928.20238) or later.   Refer to [SharePoint Updates](/officeupdates/sharepoint-updates).
 - You'll need to set up OpenID Connect (OIDC) with Microsoft Entra ID. Since OpenID Connect (OIDC) requires HTTPS, ensure your SharePoint web applications are configured to use HTTPS.
 

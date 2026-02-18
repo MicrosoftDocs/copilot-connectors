@@ -16,9 +16,9 @@ description: "Get the steps that the Confluence admin needs to complete to confi
 
 The Confluence On-Premises connector enables Microsoft 365 to index and retrieve content from self-hosted Confluence Data Center or Server instances. It brings enterprise wiki content into Microsoft Search and Copilot, enhancing visibility and usability within the Microsoft 365 ecosystem.
 
-This article provides information about the configuration steps that Confluence admins need to complete in order for your organization to deploy the Confluence On-premises connector for your organization, including configuring the environment and setting up prerequisites for the [Confluence On-premises connector](confluence-onpremises-connector.md).
+This article provides information about the configuration steps that Confluence admins need to complete in order for your organization to deploy the Confluence On-premises connector for your organization, including configuring the environment and setting up prerequisites for the [Confluence On-premises connector](confluence-onpremises-overview.md).
 
-For information about how to deploy the connector, see [Deploy the Confluence On-premises connector](confluence-onpremises-connector.md).
+For information about how to deploy the connector, see [Deploy the Confluence On-premises connector](confluence-onpremises-deployment.md).
 
 ## Setup checklist
 

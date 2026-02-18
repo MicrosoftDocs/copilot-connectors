@@ -23,7 +23,7 @@ The following video provides an overview of the BambooHR connector.
 ## Capabilities
 
 - Comprehensive profile indexing automatically syncs essential employee information from BambooHR including names, contact details, job titles, departments, hire dates, and organizational hierarchy.
-- Enhanced Microsoft 365 Copilot experiences enable your end users to ask natural language questions about colleagues and receive intelligent responses based on BambooHR profile data. Use [Semantic search](semantic-index-for-copilot.md) in Copilot to help users find relevant colleagues based on keywords, skills, departments, locations, and organizational relationships.
+- Enhanced Microsoft 365 Copilot experiences enable your end users to ask natural language questions about colleagues and receive intelligent responses based on BambooHR profile data. Use [Semantic search](/microsoftsearch/semantic-index-for-copilot) in Copilot to help users find relevant colleagues based on keywords, skills, departments, locations, and organizational relationships.
 - Real-time data synchronization keeps employee information current with default incremental syncs every 15 minutes and full synchronization daily.
 - Seamless Microsoft 365 integration makes profile data discoverable across Microsoft 365 experiences, enhancing collaboration, and organizational awareness.
 - Automated identity mapping intelligently matches BambooHR profiles with Microsoft Entra ID users for accurate cross-platform identity correlation.

@@ -121,4 +121,4 @@ The Microsoft 365 Copilot extension works with Microsoft 365 Copilot connectors 
 
 ## Related content
 
-- [Deploy Microsoft 365 Copilot connectors](deployment-overview)
+- [Deploy Microsoft 365 Copilot connectors](deployment-overview.md)
