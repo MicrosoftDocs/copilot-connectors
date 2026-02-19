@@ -23,7 +23,7 @@ The PostgreSQL Microsoft 365 Copilot connector allows your organization to index
 - Index records from your PostgreSQL database using a SQL query.
 - Specify access permissions for every record with list of users or groups added in SQL query.
 - Enable your end users to ask questions related to indexed records in Copilot.
-- Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - Supported PostgreSQL versions: The connector supports PostgreSQL version 14 or above.
