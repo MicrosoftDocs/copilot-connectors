@@ -37,7 +37,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 - Allow unlimited requests to prevent throttling. In **System** > **Rate limiting** > **Exemptions** > **Add exemptions**, add the service account to the **exemptions** list.
 
-   :::image type="content" alt-text="Screenshot that shows allowing unlimited requests for the Service Account" source="media/jira-data-center-graph-connector-allow-unlimited-requests-for-service-account.png" lightbox="media/jira-data-center-graph-connector-allow-unlimited-requests-for-service-account.png":::
+   :::image type="content" alt-text="Screenshot that shows allowing unlimited requests for the Service Account" source="media/jira-data-center/jira-data-center-graph-connector-allow-unlimited-requests-for-service-account.png" lightbox="media/jira-data-center/jira-data-center-graph-connector-allow-unlimited-requests-for-service-account.png":::
 
 ## Deploy the connector
 
@@ -66,17 +66,17 @@ To configure OAuth in Jira:
 1. Sign in to Jira Data Center.
 2. Go to **Settings** > **Applications** > **Application links**.
 
-    :::image type="content" alt-text="Screenshot of Click Application in Settings menu." source="media/jira-step2-1-click-application.png" lightbox="media/jira-step2-1-click-application.png":::
+    :::image type="content" alt-text="Screenshot of Click Application in Settings menu." source="media/jira-data-center/jira-step2-1-click-application.png" lightbox="media/jira-data-center/jira-step2-1-click-application.png":::
 
-    :::image type="content" alt-text="Screenshot of Application links page." source="media/jira-step2-2-app-links-page.png" lightbox="media/jira-step2-2-app-links-page.png":::
+    :::image type="content" alt-text="Screenshot of Application links page." source="media/jira-data-center/jira-step2-2-app-links-page.png" lightbox="media/jira-data-center/jira-step2-2-app-links-page.png":::
 
 1. Select **Create link**.
 
-    :::image type="content" alt-text="Screenshot of Select Create link." source="media/jira-step3-create-link.png" lightbox="media/jira-step3-create-link.png":::
+    :::image type="content" alt-text="Screenshot of Select Create link." source="media/jira-data-center/jira-step3-create-link.png" lightbox="media/jira-data-center/jira-step3-create-link.png":::
 
 1. Choose **External application**, then choose **Incoming** as the direction.
 
-    :::image type="content" alt-text="Screenshot of Select External application and Incoming direction." source="media/jira-step4-external-incoming.png" lightbox="media/jira-step4-external-incoming.png":::
+    :::image type="content" alt-text="Screenshot of Select External application and Incoming direction." source="media/jira-data-center/jira-step4-external-incoming.png" lightbox="media/jira-data-center/jira-step4-external-incoming.png":::
 
 1. Complete the **Configure an incoming link** form:
    - **Redirect URL:**  
@@ -84,11 +84,11 @@ To configure OAuth in Jira:
      - Government Community Cloud High (GCC High): `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
    - **Scope:** Admin
 
-    :::image type="content" alt-text="Screenshot of Configure an incoming link form." source="media/jira-step5-config-form.png" lightbox="media/jira-step5-config-form.png":::
+    :::image type="content" alt-text="Screenshot of Configure an incoming link form." source="media/jira-data-center/jira-step5-config-form.png" lightbox="media/jira-data-center/jira-step5-config-form.png":::
 
-1. Copy the **Client ID** and **Secret**, and paste them into the Microsoft 365 admin center connection setup page.
+1. Copy the **client ID** and **secret**, and paste them into the Microsoft 365 admin center connection setup page.
 
-    :::image type="content" alt-text="Screenshot of Client ID and Secret." source="media/jira-step6-credentials.png" lightbox="media/jira-step6-credentials.png":::
+    :::image type="content" alt-text="Screenshot of Client ID and Secret." source="media/jira-data-center/jira-step6-credentials.png" lightbox="media/jira-data-center/jira-step6-credentials.png":::
 
 ### Roll out
 

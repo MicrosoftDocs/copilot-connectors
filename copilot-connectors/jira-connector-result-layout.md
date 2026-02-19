@@ -15,11 +15,11 @@ ms.date: 05/28/2022
 
 # Result layout for Jira Microsoft 365 Copilot connector
 
-The [Atlassian Jira Microsoft 365 Copilot connector](jira-connector.md) allows your organization to index Jira issues. After you configure the connector and index content from the Jira site, you need to set up a search result page.
+The Atlassian Jira Microsoft 365 Copilot connector allows your organization to index Jira issues. After you configure the connector and index content from the Jira site, you need to set up a search result page.
 
 To set up the search result page, you need to:
-1. Set up [search vertical](manage-verticals.md).
-2. Set up [search result type](manage-result-types.md).
+1. Set up [search vertical](/microsoftsearch/manage-verticals).
+2. Set up [search result type](/microsoftsearch/manage-result-types).
 
 In this document, we have provided a sample result layout JSON required for setting up your result layout for Jira connector.
 
@@ -222,6 +222,5 @@ And here's the layout's associated JSON file:
 ```
 ## Resources
 
-[Customize search result page](customize-search-page.md)
-
-[Manage search result layouts](customize-results-layout.md)
+- [Customize search result page](/microsoftsearch/customize-search-page)
+- [Manage search result layouts](/microsoftsearch/customize-results-layout)

@@ -16,7 +16,7 @@ The Jira Cloud connector for Microsoft 365 Copilot and Microsoft Search allows y
 
 This article provides information about the configuration steps that Jira Cloud admins need to complete in order for your organization to deploy the Jira Cloud Copilot connector for your organization.
 
-For information about how to deploy the connector, see [Jira Cloud Copilot connector](jira-overview.md).
+For information about how to deploy the connector, see [Jira Cloud Copilot connector](jira-cloud-overview.md).
 
 ## Prerequisites
 
@@ -57,7 +57,7 @@ If your organization uses network-level restrictions, add the Microsoft Graph co
 
 ## Create an OAuth 2.0 app
 
-When you deploy the connector, you need the **client ID** and **client secret** for [OAuth 2.0 authentication](jira-deployment.md#3-provide-authentication-type). To create an OAuth 2.0 app:
+When you deploy the connector, you need the **client ID** and **client secret** for [OAuth 2.0 authentication](jira-cloud-deployment.md#3-provide-authentication-type). To create an OAuth 2.0 app:
 
 - Go to https://developer.atlassian.com/console/myapps/ and sign in with your Jira admin account.
 - Select **Create** and choose **OAuth 2.0 integration**.
@@ -91,4 +91,4 @@ Determine the number of projects and issues to index. For instances with more th
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Jira Cloud connector](jira-deployment.md)
+> [Deploy the Jira Cloud connector](jira-cloud-deployment.md)

@@ -14,7 +14,7 @@ ms.date: 07/02/2025
 
 # Manage Microsoft 365 Copilot connector connections
 
-Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. This article describes how to manage your connections after you [deploy them in the admin center](deployment-overview).
+Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. This article describes how to manage your connections after you [deploy them in the admin center](deployment-overview.md).
 
 To access and manage your Microsoft 365 Copilot connectors, you must be an AI administrator for your organization. 
 
