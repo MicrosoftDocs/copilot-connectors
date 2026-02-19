@@ -189,7 +189,7 @@ The following table lists the default values that are set. To customize these va
 | Sync | Incremental crawl | Frequency: Every 15 minutes |
 | Sync | Full crawl | Frequency: Every day |
 
-After you create your connection, you can review the status (including count of indexed users & articles) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/). When the connection status is **Ready**, you can validate the connection by providing the `sys_id` of any knowledge article and verifying its user permissions. For more information, see [Search and validate indexed content](indexed-search.md).
+After you create your connection, you can review the status (including count of indexed users & articles) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/). When the connection status is **Ready**, you can validate the connection by providing the `sys_id` of any knowledge article and verifying its user permissions. For more information, see [Search and validate indexed content](indexed-content.md).
 
 ## Customize settings
 

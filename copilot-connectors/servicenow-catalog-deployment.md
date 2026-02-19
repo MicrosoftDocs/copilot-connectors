@@ -181,7 +181,7 @@ Choose **Create** to deploy the connection. The ServiceNow Catalog connector beg
 
 After you create your connection, you can review the status (including count of indexed users and items) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-When the connection status is ready, you can validate the indexed content item using the index browser by providing the `sys_id` of any catalog item that you want to test for and checking its permissions for users. For more information, see [Search and validate indexed content](indexed-search.md).
+When the connection status is ready, you can validate the indexed content item using the index browser by providing the `sys_id` of any catalog item that you want to test for and checking its permissions for users. For more information, see [Search and validate indexed content](indexed-content.md).
 
 The following sections list default values that are set. To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 

@@ -113,8 +113,8 @@ The refresh interval determines how often your data is synchronized between the 
 ## Review and test your connection
 
 - Follow the general [setup instructions](./deployment-overview.md).
-- Search and validate your indexed content and permissions using [Index browser](/microsoft-365-copilot/connectors/indexed-search).
-- Find answers to common questions in the [FAQ section](/microsoft-365-copilot/connectors/frequently-asked-questions).
+- Search and validate your indexed content and permissions using [Index browser](indexed-content.md).
+- Find answers to common questions in the [FAQ](/microsoft-365-copilot/connectors/frequently-asked-questions).
 
 For Microsoft Search, if you need to customize the search results page. To learn about customizing search results, see [Customize the search results page](/microsoft-365-copilot/connectors/deployment-overview#step-11-customize-the-search-results-page).
 

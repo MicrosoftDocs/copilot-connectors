@@ -235,7 +235,7 @@ To verify the setup:
 1. Confirm that the following is the **Resource Path**: `/api/<API Namespace>/microsoft_copilot/user_criteria`.
 2. Choose **Update** to save the configuration.
 
-The Microsoft 365 admin enters the **API Namespace** when they [deploy the ServiceNow Knowledge connector](servicenow-knowledge-connector.md). In the following example, the API namespace is `abcdef`.
+The Microsoft 365 admin enters the **API Namespace** when they [deploy the ServiceNow Knowledge connector](servicenow-knowledge-deloyment.md). In the following example, the API namespace is `abcdef`.
 
 `/api/abcdef/microsoft_copilot/user_criteria`
 

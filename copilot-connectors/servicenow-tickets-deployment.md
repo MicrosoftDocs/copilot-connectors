@@ -325,7 +325,7 @@ Choose **Create** to deploy the connection. The ServiceNow Tickets Copilot conne
 
 After you create your connection, you can review the status (including count of indexed users and items) by selecting the connector in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-When the connection status is ready, you can validate the indexed ticket item using the index browser by providing the `sys_id` of any ticket item and checking its permissions for users. For more information, see [Search and validate indexed content](indexed-search.md).
+When the connection status is ready, you can validate the indexed ticket item using the index browser by providing the `sys_id` of any ticket item and checking its permissions for users. For more information, see [Search and validate indexed content](indexed-content.md).
 
 ## Related content
 

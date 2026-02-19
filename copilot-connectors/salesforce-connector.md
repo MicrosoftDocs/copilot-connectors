@@ -1,9 +1,9 @@
 ---
 ms.date: 11/03/2020
 title: "Salesforce CRM Microsoft 365 Copilot connector"
-ms.author: mecampos
-author: mecampos
-manager: umas
+ms.author: lauragra
+author: lauragra
+manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
@@ -11,15 +11,13 @@ ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the Salesforce Copilot connector for Microsoft Search and Microsoft 365 Copilot"
 ---
-<!---Previous ms.author: rusamai --->
 
 # Salesforce CRM Copilot connector
 
 The Salesforce CRM Microsoft 365 Copilot connector allows your organization to index contacts, opportunities, leads, cases, and accounts objects in your Salesforce instance. After you configure the connector and index content from Salesforce, end users can search for those items from any Microsoft Search and Microsoft 365 Copilot client.
 
-
 >[!IMPORTANT]
->The Salesforce Copilot connector currently supports Summer '19 or later.
+>The Salesforce Copilot connector currently supports Summer 19 and later.
 
 ## Capabilities
 
@@ -251,17 +249,12 @@ You can change the default values of refresh interval from here if you want to.
 
 >[!TIP]
 >**Default result type**
->* The Salesforce connector automatically registers a [result type](./customize-search-page.md#step-2-create-result-types) once the connector is published. The result type uses a dynamically generated [result layout](./customize-results-layout.md) based on the fields selected in step 3.
+>* The Salesforce connector automatically registers a [result type](/microsoftsearch/customize-search-page#step-2-create-result-types) once the connector is published. The result type uses a dynamically generated [result layout](/microsoftsearch/customize-results-layout) based on the fields selected in step 3.
 >* You can manage the result type by navigating to [**Result types**](https://admin.microsoft.com/Adminportal/Home#/microsoft-365-copilot/connectors/resulttypes) in the [Microsoft 365 admin center](https://admin.microsoft.com). The default result type is named "`ConnectionId`Default". For example, if your connection ID is `Salesforce`, your result layout is named: "SalesforceDefault".
 >* Also, you can choose to create your own result type if needed.
-<!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup instructions.-->
-
-<!---## Troubleshooting-->
-<!---Insert troubleshooting recommendations for this data source-->
 
 ## Troubleshooting
 After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). 
 
-You can find troubleshooting steps for commonly seen issues [here](troubleshoot-salesforce-connector.md).
+For troubleshooting steps, see [Troubleshooting](troubleshoot-salesforce-connector.md).
 
-If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
