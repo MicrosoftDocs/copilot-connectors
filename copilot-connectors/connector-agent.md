@@ -228,7 +228,7 @@ The agent is considered offline if it isn't able to contact the Copilot connecto
 
 1. Check whether the agent is running. In the Task Manager, go to **Services**, and verify that the **GcaHostService** is in a running state. If not, select and hold (right-click) the service and start it. 
 
-    :::image type="content" alt-text="Screenshot of the connector service in Task Manager." source="media/connector-agent/GcaHostService-GcaUpdateService.png" lightbox="media/connector-agent/GcaHostService-GcaUpdateService.png":::
+    :::image type="content" alt-text="Screenshot of the connector service in Task Manager." source="media/connector-agent/gcahostservice-gcaupdateservice.png" lightbox="media/connector-agent/gcahostservice-gcaupdateservice.png":::
    
 2. Verify that the domain gcs.office.com is reachable. (For a GCC tenant, substitute gcsgcc.office.com, and for a GCCHigh tenant, substitute gcs.office365.us.)
 
@@ -240,7 +240,7 @@ The agent is considered offline if it isn't able to contact the Copilot connecto
 
     The response should contain the output `TcpTestSucceeded: True`.
 
-    :::image type="content" alt-text="Screenshot showing that Tcp test succeeded." source="media/connector-agent/tnc_gcs_1.png" lightbox="media/connector-agent/tnc_gcs_1.png":::
+    :::image type="content" alt-text="Screenshot showing that Tcp test succeeded." source="media/connector-agent/tnc-gcs-1.png" lightbox="media/connector-agent/tnc-gcs-1.png":::
    
     If it's false, verify that the domain is allowed in your proxy/firewall and that requests are going through the proxy.
 
@@ -270,7 +270,7 @@ The agent is considered offline if it isn't able to contact the Copilot connecto
 
 If the agent is unreachable when you set up a connection, the following error screen appears.
 
-:::image type="content" alt-text="Screenshot of the agent unreachable screen." source="media/connector-agent/AgentUnreachableError-AdminUX.png" lightbox="media/connector-agent/AgentUnreachableError-AdminUX.png":::
+:::image type="content" alt-text="Screenshot of the agent unreachable screen." source="media/connector-agent/agentunreachableerror-adminux.png" lightbox="media/connector-agent/agentunreachableerror-adminux.png":::
 
 Use the service bus namespace provided in the error details to troubleshoot:
 
@@ -282,7 +282,7 @@ Use the service bus namespace provided in the error details to troubleshoot:
 
       The response should contain the output `TcpTestSucceeded: True:`
 
-    :::image type="content" alt-text="Screenshot of tnc 2." source="media/connector-agent/tnc_gcs_namespace.png" lightbox="media/connector-agent/tnc_gcs_namespace.png":::   
+    :::image type="content" alt-text="Screenshot of tnc 2." source="media/connector-agent/tnc-gcs-namespace.png" lightbox="media/connector-agent/tnc-gcs-namespace.png":::   
    
       If it's false, verify that the domain is allowed in your proxy/firewall and that requests are going through the proxy.
 
@@ -294,7 +294,7 @@ Use the service bus namespace provided in the error details to troubleshoot:
 
       The output should contain `StatusCode: 200`:
 
-    :::image type="content" alt-text="Screenshot of wget 2." source="media/connector-agent/wget_gcs_namespace.png" lightbox="media/connector-agent/wget_gcs_namespace.png"::: 
+    :::image type="content" alt-text="Screenshot of wget 2." source="media/connector-agent/wget-gcs-namespace.png" lightbox="media/connector-agent/wget-gcs-namespace.png"::: 
    
       If it's false, verify that the domain is allowed in your proxy/firewall and that requests are going through the proxy.
 
@@ -304,13 +304,13 @@ Use the service bus namespace provided in the error details to troubleshoot:
 
 This error occurs when an update is already in progress and should resolve after a maximum of 30 minutes.
 
-:::image type="content" alt-text="Screenshot of connector agent update in progress." source="media/connector-agent/AgentUpgradingError-AdminUX.png" lightbox="media/connector-agent/AgentUpgradingError-AdminUX.png"::: 
+:::image type="content" alt-text="Screenshot of connector agent update in progress." source="media/connector-agent/agentupgradingerror-adminux.png" lightbox="media/connector-agent/agentupgradingerror-adminux.png"::: 
 
 If the error persists after 30 minutes, follow these steps:
 
 1. Sign in to the computer where the agent is installed and verify that it's running. In Task Manager, go to **Services**, and check whether GcaHostService is in a running state. If not, select and hold (right-click) and start the service.
 
-    :::image type="content" alt-text="Screenshot of the connector service in Task Manager." source="media/connector-agent/GcaHostService-GcaUpdateService.png" lightbox="media/connector-agent/GcaHostService-GcaUpdateService.png":::
+    :::image type="content" alt-text="Screenshot of the connector service in Task Manager." source="media/connector-agent/gcahostservice-gcaupdateservice.png" lightbox="media/connector-agent/gcahostservice-gcaupdateservice.png":::
 
 1. If the issue persists, contact Microsoft Support and provide the two latest log files. You can find the log files in `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\GraphConnectorAgent\AgentUpdateApp\logs+`.
 

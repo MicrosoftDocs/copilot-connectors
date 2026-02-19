@@ -179,7 +179,7 @@ The resource ID, client ID, and client secret values depend on how you did the s
     * View of the client ID on the **Essentials** section:
     
       > [!div class="mx-imgBorder"]
-      > [ ![Image showing the client ID on the essentials section.](media/enterprise-web-connector/connectors-enterpriseweb-clientapp-clientidresource-Id.png) ](media/enterprise-web-connector/connectors-enterpriseweb-clientapp-clientidresource-Id.png#lightbox)
+      > [ ![Image showing the client ID on the essentials section.](media/enterprise-web-connector/connectors-enterpriseweb-clientapp-clientidresource-id.png) ](media/enterprise-web-connector/connectors-enterpriseweb-clientapp-clientidresource-id.png#lightbox)
     
     * View of the client secret on the **Certificates & secrets** section:
     

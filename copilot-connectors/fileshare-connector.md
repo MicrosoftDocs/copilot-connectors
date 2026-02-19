@@ -62,7 +62,7 @@ For information about writing regular expressions, see [Regular Expression Langu
 
 You also have the ability to create an exception to the limit rule. The priority of the exception rule will supersede limit rules. Exception rules can be defined by entering folder or file paths for the items you want to include in indexing.
 
-:::image type="content" source="media/file-connector/ExclusionRule.png" alt-text="Graphic showing a subset of files excluded from indexing with exceptions.":::
+:::image type="content" source="media/file-connector/exclusionrule.png" alt-text="Graphic showing a subset of files excluded from indexing with exceptions.":::
 
 ## Preserve last access time 
 

@@ -57,7 +57,7 @@ If your organization uses network-level restrictions, add the Microsoft Graph co
 
 ## Create an OAuth 2.0 app
 
-When you deploy the connector, you need the **client ID** and **client secret** for [OAuth 2.0 authentication](jira-cloud-deployment.md#3-provide-authentication-type). To create an OAuth 2.0 app:
+When you deploy the connector, you need the **client ID** and **client secret** for OAuth 2.0 authentication. To create an OAuth 2.0 app:
 
 - Go to https://developer.atlassian.com/console/myapps/ and sign in with your Jira admin account.
 - Select **Create** and choose **OAuth 2.0 integration**.
