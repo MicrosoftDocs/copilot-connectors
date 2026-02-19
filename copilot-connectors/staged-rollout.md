@@ -46,7 +46,7 @@ To modify the staged rollout settings for a connector:
 1. In the **Staged Rollout** column, next to **Staged**, choose **Edit**.
 1. Add or remove users and groups from the staged rollout, and choose **Save**.
 
-:::image type="content" alt-text="Screenshot of the Staged Rollout pane for a configured connector." source="media/staged-rollout/modify-staged-rollout.png" lightbox="media/modify-staged-rollout/staged-rollout.png":::
+:::image type="content" alt-text="Screenshot of the Staged Rollout pane for a configured connector." source="media/staged-rollout/modify-staged-rollout.png" lightbox="media/staged-rollout/modify-staged-rollout.png":::
 
 ### Stop staged rollout
 
@@ -57,7 +57,7 @@ To stop a staged rollout for a connector:
 1. In the **Staged Rollout** column, next to **Staged**, choose **Edit**.
 1. Choose **End Staging**, and when prompted, choose **Remove**.
 
-:::image type="content" alt-text="Screenshot of the Staged Rollout pane with End Staging highlighted." source="media/staged-rollout/end-staged-rollout.png" lightbox="media/end-staged-rollout/staged-rollout.png":::
+:::image type="content" alt-text="Screenshot of the Staged Rollout pane with End Staging highlighted." source="media/staged-rollout/end-staged-rollout.png" lightbox="media/staged-rollout/end-staged-rollout.png":::
 
 > [!NOTE]
 > When you remove staged rollout, the connection results start appearing to all users in the organization who have access.
@@ -71,5 +71,5 @@ The staged rollout feature has the following limitations:
 
 ## Related content
 
-- [Deployment overview](deployment-overview)
+- [Deployment overview](deployment-overview.md)
 

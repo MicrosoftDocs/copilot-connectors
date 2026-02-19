@@ -24,7 +24,7 @@ The Trello Microsoft 365 Copilot connector allows your organization to index car
 - Index public cards from your Trello Workspace.
 - Customize your crawl frequency.  
 - Create workflows by using this connection and actions from Microsoft Copilot Studio.  
-- Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content.
 
 ## Limitations
 
