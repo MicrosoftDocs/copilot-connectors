@@ -82,7 +82,7 @@ In this step, you configure the SQL query that runs a full crawl of the database
 > [!Tip]
 > To get all the columns that you need, you can join multiple tables.
 
-![Script showing the OrderTable and AclTable with example properties.](media/MSSQL-fullcrawl.png)
+![Script showing the OrderTable and AclTable with example properties.](media/mssql/mssql-fullcrawl.png)
 
 The example demonstrates a selection of five data columns that hold the data for the search: OrderId, OrderTitle, OrderDesc, CreatedDateTime, and IsDeleted. To set view permissions for each row of data, you can optionally select these ACL columns: AllowedUsers, AllowedGroups, DeniedUsers, and DeniedGroups. All these data columns also have the options to **Query**, **Search**, **Retrieve**, or **Refine**.
 
@@ -100,7 +100,7 @@ The use of each of the ACL columns in the above query is described below. The fo
 - **DeniedUsers**: This column specifies the list of users who do **not** have access to the search results. In the following example, users john@contoso.com and keith@contoso.com don't have access to the record with OrderId = 13, whereas everyone else has access to this record.
 - **DeniedGroups**: This column specifies the group of users who do **not** have access to the search results. In the following example, groups engg-team@contoso.com and pm-team@contoso.com don't have access to a record with OrderId = 15, whereas everyone else has access to this record.  
 
-![Sample data showing the OrderTable and AclTable with example properties.](media/MSSQL-ACL1.png)
+![Sample data showing the OrderTable and AclTable with example properties.](media/mssql/mssql-acl1.png)
 
 </details>
 
@@ -138,7 +138,7 @@ Create query snippets for watermarks as shown in these examples:
 
 In the configuration shown in the following image, `CreatedDateTime` is the selected watermark column. To fetch the first batch of rows, specify the data type of the watermark column. In this case, the data type is `DateTime`.
 
-![Watermark column configuration.](media/MSSQL-watermark.png)
+![Watermark column configuration.](media/mssql/mssql-watermark.png)
 
 The first query fetches the first **N** number of rows by using: "CreatedDateTime > January 1, 1753 00:00:00" (min value of DateTime data type). After the first batch is fetched, the highest value of `CreatedDateTime` returned in the batch is saved as the checkpoint if the rows are sorted in ascending order. An example is March 1, 2019, 03:00:00. Then the next batch of **N** rows is fetched by using "CreatedDateTime > March 1, 2019 03:00:00" in the query.
 
@@ -156,13 +156,13 @@ In this optional step, provide a SQL query to run an incremental crawl of the da
 
 The components in the following image resemble the full crawl components with one exception. In this case, "ModifiedDateTime" is the selected watermark column. Review the full crawl steps to learn how to write your incremental crawl query and see the following image as an example.
 
-![Incremental crawl script showing OrderTable, AclTable and example properties that can be used.](media/MSSQL-incrcrawl.png)
+![Incremental crawl script showing OrderTable, AclTable and example properties that can be used.](media/mssql/mssql-incrcrawl.png)
 
 b. **Soft delete instructions (Optional)**
 
 In a SQL record system, a soft delete is a technique where, instead of physically removing a record from a database, you mark it as "deleted" by setting a specific flag or column. This allows the record to remain in the database, but is logically excluded from most operations. To delete soft-deleted rows in your database during an incremental crawl, specify the soft-delete column name and value that indicates the row is deleted.
 
-![Soft delete settings: "Soft delete column" and "Value of soft delete column which indicates a deleted row."](media/MSSQL-softdelete.png)
+![Soft delete settings: "Soft delete column" and "Value of soft delete column which indicates a deleted row."](media/mssql/mssql-softdelete.png)
 
 ## Users
 
@@ -180,7 +180,7 @@ The following ID types are supported for use as ACLs:
 - **Microsoft Entra ID**: In Microsoft Entra ID, every user or group has an object ID that looks something like 'e0d3ad3d-0000-1111-2222-3c5f5c52ab9b'.
 - **Active Directory (AD) Security ID**: In an on-premises AD setup, every user and group has an immutable, unique security identifier that looks something like 'S-1-5-21-3878594291-2115959936-132693609-65242.'
 
-![Search permission settings to configure access control lists.](media/MSSQL-ACL2.png)
+![Search permission settings to configure access control lists.](media/mssql/mssql-acl2.png)
 
 ## Sync
 The refresh interval determines how often your data is synced between the data source and the Oracle SQL Copilot connector index.
