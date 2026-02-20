@@ -1,8 +1,8 @@
 ---
 title: "Troubleshooting the Atlassian Jira Cloud Microsoft 365 Copilot connector"
-ms.author: mecampos
-author: mecampos
-manager: umas
+ms.author: lauragra
+author: lauragra
+manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general

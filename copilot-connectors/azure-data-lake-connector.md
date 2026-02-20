@@ -1,9 +1,9 @@
 ---
 ms.date: 10/08/2019
 title: "Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector"
-ms.author: mecampos
-author: mecampos
-manager: umas
+ms.author: lauragra
+author: lauragra
+manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to

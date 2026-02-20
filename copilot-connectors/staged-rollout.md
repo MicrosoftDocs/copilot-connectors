@@ -30,7 +30,7 @@ Complete the following steps to apply a staged rollout to a new connection:
 
 1. In the [Microsoft 365 admin center](https://admin.microsoft.com), go to **Copilot** > **Connectors**. 
 1. On the **Gallery** tab, choose the connector that you want to deploy.
-1. Configure the connection settings as described in the [Deployment overview](deployment-overview) article.
+1. Configure the connection settings as described in the [Deployment overview](deployment-overview.md) article.
 1. Select the toggle next to **Rollout to limited audience**.
 1. Add the users or security groups that you want to have access to the connector. You can add up to 100 users and 15 Microsoft 365 groups.
 5. Choose **Create** to create the connection. When the rollout finishes, only the users and groups you specified see connector data in results, depending on their permissions. 

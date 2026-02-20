@@ -136,7 +136,7 @@ Only string properties can be marked as searchable.
 
 ### Crawl settings
 
-:::image type="content" alt-text="Screenshot of the connector gallery in the Microsoft 365 admin center." source="media/deployment-overview/customize-crawl.png" lightbox="media/deployment-overview/customize-crawl.png":::
+:::image type="content" alt-text="Screenshot of the crawl settings in the Microsoft 365 admin center." source="media/deployment-overview/customize-crawl.png" lightbox="media/deployment-overview/customize-crawl.png":::
 
 On the **Crawl** tab, you can configure how often data syncs between the source and the connector index.
 

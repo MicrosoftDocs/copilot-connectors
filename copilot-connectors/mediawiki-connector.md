@@ -1,9 +1,9 @@
 ---
 ms.date: 10/08/2019
 title: "MediaWiki Microsoft 365 Copilot connector"
-ms.author: mecampos
-author: mecampos
-manager: umas
+ms.author: lauragra
+author: lauragra
+manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
