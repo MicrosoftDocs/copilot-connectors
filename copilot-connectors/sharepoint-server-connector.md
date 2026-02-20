@@ -232,4 +232,4 @@ Default values of refresh interval:
 
 ### Set up search result page
 
-After creating the connection, you need to customize the search results page with verticals and result types. To learn about customizing search results, review how to [manage verticals](manage-verticals.md) and [result types](manage-result-types.md).
+After creating the connection, you need to customize the search results page with verticals and result types. To learn about customizing search results, review how to [manage verticals](/microsoftsearch/manage-verticals) and [result types](/microsoftsearch/manage-result-types).

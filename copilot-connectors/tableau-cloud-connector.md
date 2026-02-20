@@ -46,12 +46,12 @@ To enable and configure the Connected Apps with Direct Trust for Tableau Cloud, 
 
 **Step 1: Create a Tableau Connected Apps with Direct Trust**
 
-Create a connected app from Tableau Cloud’s Settings page.
+Create a connected app from Tableau Cloud's Settings page.
 
 1. As a site admin, sign in to Tableau Cloud.
 2. From the left pane, select **Settings > Connected Apps**.
 
-   :::image type="content" alt-text="Screenshot that shows the navigation path to the apps configuration in Tableau." source="media/tableau-navigation-to-settings-apps.png" lightbox="media/tableau-navigation-to-settings-apps.png":::
+   :::image type="content" alt-text="Screenshot that shows the navigation path to the apps configuration in Tableau." source="media/tableau-cloud/tableau-navigation-to-settings-apps.png" lightbox="media/tableau-cloud/tableau-navigation-to-settings-apps.png":::
 
 3. Select the **New Connected App** button drop-down arrow and select **Direct Trust**.
 4. Use the information in the following table to fill out the **Create Connected App dialog box**.
@@ -64,17 +64,17 @@ Create a connected app from Tableau Cloud’s Settings page.
 
    When finished, select the **Create** button.
 
-   :::image type="content" alt-text="Screenshot that shows the Tableau direct trust configuration." source="media/tableau-direct-trust-configuration.png":::
+   :::image type="content" alt-text="Screenshot that shows the Tableau direct trust configuration." source="media/tableau-cloud/tableau-direct-trust-configuration.png" lightbox="media/tableau-cloud/tableau-direct-trust-configuration.png":::
 
 5. Next to the connected app's name, select the actions menu and select **Enable**.
 
-   :::image type="content" alt-text="Screenshot that shows how to enable the Tableau App." source="media/tableau-enable-app.png":::
+   :::image type="content" alt-text="Screenshot that shows how to enable the Tableau App." source="media/tableau-cloud/tableau-enable-app.png" lightbox="media/tableau-cloud/tableau-enable-app.png":::
 
 **Step 2: Generate a secret**
 
 1. On the detail page of the connected app you created in Step 1, select the **Generate New Secret** button.
 
-   :::image type="content" alt-text="Screenshot that shows how to generate a secret for the Tableau App." source="media/tableau-generate-a-secret.png":::
+   :::image type="content" alt-text="Screenshot that shows how to generate a secret for the Tableau App." source="media/tableau-cloud/tableau-generate-a-secret.png" lightbox="media/tableau-cloud/tableau-generate-a-secret.png":::
 
 2. Make note of the **Secret ID**，**Secret Value** and **Client ID** to use in Step 3 below.
 
@@ -82,7 +82,7 @@ Create a connected app from Tableau Cloud’s Settings page.
 
 Enter the User, Connected App Client ID, Connected App Secret ID and Connected App Secret Key to connect to your Tableau Cloud Site. 
 
-:::image type="content" alt-text="Screenshot that shows the authentication process for Tableau Copilot connector." source="media/tableau-gc-auth.png":::
+:::image type="content" alt-text="Screenshot that shows the authentication process for Tableau Copilot connector." source="media/tableau-cloud/tableau-gc-auth.png" lightbox="media/tableau-cloud/tableau-gc-auth.png":::
 
 Refer to the following table to learn the descriptions of the required fields of Tableau Copilot connector authentication
 
@@ -122,12 +122,12 @@ Custom setup is for those admins who want to edit the default values for setting
 The Tableau Cloud Copilot connector supports data visible to **Only people with access to this data source (recommended)** or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
 
 >[!NOTE]
-> Tableau's ACL system uses a layered evaluation mechanism to calculate users' effective permissions. When you select "**Only people with access to this data source**" while configuring the Tableau Cloud Copilot connector, the connector applies a logic similar to Tableau’s native ACL system. This mechanism ensures that the content indexed by the Copilot connector is **not overshared** with users who don't have appropriate permissions within Tableau Cloud Sites. This image shows the specific rules are applied to determine which permissions govern the content and which users are authorized to access it.
+> Tableau's ACL system uses a layered evaluation mechanism to calculate users' effective permissions. When you select "**Only people with access to this data source**" while configuring the Tableau Cloud Copilot connector, the connector applies a logic similar to Tableau's native ACL system. This mechanism ensures that the content indexed by the Copilot connector is **not overshared** with users who don't have appropriate permissions within Tableau Cloud Sites. This image shows the specific rules are applied to determine which permissions govern the content and which users are authorized to access it.
 > 
-> :::image type="content" alt-text="Diagram that shows the workflow of Tableau Copilot connector ACL." source="media/tableau-connector-acl-workflow.png" lightbox="media/tableau-connector-acl-workflow.png":::
+> :::image type="content" alt-text="Diagram that shows the workflow of Tableau Copilot connector ACL." source="media/tableau-cloud/tableau-connector-acl-workflow.png" lightbox="media/tableau-cloud/tableau-connector-acl-workflow.png":::
 >
 > - For admin users, they're always ALLOWED.
-> - If the user is a “denied user”, part of a “denied group” or in a “denied group set”, the user is DENIED.
+> - If the user is a "denied user", part of a "denied group" or in a "denied group set", the user is DENIED.
 > - If the user is a project leader or a content owner, the user is ALLOWED.
 > - If the user is an "allowed user", part of an "allowed group" or in an "allowed group set", the user is ALLOWED.
 > - If none of the above conditions are satisfied, the user is DENIED.
@@ -141,7 +141,7 @@ To identify which option is suitable for your organization:
 
    >[!Important]
    >- If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Tableau Cloud directly to UPN property from Microsoft Entra ID.
-   >- If you chose "non-AAD" for the identity type see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
+   >- If you chose "non-AAD" for the identity type see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
    >- Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions.
 
 ### Content 
