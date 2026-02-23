@@ -1,5 +1,5 @@
 ---
-ms.date: 01/10/2026
+ms.date: 02/23/2026
 title: "Troubleshoot issues with the ServiceNow Knowledge Microsoft 365 Copilot connector"
 ms.author: lauragra
 author: lauragra
@@ -17,19 +17,19 @@ description: "Find troubleshooting information for the ServiceNow Knowledge Copi
 
 The ServiceNow Knowledge Microsoft 365 Copilot connector allows organizations to index ServiceNow knowledge articles into Microsoft 365 Copilot and search experiences. This article provides troubleshooting information for common errors that you might encounter when you deploy the ServiceNow Knowledge connector.
 
-To verify ServiceNow configuration information to help troubleshoot errors, see [Set up the ServiceNow service for connector ingestion](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup).
+To verify ServiceNow configuration information to help troubleshoot errors, see [Set up the ServiceNow service for connector ingestion](/microsoftsearch/servicenow-knowledge-admin-setup).
 
 ## Can't find ServiceNow Knowledge articles in Copilot or Microsoft Search
 
 To troubleshoot this issue:
 
-1. Determine whether the user searching for the article has the [required permissions to access the ServiceNow Knowledge articles.](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup#create-service-account-and-set-up-permissions-to-index-items)
+1. Determine whether the user searching for the article has the [required permissions to access the ServiceNow Knowledge articles.](/microsoftsearch/servicenow-knowledge-admin-setup#create-service-account-and-set-up-permissions-to-index-items)
 
 1. Determine whether the user is correctly mapped to a Microsoft Entra identity. Mapping issues show as a 2006 error on the **Error** tab. Check the user mapping formula and update as needed.
 
-    :::image type="content" source="media/servicenow-knowledge-troubleshooting/error-tab.png" alt-text="Screenshot of the Error tab showing mapping issues with 2006 error code." lightbox="media/servicenow-knowledge-troubleshooting/error-tab.png":::
+    :::image type="content" source="media/servicenow-knowledge-troubleshooting/error-tab.png" alt-text="Screenshot of the Error tab showing mapping issues with 2006 error code.":::
 
-1. Determine whether an advanced script in any of the user criteria grant access to the article. Advanced scripts aren't currently supported. If you're using advanced scripts, be sure to select **Advanced flow** when you set up the connection and [Set up the REST API](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
+1. Determine whether an advanced script in any of the user criteria grant access to the article. Advanced scripts aren't currently supported. If you're using advanced scripts, be sure to select **Advanced flow** when you set up the connection and [Set up the REST API](/microsoftsearch/servicenow-knowledge-admin-setup#set-up-rest-api).
 
 1. Use the [User criteria diagnostics](https://docs.servicenow.com/bundle/washingtondc-servicenow-platform/page/product/knowledge-management/concept/diagnose-knowledge-user-criteria.html) tool in ServiceNow to see if the service account has access to the item in ServiceNow
 
@@ -50,7 +50,7 @@ To troubleshoot this issue:
         - List of user criteria `sys_id` in the `can_read_user_criteria` field of the article
         - List of user criteria `sys_id` in the `cannot_read_user_criteria` field of the article
 
-When the required access is provided in ServiceNow, start a full crawl for the configured ServiceNow connection.
+    When the required access is provided in ServiceNow, start a full crawl for the configured ServiceNow connection.
 
 ## Missing access to certain tables
 
@@ -76,11 +76,11 @@ Use the following steps to validate table permissions by using REST API Explorer
 
 1.  Review the response:
 
-    - **If you receive a 403 Status Code** and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365-copilot/connectors/granting-table-access-servicenow) to provide table-level access.
+    - **If you receive a 403 Status Code** and an error message that states that you're not authorized to access the table, see [Grant table access](/MicrosoftSearch/granting-table-access-servicenow) to provide table-level access.
     
-    - **If you receive a 200 Status Code** but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365-copilot/connectors/granting-table-access-servicenow#grant-field-level-access).
+    - **If you receive a 200 Status Code** but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/MicrosoftSearch/granting-table-access-servicenow#grant-field-level-access).
 
-    :::image type="content" source="media/servicenow-knowledge-troubleshooting/response-body.png" alt-text="Screenshot of the response body showing empty results." lightbox="media/servicenow-knowledge-troubleshooting/response-body.png":::
+       :::image type="content" source="media/servicenow-knowledge-troubleshooting/response-body.png" alt-text="Screenshot of the response body showing empty results." lightbox="media/servicenow-knowledge-troubleshooting/response-body.png":::
 
 If you don't see the table name in the dropdown, you might not have access to the table itself.
 
@@ -99,59 +99,44 @@ Sometimes content access can be restricted because the service account isn't rea
 
 :::image type="content" source="media/servicenow-knowledge-troubleshooting/user-criteria.png" alt-text="Screenshot of user criteria showing the use of gs.getUserId() function." lightbox="media/servicenow-knowledge-troubleshooting/user-criteria.png":::
 
-If it's not feasible to update the user criteria, as a temporary workaround, update the REST API script that supports the use of the `gs.getUserId()` function.
-
-Use the following script when you [Set up the REST API](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
+Also, if you're experiencing performance issues related to the use of the `getAllUserCriteria()` function or are concerned about using a deprecated API, consider using the following alternative script when you [Set up the REST API](/microsoftsearch/servicenow-knowledge-admin-setup#set-up-rest-api).
 
 ```javascript
-
 (function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
-    // Get query parameters from the request
-    var queryParams = request.queryParams;
-
-    // Extract the 'user' sys_id, ensure it's a string or null if not provided
-    var userSysId = queryParams.user ? String(queryParams.user) : null;
-
-    // Check if userSysId was provided
-    if (!userSysId) {
-        gs.warn("UserCriteriaLoader API: 'user' parameter was not provided in the request.");
-        response.setStatus(400);
-        return { "error": "User sys_id is required." };
-    }
-
-    try {
-        var userCriterias = [];
-        var userCriteriaGr = new GlideRecord('user_criteria');
-        userCriteriaGr.addQuery('active', true); // Select active records
-        userCriteriaGr.query();
-
-        while (userCriteriaGr.next()) {
-            userCriterias.push(userCriteriaGr.getUniqueValue());
-        }
-
-        // Impersonate the logged-in user
-        var imp = new GlideImpersonate();
-        // Store the original user who logged in to serviceUser variable
-        var serviceUser = imp.impersonate(userSysId);
-
-        // Call the recommended API to get only matching criteria sys_ids
-        var matchingCriteriaIds = sn_uc.UserCriteriaLoader.getMatchingCriteria(userSysId, userCriterias);
-
-        // End impersonation: Change it back to logged‑in user
-        if (serviceUser) imp.impersonate(serviceUser);
-
-        // Return the array of matching criteria objects
-        return matchingCriteriaIds;
-
-    } catch (e) {
-        // Log any errors that occur during the process
-        gs.error("UserCriteriaLoader API: Error processing user criteria for user " + userSysId + ". Error: " + e.message);
-        response.setStatus(500); // Internal Server Error
-        return {
-            error_message: "Error processing user criteria for user " + userSysId,
-            error_details: e.message
-        };
-    }
+   // Get query parameters from the request
+   var queryParams = request.queryParams;
+   // Extract the 'user' sys_id, ensure it's a string or null if not provided
+   var userSysId = queryParams.user ? String(queryParams.user) : null;
+   var result = []; // Initialize an empty array for the results
+   // Check if userSysId was provided
+   if (!userSysId) {
+       gs.warn("UserCriteriaLoader API: 'user' parameter was not provided in the request.");
+       response.setStatus(400);
+       return { "error": "User sys_id is required." };
+   }
+   try {
+       // Instantiate the UserCriteriaLoader
+       var userCriteriaLoader = new sn_uc.UserCriteriaLoader();
+       var userCriterias = [];
+       var userCriteriaGr = new GlideRecord('user_criteria');
+       userCriteriaGr.addQuery('active', true); // Select active records
+       userCriteriaGr.query();
+       while (userCriteriaGr.next()) {
+           userCriterias.push(userCriteriaGr.getUniqueValue());
+       }
+       // Call the recommended API to get only matching criteria sys_ids
+       var matchingCriteriaIds = sn_uc.UserCriteriaLoader.getMatchingCriteria(userSysId, userCriterias);
+       // Return the array of matching criteria objects
+       return matchingCriteriaIds;
+   } catch (e) {
+       // Log any errors that occur during the process
+       gs.error("UserCriteriaLoader API: Error processing user criteria for user " + userSysId + ". Error: " + e.message);
+       response.setStatus(500); // Internal Server Error
+       return {
+           error_message: "Error processing user criteria for user " + userSysId,
+           error_details: e.message
+       };
+   }
 })(request, response);
 ```
 
@@ -172,18 +157,18 @@ A forbidden or unauthorized response in connection status can occur for the foll
 
 - **The ServiceNow instance is behind a firewall:** The ServiceNow Knowledge connector might not be able to reach your ServiceNow instance if it's behind a network firewall. You must allow access to the connector service. The following table lists the public IP address range for the connector service for each region. Add the IP address to your network allow list.
 
-| **Environment** | **Region** | **Range** |
-|---|---|---|
-| PROD | North America | 52.250.92.252/30, 52.224.250.216/30 |
-| PROD | Europe | 20.54.41.208/30, 51.105.159.88/30 |
-| PROD | Asia Pacific | 52.139.188.212/30, 20.43.146.44/30 |
+    | Environment | Region | Range |
+    |---|---|---|
+    | PROD | North America | 52.250.92.252/30, 52.224.250.216/30 |
+    | PROD | Europe | 20.54.41.208/30, 51.105.159.88/30 |
+    | PROD | Asia Pacific | 52.139.188.212/30, 20.43.146.44/30 |
 
 ## Change the URL of the knowledge article
 
-The ServiceNow Knowledge connector allows you to customize the URL of the knowledge articles as per the needs of your organization. For more information, see [Customize AccessURL property](/microsoft-365-copilot/connectors/servicenow-knowledge-deployment#customize-accessurl-property).
+The ServiceNow Knowledge connector allows you to customize the URL of the knowledge articles as per the needs of your organization. For more information, see [Customize AccessURL property](/microsoftsearch/servicenow-knowledge-deployment#customize-accessurl-property).
 
 > [!NOTE]
-> Currently, you can't edit the URL property for an existing connection. You can only customize the URL when you initially set up of the connection. If you have an existing connection, create a new connection and follow the steps to customize the URL.
+> Currently, you can't edit the URL property for an existing connection. You can only customize the URL when you initially set up the connection. If you have an existing connection, create a new connection and follow the steps to customize the URL.
 
 ## Issues with Only people with access to this data source permission
 
@@ -193,7 +178,7 @@ The **Only people with access to this data source** option might be unavailable 
 
 ### User mapping failures
 
-ServiceNow user accounts that don't have a corresponding Microsoft 365 user in Microsoft Entra ID fail to map. Service accounts and nonuser accounts are expected to fail mapping. You can view mapping failures in the identity stats area of the connection detail window and download logs from the error tab.
+ServiceNow user accounts that don't have a corresponding Microsoft 365 user in Microsoft Entra ID fail to map. Service accounts and nonuser accounts are expected to fail mapping. You can view mapping failures in the identity stats area of the connection detail window and download logs from the **Error** tab.
 
 ## Logout Successful window appears when you complete the OAuth process
 
@@ -209,7 +194,7 @@ To resolve this issue:
 1.  In a new tab, sign in to the Microsoft 365 admin center. This step allows ServiceNow SSO to sign out and switch credentials if needed.
 1.  Try the OAuth configuration again. The following window should appear to authorize the connection:
 
-:::image type="content" source="media/servicenow-knowledge-troubleshooting/oauth-authorization.png" alt-text="Screenshot of the OAuth authorization window." lightbox="media/servicenow-knowledge-troubleshooting/oauth-authorization.png":::
+    :::image type="content" source="media/servicenow-knowledge-troubleshooting/oauth-authorization.png" alt-text="Screenshot of the OAuth authorization window." lightbox="media/servicenow-knowledge-troubleshooting/oauth-authorization.png":::
 
 ## Issue with OIDC based authorization
 
@@ -223,3 +208,8 @@ To resolve this issue, disable the option in Microsoft Entra ID:
 2. Choose the app you registered for OIDC and choose to **Properties** \> **Turn off Assignment required**. \> Save.
 3. Choose **Save**.
 
+## Related content
+
+- [ServiceNow Knowledge connector overview](servicenow-knowledge-overview)
+- [ServiceNow Knowledge connector deployment guide](servicenow-knowledge-deployment.md)
+- [Set up the ServiceNow service for connector ingestion](servicenow-knowledge-admin-setup.md)

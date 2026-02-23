@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 12/09/2025
+ms.date: 02/23/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Catalog Microsoft 365 Copilot connector."
 ---
@@ -59,14 +59,17 @@ The ServiceNow Catalog connector enables users to:
 - Search for catalog items using semantic search in Copilot.
 - View catalog items based on user criteria permissions, including evaluation of advanced scripts.
 - View the ServiceNow URL defined by their organization in Copilot responses.
-- View associated catalog form fields (variables) and their choices for enhanced contextual search and responses in Copilot. 
+- View associated catalog form fields (variables) and their choices for enhanced contextual search and responses in Copilot.
+
+The connector supports the following:
+- Evaluating permissions based on user criteria or role-based permissions. 
+- Hierarchical permissions. This means that both catalog category-level user criteria and item-level user criteria are considered when permissions for catalog items are evaluated.
 
 Before you deploy the connector, consider the following limitations:
 
-- Hierarchical permissions aren't supported. This means that catalog category-level user criteria are ignored and only item-level user criteria are considered when permissions for catalog items are evaluated. 
 - Attachments and custom widget-based forms aren't indexed.
-- The incremental crawl only updates the changed content, not permissions. Permissions are synced only with a full crawl. 
-- The connector supports evaluating permissions based only on user criteria or role-based permissions. It doesn't support reading access control list (ACL) rules for items, user criteria, or any table. 
+- The incremental crawl only updates the changes in content for the catalog item. Any addition or removal of user criteria to any catalog item or the changes in identity i.e. changes in users or user criteria attributes are only synced with the periodic full crawl. 
+
 
 ## Data types indexed from ServiceNow Catalog
 

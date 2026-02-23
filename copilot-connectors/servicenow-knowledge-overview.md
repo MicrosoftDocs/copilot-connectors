@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 12/09/2025
+ms.date: 02/23/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Knowledge Copilot connector."
 ---
@@ -55,18 +55,18 @@ The ServiceNow Knowledge connector has the following capabilities:
 
 - Indexes all types of knowledge articles.
 - Enables Copilot and search experiences in Microsoft 365 to respond to user questions related to your IT/HR workflows in Copilot.
-- Uses [semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Uses [semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 - Supports evaluation of [advanced script-based user criteria permissions](https://docs.servicenow.com/bundle/xanadu-servicenow-platform/page/product/knowledge-management/task/create-user-criteria-record-in-knowledge-management.html).
 - Indexes comments and attachments on KB articles.
 - Supports indexing content from custom or default knowledge article templates, such as FAQs, How-to, What Is, or KCS article templates.
 - Supports customization of the ServiceNow URL in Copilot responses as needed for your organization.
-- Considers both knowledge base-level and article-level permissions (user criteria) when evaluating article permissions (limited preview).
+- Considers both knowledge base-level and article-level permissions (user criteria) when evaluating article permissions.
+- Supports evaluating permissions based on user criteria or role-based permissions. 
 
 The ServiceNow Knowledge connector has the following limitations:
 
-- The incremental crawl only updates the changed content, not permissions. Permissions sync happens only with a full crawl.
+- The incremental crawl only updates the changed content or any addition or removal of user criteria to any article, not the changes in identity, such as changes in users or user criteria attributes. The identity sync happens only with a full crawl.
 - The connector doesn't support indexing of knowledge blocks and evaluation of their user criteria.
-- The connector only supports evaluating permissions based on user criteria or role-based permissions. It doesn't support reading ACL rules for articles, user criteria, or any table.
 
 ## Data types indexed from ServiceNow Knowledge
 

@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 12/16/2025
+ms.date: 02/23/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Knowledge Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -43,7 +43,7 @@ Before you deploy the connector, make sure that the following prerequisites are 
 To add the ServiceNow Knowledge connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-2. Choose the **Gallery** tab.
+2. Go to the **Connectors** tab, and in the left pane, choose **Gallery**.
 3. From the list of available connectors, choose **ServiceNow Knowledge**.
 
 ### Set display name
@@ -52,7 +52,7 @@ The display name is used to identify references in Copilot responses and helps u
 
 You can accept the default **ServiceNow** display name or customize it to use a name that users in your organization recognize.
 
-For more information, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
+For more information, see [Enhance Copilot discovery of connector content](enhancing-microsoft-copilot-discovery-with-graph-connector-content.md).
 
 ### Choose flow based on user criteria
 
@@ -79,7 +79,7 @@ Choose the authentication method that aligns with your organization's security p
 
 #### OAuth 2.0
 
-Provision an OAUTH endpoint in your ServiceNow instance for the ServiceNow Knowledge connector to access. For more information, see [Create an endpoint for clients to access the instance](https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html).
+Provision an OAUTH endpoint in your ServiceNow instance for the ServiceNow Knowledge connector to access. For more information, for pervious versions of ServiceNow, see [Create an endpoint for clients to access the instance](https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html); for Zurich versions, see [Configure an OAuth authorization code grant](https://www.servicenow.com/docs/r/platform-security/authentication/configure-an-oauth-authorization-code-grant.html).
 
 Use the information in the following table to complete the endpoint creation form.
 
@@ -93,6 +93,8 @@ Use the information in the following table to complete the endpoint creation for
 | Active | Select the check box to make the application registry active. | Set to active |
 | Refresh token lifespan | The number of seconds that a refresh token is valid. By default, refresh tokens expire in 100 days (8,640,000 seconds). | 31,536,000 (one year) |
 | Access token lifespan | The number of seconds that an access token is valid. | 43,200 (12 hours) |
+| Auth Scope | The level of access an application has to a resource. | useraccount |
+
 
 Enter the client ID and client secret to connect to your instance. After you connect, use a ServiceNow account credential to authenticate permission to crawl. The account should at least have the **knowledge** role. For information about the table records and index user criteria permissions to provide read access to, see [Set up permissions to index items](servicenow-knowledge-admin-setup.md#create-service-account-and-set-up-permissions-to-index-items).
 
@@ -154,9 +156,11 @@ To use Microsoft Entra ID OpenID Connect:
     |  User Field | User ID |
     |  Enable JTI claim verification | Disabled |
 
-8. Choose **Submit** to save the configuration.
+   Set **Auth Scope** to the user account.
 
-9. Create a ServiceNow account. For details, see [Create a user in ServiceNow](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_CreateAUser.html). Use the following values; leave other fields as default:
+9. Choose **Submit** to save the configuration.
+
+10. Create a ServiceNow account. For details, see [Create a user in ServiceNow](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_CreateAUser.html). Use the following values; leave other fields as default:
 
 | Field | Recommended value |
 | --- | --- |
@@ -174,7 +178,7 @@ If you're using the **Advanced** flow, enter the API namespace that you created 
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
 
 Choose **Create** to deploy the connection. The ServiceNow Knowledge Copilot connector starts indexing content right away.
 
@@ -189,7 +193,7 @@ The following table lists the default values that are set. To customize these va
 | Sync | Incremental crawl | Frequency: Every 15 minutes |
 | Sync | Full crawl | Frequency: Every day |
 
-After you create your connection, you can review the status (including count of indexed users & articles) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/). When the connection status is **Ready**, you can validate the connection by providing the `sys_id` of any knowledge article and verifying its user permissions. For more information, see [Search and validate indexed content](indexed-content.md).
+After you create your connection, you can review the status (including count of indexed users & articles) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/). When the connection status is **Ready**, you can validate the connection by providing the `sys_id` of any knowledge article and verifying its user permissions. For more information, see [Searching and validating indexed content Microsoft 365 Copilot connectors](connectors-index-search.md).
 
 ## Customize settings
 
@@ -213,14 +217,11 @@ If you select the **Simple** flow for reading user criteria permissions, the Ser
   - If a user is part of the article-level `Can Read` user criteria but not the knowledge base-level, they might still see the article in Microsoft 365 surfaces even if they can't access it in ServiceNow. To prevent users from seeing the article, remove the user from the article-level `Can Read` user criteria.
   - If a knowledge article doesn't have a user criterion applied, it appears in the results for everyone in the organization. 
 
-If you select the **Advanced** flow for reading user criteria permission, both knowledge base (parent)-level and knowledge article (child)-level permissions are considered when evaluating article level permissions. This is how permissions are handled in ServiceNow. For more information, see [Managing access to knowledge bases and knowledge articles](https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/user-access-knowledge.html).
-
-> [!NOTE]
-> The **Advanced** flow permissions management functionality is currently in preview.
+If you select the **Advanced** flow for reading user criteria permission and provide access to the `sys_properties` table so that hierarchical ACLs can be read, both knowledge base (parent)-level and knowledge article (child)-level permissions are considered when evaluating article level permissions. This is how permissions are handled in ServiceNow. For more information, see [Managing access to knowledge bases and knowledge articles](https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/user-access-knowledge.html).
 
 #### Map identities
 
-By default, ServiceNow maps email IDs to Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-entra-id.md).
+By default, ServiceNow maps email IDs to Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-aad.md).
 
 ### Customize content settings
 
@@ -307,7 +308,7 @@ You can override the default expression for specific knowledge articles by using
 > [!NOTE]
 > If multiple rules apply to an item, the first rule in the list is used. Changes take effect after the next full crawl.
 
-For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties).
+For more information, see [Customize values for certain schema properties](configure-connector.md#customize-values-for-certain-schema-properties).
 
 ### Customize sync intervals
 
@@ -317,12 +318,12 @@ Configure the sync schedule to keep indexed content up to date:
 - **Incremental crawl** – Syncs only changed content, not permission updates. The default frequency is every 15 minutes.
 
 > [!IMPORTANT]
-> - Identities (users and groups) and access permissions are only updated during full crawls. Incremental crawls don't update access permissions or group memberships.
-> - During the first full crawl, identity sync (such as reading users, user criteria, and mapping of users to user criteria like group memberships) runs first, followed by content sync. This ensures that the right permissions are mapped to the ingested items.
+> - Identities (group memberships created between users and user criteria) are only updated during full crawls. Incremental crawls don't update identities or group memberships.
+> - During the first full crawl, identity sync (such as reading users, user criteria, and mapping of users to user criteria such as group memberships) runs first, followed by content sync. This ensures that the right permissions are mapped to the ingested items.
 > - During subsequent periodic full crawls, content and identity sync happens in parallel. The periodic full crawl is complete when both content and identity sync is finished.
 > - The periodic full crawls are faster than the first full crawls because the first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Periodic full crawls only ingest new items, users, and user criteria.  
 
-For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
+For more information, see [Guidelines for sync settings](configure-connector.md#guidelines-for-sync-settings).
 
 ## Related content
 

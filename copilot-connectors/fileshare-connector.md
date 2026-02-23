@@ -1,5 +1,5 @@
 ---
-ms.date: 11/12/2020
+ms.date: 02/23/2026
 title: "File Share Microsoft 365 Copilot connector"
 ms.author: danielabo
 author: danielabom
@@ -30,7 +30,7 @@ The File Share Microsoft 365 Copilot connector allows users in your organization
 
 ### Install the Microsoft Graph connector agent
 
-To index your Windows file shares, you must install and register the connector agent. See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more.  
+To index your Windows file shares, you must install and register the connector agent. For more information, see [Install the Microsoft Graph connector agent](connector-agent.md#install-the-agent). Make sure that the data source and agent computers are on the same network to get the best latency and throughput for indexing files.
 
 ## Get Started
 

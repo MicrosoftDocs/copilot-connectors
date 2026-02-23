@@ -9,7 +9,7 @@ ms.topic: install-set-up-deploy
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Find the steps to install the Microsoft Graph connector agent to allow you to index on-premises content via Microsoft 365 Copilot connectors." 
-ms.date: 12/16/2025
+ms.date: 02/23/2026
 ---
 
 # Microsoft Graph connector agent
@@ -42,6 +42,10 @@ Before you install the agent, make sure that you have the required role-based ac
 |Install agent on-premises| AI administrator, Copilot Admin.|
 |Register the app in Entra ID| Azure App Admin, Azure Admin.|
 |Create the service account on the target servers|See the deployment guide for the connector.|
+
+> [!NOTE]
+> If you're installing the connector agent on a server in a Government Community Cloud (GCC) environment, after you install the agent, make the following change:
+> - In the `C:\Program Files\Graph connector agent\ConfigApp\appsettings.json` file, in the `CloudInstanceUrl` attribute, update the URL value to be `https://login.microsoftonline.us`.
 
 ### Recommended configuration
 

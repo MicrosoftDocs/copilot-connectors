@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 12/09/2025
+ms.date: 02/23/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Catalog Copilot connector."
 ---
@@ -28,7 +28,7 @@ The following checklists list the steps involved in configuring the environment 
 | [Identify the instance URL](#identify-the-servicenow-instance-url) | ServiceNow admin |
 | [Identify the portal configuration](#identify-the-servicenow-portal-configuration) | ServiceNow admin |
 | [Define attribute mapping](#define-servicenow-attribute-mapping) | ServiceNow admin |
-| [Check for advanced scripts](#check-for-advanced-scripts-in-servicenow) | ServiceNow admin |
+| [Check for advanced scripts and hierarchical permissions](#check-for-advanced-scripts-and-hierarchical-permissions-in-servicenow) | ServiceNow admin |
 | [Verify that descriptions and short descriptions are populated](#verify-that-description-and-short-description-fields-for-all-catalog-items-are-populated) | ServiceNow admin |
 | [Identify custom widget-based forms](#identify-custom-widget-based-catalog-forms) |
 
@@ -39,6 +39,7 @@ The following checklists list the steps involved in configuring the environment 
 | [Create service account and set up permissions](#create-service-account-and-set-up-permissions-to-index-items) | ServiceNow admin |
 | [Identify item count for ingestion](#identify-item-count-for-ingestion) | ServiceNow admin |
 | [Set up REST API](#set-up-rest-api) | ServiceNow admin |
+| [Set up hierarchical permissions](#set-up-hierarchical-permissions) | ServiceNow admin |
 | [Add Microsoft 365 IP address to allowlist](#add-microsoft-365-ip-address-to-the-allowlist) | ServiceNow admin/Network admin |
 | [Resolve issues with SSO configuration](#resolve-connector-setup-issues-with-servicenow-sso-configuration) | ServiceNow admin |
 
@@ -64,15 +65,15 @@ By default, Copilot-generated links for ServiceNow Catalog items follow the stan
 
 `https://<your-organization-name>.service-now.com/sp?id=sc_cat_item&sys_id=<sysid>`
 
-If your organization uses a different URL, you can customize the URL when you deploy the connector. For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties).
+If your organization uses a different URL, you can customize the URL when you deploy the connector. For more information, see [Customize values for certain schema properties](configure-connector.md#customize-values-for-certain-schema-properties).
 
 ### Define ServiceNow attribute mapping
 
 By default, Microsoft Entra ID maps identities from your data source by checking whether the email ID of ServiceNow users matches the user principal name (UPN) or **Mail** attribute in Microsoft Entra ID.
 
-If this default mapping doesn’t meet your organization’s needs, you can define a custom mapping formula. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
+If this default mapping doesn’t meet your organization’s needs, you can define a custom mapping formula. For more information, see [Map your non-Entra ID identities](map-non-aad.md).
 
-### Check for advanced scripts in ServiceNow
+### Check for advanced scripts and hierarchical permissions in ServiceNow
 
 Determine whether catalog items in your ServiceNow environment have Advanced scripts enabled in **User Criteria**.
 
@@ -83,6 +84,12 @@ To determine whether any **User Criteria** has advanced scripts enabled, run the
 `<ServiceNowURL>/api/now/table/user_criteria?advanced=true&sysparm_limit=1`
 
 If your instance uses advanced script-based user criteria, select **Advanced flow** when you deploy the connector.
+
+#### What are hierarchical permissions?
+
+ServiceNow Catalog supports setting permissions at both the Catalog Category (parent) level and the individual catalog item (child) level. These permissions are evaluated together to determine whether a user has access to a catalog item. This model is referred to as hierarchical permissions.
+
+Hierarchical permissions are supported for the ServiceNow Catalog connector. This feature isn't available in government or sovereign clouds or dedicated forests in multi-tenant environments. For more information, see [Set up hierarchical permissions](#set-up-hierarchical-permissions).
 
 ### Verify that description and short description fields for all catalog items are populated
 
@@ -130,7 +137,12 @@ To connect to ServiceNow and allow the ServiceNow Catalog connector to update it
 
 You can create and assign a role for the service account you use to connect with Microsoft Search. For more information, see [Assign a role to a user](https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Read access to the tables can be assigned on the created role. 
 
-For information about how to create a user, assign a role, and grant read permissions to all the applicable table records, see [Grant table access to a user in ServiceNow](/microsoft-365-copilot/connectors/granting-table-access-servicenow). 
+You can also assign the following roles to the service account to ensure that catalog items get indexed without any blocking ACL issues. Assigning these roles is optional. 
+- `catalog_admin`
+- `user_criteria_admin`
+- `user_admin`
+
+For information about how to create a user, assign a role, and grant read permissions to all the applicable table records, see [Grant table access to a user in ServiceNow](/microsoftsearch/granting-table-access-servicenow). 
 
 If the service account doesn’t have the required permissions—or if row or field-level permissions are restricted—specific items are excluded from indexing on the Microsoft side.
 
@@ -141,7 +153,7 @@ If the service account doesn’t have access to the full User Criteria table, in
 
 ### Identify item count for ingestion
 
-The following default filter is applied during indexing. If you need to make changes, edit the query string during connector setup. For more information, see [Customize query string](/microsoft-365-copilot/connectors/servicenow-knowledge-deployment#query-string). 
+The following default filter is applied during indexing. If you need to make changes, edit the query string during connector setup. For more information, see [Customize query string](/microsoftsearch/servicenow-knowledge-deployment#query-string). 
 
 `type!=bundle^sys_class_name!=sc_cat_item_guide^type!=package^active=true` 
 
@@ -163,7 +175,7 @@ To verify the item count expected for ingestion:
 
 1. Note the item count.
 
-When the connector is set up and item sync is completed, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](view-details.md#view-connection-statistics).
+When the connector is set up and item sync is completed, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](connector-view-details.md#view-connection-statistics).
 
 ### Set up REST API
 
@@ -179,7 +191,7 @@ To set up access control:
 
     **Type**: REST_Endpoint 
     **Operation**: Execute 
-    **Name**: Microsoft 365 Copilot 
+    **Name**: Microsoft Copilot 
     **Role**: admin *(or the same role assigned to the crawling account)* 
 
 1.  Choose **Submit**. 
@@ -190,12 +202,12 @@ Create the scripted REST API:
 1.  Choose **New**. 
 1.  Enter the following information: 
 
-    **Name**: Microsoft 365 Copilot 
+    **Name**: Microsoft Copilot 
     **API ID**: microsoft_copilot 
 
 1.  Choose **Submit**. 
-1.  From the **Scripted REST API** list page, choose **Microsoft 365 Copilot**. 
-1.  Set **Default ACLs** to **Microsoft 365 Copilot**. To avoid any issues with authorization, also add the **Scripted REST External Default** ACL. 
+1.  From the **Scripted REST API** list page, choose **Microsoft Copilot**. 
+1.  Set **Default ACLs** to **Microsoft Copilot**. To avoid any issues with authorization, also add the **Scripted REST External Default** ACL. 
 
 Add a resource to the API: 
 
@@ -213,13 +225,15 @@ Add a resource to the API:
          return (new sn_uc.UserCriteriaLoader()).getAllUserCriteria(user);   
      })(request, response);  
     ```   
+> [!NOTE]
+> The `getAllUserCriteria()` function is deprecated due to potential performance issues. For an alternative script that you can use, see [Issue reading all user criteria from ServiceNow](/microsoftsearch/servicenow-catalog-troubleshooting#issue-reading-all-user-criteria-from-servicenow). 
 
 1.  Make sure both of the following are checked: 
 
     **Requires authentication** 
     **Requires ACL authorization** 
 
-1.  Make sure that **ACLs** is set to **Microsoft 365 Copilot**. To avoid any issues with authorization, also add the **Scripted REST External Default** ACL. 
+1.  Make sure that **ACLs** is set to **Microsoft Copilot**. To avoid any issues with authorization, also add the **Scripted REST External Default** ACL. 
 1.  Choose **Update**. 
 
 To verify the setup: 
@@ -231,9 +245,29 @@ The Microsoft 365 admin enters the **API Namespace** when they [deploy the S
 
 `/api/abcdef/microsoft_copilot/user_criteria`
 
+### Set up hierarchical permissions
+
+Hierarchical permissions allow the ServiceNow Catalog connector to evaluate user permissions for any ServiceNow catalog item. The connector evaluates the user criteria applied at the catalog category (parent) and the catalog item (child) level according to the rules that ServiceNow uses. For more information about how ServiceNow evaluates article permission, see [Managing access to catalog category & categlog items](https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-catalog-management/task/t_AppUserCritItemsCat.html).   
+
+To set up hierarchical permissions:
+
+- During connector deployment, for **Select based on your user criteria setup in ServiceNow**, choose **Advanced**. If you chose **Simple** when you set up the connector, update your existing connector to use **Advanced**.
+
+    > [!NOTE]
+    > When you choose **Advanced**, you must configure scripted REST API in ServiceNow in your ServiceNow instance. For details, see [Set up REST API](/microsoftsearch/servicenow-catalog-admin-setup#set-up-rest-api).
+
+- The service account used for ServiceNow Catalog connector setup needs read access to all the following tables to successfully evaluate the hierarchical ACLs:
+  - `sc_cat_item_user_criteria_mtom` - Who can access this catalog item.,
+  - `sc_cat_item_user_criteria_no_mtom` - Who can't access this catalog item.
+  - `sc_category_user_criteria_mtom` - Who can access this catalog category.
+  - `sc_category_user_criteria_no_mtom` - Who can't access this catalog category.
+  - `user_criteria` - Read user criteria permissions.
+  - `sc_category` - Read Catalog category information. 
+
+
 ### Add Microsoft 365 IP address to the allowlist
 
-If any network configurations—such as firewall or proxy settings—block access to ServiceNow, make sure to add the IP addresses listed in [IP firewall rules](deployment-overview.md#ip-firewall-rules) to the allowlist.
+If any network configurations—such as firewall or proxy settings—block access to ServiceNow, make sure to add the IP addresses listed in [IP firewall rules](configure-connector.md#ip-firewall-rules) to the allowlist.
 
 For information about ServiceNow-specific controls, see [IP Address Access Control](https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/login/task/t_AccessControl.html).
 

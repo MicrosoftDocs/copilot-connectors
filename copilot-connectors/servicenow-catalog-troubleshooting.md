@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
-ms.date: 02/09/2026
+ms.date: 02/23/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the ServiceNow Catalog Copilot connector."
 ---
@@ -65,9 +65,9 @@ Use the following steps to validate table permissions by using REST API Explorer
 5.  Choose **Send**.
 6.  Review the response:
 
-   - If you receive a `403 Status Code` and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365-copilot/connectors/granting-table-access-servicenow) to provide table-level access.
+   - If you receive a `403 Status Code` and an error message that states that you're not authorized to access the table, see [Grant table access](/MicrosoftSearch/granting-table-access-servicenow) to provide table-level access.
 
-   - If you receive a `200 Status Code` but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365-copilot/connectors/granting-table-access-servicenow#step-5-grant-field-level-access).
+   - If you receive a `200 Status Code` but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/MicrosoftSearch/granting-table-access-servicenow#step-5-grant-field-level-access).
 
    :::image type="content" source="media/servicenow-catalog-troubleshooting/response-body.png" alt-text="Screenshot of the Response section.":::
 
@@ -88,10 +88,7 @@ Sometimes content access might be restricted because the service account doesn't
 
 :::image type="content" source="media/servicenow-catalog-troubleshooting/script.png" alt-text="Screenshot of a script with instructions for implementing a specific user criteria evaluation, including guidelines to avoid certain functions and use a specific variable.":::
 
-If it's not feasible to update the user criteria, a temporary workaround is available. Update the REST API script that supports the use of the `gs.getUserId()` function. 
-
-Use the following script when you [Set up the REST API](servicenow-catalog-admin-setup.md#set-up-rest-api).
-
+If you're experiencing performance issues related to the use of the `getAllUserCriteria()` function or are concerned about using a deprecated API, consider using the following alternative script when you [Set up the REST API](servicenow-catalog-admin-setup.md#set-up-rest-api).
 
 ```javascript
 (function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
@@ -166,7 +163,7 @@ If search results show incorrect access permissions, verify the user criteria co
 
 When you deploy the ServiceNow Catalog connector, you can customize the URL of the catalog items based on the needs of your organization. Currently, you can't edit the **AccessURL** property for an existing connection. If you have an existing connection and you want to customize the URL, you have to create a new connection and customize the URL during setup. 
 
-For more information, see [Set a default expression for AccessURL](/microsoft-365-copilot/connectors/servicenow-catalog-deployment#set-a-default-expression-for-accessurl).
+For more information, see [Set a default expression for AccessURL](/microsoftsearch/servicenow-catalog-deployment#set-a-default-expression-for-accessurl).
 
 ## Issues with **Only people with access to this data source** permission
 

@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 02/09/2026
+ms.date: 02/23/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Tickets Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -43,7 +43,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 To add the ServiceNow Tickets connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-2. Choose the **Gallery** tab.
+2. Go to the **Connectors** tab, and in the left pane, choose **Gallery**.
 3. From the list of available connectors, choose **ServiceNow Tickets**.
 
 ### Set display name
@@ -52,7 +52,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **ServiceNow** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Set instance URL
 
@@ -72,7 +72,7 @@ To authenticate and sync content from ServiceNow, choose one of the following su
 
 #### OAuth 2.0
 
-Provision an OAUTH endpoint in your ServiceNow instance for the ServiceNow Tickets connector to access. For more information, see [Create an endpoint for clients to access the instance](https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html).
+Provision an OAUTH endpoint in your ServiceNow instance for the ServiceNow Tickets connector to access. For more information, for previous versions of Service now, see [Create an endpoint for clients to access the instance](https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html); for Zurich versions, see [Configure an OAuth authorization code grant](https://www.servicenow.com/docs/r/platform-security/authentication/configure-an-oauth-authorization-code-grant.html).
 
 Use the information in the following table to complete the endpoint creation form.
 
@@ -86,6 +86,7 @@ Use the information in the following table to complete the endpoint creation for
 | Active | Select the check box to make the application registry active. | Set to active |
 | Refresh token lifespan | The number of seconds that a refresh token is valid. By default, refresh tokens expire in 100 days (8,640,000 seconds). | 31,536,000 (one year) |
 | Access token lifespan | The number of seconds that an access token is valid. | 43,200 (12 hours) |
+| Auth Scope | The level of access an application has to a resource | useraccount |
 
 Enter the client ID and client secret to connect to your instance. After you connect, use a ServiceNow account credential to authenticate permission to crawl. The account should at least have read access to the `task` and `sys_user` tables. For information about read access to the required table records, see [Assign read permissions](servicenow-tickets-admin-setup.md#create-service-account-and-assign-read-permissions).
 
@@ -143,6 +144,8 @@ Alternatively, you can retrieve the information from the Microsoft Entra admin c
 |  User Claim | sub |
 |  User Field | User ID |
 |  Enable JTI claim verification | Disabled |
+
+Set the **Auth Scope** to the user account.
 
 8. Choose **Submit** to save the configuration.
 
@@ -204,7 +207,7 @@ On the **Users** tab, the ServiceNow Tickets connector supports search permissio
 Choose whether your ServiceNow instance has Microsoft Entra ID provisioned users or non-Microsoft Entra ID users:
 
 1. Choose the default mapping option **Microsoft Entra ID** if the email ID of ServiceNow users is the same as the user principal name (UPN), or email of the users in Microsoft Entra ID.
-2. Choose the **Non-Microsoft Entra ID** option if the email ID of ServiceNow users is different from the UPN of users in Microsoft Entra ID. You can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](map-non-entra-id.md).
+2. Choose the **Non-Microsoft Entra ID** option if the email ID of ServiceNow users is different from the UPN of users in Microsoft Entra ID. You can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](map-non-aad.md).
 
 ### Customize content settings
 
@@ -299,7 +302,7 @@ You can override the default expression for specific ticket items using rules ba
 > [!NOTE]
 > If multiple rules apply to an item, the first rule in the list is used. Changes take effect after the next full crawl. 
 
-For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties). 
+For more information, see [Customize values for certain schema properties](configure-connector.md#customize-values-for-certain-schema-properties). 
 
 ### Customize sync intervals
 
@@ -315,17 +318,17 @@ Note the following points:
 - During subsequent periodic full crawls, content and identity sync happens in parallel. The full crawl is complete when both content and identity sync are completed.  
 - The periodic full crawls are faster than the first full crawl because the first crawl includes first-time discovery and ingestion of users, permissions, and content items. Periodic full crawls only ingest the newly discovered items, users, and user criteria. 
 
-For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
 
 ## Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
 
 Choose **Create** to deploy the connection. The ServiceNow Tickets Copilot connector starts indexing content right away.
 
 After you create your connection, you can review the status (including count of indexed users and items) by selecting the connector in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-When the connection status is ready, you can validate the indexed ticket item using the index browser by providing the `sys_id` of any ticket item and checking its permissions for users. For more information, see [Search and validate indexed content](indexed-content.md).
+When the connection status is ready, you can validate the indexed ticket item using the index browser by providing the `sys_id` of any ticket item and checking its permissions for users. For more information, see [Search and validate indexed content](connectors-index-search.md).
 
 ## Related content
 

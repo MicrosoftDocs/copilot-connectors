@@ -8,7 +8,7 @@ ms.reviewer: mayanksethi
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 12/09/2025
+ms.date: 02/23/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Catalog Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -17,7 +17,7 @@ description: "Find information about how to deploy the ServiceNow Catalog Micros
 
 The ServiceNow Catalog Microsoft 365 Copilot connector enables your organization to index catalog items from ServiceNow and makes them discoverable in Microsoft 365 experiences, including Copilot and Microsoft Search. This article describes the steps to deploy and customize the connector.
 
-For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview).
+For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
 
 For advanced ServiceNow configuration information, see [Set up the ServiceNow Catalog service for connector ingestion](servicenow-catalog-admin-setup.md).
 
@@ -46,14 +46,14 @@ Before you deploy the connector, make sure that you meet the following prerequis
 To add the ServiceNow Catalog connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-1. Choose the **Gallery** tab.
+1. Go to the **Connectors** tab, and in the left pane, choose **Gallery**.
 1. From the list of available connectors, choose **ServiceNow Catalog**.
 
 ### Set display name
 
 The display name identifies references in Copilot responses and helps users recognize trusted content. You can accept the default **ServiceNow** display name or customize it to match your organization's terminology.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
+For more information, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Choose flow based on user criteria 
 
@@ -61,7 +61,7 @@ The ServiceNow Catalog connector supports two flows for user criteria permission
 
 The default is **Simple**. In this flow, advanced script-based user criteria aren't considered while evaluating catalog item permissions. 
 
-If your ServiceNow instance uses **Advanced Scripts** in your catalog category or catalog item user criteria, use the **Advanced** flow. This flow ensures accurate permissions handling when content is ingested into Microsoft Graph. For more information, see [Check for advanced scripts](servicenow-catalog-admin-setup.md#check-for-advanced-scripts-in-servicenow). 
+If your ServiceNow instance uses **Advanced Scripts** in your catalog category or catalog item user criteria, use the **Advanced** flow. This flow ensures accurate permissions handling when content is ingested into Microsoft Graph.  To use the **Advanced** option, you must [Set up the REST API](servicenow-catalog-admin-setup.md#set-up-rest-api).
 
 ### Set instance URL
 
@@ -83,7 +83,8 @@ Choose one of the following authentication methods:
 
 To use ServiceNow OAuth for authentication:
 
-- A ServiceNow admin must provision an OAuth endpoint in your ServiceNow instance. For more information, see [Create an endpoint for clients to access the instance](https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html).
+- A ServiceNow admin must provision an OAuth endpoint in your ServiceNow instance. For more information, for previous versions of ServiceNow, see [Create an endpoint for clients to access the instance](https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html); for Zurich versions, see [Configure an OAuth authorization code grant](https://www.servicenow.com/docs/r/platform-security/authentication/configure-an-oauth-authorization-code-grant.html).
+
 - Provide the following values in the endpoint creation form.
 
   | Field             | Description | Recommended value |
@@ -96,6 +97,7 @@ To use ServiceNow OAuth for authentication:
   | Active            | Select the check box to make the application registry active. | Checked           |
   | Refresh token lifespan | The number of seconds that a refresh token is valid. By default, refresh tokens expire in 100 days (8,640,000 seconds).  | 31,536,000 seconds (one year) |
   | Access token lifespan  | The number of seconds that an access token is valid.  | 43,200 seconds (12 hours) |
+  | Auth Scope | The level of access an application has to a resource. | useraccount |
 
 - Enter the client ID and client secret in the connector setup.
 - Use a ServiceNow account credential with at least the `catalog` role to authenticate crawl permissions.
@@ -148,7 +150,9 @@ To use Microsoft Entra ID OpenID Connect:
     |OIDC OIDC Configuration Cache Life Span Application | Global |
     |User Claim | sub |
     |User Field | User ID |
-    |Enable JTI claim verification | Disabled | 
+    |Enable JTI claim verification | Disabled |
+
+    Set **Auth Scope** to the user account.
 
 1. Choose **Submit** to save the configuration. 
 
@@ -175,13 +179,13 @@ To validate the connector before a full deployment, roll it out to a limited aud
 1. Select the toggle next to **Rollout to limited audience**.
 1. Specify the users or groups for pilot rollout.
 
-For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The ServiceNow Catalog connector begins indexing content immediately.
 
 After you create your connection, you can review the status (including count of indexed users and items) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-When the connection status is ready, you can validate the indexed content item using the index browser by providing the `sys_id` of any catalog item that you want to test for and checking its permissions for users. For more information, see [Search and validate indexed content](indexed-content.md).
+When the connection status is ready, you can validate the indexed content item using the index browser by providing the `sys_id` of any catalog item that you want to test for and checking its permissions for users. For more information, see [Search and validate indexed content](connectors-index-search.md).
 
 The following sections list default values that are set. To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 
@@ -214,19 +218,20 @@ The ServiceNow Catalog connector supports the following user search permissions:
 - **Everyone**
 - **Only people with access to this data source** (default)
 
-If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it as per the user criteria.
+If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it as per the flow you selected for user criteria during connection setup.
 
-> [!Important]
-> - If a catalog item is not enabled with a user criterion, it appears in the results for everyone in the organization.
-> - In ServiceNow, both catalog item-level and category-level user criteria are considered when read permissions are assessed for a user. However, the ServiceNow Catalog connector currently doesn't read category-level permissions.
->     - If the catalog item contains the `Available For` user criteria, they are stamped on the catalog item during ingestion and Catalog Category `Available for`/`Not Available For` user criteria are ignored.
->     - If the catalog item contains the `Not available for` user criteria, and if the corresponding catalog category also contains some `Not available for` user criteria, both the user criteria are stamped on the catalog item.
->     - If a user is part of the `Available for` user criteria at the catalog item level but not a part of the `Available for` user criteria at the catalog category level, the user doesn't have access to the catalog item in ServiceNow but does have access to the catalog item in Copilot, Microsoft Search, and other Microsoft 365 surfaces. The workaround is to remove the user from the `Available for` user criteria at the catalog item level.
+If you select the **Simple** flow for reading user criteria permissions, the ServiceNow Catalog connector treats permissions in the following way:
+- In ServiceNow, both catalog item-level and category-level user criteria are considered when read permissions are assessed for a user. However, in the simple flow, the ServiceNow Catalog connector doesn't read category-level permissions.
+- If a catalog item is not enabled with a user criterion, it appears in the results for everyone in the organization.
+- If the catalog item contains the `Available For` user criteria, it's stamped on the catalog item during ingestion, and Catalog Category `Available for`/`Not Available For` user criteria are ignored.
+- If the catalog item contains the `Not available for` user criteria, and if the corresponding catalog category also contains some `Not available for` user criteria, both the user criteria are stamped on the catalog item.
+- If a user is part of the `Available for` user criteria at the catalog item level but not a part of the `Available for` user criteria at the catalog category level, the user doesn't have access to the catalog item in ServiceNow but does have access to the catalog item in Copilot, Microsoft Search, and other Microsoft 365 surfaces. The workaround is to remove the user from the `Available for` user criteria at the catalog item level.
 
+If you select the **Advanced** flow for reading user criteria permission, hierarchical ACLs can be read and both catalog category (parent)-level and catalog item (child)-level permissions are considered when evaluating catalog item level permissions. This is how permissions are handled in ServiceNow. For more information, see [Managing access to catalog category and catalog items](https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/t_AppUserCritItemsCat.html).
 
 #### Map identities
 
-By default, ServiceNow maps users' email IDs in ServiceNow to their corresponding Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-entra-id.md).
+By default, ServiceNow maps users' email IDs in ServiceNow to their corresponding Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-aad.md).
 
 ### Customize content settings
 
@@ -309,7 +314,7 @@ You can override the default expression for specific catalog items using rules b
 > [!NOTE]
 > If multiple rules apply to an item, the first rule in the list is used. Changes take effect after the next full crawl.
 
-For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties).
+For more information, see [Customize values for certain schema properties](configure-connector.md#customize-values-for-certain-schema-properties).
 
 ### Customize sync intervals
 
@@ -326,10 +331,10 @@ You can define the frequency of incremental and full crawls:
 > - Subsequent full crawls are faster than the first full crawl. The first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Subsequent full crawls only ingest the newly discovered items, users, and user criteria. 
 
 
-For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
 
 ## Related content
 
 - [ServiceNow Catalog connector overview](servicenow-catalog-overview.md)
 - [Troubleshoot issues with the ServiceNow Catalog connector](servicenow-catalog-troubleshooting.md)
-- [Set up Copilot connectors in the admin center](/microsoft-365-copilot/connectors/deployment-overview)
+- [Set up Copilot connectors in the admin center](/microsoftsearch/configure-connector)

@@ -1,5 +1,5 @@
 ---
-ms.date: 01/16/2026
+ms.date: 02/23/2026
 title: "Grant table access to a service account in ServiceNow"
 ms.author: souravpoddar
 author: souravpoddar001
@@ -19,7 +19,7 @@ This article explains how to grant table access to a service account in ServiceN
 ## Prerequisites
 
 - Admin access in ServiceNow.
-- Elevate to the `security_admin` role to make changes to Access Control Lists (ACLs).
+- Elevate to the `security_admin` role to make changes to access control lists (ACLs).
   
 ## Create a user
 
@@ -27,7 +27,10 @@ To create a user:
 
 1. Go to **User Administration > Users**.
 1. Select **New** to create a new user.
-1. Fill in the user details, such as `microsoft.copilot` for the User ID and `Microsoft` and `Copilot` for the First Name and Last Name respectively.
+1. Fill in the user details:
+   - For the **User ID**: `microsoft.copilot`. The **User ID** is required for successful crawls.
+   - For the **First Name** and **Last Name**: `Microsoft` and `Copilot`.
+   - Set **Identity Type** to `Machine`. For earlier versions of ServiceNow, check **Web service access only**. 
 1. Select **Submit** to save the user.
 
 ##  Create a role
@@ -36,7 +39,7 @@ To create a role:
 
 1. Go to **User Administration > Roles**.
 1. Select **New**.
-1. Enter a unique name for the role (for example, `Copilot connector account`).
+1. Enter a unique name for the role (for example, `Copilot Connector Account`).
 1. Select **Submit** to save the role.
 
 ## Assign the role to a user
@@ -46,7 +49,14 @@ To assign the role to a user:
 1. Go to **User Administration > Users**.
 1. Open the user record for the intended user (for example, `Microsoft 365 Copilot`).
 1. In the **Roles** related list, select **Edit**.
-1. Add the newly created role (`Microsoft 365 Copilot Connector Account`).
+1. Add the newly created role (`Copilot Connector Account`).
+    
+    > [!NOTE]
+    > You might also assign the following roles to the service account so knowledge articles are indexed without any blocking ACL issues. Assigning these roles is optional.
+    > - For the ServiceNow Knowledge connector: `knowledge_admin`, `user_criteria_admin`, `user_admin`.
+    > - For the ServiceNow Catalog connector: `catalog_admin`, `user_criteria_admin`, `user_admin`.
+    > - For the ServiceNow Tickets connector: `itil`,`user_admin`. 
+
 1. Select **Save** to finalize the assignment.
 1. Select **Update** to update the user record.
 
