@@ -29,7 +29,7 @@ items:
       href: connector-agent-releases.md
   - name: Enhance Copilot discovery of connector content
     href: enhance-copilot-discovery.md
-  - name: Frequently asked questions
+  - name: FAQs
     href: frequently-asked-questions.yml
   - name: Microsoft-built synced connectors
     href: prebuilt-connectors-overview.md
