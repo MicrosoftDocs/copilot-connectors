@@ -145,9 +145,6 @@ The refresh interval determines how often your data is synced. You can customize
 
 For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
-> [!NOTE]
-> Webhook support is now available in preview. Be sure to set the Webhooks (Read and Write) permissions at both the Repository and Organization levels. Webhooks allow you to take advantage of enhanced automation and real-time updates to ensure a more seamless and responsive integration experience.
-
 ## Related content
 
 - [GitHub Cloud Pull Requests connector overview](github-cloud-pull-requests-overview.md)

@@ -7,7 +7,7 @@ ms.author: lauragra
 author: lauragra
 manager: calvind
 ms.reviewer: dannyyao
-ms.date: 12/08/2025
+ms.date: 02/24/2026
 ---
 
 # Set up the GitHub service for GitHub Cloud Pull Request connector ingestion
@@ -104,6 +104,9 @@ You can also choose to use your own GitHub app for authentication. If you choose
 
     **Account permissions**
       - Email addresses - **Read-only**
+
+    > [!NOTE]
+    > Webhook support is currently available in preview. Be sure to set the Webhooks (Read and Write) permissions at both the Repository and Organization levels. Webhooks allow you to take advantage of enhanced automation and real-time updates to ensure a more seamless and responsive integration experience.
 
 8. Under **Where can this GitHub App be installed**, select **Any account**, and then select **Create GitHub App**.
 

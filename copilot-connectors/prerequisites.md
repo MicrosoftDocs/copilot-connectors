@@ -8,7 +8,7 @@ ms.topic: concept-article
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Learn about the licensing requirements for deploying Copilot connectors in your organization."
-ms.date: 09/09/2025
+ms.date: 02/24/2026
 ---
 
 # Prerequisites for deploying Microsoft 365 Copilot connectors
@@ -35,13 +35,10 @@ To deploy connectors, you need access to the data source, including:
 
 All eligible Microsoft 365 and Office 365 enterprise customers receive a default index quota of 50 million items at no extra cost. This quota applies to the following license tiers:
 
-- Microsoft 365: E3, E5, F1, F3, Business Basic, Standard, Premium
-- Office 365: E1, E3, E5, F3
+- Microsoft 365: E3, E5, F1, F3, G3, G5, Business Basic, Standard, Premium
+- Office 365: E1, E3, E5, F3, G1, G3, G5
 - Education: A3, A5
 - Government: G1, G3, G5
-
-> [!NOTE]
-> Connectors in preview status don't count against the quota until they reach general availability.
 
 Organizations that require more quota beyond the standard 50 million items can purchase it through the Microsoft 365 admin center. Admins can monitor and adjust quota allocations as needed.
 

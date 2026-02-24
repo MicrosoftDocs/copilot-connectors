@@ -5,7 +5,7 @@ author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
 manager: calvind
-ms.date: 11/03/2025
+ms.date: 02/24/2026
 ms.service: copilot-connectors
 ms.topic: concept-article
 ---
@@ -104,6 +104,9 @@ To create a GitHub app for use with the GitHub Cloud Issues connector:
 
     **Account permissions**
       - Email addresses - **Read-only**
+
+    > [!NOTE]
+    > Webhook support is currently available in preview. Be sure to set the Webhooks (Read and Write) permissions at both the Repository and Organization levels. Webhooks allow you to take advantage of enhanced automation and real-time updates to ensure a more seamless and responsive integration experience.
 
 8.  Under **Where can this GitHub App be installed**, select **Any account**, and then select **Create GitHub App**.
 
