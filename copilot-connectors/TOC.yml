@@ -1,5 +1,7 @@
 items:
 - name: Microsoft 365 Copilot connectors overview
+  href: index.yml
+- name: Overview
   href: overview.md
 - name: Connectors gallery
   href: connectors-gallery.md
