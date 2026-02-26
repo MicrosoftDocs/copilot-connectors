@@ -1,8 +1,17 @@
 ### YamlMime:Landing
 
-title: Microsoft 365 Copilot connectors
+title: Microsoft 365 Copilot connector documentation
 summary: 
   Connect to data beyond Microsoft 365 to enhance Microsoft 365 Copilot, Copilot Search, and Microsoft Search experiences.
+
+metadata:
+  title: Microsoft 365 Copilot connectors documentation
+  description: Connect to data beyond Microsoft 365 to enhance Microsoft 365 Copilot, Copilot Search, and Microsoft Search experiences.
+  ms.service: copilot-connectors
+  ms.topic: landing-page
+  author: lauragra
+  ms.author: lauragra
+  ms.date: 02/24/2026
 
 landingContent:
   - title: Discover Microsoft 365 Copilot connectors
