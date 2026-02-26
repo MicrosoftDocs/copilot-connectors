@@ -1,6 +1,6 @@
 ---
-ms.date: 09/16/2025
-title: "Grant table access to a service account in ServiceNow"
+ms.date: 02/23/2026
+title: "Grant table access to a service account in ServiceNow Tickets"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: harshkum
@@ -13,17 +13,17 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Grant table access to a service account in ServiceNow that can be used to set up ServiceNow Microsoft 365 Copilot connectors."
+description: "Grant table access to a service account in ServiceNow Tickets that can be used to set up ServiceNow Microsoft 365 Copilot connectors."
 ---
 
-# Grant table access to an account in ServiceNow
+# Grant table access to an account in ServiceNow Tickets
 
-This article explains how to grant table access to a service account in ServiceNow. The process involves creating a role, assigning it to a user, and configuring row-level and field-level access controls.
+This article explains how to grant table access to a service account in ServiceNow Tickets. The process involves creating a role, assigning it to a user, and configuring row-level and field-level access controls.
 
 ## Prerequisites
 
 - Admin access in ServiceNow.
-- Elevate to the `security_admin` role to make changes to Access Control Lists (ACLs).
+- Elevate to the `security_admin` role to make changes to access control lists (ACLs).
   
 ## Create a user
 
@@ -31,7 +31,10 @@ To create a user:
 
 1. Go to **User Administration > Users**.
 1. Select **New** to create a new user.
-1. Fill in the user details, such as `microsoft.copilot` for the User ID and `Microsoft` and `Copilot` for the First Name and Last Name respectively.
+1. Fill in the user details:
+   - For the **User ID**: `microsoft.copilot`. The **User ID** is required for successful crawls.
+   - For the **First Name** and **Last Name**: `Microsoft` and `Copilot`.
+   - Set **Identity Type** to `Machine`. For earlier versions of ServiceNow, check **Web service access only**. 
 1. Select **Submit** to save the user.
 
 ##  Create a role
@@ -40,7 +43,7 @@ To create a role:
 
 1. Go to **User Administration > Roles**.
 1. Select **New**.
-1. Enter a unique name for the role (for example, `Copilot connector account`).
+1. Enter a unique name for the role (for example, `Copilot Connector Account`).
 1. Select **Submit** to save the role.
 
 ## Assign the role to a user
@@ -50,7 +53,11 @@ To assign the role to a user:
 1. Go to **User Administration > Users**.
 1. Open the user record for the intended user (for example, `Microsoft Copilot`).
 1. In the **Roles** related list, select **Edit**.
-1. Add the newly created role (`Microsoft 365 Copilot Connector Account`).
+1. Add the newly created role (`Copilot Connector Account`).
+
+    > [!NOTE]
+    > You might also assign the following roles to the service account so knowledge articles are indexed without any blocking ACL issues: `itil`, `user_admin`.  Assigning these roles is optional.
+
 1. Select **Save** to finalize the assignment.
 1. Select **Update** to update the user record.
 
@@ -96,3 +103,14 @@ To verify access to the table:
 1. Confirm that both rows and field values within the target table are now visible.
 
 You successfully granted table access to a service account in ServiceNow.
+
+## Verify service account permissions
+
+You can use the **Copilot Connector Checker Tool** to confirm that all required permissions for ServiceNow Tickets connector tables are configured correctly:
+
+1. Open the [Copilot Connector Checker Tool](https://testconnectivity.microsoft.com/tests/CopilotServiceNowGraphConnectors/input).
+1. Choose the authentication type in the **Authentication Type** field: Basic or OAuth (recommended).
+1. Complete the fields and choose **Perform Test**.
+1. The tool automatically validates connectivity, verifies credentials, checks table-level permissions, provides a summary of results, and recommends next steps as needed.
+
+If you have feedback about the tool, choose the **Feedback** link at the bottom of the page.

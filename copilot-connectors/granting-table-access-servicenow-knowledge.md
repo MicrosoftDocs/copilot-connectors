@@ -55,11 +55,8 @@ To assign the role to a user:
 1. In the **Roles** related list, select **Edit**.
 1. Add the newly created role (`Copilot Connector Account`).
 
-> [!NOTE]
-> You might also assign the following roles to the service account so knowledge articles are indexed without any blocking ACL issues. Assigning these roles is optional.
-> - For the ServiceNow Knowledge connector: `knowledge_admin`, `user_criteria_admin`, `user_admin`.
-> - For the ServiceNow Catalog connector: `catalog_admin`, `user_criteria_admin`, `user_admin`.
-> - For the ServiceNow Tickets connector: `itil`,`user_admin`. 
+    > [!NOTE]
+    > You might also assign the following roles to the service account so knowledge articles are indexed without any blocking ACL issues: `knowledge_admin`, `user_criteria_admin`, `user_admin`. Assigning these roles is optional.
 
 1. Select **Save** to finalize the assignment.
 1. Select **Update** to update the user record.
@@ -110,6 +107,17 @@ You successfully granted table access to a service account in ServiceNow.
 ## Verify service account permissions
 
 You can use the **Copilot Connector Checker Tool** to confirm that all required permissions for ServiceNow Knowledge Base (KB) tables are configured correctly:
+
+1. Open the [Copilot Connector Checker Tool](https://testconnectivity.microsoft.com/tests/CopilotServiceNowGraphConnectors/input).
+1. Choose the authentication type in the **Authentication Type** field: Basic or OAuth (recommended).
+1. Complete the fields and choose **Perform Test**.
+1. The tool automatically validates connectivity, verifies credentials, checks table-level permissions, provides a summary of results, and recommends next steps as needed.
+
+If you have feedback about the tool, choose the **Feedback** link at the bottom of the page.
+
+## Verify service account permissions
+
+You can use the **Copilot Connector Checker Tool** to confirm that all required permissions for ServiceNow Knowledge connector tables are configured correctly:
 
 1. Open the [Copilot Connector Checker Tool](https://testconnectivity.microsoft.com/tests/CopilotServiceNowGraphConnectors/input).
 1. Choose the authentication type in the **Authentication Type** field: Basic or OAuth (recommended).
