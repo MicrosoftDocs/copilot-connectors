@@ -210,6 +210,6 @@ To resolve this issue, disable the option in Microsoft Entra ID:
 
 ## Related content
 
-- [ServiceNow Knowledge connector overview](servicenow-knowledge-overview)
+- [ServiceNow Knowledge connector overview](servicenow-knowledge-overview.md)
 - [ServiceNow Knowledge connector deployment guide](servicenow-knowledge-deployment.md)
 - [Set up the ServiceNow service for connector ingestion](servicenow-knowledge-admin-setup.md)

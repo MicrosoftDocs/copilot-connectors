@@ -185,7 +185,7 @@ Choose **Create** to deploy the connection. The ServiceNow Catalog connector beg
 
 After you create your connection, you can review the status (including count of indexed users and items) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-When the connection status is ready, you can validate the indexed content item using the index browser by providing the `sys_id` of any catalog item that you want to test for and checking its permissions for users. For more information, see [Search and validate indexed content](connectors-index-search.md).
+When the connection status is ready, you can validate the indexed content item using the index browser by providing the `sys_id` of any catalog item that you want to test for and checking its permissions for users. For more information, see [Search and validate indexed content](indexed-content.md).
 
 The following sections list default values that are set. To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 
@@ -231,7 +231,7 @@ If you select the **Advanced** flow for reading user criteria permission, hierar
 
 #### Map identities
 
-By default, ServiceNow maps users' email IDs in ServiceNow to their corresponding Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-aad.md).
+By default, ServiceNow maps users' email IDs in ServiceNow to their corresponding Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-entra-id.md).
 
 ### Customize content settings
 
@@ -314,7 +314,7 @@ You can override the default expression for specific catalog items using rules b
 > [!NOTE]
 > If multiple rules apply to an item, the first rule in the list is used. Changes take effect after the next full crawl.
 
-For more information, see [Customize values for certain schema properties](configure-connector.md#customize-values-for-certain-schema-properties).
+For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties).
 
 ### Customize sync intervals
 

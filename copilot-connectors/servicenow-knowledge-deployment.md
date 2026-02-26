@@ -178,7 +178,7 @@ If you're using the **Advanced** flow, enter the API namespace that you created 
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout](staged-rollout.md).
 
 Choose **Create** to deploy the connection. The ServiceNow Knowledge Copilot connector starts indexing content right away.
 
@@ -193,7 +193,7 @@ The following table lists the default values that are set. To customize these va
 | Sync | Incremental crawl | Frequency: Every 15 minutes |
 | Sync | Full crawl | Frequency: Every day |
 
-After you create your connection, you can review the status (including count of indexed users & articles) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/). When the connection status is **Ready**, you can validate the connection by providing the `sys_id` of any knowledge article and verifying its user permissions. For more information, see [Searching and validating indexed content Microsoft 365 Copilot connectors](connectors-index-search.md).
+After you create your connection, you can review the status (including count of indexed users & articles) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/). When the connection status is **Ready**, you can validate the connection by providing the `sys_id` of any knowledge article and verifying its user permissions. For more information, see [Search and validate indexed content](indexed-content.md).
 
 ## Customize settings
 
@@ -221,7 +221,7 @@ If you select the **Advanced** flow for reading user criteria permission and pro
 
 #### Map identities
 
-By default, ServiceNow maps email IDs to Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-aad.md).
+By default, ServiceNow maps email IDs to Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-entra-id.md).
 
 ### Customize content settings
 
@@ -308,7 +308,7 @@ You can override the default expression for specific knowledge articles by using
 > [!NOTE]
 > If multiple rules apply to an item, the first rule in the list is used. Changes take effect after the next full crawl.
 
-For more information, see [Customize values for certain schema properties](configure-connector.md#customize-values-for-certain-schema-properties).
+For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties).
 
 ### Customize sync intervals
 
@@ -323,7 +323,7 @@ Configure the sync schedule to keep indexed content up to date:
 > - During subsequent periodic full crawls, content and identity sync happens in parallel. The periodic full crawl is complete when both content and identity sync is finished.
 > - The periodic full crawls are faster than the first full crawls because the first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Periodic full crawls only ingest new items, users, and user criteria.  
 
-For more information, see [Guidelines for sync settings](configure-connector.md#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
 
 ## Related content
 
