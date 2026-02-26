@@ -34,7 +34,7 @@ sections:
       - question: "How do synced Copilot connectors work with Microsoft 365 Copilot?"
         answer: |
           Copilot connectors allow external content to be stored in Microsoft Graph, which provides a way to surface external content in various Microsoft 365 experiences. This integration allows for Microsoft 365 Copilot to access and summarize your diverse datasets from different sources, enhancing the ways your users are already searching for answers.
-          For more information, see [Connectors overview](connectors-overview.md).
+          For more information, see [Connectors overview](overview.md).
 
       - question: "Is my data secure when I use synced connectors?"
         answer: |
@@ -88,7 +88,7 @@ sections:
       - question: "What are custom Copilot connectors?"
         answer: |
           Custom connectors allow you to integrate your own data sources into Microsoft Graph to bring external data into Microsoft 365 experiences.
-          For more information, see [Overview of Copilot connectors](connectors-overview.md).
+          For more information, see [Connectors overview](overview.md).
 
       - question: "How do I build a custom Copilot connector?"
         answer: |
@@ -164,6 +164,6 @@ additionalContent: |
   ## Related content
 
     - [Microsoft Graph connector agent FAQ](connector-agent-frequently-asked-questions.yml)
-    - [Connectors overview](connectors-overview.md)
+    - [Connectors overview](overview.md)
     - [Connectors gallery](connectors-gallery.md)
 

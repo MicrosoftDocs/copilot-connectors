@@ -72,5 +72,5 @@ For information about usage billing rates, see [Billing rates and management](/m
 
 ## Related content
 
-- [Microsoft 365 Copilot connectors overview](connectors-overview.md)
+- [Microsoft 365 Copilot connectors overview](overview.md)
 - [Deploy Microsoft 365 Copilot connectors](deployment-overview.md)

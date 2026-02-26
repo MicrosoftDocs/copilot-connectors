@@ -1,83 +1,84 @@
 ### YamlMime:Landing
 
-title: Microsoft 365 Copilot connectors # < 60 chars
-summary: Information about connectors for Microsoft 365 Copilot. # < 160 chars
-
-metadata:
-  title: Microsoft 365 Copilot connectors # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Information about connectors for Microsoft 365 Copilot. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: microsoft-365-copilot #Required; use either service or product per approved list. 
-  ms.topic: landing-page # Required
-  ms.collection: collection # Optional; Remove if no collection is used.
-  author: garycentric #Required; your GitHub user alias, with correct capitalization.
-  ms.author: v-garymoore #Required; microsoft alias of author; optional team alias.
-  ms.date: 08/19/2025 #Required; mm/dd/yyyy format.
-
-# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
+title: Microsoft 365 Copilot connectors
+summary: 
+  Connect to data beyond Microsoft 365 to enhance Microsoft 365 Copilot, Copilot Search, and Microsoft Search experiences.
 
 landingContent:
-# Cards and links should be based on top customer tasks or top subjects
-# Start card title with a verb
-  # Card 
-  - title: About [service]
+  - title: Discover Microsoft 365 Copilot connectors
     linkLists:
       - linkListType: overview
         links:
-          - text: What are Copilot connectors?
-            url: index.yml
-          - text: linktext2
-            url: index.yml
-      - linkListType: concept
-        links:
-          - text: linktext1
-            url: index.yml
-          - text: linktext2
-            url: index.yml
+          - text: Connectors overview
+            url: /microsoft-365-copilot/connectors/overview
+          - text: Connectors gallery
+            url: /microsoft-365-copilot/connectors/connectors-gallery
+          - text: Microsoft-built synced connectors
+            url: /microsoft-365-copilot/connectors/prebuilt-connectors-overview
+          - text: Federated connectors (early access preview))
+            url: /microsoft-365-copilot/connectors/federated-connectors-overview
 
-  # Card 
   - title: Get started
     linkLists:
       - linkListType: get-started
         links:
-          - text: linktext1
-            url: index.yml
-          - text: linktext2
-            url: index.yml
-      - linkListType: quickstart
-        links:
-          - text: linktext1
-            url: index.yml
-          - text: linktext2
-            url: index.yml
+          - text: Prerequisites
+            url: /microsoft-365-copilot/connectors/prerequisites
+          - text: Deployment overview
+            url: /microsoft-365-copilot/connectors/deployment-overview 
+          - text: Set up synced connectors
+            url: /microsoft-365-copilot/connectors/prebuilt-connectors-overview
+          - text: Frequently asked questions
+            url: /microsoft-365-copilot/connectors/frequently-asked-questions
 
-  # Card
-  - title: cardtitle3
+  - title: Configure connectors
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Staged rollout
+            url: /microsoft-365-copilot/connectors/staged-rollout
+          - text: Map Entra identities
+            url: /microsoft-365-copilot/connectors/map-entra-identities
+          - text: Map non-Entra identities
+            url: /microsoft-365-copilot/connectors/map-non-entra-identities
+          - text: Enhance Copilot discovery
+            url: /microsoft-365-copilot/connectors/enhance-copilot-discovery
+          - text: Connector agent
+            url: /microsoft-365-copilot/connectors/connector-agent
+
+  - title: Build custom connectors
     linkLists:
       - linkListType: tutorial
         links:
-          - text: linktext1
-            url: index.yml
-          - text: linktext2
-            url: index.yml
+          - text: Microsoft 365 Agents Toolkit
+            url: /microsoft-365-copilot/extensibility/build-your-first-connector
+          - text: Connectors SDK
+            url: /graph/custom-connector-sdk-sample-overview
+          - text: Connectors API
+            url: /graph/connecting-external-content-connectors-api-overview
+
+  - title: Manage and monitor connectors
+    linkLists:
       - linkListType: how-to-guide
         links:
-          - text: linktext1
-            url: index.yml
-          - text: linktext2
-            url: index.yml
+          - text: Manage connections
+            url: /microsoft-365-copilot/connectors/manage-connections
+          - text: View connection details
+            url: /microsoft-365-copilot/connectors/view-details
+          - text: Validate indexed content
+            url: /microsoft-365-copilot/connectors/validate-indexed-content
+          - text: Monitor errors
+            url: /microsoft-365-copilot/connectors/error-responses
 
-  # Card (Optional; Remove if not applicable.)
-  - title: cardtitle4
+  - title: Related content
     linkLists:
-      - linkListType: architecture
-        links:
-          - text: linktext1
-            url: index.yml
-          - text: linktext2
-            url: index.yml
       - linkListType: reference
         links:
-          - text: linktext1
-            url: index.yml
-          - text: linktext2
-            url: index.yml
+          - text: Microsoft 365 Copilot overview
+            url: /copilot/microsoft-365/microsoft-365-copilot-overview
+          - text: Extend Microsoft 365 Copilot
+            url: /microsoft-365-copilot/extensibility/
+          - text: Power Platform connectors
+            url: /connectors/
+          - text: Microsoft Search documentation
+            url: /microsoftsearch/

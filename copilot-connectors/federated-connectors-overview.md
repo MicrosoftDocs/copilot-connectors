@@ -114,4 +114,4 @@ Both federated and synced connectors can coexist in your tenant and appear toget
  
 ## Related content
  
-- [Microsoft 365 Copilot connectors overview](connectors-overview.md)
+- [Microsoft 365 Copilot connectors overview](overview.md)

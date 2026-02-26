@@ -1,6 +1,6 @@
 items:
 - name: Microsoft 365 Copilot connectors overview
-  href: connectors-overview.md
+  href: overview.md
 - name: Connectors gallery
   href: connectors-gallery.md
 - name: Get started
