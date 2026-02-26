@@ -1,20 +1,24 @@
 ---
 ms.date: 02/23/2026
-title: "Grant table access to a service account in ServiceNow"
+title: "Grant table access to a service account in ServiceNow Knowledge"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: harshkum
 audience: Admin 
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
+ms.service: mssearch
 ms.localizationpriority: medium
-description: "Grant table access to a service account in ServiceNow that can be used to set up ServiceNow Microsoft 365 Copilot connectors."
+search.appverid:
+- BFB160
+- MET150
+- MOE150
+description: "Grant table access to a service account in ServiceNow that can be used to set up ServiceNow Knowledge Microsoft 365 Copilot connectors."
 ---
 
-# Grant table access to an account in ServiceNow
+# Grant table access to an account in ServiceNow Knowledge
 
-This article explains how to grant table access to a service account in ServiceNow. The process involves creating a role, assigning it to a user, and configuring row-level and field-level access controls.
+This article explains how to grant table access to a service account in ServiceNow Knowledge. The process involves creating a role, assigning it to a user, and configuring row-level and field-level access controls.
 
 ## Prerequisites
 
@@ -47,15 +51,15 @@ To create a role:
 To assign the role to a user:
 
 1. Go to **User Administration > Users**.
-1. Open the user record for the intended user (for example, `Microsoft 365 Copilot`).
+1. Open the user record for the intended user (for example, `Microsoft Copilot`).
 1. In the **Roles** related list, select **Edit**.
 1. Add the newly created role (`Copilot Connector Account`).
-    
-    > [!NOTE]
-    > You might also assign the following roles to the service account so knowledge articles are indexed without any blocking ACL issues. Assigning these roles is optional.
-    > - For the ServiceNow Knowledge connector: `knowledge_admin`, `user_criteria_admin`, `user_admin`.
-    > - For the ServiceNow Catalog connector: `catalog_admin`, `user_criteria_admin`, `user_admin`.
-    > - For the ServiceNow Tickets connector: `itil`,`user_admin`. 
+
+> [!NOTE]
+> You might also assign the following roles to the service account so knowledge articles are indexed without any blocking ACL issues. Assigning these roles is optional.
+> - For the ServiceNow Knowledge connector: `knowledge_admin`, `user_criteria_admin`, `user_admin`.
+> - For the ServiceNow Catalog connector: `catalog_admin`, `user_criteria_admin`, `user_admin`.
+> - For the ServiceNow Tickets connector: `itil`,`user_admin`. 
 
 1. Select **Save** to finalize the assignment.
 1. Select **Update** to update the user record.
@@ -76,7 +80,7 @@ To grant access to rows within a specific table, follow these steps:
 
 ## Verification
 
-1. Impersonate the user (for example, `Microsoft 365 Copilot`).
+1. Impersonate the user (for example, `Microsoft Copilot`).
 1. Access the target table (for example, `sys_dictionary`) and confirm that rows are visible. 
 
 If the user can view the rows, but the field values aren't visible, you need to [grant field-level access](#grant-field-level-access).
@@ -98,7 +102,7 @@ If the user can view rows but not field values, configure field-level access:
 
 To verify access to the table:
 
-1. Impersonate the user (for example, `Microsoft 365 Copilot`).
+1. Impersonate the user (for example, `Microsoft Copilot`).
 1. Confirm that both rows and field values within the target table are now visible.
 
 You successfully granted table access to a service account in ServiceNow.

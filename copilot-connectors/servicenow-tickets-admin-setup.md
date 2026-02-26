@@ -105,7 +105,7 @@ Also, you can assign the following roles to the service account so that ticket i
 - `itil`
 - `user_admin`
 
-For information about how to set read access to table records, see [Securing Table Records](https://developer.servicenow.com/dev.do#!/learn/learning-plans/sandiego/new_to_servicenow/app_store_learnv2_securingapps_sandiego_securing_table_records). For information about how to create a user, assign a role, and grant read permissions on all the applicable table records, see [Grant table access to an account in ServiceNow](granting-table-access-servicenow.md).
+For information about how to set read access to table records, see [Securing Table Records](https://developer.servicenow.com/dev.do#!/learn/learning-plans/sandiego/new_to_servicenow/app_store_learnv2_securingapps_sandiego_securing_table_records). For information about how to create a user, assign a role, and grant read permissions on all the applicable table records, see [Grant table access to an account in ServiceNow](granting-table-access-servicenow-tickets.md).
 
 When you assign read access to `sys_db_object`, create two access control lists (ACLs): one for row access and one for field access.
 

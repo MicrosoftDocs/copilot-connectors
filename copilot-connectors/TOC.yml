@@ -441,20 +441,24 @@ items:
       - name: Set up the ServiceNow service
         href: servicenow-catalog-admin-setup.md
         items:
-        - name: Grant table access to a user in ServiceNow
-          href: granting-table-access-servicenow.md
+        - name: Grant table access to a user
+          href: granting-table-access-servicenow-catalog.md
       - name: Deploy the connector
         href: servicenow-catalog-deployment.md
       - name: Troubleshooting
         href: servicenow-catalog-troubleshooting.md
-    - name: ServiceNow Knowledge
-      items: 
-      - name: Overview
-        href: servicenow-knowledge-overview.md
-      - name: Deployment guide
-        href: servicenow-knowledge-deployment.md
-      - name: Troubleshooting
-        href: servicenow-knowledge-troubleshooting.md
+        items: 
+          - name: Overview
+            href: servicenow-knowledge-overview.md
+          - name: Set up the ServiceNow service
+            href: servicenow-knowledge-admin-setup.md
+            items:
+            - name: Grant table access to a user
+              href: granting-table-access-servicenow-knowledge.md
+          - name: Deploy the connector
+            href: servicenow-knowledge-deployment.md
+          - name: Troubleshooting
+            href: servicenow-knowledge-troubleshooting.md
     - name: ServiceNow Tickets
       items:
       - name: Overview
@@ -462,8 +466,8 @@ items:
       - name: Set up the ServiceNow service
         href: servicenow-tickets-admin-setup.md
         items:
-        - name: Grant table access to a user in ServiceNow
-          href: granting-table-access-servicenow.md
+        - name: Grant table access to a user
+          href: granting-table-access-servicenow-tickets.md
       - name: Deploy the connector
         href: servicenow-tickets-deployment.md
       - name: Troubleshooting
@@ -564,6 +568,8 @@ items:
         href: zendesk-ticket-troubleshooting.md
 - name: Configure Microsoft 365 Copilot extension
   href: copilot-extension.md
+- name: Connectors and Copilot Search
+  href: copilot-search.md
 - name: Build custom synced connectors
   items:
   - name: Build with Agents Toolkit
