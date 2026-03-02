@@ -568,30 +568,30 @@ items:
     href: enhance-copilot-discovery.md
   - name: FAQs
     href: frequently-asked-questions.yml
-- name: Configure Microsoft 365 Copilot extension
-  href: copilot-extension.md
-- name: Build custom synced connectors
-  items:
-  - name: Build with Agents Toolkit
-    href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=/microsoft-365-copilot/connectors/context
-  - name: Build with SDK
-    href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/connectors/context 
-  - name: Use the Copilot Connectors API
+  - name: Build custom synced connectors
     items:
-    - name: Overview
-      href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/connectors/context
-    - name: Manage connections
-      href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/connectors/context
-    - name: Manage schema
-      href: /graph/connecting-external-content-manage-schema?context=/microsoft-365-copilot/connectors/context
-    - name: Manage items
-      href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/connectors/context
-    - name: Use external groups
-      href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/connectors/context  
+    - name: Build with Agents Toolkit
+      href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=/microsoft-365-copilot/connectors/context
+    - name: Build with SDK
+      href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/connectors/context 
+    - name: Use the Copilot Connectors API
+      items:
+      - name: Overview
+        href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/connectors/context
+      - name: Manage connections
+        href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/connectors/context
+      - name: Manage schema
+        href: /graph/connecting-external-content-manage-schema?context=/microsoft-365-copilot/connectors/context
+      - name: Manage items
+        href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/connectors/context
+      - name: Use external groups
+        href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/connectors/context
 - name: Set up federated connectors (early access preview)
   items:
   - name: Overview
     href: federated-connectors-overview.md
+- name: Configure Microsoft 365 Copilot extension
+  href: copilot-extension.md
 - name: Manage connections
   items:
   - name: Manage connections
