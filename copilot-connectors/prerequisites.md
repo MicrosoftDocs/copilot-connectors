@@ -31,19 +31,6 @@ To deploy connectors, you need access to the data source, including:
 - Configuration of the external environment (Google Cloud Project for Google Drive, Confluence site URL). For information about the configuration details for specific connectors, see the deployment guide for that connector.
 - Permissions to access the content you want indexed (wiki pages, catalog items, meeting transcripts, and so on).
 
-## License requirements and quotas
-
-All eligible Microsoft 365 and Office 365 enterprise customers receive a default index quota of 50 million items at no extra cost. This quota applies to the following license tiers:
-
-- Microsoft 365: E3, E5, F1, F3, G3, G5, Business Basic, Standard, Premium
-- Office 365: E1, E3, E5, F3, G1, G3, G5
-- Education: A3, A5
-- Government: G1, G3, G5
-
-Organizations that require more quota beyond the standard 50 million items can purchase it through the Microsoft 365 admin center. Admins can monitor and adjust quota allocations as needed.
-
-Pricing for more quota is $1,000 USD per 1 million items per month.
-
 ### What represents items in an index quota?
 
 An item represents one unit of index quota. Each entity (or record) from the source system that is added to Microsoft Graph an item. In Microsoft Graph, each item appears as a unique citation in Microsoft 365 Copilot responses and as a distinct search result in Microsoft Search.

@@ -114,14 +114,3 @@ You can use the **Copilot Connector Checker Tool** to confirm that all required 
 1. The tool automatically validates connectivity, verifies credentials, checks table-level permissions, provides a summary of results, and recommends next steps as needed.
 
 If you have feedback about the tool, choose the **Feedback** link at the bottom of the page.
-
-## Verify service account permissions
-
-You can use the **Copilot Connector Checker Tool** to confirm that all required permissions for ServiceNow Catalog connector tables are configured correctly:
-
-1. Open the [Copilot Connector Checker Tool](https://testconnectivity.microsoft.com/tests/CopilotServiceNowGraphConnectors/input).
-1. Choose the authentication type in the **Authentication Type** field: Basic or OAuth (recommended).
-1. Complete the fields and choose **Perform Test**.
-1. The tool automatically validates connectivity, verifies credentials, checks table-level permissions, provides a summary of results, and recommends next steps as needed.
-
-If you have feedback about the tool, choose the **Feedback** link at the bottom of the page.
