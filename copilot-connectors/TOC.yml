@@ -5,6 +5,8 @@ items:
   href: overview.md
 - name: Connectors gallery
   href: connectors-gallery.md
+- name: Connectors and Copilot Search
+  href: copilot-search.md
 - name: Get started
   expanded: true
   items:
@@ -15,13 +17,7 @@ items:
 - name: Set up synced connectors
   expanded: true
   items:
-  - name: Staged rollout
-    href: staged-rollout.md
-  - name: Map Entra identities
-    href: map-entra-id.md
-  - name: Map non-Entra identities
-    href: map-non-entra-id.md
-  - name: Install connector agent
+  - name: Install connector agent for on-premises connectors
     items:
     - name: Connector agent installation
       href: connector-agent.md
@@ -566,10 +562,14 @@ items:
         href: zendesk-ticket-deployment.md
       - name: Troubleshooting
         href: zendesk-ticket-troubleshooting.md
+  - name: Staged rollout
+    href: staged-rollout.md
+  - name: Map Entra identities
+    href: map-entra-id.md
+  - name: Map non-Entra identities
+    href: map-non-entra-id.md
 - name: Configure Microsoft 365 Copilot extension
   href: copilot-extension.md
-- name: Connectors and Copilot Search
-  href: copilot-search.md
 - name: Build custom synced connectors
   items:
   - name: Build with Agents Toolkit
@@ -588,8 +588,10 @@ items:
       href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/connectors/context
     - name: Use external groups
       href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/connectors/context  
-- name: Federated connectors (early access preview)
-  href: federated-connectors-overview.md
+- name: Set up federated connectors (early access preview)
+  items:
+  - name: Overview
+    href: federated-connectors-overview.md
 - name: Manage connections
   items:
   - name: Manage connections
