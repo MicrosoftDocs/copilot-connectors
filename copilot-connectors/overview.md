@@ -169,3 +169,4 @@ For example, a Sales agent might use a Salesforce connector for data and a Power
 
 - [Connectors gallery](connectors-gallery.md)
 - [Deploy connectors in the admin center](deployment-overview.md)
+- [Set up Microsoft-built synced connectors](prebuilt-connectors-overview.md)
