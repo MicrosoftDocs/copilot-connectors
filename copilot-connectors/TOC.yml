@@ -17,18 +17,6 @@ items:
 - name: Set up synced connectors
   expanded: true
   items:
-  - name: Install connector agent for on-premises connectors
-    items:
-    - name: Connector agent installation
-      href: connector-agent.md
-    - name: Connector agent FAQ
-      href: connector-agent-frequently-asked-questions.yml
-    - name: Connector agent release notes
-      href: connector-agent-releases.md
-  - name: Enhance Copilot discovery of connector content
-    href: enhance-copilot-discovery.md
-  - name: FAQs
-    href: frequently-asked-questions.yml
   - name: Microsoft-built synced connectors
     href: prebuilt-connectors-overview.md
     items:
@@ -562,12 +550,24 @@ items:
         href: zendesk-ticket-deployment.md
       - name: Troubleshooting
         href: zendesk-ticket-troubleshooting.md
+  - name: Install connector agent for on-premises connectors
+    items:
+    - name: Connector agent installation
+      href: connector-agent.md
+    - name: Connector agent FAQ
+      href: connector-agent-frequently-asked-questions.yml
+    - name: Connector agent release notes
+      href: connector-agent-releases.md
   - name: Staged rollout
     href: staged-rollout.md
   - name: Map Entra identities
     href: map-entra-id.md
   - name: Map non-Entra identities
     href: map-non-entra-id.md
+  - name: Enhance Copilot discovery of connector content
+    href: enhance-copilot-discovery.md
+  - name: FAQs
+    href: frequently-asked-questions.yml
 - name: Configure Microsoft 365 Copilot extension
   href: copilot-extension.md
 - name: Build custom synced connectors
