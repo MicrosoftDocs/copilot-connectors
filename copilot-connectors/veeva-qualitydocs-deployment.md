@@ -191,12 +191,12 @@ The following table lists the properties that the Veeva QualityDocs connector in
 
 #### Add custom properties
 
-In addition to the default properties, the connector automatically discovers custom and other document properties from your Veeva PromoMats instance. During setup, the connector retrieves all available document fields that are queryable, not disabled, and not hidden, and presents them as additional properties under **Manage properties**.
+In addition to the default properties, the connector automatically discovers custom and other document properties from your Veeva QualityDocs instance. During setup, the connector retrieves all available document fields that are queryable, not disabled, and not hidden, and presents them as additional properties under **Manage properties**.
 
 You can select and add these custom properties one by one to the connector schema. Each added custom property has the following default schema attributes:
 
 - **Query** and **Retrieve** are enabled by default.
-- **Search** and **Refine** aren't enabled by default but can be turned on on the **Manage properties** custom setup.
+- **Search** and **Refine** aren't enabled by default but can be turned on under the **Manage properties**.
 
 For properties that reference Veeva Vault objects (ObjectReference type), the connector also fetches the referenced object's metadata and exposes its fields as nested properties. For example, if a custom property references a VObject of type `campaign__v`, the connector generates properties like `campaign__v.name__v`, `campaign__v.status__v`, and so on.
 
