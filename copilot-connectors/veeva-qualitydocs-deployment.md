@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 02/09/2026
+ms.date: 03/05/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Veeva QualityDocs Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -143,50 +143,64 @@ You can use query-string conditions to include only relevant documents to enable
 
 The following table lists the properties that the Veeva QualityDocs connector indexes by default.
 
-| Property                  | Semantic Label      | Description                                         | Schema Attributes         |
-|---------------------------|--------------------|-----------------------------------------------------|--------------------------|
-| content                   |                    | Main text or body content extracted from the document | Search                   |
-| country                   |                    | Country or region associated with the document      | Query, Retrieve          |
-| createdBy                 | CreatedBy          | User who initially created the document             | Query, Retrieve          |
-| createdByUserId           |                    | Internal user identifier for the document creator   | Query, Retrieve          |
-| daysBeforeToStartPeriodicReview |              | Number of days before the document's periodic review begins | Query, Retrieve  |
-| documentCreationDate      | CreatedDateTime    | Date and time when the document was originally created | Query, Retrieve      |
-| documentId                |                    | Unique identifier for the document within Veeva system | Query, Retrieve      |
-| extension                 | FileExtension      | File type extension such as PDF, DOCX, XLSX         | Query, Retrieve, Search  |
-| fileName                  | Title              | File name or title of the document                  | Query, Retrieve, Search  |
-| format                    |                    | Document format or type information                 | Query, Retrieve          |
-| id                        |                    | Unique identifier for the document record           | Query, Retrieve          |
-| implementationPeriodDays  |                    | Number of days designated for implementation of the document | Query, Retrieve  |
-| importedDocument          |                    | Indicates if the document was imported              | Query, Retrieve          |
-| lastModifiedBy            | LastModifiedBy     | User who last modified the document                 | Query, Retrieve          |
-| lastModifiedByUserId      |                    | Internal user identifier of the last modifier       | Query, Retrieve          |
-| lifecycle                 |                    | Document lifecycle state (for example, Draft, Approved)    | Query, Retrieve          |
-| majorVersion              |                    | Major version number of the document                | Query, Retrieve          |
-| minorVersion              |                    | Minor version number of the document                | Query, Retrieve          |
-| obsolescenceApproved      |                    | Indicates whether obsolescence is approved    | Query, Retrieve          |
-| owningDepartment          |                    | Department responsible for owning the document      | Query, Retrieve          |
-| owningFacility            |                    | Facility associated with the document ownership     | Query, Retrieve          |
-| periodicReviewFrequency   |                    | Frequency at which the document undergoes periodic review | Query, Retrieve    |
-| product                   |                    | Product related to or covered by the document       | Query, Retrieve          |
-| referenceModelCategory    |                    | High-level reference model category of the document | Query, Retrieve          |
-| referenceModelSubcategory |                    | Subcategory within the reference model classification | Query, Retrieve      |
-| requiresDcc               |                    | Indicates if Document Change Control is required    | Query, Retrieve          |
-| scope                     |                    | Scope or applicability of the document              | Query, Retrieve          |
-| size                      |                    | File size of the document     |                     |
-| status                    |                    | Document status (for example, Active, Archived)            | Query, Retrieve          |
-| subtype                   |                    | Specific subtype or classification of the document  | Query, Retrieve          |
-| type                      |                    | Type or main category of the document               | Query, Retrieve          |
-| url                       | url                | Direct URL to access or preview the document        | Query, Retrieve          |
-| versionModifiedDate       | LastModifiedDateTime | Date and time when this version was last modified  | Query, Retrieve          |
-| title       | title | The title of the document            | Search, Retrieve           |
-| tags       | tags | The tags of the document            | Query, Retrieve           |
-| description       |  | The description of the document            | Retrieve           |
-| itemType       | itemType | The itemType of the document            | Query, Retrieve           |
-| owner       |  | The owner of the document            | Search, Query, Retrieve           |
-| documentNumber       |  | The document number of the document            | Query, Retrieve           |
-| globalID       |  | The global identifier of the document            | Query, Retrieve           |
-| itemPath       | itemPath | The item path of the document            | Query, Retrieve           |
-| document number version       |  | A mix id based on document number and version  | Query, Retrieve           |
+| Property                        | Veeva field                                                                              | Semantic Label       | Description                                                           | Schema Attributes              |
+|---------------------------------|------------------------------------------------------------------------------------------|----------------------|-----------------------------------------------------------------------|--------------------------------|
+| Id                              | document_number + document version                                                       |                      | Unique identifier for the document record                            | Query, Retrieve                |
+| FileName                        | filename__v                                                                              | fileName             | Name of the uploaded source file                                     | Query, Retrieve, Search        |
+| Title                           | title__v                                                                                 | title                | Document title                                                       | Retrieve, Search               |
+| Description                     | description__v                                                                           |                      | Free-text description of the document                                | Retrieve, Search               |
+| Extension                       | file extension of filename__v                                                            | fileExtension        | File type extension such as PDF, DOCX, XLSX                          | Query, Retrieve, Search        |
+| Url                             | https://{vaultDns}/ui/#doc_info/{id}/{major_version_number__v}/{minor_version_number__v} | url                  | Direct URL to access or preview the document in Veeva Vault          | Query, Retrieve                |
+| Status                          | status__v                                                                                | state                | Current lifecycle state of the document (for example, Draft, Approved, Effective) | Query, Retrieve    |
+| DocumentId                      | id                                                                                       |                      | Unique document identifier (primary key) in the Veeva system         | Query, Retrieve                |
+| GlobalId                        | global_id__sys                                                                           |                      | System-generated globally unique identifier across Vaults            | Query, Retrieve                |
+| DocumentNumber                  | document_number__v                                                                       |                      | System-assigned document number in the Veeva system                  | Query, Retrieve                |
+| Version                         | {major_version_number__v}_{minor_version_number__v}                                      |                      | Combined version string of the document                              | Query, Retrieve                |
+| UrlRoutingId                    | concat(id, '/', major_version_number__v, '/', minor_version_number__v)                   |                      | Composite routing identifier used for URL resolution                 | Query, Retrieve                |
+| MajorVersion                    | major_version_number__v                                                                  |                      | Major version number of the document                                 | Query, Retrieve                |
+| MinorVersion                    | minor_version_number__v                                                                  |                      | Minor version number of the document                                 | Query, Retrieve                |
+| Type                            | type__v                                                                                  | containerName        | Top-level document type classification                               | Query, Retrieve                |
+| Subtype                         | subtype__v                                                                               |                      | Second-level document classification under type                      | Query, Retrieve                |
+| Product                         | product__v.name__v                                                                       |                      | Product related to or covered by the document                        | Query, Retrieve                |
+| Tags                            | tags__v                                                                                  | tags                 | Tags or keywords associated with the document                        | Query, Retrieve, Refine        |
+| Country                         | country__v.name__v                                                                       |                      | Country or region associated with the document                       | Query, Retrieve                |
+| Format                          | format__v                                                                                |                      | Document format or type information                                  | Query, Retrieve                |
+| ItemType                        | format__v                                                                                | itemType             | Item type derived from the document format                           | Query, Retrieve, Refine        |
+| ItemPath                        | {type__v}/{subtype__v}                                                                   | itemPath             | Hierarchical path combining the document type and subtype            | Query, Retrieve                |
+| Owner                           | source_owner__v                                                                          |                      | Document owner in the Veeva system                                   | Query, Retrieve, Search, Refine |
+| DocumentCreationDate            | document_creation_date__v                                                                | createdDateTime      | Date and time when the document was originally created               | Query, Retrieve                |
+| VersionModifiedDate             | version_modified_date__v                                                                 | lastModifiedDateTime | Date and time when this version was last modified                    | Query, Retrieve                |
+| CreatedBy                       | created_by__v (name, email)                                                              | createdBy            | User who initially created the document                              | Query, Retrieve, Search        |
+| CreatedByUserId                 | created_by__v                                                                            |                      | Internal user identifier for the document creator                    | Query, Retrieve                |
+| LastModifiedByUserId            | last_modified_by__v                                                                      |                      | Internal user identifier of the last modifier                        | Query, Retrieve                |
+| LastModifiedBy                  | last_modified_by__v (name, email)                                                        | lastModifiedBy       | User who last modified the document                                  | Query, Retrieve, Search        |
+| Lifecycle                       | lifecycle__v                                                                             |                      | Lifecycle assigned to the document                                   | Query, Retrieve                |
+| OwningDepartment                | owning_department__v.name__v                                                             |                      | Department responsible for owning the document                       | Query, Retrieve                |
+| OwningFacility                  | owning_facility__c.name__v                                                               |                      | Facility associated with the document ownership                      | Query, Retrieve                |
+| ReferenceModelCategory          | reference_model_category__c.name__v                                                      |                      | High-level reference model category of the document                  | Query, Retrieve                |
+| ReferenceModelSubcategory       | reference_model_subcategory__c.name__v                                                   |                      | Subcategory within the reference model classification                | Query, Retrieve                |
+| PeriodicReviewFrequency         | periodic_review_frequency1__c                                                            |                      | Frequency at which the document undergoes periodic review            | Query, Retrieve                |
+| DaysBeforeToStartPeriodicReview | days_before_to_start_periodic_review__c                                                  |                      | Number of days before the document's periodic review begins          | Query, Retrieve                |
+| ObsolescenceApproved            | obsolescence_approved__c                                                                 |                      | Indicates whether obsolescence is approved                           | Query, Retrieve                |
+| Scope                           | scope__c                                                                                 |                      | Scope or applicability of the document                               | Query, Retrieve                |
+| ImplementationPeriodDays        | implementation_period_days__c                                                            |                      | Number of days designated for implementation of the document         | Query, Retrieve                |
+| RequiresDcc                     | requires_dcc__c                                                                          |                      | Indicates if Document Change Control is required                     | Query, Retrieve                |
+| ImportedDocument                | imported_document__c                                                                     |                      | Indicates if the document was imported                               | Query, Retrieve                |
+| Size                            | size__v                                                                                  |                      | File size of the document                                            |                                |
+| Content                         | document content                                                                         |                      | Main text or body content extracted from the document                | Search                         |
+
+#### Add custom properties
+
+In addition to the default properties, the connector automatically discovers custom and other document properties from your Veeva PromoMats instance. During setup, the connector retrieves all available document fields that are queryable, not disabled, and not hidden, and presents them as additional properties under **Manage properties**.
+
+You can select and add these custom properties one by one to the connector schema. Each added custom property has the following default schema attributes:
+
+- **Query** and **Retrieve** are enabled by default.
+- **Search** and **Refine** aren't enabled by default but can be turned on on the **Manage properties** custom setup.
+
+For properties that reference Veeva Vault objects (ObjectReference type), the connector also fetches the referenced object's metadata and exposes its fields as nested properties. For example, if a custom property references a VObject of type `campaign__v`, the connector generates properties like `campaign__v.name__v`, `campaign__v.status__v`, and so on.
+
+After adding custom properties, you can customize the schema attributes for any property—both default and custom—under **Manage properties**. You can enable or disable **Query**, **Retrieve**, **Search**, and **Refine** for each property based on your organization's requirements.
 
 ### Customize sync intervals
 

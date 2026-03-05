@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 02/09/2026
+ms.date: 03/05/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Veeva PromoMats Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -140,43 +140,55 @@ Admins can use query string conditions to precisely control the synchronization 
 
 You can view and manage properties crawled from your Veeva PromoMats instance. The following table lists the properties that the connector indexes by default.
 
-| Property             | Semantic label   | Description                                   | Schema attributes         |
-|----------------------|------------------|-----------------------------------------------|--------------------------|
-| Content              | Main text/body   | Main text or body content extracted from the document | Search                   |
-| Country              | Country          | Country or region related to the document     | Query, Retrieve          |
-| CreatedBy            | CreatedBy        | User who initially created the document       | Query, Retrieve          |
-| CreatedByUserId      |                  | Internal user identifier for document creator | Query, Retrieve          |
-| DocumentCreationDate | createdDateTime  | The date and time the document was created    | Query, Retrieve          |
-| Extension            |                  | File type extension (PDF, DOCX, PPTX)         | Query, Retrieve, Search  |
-| FileName             | fileName         | Name or title of the document file            | Query, Retrieve, Search  |
-| Format               |                  | Document format or content type               | Query, Retrieve          |
-| Id                   |                  | Unique identifier of the document             | Query, Retrieve          |
-| LastModifiedBy       | lastModifiedBy   | User who last modified the document           | Query, Retrieve          |
-| LastModifiedByUserId |                  | Internal user identifier for last modifier    | Query, Retrieve          |
-| Lifecycle            |                  | Lifecycle status of the document (e.g., Draft, Approved) | Query, Retrieve |
-| MajorVersion         |                  | Main version number of the document           | Query, Retrieve          |
-| MinorVersion         |                  | Minor version or revision number              | Query, Retrieve          |
-| Product              |                  | Product associated with the document content  | Query, Retrieve          |
-| Size                 |                  | File size of the document                     |                          |
-| Status               |                  | Document status (e.g., Active, Archived)      | Query, Retrieve          |
-| Subtype              |                  | Specific subtype or document classification   | Query, Retrieve          |
-| Type                 |                  | General type or category of the document      | Query, Retrieve          |
-| Url                  | url              | Direct URL to access or preview the document  | Query, Retrieve          |
-| VersionId            |                  | Unique identifier for a specific document version | Query, Retrieve      |
-| VersionModifiedDate  | lastModifiedDateTime | Date and time when this version was last modified | Query, Retrieve      |
-| title       | title | The title of the document            | Search, Retrieve           |
-| tags       | tags | The tags of the document            | Query, Retrieve           |
-| authors       | authors | The authors of the document            | Query, Retrieve           |
-| keyMessage       |  | The key message of the document            | Search, Retrieve           |
-| brand       |  | The brand of the document            | Search, Query, Retrieve           |
-| secondaryBrand       |  | The secondary brand of the document            | Search, Query, Retrieve           |
-| description       |  | The description of the document            | Retrieve           |
-| itemType       | itemType | The itemType of the document            | Query, Retrieve           |
-| owner       |  | The owner of the document            | Search, Query, Retrieve           |
-| documentNumber       |  | The document number of the document            | Query, Retrieve           |
-| globalID       |  | The global identifier of the document            | Query, Retrieve           |
-| itemPath       | itemPath | The item path of the document            | Query, Retrieve           |
-| version       |  | the version of the document | Query, Retrieve           |
+| Property             | Veeva field                            | Semantic label       | Description                                                          | Schema attributes                    |
+|----------------------|----------------------------------------|----------------------|----------------------------------------------------------------------|--------------------------------------|
+| Id                   | document_number__v                     |                      | Unique identifier of the document                                    | Query, Retrieve                      |
+| DocId                | id                                     |                      | Internal document identifier (primary key) in the Veeva system       | Query, Retrieve                      |
+| GlobalId             | global_id__sys                         |                      | System-generated globally unique identifier across Vaults            | Query, Retrieve                      |
+| DocumentNumber       | document_number__v                     |                      | System-assigned document number in the Veeva system                  | Query, Retrieve                      |
+| FileName             | filename__v                            | fileName             | Name of the uploaded source file                                     | Query, Retrieve                      |
+| Title                | title__v                               | title                | Document title                                                       | Retrieve, Search                     |
+| Description          | description__v                         |                      | Free-text description of the document                                | Retrieve, Search                     |
+| Extension            | file extension of filename__v          | fileExtension        | File type extension (for example, PDF, DOCX, PPTX)                  | Query, Retrieve, Search              |
+| Url                  | https://{vaultDns}/ui/#doc_info/{id}   | url                  | Direct URL to access or preview the document in Veeva Vault          | Query, Retrieve                      |
+| Status               | status__v                              |                      | Document status (for example, Active, Archived)                      | Query, Retrieve                      |
+| VersionId            | version_id                             |                      | Unique identifier for a specific document version                    | Query, Retrieve                      |
+| MajorVersion         | major_version_number__v                |                      | Major version number of the document                                 | Query, Retrieve                      |
+| MinorVersion         | minor_version_number__v                |                      | Minor version or revision number                                     | Query, Retrieve                      |
+| Type                 | type__v                                | containerName        | Top-level document type classification                               | Query, Retrieve                      |
+| Subtype              | subtype__v                             |                      | Second-level document classification under type                      | Query, Retrieve                      |
+| Product              | product__v.name__v                     |                      | Product associated with the document content                         | Query, Retrieve                      |
+| Brand                | branding__v                            |                      | Brand associated with the promotional material                       | Query, Retrieve, Search, Refine      |
+| SecondaryBrand       | secondary_brands__v                    |                      | Secondary brands associated with the promotional material            | Query, Retrieve, Search, Refine      |
+| KeyMessages          | key_message__v                         |                      | Key messages associated with the promotional material                | Retrieve, Search                     |
+| Tags                 | tags__v                                | tags                 | Tags or keywords associated with the document                        | Query, Retrieve, Refine              |
+| Country              | country__v.name__v                     |                      | Country or region related to the document                            | Query, Retrieve                      |
+| Format               | format__v                              |                      | File format of the source document                                   | Query, Retrieve                      |
+| ItemType             | format__v                              | itemType             | Item type derived from the document format                           | Query, Retrieve, Refine              |
+| ItemPath             | {type__v}/{subtype__v}                 | itemPath             | Hierarchical path combining the document type and subtype            | Query, Retrieve                      |
+| Authors              | file_meta_author__v                    | authors              | Author metadata from the source file                                 | Query, Retrieve, Refine              |
+| DocumentCreationDate | document_creation_date__v              | createdDateTime      | Date and time the document was created in Vault                      | Query, Retrieve                      |
+| VersionModifiedDate  | version_modified_date__v               | lastModifiedDateTime | Date and time when this version was last modified                    | Query, Retrieve                      |
+| CreatedBy            | created_by__v (name, email)            | createdBy            | User who initially created the document                              | Query, Retrieve, Search              |
+| CreatedByUserId      | created_by__v                          |                      | Internal user identifier for document creator                        | Query, Retrieve                      |
+| LastModifiedByUserId | last_modified_by__v                    |                      | Internal user identifier for last modifier                           | Query, Retrieve                      |
+| LastModifiedBy       | last_modified_by__v (name, email)      | lastModifiedBy       | User who last modified the document                                  | Query, Retrieve, Search              |
+| Lifecycle            | lifecycle__v                           |                      | Lifecycle assigned to the document                                   | Query, Retrieve                      |
+| Size                 | size__v                                |                      | File size of the document                                            |                                      |
+| Content              | document content                       |                      | Main text or body content extracted from the document                | Search                               |
+
+#### Add custom properties
+
+In addition to the default properties, the connector automatically discovers custom and other document properties from your Veeva PromoMats instance. During setup, the connector retrieves all available document fields that are queryable, not disabled, and not hidden, and presents them as additional properties under **Manage properties**.
+
+You can select and add these custom properties one by one to the connector schema. Each added custom property has the following default schema attributes:
+
+- **Query** and **Retrieve** are enabled by default.
+- **Search** and **Refine** aren't enabled by default but can be turned on on the **Manage properties** custom setup.
+
+For properties that reference Veeva Vault objects (ObjectReference type), the connector also fetches the referenced object's metadata and exposes its fields as nested properties. For example, if a custom property references a VObject of type `campaign__v`, the connector generates properties like `campaign__v.name__v`, `campaign__v.status__v`, and so on.
+
+After adding custom properties, you can customize the schema attributes for any property—both default and custom—under **Manage properties**. You can enable or disable **Query**, **Retrieve**, **Search**, and **Refine** for each property based on your organization's requirements.
 
 ### Customize sync intervals
 

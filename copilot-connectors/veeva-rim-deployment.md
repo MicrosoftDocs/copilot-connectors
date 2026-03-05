@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 02/09/2026
+ms.date: 03/05/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Veeva Vault RIM Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -135,66 +135,82 @@ You can use query string conditions to precisely control the synchronization of 
 
 #### Manage properties
 
-You can view properties crawled from your Veeva RIM instance. The connector indexes metadata such as document name, owner, lifecycle stage, title, created by, and last modified by. The following table lists the properties that the Veeva QualityDocs connector indexes by default.
+The following table lists the properties that the Veeva Vault RIM connector indexes by default.
 
-| Properties             | Semantic label         | Description                                                    | Schema                 |
-|------------------------|------------------------|----------------------------------------------------------------|------------------------|
-| Id |  | Unique identifier of the document version in Veeva RIM. | Query, Retrieve |
-| Name | title | Display name of the regulatory document. | Query, Retrieve |
-| FileName | filename | Original file name of the uploaded document. | Query, Search, Retrieve |
-| Extension | fileExtension | File type extension (e.g., .pdf, .docx). | Query, Search, Retrieve |
-| Url | url | Direct link to open the document in Veeva RIM. | Query, Retrieve |
-| Status | state | Current lifecycle state of the document (e.g., Draft, Approved). | Query, Retrieve |
-| DocumentId |  | Unique identifier of the document (without version). | Query, Retrieve |
-| MajorVersion |  | Major version number assigned to the document. | Query, Retrieve |
-| MinorVersion |  | Minor version number of the document. | Query, Retrieve |
-| Type |  | Regulatory document type (e.g., Submission, Report). | Query, Retrieve |
-| Subtype |  | Sub-classification of the document type. | Query, Retrieve |
-| Product |  | Associated product(s) linked to the document. | Query, Retrieve |
-| Country |  | Country or region relevant to the document. | Query, Retrieve |
-| Format |  | Defined format of the regulatory document. | Query, Retrieve |
-| DocumentCreationDate | createdDateTime | Original creation date of the document. | Query, Retrieve |
-| VersionModifiedDate | lastModifiedDateTime | Date when the document version was last modified. | Query, Retrieve |
-| CreatedBy | createdBy | Name of the user who created the document. | Query, Retrieve |
-| CreatedByUserId |  | System ID of the user who created the document. | Query, Retrieve |
-| LastModifiedByUserId |  | System ID of the user who last modified the document. | Query, Retrieve |
-| LastModifiedBy | lastModifiedBy | Name of the user who last modified the document. | Query, Retrieve |
-| Lifecycle |  | Document lifecycle phase within RIM. | Query, Retrieve |
-| Size |  | File size of the document in bytes. |  |
-| Content |  | Extracted text/content of the document. | Retrieve |
-| ApprovedDate |  | Date when the document was approved. | Query, Retrieve |
-| AnnotationsAll |  | Total count of annotations in the document. | Query, Retrieve |
-| AnnotationsAnchors |  | Count of anchor annotations. | Query, Retrieve |
-| AnnotationsApproved |  | Count of approved annotations. | Query, Retrieve |
-| AnnotationsAuto |  | Count of automatically generated annotations. | Query, Retrieve |
-| AnnotationsClaim |  | Count of claim annotations. | Query, Retrieve |
-| AnnotationsLines |  | Count of line-level annotations. | Query, Retrieve |
-| AnnotationsLinks |  | Count of link annotations. | Query, Retrieve |
-| AnnotationsNotes |  | Count of note annotations. | Query, Retrieve |
-| AnnotationsPermalink |  | Count of permalink annotations. | Query, Retrieve |
-| AnnotationsResolved |  | Count of resolved annotations. | Query, Retrieve |
-| AnnotationsUnresolved |  | Count of unresolved annotations. | Query, Retrieve |
-| FileCreatedBy |  | System name of the file’s original author. | Query, Retrieve |
-| FileCreatedDate |  | Date when the file was originally created. | Query, Retrieve |
-| FileMetaAuthor |  | Metadata field capturing the file’s author. | Query, Retrieve |
-| FileMetaKeywords |  | Metadata keywords associated with the file. | Query, Retrieve |
-| FileModifiedBy |  | System name of the user who last modified the file. | Query, Retrieve |
-| FileModifiedDate |  | Date when the file was last modified. | Query, Retrieve |
-| SourceDocumentId |  | ID of the source or parent document (if derived). | Query, Retrieve |
-| SourceDocumentName |  | Name of the source or parent document. | Query, Retrieve |
-| VersionCreatedBy |  | User who created the current version. | Query, Retrieve |
-| VersionLink |  | Link to the specific document version in RIM. | Query, Retrieve |
-| HealthAuthorityVersion |  | Version identifier used for health authority submissions. | Query, Retrieve |
-| IdmpSubmissionDate |  | Date of IDMP (Identification of Medicinal Products) submission. | Query, Retrieve |
-| IncludeForAllLanguages |  | Indicates whether the document is applicable across all languages. | Query, Retrieve |
-| MasterFileCode |  | Code used to classify the master file. | Query, Retrieve |
-| MasterFileIdentifier |  | Identifier for the master file record. | Query, Retrieve |
-| RIMAutoClassification |  | Auto-classification category assigned by RIM. | Query, Retrieve |
-| TemplateDocument |  | Flag indicating if the document is a template. | Query, Retrieve |
-| XevmpdSubmissionStatus |  | Status of XEVMPD (Extended EudraVigilance Medicinal Product Dictionary) submission. | Query, Retrieve |
-| Version |  | the version number of a file | Query, Retrieve |
-| ItemPath |  |  | Search, Retrieve |
-| ItemType |  |  | Search, Retrieve |
+| Property               | Veeva field                                                                              | Semantic label       | Description                                                           | Schema attributes              |
+|------------------------|------------------------------------------------------------------------------------------|----------------------|-----------------------------------------------------------------------|--------------------------------|
+| Id                     | document_number_version                                                                  |                      | Unique identifier of the document composed of document number and version | Query, Retrieve            |
+| DocumentNumber         | document_number__v                                                                       |                      | System-assigned document number in the Veeva system                  | Query, Retrieve                |
+| GlobalId               | global_id__sys                                                                           |                      | System-generated globally unique identifier across Vaults            | Query, Retrieve, Search        |
+| Name                   | name__v                                                                                  | title                | Document name or title (up to 100 characters)                        | Query, Retrieve, Search        |
+| FileName               | filename__v                                                                              | fileName             | Name of the uploaded source file                                     | Query, Retrieve, Search        |
+| Extension              | file extension of filename__v                                                            | fileExtension        | File type extension (for example, PDF, DOCX, PPTX)                  | Query, Retrieve, Search        |
+| Url                    | https://{vaultDns}/ui/#doc_info/{id}/{major_version_number__v}/{minor_version_number__v} | url                  | Direct URL to access or preview the document in Veeva Vault          | Query, Retrieve                |
+| Status                 | status__v                                                                                | state                | Current lifecycle state of the document (for example, Draft, Approved, Effective) | Query, Retrieve, Refine |
+| DocumentId             | id                                                                                       |                      | Unique document identifier (primary key) in the Veeva system         | Query, Retrieve                |
+| Version                | {major_version_number__v}_{minor_version_number__v}                                      |                      | Combined version string of the document                              | Query, Retrieve                |
+| UrlRoutingId           | concat(id, '/', major_version_number__v, '/', minor_version_number__v)                   |                      | Composite routing identifier used for URL resolution                 | Query, Retrieve                |
+| MajorVersion           | major_version_number__v                                                                  |                      | Major version number of the document (for example, the "2" in v2.1) | Query, Retrieve                |
+| MinorVersion           | minor_version_number__v                                                                  |                      | Minor version number of the document (for example, the "1" in v2.1) | Query, Retrieve                |
+| Type                   | type__v                                                                                  | containerName        | Top-level document type classification                               | Query, Retrieve                |
+| Subtype                | subtype__v                                                                               |                      | Second-level document classification under type                      | Query, Retrieve                |
+| Product                | product__v.name__v                                                                       |                      | Product associated with the document                                 | Query, Retrieve                |
+| Country                | country__v.name__v                                                                       |                      | Country or region associated with the document                       | Query, Retrieve                |
+| Format                 | format__v                                                                                |                      | File format of the source document                                   | Query, Retrieve                |
+| ItemType               | format__v                                                                                | itemType             | Item type derived from the document format                           | Query, Retrieve, Refine        |
+| ItemPath               | {type__v}/{subtype__v}                                                                   | itemPath             | Hierarchical path combining the document type and subtype            | Query, Retrieve                |
+| DocumentCreationDate   | document_creation_date__v                                                                | createdDateTime      | Date and time the document was created in Vault                      | Query, Retrieve                |
+| VersionModifiedDate    | version_modified_date__v                                                                 | lastModifiedDateTime | Date and time when this version was last modified                    | Query, Retrieve                |
+| CreatedBy              | created_by__v (name, email)                                                              | createdBy            | User who originally created the document                             | Query, Retrieve, Search        |
+| CreatedByUserId        | created_by__v                                                                            |                      | Internal user identifier for the document creator                    | Query, Retrieve                |
+| LastModifiedBy         | last_modified_by__v (name, email)                                                        | lastModifiedBy       | User who last modified the document                                  | Query, Retrieve, Search        |
+| LastModifiedByUserId   | last_modified_by__v                                                                      |                      | Internal user identifier of the last modifier                        | Query, Retrieve                |
+| Lifecycle              | lifecycle__v                                                                             |                      | Lifecycle assigned to the document                                   | Query, Retrieve                |
+| Size                   | size__v                                                                                  |                      | File size of the document                                            |                                |
+| Content                | document content                                                                         |                      | Main text or body content extracted from the document                | Search                         |
+| ApprovedDate           | approved_date__c                                                                         |                      | Date when the document was approved                                  | Query, Retrieve                |
+| AnnotationsAll         | annotations_all__v                                                                       |                      | Total count of all annotations on the document                       | Query, Retrieve                |
+| AnnotationsAnchors     | annotations_anchors__v                                                                   |                      | Count of anchor annotations on the document                          | Query, Retrieve                |
+| AnnotationsApproved    | annotations_approved__v                                                                  |                      | Count of approved annotations on the document                        | Query, Retrieve                |
+| AnnotationsAuto        | annotations_auto__v                                                                      |                      | Count of auto-generated annotations on the document                  | Query, Retrieve                |
+| AnnotationsClaim       | annotations_claim__v                                                                     |                      | Count of claim annotations on the document                           | Query, Retrieve                |
+| AnnotationsLines       | annotations_lines__v                                                                     |                      | Count of line annotations on the document                            | Query, Retrieve                |
+| AnnotationsLinks       | annotations_links__v                                                                     |                      | Count of link annotations on the document                            | Query, Retrieve                |
+| AnnotationsNotes       | annotations_notes__v                                                                     |                      | Count of note annotations on the document                            | Query, Retrieve                |
+| AnnotationsPermalink   | annotations_permalink__v                                                                 |                      | Count of permalink annotations on the document                       | Query, Retrieve                |
+| AnnotationsResolved    | annotations_resolved__v                                                                  |                      | Count of resolved annotations on the document                        | Query, Retrieve                |
+| AnnotationsUnresolved  | annotations_unresolved__v                                                                |                      | Count of unresolved annotations on the document                      | Query, Retrieve                |
+| FileCreatedBy          | file_created_by__v                                                                       |                      | User who created the uploaded source file                            | Query, Retrieve                |
+| FileCreatedDate        | file_created_date__v                                                                     |                      | Date when the uploaded source file was created                       | Query, Retrieve                |
+| FileMetaAuthor         | file_meta_author__v                                                                      |                      | Author metadata extracted from the source file                       | Query, Retrieve                |
+| FileMetaKeywords       | file_meta_keywords__v                                                                    |                      | Keywords metadata extracted from the source file                     | Query, Retrieve                |
+| FileModifiedBy         | file_modified_by__v                                                                      |                      | User who last modified the uploaded source file                      | Query, Retrieve                |
+| FileModifiedDate       | file_modified_date__v                                                                    |                      | Date when the uploaded source file was last modified                 | Query, Retrieve                |
+| SourceDocumentId       | source_document_id__v                                                                    |                      | Identifier of the source document this version was derived from      | Query, Retrieve                |
+| SourceDocumentName     | source_document_name__v                                                                  |                      | Name of the source document this version was derived from            | Query, Retrieve                |
+| VersionCreatedBy       | version_created_by__v (name, email)                                                      |                      | User who created this specific document version                      | Query, Retrieve, Search        |
+| VersionLink            | version_link__sys                                                                        |                      | System link to the document version                                  | Query, Retrieve                |
+| HealthAuthorityVersion | health_authority_version__c                                                              |                      | Health authority version identifier for regulatory submissions       | Query, Retrieve                |
+| IdmpSubmissionDate     | idmp_submission_date__v                                                                  |                      | Identification of Medicinal Products (IDMP) submission date          | Query, Retrieve                |
+| IncludeForAllLanguages | include_for_all_languages__v                                                             |                      | Indicates whether the document is included for all language versions  | Query, Retrieve                |
+| MasterFileCode         | master_file_code__v                                                                      |                      | Master file code for the regulatory document                         | Query, Retrieve                |
+| MasterFileIdentifier   | master_file_identifier__v                                                                |                      | Master file identifier for the regulatory document                   | Query, Retrieve                |
+| RIMAutoClassification  | rim_autoclassification__v                                                                |                      | RIM auto-classification value assigned to the document               | Query, Retrieve                |
+| TemplateDocument       | template_document__v                                                                     |                      | Indicates whether the document is a template                         | Query, Retrieve                |
+| XevmpdSubmissionStatus | xevmpd_attachment_only_submission_status__v                                              |                      | Extended EudraVigilance Medicinal Product Dictionary (XEVMPD) attachment-only submission status | Query, Retrieve |
+
+#### Add custom properties
+
+In addition to the default properties, the connector automatically discovers custom and other document properties from your Veeva PromoMats instance. During setup, the connector retrieves all available document fields that are queryable, not disabled, and not hidden, and presents them as additional properties under **Manage properties**.
+
+You can select and add these custom properties one by one to the connector schema. Each added custom property has the following default schema attributes:
+
+- **Query** and **Retrieve** are enabled by default.
+- **Search** and **Refine** aren't enabled by default but can be turned on on the **Manage properties** custom setup.
+
+For properties that reference Veeva Vault objects (ObjectReference type), the connector also fetches the referenced object's metadata and exposes its fields as nested properties. For example, if a custom property references a VObject of type `campaign__v`, the connector generates properties like `campaign__v.name__v`, `campaign__v.status__v`, and so on.
+
+After adding custom properties, you can customize the schema attributes for any property—both default and custom—under **Manage properties**. You can enable or disable **Query**, **Retrieve**, **Search**, and **Refine** for each property based on your organization's requirements.
 
 ### Customize sync intervals
 
