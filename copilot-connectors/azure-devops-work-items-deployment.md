@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 12/18/2025
+ms.date: 03/09/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Azure DevOps Work Items Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -25,9 +25,7 @@ Before you deploy the Azure DevOps Work Items connector, make sure that the Azur
 
 - You must be a Microsoft 365 admin.
 - You identified the Azure DevOps organization to index.
-- You configured a crawl account in Azure DevOps that has at least the required read permissions for all projects and area paths to be indexed.
-- You created an application in Microsoft Entra ID with delegated Azure DevOps REST API permissions.
-- You generated a client secret for the Microsoft Entra app for OAuth-based authentication.
+- You configured a crawl service account in Azure DevOps that has at least the required read permissions for all projects and area paths to be indexed.
 
 ## Deploy the connector
 
@@ -40,8 +38,6 @@ To add the Azure DevOps Work Items connector for your organization:
 ### Set display name
 
 The display name is used to identify references in Copilot responses to help users recognize the associated content source. You can accept the default **Azure DevOps Work Items** display name or customize it as appropriate for your organization.
-
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
 
 ### Set instance URL
 
@@ -56,7 +52,7 @@ Only the organization name is required—don't provide the full URL.
 
 To sync work items from Azure DevOps, choose one of the supported authentication methods and complete the required setup:
 
-- **Federeated Credential (recommended)** - Uses a service principal to crawl content.
+- **Federated Credential (recommended)** - Uses a service principal to crawl content.
 - **Microsoft Entra ID OAuth** - Uses the signed‑in Microsoft 365 admin account.
 
 #### Federated Credential (recommended)
@@ -77,7 +73,7 @@ Grant the service principal access to the Azure DevOps projects you want to inde
 2. Select **Organization settings**.
 3. In the left pane, under **General**, select **Users**.
 4. Select **Add users**.
-5. In **Users or Service Principals**, enter the app ID: `933838e2-bec1-440f-a634-9363c82e5b6d` .
+5. In **Users or Service Principals**, enter the app ID: `933838e2-bec1-440f-a634-9363c82e5b6d`.
 6. Assign the **Basic** access level, select the projects to index, and add the app to the **Project Administrators** group (or an equivalent group). Clear the option to send an email invitation.
 
 ##### Configure Federated Credential authentication
@@ -105,32 +101,48 @@ The connector can only index work items from an Azure DevOps organization that�
 1. Sign in to the [Azure portal](https://portal.azure.com) with admin credentials.
 2. Go to **Microsoft Entra ID** > **Identity** > **Applications** > **App registrations**, then select **New registration**.
 3. Enter a name for the app and select **Register**.
-4. Note the **Application (client) ID**—you’ll use it to grant project access in Azure DevOps.
-5. Open **API permissions** and select **Add a permission**.
-6. Choose **Azure DevOps** > **Delegated permissions**.
-7. Add the following *vso* permissions:
+4. Note the **Application (client) ID**—you use it to grant project access in Azure DevOps.
+
+##### Configure API permissions
+
+1. In the app registration, select **API permissions**.
+2. Choose **Add a permission** > **Azure DevOps** > **Delegated permissions**.
+3. Add the following permissions (all under **vso**):
    - **vso.analytics** – Analytics (read)  
-   - **vso.graph** – Microsoft Graph (read)  
+   - **vso.graph** – Graph (read)  
    - **vso.identity** – Identity (read)  
    - **vso.project** – Project and team (read)  
    - **vso.variablegroups_read** – Variable Groups (read)  
    - **vso.work** – Work items (read)
-8. Select **Grant admin consent for \<TenantName\>** and confirm.
-9. Verify that all permissions show as **Granted**.
-10. Open **Authentication** and select **Add a platform** > **Web**. Add one of the following redirect URIs:
-    - **Microsoft 365 Enterprise:** `https://gcs.office.com/v1.0/admin/oauth/callback`
-    - **Microsoft 365 Government:** `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
-11. Under **Implicit grant and hybrid flows**, enable **ID tokens** and select **Configure**.
-12. Go to **Certificates and secrets**, then select **New client secret**. Choose an expiry period and save the generated secret value.
-13. Use the **client secret** and **application ID** when you configure the connector.
+4. Select **Grant admin consent for \<TenantName\>** and confirm.
+5. Verify that all permissions show the status **Granted**.
 
-#### Authenticate the Microsoft Entra app with a crawl account
+##### Configure authentication settings
 
-The app uses single sign‑on to authenticate with the signed‑in Microsoft 365 admin account. Microsoft Entra ID issues an access token that includes the delegated permissions granted to the user. The connector can only access data and perform actions that the authenticated user is authorized to perform.
+1. In the app registration, select **Authentication**.
+2. Select **Add a platform** and choose **Web**.
+3. Under **Redirect URIs**, add the URI for your cloud environment:
+   - **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`
+   - **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+4. Under **Implicit grant and hybrid flows**, select **ID tokens**.
+5. Select **Configure** to save the settings.
+
+##### Create a client secret
+
+1. In the app registration, select **Certificates and secrets**.
+2. Under **Client secrets**, select **New client secret**.
+3. Choose an expiration period and create the secret.
+4. Copy the **Value** of the secret and store it securely. You can't view it again after you leave the page.
+
+Use the client secret and the application (client) ID when you configure the connector in the Microsoft 365 admin center.
+
+##### Authenticate the Microsoft Entra app with a crawl account
+
+When you're signed in as an admin, the Microsoft Entra app is automatically authenticated via single sign-on. Microsoft Entra ID issues an access token to the app, which includes the user's identity and the delegated permissions you granted. The app can access only the data and actions that the signed-in admin user is authorized to access.
 
 ### Roll out
 
-To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users or groups to roll the connector out to. This allows you to validate the connector before a full deployment. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
+To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users or groups to roll the connector out to. This allows you to validate the connector before a full deployment. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The Azure DevOps Work Items connector begins indexing content immediately.
 
@@ -204,10 +216,11 @@ You can adjust how frequently the connector crawls your Azure DevOps organizatio
 
 The default sync settings are optimized for most organizations.
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Azure DevOps Work Items connector overview](azure-devops-work-items-overview.md)
 - [Troubleshoot issues with the Azure DevOps Work Items connector](azure-devops-work-items-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+

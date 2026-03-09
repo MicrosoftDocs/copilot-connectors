@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 02/09/2026
+ms.date: 03/09/2026
 ms.localizationpriority: Medium
 ---
 
@@ -37,6 +37,7 @@ Before you deploy the connector, make sure that the following prerequisites are 
 - Install the [Microsoft Graph connector agent)](connector-agent.md) on a Windows computer on the same network as the Confluence server.
 - Install the Confluence On-prem plugin from the [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1234846?tab=reviews&hosting=datacenter).
 - Validate that the [Confluence Mobile Web Plugin](https://marketplace.atlassian.com/apps/1218250/mobile-plugin-for-confluence-data-center?hosting=server&tab=overview) is installed and enabled.
+- Validate that the **User Email Visibility** parameter is configured as **public** in Confluence Security Configuration.
 - Ensure authentication credentials are available with Confluence admin permissions.
 - Confirm that your Confluence version is 8.0 or higher.
 

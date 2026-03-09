@@ -6,23 +6,29 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: copilot-connectors 
+ms.service: mssearch 
 ms.localizationpriority: Medium 
+search.appverid: 
+- BFB160 
+- MET150 
+- MOE150 
 description: "Set up the Azure DevOps Wiki Microsoft 365 Copilot connector"
-ms.date: 12/11/2025
+ms.date: 03/09/2026
 ---
 
 # Azure DevOps Wiki Microsoft 365 Copilot connector
 
 The Azure DevOps Wiki Microsoft 365 Copilot connector allows your organization to index wikis in its instance of the Azure DevOps service. After you configure the connector, end users can search for project wikis and code wikis from Azure DevOps in Microsoft Search and Microsoft 365 Copilot.
 
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Azure DevOps Wiki Copilot connector.
+
 >[!IMPORTANT]
->The Azure DevOps Wiki Copilot connector supports only the Azure DevOps cloud service. Azure DevOps Server 2019, TFS 2018, TFS 2017, TFS 2015, and TFS 2013 are not supported by this connector.
+>The Azure DevOps Wiki Copilot connector supports only the Azure DevOps cloud service. It doesn't support Azure DevOps Server 2019, TFS 2018, TFS 2017, TFS 2015, and TFS 2013.
 
 ## Capabilities
 - Index wikis from Azure DevOps
 - Enable your end users to ask questions related to project wikis and code wikis.
-- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - The connector only indexes one ADO organization per connection. 
@@ -35,10 +41,12 @@ The Azure DevOps Wiki connector includes the following custom data filters for C
 - Assigned to
 
 ## Prerequisites
-- You must be the AI administrator for your organization's Microsoft 365 tenant and you must have Read access to the relevant project.
+- You must be the Search admin for your organization's Microsoft 365 tenant.
 - To allow the connector to connect to your Azure DevOps organization, you must enable **Third-party application access via OAuth**. For more information, see [manage security policies](/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops#manage-a-policy&preserve-view=true) to learn more.
 
-- **Service Account**: To connect to Azure DevOps and allow the Azure DevOps Wiki Copilot connector to update wikis regularly, you need a service account with the following permissions granted to it.
+    ![Third-party application access via OAuth](media/ado-workitems-connector-security-policies.png)
+
+- **Service Account**: To connect to Azure DevOps and allow the Azure DevOps Wiki Copilot connector to update wikis regularly, you need a service account with the following permissions granted to it. The service account is either the Microsoft-published service principal (for Federated Credential authentication) or the signed-in Microsoft 365 admin account (for Microsoft Entra ID OAuth authentication), depending on the authentication method selected.
 
     | Permission name | Permission type | Required for |
     | ------------ | ------------ | ------------ |
@@ -49,19 +57,45 @@ The Azure DevOps Wiki connector includes the following custom data filters for C
 
 ## Get Started
 
+[![Screenshot that shows connection creation screen for the Azure DevOps Wiki Copilot connector.](media/ado-wiki-create-page.png)](media/ado-wiki-create-page.png#lightbox)
+
 ### Choose display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Provide authentication type
 To authenticate and sync wikis from Azure DevOps, choose **one of the two** supported methods:<br>
 
-> [!IMPORTANT]
-> - [Microsoft Entra ID OAuth](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops) is the **recommended** OAuth mechanism.
-> - [Azure DevOps OAuth](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops) is the legacy authentication mechanism, not being actively invested in.
+> - **Federated Credential (recommended)** – Uses a Microsoft-published Microsoft Entra service principal as the crawl service account. The permissions granted to this service principal in Azure DevOps determine what the connector can index.
+> - **Microsoft Entra ID OAuth** – Uses delegated OAuth where the signed-in Microsoft 365 admin account acts as the crawl service account. In this case, the Azure DevOps permissions assigned to that admin account determine what the connector can index.
+
+#### Federated Credential (recommended)
+
+Federated Credential uses a Microsoft‑published enterprise application as the crawl service account. You must grant this service principal the necessary permissions in Azure DevOps.
+
+##### Confirm that the service principal app is provisioned
+
+1. Go to the [Microsoft Entra admin center](https://entra.microsoft.com/).
+2. Search for **Graph Connector Federated Credential App** or use the app ID: `933838e2-bec1-440f-a634-9363c82e5b6d`.
+3. If the app isn't provisioned, open the Copilot connectors page in the Microsoft 365 admin center. Provisioning can take several hours.
+
+##### Grant the Microsoft Entra app access to Azure DevOps projects
+
+Grant the service principal access to the Azure DevOps projects you want to index.
+
+1. Go to [Azure DevOps](https://dev.azure.com/) and select the organization.
+2. Select **Organization settings**.
+3. In the left pane, under **General**, select **Users**.
+4. Select **Add users**.
+5. In **Users or Service Principals**, enter the app ID: `933838e2-bec1-440f-a634-9363c82e5b6d`.
+6. Assign the **Basic** access level, select the projects to index, and add the app to the **Project Readers** group (or an equivalent group). Clear the option to send an email invitation.
+
+##### Configure Federated Credential authentication
+
+Select **Federated Credential** as the authentication type and authenticate when prompted.
 
 #### Microsoft Entra ID OAuth
 
-**Ensure your ADO Organization is connected to Microsoft Entra**
+##### Make sure your ADO organization is connected to Microsoft Entra
 
 The Azure DevOps Wiki Copilot connector only indexes content from an ADO organization connected with Microsoft Entra of your tenant. To ensure that your ADO organization is connected with Microsoft Entra account, use the following steps. 
 
@@ -70,7 +104,7 @@ The Azure DevOps Wiki Copilot connector only indexes content from an ADO organiz
 3. On the left navigation pane, select `Microsoft Entra` under the 'General' header.
 4. Ensure that the organization is connected to your tenant's Microsoft Entra account.
 
-**Create an app on Microsoft Entra ID**
+##### Create a Microsoft Entra ID app registration
 
 1. Go to the [Azure portal](https://portal.azure.com) and sign in with admin credentials for the tenant.
 2. Navigate to **Microsoft Entra ID** -> **Manage** -> **App registrations** from the navigation pane and select **New registration**.
@@ -96,7 +130,7 @@ The Azure DevOps Wiki Copilot connector only indexes content from an ADO organiz
 13. Select **New Client secret** and select an expiry period for the secret. Copy the generated secret (Value) and save it because it isn't shown again.
 14. Use this Client secret and the application ID to configure the connector.
 
-**Grant the Microsoft Entra app access to projects in the ADO organization**
+##### Grant the Microsoft Entra app access to projects in the ADO organization
 
 You need to provide the Microsoft Entra app with the necessary access to the projects that need to be indexed using the following steps:
 
@@ -105,38 +139,19 @@ You need to provide the Microsoft Entra app with the necessary access to the pro
 3. On the left navigation pane, select `Users` under the 'General' header.
 4. Select `Add users`.
 5. Copy the Application (client) ID obtained from the app to "Users or Service Principals".
-6. Grant the `Basic` access level and select the projects to allow access to the index. Also, add to the `Project Reader` Azure DevOps group (or equivalent) to ensure access. De-select the option to send email invitation to users.
-
-### Azure DevOps OAuth
-
-To connect to your Azure DevOps instance, you need your Azure DevOps organization App ID and client secret for OAuth authentication.
-
-**Register an app**
-
-Register an app in Azure DevOps so that the Microsoft Search app and Microsoft 365 Copilot can access the instance. To register the app, visit the link to [register application](https://app.vsaex.visualstudio.com/app/register). To learn more, see Azure DevOps documentation on how to [register an app](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops#register-your-app).
-
-The following table provides guidance on how to fill out the app registration form:
-
-Mandatory fields | Description | Recommended value
---- | --- | ---
-| Company name         | The name of your company. | Use an appropriate value.|
-| Application name     | A unique value that identifies the application that you're authorizing.    | Microsoft Search.|
-| Application website  | The URL of the application that requests access to your Azure DevOps instance during connector setup. (required).| For **Microsoft 365 Enterprise**: https://<span>gcs.office.</span>com/,</br> For **Microsoft 365 Government**: https://<span>gcsgcc.<span>office.com/|
-| Authorization callback URL| A required callback URL that the authorization server redirects to. | For **Microsoft 365 Enterprise**: https://<span>gcs.office.</span>com/v1.0/admin/oauth/callback,</br> For **Microsoft 365 Government**: https://<span>gcsgcc.office.<span>com/v1.0/admin/oauth/callback|
-| Authorized scopes | The scope of access for the application | Select the following scopes: Identity (read), Code (read), Entitlements (read), Project and Team (read), Graph (read), Member Entitlement Management (read), Wiki (read).|
-
->[!IMPORTANT]
->The authorized scopes selected for the app should exactly match the scopes listed above. If either more or fewer scopes are selected, authorization fails.
-
-On registering the app, you get the **App ID** and **Client Secret** that is used to configure the connector.
-
-To revoke access to any app registered in Azure DevOps, go to User settings at the top right of your Azure DevOps instance. Select **Profile** and then select **Authorizations** in the Security section of the side pane. Hover over an authorized OAuth app to see the Revoke button in the corner of the app details.
+6. Grant the `Basic` access level and select the projects to allow access to the index. Also, add to the `Project Reader` Azure DevOps group (or equivalent) to ensure access. Deselect the option to send email invitation to users.
 
 ### Select organization
-The Azure DevOps Wiki Copilot connector allows indexing of one organization per connection. To connect to your Azure DevOps service, select the right organization from the list of organizations accessible to the service account.
+
+Provide your Azure DevOps organization name. The Azure DevOps organization name is the segment after `https://dev.azure.com/`. For example:
+
+- URL: `https://dev.azure.com/contoso`  
+- Organization: `contoso`
+
+Only the organization name is required—don't provide the full URL.
 
 ### Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
 
 At this point, you're ready to create the connection for Azure DevOps wikis. You can click **Create** to publish your connection and index wikis from your Azure DevOps organization.
 
@@ -165,6 +180,8 @@ Custom setup is for those admins who want to edit the default values for setting
 
 ### Users
 
+[![Screenshot that shows Users tab where you can configure access permissions and user mapping rules.](media/ado-wiki-users-tab.png)](media/ado-wiki-users-tab.png#lightbox)
+
 #### Access permissions
 
 The Azure DevOps Wiki Copilot connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it.
@@ -174,6 +191,8 @@ The Azure DevOps Wiki Copilot connector supports search permissions visible to *
 > Updates to groups governing access permissions are synced in full crawls only. Incremental crawls don't support processing of updates to permissions.
 
 ### Content
+
+[![Screenshot that shows Content tab where you can configure projects and connection schema.](media/ado-wiki-content-tab.png)](media/ado-wiki-content-tab.png#lightbox)
 
 #### Choose projects
 
@@ -214,19 +233,20 @@ Use the preview results button to verify the sample values of the selected prope
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Azure DevOps Wiki Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
+[![Screenshot that shows Sync tab where you can configure crawl frequency.](media/ado-wiki-sync-tab.png)](media/ado-wiki-sync-tab.png#lightbox)
+
+The refresh interval determines how often your data is synced between the data source and the Azure DevOps Wiki Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 
 ### Set up search result page
 
-After publishing the connection, you need to customize the search results page with verticals and result types. To learn about customizing search results, review how to [manage verticals](/microsoftsearch/manage-verticals) and [result types](/microsoftsearch/manage-result-types).
+After publishing the connection, you need to customize the search results page with verticals and result types. To learn about customizing search results, review how to [manage verticals](manage-verticals.md) and [result types](manage-result-types.md).
 
-You may also use the [sample result layout](azure-devops-wiki-connector-result-layout.md) for the Azure DevOps Wiki Copilot connector. Simply copy-paste the result layout JSON to get started.
+You can also use the [sample result layout](azure-devops-wiki-connector-result-layout.md) for the Azure DevOps Wiki Copilot connector. Copy and paste the result layout JSON to get started.
 
 ## Troubleshooting
   
 After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
-You can find troubleshooting steps for commonly seen issues [here](troubleshoot-azure-devops-wiki-connector.md).
 
-If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/graph/support).
+To troubleshoot issues, see [Troubleshooting](troubleshoot-azure-devops-wiki-connector.md).
