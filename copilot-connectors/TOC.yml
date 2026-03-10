@@ -431,18 +431,19 @@ items:
         href: servicenow-catalog-deployment.md
       - name: Troubleshooting
         href: servicenow-catalog-troubleshooting.md
-        items: 
-          - name: Overview
-            href: servicenow-knowledge-overview.md
-          - name: Set up the ServiceNow service
-            href: servicenow-knowledge-admin-setup.md
-            items:
-            - name: Grant table access to a user
-              href: granting-table-access-servicenow-knowledge.md
-          - name: Deploy the connector
-            href: servicenow-knowledge-deployment.md
-          - name: Troubleshooting
-            href: servicenow-knowledge-troubleshooting.md
+    - name: ServiceNow Knowledge  
+      items: 
+      - name: Overview
+        href: servicenow-knowledge-overview.md
+      - name: Set up the ServiceNow service
+        href: servicenow-knowledge-admin-setup.md
+        items:
+        - name: Grant table access to a user
+          href: granting-table-access-servicenow-knowledge.md
+      - name: Deploy the connector
+        href: servicenow-knowledge-deployment.md
+      - name: Troubleshooting
+        href: servicenow-knowledge-troubleshooting.md
     - name: ServiceNow Tickets
       items:
       - name: Overview
