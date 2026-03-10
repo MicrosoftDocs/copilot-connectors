@@ -129,11 +129,11 @@ To create a GitHub app for use with the GitHub Server Pull Requests connector:
 
 Depending on the authentication method you plan to use, generate either a client secret or a private key. You don't need both.
 
-- **For Customized GitHub app (on behalf of user) authentication:** On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
+- **For custom GitHub app (on behalf of user) authentication:** On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
 
-    :::image type="content" alt-text="Screenshot that shows the credentials of the app, including Client Id and Client secret." source="media/github-server-admin-setup/github-app-credentials.png" lightbox="media/github-server-admin-setup/github-app-credentials.png" lightbox="media/github-server-admin-setup/github-app-credentials.png":::
+    :::image type="content" alt-text="Screenshot that shows the credentials of the app, including Client Id and Client secret." source="media/github-server-admin-setup/github-app-credentials.png" lightbox="media/github-server-admin-setup/github-app-credentials.png":::
 
-- **For Customized GitHub app (installation) authentication:** On the **General** page of the GitHub app, scroll down to the **Private keys** section and select **Generate a private key**. Save the downloaded `.pem` file securely.
+- **For custom GitHub app (installation) authentication:** On the **General** page of the GitHub app, scroll down to the **Private keys** section and select **Generate a private key**. Save the downloaded `.pem` file securely.
 
     :::image type="content" source="media/github-server-admin-setup/generate-private-key.png" alt-text="Screenshot of the GitHub App Private keys section with Generate a private key button." lightbox="media/github-server-admin-setup/generate-private-key.png":::
 
