@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 12/15/2025
+ms.date: 03/09/2026
 ms.localizationpriority: Medium
 description: "Get the steps that GitHub admins need to complete to configure the GitHub Server Pull Requests Microsoft 365 Copilot connector."
 ---
@@ -83,19 +83,19 @@ To create a GitHub app for use with the GitHub Server Pull Requests connector:
 
 1. In GitHub, select your profile photo on the top right, select **Organizations**, and choose the organization the connector should pull data from.
 
-    :::image type="content" alt-text="Screenshot that shows how to access 'Your organizations'." source="media/github-connector/organizations-nav.png" lightbox="media/github-connector/organizations-nav.png":::
+    :::image type="content" alt-text="Screenshot that shows how to access 'Your organizations'." source="media/github-server-admin-setup/organizations-nav.png" lightbox="media/github-server-admin-setup/organizations-nav.png":::
 
 2. On the organization overview page, select **Settings**.
 
-   :::image type="content" alt-text="Screenshot that shows how to access 'Settings' within the organization page." source="media/github-connector/organization-overview.png" lightbox="media/github-connector/organization-overview.png":::
+   :::image type="content" alt-text="Screenshot that shows how to access 'Settings' within the organization page." source="media/github-server-admin-setup/organization-overview.png" lightbox="media/github-server-admin-setup/organization-overview.png":::
 
 3. In the left sidebar, scroll down to **Developer settings** and select **GitHub Apps**.
 
-    :::image type="content" alt-text="Screenshot that shows how to access GitHub Apps." source="media/github-connector/github-apps.png" lightbox="media/github-connector/github-apps.png":::
+    :::image type="content" alt-text="Screenshot that shows how to access GitHub Apps." source="media/github-server-admin-setup/github-apps.png" lightbox="media/github-server-admin-setup/github-apps.png":::
 
 4. Select **New GitHub App**.
 
-    :::image type="content" alt-text="Screenshot that shows entry point to creation of new app." source="media/github-connector/new-github-app.png" lightbox="media/github-connector/new-github-app.png":::
+    :::image type="content" alt-text="Screenshot that shows entry point to creation of new app." source="media/github-server-admin-setup/new-github-app.png" lightbox="media/github-server-admin-setup/new-github-app.png":::
 
 5. Configure the app:
 
@@ -105,7 +105,7 @@ To create a GitHub app for use with the GitHub Server Pull Requests connector:
       - For Microsoft 365 for enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
       - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
 
-    :::image type="content" alt-text="Screenshot that shows the initial part of the app configuration including name and URLs." source="media/github-connector/github-app1.png" lightbox="media/github-connector/github-app1.png":::
+    :::image type="content" alt-text="Screenshot that shows the initial part of the app configuration including name and URLs." source="media/github-server-admin-setup/github-app1.png" lightbox="media/github-server-admin-setup/github-app1.png":::
 
 6. Uncheck the **Webhook** option.
 
@@ -127,15 +127,21 @@ To create a GitHub app for use with the GitHub Server Pull Requests connector:
 
 ### Create credentials for the GitHub app
 
-- On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
+Depending on the authentication method you plan to use, generate either a client secret or a private key. You don't need both.
 
-    :::image type="content" alt-text="Screenshot that shows the credentials of the app, including Client Id and Client secret." source="media/github-connector/github-app-credentials.png" lightbox="media/github-connector/github-app-credentials.png":::
+- **For Customized GitHub app (on behalf of user) authentication:** On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
+
+    :::image type="content" alt-text="Screenshot that shows the credentials of the app, including Client Id and Client secret." source="media/github-server-admin-setup/github-app-credentials.png" lightbox="media/github-server-admin-setup/github-app-credentials.png" lightbox="media/github-server-admin-setup/github-app-credentials.png":::
+
+- **For Customized GitHub app (installation) authentication:** On the **General** page of the GitHub app, scroll down to the **Private keys** section and select **Generate a private key**. Save the downloaded `.pem` file securely.
+
+    :::image type="content" source="media/github-server-admin-setup/generate-private-key.png" alt-text="Screenshot of the GitHub App Private keys section with Generate a private key button." lightbox="media/github-server-admin-setup/generate-private-key.png":::
 
 ### Install the GitHub app
 
 1. On the **General** page of the GitHub app, select **Install App**. 
 
-    :::image type="content" alt-text="Screenshot that shows the app installation dialog." source="media/github-connector/github-install.png" lightbox="media/github-connector/github-install.png":::
+    :::image type="content" alt-text="Screenshot that shows the app installation dialog." source="media/github-server-admin-setup/github-install.png" lightbox="media/github-server-admin-setup/github-install.png":::
 
 2. Select the organization where you want the app to be installed.
 
@@ -167,7 +173,7 @@ To increase the API request limit:
 1. Under **API requests (per hour) – Authenticated**, enter the rate‑limit value (for example, **30000**).
 1. Select **Save settings**.
 
-:::image type="content" source="./media/github-connector/github-server-rate-limit.png" alt-text="Screenshot of the Rate limiting tab in GitHub Server with API Requests and Save settings highlighted." lightbox="/media/github-connector/github-server-rate-limit.png":::
+:::image type="content" source="./media/github-server-rate-limit.png" alt-text="Screenshot of the Rate limiting tab in GitHub Server with API Requests and Save settings highlighted.":::
 
 > [!NOTE]
 > When you save your changes, certain GitHub Server services might restart and cause a brief service interruption. After you save, allow time for the configuration to propagate across the instance.

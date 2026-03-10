@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 12/15/2025
+ms.date: 03/09/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the GitHub admin needs to complete for your organization to configure the GitHub Server Issues Microsoft 365 Copilot connector."
 ---
@@ -29,7 +29,7 @@ The following checklist lists the steps involved in configuring the environment 
 | [Ensure API access to the target GitHub instance](#ensure-api-access-to-the-target-github-instance) | GitHub admin    |
 | [Identify Microsoft Entra ID identity mapping rules](#identify-microsoft-entra-id-mapping-rules) | GitHub admin    |
 | [Sign in to the GitHub account](#sign-in-to-the-github-account) | GitHub admin    |
-| [Verify AI administrator permissions](#verify-ai-administrator-permissions) | GitHub admin    |
+| [Verify search admin permissions](#verify-search-admin-permissions) | GitHub admin    |
 | [Use a custom GitHub app for authentication](#use-a-custom-github-app-for-authentication) | GitHub admin |
 | [Adjust GitHub Server API rate limit](#adjust-github-server-api-rate-limit) | GitHub admin |
 | [Configure firewall settings](#configure-firewall-settings) | Network admin |
@@ -50,9 +50,9 @@ Define the Microsoft Entra ID mapping rules. Make sure that users who access the
 
 For enterprise-managed users who authenticate via single sign-on (SSO), make sure the account is signed in before you perform any setup actions. Currently, the GitHub authentication flow doesn't support SSO-based sign-in during configuration.
 
-## Verify AI administrator permissions
+## Verify search admin permissions
 
-Make sure the person setting up the connector is an AI administrator for your organization’s Microsoft 365 tenant.
+Make sure the person setting up the connector is a Search admin for your organization’s Microsoft 365 tenant.
 
 ## Use a custom GitHub app for authentication
 
@@ -73,19 +73,19 @@ To create a GitHub app for use with the GitHub Server Issues connector:
 
 1. In GitHub, select your profile photo on the top right, select **Your organizations**, and choose the organization the connector should pull data from.
 
-:::image type="content" source="/media/github-cloud-issues-admin-setup/github-your-organizations.png" alt-text="Screenshot of GitHub with Your organizations highlighted" lightbox="/media/github-cloud-issues-admin-setup/github-your-organizations.png":::
+:::image type="content" source="./media/github-cloud-issues-admin-setup/github-your-organizations.png" alt-text="Screenshot of GitHub with Your organizations highlighted":::
 
 2. On the organization overview page, select **Settings**.
 
-:::image type="content" source="./media/github-cloud-issues-admin-setup/github-settings.png" alt-text="Screenshot of GitHub with Settings highlighted" lightbox="/media/github-cloud-issues-admin-setup/github-settings.png":::
+:::image type="content" source="./media/github-cloud-issues-admin-setup/github-settings.png" alt-text="Screenshot of GitHub with Settings highlighted":::
 
 3. In the left sidebar, scroll down to **Developer settings** and select **GitHub Apps**.
 
-:::image type="content" source="/media/github-cloud-issues-admin-setup/github-apps.png" alt-text="Screenshot of GitHub with GitHub Apps highlighted" lightbox="/media/github-cloud-issues-admin-setup/github-apps.png":::
+:::image type="content" source="./media/github-cloud-issues-admin-setup/github-apps.png" alt-text="Screenshot of GitHub with GitHub Apps highlighted":::
 
 4.  Select **New GitHub App**.
 
-:::image type="content" source="/media/github-cloud-issues-admin-setup/new-github-app.png" alt-text="Screenshot of GitHub with New GitHub App highlighted" lightbox="/media/github-cloud-issues-admin-setup/new-github-app.png":::
+:::image type="content" source="./media/github-cloud-issues-admin-setup/new-github-app.png" alt-text="Screenshot of GitHub with New GitHub App highlighted":::
 
 5.  Configure the app:
 
@@ -119,9 +119,15 @@ To create a GitHub app for use with the GitHub Server Issues connector:
 
 ### Create credentials for the GitHub app
 
-- On the GitHub app **General** page, select **Generate a new client secret** to generate and copy the **client secret**.
+Depending on the authentication method you plan to use, generate either a client secret or a private key. You don't need both.
 
-    :::image type="content" source="./media/github-cloud-issues-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted":::
+- **For Customized GitHub app (on behalf of user) authentication:** On the GitHub app **General** page, select **Generate a new client secret** to generate and copy the **client secret**.
+
+    :::image type="content" source="./media/github-cloud-issues-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted" lightbox="./media/github-cloud-issues-admin-setup/new-client-secret.png":::
+
+- **For Customized GitHub app (installation) authentication:** On the **General** page of the GitHub app, scroll down to the **Private keys** section and select **Generate a private key**. Save the downloaded `.pem` file securely.
+
+    :::image type="content" source="./media/github-cloud-issues-admin-setup/generate-private-key.png" alt-text="Screenshot of the GitHub App Private keys section with Generate a private key button." lightbox="./media/github-cloud-issues-admin-setup/generate-private-key.png":::
 
 ### Install the GitHub app
 
@@ -161,7 +167,7 @@ To increase the API request limit:
 1. Under **API requests (per hour) – Authenticated**, enter the rate‑limit value (for example, **30000**).
 1. Select **Save settings**.
 
-:::image type="content" source="./media/github-cloud-issues-admin-setup/github-server-rate-limit.png" alt-text="Screenshot of the Rate limiting tab in GitHub Server with API Requests and Save settings highlighted." lightbox="/media/github-cloud-issues-admin-setup/github-server-rate-limit.png":::
+:::image type="content" source="./media/github-server-rate-limit.png" alt-text="Screenshot of the Rate limiting tab in GitHub Server with API Requests and Save settings highlighted.":::
 
 > [!NOTE]
 > When you save your changes, certain GitHub Server services might restart and cause a brief service interruption. After you save, allow time for the configuration to propagate across the instance.

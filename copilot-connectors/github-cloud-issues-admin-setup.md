@@ -5,7 +5,7 @@ author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
 manager: calvind
-ms.date: 02/24/2026
+ms.date: 03/09/2026
 ms.service: copilot-connectors
 ms.topic: concept-article
 ---
@@ -14,7 +14,7 @@ ms.topic: concept-article
 
 The GitHub Cloud Issues Microsoft 365 Copilot connector allows your organization to index issues stored in GitHub to make them available in Microsoft 365 Copilot and search experiences. This article provides information about the configuration steps that GitHub admins must complete before your organization deploys the GitHub Cloud Issues connector.
 
-For information about how to deploy the connector, see [Deploy the GitHub Issues connector](/microsoft-365-copilot/connectors/github-cloud-issues-deployment).
+For information about how to deploy the connector, see [Deploy the GitHub Issues connector](/microsoftsearch/github-cloud-issues-deployment).
 
 ## Setup checklist
 
@@ -114,9 +114,15 @@ To create a GitHub app for use with the GitHub Cloud Issues connector:
 
 ### Create credentials for the GitHub App
 
-- On the GitHub app's **General** page, select **Generate a new client secret** to generate and copy the **client secret**.
+Depending on the authentication method you plan to use, generate either a client secret or a private key. You don't need both.
 
-    :::image type="content" source="./media/github-cloud-issues-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted":::
+- **For Customized GitHub app (on behalf of user) authentication:** On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
+
+    :::image type="content" source="./media/github-cloud-issues-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted" lightbox="./media/github-cloud-issues-admin-setup/new-client-secret.png":::
+
+- **For Customized GitHub app (installation) authentication:** On the **General** page of the GitHub app, scroll down to the **Private keys** section and select **Generate a private key**. Save the downloaded `.pem` file securely.
+
+    :::image type="content" source="./media/github-cloud-issues-admin-setup/generate-private-key.png" alt-text="Screenshot of the GitHub App Private keys section with Generate a private key button." lightbox="./media/github-cloud-issues-admin-setup/generate-private-key.png":::
 
 ### Install the GitHub App
 
@@ -145,4 +151,4 @@ IP restrictions can cause the connector to stop working and lead to crawl failur
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the GitHub Issues connector](/microsoft-365-copilot/connectors/github-cloud-issues-deployment)
+> [Deploy the GitHub Issues connector](/microsoftsearch/github-cloud-issues-deployment)

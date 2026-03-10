@@ -7,7 +7,7 @@ ms.author: lauragra
 author: lauragra
 manager: calvind
 ms.reviewer: dannyyao
-ms.date: 02/24/2026
+ms.date: 03/09/2026
 ---
 
 # Set up the GitHub service for GitHub Cloud Pull Request connector ingestion
@@ -105,8 +105,8 @@ You can also choose to use your own GitHub app for authentication. If you choose
     **Account permissions**
       - Email addresses - **Read-only**
 
-    > [!NOTE]
-    > Webhook support is currently available in preview. Be sure to set the Webhooks (Read and Write) permissions at both the Repository and Organization levels. Webhooks allow you to take advantage of enhanced automation and real-time updates to ensure a more seamless and responsive integration experience.
+   > [!NOTE]
+   > Webhook support is currently available in preview. Be sure to set the Webhooks (Read and Write) permissions at both the Repository and Organization levels. Webhooks allow you to take advantage of enhanced automation and real-time updates to ensure a more seamless and responsive integration experience.
 
 8. Under **Where can this GitHub App be installed**, select **Any account**, and then select **Create GitHub App**.
 
@@ -115,9 +115,15 @@ You can also choose to use your own GitHub app for authentication. If you choose
 
 ### Create credentials for the GitHub app
 
-On the GitHub App's **General** page, select **Generate a new client secret** to generate and copy the **client secret**.
+Depending on the authentication method you plan to use, generate either a client secret or a private key. You don't need both.
 
- :::image type="content" source="./media/github-cloud-pull-requests-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted.":::
+- **For Customized GitHub app (on behalf of user) authentication:** On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
+
+    :::image type="content" source="./media/github-cloud-pull-requests-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted." lightbox="./media/github-cloud-pull-requests-admin-setup/new-client-secret.png":::
+
+- **For Customized GitHub app (installation) authentication:** On the **General** page of the GitHub app, scroll down to the **Private keys** section and select **Generate a private key**. Save the downloaded `.pem` file securely.
+
+    :::image type="content" source="./media/github-cloud-pull-requests-admin-setup/generate-private-key.png" alt-text="Screenshot of the GitHub App Private keys section with Generate a private key button." lightbox="./media/github-cloud-pull-requests-admin-setup/generate-private-key.png":::
 
 ### Install the GitHub app
 

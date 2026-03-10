@@ -5,7 +5,7 @@ author: Lauragra
 ms.author: lauragra
 ms.reviewer: sasidharkasi
 manager: calvind
-ms.date: 02/24/2026
+ms.date: 03/09/2026
 ms.topic: concept-article
 ms.service: copilot-connectors
 ---
@@ -14,7 +14,7 @@ ms.service: copilot-connectors
 
 The GitHub Knowledge Microsoft 365 Copilot connector enables organizations to index markdown and text files in your GitHub repositories into Microsoft 365 Copilot and search experiences. This article provides information about the configuration steps that GitHub admins must complete before your organization deploys the GitHub Cloud Knowledge connector.
 
-For information about how to deploy the connector, see [Deploy the GitHub Knowledge connector](/microsoft-365-copilot/connectors/github-cloud-knowledge-deployment).
+For information about how to deploy the connector, see [Deploy the GitHub Knowledge connector](/MicrosoftSearch/github-cloud-knowledge-deployment).
 
 ## Setup checklist
 
@@ -117,9 +117,15 @@ To create a GitHub app for use with the GitHub Cloud Knowledge connector:
 
 ### Create credentials for the GitHub app
 
-- On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
+Depending on the authentication method you plan to use, generate either a client secret or a private key. You don't need both.
 
-    :::image type="content" source="./media/github-cloud-knowledge-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted.":::
+- **For Customized GitHub app (on behalf of user) authentication:** On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
+
+    :::image type="content" source="./media/github-cloud-knowledge-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted." lightbox="./media/github-cloud-knowledge-admin-setup/new-client-secret.png":::
+
+- **For Customized GitHub app (installation) authentication:** On the **General** page of the GitHub app, scroll down to the **Private keys** section and select **Generate a private key**. Save the downloaded `.pem` file securely.
+
+    :::image type="content" source="./media/github-cloud-knowledge-admin-setup/generate-private-key.png" alt-text="Screenshot of the GitHub App Private keys section with Generate a private key button." lightbox="./media/github-cloud-knowledge-admin-setup/generate-private-key.png":::
 
 ### Install the GitHub app
 

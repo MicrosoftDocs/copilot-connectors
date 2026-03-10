@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 12/15/2025
+ms.date: 03/09/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the GitHub admin needs to complete for your organization to configure the GitHub Server Knowledge Microsoft 365 Copilot connector."
 ---
@@ -110,9 +110,15 @@ To create a GitHub app for use with the GitHub Server Knowledge connector:
 
 ### Create credentials for the GitHub app
 
-- On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
+Depending on the authentication method you plan to use, generate either a client secret or a private key. You don't need both.
 
-    :::image type="content" source="./media/github-cloud-knowledge-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted.":::
+- **For Customized GitHub app (on behalf of user) authentication:** On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
+
+    :::image type="content" source="./media/github-cloud-knowledge-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted." lightbox="./media/github-cloud-knowledge-admin-setup/new-client-secret.png":::
+
+- **For Customized GitHub app (installation) authentication:** On the **General** page of the GitHub app, scroll down to the **Private keys** section and select **Generate a private key**. Save the downloaded `.pem` file securely.
+
+    :::image type="content" source="./media/github-cloud-knowledge-admin-setup/generate-private-key.png" alt-text="Screenshot of the GitHub App Private keys section with Generate a private key button." lightbox="./media/github-cloud-knowledge-admin-setup/generate-private-key.png":::
 
 ### Install the GitHub app
 
@@ -150,7 +156,7 @@ To increase the API request limit:
 1. Under **API requests (per hour) – Authenticated**, enter the rate‑limit value (for example, **30000**).
 1. Select **Save settings**.
 
-:::image type="content" source="./media/github-cloud-knowledge-admin-setup/github-server-rate-limit.png" alt-text="Screenshot of the Rate limiting tab in GitHub Server with API Requests and Save settings highlighted.":::
+:::image type="content" source="./media/github-server-rate-limit.png" alt-text="Screenshot of the Rate limiting tab in GitHub Server with API Requests and Save settings highlighted.":::
 
 > [!NOTE]
 > When you save your changes, certain GitHub Server services might restart and cause a brief service interruption. After you save, allow time for the configuration to propagate across the instance.
