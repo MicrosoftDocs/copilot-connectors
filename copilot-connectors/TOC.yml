@@ -140,20 +140,24 @@ items:
       items: 
       - name: Overview
         href: confluence-cloud-overview.md
+      - name: Set up the Confluence service
+        href: confluence-cloud-admin-setup.md
       - name: Deployment guide
         href: confluence-cloud-deployment.md
       - name: Troubleshooting
         href: confluence-cloud-troubleshooting.md
-      - name: Confluence On-premises
-        items:
-        - name: Overview
-          href: confluence-onpremises-overview.md
-        - name: Deployment guide
-          href: confluence-onpremises-deployment.md
-        - name: Troubleshooting
-          href: confluence-onpremises-troubleshooting.md
-        - name: Plugin license agreement
-          href: atlassian-plugin-eula.md
+    - name: Confluence On-premises
+      items:
+      - name: Overview
+        href: confluence-onpremises-overview.md
+      - name: Set up the Confluence service
+        href: confluence-onpremises-admin-setup.md  
+      - name: Deployment guide
+        href: confluence-onpremises-deployment.md
+      - name: Troubleshooting
+        href: confluence-onpremises-troubleshooting.md
+      - name: Plugin license agreement
+        href: atlassian-plugin-eula.md
     - name: CSV
       items:
       - name: Setup
