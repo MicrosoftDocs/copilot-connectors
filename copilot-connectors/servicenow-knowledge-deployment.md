@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 02/23/2026
+ms.date: 03/10/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Knowledge Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -56,11 +56,11 @@ For more information, see [Enhance Copilot discovery of connector content](enhan
 
 ### Choose flow based on user criteria
 
-The ServiceNow Knowledge connector supports two flows for user criteria permissions: **Simple** and **Advanced**. 
+The ServiceNow Knowledge connector supports two flows for user criteria permissions: **Simple** (default) and **Advanced**. Both flows evaluate knowledge base (parent)-level and article (child)-level user criteria.
 
-The default is **Simple**. In this flow, advanced script-based user criteria and knowledge base (parent)-level user criteria aren't considered when article (child)-level user criteria are considered.
+The default is **Simple**. In this flow, advanced script-based user criteria aren't evaluated.
 
-If your ServiceNow instance uses **Advanced Scripts** in your knowledge base or article-level user criteria or you want the connector to evaluate knowledge base or parent-level permissions when it evaluates article permissions, use the **Advanced** flow. This flow ensures accurate permissions handling when content is ingested into Microsoft Graph. For the **Advanced** option to work properly, you need to [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api).
+If your ServiceNow instance uses **Advanced Scripts** in your knowledge base or article-level user criteria, use the **Advanced** flow. This flow evaluates script-based user criteria by calling the Scripted REST API in ServiceNow, which ensures accurate permissions handling when content is ingested into Microsoft Graph. For the **Advanced** option to work properly, you need to [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api).
 
 ### Set instance URL
 
@@ -210,14 +210,8 @@ The ServiceNow Knowledge Copilot connector supports the following user search pe
  
 If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it. 
 
-If you select the **Simple** flow for reading user criteria permissions, the ServiceNow Knowledge connector treats permissions in the following way:
-
-  - If an article has `Can Read` user criteria, those criteria are applied during ingestion. Knowledge base-level `Can Read` or `Can Contribute` user criteria are ignored.
-  - If both article and knowledge base have `Cannot Read` user criteria, both are honored.
-  - If a user is part of the article-level `Can Read` user criteria but not the knowledge base-level, they might still see the article in Microsoft 365 surfaces even if they can't access it in ServiceNow. To prevent users from seeing the article, remove the user from the article-level `Can Read` user criteria.
-  - If a knowledge article doesn't have a user criterion applied, it appears in the results for everyone in the organization. 
-
-If you select the **Advanced** flow for reading user criteria permission and provide access to the `sys_properties` table so that hierarchical ACLs can be read, both knowledge base (parent)-level and knowledge article (child)-level permissions are considered when evaluating article level permissions. This is how permissions are handled in ServiceNow. For more information, see [Managing access to knowledge bases and knowledge articles](https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/user-access-knowledge.html).
+> [!NOTE]
+> If a knowledge article and its knowledge base don't have any `Can Read` user criteria applied, the article appears in the results for everyone in the organization, provided that the `glide.knowman.block_access_with_no_user_criteria` property is set to `false` in your ServiceNow instance. If this property is `true`, or if the service account doesn't have access to the `sys_properties` table (in which case the connector defaults to `true`), articles without user criteria are blocked from appearing in search results. For more information, see [Set up hierarchical permissions](servicenow-knowledge-admin-setup.md#set-up-hierarchical-permissions).
 
 #### Map identities
 
@@ -315,13 +309,13 @@ For more information, see [Customize values for certain schema properties](deplo
 Configure the sync schedule to keep indexed content up to date:
 
 - **Full crawl** – Reindexes all content, removes deleted content, and updates all permissions. The default frequency is daily.
-- **Incremental crawl** – Syncs only changed content, not permission updates. The default frequency is every 15 minutes.
+- **Incremental crawl** – Syncs changed content and recomputes permissions for those changed articles and article-level permission changes. Doesn't update user-to-criteria mappings (identity sync) or permissions for articles where knowledge base (parent) level permissions changed. The default frequency is every 15 minutes.
 
 > [!IMPORTANT]
 > - Identities (group memberships created between users and user criteria) are only updated during full crawls. Incremental crawls don't update identities or group memberships.
 > - During the first full crawl, identity sync (such as reading users, user criteria, and mapping of users to user criteria such as group memberships) runs first, followed by content sync. This ensures that the right permissions are mapped to the ingested items.
 > - During subsequent periodic full crawls, content and identity sync happens in parallel. The periodic full crawl is complete when both content and identity sync is finished.
-> - The periodic full crawls are faster than the first full crawls because the first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Periodic full crawls only ingest new items, users, and user criteria.  
+> -  The periodic full crawls are faster than the first full crawls because the first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Periodic full crawls recrawl all content and recompute permissions, but ingestion is faster because items already exist in the index. Identity sync uses differential updates, only pushing membership changes to Microsoft Graph. 
 
 For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 

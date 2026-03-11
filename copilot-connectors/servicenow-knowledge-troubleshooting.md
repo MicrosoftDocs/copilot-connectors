@@ -1,5 +1,5 @@
 ---
-ms.date: 02/23/2026
+ms.date: 03/10/2026
 title: "Troubleshoot issues with the ServiceNow Knowledge Microsoft 365 Copilot connector"
 ms.author: lauragra
 author: lauragra
@@ -17,19 +17,19 @@ description: "Find troubleshooting information for the ServiceNow Knowledge Copi
 
 The ServiceNow Knowledge Microsoft 365 Copilot connector allows organizations to index ServiceNow knowledge articles into Microsoft 365 Copilot and search experiences. This article provides troubleshooting information for common errors that you might encounter when you deploy the ServiceNow Knowledge connector.
 
-To verify ServiceNow configuration information to help troubleshoot errors, see [Set up the ServiceNow service for connector ingestion](/microsoftsearch/servicenow-knowledge-admin-setup).
+To verify ServiceNow configuration information to help troubleshoot errors, see [Set up the ServiceNow service for connector ingestion](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup).
 
 ## Can't find ServiceNow Knowledge articles in Copilot or Microsoft Search
 
 To troubleshoot this issue:
 
-1. Determine whether the user searching for the article has the [required permissions to access the ServiceNow Knowledge articles.](/microsoftsearch/servicenow-knowledge-admin-setup#create-service-account-and-set-up-permissions-to-index-items)
+1. Determine whether the user searching for the article has the [required permissions to access the ServiceNow Knowledge articles.](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup#create-service-account-and-set-up-permissions-to-index-items)
 
 1. Determine whether the user is correctly mapped to a Microsoft Entra identity. Mapping issues show as a 2006 error on the **Error** tab. Check the user mapping formula and update as needed.
 
     :::image type="content" source="media/servicenow-knowledge-troubleshooting/error-tab.png" alt-text="Screenshot of the Error tab showing mapping issues with 2006 error code.":::
 
-1. Determine whether an advanced script in any of the user criteria grant access to the article. Advanced scripts aren't currently supported. If you're using advanced scripts, be sure to select **Advanced flow** when you set up the connection and [Set up the REST API](/microsoftsearch/servicenow-knowledge-admin-setup#set-up-rest-api).
+1. Determine whether an advanced script in any of the user criteria grant access to the article. Advanced scripts aren't currently supported. If you're using advanced scripts, be sure to select **Advanced flow** when you set up the connection and [Set up the REST API](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
 
 1. Use the [User criteria diagnostics](https://docs.servicenow.com/bundle/washingtondc-servicenow-platform/page/product/knowledge-management/concept/diagnose-knowledge-user-criteria.html) tool in ServiceNow to see if the service account has access to the item in ServiceNow
 
@@ -76,9 +76,9 @@ Use the following steps to validate table permissions by using REST API Explorer
 
 1.  Review the response:
 
-    - **If you receive a 403 Status Code** and an error message that states that you're not authorized to access the table, see [Grant table access](/MicrosoftSearch/granting-table-access-servicenow) to provide table-level access.
+    - **If you receive a 403 Status Code** and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365-copilot/connectors/granting-table-access-servicenow) to provide table-level access.
     
-    - **If you receive a 200 Status Code** but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/MicrosoftSearch/granting-table-access-servicenow#grant-field-level-access).
+    - **If you receive a 200 Status Code** but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365-copilot/connectors/granting-table-access-servicenow#grant-field-level-access).
 
        :::image type="content" source="media/servicenow-knowledge-troubleshooting/response-body.png" alt-text="Screenshot of the response body showing empty results." lightbox="media/servicenow-knowledge-troubleshooting/response-body.png":::
 
@@ -93,13 +93,32 @@ Alternatively, you can use a browser to verify access:
 
 When the required access is provided in ServiceNow, start a full crawl for the configured ServiceNow connection.
 
+## Articles without user criteria not appearing in search results
+
+If knowledge articles that have no user criteria applied aren't appearing in Copilot or Microsoft Search results, verify that the service account has read access to the `sys_properties` table in ServiceNow.
+
+The connector reads two system properties to determine how to handle articles without user criteria:
+
+- `glide.knowman.apply_article_read_criteria`
+- `glide.knowman.block_access_with_no_user_criteria`
+
+If the service account can't read these properties, the connector defaults to the most restrictive settings, which blocks articles without explicit user criteria from appearing in search results. No error is shown in the admin center when this happens.
+
+To resolve this issue:
+
+ 1. Grant the service account read access to the `sys_properties` table. For more information, see [Grant table access to a service account in ServiceNow](/microsoftsearch/granting-table-access-servicenow-knowledge).
+ 2. After granting access, start a full crawl for the configured ServiceNow connection.
+
+> [!NOTE] 
+> This access applies to both Simple and Advanced flows.
+
 ## Issue reading all user criteria from ServiceNow
 
 Sometimes content access can be restricted because the service account isn't reading all user criteria. This issue can happen if you use the `gs.getUserId()` or the `gs.getUser()` function within any user criteria. If you use these functions, update the user criteria to remove them. ServiceNow recommends using the `user_id`.
 
 :::image type="content" source="media/servicenow-knowledge-troubleshooting/user-criteria.png" alt-text="Screenshot of user criteria showing the use of gs.getUserId() function." lightbox="media/servicenow-knowledge-troubleshooting/user-criteria.png":::
 
-Also, if you're experiencing performance issues related to the use of the `getAllUserCriteria()` function or are concerned about using a deprecated API, consider using the following alternative script when you [Set up the REST API](/microsoftsearch/servicenow-knowledge-admin-setup#set-up-rest-api).
+Also, if you're experiencing performance issues related to the use of the `getAllUserCriteria()` function or are concerned about using a deprecated API, consider using the following alternative script when you [Set up the REST API](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
 
 ```javascript
 (function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
@@ -165,7 +184,7 @@ A forbidden or unauthorized response in connection status can occur for the foll
 
 ## Change the URL of the knowledge article
 
-The ServiceNow Knowledge connector allows you to customize the URL of the knowledge articles as per the needs of your organization. For more information, see [Customize AccessURL property](/microsoftsearch/servicenow-knowledge-deployment#customize-accessurl-property).
+The ServiceNow Knowledge connector allows you to customize the URL of the knowledge articles as per the needs of your organization. For more information, see [Customize AccessURL property](/microsoft-365-copilot/connectors/servicenow-knowledge-deployment#customize-accessurl-property).
 
 > [!NOTE]
 > Currently, you can't edit the URL property for an existing connection. You can only customize the URL when you initially set up the connection. If you have an existing connection, create a new connection and follow the steps to customize the URL.

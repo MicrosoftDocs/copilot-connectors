@@ -20,7 +20,7 @@ The connector indexes specified content in Microsoft Search and Microsoft 365 Co
 - Index records from your MS SQL server or Azure SQL database using a SQL query.
 - Specify access permissions for every record with a list of users or groups added in the SQL query.
 - Enable your end users to ask questions related to indexed records in Copilot.
-- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoft-365-copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - Microsoft SQL Server Copilot connector: The on-premises database must run SQL Server version 2008 or later.

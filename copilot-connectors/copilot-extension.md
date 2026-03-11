@@ -4,7 +4,7 @@ ms.author: danielabo
 author: danipocket
 manager: calvind
 ms.topic: article
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.audience: Admin
 ms.localizationpriority: medium
 ms.date: 02/13/2026

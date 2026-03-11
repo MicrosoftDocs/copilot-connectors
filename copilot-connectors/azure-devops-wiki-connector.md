@@ -6,12 +6,8 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: mssearch 
+ms.service: copilot-connectors 
 ms.localizationpriority: Medium 
-search.appverid: 
-- BFB160 
-- MET150 
-- MOE150 
 description: "Set up the Azure DevOps Wiki Microsoft 365 Copilot connector"
 ms.date: 03/09/2026
 ---
@@ -60,7 +56,7 @@ The Azure DevOps Wiki connector includes the following custom data filters for C
 [![Screenshot that shows connection creation screen for the Azure DevOps Wiki Copilot connector.](media/ado-wiki-create-page.png)](media/ado-wiki-create-page.png#lightbox)
 
 ### Choose display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Provide authentication type
 To authenticate and sync wikis from Azure DevOps, choose **one of the two** supported methods:<br>

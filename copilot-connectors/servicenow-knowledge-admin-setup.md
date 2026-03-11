@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 02/23/2026
+ms.date: 03/10/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Knowledge Copilot connector."
 ---
@@ -108,7 +108,7 @@ To connect to ServiceNow and allow the ServiceNow Knowledge connector to update 
 |   Index knowledge articles available to _Everyone_ | kb_knowledge | For crawling knowledge articles |
 |   Index extended table properties | sys_db_object | Read extended table details for templates |
 |  | sys_dictionary | Read extended table properties and crawl templates |
-|  | sys_properties | Read properties to evaluate permissions |
+|  | sys_properties | Read system configuration properties to correctly evaluate article permissions (required for both Simple and Advanced flows) |
 |  | sys_attachment | For crawling attachments to knowledge articles |
 |  | kb_feedback | For crawling comments on knowledge articles |
 |   Index and support user criteria permissions | kb_uc_can_read_mtom | Who can read this knowledge base |
@@ -140,9 +140,12 @@ For information about how to create a user, assign a role, and grant read permis
 
 If the service account doesn't have the required permissions—or if row or field-level permissions are restricted—specific items are excluded from indexing on the Microsoft side.
 
->[!Note]
+> [!Note]
 > Don't explicitly apply `snc_read_only` to the service account. This role denies any write action to any table the user has access to. The account needs to write token and other authentication-related information into some tables. Because tokens are refreshed on a regular basis, this account can't be made read-only after initial authentication.
 > The service account needs write access to the `oauth_credential` table for authentication. 
+
+> [!Important]
+> The `sys_properties` table is required for both Simple and Advanced flows. The connector reads `glide.knowman.apply_article_read_criteria` and `glide.knowman.block_access_with_no_user_criteria` from this table. If the service account can't read these properties, the connector silently defaults to the most restrictive settings (`true` for both), which blocks articles without explicit user criteria from appearing in search results. No error is shown in the admin center when this happens.
 
 If the service account doesn’t have access to the full User Criteria table, inconsistent behavior related to user permissions, including unintended content oversharing, can occur.
 
@@ -227,7 +230,7 @@ Add a resource to the API:
     })(request, response);
     ```
 > [!NOTE]
-> The `getAllUserCriteria()` function is deprecated due to potential performance issues. For an alternative script that you can use, see [Issue reading all user criteria from ServiceNow](/microsoftsearch/servicenow-knowledge-troubleshooting#issue-reading-all-user-criteria-from-servicenow). 
+> The `getAllUserCriteria()` function is deprecated due to potential performance issues. For an alternative script that you can use, see [Issue reading all user criteria from ServiceNow](/microsoft-365-copilot/connectors/servicenow-knowledge-troubleshooting#issue-reading-all-user-criteria-from-servicenow). 
 
 3. Make sure both of the following are checked:
    - **Requires authentication**
@@ -246,19 +249,11 @@ The Microsoft 365 admin enters the **API Namespace** when they [deploy the Servi
 
 ### Set up hierarchical permissions
 
-Hierarchical permissions allow the ServiceNow Knowledge connector to evaluate user permissions for any ServiceNow knowledge article. The connector evaluates the user criteria applied at the knowledge base (parent) and the knowledge article (child) level according to the rules that ServiceNow uses. For more information about how ServiceNow evaluates article permission, see [Managing access to knowledge bases and knowledge articles](https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/user-access-knowledge.html).   
+Hierarchical permissions allow the ServiceNow Knowledge connector to evaluate user permissions for any ServiceNow knowledge article. The connector evaluates the user criteria applied at the knowledge base (parent) and the knowledge article (child) level according to the rules that ServiceNow uses. For more information about how ServiceNow evaluates article permission, see [Managing access to knowledge bases and knowledge articles](https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/user-access-knowledge.html).  
 
-To set up hierarchical permissions:
+To set up hierarchical permissions, provide read access to the `sys_properties` table to the service account used for connector setup. The connector reads two system properties — `glide.knowman.apply_article_read_criteria` and `glide.knowman.block_access_with_no_user_criteria` — to determine the permission evaluation flow. If the service account can't read these properties, the connector defaults to the most restrictive settings, which can cause articles without explicit user criteria to not appear in search results. For more information, see [Grant table access to a service account in ServiceNow](/microsoft-365-copilot/connectors/granting-table-access-servicenow-knowledge).
 
-- During connector deployment, for **Select based on your user criteria setup in ServiceNow**, choose **Advanced**. If you chose **Simple** when you set up the connector, update your existing connector to use **Advanced**.
-
-    > [!NOTE]
-    > When you choose **Advanced**, you must configure scripted REST API in ServiceNow in your ServiceNow instance. Follow the steps documented in [Set up REST API](/microsoftsearch/servicenow-knowledge-admin-setup#set-up-rest-api). 
-
-- Provide read access to the `sys_properties` table to the service account used for connector setup. For more information, see [Grant table access to a service account in ServiceNow](/microsoftsearch/granting-table-access-servicenow).
-
-    > [!NOTE]
-    > If the user and role is already set up, follow the steps in the [Grant row-level access](/microsoftsearch/granting-table-access-servicenow#grant-row-level-access) and [Grant field-level access](/microsoftsearch/granting-table-access-servicenow#grant-field-level-access) sections and add the same role that you assigned to the service account to these new ACLs you create for the `sys_properties` table access.
+If the user and role is already set up, follow the steps in the [Grant row-level access](/microsoft-365-copilot/connectors/granting-table-access-servicenow-knowledge#grant-row-level-access) and [Grant field-level access](/microsoft-365-copilot/connectors/granting-table-access-servicenow-knowledge#grant-field-level-access) sections and add the same role that you assigned to the service account to these new ACLs you create for the `sys_properties` table access.
 
 - Use **\*** in the field name to apply access to all fields for the table.
 

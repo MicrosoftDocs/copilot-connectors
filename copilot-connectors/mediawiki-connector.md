@@ -28,7 +28,7 @@ This article is for anyone who configures, runs, and monitors a MediaWiki Copilo
 
 ## Step 1: Add a connector in the Microsoft 365 admin center
 
-[Add the MediaWiki Copilot connector](https://admin.microsoft.com/adminportal/home#/microsoft-365-copilot/connectors/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_MediaWiki&type=MediaWiki)
+[Add the MediaWiki Copilot connector](https://admin.microsoft.com/adminportal/home#/microsoft-365-copilot/connectors/Connectors/add?ms_search_referrer=microsoft-365-copilot/connectorsDocs_MediaWiki&type=MediaWiki)
 
 Follow the general [setup instructions](./deployment-overview.md).
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup instructions.-->

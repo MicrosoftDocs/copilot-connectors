@@ -8,7 +8,7 @@ ms.reviewer: mayanksethi
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 02/23/2026
+ms.date: 03/10/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Catalog Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -17,7 +17,7 @@ description: "Find information about how to deploy the ServiceNow Catalog Micros
 
 The ServiceNow Catalog Microsoft 365 Copilot connector enables your organization to index catalog items from ServiceNow and makes them discoverable in Microsoft 365 experiences, including Copilot and Microsoft Search. This article describes the steps to deploy and customize the connector.
 
-For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
+For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/configure-connector).
 
 For advanced ServiceNow configuration information, see [Set up the ServiceNow Catalog service for connector ingestion](servicenow-catalog-admin-setup.md).
 
@@ -53,7 +53,7 @@ To add the ServiceNow Catalog connector for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize trusted content. You can accept the default **ServiceNow** display name or customize it to match your organization's terminology.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Choose flow based on user criteria 
 
@@ -179,7 +179,7 @@ To validate the connector before a full deployment, roll it out to a limited aud
 1. Select the toggle next to **Rollout to limited audience**.
 1. Specify the users or groups for pilot rollout.
 
-For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The ServiceNow Catalog connector begins indexing content immediately.
 
@@ -219,15 +219,6 @@ The ServiceNow Catalog connector supports the following user search permissions:
 - **Only people with access to this data source** (default)
 
 If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it as per the flow you selected for user criteria during connection setup.
-
-If you select the **Simple** flow for reading user criteria permissions, the ServiceNow Catalog connector treats permissions in the following way:
-- In ServiceNow, both catalog item-level and category-level user criteria are considered when read permissions are assessed for a user. However, in the simple flow, the ServiceNow Catalog connector doesn't read category-level permissions.
-- If a catalog item is not enabled with a user criterion, it appears in the results for everyone in the organization.
-- If the catalog item contains the `Available For` user criteria, it's stamped on the catalog item during ingestion, and Catalog Category `Available for`/`Not Available For` user criteria are ignored.
-- If the catalog item contains the `Not available for` user criteria, and if the corresponding catalog category also contains some `Not available for` user criteria, both the user criteria are stamped on the catalog item.
-- If a user is part of the `Available for` user criteria at the catalog item level but not a part of the `Available for` user criteria at the catalog category level, the user doesn't have access to the catalog item in ServiceNow but does have access to the catalog item in Copilot, Microsoft Search, and other Microsoft 365 surfaces. The workaround is to remove the user from the `Available for` user criteria at the catalog item level.
-
-If you select the **Advanced** flow for reading user criteria permission, hierarchical ACLs can be read and both catalog category (parent)-level and catalog item (child)-level permissions are considered when evaluating catalog item level permissions. This is how permissions are handled in ServiceNow. For more information, see [Managing access to catalog category and catalog items](https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/t_AppUserCritItemsCat.html).
 
 #### Map identities
 
@@ -298,7 +289,6 @@ To define a custom expression for the **AccessURL** property:
 > [!NOTE]
 > To customize the **AccessURL** schema property, you need to create a new ServiceNow Catalog connection for your connector. Editing the **AccessURL** property for an existing connection isn't currently supported.
 
-
 #### Add rules for conditional expressions
 
 You can override the default expression for specific catalog items using rules based on property filters. To add a rule:
@@ -330,11 +320,10 @@ You can define the frequency of incremental and full crawls:
 > - During subsequent full crawls, content and identity sync happens in parallel. The full crawl is complete when both content and identity sync are completed. 
 > - Subsequent full crawls are faster than the first full crawl. The first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Subsequent full crawls only ingest the newly discovered items, users, and user criteria. 
 
-
-For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/configure-connector#guidelines-for-sync-settings).
 
 ## Related content
 
 - [ServiceNow Catalog connector overview](servicenow-catalog-overview.md)
 - [Troubleshoot issues with the ServiceNow Catalog connector](servicenow-catalog-troubleshooting.md)
-- [Set up Copilot connectors in the admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the admin center](/microsoft-365-copilot/connectors/configure-connector)

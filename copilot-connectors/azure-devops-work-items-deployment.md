@@ -142,7 +142,7 @@ When you're signed in as an admin, the Microsoft Entra app is automatically auth
 
 ### Roll out
 
-To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users or groups to roll the connector out to. This allows you to validate the connector before a full deployment. For more information, see [Staged rollout for Copilot connectors](/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users or groups to roll the connector out to. This allows you to validate the connector before a full deployment. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The Azure DevOps Work Items connector begins indexing content immediately.
 
@@ -216,11 +216,11 @@ You can adjust how frequently the connector crawls your Azure DevOps organizatio
 
 The default sync settings are optimized for most organizations.
 
-For more information, see [Guidelines for sync settings](/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/configure-connector#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Azure DevOps Work Items connector overview](azure-devops-work-items-overview.md)
 - [Troubleshoot issues with the Azure DevOps Work Items connector](azure-devops-work-items-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/configure-connector)
 

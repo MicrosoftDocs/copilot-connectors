@@ -249,7 +249,7 @@ You can change the default values of refresh interval from here if you want to.
 
 >[!TIP]
 >**Default result type**
->* The Salesforce connector automatically registers a [result type](/microsoftsearch/customize-search-page#step-2-create-result-types) once the connector is published. The result type uses a dynamically generated [result layout](/microsoftsearch/customize-results-layout) based on the fields selected in step 3.
+>* The Salesforce connector automatically registers a [result type](/microsoft-365-copilot/connectors/customize-search-page#step-2-create-result-types) once the connector is published. The result type uses a dynamically generated [result layout](/microsoft-365-copilot/connectors/customize-results-layout) based on the fields selected in step 3.
 >* You can manage the result type by navigating to [**Result types**](https://admin.microsoft.com/Adminportal/Home#/microsoft-365-copilot/connectors/resulttypes) in the [Microsoft 365 admin center](https://admin.microsoft.com). The default result type is named "`ConnectionId`Default". For example, if your connection ID is `Salesforce`, your result layout is named: "SalesforceDefault".
 >* Also, you can choose to create your own result type if needed.
 

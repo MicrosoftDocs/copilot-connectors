@@ -5,14 +5,10 @@ author: lauragra
 manager: calvind
 ms.audience: Admin
 ms.topic: overview
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
 ms.collection: essentials-overview
 ms.date: 07/15/2025
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Get an overview of Microsoft 365 Copilot Search and how Copilot Search works with Microsoft 365 Copilot connectors."
 ---
 # Copilot connectors and Copilot Search
@@ -29,7 +25,7 @@ Copilot Search delivers the following key features to Microsoft 365 users:
 
 ## Use Copilot connectors to enhance Copilot Search
 
-You can enhance the Copilot Search experience in your organization with over 100 [prebuilt Microsoft 365 Copilot connectors](/MicrosoftSearch/connectors-gallery). [Microsoft 365 Copilot connectors](/microsoft-365-copilot/extensibility/overview-copilot-connector) enable seamless integration with Microsoft and non-Microsoft platforms by allowing organizations to ingest and unify data from services like Salesforce, ServiceNow, Confluence, Jira, GitHub, Google Drive, and more into Microsoft Graph to make the data available to search experiences.
+You can enhance the Copilot Search experience in your organization with over 100 [prebuilt Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/connectors-gallery). [Microsoft 365 Copilot connectors](/microsoft-365-copilot/extensibility/overview-copilot-connector) enable seamless integration with Microsoft and non-Microsoft platforms by allowing organizations to ingest and unify data from services like Salesforce, ServiceNow, Confluence, Jira, GitHub, Google Drive, and more into Microsoft Graph to make the data available to search experiences.
 
 Copilot connectors provide the following benefits:
 
@@ -42,5 +38,5 @@ The extensive connector ecosystem makes Copilot Search an enterprise-wide knowle
 ## Related content
 
 - [Microsoft 365 Copilot Search overview](/copilot/microsoft-365/microsoft-365-copilot-search)
-- [Connectors gallery](/MicrosoftSearch/connectors-gallery)
-- [Copilot Search and connectors FAQ](/microsoftsearch/frequently-asked-questions)
+- [Connectors gallery](/microsoft-365-copilot/connectors/connectors-gallery)
+- [Copilot Search and connectors FAQ](/microsoft-365-copilot/connectors/frequently-asked-questions)

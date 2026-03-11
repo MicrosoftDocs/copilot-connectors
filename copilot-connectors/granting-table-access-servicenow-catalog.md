@@ -1,18 +1,15 @@
 ---
 ms.date: 02/23/2026
 title: "Grant table access to a service account in ServiceNow Catalog"
-ms.author: souravpoddar
-author: souravpoddar001
-manager: harshkum
+ms.author: lauragra
+author: lauragra
+manager: calvind
+ms.reviewer: mayanksethi
 audience: Admin 
 ms.audience: Admin
 ms.topic: how-to
-ms.service: mssearch
+ms.service: copilot-connectors
 ms.localizationpriority: medium
-search.appverid:
-- BFB160
-- MET150
-- MOE150
 description: "Grant table access to a service account in ServiceNow that can be used to set up ServiceNow Catalog Microsoft 365 Copilot connectors."
 ---
 
