@@ -118,7 +118,7 @@ Depending on the authentication method you plan to use, generate either a client
 
 - **For custom GitHub app (on behalf of user) authentication:** On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
 
-    :::image type="content" source="./media/github-cloud-issues-admin-setup/new-client-secret.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted" lightbox="./media/github-cloud-issues-admin-setup/new-client-secret.png":::
+    :::image type="content" source="./media/github-cloud-issues-admin-setup/github-app-credentials.png" alt-text="Screenshot of GitHub with Generate a new client secret highlighted" lightbox="./media/github-cloud-issues-admin-setup/github-app-credentials.png":::
 
 - **For custom GitHub app (installation) authentication:** On the **General** page of the GitHub app, scroll down to the **Private keys** section and select **Generate a private key**. Save the downloaded `.pem` file securely.
 

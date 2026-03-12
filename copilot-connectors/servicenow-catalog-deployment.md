@@ -8,7 +8,7 @@ ms.reviewer: mayanksethi
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 03/10/2026
+ms.date: 03/11/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Catalog Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -75,9 +75,118 @@ If your organization uses a custom portal (for example, ESC or SP), provide the 
 
 Choose one of the following authentication methods:
 
+- **Federated Auth** (recommended) - For details, see [Federated Auth](#federated-auth-federated-identity-credentials)
 - **Basic authentication**: Use a ServiceNow account with the `catalog` role. Enter the username and password directly in the connector setup.
-- **OAuth 2.0 (recommended)**: Configure an OAuth endpoint in ServiceNow and provide client ID and secret. For details, see [OAuth 2.0](#oauth-20).
+- **OAuth 2.0**: Configure an OAuth endpoint in ServiceNow and provide client ID and secret. For details, see [OAuth 2.0](#oauth-20).
 - **Microsoft Entra ID OpenID Connect**: Use registered application credentials from Microsoft Entra ID. For details, see [Microsoft Entra ID OpenID Connect](#microsoft-entra-id-openid-connect).
+
+#### Federated Auth (Federated Identity Credentials)
+
+Federated Auth uses a Microsoft application with OpenID Connect (OIDC) so that the connector authenticates to your ServiceNow instance without storing or rotating a client secret. Before you begin, make sure you have:
+
+- A ServiceNow admin account with privileges to create OIDC providers and users.
+- Your Microsoft Entra tenant ID (Directory ID), available from the Azure portal under **Microsoft Entra ID** > **Overview**.
+
+#### Step 1: Get the service principal object ID
+
+You need the Service Principal Object ID of the first-party connector application in your tenant. This is the Object ID of the service principal (enterprise application), not a new app registration.
+
+**Option A: PowerShell (recommended)**
+
+1. Install the Azure PowerShell module (if not already installed):
+    ```powershell
+    Install-Module -Name Az -AllowClobber -Scope CurrentUser
+    ```
+2. Sign in to your Azure account:
+    ```powershell
+    Connect-AzAccount
+    ```
+3. Retrieve the service principal by using the application ID provided by Microsoft:
+    ```powershell
+    Get-AzADServicePrincipal -ApplicationId "933838e2-bec1-440f-a634-9363c82e5b6d"
+    ```
+4. From the output, copy the **Id** value. This is the service principal object ID.
+
+**Option B: Microsoft Graph API**
+
+1. Call the service principals endpoint:
+
+    ```http
+    GET https://graph.microsoft.com/v1.0/servicePrincipals?$filter=appId eq '933838e2-bec1-440f-a634-9363c82e5b6d'
+    ```
+
+2. In the JSON response, copy the **id** field. This is the service principal object ID.
+
+> [!TIP]
+> If you get a permissions error in Graph Explorer, select **Modify Permissions** and grant consent for the required permissions.
+
+#### Step 2: Create the OIDC provider in ServiceNow
+
+1. In ServiceNow, go to **All** > **System OAuth** > **Application Registry**.
+2. Select **New**.
+3. The configuration steps differ depending on your ServiceNow version.
+
+    **For Yokohama and earlier versions**
+    - Choose **Configure an OIDC provider to verify ID tokens**.
+    
+    **For Zurich and later versions**
+    - Select **New Inbound Integration Experience** > **New Integration**.
+    - Choose **Third party ID token issued by OIDC supporting identity provider**.
+
+4. Fill in the fields as described in the OIDC provider configuration tables below.
+
+**OIDC provider configuration**
+
+Use the following values in the registration form.
+
+| Field | Value |
+| --- | --- |
+| Name | Microsoft Entra ID |
+| Provider name | Microsoft Entra ID (select existing or create new) |
+| Client ID | `933838e2-bec1-440f-a634-9363c82e5b6d` |
+| Active | Checked |
+
+Under **OAuth OIDC Provider Configuration**, determine whether a Microsoft Entra ID option already appears in the **OIDC Provider** dropdown. If it exists, select it. If not, select **Create a new configuration** and provide the following values.
+
+| Field | Value |
+| --- | --- |
+| OIDC Provider Configuration Name | Microsoft Entra ID |
+| OIDC Metadata URL | `https://login.microsoftonline.com/<tenantId>/v2.0/.well-known/openid-configuration` (replace `<tenantId>` with your Microsoft Entra tenant ID) |
+| OIDC Configuration Cache Lifespan | 120 |
+| User Claim | sub or oid |
+| User Field | User ID |
+| Enable JTI Verification | Disabled |
+
+Under **Auth Scope**, select **useraccount**, and enable **Allow access only to APIs in selected scope**.
+
+#### Step 3: Create the ServiceNow integration user
+
+1. In ServiceNow, go to **All** > **User Administration** > **Users**.
+2. Select **New**.
+3. Set the following fields.
+
+    | Field | Value |
+    | --- | --- |
+    | User ID | Service principal object ID from Step 1 |
+    | Identity Type | Machine |
+    | Active | Checked |
+
+4. Save the user record.
+
+**Assign roles to the integration user**
+
+Open the user record and, in the **Roles** related list, add these roles: `catalog_admin`, `user_criteria_admin`, `user_admin`.
+
+> [!NOTE]
+> If you assigned a customer role to the service account you created for crawling and connection setup, add that custom role to this integration user.
+
+#### Verification
+
+After completing all three steps:
+
+1. **OIDC provider** — Go to **System OAuth** > **Application Registry** and confirm the Microsoft Entra ID entry is **Active** with the correct Client ID and metadata URL.
+2. **Integration user** — Go to **User Administration** > **Users**, find the user by the service principal object ID, and confirm that the correct roles are assigned.
+3. **Connector setup** — When you configure the connector in the Microsoft 365 admin center, select **Federated Auth** as the authentication method and provide your ServiceNow instance URL. The connector authenticates using the OIDC token issued by Microsoft Entra ID.
 
 #### OAuth 2.0
 
