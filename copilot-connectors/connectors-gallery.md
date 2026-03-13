@@ -30,6 +30,6 @@ Use the following pages to browse Microsoft- and partner-built connectors.
 
 ## Related content
 
-- [Connectors overview](overview.md)
+- [Microsoft 365 Connectors overview](overview.md)
 - [Deployment overview](deployment-overview.md)
 

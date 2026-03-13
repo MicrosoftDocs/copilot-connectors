@@ -136,8 +136,8 @@ The following table lists the available IT service management tool (ITSM) connec
 | Freshservice | Microsoft | Allows organizations to connect to Freshservice to enhance team collaboration. | [Freshservice connector](freshservice-overview.md) |
 | PagerDuty Escalation Policies | Microsoft | Enables organizations to index and search PagerDuty escalation policies. | [PagerDuty Escalation Policies connector](pagerduty-escalation-policies-connector.md) |
 | PagerDuty Schedules | Microsoft | Enables organizations to index and search PagerDuty schedules. | [PagerDuty Schedules connector](pagerduty-schedules-connector.md) |
-| ServiceNow Catalog | Microsoft | Allows your organization to find Catalog items to order from the ServiceNow instance. Supports item-level user criteria permissions too. | [ServiceNow Catalog Copilot connector](/microsoft-365-copilot/connectors/servicenow-catalog-connector) |
-| ServiceNow Knowledge | Microsoft | Allows your organization to search your ServiceNow instance for knowledge-based articles along with user criteria permissions. | [ServiceNow Knowledge Copilot connector](/microsoft-365-copilot/connectors/servicenow-knowledge-connector) |
+| ServiceNow Catalog | Microsoft | Allows your organization to find Catalog items to order from the ServiceNow instance. Supports item-level user criteria permissions too. | [ServiceNow Catalog Copilot connector](servicenow-catalog-deployment.md) |
+| ServiceNow Knowledge | Microsoft | Allows your organization to search your ServiceNow instance for knowledge-based articles along with user criteria permissions. | [ServiceNow Knowledge Copilot connector](servicenow-knowledge-deployment.md) |
 
 ## Project management
 
