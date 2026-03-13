@@ -4,7 +4,13 @@ items:
 - name: Overview
   href: overview.md
 - name: Connectors gallery
-  href: connectors-gallery.md
+  items:
+  - name: Gallery overview
+    href: connectors-gallery.md
+  - name: Microsoft-built connectors gallery
+    href: connectors-gallery-microsoft.md
+  - name: Partner-built connectors gallery
+    href: connectors-gallery-partners.md
 - name: Connectors and Copilot Search
   href: copilot-search.md
 - name: Get started
