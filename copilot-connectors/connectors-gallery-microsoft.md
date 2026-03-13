@@ -24,4 +24,4 @@ This article provides a list of the prebuilt connectors that are available acros
 
 ## Related content
 
-- [Partner-built connectors gallery](connectors-gallery-partner.md)
+- [Partner-built connectors gallery](connectors-gallery-partners.md)
