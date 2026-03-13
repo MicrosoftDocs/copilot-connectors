@@ -5,11 +5,11 @@ items:
   href: overview.md
 - name: Connectors gallery
   items:
-  - name: Gallery overview
+  - name: Overview
     href: connectors-gallery.md
-  - name: Microsoft-built connectors gallery
+  - name: Microsoft-built connectors
     href: connectors-gallery-microsoft.md
-  - name: Partner-built connectors gallery
+  - name: Partner-built connectors
     href: connectors-gallery-partners.md
 - name: Connectors and Copilot Search
   href: copilot-search.md

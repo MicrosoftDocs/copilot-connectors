@@ -19,3 +19,7 @@ Microsoft builds and maintains a set of Microsoft 365 Copilot connectors that in
 This article lists the Microsoft-built Microsoft 365 Copilot connectors.
 
 [!INCLUDE [connectors-gallery-microsoft](./includes/connectors-gallery-microsoft.md)]
+
+## Related content
+
+- [Partner-built connectors gallery](connectors-gallery-partner.md)

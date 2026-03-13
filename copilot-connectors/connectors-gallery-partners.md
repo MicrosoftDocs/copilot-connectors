@@ -19,3 +19,7 @@ Microsoft partners provide a broad range of Microsoft 365 Copilot connectors tha
 This article lists the partner-built Microsoft 365 Copilot connectors.
 
 [!INCLUDE [connectors-gallery-partners](./includes/connectors-gallery-partners.md)]
+
+## Related content
+
+- [Microsoft-built connectors gallery](connectors-gallery-microsoft.md)

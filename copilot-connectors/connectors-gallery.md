@@ -28,7 +28,7 @@ Microsoft partners provide a broad range of Microsoft 365 Copilot connectors tha
 Use the following pages to browse Microsoft and partner-built connectors.
 
 - [Microsoft-built connectors](connectors-gallery-microsoft.md) - Microsoft 365 Copilot connectors built and supported by Microsoft.
-- [Partner-built connectors](connectors-gallery-partner.md) - Connectors built and supported by Microsoft partners.
+- [Partner-built connectors](connectors-gallery-partners.md) - Connectors built and supported by Microsoft partners.
 
 ## Related content
 
