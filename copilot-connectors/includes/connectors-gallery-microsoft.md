@@ -11,7 +11,7 @@ The following table lists the collaboration and communications connectors that a
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
-| Adobe Experience Manager Sites | Microsoft | Allows an organization to manage and deliver digital experiences across web properties. | [Adobe Experience Manager Sites connector](./adobe-experience-manager-sites-overview.md) |
+| Adobe Experience Manager Sites | Microsoft | Allows an organization to manage and deliver digital experiences across web properties. | [Adobe Experience Manager Sites connector](/microsoft-365-copilot/connectors/adobe-experience-manager-sites-overview) |
 | Atlassian Confluence Cloud | Microsoft | Allows your organization to index Confluence pages and blogs from Confluence Cloud. | [Confluence Cloud connector](confluence-cloud-overview.md) |
 | Atlassian Confluence On-premises | Microsoft | Allows your organization to index Confluence pages from server or data center deployments. | [Confluence On-premises connector](confluence-onpremises-overview.md) |
 | Atlassian Jira Cloud | Microsoft | Allows your organization to index Jira issues and tickets. | [Atlassian Jira Cloud connector](jira-cloud-overview.md) |
