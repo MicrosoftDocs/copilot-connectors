@@ -1,2 +1,615 @@
-- name: Index
+items:
+- name: Microsoft 365 Copilot connectors
   href: index.yml
+- name: Overview
+  href: overview.md
+- name: Connectors gallery
+  href: connectors-gallery.md
+- name: Connectors and Copilot Search
+  href: copilot-search.md
+- name: Get started
+  expanded: true
+  items:
+  - name: Prerequisites
+    href: prerequisites.md
+  - name: Deployment overview
+    href: deployment-overview.md
+- name: Set up synced connectors
+  expanded: true
+  items:
+  - name: Microsoft-built synced connectors
+    href: prebuilt-connectors-overview.md
+    items:
+    - name: 15Five High Fives
+      items:
+      - name: Setup
+        href: 15five-high-fives-connector.md
+    - name: 15Five Priorities
+      items:
+        - name: Setup
+          href: 15five-priorities-connector.md
+    - name: Adobe Experience Manager Sites
+      items:
+      - name: Overview
+        href: adobe-experience-manager-sites-overview.md
+      - name: Deployment guide
+        href: adobe-experience-manager-sites-deployment.md
+      - name: Troubleshooting
+        href: adobe-experience-manager-sites-troubleshooting.md
+    - name: Adobe Experience Manager Assets
+      items:
+      - name: Overview
+        href: adobe-experience-manager-assets-overview.md
+      - name: Deployment guide
+        href: adobe-experience-manager-assets-deployment.md
+      - name: Troubleshooting
+        href: adobe-experience-manager-assets-troubleshooting.md        
+    - name: Aha!
+      items:
+      - name: Overview
+        href: aha-overview.md
+      - name: Set up the Aha! service
+        href: aha-admin-setup.md
+      - name: Deployment guide
+        href: aha-deployment.md
+      - name: Troubleshooting
+        href: aha-troubleshooting.md
+    - name: Amazon S3
+      items:
+      - name: Overview
+        href: amazon-s3-overview.md
+      - name: Deployment guide
+        href: amazon-s3-deployment.md
+      - name: Troubleshooting
+        href: amazon-s3-troubleshooting.md
+    - name: Asana
+      items:
+      - name: Overview
+        href: asana-overview.md
+      - name: Deployment guide
+        href: asana-deployment.md
+      - name: Troubleshooting
+        href: asana-troubleshooting.md
+    - name: Azure Data Lake Storage Gen2
+      items:
+      - name: Setup
+        href: azure-data-lake-connector.md
+      - name: Troubleshooting
+        href: troubleshoot-azure-data-lake-connector.md
+    - name: Azure DevOps Work Items
+      items:
+      - name: Overview
+        href: azure-devops-work-items-overview.md
+      - name: Set up the Azure DevOps service
+        href: azure-devops-work-items-admin-setup.md
+      - name: Deploy the connector
+        href: azure-devops-work-items-deployment.md
+      - name: Troubleshooting
+        href: azure-devops-work-items-troubleshooting.md
+    - name: Azure DevOps Wiki
+      items:
+      - name: Setup
+        href: azure-devops-wiki-connector.md
+      - name: Troubleshooting
+        href: troubleshoot-azure-devops-wiki-connector.md
+    - name: Azure File Share
+      items:
+      - name: Overview
+        href: azure-file-share-overview.md
+      - name: Deployment guide
+        href: azure-file-share-deployment.md
+      - name: Troubleshooting
+        href: azure-file-share-troubleshooting.md
+    - name: Azure SQL and Microsoft SQL Server
+      items:
+      - name: Setup
+        href: MSSQL-connector.md
+      - name: Troubleshooting
+        href: troubleshoot-mssql-connector.md
+    - name: BambooHR
+      items:
+      - name: Setup
+        href: bamboohr-connector.md
+      - name: Troubleshooting
+        href: troubleshoot-bamboohr-connector.md
+    - name: Bitbucket Knowledge
+      items:
+      - name: Overview
+        href: bitbucket-knowledge-overview.md
+      - name: Deployment guide
+        href: bitbucket-knowledge-deployment.md
+      - name: Troubleshooting
+        href: bitbucket-knowledge-troubleshooting.md
+    - name: Bitbucket Pull Request
+      items:
+      - name: Overview
+        href: bitbucket-pull-request-overview.md
+      - name: Deployment guide
+        href: bitbucket-pull-request-deployment.md
+      - name: Troubleshooting
+        href: bitbucket-pull-request-troubleshooting.md
+    - name: Coda Enterprise
+      items:
+      - name: Overview
+        href: coda-enterprise-overview.md
+      - name: Deployment guide
+        href: coda-enterprise-deployment.md
+      - name: Troubleshooting
+        href: coda-enterprise-troubleshooting.md  
+    - name: Confluence Cloud
+      items: 
+      - name: Overview
+        href: confluence-cloud-overview.md
+      - name: Set up the Confluence service
+        href: confluence-cloud-admin-setup.md
+      - name: Deployment guide
+        href: confluence-cloud-deployment.md
+      - name: Troubleshooting
+        href: confluence-cloud-troubleshooting.md
+    - name: Confluence On-premises
+      items:
+      - name: Overview
+        href: confluence-onpremises-overview.md
+      - name: Set up the Confluence service
+        href: confluence-onpremises-admin-setup.md  
+      - name: Deployment guide
+        href: confluence-onpremises-deployment.md
+      - name: Troubleshooting
+        href: confluence-onpremises-troubleshooting.md
+      - name: Plugin license agreement
+        href: atlassian-plugin-eula.md
+    - name: CSV
+      items:
+      - name: Setup
+        href: csv-connector.md
+      - name: Troubleshooting
+        href: troubleshoot-csv-connector.md
+    - name: DataStax
+      items:
+      - name: Setup
+        href: datastax-graph-connector.md
+    - name: Dropbox
+      items:
+      - name: Overview
+        href: dropbox-overview.md
+      - name: Set up the Dropbox service
+        href: dropbox-admin-setup.md
+      - name: Deploy the connector
+        href: dropbox-deployment.md
+      - name: Troubleshooting
+        href: dropbox-troubleshooting.md
+    - name: Egnyte
+      items:
+      - name: Overview
+        href: egnyte-overview.md
+      - name: Set up the Egnyte service
+        href: egnyte-admin-setup.md
+      - name: Deploy the connector
+        href: egnyte-deployment.md
+      - name: Troubleshooting
+        href: egnyte-troubleshooting.md
+    - name: Enterprise websites Cloud
+      items:
+      - name: Setup
+        href: enterprise-web-connector.md
+      - name: Troubleshooting
+        href: troubleshoot-enterprise-web-connector.md
+    - name: Enterprise websites on-premises
+      items:
+      - name: Setup
+        href: enterprise-web-connector-onprem.md
+      - name: Troubleshooting
+        href: troubleshoot-enterprise-web-connector-onprem.md
+    - name: File Share
+      items:
+      - name: Setup
+        href: fileshare-connector.md
+      - name: Troubleshooting
+        href: troubleshoot-file-share-connector.md
+    - name: Freshservice
+      items:
+      - name: Overview
+        href: freshservice-overview.md
+      - name: Deployment guide
+        href: freshservice-deployment.md
+      - name: Troubleshooting
+        href: freshservice-troubleshooting.md
+    - name: GitHub
+      items:         
+      - name: GitHub Cloud Issues
+        items:
+        - name: Overview
+          href: github-cloud-issues-overview.md
+        - name: Set up the GitHub service
+          href: github-cloud-issues-admin-setup.md 
+        - name: Deploy the connector
+          href: github-cloud-issues-deployment.md
+        - name: Troubleshooting
+          href: github-cloud-issues-troubleshooting.md
+      - name: GitHub Cloud Knowledge
+        items:
+        - name: Overview
+          href: github-cloud-knowledge-overview.md
+        - name: Set up the GitHub service
+          href: github-cloud-knowledge-admin-setup.md
+        - name: Deploy the connector
+          href: github-cloud-knowledge-deployment.md
+        - name: Troubleshooting
+          href: github-cloud-knowledge-troubleshooting.md
+      - name: GitHub Cloud Pull Requests
+        items:
+        - name: Overview
+          href: github-cloud-pull-requests-overview.md
+        - name: Set up the GitHub service
+          href: github-cloud-pull-requests-admin-setup.md
+        - name: Deploy the connector
+          href: github-cloud-pull-requests-deployment.md
+        - name: Troubleshooting
+          href: github-cloud-pull-requests-troubleshooting.md 
+      - name: GitHub Server Issues
+        items:
+        - name: Overview
+          href: github-server-issues-overview.md
+        - name: Set up the GitHub service
+          href: github-server-issues-admin-setup.md
+        - name: Deploy the connector
+          href: github-server-issues-deployment.md
+        - name: Troubleshooting
+          href: github-server-issues-troubleshooting.md
+      - name: GitHub Server Knowledge
+        items:
+        - name: Overview
+          href: github-server-knowledge-overview.md
+        - name: Set up the GitHub service
+          href: github-server-knowledge-admin-setup.md
+        - name: Deploy the connector
+          href: github-server-knowledge-deployment.md
+        - name: Troubleshooting
+          href: github-server-knowledge-troubleshooting.md
+      - name: GitHub Server Pull Requests
+        items:
+        - name: Overview
+          href: github-server-pull-requests-overview.md
+        - name: Set up the GitHub Server service
+          href: github-server-pull-requests-admin-setup.md
+        - name: Deploy the connector
+          href: github-server-pull-requests-deployment.md
+        - name: Troubleshooting
+          href: github-server-pull-requests-troubleshooting.md
+    - name: GitLab
+      items:
+      - name: GitLab Issues Cloud
+        items:
+        - name: Overview
+          href: gitlab-issues-cloud-overview.md
+        - name: Deployment guide
+          href: gitlab-issues-cloud-deployment.md
+        - name: Troubleshooting
+          href: gitlab-issues-cloud-troubleshooting.md
+      - name: GitLab Issues Server
+        items:
+        - name: Overview
+          href: gitlab-issues-server-overview.md
+        - name: Deploy the connector
+          href: gitlab-issues-server-deployment.md
+        - name: Troubleshooting
+          href: gitlab-issues-server-troubleshooting.md
+      - name: GitLab Knowledge Cloud
+        items:
+        - name: Overview
+          href: gitlab-knowledge-cloud-overview.md
+        - name: Deploy the connector
+          href: gitlab-knowledge-cloud-deployment.md
+        - name: Troubleshooting
+          href: gitlab-knowledge-cloud-troubleshooting.md
+      - name: GitLab Knowledge Server
+        items:
+        - name: Overview
+          href: gitlab-knowledge-server-overview.md
+        - name: Deployment guide
+          href: gitlab-knowledge-server-deployment.md
+        - name: Troubleshooting
+          href: gitlab-knowledge-server-troubleshooting.md
+      - name: GitLab Merge Requests Cloud
+        items:
+        - name: Overview
+          href: gitlab-merge-requests-cloud-overview.md
+        - name: Deployment guide
+          href: gitlab-merge-requests-cloud-deployment.md
+        - name: Troubleshooting
+          href: gitlab-merge-requests-cloud-troubleshooting.md
+      - name: GitLab Merge Requests Server
+        items:
+        - name: Overview
+          href: gitlab-merge-requests-server-overview.md
+        - name: Deployment guide
+          href: gitlab-merge-requests-server-deployment.md
+        - name: Troubleshooting
+          href: gitlab-merge-requests-server-troubleshooting.md
+    - name: Gong (preview)
+      items:
+      - name: Setup
+        href: gong-connector.md
+    - name: Google Drive
+      items:
+      - name: Overview
+        href: google-drive-overview.md
+      - name: Set up the Google Workspace service
+        href: google-drive-admin-setup.md
+      - name: Deploy the connector
+        href: google-drive-deployment.md
+      - name: Troubleshooting
+        href: google-drive-troubleshooting.md
+    - name: Guru
+      items:
+      - name: Overview
+        href: guru-overview.md
+      - name: Deployment guide
+        href: guru-deployment.md
+      - name: Troubleshooting
+        href: guru-troubleshooting.md
+    - name: iManage
+      items:
+      - name: Setup
+        href: imanage-cloud-connector.md
+    - name: Jira Cloud
+      items:
+      - name: Overview
+        href: jira-cloud-overview.md
+      - name: Set up the Jira Cloud service
+        href: jira-cloud-admin-setup.md
+      - name: Deploy the connector
+        href: jira-cloud-deployment.md
+      - name: Troubleshooting
+        href: jira-cloud-troubleshooting.md
+    - name: Jira Data Center
+      items:
+      - name: Overview
+        href: jira-data-center-overview.md
+      - name: Deploy the connector
+        href: jira-data-center-deployment.md
+      - name: Troubleshooting
+        href: jira-data-center-troubleshooting.md
+    - name: MediaWiki
+      items:
+      - name: Setup
+        href: mediawiki-connector.md
+      - name: Troubleshooting
+        href: troubleshoot-media-wiki-connector.md 
+    - name: Miro
+      items:
+      - name: Overview
+        href: miro-overview.md
+      - name: Set up the Miro service
+        href: miro-admin-setup.md
+      - name: Deployment guide
+        href: miro-deployment.md
+      - name: Troubleshooting
+        href: miro-troubleshooting.md
+    - name: monday.com
+      items:
+      - name: Overview
+        href: monday-overview.md
+      - name: Deploy the connector
+        href: monday-deployment.md
+      - name: Troubleshooting
+        href: monday-troubleshooting.md
+    - name: Oracle SQL
+      items:
+      - name: Setup
+        href: OracleSQL-connector.md
+      - name: Troubleshooting
+        href: troubleshoot-oraclesql-connector.md
+    - name: PagerDuty
+      items:
+      - name: Setup PagerDuty Escalation Policies
+        href: PagerDuty-Escalation-Policies-connector.md
+      - name: Setup PagerDuty Schedules
+        href: pagerduty-schedules-connector.md
+    - name: PostgreSQL
+      items:
+      - name: Setup
+        href: postgresql-connector.md
+    - name: Salesforce CRM
+      items:
+      - name: Set up the Salesforce service
+        href: salesforce-crm-admin-setup.md
+      - name: Deploy the connector
+        href: salesforce-connector.md
+      - name: Troubleshooting
+        href: troubleshoot-salesforce-connector.md
+    - name: Salesforce Knowledge
+      items:
+      - name: Setup
+        href: salesforce-knowledge-connector.md
+    - name: ServiceNow Catalog
+      items:
+      - name: Overview
+        href: servicenow-catalog-overview.md
+      - name: Set up the ServiceNow service
+        href: servicenow-catalog-admin-setup.md
+        items:
+        - name: Grant table access to a user
+          href: granting-table-access-servicenow-catalog.md
+      - name: Deploy the connector
+        href: servicenow-catalog-deployment.md
+      - name: Troubleshooting
+        href: servicenow-catalog-troubleshooting.md
+    - name: ServiceNow Knowledge  
+      items: 
+      - name: Overview
+        href: servicenow-knowledge-overview.md
+      - name: Set up the ServiceNow service
+        href: servicenow-knowledge-admin-setup.md
+        items:
+        - name: Grant table access to a user
+          href: granting-table-access-servicenow-knowledge.md
+      - name: Deploy the connector
+        href: servicenow-knowledge-deployment.md
+      - name: Troubleshooting
+        href: servicenow-knowledge-troubleshooting.md
+    - name: ServiceNow Tickets
+      items:
+      - name: Overview
+        href: servicenow-tickets-overview.md
+      - name: Set up the ServiceNow service
+        href: servicenow-tickets-admin-setup.md
+        items:
+        - name: Grant table access to a user
+          href: granting-table-access-servicenow-tickets.md
+      - name: Deploy the connector
+        href: servicenow-tickets-deployment.md
+      - name: Troubleshooting
+        href: servicenow-tickets-troubleshooting.md
+    - name: SharePoint Server (preview)
+      items:
+      - name: Setup
+        href: sharepoint-server-connector.md
+    - name: Shortcut Story
+      items:
+      - name: Overview
+        href: shortcut-story-overview.md
+      - name: Deployment guide
+        href: shortcut-story-deployment.md
+      - name: Troubleshooting
+        href: shortcut-story-troubleshooting.md
+    - name: Smartsheet Sheet
+      items:
+      - name: Overview
+        href: smartsheet-sheet-overview.md
+      - name: Deployment guide
+        href: smartsheet-sheet-deployment.md
+      - name: Troubleshooting
+        href: smartsheet-sheet-troubleshooting.md
+    - name: Stack Overflow
+      items:
+      - name: Setup
+        href: stack-overflow-connector.md
+    - name: Tableau Cloud
+      items:
+      - name: Setup
+        href: tableau-cloud-connector.md
+    - name: Trello
+      items:
+      - name: Setup
+        href: trello-connector.md
+    - name: Unily
+      items:
+      - name: Setup
+        href: unily-intranet-connector.md
+    - name: Veeva Vault RIM
+      items: 
+      - name: Overview
+        href: veeva-rim-overview.md
+      - name: Deployment guide
+        href: veeva-rim-deployment.md
+      - name: Troubleshooting
+        href: veeva-rim-troubleshooting.md
+    - name: Veeva PromoMats
+      items:
+      - name: Overview
+        href: veeva-promomats-overview.md
+      - name: Deployment guide
+        href: veeva-promomats-deployment.md
+      - name: Troubleshooting
+        href: veeva-promomats-troubleshooting.md
+    - name: Veeva QualityDocs
+      items:
+      - name: Overview
+        href: veeva-qualitydocs-overview.md
+      - name: Deployment guide
+        href: veeva-qualitydocs-deployment.md
+      - name: Troubleshooting
+        href: veeva-qualitydocs-troubleshooting.md         
+    - name: WordPress
+      items:
+      - name: WordPress.org (on-prem)
+        items:
+        - name: Overview
+          href: wordpress-onpremises-overview.md
+        - name: Deployment guide
+          href: wordpress-onpremises-deployment.md
+        - name: Troubleshooting
+          href: wordpress-onpremises-troubleshooting.md
+      - name: WordPress.com
+        items:
+        - name: Overview
+          href: wordpress-overview.md
+        - name: Deployment guide
+          href: wordpress-deployment.md
+        - name: Troubleshooting
+          href: wordpress-troubleshooting.md
+    - name: Zendesk Help Center
+      items:
+      - name: Overview
+        href: zendesk-help-center-overview.md
+      - name: Deployment guide
+        href: zendesk-help-center-deployment.md
+      - name: Troubleshooting
+        href: zendesk-help-center-troubleshooting.md
+    - name: Zendesk Ticket
+      items:
+      - name: Overview
+        href: zendesk-ticket-overview.md
+      - name: Deployment guide
+        href: zendesk-ticket-deployment.md
+      - name: Troubleshooting
+        href: zendesk-ticket-troubleshooting.md
+  - name: Install connector agent for on-premises connectors
+    items:
+    - name: Connector agent installation
+      href: connector-agent.md
+    - name: Connector agent FAQ
+      href: connector-agent-frequently-asked-questions.yml
+    - name: Connector agent release notes
+      href: connector-agent-releases.md
+  - name: Staged rollout
+    href: staged-rollout.md
+  - name: Map Entra identities
+    href: map-entra-id.md
+  - name: Map non-Entra identities
+    href: map-non-entra-id.md
+  - name: Enhance Copilot discovery of connector content
+    href: enhance-copilot-discovery.md
+  - name: FAQs
+    href: frequently-asked-questions.yml
+  - name: Build custom synced connectors
+    items:
+    - name: Build with Agents Toolkit
+      href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=/microsoft-365-copilot/connectors/context
+    - name: Build with SDK
+      href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/connectors/context 
+    - name: Use the Copilot Connectors API
+      items:
+      - name: Overview
+        href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/connectors/context
+      - name: Manage connections
+        href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/connectors/context
+      - name: Manage schema
+        href: /graph/connecting-external-content-manage-schema?context=/microsoft-365-copilot/connectors/context
+      - name: Manage items
+        href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/connectors/context
+      - name: Use external groups
+        href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/connectors/context
+- name: Set up federated connectors (early access preview)
+  items:
+  - name: Overview
+    href: federated-connectors-overview.md
+- name: Configure Microsoft 365 Copilot extension
+  href: copilot-extension.md
+- name: Manage connections
+  items:
+  - name: Manage connections
+    href: manage-connector.md
+  - name: View connection details
+    href: view-details.md
+  - name: Manage access permissions
+    href: manage-access-permissions.md
+  - name: Search and validate indexed content
+    href: indexed-content.md
+  - name: Monitor errors
+    href: error-responses.md
+  - name: Item delete notification
+    href: item-delete-notification.md
+- name: Terms of use
+  href: terms-of-use.md
