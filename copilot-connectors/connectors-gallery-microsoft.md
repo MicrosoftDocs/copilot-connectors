@@ -16,7 +16,9 @@ Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and M
 
 Microsoft builds and maintains a set of Microsoft 365 Copilot connectors that integrate with Microsoft services and popular external platforms. These connectors are supported by Microsoft and are available in the Connectors gallery in the Microsoft 365 admin center.
 
-This article lists the Microsoft-built Microsoft 365 Copilot connectors.
+This article provides a list of the prebuilt connectors that are available across various categories, along with a description of each and a link to learn more about the connector.
+
+[!INCLUDE [connector-preview-access](includes/connector-preview-access.md)]
 
 [!INCLUDE [connectors-gallery-microsoft](./includes/connectors-gallery-microsoft.md)]
 

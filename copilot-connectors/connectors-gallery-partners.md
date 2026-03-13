@@ -16,7 +16,7 @@ Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and M
 
 Microsoft partners provide a broad range of Microsoft 365 Copilot connectors that extend search and Copilot experiences to additional systems and data sources. These connectors are built and supported by partners, and support models vary.
 
-This article lists the partner-built Microsoft 365 Copilot connectors.
+This article provides a list of the partner connectors that are available across various categories, along with a description of each and a link to the connector website where available.
 
 [!INCLUDE [connectors-gallery-partners](./includes/connectors-gallery-partners.md)]
 
