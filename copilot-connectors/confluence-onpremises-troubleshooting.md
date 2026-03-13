@@ -18,7 +18,7 @@ The Confluence On-premises Microsoft 365 Copilot connector enables Microsoft 365
 
 This article provides troubleshooting information for common errors that you might encounter when deploying or managing the Confluence On-premises connector.
 
-To verify Confluence configuration information to help troubleshoot errors, see [Set up the Confluence service for connector ingestion](confluence-on-premises-admin-setup.md).
+To verify Confluence configuration information to help troubleshoot errors, see [Set up the Confluence service for connector ingestion](confluence-onpremises-admin-setup.md).
 
 ## Troubleshoot common errors
 

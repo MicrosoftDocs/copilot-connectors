@@ -167,7 +167,7 @@ To increase the API request limit:
 1. Under **API requests (per hour) – Authenticated**, enter the rate‑limit value (for example, **30000**).
 1. Select **Save settings**.
 
-:::image type="content" source="./media/github-server-rate-limit.png" alt-text="Screenshot of the Rate limiting tab in GitHub Server with API Requests and Save settings highlighted.":::
+:::image type="content" source="./media/github-cloud-issues-admin-setup/github-server-rate-limit.png" alt-text="Screenshot of the Rate limiting tab in GitHub Server with API Requests and Save settings highlighted." lightbox="./media/github-cloud-issues-admin-setup/github-server-rate-limit.png":::
 
 > [!NOTE]
 > When you save your changes, certain GitHub Server services might restart and cause a brief service interruption. After you save, allow time for the configuration to propagate across the instance.

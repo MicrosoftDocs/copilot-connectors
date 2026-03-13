@@ -18,7 +18,7 @@ The Confluence On-premises connector enables Microsoft 365 to index and retrieve
 
 This article describes the steps to deploy, customize, and troubleshoot the Confluence On-premises connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md). 
 
-For advanced Confluence On-premises configuration information, see [Set up the Confluence On-premises service for connector ingestion](confluence-on-premises-admin-setup.md). 
+For advanced Confluence On-premises configuration information, see [Set up the Confluence On-premises service for connector ingestion](confluence-onpremises-admin-setup.md). 
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Before you deploy the Confluence On-premises connector, make sure that the Confl
 | ---- | ---- |
 | Confluence admin | [Configure the environment]() | 
 | Confluence admin/Network admin  | [Set up prerequisites]() |
-| Microsoft 365 admin | [Deploy the connector in the Microsoft 365 admin center](#deploy-the-confluence-on-premises-copilot-connector) |
+| Microsoft 365 admin | [Deploy the connector in the Microsoft 365 admin center](#deploy-the-confluence-onpremises-copilot-connector) |
 | Microsoft 365 admin | [Customize connector settings](#customize-settings) (optional) |
 
 Before you deploy the connector, make sure that the following prerequisites are met:

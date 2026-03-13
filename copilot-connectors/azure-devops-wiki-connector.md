@@ -24,7 +24,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Capabilities
 - Index wikis from Azure DevOps
 - Enable your end users to ask questions related to project wikis and code wikis.
-- Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - The connector only indexes one ADO organization per connection. 
@@ -52,8 +52,6 @@ The Azure DevOps Wiki connector includes the following custom data filters for C
 >The crawl account must have **Basic** access level. To learn more about access levels in Azure DevOps, read [supported access levels](/azure/devops/organizations/security/access-levels).
 
 ## Get Started
-
-[![Screenshot that shows connection creation screen for the Azure DevOps Wiki Copilot connector.](media/ado-wiki-create-page.png)](media/ado-wiki-create-page.png#lightbox)
 
 ### Choose display name 
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
@@ -147,7 +145,7 @@ Provide your Azure DevOps organization name. The Azure DevOps organization name 
 Only the organization name is required—don't provide the full URL.
 
 ### Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
 At this point, you're ready to create the connection for Azure DevOps wikis. You can click **Create** to publish your connection and index wikis from your Azure DevOps organization.
 
@@ -176,8 +174,6 @@ Custom setup is for those admins who want to edit the default values for setting
 
 ### Users
 
-[![Screenshot that shows Users tab where you can configure access permissions and user mapping rules.](media/ado-wiki-users-tab.png)](media/ado-wiki-users-tab.png#lightbox)
-
 #### Access permissions
 
 The Azure DevOps Wiki Copilot connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it.
@@ -187,8 +183,6 @@ The Azure DevOps Wiki Copilot connector supports search permissions visible to *
 > Updates to groups governing access permissions are synced in full crawls only. Incremental crawls don't support processing of updates to permissions.
 
 ### Content
-
-[![Screenshot that shows Content tab where you can configure projects and connection schema.](media/ado-wiki-content-tab.png)](media/ado-wiki-content-tab.png#lightbox)
 
 #### Choose projects
 
@@ -229,15 +223,13 @@ Use the preview results button to verify the sample values of the selected prope
 
 ### Sync
 
-[![Screenshot that shows Sync tab where you can configure crawl frequency.](media/ado-wiki-sync-tab.png)](media/ado-wiki-sync-tab.png#lightbox)
-
-The refresh interval determines how often your data is synced between the data source and the Azure DevOps Wiki Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Azure DevOps Wiki Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 
 ### Set up search result page
 
-After publishing the connection, you need to customize the search results page with verticals and result types. To learn about customizing search results, review how to [manage verticals](manage-verticals.md) and [result types](manage-result-types.md).
+After publishing the connection, you need to customize the search results page with verticals and result types. To learn about customizing search results, review how to [manage verticals](/microsoftsearch/manage-verticals) and [result types](/microsoftsearch/manage-result-types).
 
 You can also use the [sample result layout](azure-devops-wiki-connector-result-layout.md) for the Azure DevOps Wiki Copilot connector. Copy and paste the result layout JSON to get started.
 

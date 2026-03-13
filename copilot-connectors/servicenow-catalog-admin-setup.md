@@ -65,13 +65,13 @@ By default, Copilot-generated links for ServiceNow Catalog items follow the stan
 
 `https://<your-organization-name>.service-now.com/sp?id=sc_cat_item&sys_id=<sysid>`
 
-If your organization uses a different URL, you can customize the URL when you deploy the connector. For more information, see [Customize values for certain schema properties](configure-connector.md#customize-values-for-certain-schema-properties).
+If your organization uses a different URL, you can customize the URL when you deploy the connector. For more information, see [Customize connector settings](deployment-overview.md#customize-connector-settings-optional).
 
 ### Define ServiceNow attribute mapping
 
 By default, Microsoft Entra ID maps identities from your data source by checking whether the email ID of ServiceNow users matches the user principal name (UPN) or **Mail** attribute in Microsoft Entra ID.
 
-If this default mapping doesn’t meet your organization’s needs, you can define a custom mapping formula. For more information, see [Map your non-Entra ID identities](map-non-aad.md).
+If this default mapping doesn’t meet your organization’s needs, you can define a custom mapping formula. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
 
 ### Check for advanced scripts and hierarchical permissions in ServiceNow
 
@@ -175,7 +175,7 @@ To verify the item count expected for ingestion:
 
 1. Note the item count.
 
-When the connector is set up and item sync is completed, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](connector-view-details.md#view-connection-statistics).
+When the connector is set up and item sync is completed, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](view-details.md#view-connection-statistics).
 
 ### Set up REST API
 
@@ -263,7 +263,7 @@ To set up hierarchical permissions, the service account used for ServiceNow Cata
 
 ### Add Microsoft 365 IP address to the allowlist
 
-If any network configurations—such as firewall or proxy settings—block access to ServiceNow, make sure to add the IP addresses listed in [IP firewall rules](configure-connector.md#ip-firewall-rules) to the allowlist.
+If any network configurations—such as firewall or proxy settings—block access to ServiceNow, make sure to add the IP addresses listed in [IP firewall rules](deployment-overview.md#ip-firewall-rules) to the allowlist.
 
 For information about ServiceNow-specific controls, see [IP Address Access Control](https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/login/task/t_AccessControl.html).
 
