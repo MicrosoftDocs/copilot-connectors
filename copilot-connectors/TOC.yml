@@ -24,8 +24,9 @@ items:
   expanded: true
   items:
   - name: Microsoft-built synced connectors
-    href: prebuilt-connectors-overview.md
     items:
+    - name: Overview
+      href: prebuilt-connectors-overview.md
     - name: 15Five High Fives
       items:
       - name: Setup
