@@ -7,7 +7,7 @@ ms.audience: Admin
 ms.topic: landing-page
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-description: "Find a list of over 100 prebuilt Microsoft 365 Copilot connectors, organized by categories, including a description and link to each connector website."
+description: "Browse Microsoft 365 Copilot connectors by publisher and access links to Microsoft-built and partner-built connector galleries."
 ms.date: 03/12/2026
 ---
 
