@@ -39,7 +39,7 @@ Enable your users to ask questions related to your IT/HR workflows in Copilot, s
 
 Developers can use the ServiceNow Knowledge connector as a knowledge source in declarative agents built with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
-### Agent prompts
+### Eaxmple prompts
 
 The following examples show prompts that agent builders can use to help users retrieve information from ServiceNow.
 

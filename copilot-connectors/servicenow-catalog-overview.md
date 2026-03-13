@@ -41,7 +41,7 @@ Developers can use this connector as a knowledge source in declarative agents th
 - Guide users through service request processes.
 - Provide contextual responses based on catalog metadata.
 
-### Agent prompts
+### Eaxmple prompts
 
 The following examples show prompts that agent builders can use to help users retrieve information from ServiceNow Catalog.
 

@@ -49,7 +49,7 @@ By connecting GitLab Issues to these agents, teams can build experiences that:
 - Summarize related issues for a feature, epic, or incident  
 - Help teams plan sprints, milestones, and releases using live GitLab data  
 
-### Agent prompts
+### Eaxmple prompts
 
 The following examples show prompts that agent builders can use to help their users retrieve information from GitLab Issues Server.  
 
