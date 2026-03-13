@@ -28,7 +28,7 @@ Before you deploy the Confluence On-premises connector, make sure that the Confl
 | ---- | ---- |
 | Confluence admin | [Configure the environment]() | 
 | Confluence admin/Network admin  | [Set up prerequisites]() |
-| Microsoft 365 admin | [Deploy the connector in the Microsoft 365 admin center](#deploy-the-confluence-onpremises-copilot-connector) |
+| Microsoft 365 admin | [Deploy the connector in the Microsoft 365 admin center](#deploy-the-connector) |
 | Microsoft 365 admin | [Customize connector settings](#customize-settings) (optional) |
 
 Before you deploy the connector, make sure that the following prerequisites are met:

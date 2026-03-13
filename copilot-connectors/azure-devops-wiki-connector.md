@@ -40,7 +40,7 @@ The Azure DevOps Wiki connector includes the following custom data filters for C
 - You must be the Search admin for your organization's Microsoft 365 tenant.
 - To allow the connector to connect to your Azure DevOps organization, you must enable **Third-party application access via OAuth**. For more information, see [manage security policies](/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops#manage-a-policy&preserve-view=true) to learn more.
 
-    ![Third-party application access via OAuth](media/ado-workitems-connector-security-policies.png)
+    ![Third-party application access via OAuth](media/ado-wiki/ado-workitems-connector-security-policies.png)
 
 - **Service Account**: To connect to Azure DevOps and allow the Azure DevOps Wiki Copilot connector to update wikis regularly, you need a service account with the following permissions granted to it. The service account is either the Microsoft-published service principal (for Federated Credential authentication) or the signed-in Microsoft 365 admin account (for Microsoft Entra ID OAuth authentication), depending on the authentication method selected.
 
@@ -223,7 +223,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Azure DevOps Wiki Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Azure DevOps Wiki Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 
