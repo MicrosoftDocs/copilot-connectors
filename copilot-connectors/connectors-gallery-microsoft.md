@@ -27,8 +27,6 @@ The following table lists the collaboration and communications connectors that a
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
 | Adobe Experience Manager Sites | Microsoft | Allows an organization to manage and deliver digital experiences across web properties. | [Adobe Experience Manager Sites connector](adobe-experience-manager-sites-overview.md) |
-| Atlassian Confluence Cloud | Microsoft | Allows your organization to index Confluence pages and blogs from Confluence Cloud. | [Confluence Cloud connector](confluence-cloud-overview.md) |
-| Atlassian Confluence On-premises | Microsoft | Allows your organization to index Confluence pages from server or data center deployments. | [Confluence On-premises connector](confluence-onpremises-overview.md) |
 | Atlassian Jira Cloud | Microsoft | Allows your organization to index Jira issues and tickets. | [Atlassian Jira Cloud connector](jira-cloud-overview.md) |
 | Azure DevOps Work Items | Microsoft | Allows your organization to search for work items in your Azure DevOps instance. | [Azure DevOps Work Items connector](azure-devops-work-items-overview.md) |
 | Azure DevOps Wiki | Microsoft | Allows your organization to index wiki pages from Azure DevOps. | [Azure DevOps Wiki connector](azure-devops-wiki-connector.md) |
@@ -50,15 +48,14 @@ The following table lists the content management system connectors that are avai
 | -------------- | --------- | ----------- | ---------- |
 | Adobe Experience Manager Assets | Microsoft | Allows an organization to manage and deliver digital experiences across the organization. | [Adobe Experience Manager Assets connector](adobe-experience-manager-assets-overview.md) |
 | Adobe Experience Manager Sites | Microsoft | Allows your organization to index published webpages of your AEM Sites. After you configure the connector and index content from AEM Sites, end users can search for those published webpages in Microsoft 365 Copilot and from any Microsoft Search client. | [Adobe Experience Manager Sites connector](adobe-experience-manager-sites-overview.md) |
-| Confluence Cloud | Microsoft | Confluence Cloud connector allows your organization to index Confluence pages and blogs. | [Confluence Cloud](/microsoft-365-copilot/connectors/confluence-cloud-connector) |
-| Confluence on-premises | Microsoft | Allows your organization to index Confluence pages from server or data center deployments. | [Confluence On-premises connector](/microsoft-365-copilot/connectors/confluence-onpremises-connector) |
+| Confluence Cloud | Microsoft | Confluence Cloud connector allows your organization to index Confluence pages and blogs. | [Confluence Cloud](/microsoft-365-copilot/connectors/confluence-cloud-overview) |
+| Confluence on-premises | Microsoft | Allows your organization to index Confluence pages from server or data center deployments. | [Confluence On-premises connector](/microsoft-365-copilot/connectors/confluence-onpremises-overview) |
 | Enterprise Websites | Microsoft | Allows your organization to search any non-SharePoint enterprise website. | [Enterprise Websites Copilot connector](/microsoft-365-copilot/connectors/enterprise-web-connector) |
 | Guru | Microsoft | Allows integration with Guru's knowledge management platform to capture, store, and share organizational knowledge. | [Guru connector](guru-overview.md) |
 | iManage | Microsoft | Allows organizations to index and search iManage Work documents. | [iManage connector](imanage-cloud-connector.md) |
 | MediaWiki | Microsoft | Enables your organization to search knowledge-based articles on sites it creates with MediaWiki. | [MediaWiki Copilot connector](/microsoft-365-copilot/connectors/mediawiki-connector) |
 | SharePoint Server (preview) | Microsoft | Lets organizations connect to on-premises SharePoint sites for collaborating on and managing documents. | [SharePoint Server connector](sharepoint-server-connector.md) |
-| Unily | Microsoft | Allows organizations to integrate with Unily intranet platform. | [Unily connector](unily-intranet-connector.md) |
-| Unily (preview) | Microsoft | Allows Copilot integration with Unily's digital workplace platform for enhanced communication and employee experience. | [Unily connector (preview)](unily-intranet-connector.md) |
+| Unily | Microsoft | Allows Copilot integration with Unily's digital workplace platform for enhanced communication and employee experience.  | [Unily connector](unily-intranet-connector.md) |
 | Veeva QualityDocs | Microsoft | Enables integration with Veeva Vault for quality content management. | [Veeva QualityDocs connector](veeva-qualitydocs-overview.md) |
 | Veeva Vault PromoMats | Microsoft | Empowers life sciences organizations to seamlessly integrate their compliant promotional content and regulatory content from Veeva Vault PromoMats into Microsoft 365 Copilot. This Copilot connector was developed by Microsoft with Veeva best practices and support provides robust indexing of documents, metadata, approval statuses, and version histories. This ensures comprehensive access for use with Microsoft 365 Copilot. | [Veeva Vault PromoMats connector](veeva-promomats-overview.md) |
 | Veeva Vault RIM | Microsoft | Enables integration with Veeva Vault RIM for regulatory information management. | [Veeva Vault RIM connector](veeva-rim-overview.md) |
