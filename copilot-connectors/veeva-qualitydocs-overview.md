@@ -10,7 +10,7 @@ ms.topic: overview
 ms.service: copilot-connectors
 ms.localizationpriority: Medium
 description: "Learn about the Veeva QualityDocs Microsoft 365 Copilot connector, including capabilities, use cases, and benefits for quality, regulatory, manufacturing, and supply-chain teams."
-ms.date: 02/16/2026
+ms.date: 03/18/2026
 ---
 
 # Veeva QualityDocs Microsoft 365 Copilot connector overview
@@ -83,6 +83,7 @@ The connector has the following limitations:
 - Supported file types are primarily text-based (Microsoft 365 documents, PDFs); nontext files such as .png, .jpg, or video files aren't supported.
 - Each document can include up to 4 MB of parsed (extracted) text for ingestion and indexing. In most .docx, .pptx, and .pdf files, the extracted text represents roughly 10% of the original file size, which allows many documents of 30–40 MB to be fully indexed. For other file types, this ratio might differ. If the extracted text exceeds the 4 MB limit, only the first portion is indexed, which might result in partial coverage and incomplete answers in Copilot and Search.
 - The indexing speed is constrained by the API rate limits imposed by the Veeva platform. If you have a high volume of documents, you might experience longer completion times. 
+- Document fields set to be hidden on the Veeva platform aren't indexed.
 
 ## Data types indexed from QualityDocs
 
