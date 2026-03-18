@@ -54,7 +54,7 @@ The GitLab Knowledge Cloud connector supports **OAuth 2.0** authentication. Choo
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The GitLab Knowledge Cloud connector starts indexing content right away.
 
@@ -128,4 +128,4 @@ The following table lists the rate limits for GitLab Knowledge Cloud connector c
 
 - [GitLab Knowledge Cloud connector overview](gitlab-knowledge-cloud-overview.md)
 - [Troubleshoot issues with the GitLab Knowledge Cloud connector](gitlab-knowledge-cloud-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)

@@ -29,6 +29,6 @@ The following table lists common errors that you might encounter and possible re
 
 ## Related content
 
-- [BambooHR Microsoft 365 Copilot connector](/microsoft-365-copilot/connectors/bamboohr-connector?source=recommendations)
+- [BambooHR Microsoft 365 Copilot connector](/microsoft-365/copilot/connectors/bamboohr-connector?source=recommendations)
 - [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors)
  

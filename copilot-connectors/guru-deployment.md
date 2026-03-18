@@ -35,7 +35,7 @@ To add the Guru connector for your organization:
 
 The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter. You can accept the default **Guru** display name or customize the value to use a display name that users in your organization recognize. 
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -47,7 +47,7 @@ The Guru connector supports Basic Authentication using a user token. We recommen
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Guru Copilot connector starts indexing content right away.
 
@@ -84,7 +84,7 @@ If you choose **Only people with access to this data source**, you need to choos
 - Choose the **Microsoft Entra ID** option if the email ID of Guru users is the same as the user principal name (UPN) of users in Microsoft Entra ID.
 - Choose the **non-Entra ID** option if the email ID of Guru users is different from the UPN of users in Entra ID.
 
-If you choose Microsoft Entra ID as the identity source, the connector maps user email IDs from Guru to the UPN property in Microsoft Entra ID. If you choose non-Entra ID as the identity source, provide a regular expression to map email ID to UPN. For more information, see [Map your non-Entra ID identities](/microsoft-365-copilot/connectors/map-non-entra-id).
+If you choose Microsoft Entra ID as the identity source, the connector maps user email IDs from Guru to the UPN property in Microsoft Entra ID. If you choose non-Entra ID as the identity source, provide a regular expression to map email ID to UPN. For more information, see [Map your non-Entra ID identities](/microsoft-365/copilot/connectors/map-non-entra-id).
 
 > [!NOTE]
 > Updates to users or groups that govern access permissions are synced in full crawls only. Incremental crawls don't currently support processing updates to permissions.
@@ -130,7 +130,7 @@ The refresh interval determines how often your data is synchronized between the 
 - **Full crawl**: Default is every day.
 - **Incremental crawl**: Default is every 15 minutes.
 
-You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

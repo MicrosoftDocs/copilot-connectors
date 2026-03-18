@@ -37,7 +37,7 @@ Binary files like images (.jpg, .bmp, etc.) aren't supported. For example, if a 
 ## Get started
 ### Add a connector in the Microsoft 365 admin center
 
-[Add Azure Data Lake Storage Gen2 Copilot connector](https://admin.microsoft.com/adminportal/home#/microsoft-365-copilot/connectors/Connectors/add?ms_search_referrer=microsoft-365-copilot/connectorsDocs_ADLSGen2&type=ADLSGen2)
+[Add Azure Data Lake Storage Gen2 Copilot connector](https://admin.microsoft.com/adminportal/home#/microsoft-365/copilot/connectors/Connectors/add?ms_search_referrer=microsoft-365/copilot/connectorsDocs_ADLSGen2&type=ADLSGen2)
 
 (See general [setup instructions](./deployment-overview.md) for more details)
 

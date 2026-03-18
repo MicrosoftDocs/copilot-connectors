@@ -151,6 +151,6 @@ The connector maps Entra ID identities to the corresponding iManage user account
 - Search and validate your indexed content and permissions using [index browser](indexed-content.md)
 - You might find answers to common questions in the [FAQ](./frequently-asked-questions.yml)
 
-For Microsoft Search, if you need to customize the search results page, see [Customize the search results page](/microsoft-365-copilot/connectors/customize-search-page).
+For Microsoft Search, if you need to customize the search results page, see [Customize the search results page](/microsoft-365/copilot/connectors/customize-search-page).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/graph/support).

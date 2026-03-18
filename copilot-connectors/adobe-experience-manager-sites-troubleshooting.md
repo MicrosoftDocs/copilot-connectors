@@ -32,4 +32,4 @@ You might encounter the following errors during connector deployment or indexing
 
 - [Adobe Experience Manager (AEM) Sites connector overview](adobe-experience-manager-sites-overview.md)
 - [Deploy the Adobe Experience Manager (AEM) Sites connector](adobe-experience-manager-sites-deployment.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)

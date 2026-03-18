@@ -16,7 +16,7 @@ description: "Find information about how to deploy the Confluence Cloud Microsof
 
 The Confluence Cloud Microsoft 365 Copilot connector integrates Confluence content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant wiki pages and blogs directly within apps like Teams, Outlook, and SharePoint.
 
-This article describes the steps to deploy, customize, and troubleshoot the Confluence Cloud Copilot connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview).
+This article describes the steps to deploy, customize, and troubleshoot the Confluence Cloud Copilot connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview).
 
 For advanced Confluence Cloud configuration information, see [Set up the Confluence Cloud service for connector ingestion](confluence-cloud-admin-setup.md).
 
@@ -50,7 +50,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Confluence Cloud** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -99,7 +99,7 @@ To authenticate and synchronize content from Confluence, choose one of the fol
 
 ### Roll out
 
-Deploy the connection to a limited set of users to validate it in Copilot and other search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+Deploy the connection to a limited set of users to validate it in Copilot and other search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
 

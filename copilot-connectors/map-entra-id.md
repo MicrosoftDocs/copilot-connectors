@@ -15,7 +15,7 @@ ms.date: 02/13/2026
 
 This article describes how to map your Microsoft Entra identities to a unique identifier for your data source (non-Microsoft Entra identity). This mapping allows people in your access control list (ACL) with non-Microsoft Entra identities to view connector results scoped to them.
 
-These steps are relevant for AI administrators who choose **Only people with access to this data source** when they [Customize connector settings](/microsoft-365-copilot/connectors/deployment-overview#customize-connector-settings-optional) and map identities to user principal names (UPNs) in Entra ID.
+These steps are relevant for AI administrators who choose **Only people with access to this data source** when they [Customize connector settings](/microsoft-365/copilot/connectors/deployment-overview#customize-connector-settings-optional) and map identities to user principal names (UPNs) in Entra ID.
 
 ## Select Microsoft Entra user properties to map
 

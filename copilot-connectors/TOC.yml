@@ -576,21 +576,21 @@ items:
     href: map-entra-id.md
   - name: Map non-Entra identities
     href: map-non-entra-id.md
-  - name: Enhance Copilot discovery of connector content
+  - name: Enhmicrosoft-365/copilot/ of connector contentmicrosoft-365/copilot/
     href: enhance-copilot-discovery.md
-  - name: FAQs
+  - name: FAQsmicrosoft-365/copilot/
     href: frequently-asked-questions.yml
   - name: Build custom synced connectors
     items:
-    - name: Build with Agents Toolkit
+    - name: Build with Agents Toolkitmicrosoft-365/copilot/
       href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=/microsoft-365-copilot/connectors/context
-    - name: Build with SDK
+    - name: Build with SDKmicrosoft-365/copilot/
       href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/connectors/context 
-    - name: Use the Copilot connectors API
+    - name: Use the Copilot connectors APImicrosoft-365/copilot/
       items:
-      - name: Overview
+      - name: Overviewmicrosoft-365/copilot/
         href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/connectors/context
-      - name: Manage connections
+      - name: Manage connectionsmicrosoft-365/copilot/
         href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/connectors/context
       - name: Manage schema
         href: /graph/connecting-external-content-manage-schema?context=/microsoft-365-copilot/connectors/context

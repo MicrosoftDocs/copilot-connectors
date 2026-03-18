@@ -26,4 +26,4 @@ For Microsoft 365 Copilot connectors built by Microsoft, the crawl setting that 
 
 Given that there can be delays between when an item is deleted or changed in the data source and when Microsoft first detects this operation, we recommend that you schedule an incremental crawl or full crawl in less than 14 days to improve detection.
 
-For more information, see [Crawl scheduling](/microsoft-365-copilot/connectors/deployment-overview?branch=pr-en-us-11#crawl-scheduling).
+For more information, see [Crawl scheduling](/microsoft-365/copilot/connectors/deployment-overview?branch=pr-en-us-11#crawl-scheduling).

@@ -28,7 +28,7 @@ Use this connector to unlock GitLab merge request data where your teams already 
 
 ## Build agents with the GitLab Merge Requests Cloud connector
 
-Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
+Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
 ### Eaxmple prompts
 
@@ -72,7 +72,7 @@ The connector indexes the following data types and surfaces them in Copilot and 
 
 ## Permissions model and access control
 
-Visibility of indexed content respects your configuration in the Microsoft 365 admin center: you can scope results to **Only people with access to this data source** (default) or make them visible to **Everyone**. Identity mapping aligns GitLab identities to Microsoft Entra ID using email, sign in, or name; if direct mapping fails, you can apply regex-based transforms. For more information, see [Map Microsoft Entra identities](/microsoft-365-copilot/connectors/map-entra-id).
+Visibility of indexed content respects your configuration in the Microsoft 365 admin center: you can scope results to **Only people with access to this data source** (default) or make them visible to **Everyone**. Identity mapping aligns GitLab identities to Microsoft Entra ID using email, sign in, or name; if direct mapping fails, you can apply regex-based transforms. For more information, see [Map Microsoft Entra identities](/microsoft-365/copilot/connectors/map-entra-id).
 
 ## Next step
 

@@ -20,7 +20,7 @@ The connector indexes specified content in Microsoft Search and Microsoft 365 Co
 - Index records from your MS SQL server or Azure SQL database using a SQL query.
 - Specify access permissions for every record with a list of users or groups added in the SQL query.
 - Enable your end users to ask questions related to indexed records in Copilot.
-- Use [Semantic search in Copilot](/microsoft-365-copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - Microsoft SQL Server Copilot connector: The on-premises database must run SQL Server version 2008 or later.
@@ -40,7 +40,7 @@ The connector indexes specified content in Microsoft Search and Microsoft 365 Co
 ## Get Started with Setup
 
 ### 1. Display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365/copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. SQL server
 To connect to your SQL data, you need your SQL server address and database name.
@@ -159,7 +159,7 @@ The first query fetches the first **N** number of rows by using: "CreatedDateTim
 
 ### 2. Manage properties
 
-The SQL connector picks up all columns specified in the full crawl SQL query as source properties for ingestion. In this step, you can define the search schema for your content. This involves defining the search annotations like search, retrieve, query, and refine, for selected source properties. This also includes assigning semantic labels and aliases to enhance search relevance. To learn more about search schema, refer to the documentation on [guidelines for 'manage properties'](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-manage-properties).
+The SQL connector picks up all columns specified in the full crawl SQL query as source properties for ingestion. In this step, you can define the search schema for your content. This involves defining the search annotations like search, retrieve, query, and refine, for selected source properties. This also includes assigning semantic labels and aliases to enhance search relevance. To learn more about search schema, refer to the documentation on [guidelines for 'manage properties'](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-manage-properties).
 
 ### 3. Incremental crawl (optional)
 

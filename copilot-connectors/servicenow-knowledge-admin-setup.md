@@ -230,7 +230,7 @@ Add a resource to the API:
     })(request, response);
     ```
 > [!NOTE]
-> The `getAllUserCriteria()` function is deprecated due to potential performance issues. For an alternative script that you can use, see [Issue reading all user criteria from ServiceNow](/microsoft-365-copilot/connectors/servicenow-knowledge-troubleshooting#issue-reading-all-user-criteria-from-servicenow). 
+> The `getAllUserCriteria()` function is deprecated due to potential performance issues. For an alternative script that you can use, see [Issue reading all user criteria from ServiceNow](/microsoft-365/copilot/connectors/servicenow-knowledge-troubleshooting#issue-reading-all-user-criteria-from-servicenow). 
 
 3. Make sure both of the following are checked:
    - **Requires authentication**
@@ -251,9 +251,9 @@ The Microsoft 365 admin enters the **API Namespace** when they [deploy the Servi
 
 Hierarchical permissions allow the ServiceNow Knowledge connector to evaluate user permissions for any ServiceNow knowledge article. The connector evaluates the user criteria applied at the knowledge base (parent) and the knowledge article (child) level according to the rules that ServiceNow uses. For more information about how ServiceNow evaluates article permission, see [Managing access to knowledge bases and knowledge articles](https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/user-access-knowledge.html).  
 
-To set up hierarchical permissions, provide read access to the `sys_properties` table to the service account used for connector setup. The connector reads two system properties — `glide.knowman.apply_article_read_criteria` and `glide.knowman.block_access_with_no_user_criteria` — to determine the permission evaluation flow. If the service account can't read these properties, the connector defaults to the most restrictive settings, which can cause articles without explicit user criteria to not appear in search results. For more information, see [Grant table access to a service account in ServiceNow](/microsoft-365-copilot/connectors/granting-table-access-servicenow-knowledge).
+To set up hierarchical permissions, provide read access to the `sys_properties` table to the service account used for connector setup. The connector reads two system properties — `glide.knowman.apply_article_read_criteria` and `glide.knowman.block_access_with_no_user_criteria` — to determine the permission evaluation flow. If the service account can't read these properties, the connector defaults to the most restrictive settings, which can cause articles without explicit user criteria to not appear in search results. For more information, see [Grant table access to a service account in ServiceNow](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge).
 
-If the user and role is already set up, follow the steps in the [Grant row-level access](/microsoft-365-copilot/connectors/granting-table-access-servicenow-knowledge#grant-row-level-access) and [Grant field-level access](/microsoft-365-copilot/connectors/granting-table-access-servicenow-knowledge#grant-field-level-access) sections and add the same role that you assigned to the service account to these new ACLs you create for the `sys_properties` table access.
+If the user and role is already set up, follow the steps in the [Grant row-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge#grant-row-level-access) and [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge#grant-field-level-access) sections and add the same role that you assigned to the service account to these new ACLs you create for the `sys_properties` table access.
 
 - Use **\*** in the field name to apply access to all fields for the table.
 

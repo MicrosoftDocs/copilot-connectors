@@ -55,7 +55,7 @@ To add the Bitbucket Knowledge connector for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize the associated content source. You can accept the default **Bitbucket Knowledge** display name or customize it so it's familiar to your organization.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -74,7 +74,7 @@ To authenticate, choose **OAuth 2.0**:
 
 ### Roll out
 
-You can optionally roll out the connector to a limited audience before full deployment. To roll out to a limited audience, choose the toggle next to **Rollout to limited audience**, and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+You can optionally roll out the connector to a limited audience before full deployment. To roll out to a limited audience, choose the toggle next to **Rollout to limited audience**, and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Bitbucket Knowledge connector starts indexing content immediately.
 
@@ -128,10 +128,10 @@ You can configure the sync intervals:
 - **Incremental crawl**: Default is every 15 minutes.
 - **Full crawl**: Default is daily.
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
 - [Bitbucket Knowledge connector overview](bitbucket-knowledge-overview.md)
 - [Troubleshoot issues with the Bitbucket Knowledge connector](bitbucket-knowledge-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)

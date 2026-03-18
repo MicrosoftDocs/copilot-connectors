@@ -39,7 +39,7 @@ To add the Adobe Experience Manager Assets connector for your organization:
 
 The display name identifies references in Copilot responses and acts as a content source filter. You can accept the default display name or customize it to a name that users in your organization recognize.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -51,7 +51,7 @@ The connector supports **technical account authentication** for Adobe Experience
 
 ### Roll out
 
-To validate the connector before deployment, use a staged rollout. To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+To validate the connector before deployment, use a staged rollout. To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The connector starts indexing published assets immediately.
 
@@ -195,7 +195,7 @@ The refresh interval determines how often your data is synchronized between th
 - Full crawl: Default value is every day.
 - Incremental crawl: Default value is every 15 minutes.
 
-You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 
 ## Related content

@@ -17,7 +17,7 @@ description: "Find information about how to deploy the ServiceNow Catalog Micros
 
 The ServiceNow Catalog Microsoft 365 Copilot connector enables your organization to index catalog items from ServiceNow and makes them discoverable in Microsoft 365 experiences, including Copilot and Microsoft Search. This article describes the steps to deploy and customize the connector.
 
-For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/configure-connector).
+For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/configure-connector).
 
 For advanced ServiceNow configuration information, see [Set up the ServiceNow Catalog service for connector ingestion](servicenow-catalog-admin-setup.md).
 
@@ -53,7 +53,7 @@ To add the ServiceNow Catalog connector for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize trusted content. You can accept the default **ServiceNow** display name or customize it to match your organization's terminology.
 
-For more information, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
 
 ### Choose flow based on user criteria 
 
@@ -288,7 +288,7 @@ To validate the connector before a full deployment, roll it out to a limited aud
 1. Select the toggle next to **Rollout to limited audience**.
 1. Specify the users or groups for pilot rollout.
 
-For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout-for-graph-connectors).
+For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout-for-graph-connectors).
 
 Choose **Create** to deploy the connection. The ServiceNow Catalog connector begins indexing content immediately.
 
@@ -429,10 +429,10 @@ You can define the frequency of incremental and full crawls:
 > - During subsequent full crawls, content and identity sync happens in parallel. The full crawl is complete when both content and identity sync are completed. 
 > - Subsequent full crawls are faster than the first full crawl. The first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Subsequent full crawls only ingest the newly discovered items, users, and user criteria. 
 
-For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/configure-connector#guidelines-for-sync-settings).
+For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/configure-connector#guidelines-for-sync-settings).
 
 ## Related content
 
 - [ServiceNow Catalog connector overview](servicenow-catalog-overview.md)
 - [Troubleshoot issues with the ServiceNow Catalog connector](servicenow-catalog-troubleshooting.md)
-- [Set up Copilot connectors in the admin center](/microsoft-365-copilot/connectors/configure-connector)
+- [Set up Copilot connectors in the admin center](/microsoft-365/copilot/connectors/configure-connector)

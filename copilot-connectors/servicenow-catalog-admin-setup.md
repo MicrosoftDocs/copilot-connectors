@@ -142,7 +142,7 @@ You can also assign the following roles to the service account to ensure that ca
 - `user_criteria_admin`
 - `user_admin`
 
-For information about how to create a user, assign a role, and grant read permissions to all the applicable table records, see [Grant table access to a user in ServiceNow](/microsoft-365-copilot/connectors/granting-table-access-servicenow). 
+For information about how to create a user, assign a role, and grant read permissions to all the applicable table records, see [Grant table access to a user in ServiceNow](/microsoft-365/copilot/connectors/granting-table-access-servicenow). 
 
 If the service account doesn’t have the required permissions—or if row or field-level permissions are restricted—specific items are excluded from indexing on the Microsoft side.
 
@@ -153,7 +153,7 @@ If the service account doesn’t have access to the full User Criteria table, in
 
 ### Identify item count for ingestion
 
-The following default filter is applied during indexing. If you need to make changes, edit the query string during connector setup. For more information, see [Customize query string](/microsoft-365-copilot/connectors/servicenow-knowledge-deployment#query-string). 
+The following default filter is applied during indexing. If you need to make changes, edit the query string during connector setup. For more information, see [Customize query string](/microsoft-365/copilot/connectors/servicenow-knowledge-deployment#query-string). 
 
 `type!=bundle^sys_class_name!=sc_cat_item_guide^type!=package^active=true` 
 
@@ -226,7 +226,7 @@ Add a resource to the API:
      })(request, response);  
     ```   
 > [!NOTE]
-> The `getAllUserCriteria()` function is deprecated due to potential performance issues. For an alternative script that you can use, see [Issue reading all user criteria from ServiceNow](/microsoft-365-copilot/connectors/servicenow-catalog-troubleshooting#issue-reading-all-user-criteria-from-servicenow). 
+> The `getAllUserCriteria()` function is deprecated due to potential performance issues. For an alternative script that you can use, see [Issue reading all user criteria from ServiceNow](/microsoft-365/copilot/connectors/servicenow-catalog-troubleshooting#issue-reading-all-user-criteria-from-servicenow). 
 
 1.  Make sure both of the following are checked: 
 
