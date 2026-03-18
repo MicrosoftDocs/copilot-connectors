@@ -71,7 +71,7 @@ The following table lists the customer relationship management connectors that a
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
 | HubSpot (preview) | Microsoft | Manage customer data and sales pipelines. | [Federated connectors overview](federated-connectors-overview.md) |
-| Salesforce CRM | Microsoft | Allows your organization to search your Salesforce instance for contacts, opportunities, leads, and accounts objects. | [Salesforce cRM connector](salesforce-connector.md) |
+| Salesforce CRM | Microsoft | Allows your organization to search your Salesforce instance for contacts, opportunities, leads, and accounts objects. | [Salesforce CRM connector](salesforce-connector.md) |
 
 
 ## Data visualization
@@ -91,7 +91,7 @@ The following table lists the database connectors that are available.
 | Azure SQL | Microsoft | Enables your organization to search for data from your Azure SQL. | [Azure SQL connector](mssql-connector.md) |
 | CSV | Microsoft | Enables your organization to search for content stored in CSV files. | [CSV connector](csv-connector.md) |
 | DataStax (preview) | Microsoft | Enables integration with DataStax for real-time data access. | [DataStax connector](datastax-connector.md) |
-| Microsoft SQL server | Microsoft | Allows your organization to search on-premises Microsoft SQL server databases. | [Microsoft SQL server connector](mssql-connector.md) |
+| Microsoft SQL Server | Microsoft | Allows your organization to search on-premises Microsoft SQL Server databases. | [Microsoft SQL Server connector](mssql-connector.md) |
 | Oracle SQL | Microsoft | Enables your organization to discover and index data from an on-premises database. Indexes specified content into Microsoft Search and supports periodic crawls. You can also restrict access to search results for certain users. | [Oracle SQL connector](oraclesql-connector.md) |
 | PostgreSQL (preview) | Microsoft | Enables your organization to discover and index data from PostgreSQL databases. | [PostgreSQL connector](postgresql-connector.md) |
 
