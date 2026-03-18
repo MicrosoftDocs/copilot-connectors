@@ -52,14 +52,14 @@ The following table lists the content management system connectors that are avai
 | Enterprise Websites Cloud | Microsoft | Allows your organization to search any non-SharePoint enterprise website. | [Enterprise Websites Cloud connector](enterprise-web-connector.md) |
 | Enterprise Websites On-premises | Microsoft | Allows your organization to search any non-SharePoint enterprise website. | [Enterprise Websites On-premises connector](enterprise-web-connector-onprem.md) |
 | Guru | Microsoft | Allows integration with Guru's knowledge management platform to capture, store, and share organizational knowledge. | [Guru connector](guru-overview.md) |
-| MediaWiki | Microsoft | Enables your organization to search knowledge-based articles on sites it creates with MediaWiki. | [MediaWiki Copilot connector](/microsoft-365-copilot/connectors/mediawiki-connector) |
+| MediaWiki | Microsoft | Enables your organization to search knowledge-based articles on sites it creates with MediaWiki. | [MediaWiki connector](mediawiki-connector.md) |
 | Salesforce Knowledge | Microsoft | Allows your organization to index Salesforce Knowledge articles. | [Salesforce Knowledge connector](salesforce-knowledge-connector.md) |
 | ServiceNow Knowledge | Microsoft | Allows your organization to index knowledge base (KB) articles from ServiceNow instances. | [ServiceNow Knowledge connector](servicenow-knowledge-overview.md) |
 | SharePoint Server (preview) | Microsoft | Lets organizations connect to on-premises SharePoint sites for collaborating on and managing documents. | [SharePoint Server connector](sharepoint-server-connector.md) |
-| Stack Overflow | Microsoft | Enables your organization to seamlessly index and search Stack Overflow questions and answers within Microsoft 365 Copilot and Microsoft Search, enhancing productivity and knowledge sharing. Unlock the potential of technical expertise by integrating Stack Overflow content directly into your workflow. | [Stack Overflow connector](/microsoft-365-copilot/connectors/stack-overflow-connector) |
+| Stack Overflow | Microsoft | Enables your organization to seamlessly index and search Stack Overflow questions and answers within Microsoft 365 Copilot and Microsoft Search, enhancing productivity and knowledge sharing. Unlock the potential of technical expertise by integrating Stack Overflow content directly into your workflow. | [Stack Overflow connector](stack-overflow-connector.md) |
 | Unily | Microsoft | Allows Copilot integration with Unily's digital workplace platform for enhanced communication and employee experience.  | [Unily connector](unily-intranet-connector.md) |
 | Veeva QualityDocs | Microsoft | Enables integration with Veeva Vault for quality content management. | [Veeva QualityDocs connector](veeva-qualitydocs-overview.md) |
-| Veeva Vault PromoMats | Microsoft | Empowers life sciences organizations to seamlessly integrate their compliant promotional content and regulatory content from Veeva Vault PromoMats into Microsoft 365 Copilot. This Copilot connector was developed by Microsoft with Veeva best practices and support provides robust indexing of documents, metadata, approval statuses, and version histories. This ensures comprehensive access for use with Microsoft 365 Copilot. | [Veeva Vault PromoMats connector](veeva-promomats-overview.md) |
+| Veeva Vault PromoMats | Microsoft | Empowers life sciences organizations to seamlessly integrate their compliant promotional content and regulatory content from Veeva Vault PromoMats into Microsoft 365 Copilot. This  connector was developed by Microsoft with Veeva best practices and support provides robust indexing of documents, metadata, approval statuses, and version histories. This ensures comprehensive access for use with Microsoft 365 Copilot. | [Veeva Vault PromoMats connector](veeva-promomats-overview.md) |
 | Veeva Vault RIM | Microsoft | Enables integration with Veeva Vault RIM for regulatory information management. | [Veeva Vault RIM connector](veeva-rim-overview.md) |
 | WordPress.com | Microsoft | Allows organizations to index WordPress.com hosted sites. | [WordPress.com connector](wordpress-overview.md) |
 | WordPress.org | Microsoft | Allows an organization to seamlessly build on-premises WordPress websites. | [WordPress.org connector](wordpress-onpremises-overview.md) |
@@ -71,7 +71,7 @@ The following table lists the customer relationship management connectors that a
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
 | HubSpot (preview) | Microsoft | Manage customer data and sales pipelines. | [Federated connectors overview](federated-connectors-overview.md) |
-| Salesforce CRM | Microsoft | Allows your organization to search your Salesforce instance for contacts, opportunities, leads, and accounts objects. | [Salesforce cRM connector](/microsoft-365-copilot/connectors/salesforce-connector) |
+| Salesforce CRM | Microsoft | Allows your organization to search your Salesforce instance for contacts, opportunities, leads, and accounts objects. | [Salesforce cRM connector](salesforce-connector.md) |
 
 
 ## Data visualization
@@ -88,11 +88,11 @@ The following table lists the database connectors that are available.
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
-| Azure SQL | Microsoft | Enables your organization to search for data from your Azure SQL. | [Azure SQL connector](/microsoft-365-copilot/connectors/mssql-connector) |
-| CSV | Microsoft | Enables your organization to search for content stored in CSV files. | [CSV connector](/microsoft-365-copilot/connectors/csv-connector) |
+| Azure SQL | Microsoft | Enables your organization to search for data from your Azure SQL. | [Azure SQL connector](mssql-connector.md) |
+| CSV | Microsoft | Enables your organization to search for content stored in CSV files. | [CSV connector](csv-connector.md) |
 | DataStax (preview) | Microsoft | Enables integration with DataStax for real-time data access. | [DataStax connector](datastax-connector.md) |
-| Microsoft SQL server | Microsoft | Allows your organization to search on-premises Microsoft SQL server databases. | [Microsoft SQL server connector](/microsoft-365-copilot/connectors/mssql-connector) |
-| Oracle SQL | Microsoft | Enables your organization to discover and index data from an on-premises database. Indexes specified content into Microsoft Search and supports periodic crawls. You can also restrict access to search results for certain users. | [Oracle SQL connector](/microsoft-365-copilot/connectors/oraclesql-connector) |
+| Microsoft SQL server | Microsoft | Allows your organization to search on-premises Microsoft SQL server databases. | [Microsoft SQL server connector](mssql-connector.md) |
+| Oracle SQL | Microsoft | Enables your organization to discover and index data from an on-premises database. Indexes specified content into Microsoft Search and supports periodic crawls. You can also restrict access to search results for certain users. | [Oracle SQL connector](oraclesql-connector.md) |
 | PostgreSQL (preview) | Microsoft | Enables your organization to discover and index data from PostgreSQL databases. | [PostgreSQL connector](postgresql-connector.md) |
 
 ## Developer tools
@@ -124,15 +124,15 @@ The following table lists the files and documents connectors that are available.
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
 | Amazon S3 | Microsoft | Allows your organization to index objects stored in your Amazon S3 buckets. After you configure the connector and index content from S3, users can search for those items in Microsoft 365 Copilot. | [Amazon S3 connector](./amazon-s3-overview.md) |
-| Azure Data Lake Storage Gen2 | Microsoft | Enables your organization to search for content stored in Azure Blob containers. Indexes hierarchy-enabled folders in specified Azure Data Lake Storage Gen2 accounts. | [Azure Data Lake Storage Gen2 Copilot connector](/microsoft-365-copilot/connectors/azure-data-lake-connector) |
+| Azure Data Lake Storage Gen2 | Microsoft | Enables your organization to search for content stored in Azure Blob containers. Indexes hierarchy-enabled folders in specified Azure Data Lake Storage Gen2 accounts. | [Azure Data Lake Storage Gen2 connector](azure-data-lake-connector.md) |
 | Azure File Share | Microsoft | Allows your organization to index and search content stored in Azure File Share. | [Azure File Share connector](azure-file-share-overview.md) |
 | Dropbox | Microsoft | Lets your organization connect to Dropbox for file storage, sharing, and collaboration. | [Dropbox connector](dropbox-overview.md) |
-| File Share | Microsoft | Allows your organization to search on-premises Windows file shares. | [File Share connector](/microsoft-365-copilot/connectors/fileshare-connector) |
+| File Share | Microsoft | Allows your organization to search on-premises Windows file shares. | [File Share connector](fileshare-connector.md) |
 | Google Drive | Microsoft | Enables integration with Google Drive for file synchronization and storage. | [Google Drive connector](google-drive-overview.md) |
 
 ## Human resources and recruiting
 
-The following table lists the human resources and recruiting connectors that are available. More information can be found on the [overview page](/graph/peopleconnectors).
+The following table lists the human resources and recruiting connectors that are available. For more information, see [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors).
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
