@@ -18,9 +18,9 @@ Microsoft partners provide a broad range of Microsoft 365 Copilot connectors tha
 
 This article provides a list of the partner connectors that are available across various categories, along with a description of each and a link to the connector website where available.
 
-## Collaboration and communications
+## Collaboration and communication
 
-The following table lists the collaboration and communications connectors that are available.
+The following table lists the collaboration and communication connectors that are available.
 
 | Connector name | Publisher | Description | Learn more |
 |:------ |:----------- |:----------- |:----------- |
@@ -69,9 +69,9 @@ The following table lists the collaboration and communications connectors that a
 |TeamForge|Accenture|Crawls content from a TeamForge server through its SOAP services. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
 |Trello | RheinInsights | Enables the Enterprise search and Microsoft 365 connector for indexing Trello. Reliably indexes Trello boards, cards, comments, and attachments. Comes with full metadata sets, advanced processing pipelines, and full support for Trello's permission model. | [Trello connector](https://www.rheininsights.com/en/connectors/trello.php) |
 
-## Content Management Systems
+## Content management systems
 
-The following table lists the content management system connectors that are available.
+The following table lists the content management systems connectors that are available.
 
 |Connector name|Publisher|Description| Learn more |
 |:------ |:----------- |:----------- | :----------- |
@@ -115,7 +115,7 @@ The following table lists the content management system connectors that are avai
 |Zendesk Guide|ServiceNow|Secure enterprise search connector for reliably indexing content from Zendesk Guide and intelligently searching it with Microsoft Search. It robustly indexes pages, comments, and attachments from Zendesk Guide instances in near real-time. The connector fully supports Zendesk Guide's built-in user and group management and Zendesk Guide installations based on Microsoft Entra ID and other directory services. | [Zendesk Guide external content connector](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/ai-search/concept/zendesk-guide-external-content-connector.html) |
 |Zenya|Infoland|Allows your organization to search for documents, process flows, forms, questionnaires, and information cards, which are managed in the Zenya quality and risk management solution. It’s easier than ever for joint Zenya and Microsoft users to find the content they need. | [Zenya connector](https://zenya-software.com/solutions/technical-solutions/sharepoint-online/) |
 
-## Customer relationship management (CRM)
+## Customer relationship management
 
 The following table lists the customer relationship management connectors that are available.
 
@@ -158,9 +158,9 @@ The following table lists the developer tools connectors that are available.
 |:------ |:----------- |:----------- | :----------- |
 | ServiceNow instance | ServiceNow | Retrieves KB article records (and their attachments) from your ServiceNow AI Platform source instance and makes their content and metadata searchable in AI Search applications in your ServiceNow AI Platform destination instance. | [ServiceNow instance external content connector](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/ai-search/concept/servicenow-instance-external-content-connector.html) |
 
-## File Systems
+## Files and documents
 
-The following table lists the file system connectors that are available.
+The following table lists the files and documents connectors that are available.
 
 |Connector name|Publisher|Description| Learn more |
 |:------ |:----------- |:----------- | :----------- |
@@ -190,7 +190,7 @@ The following table lists the file system connectors that are available.
 
 ## Human resources and recruiting
 
-The following table lists the human resources and recruiting connectors that are available. More information can be found on the [overview page](/graph/peopleconnectors).
+The following table lists the human resources and recruiting connectors that are available. For more information, see [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors).
 
 | Connector name | Publisher | Description | Learn more |
 | ------ | ----------- | ----------- | ---------- |
@@ -198,7 +198,7 @@ The following table lists the human resources and recruiting connectors that are
 
 ## IT service management tools
 
-The following table lists the available IT service management tool (ITSM) connectors.
+The following table lists the available IT service management tools connectors.
 
 |Connector name|Publisher|Description| Learn more |
 |:------ |:----------- |:----------- | :----------- |
@@ -219,7 +219,7 @@ The following table lists the learning connectors that are available.
 |getAbstract|getAbstract|The getAbstract Copilot connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership & strategy, sales, marketing, corporate Finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work. | [getAbstract connector](https://www.getabstract.com/en/connector) |
 |Go1|Go1|Go1 integration with Microsoft Search allows your employees to find and access learning from Microsoft Search, in places like the Microsoft 365 app or SharePoint. Your employees can learn directly from Microsoft Search in their normal day-to-day routine. | [Go1 connector](https://www.go1.com/integrations/microsoft) |
 
-## Social Networks
+## Social networks
 
 The following table lists the social network connectors that are available.
 
@@ -229,7 +229,7 @@ The following table lists the social network connectors that are available.
 |Yammer|Accenture|Crawls content from Yammer messages and metadata including sender, group, and thread details. It runs from any machine with access to the AEM server and optionally supports content fetching and connection throttling. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
 |Yammer|BA Insight|Establishes a secure connection to the Yammer application and maps the content including metadata and attachments from the Yammer schema to the search engine schema. It then extracts content and feeds it to the search engine in a process called crawling. | [Yammer Connector for Search](https://uplandsoftware.com/bainsight/connectors/yammer/) |
 
-## Website (HTTP)
+## Website
 
 The following table lists the website connectors that are available.
 

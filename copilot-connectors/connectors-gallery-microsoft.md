@@ -22,7 +22,7 @@ This article provides a list of the prebuilt connectors that are available acros
 
 ## Collaboration and communication
 
-The following table lists the collaboration and communications connectors that are available.
+The following table lists the collaboration and communication connectors that are available.
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
@@ -40,7 +40,7 @@ The following table lists the collaboration and communications connectors that a
 
 ## Content management systems
 
-The following table lists the content management system connectors that are available.
+The following table lists the content management systems connectors that are available.
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
