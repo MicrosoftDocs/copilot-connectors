@@ -19,16 +19,6 @@ The Aha! Features and Ideas Microsoft 365 Copilot connectors empower your organi
 
 For information about how to deploy the connector, see [Deploy the Aha! connector](aha-deployment.md).
 
-## Setup checklist
-
-The following checklist lists the steps involved in configuring the environment and setting up the connector prerequisites.
-
-| Task | Role |
-|------|------|
-| [Identify the Aha! instance URL](#identify-the-aha-instance-url) | Aha! admin |
-| [Enable API access](#enable-api-access) | Aha! admin |
-| [Create OAuth application](#create-oauth-application) | Aha! admin |
-
 ## Identify the Aha! instance URL
 
 - Sign in to Aha! Cloud and go to your account: `https://<company>.aha.io`.

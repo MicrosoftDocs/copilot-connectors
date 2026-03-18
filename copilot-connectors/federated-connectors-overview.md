@@ -15,7 +15,7 @@ ms.audience: Admin
  
 # Federated Microsoft 365 Copilot connectors overview (early access preview)
  
-Microsoft 365 supports federated connectors, a new way to bring your organization's data into Microsoft 365 without traditional indexing. Unlike synced Microsoft 365 Copilot connectors that crawl and index content into Microsoft Graph, federated connectors use a Model Context Protocol (MCP) to read content in real time. This capability allows organizations to connect live, dynamic data sources that can't or shouldn't be indexed, and make it discoverable through Copilot experiences.
+Microsoft 365 Copilot supports federated connectors, a new way to bring your organization's data into Microsoft 365 without traditional indexing. Unlike synced Microsoft 365 Copilot connectors that crawl and index content into Microsoft Graph, federated connectors use a Model Context Protocol (MCP) to read content in real time. This capability allows organizations to connect live, dynamic data sources that can't or shouldn't be indexed, and make it discoverable through Copilot experiences.
  
 > [!NOTE]
 > Federated connectors are in early access preview and are available only to [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) and [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release) members. Early access preview features are still in development and are subject to change.
@@ -53,7 +53,7 @@ The following image shows federated connectors in the **Your connections** list 
  
 ## Admin experience and controls
  
-Federated connectors are enabled by default for a tenant. Admins can manage federated Copilot connectors in the Microsoft 365 Admin Center by choosing **Copilot connectors** > **Your connections**.
+Federated connectors are enabled by default for a tenant. Admins can manage federated Copilot connectors in the Microsoft 365 admin center by choosing **Copilot connectors** > **Your connections**.
  
 Admins can:
  
@@ -80,7 +80,7 @@ The following image shows the connector pane for the HubSpot federated connector
  
 When an admin enables a federated connector:
  
-- Users can discover the data source in the **Sources** menu in the Researcher agent or in the deep research mode of Microsoft 365 chat.
+- Users can discover the data source in the **Sources** menu in the Researcher agent or in the deep research mode in Microsoft 365 Copilot chat.
 - Users authenticate by using their own credentials when prompted to connect to the data sources.
 - Copilot only accesses data the user already has permission to see.
 - Users can disable the data source in Researcher at any time by turning off the toggle for the source in Researcher.
@@ -96,8 +96,8 @@ The following image shows how the user accesses federated connector data sources
  
 The following security and compliance features apply to federated connectors:
  
-- Federated connectors **do not copy or store** data in Microsoft 365.
-- All permissions are enforced by the **source system**. Users only see content they have access to in the original data source.
+- Federated connectors don't copy or store data in Microsoft 365.
+- All permissions are enforced by the source system. Users only see content they have access to in the original data source.
 - OAuth 2.0 and encrypted communication ensure secure access and authentication.
  
 ## FAQs
