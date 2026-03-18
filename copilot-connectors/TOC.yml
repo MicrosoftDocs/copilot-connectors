@@ -174,7 +174,7 @@ items:
     - name: DataStax
       items:
       - name: Setup
-        href: datastax-graph-connector.md
+        href: datastax-connector.md
     - name: Dropbox
       items:
       - name: Overview
@@ -586,7 +586,7 @@ items:
       href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=/microsoft-365-copilot/connectors/context
     - name: Build with SDK
       href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/connectors/context 
-    - name: Use the Copilot Connectors API
+    - name: Use the Copilot connectors API
       items:
       - name: Overview
         href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/connectors/context
