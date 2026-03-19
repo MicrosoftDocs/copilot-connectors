@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Manage your Microsoft 365 Copilot connector connection state and index quota utilization."
-ms.date: 07/02/2025
+ms.date: 03/19/2026
 ---
 
 # Manage Microsoft 365 Copilot connector connections
@@ -26,8 +26,10 @@ For each connector type, the Microsoft 365 admin center supports the following o
 |:--- |:-------- |:---|
 |Add a connection | :heavy_check_mark: | :x: (Refer to partner or custom-built connector admin documentation)|
 |Delete a connection | :heavy_check_mark: | :heavy_check_mark:|
-|Edit a published connection | :heavy_check_mark: Name and description<br></br> :heavy_check_mark: Connection settings<br></br> :heavy_check_mark: Property labels<br></br> :heavy_check_mark: Schema<br></br> :heavy_check_mark: Refresh schedule<br></br> :heavy_check_mark: Query string (as applicable)<br></br> :heavy_check_mark: Advanced criteria (as applicable)<br></br> | :heavy_check_mark: Name<br></br> :heavy_check_mark: Description |
+|Edit a published connection | :heavy_check_mark: Name and description<br></br> :heavy_check_mark: Connection settings<br></br> :heavy_check_mark: Property labels<br></br> :heavy_check_mark: Schema<br></br> :heavy_check_mark: Refresh schedule<br></br> :heavy_check_mark: Query string(ServiceNow)<br></br> :heavy_check_mark: Advanced criteria(ServiceNow)<br></br> :heavy_check_mark: User mapping(ServiceNow)<br></br>| :heavy_check_mark: Name<br></br> :heavy_check_mark: Description |
 |Edit a draft connection | :heavy_check_mark: | :x:|
+
+Editing a connection might trigger a full crawl, where applicable. However, during the initial full crawl, editing the connection doesn't trigger another full crawl. Changes made during the first crawl are applied during the next scheduled full crawl.
 
 ## Monitor your connection state
 
