@@ -1,7 +1,7 @@
 ---
 title: "Unily Microsoft 365 Copilot connector" 
-ms.author: rerabo
-author: vivg
+ms.author: lauragra
+author: lauragra
 manager: ereza
 audience: Admin
 ms.audience: Admin 

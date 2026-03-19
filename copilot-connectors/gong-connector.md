@@ -1,7 +1,7 @@
 --- 
 title: "Gong Copilot connector" 
-ms.author: rerabo
-author: vivg
+ms.author: lauragra
+author: lauragra
 manager: harshkum
 audience: Admin
 ms.audience: Admin 

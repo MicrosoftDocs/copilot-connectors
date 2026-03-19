@@ -1,7 +1,7 @@
 --- 
 title: "Salesforce Knowledge connector for Microsoft Search and Microsoft 365 Copilot" 
-ms.author: rerabo
-author: vivg
+ms.author: lauragra
+author: lauragra
 manager: ereza
 audience: Admin
 ms.audience: Admin 

@@ -1,8 +1,8 @@
 --- 
 title: "CSV Microsoft 365 Copilot connector" 
-ms.author: rchanda 
-author: rchanda 
-manager: harshkum 
+ms.author: lauragra 
+author: lauragra 
+manager: calvind 
 audience: Admin
 ms.audience: Admin 
 ms.topic: install-set-up-deploy
