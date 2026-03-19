@@ -195,5 +195,4 @@ You can change the default values of the refresh intervals. For more information
 - [Confluence Cloud connector overview](confluence-cloud-overview.md)
 - [Set up the Confluence Cloud service for connector ingestion](confluence-cloud-admin-setup.md)
 - [Troubleshoot issues with the Confluence Cloud connector](confluence-cloud-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md)
-- [Monitor connections](manage-connector.md)
+- [Confluence Cloud result layout](confluence-cloud-result-layout.md)
