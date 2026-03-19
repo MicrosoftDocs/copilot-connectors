@@ -26,7 +26,7 @@ For each connector type, the Microsoft 365 admin center supports the following o
 |:--- |:-------- |:---|
 |Add a connection | :heavy_check_mark: | :x: (Refer to partner or custom-built connector admin documentation)|
 |Delete a connection | :heavy_check_mark: | :heavy_check_mark:|
-|Edit a published connection | :heavy_check_mark: Name and description<br />:heavy_check_mark: Connection settings<br />:heavy_check_mark: Property labels<br />:heavy_check_mark: Schema<br />:heavy_check_mark: Refresh schedule<br />:heavy_check_mark: Query string (ServiceNow)<br />:heavy_check_mark: Advanced criteria (ServiceNow)<br />:heavy_check_mark: User mapping (ServiceNow)<br />| :heavy_check_mark: Name<br /> :heavy_check_mark: Description |
+|Edit a published connection | :heavy_check_mark: Name and description<br /> :heavy_check_mark: Connection settings<br /> :heavy_check_mark: Property labels<br /> :heavy_check_mark: Schema<br /> :heavy_check_mark: Refresh schedule<br /> :heavy_check_mark: Query string (ServiceNow)<br /> :heavy_check_mark: Advanced criteria (ServiceNow)<br /> :heavy_check_mark: User mapping (ServiceNow)<br />| :heavy_check_mark: Name<br /> :heavy_check_mark: Description |
 |Edit a draft connection | :heavy_check_mark: | :x:|
 
 Editing a connection might trigger a full crawl, where applicable. However, during the initial full crawl, editing the connection doesn't trigger another full crawl. Changes made during the first crawl are applied during the next scheduled full crawl.
