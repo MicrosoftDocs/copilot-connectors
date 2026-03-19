@@ -1,0 +1,117 @@
+---
+title: Federated Microsoft 365 Copilot connectors overview (early access preview)
+description: Get an overview of MCP-based Microsoft 365 Copilot federated connectors.
+#customer intent: As an admin, I want to learn about federated connectors and whether and how to enable them in the Microsoft 365 admin center.
+author: Lauragra
+ms.author: lauragra
+manager: calvind
+ms.reviewer: mansipakhale
+ms.service: copilot-connectors
+ms.date: 01/29/2026
+ms.topic: overview
+ms.localizationpriority: medium
+ms.audience: Admin
+---
+ 
+# Federated Microsoft 365 Copilot connectors overview (early access preview)
+ 
+Microsoft 365 Copilot supports federated connectors, a new way to bring your organization's data into Microsoft 365 without traditional indexing. Unlike synced Microsoft 365 Copilot connectors that crawl and index content into Microsoft Graph, federated connectors use a Model Context Protocol (MCP) to read content in real time. This capability allows organizations to connect live, dynamic data sources that can't or shouldn't be indexed, and make it discoverable through Copilot experiences.
+ 
+> [!NOTE]
+> Federated connectors are in early access preview and are available only to [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) and [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release) members. Early access preview features are still in development and are subject to change.
+ 
+## What are federated connectors?
+ 
+Federated Copilot connectors:
+ 
+- Use Model Context Protocol (MCP) to fetch data in real time.
+- Access data using the user's identity and permissions.
+- Don't index external data into Microsoft 365.
+- Are managed and governed by admins in the Microsoft 365 admin center.
+- Are Microsoft-published (for popular external apps).
+- Are read-only and can be audited in Microsoft Purview.
+ 
+## Supported Copilot experiences
+ 
+Federated Copilot connectors are currently supported in the **Researcher** agent in Microsoft 365 Copilot.
+ 
+## Microsoft-published federated connectors
+ 
+Microsoft provides a set of federated connectors by default. Currently, federated connectors are available for the following data sources:
+ 
+- Canva
+- HubSpot
+- Linear
+- Intercom
+- Google Calendar
+- Google Contacts
+- Notion
+ 
+The following image shows federated connectors in the **Your connections** list in the Microsoft 365 admin center.
+ 
+:::image type="content" source="media/federated-connectors/your-connections-tab.png" alt-text="Screenshot of the Your connections tab in the admin center with federated connectors appearing in the list." lightbox="media/federated-connectors/your-connections-tab.png":::
+ 
+## Admin experience and controls
+ 
+Federated connectors are enabled by default for a tenant. Admins can manage federated Copilot connectors in the Microsoft 365 admin center by choosing **Copilot connectors** > **Your connections**.
+ 
+Admins can:
+ 
+- View all the Microsoft-published federated connectors that are available in the tenant on the **Your Connections** tab.
+- Enable or disable connectors at the tenant level.
+- Limit availability to specific Microsoft Entra ID groups by choosing **Add staging** in the **Staged Rollout** column.
+ 
+> [!NOTE]
+> **Admin review window**
+>
+> When a Microsoft-published federated connector first appears in the admin center, it's available **only to admins for seven calendar days** before it's available to users. During this window, admins can:
+>
+> 1. Review the connector.
+> 1. Disable it if it doesn't meet organizational requirements.
+> 1. Configure staged rollout.
+>
+> If a connector is disabled during this window, it isn't made available to users.
+ 
+The following image shows the connector pane for the HubSpot federated connector.
+ 
+:::image type="content" source="media/federated-connectors/hubspot-connector.png" alt-text="Screenshot of the HubSpot connector in the admin center with Staged rollout and Enable/disable data source highlighted." lightbox="media/federated-connectors/hubspot-connector.png":::
+ 
+## How to connect and use federated Copilot connectors
+ 
+When an admin enables a federated connector:
+ 
+- Users can discover the data source in the **Sources** menu in the Researcher agent or in the deep research mode in Microsoft 365 Copilot chat.
+- Users authenticate by using their own credentials when prompted to connect to the data sources.
+- Copilot only accesses data the user already has permission to see.
+- Users can disable the data source in Researcher at any time by turning off the toggle for the source in Researcher.
+ 
+> [!NOTE]
+> No data is indexed into Microsoft 365. Responses are fetched dynamically from the data source via MCP.
+ 
+The following image shows how the user accesses federated connector data sources in Researcher.
+ 
+:::image type="content" source="media/federated-connectors/researcher-data-source.png" alt-text="Screenshot of federated connector data sources in Researcher." lightbox="media/federated-connectors/researcher-data-source.png":::
+ 
+## Security and compliance
+ 
+The following security and compliance features apply to federated connectors:
+ 
+- Federated connectors don't copy or store data in Microsoft 365.
+- All permissions are enforced by the source system. Users only see content they have access to in the original data source.
+- OAuth 2.0 and encrypted communication ensure secure access and authentication.
+ 
+## FAQs
+ 
+### How are federated Copilot connectors different from synced Copilot connectors?
+
+Synced Copilot connectors index data into Microsoft Graph. Federated Copilot connectors fetch content live; no indexing takes place.
+ 
+Synced connectors are supported at an organization level; federated connectors are federated at the user level. User credentials, rather than admin credentials, are required to connect to any data source.
+ 
+### Can I use both federated and synced connectors in my tenant?
+ 
+Both federated and synced connectors can coexist in your tenant and appear together in your connector list.
+ 
+## Related content
+ 
+- [Microsoft 365 Copilot connectors overview](overview.md)
