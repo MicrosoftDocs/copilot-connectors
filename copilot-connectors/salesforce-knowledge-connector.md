@@ -1,7 +1,7 @@
 --- 
 title: "Salesforce Knowledge connector for Microsoft Search and Microsoft 365 Copilot" 
-ms.author: rerabo
-author: vivg
+ms.author: lauragra
+author: lauragra
 manager: ereza
 audience: Admin
 ms.audience: Admin 
@@ -22,7 +22,7 @@ The Salesforce Knowledge Copilot connector allows your organization to index art
    - What are the steps for processing a refund?
    - What is the escalation procedure for high-priority cases?
    - What are the latest updates to our product warranty policy?
-- Use [Semantic search in Copilot](/microsoft-365-copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - The Salesforce Knowledge connector currently supports permissions based only on knowledge entity access. It does not support data category-based permissions, field-level security (FLS), or sharing rules.

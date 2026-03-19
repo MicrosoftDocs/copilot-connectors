@@ -68,7 +68,7 @@ To add the **GitLab Merge Requests Server connector** for your organization:
 
 The display name identifies references in Copilot responses and helps users recognize the associated content source. You can accept the default **GitLab Merge Requests Server** display name or customize it.
 
-For more information about connector display names, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
+For more information about connector display names, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -88,7 +88,7 @@ For information about how to create a GitLab OAuth app, see [Configure GitLab as
 
 ### Roll out
 
-To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users or groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users or groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 The GitLab Merge Requests Server connector begins indexing content immediately after deployment.
 
@@ -140,10 +140,10 @@ Configure full and incremental crawl intervals. The default values are:
 - **Incremental crawl:** Every 15 minutes  
 - **Full crawl:** Daily  
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
 - [GitLab Merge Requests Server connector overview](gitlab-merge-requests-server-overview.md)
 - [Troubleshoot issues with the GitLab Merge Requests Server connector](gitlab-merge-requests-server-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)

@@ -17,7 +17,7 @@ description: "Find information about how to deploy the Veeva Vault RIM Microsoft
 
 The Veeva Vault RIM Microsoft 365 Copilot connector allows organizations to index regulatory submissions and compliance documents from Veeva Vault into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search. The connector integrates Vault RIM's built-in permission model to ensure that users can only access authorized content. It enhances content generation and review speed through intelligent content analysis and preparation. By streamlining the entire regulatory submission lifecycle, the connector helps submitters track submission status more effectively and significantly reduces turnaround times.
 
-This article describes the steps to deploy and customize the Veeva Vault RIM connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview).
+This article describes the steps to deploy and customize the Veeva Vault RIM connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview).
 
 ## Prerequisites
 
@@ -71,7 +71,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Veeva Vault RIM** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -93,7 +93,7 @@ Select **Authorize** to sign in with your Entra ID account, and select **Consent
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).  
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).  
 Choose **Create** to deploy the connection. The Veeva Vault RIM Copilot connector starts indexing content right away.
 
 The following table lists the default values that are set.
@@ -217,7 +217,7 @@ After adding custom properties, you can customize the schema attributes for any 
 You can modify the frequency of full crawls to fit your organization's requirements. The following are the default crawls:
 - Full crawl—daily.
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

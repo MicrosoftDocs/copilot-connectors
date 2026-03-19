@@ -1,8 +1,8 @@
 --- 
 title: "CSV Microsoft 365 Copilot connector" 
-ms.author: rchanda 
-author: rchanda 
-manager: harshkum 
+ms.author: lauragra 
+author: lauragra 
+manager: calvind 
 audience: Admin
 ms.audience: Admin 
 ms.topic: install-set-up-deploy
@@ -137,7 +137,7 @@ When you set up the CSV Microsoft 365 Copilot connector, you'll need to provide 
 
 ## Step 1: Add a CSV Microsoft 365 Copilot connector in the Microsoft 365 admin center
 
-[Add CSV Microsoft 365 Copilot connector](https://admin.microsoft.com/adminportal/home#/microsoft-365-copilot/connectors/Connectors/add?ms_search_referrer=microsoft-365-copilot/connectorsDocs_CSV&type=CSV)
+[Add CSV Microsoft 365 Copilot connector](https://admin.microsoft.com/adminportal/home#/microsoft-365/copilot/connectors/Connectors/add?ms_search_referrer=microsoft-365/copilot/connectorsDocs_CSV&type=CSV)
 
 Follow the general [setup instructions](./deployment-overview.md).
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 

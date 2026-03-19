@@ -53,7 +53,7 @@ If you're using Copilot Studio to build agents that use connectors, you need eit
 
 Advanced features like semantic search require the maker to have a Microsoft 365 Copilot license in the tenant.
 
-For more information, see [Agent capabilities and licensing models](/microsoft-365-copilot/extensibility/prerequisites).
+For more information, see [Agent capabilities and licensing models](/microsoft-365/copilot/extensibility/prerequisites).
 
 For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 

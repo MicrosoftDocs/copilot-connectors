@@ -14,7 +14,7 @@ ms.service: copilot-connectors
 
 The GitHub Knowledge Microsoft 365 Copilot connector enables organizations to index markdown and text files in your GitHub repositories into Microsoft 365 Copilot and search experiences. This article provides information about the configuration steps that GitHub admins must complete before your organization deploys the GitHub Cloud Knowledge connector.
 
-For information about how to deploy the connector, see [Deploy the GitHub Knowledge connector](/microsoft-365-copilot/connectors/github-cloud-knowledge-deployment).
+For information about how to deploy the connector, see [Deploy the GitHub Knowledge connector](/microsoft-365/copilot/connectors/github-cloud-knowledge-deployment).
 
 ## Setup checklist
 

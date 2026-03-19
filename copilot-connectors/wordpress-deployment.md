@@ -35,7 +35,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 The display name is used to identify references in Copilot responses so users can recognize the associated item. The display name also signifies trusted content and is used as a content source filter.
 
-You can accept the default WordPress.com display name or customize the value to use a name that users in your organization recognize. For more information about display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365-copilot/connectors/enhance-copilot-discovery).
+You can accept the default WordPress.com display name or customize the value to use a name that users in your organization recognize. For more information about display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL
 
@@ -59,7 +59,7 @@ After the OAuth app is created, enter the client ID and client secret in the con
 
 ### Roll out
 
-To validate the connector before you deploy it to your organization, you can roll it out to a limited audience. Choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+To validate the connector before you deploy it to your organization, you can roll it out to a limited audience. Choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The WordPress.com connector starts indexing content right away.
 
@@ -123,10 +123,10 @@ The connector indexes the properties listed in the following table by default. T
 
 You can configure full and incremental crawls to meet your data refresh needs. By default, incremental crawls run every 15 minutes, and full crawls run daily. 
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
 - [WordPress.com connector overview](wordpress-overview.md)
 - [Troubleshoot issues with the WordPress.com connector](wordpress-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)

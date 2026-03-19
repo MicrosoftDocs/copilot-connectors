@@ -66,7 +66,7 @@ Enter the client ID and secret to connect to your instance. After you connect, u
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Zendesk Ticket connector starts indexing content right away.
 
@@ -96,7 +96,7 @@ The Zendesk Ticket Copilot connector supports **Everyone** or **Only people with
 
 #### Map identities
 
-The default method for mapping your data source identities with Microsoft Entra ID is to verify that the email ID of Zendesk users is the same as the user principal name (UPN) or email address of the users in Microsoft Entra. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Entra ID identities](/microsoft-365-copilot/connectors/map-non-entra-id).
+The default method for mapping your data source identities with Microsoft Entra ID is to verify that the email ID of Zendesk users is the same as the user principal name (UPN) or email address of the users in Microsoft Entra. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Entra ID identities](/microsoft-365/copilot/connectors/map-non-entra-id).
 
 To identify which option to choose:
 
@@ -146,10 +146,10 @@ Use the **Preview results** button to verify sample values of the selected prope
 
 ### Customize crawl intervals
 
-The refresh interval determines how often your data is synced between the data source and the Zendesk Ticket Copilot connector index. You can change the default refresh intervals for full and incremental crawls. For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+The refresh interval determines how often your data is synced between the data source and the Zendesk Ticket Copilot connector index. You can change the default refresh intervals for full and incremental crawls. For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
 - [Zendesk Ticket connector overview](zendesk-ticket-overview.md)
 - [Troubleshoot issues with the Zendesk Ticket connector](zendesk-ticket-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)

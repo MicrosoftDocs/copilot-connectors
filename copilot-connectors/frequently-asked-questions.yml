@@ -23,7 +23,7 @@ sections:
           1. Create a connection.
           2. Register your schema.
           3. Ingest your content into Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in Microsoft 365 Copilot.
-          For more information, see [Deployment overview](/microsoft-365-copilot/connectors/deployment-overview).
+          For more information, see [Deployment overview](/microsoft-365/copilot/connectors/deployment-overview).
 
       - question: "Can I edit the query string after the connection is published?"
         answer: |
@@ -93,7 +93,7 @@ sections:
       - question: "How do I build a custom Copilot connector?"
         answer: |
           You can use the Microsoft 365 Agents Toolkit or the Copilot connectors SDK to build a custom Copilot connector.
-          For more information, see [Build your first connector](/microsoft-365-copilot/extensibility/build-your-first-connector) and [Custom connector SDK sample overview](/graph/custom-connector-sdk-sample-overview).
+          For more information, see [Build your first connector](/microsoft-365/copilot/extensibility/build-your-first-connector) and [Custom connector SDK sample overview](/graph/custom-connector-sdk-sample-overview).
 
       - question: "What are the prerequisites for creating a custom connector?"
         answer: |

@@ -22,7 +22,7 @@ The Jira Data Center Microsoft 365 Copilot connector allows your organization to
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You must be a Microsoft 365 admin.
-- Install the [Microsoft Graph connector agent](/microsoft-365-copilot/connectors/graph-connector-agent) on a Windows computer within the same network as your Jira Data Center instance. If the agent is already installed, verify that you're running version **3.1.15.0 or later**.
+- Install the [Microsoft Graph connector agent](/microsoft-365/copilot/connectors/graph-connector-agent) on a Windows computer within the same network as your Jira Data Center instance. If the agent is already installed, verify that you're running version **3.1.15.0 or later**.
 - Install the Jira Data Center plugin from the Microsoft 365 Copilot connector listing in the [Atlassian Marketplace](https://marketplace.atlassian.com/).  
   > [!NOTE]
   > The plugin supports Jira Data Center versions **8.10.0 – 10.5.1**.
@@ -92,7 +92,7 @@ To configure OAuth in Jira:
 
 ### Roll out
 
-To validate the connection before a full rollout, select **Rollout to limited audience** and specify the users or groups for the staged deployment. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+To validate the connection before a full rollout, select **Rollout to limited audience** and specify the users or groups for the staged deployment. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connector. The Jira Data Center connector starts indexing content right away.
 
@@ -142,7 +142,7 @@ You can filter issues by creation or update timestamp, or by using **JQL**. For 
 
 #### Manage properties
 
-Select the Jira fields (schema properties) you want to index. You can include built-in Jira fields or add custom fields. For more information, see [Manage search schema](/microsoft-365-copilot/connectors/manage-search-schema). The following properties are indexed by default.
+Select the Jira fields (schema properties) you want to index. You can include built-in Jira fields or add custom fields. For more information, see [Manage search schema](/microsoft-365/copilot/connectors/manage-search-schema). The following properties are indexed by default.
 
 |Source property       | Semantic Label          | Schema  |               
 |:---------------------|:---------------------- |:---------------------- |
@@ -175,10 +175,10 @@ You can adjust the crawl frequency to fit your data refresh needs. The following
 - **Full crawl:** Every day  
 - **Incremental crawl:** Every 15 minutes
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
 - [Jira Data Center connector overview](jira-data-center-overview.md)
 - [Troubleshoot issues with the Jira Data Center connector](jira-data-center-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)

@@ -37,7 +37,7 @@ Enable your users to ask questions related to your IT/HR workflows in Copilot, s
 
 ## Build agents with the ServiceNow Knowledge connector
 
-Developers can use the ServiceNow Knowledge connector as a knowledge source in declarative agents built with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
+Developers can use the ServiceNow Knowledge connector as a knowledge source in declarative agents built with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
 ### Eaxmple prompts
 
@@ -55,7 +55,7 @@ The ServiceNow Knowledge connector has the following capabilities:
 
 - Indexes all types of knowledge articles.
 - Enables Copilot and search experiences in Microsoft 365 to respond to user questions related to your IT/HR workflows in Copilot.
-- Uses [semantic search in Copilot](/microsoft-365-copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Uses [semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 - Supports evaluation of [advanced script-based user criteria permissions](https://docs.servicenow.com/bundle/xanadu-servicenow-platform/page/product/knowledge-management/task/create-user-criteria-record-in-knowledge-management.html).
 - Indexes comments and attachments on KB articles.
 - Supports indexing content from custom or default knowledge article templates, such as FAQs, How-to, What Is, or KCS article templates.

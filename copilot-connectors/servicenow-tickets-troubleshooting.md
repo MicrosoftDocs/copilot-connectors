@@ -60,9 +60,9 @@ Use the following steps to validate table permissions by using REST API Explorer
 
 1.  Review the response: 
 
-    - If you receive a `403 Status Code` and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365-copilot/connectors/granting-table-access-servicenow) to provide table-level access. 
+    - If you receive a `403 Status Code` and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365/copilot/connectors/granting-table-access-servicenow) to provide table-level access. 
 
-    - If you receive a `200 Status Code` but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365-copilot/connectors/granting-table-access-servicenow#step-5-grant-field-level-access). 
+    - If you receive a `200 Status Code` but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow#step-5-grant-field-level-access). 
 
 If you don't see the table name in the dropdown, it might indicate lack of access to the table itself. 
 
@@ -109,7 +109,7 @@ If search results show incorrect access permissions, verify that the user is par
 
 The ServiceNow Tickets connector allows you to customize the URL of the Ticket items based on the needs of your organization. Currently, you can't edit the **AccessURL** property for an existing connection. If you have an existing connection and you want to customize the URL, you have to create a new connection and customize the URL during setup. 
 
-For more information, see [Set a default expression for AccessURL](/microsoft-365-copilot/connectors/servicenow-tickets-deployment#set-a-default-expression-for-accessurl).
+For more information, see [Set a default expression for AccessURL](/microsoft-365/copilot/connectors/servicenow-tickets-deployment#set-a-default-expression-for-accessurl).
 
 ## Issues with Only people with access to this data source permission
 

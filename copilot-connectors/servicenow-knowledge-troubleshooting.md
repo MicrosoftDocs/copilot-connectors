@@ -17,19 +17,19 @@ description: "Find troubleshooting information for the ServiceNow Knowledge Copi
 
 The ServiceNow Knowledge Microsoft 365 Copilot connector allows organizations to index ServiceNow knowledge articles into Microsoft 365 Copilot and search experiences. This article provides troubleshooting information for common errors that you might encounter when you deploy the ServiceNow Knowledge connector.
 
-To verify ServiceNow configuration information to help troubleshoot errors, see [Set up the ServiceNow service for connector ingestion](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup).
+To verify ServiceNow configuration information to help troubleshoot errors, see [Set up the ServiceNow service for connector ingestion](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup).
 
 ## Can't find ServiceNow Knowledge articles in Copilot or Microsoft Search
 
 To troubleshoot this issue:
 
-1. Determine whether the user searching for the article has the [required permissions to access the ServiceNow Knowledge articles.](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup#create-service-account-and-set-up-permissions-to-index-items)
+1. Determine whether the user searching for the article has the [required permissions to access the ServiceNow Knowledge articles.](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#create-service-account-and-set-up-permissions-to-index-items)
 
 1. Determine whether the user is correctly mapped to a Microsoft Entra identity. Mapping issues show as a 2006 error on the **Error** tab. Check the user mapping formula and update as needed.
 
     :::image type="content" source="media/servicenow-knowledge-troubleshooting/error-tab.png" alt-text="Screenshot of the Error tab showing mapping issues with 2006 error code.":::
 
-1. Determine whether an advanced script in any of the user criteria grant access to the article. Advanced scripts aren't currently supported. If you're using advanced scripts, be sure to select **Advanced flow** when you set up the connection and [Set up the REST API](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
+1. Determine whether an advanced script in any of the user criteria grant access to the article. Advanced scripts aren't currently supported. If you're using advanced scripts, be sure to select **Advanced flow** when you set up the connection and [Set up the REST API](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
 
 1. Use the [User criteria diagnostics](https://docs.servicenow.com/bundle/washingtondc-servicenow-platform/page/product/knowledge-management/concept/diagnose-knowledge-user-criteria.html) tool in ServiceNow to see if the service account has access to the item in ServiceNow
 
@@ -76,9 +76,9 @@ Use the following steps to validate table permissions by using REST API Explorer
 
 1.  Review the response:
 
-    - **If you receive a 403 Status Code** and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365-copilot/connectors/granting-table-access-servicenow) to provide table-level access.
+    - **If you receive a 403 Status Code** and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365/copilot/connectors/granting-table-access-servicenow) to provide table-level access.
     
-    - **If you receive a 200 Status Code** but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365-copilot/connectors/granting-table-access-servicenow#grant-field-level-access).
+    - **If you receive a 200 Status Code** but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow#grant-field-level-access).
 
        :::image type="content" source="media/servicenow-knowledge-troubleshooting/response-body.png" alt-text="Screenshot of the response body showing empty results." lightbox="media/servicenow-knowledge-troubleshooting/response-body.png":::
 
@@ -118,7 +118,7 @@ Sometimes content access can be restricted because the service account isn't rea
 
 :::image type="content" source="media/servicenow-knowledge-troubleshooting/user-criteria.png" alt-text="Screenshot of user criteria showing the use of gs.getUserId() function." lightbox="media/servicenow-knowledge-troubleshooting/user-criteria.png":::
 
-Also, if you're experiencing performance issues related to the use of the `getAllUserCriteria()` function or are concerned about using a deprecated API, consider using the following alternative script when you [Set up the REST API](/microsoft-365-copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
+Also, if you're experiencing performance issues related to the use of the `getAllUserCriteria()` function or are concerned about using a deprecated API, consider using the following alternative script when you [Set up the REST API](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
 
 ```javascript
 (function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
@@ -184,7 +184,7 @@ A forbidden or unauthorized response in connection status can occur for the foll
 
 ## Change the URL of the knowledge article
 
-The ServiceNow Knowledge connector allows you to customize the URL of the knowledge articles as per the needs of your organization. For more information, see [Customize AccessURL property](/microsoft-365-copilot/connectors/servicenow-knowledge-deployment#customize-accessurl-property).
+The ServiceNow Knowledge connector allows you to customize the URL of the knowledge articles as per the needs of your organization. For more information, see [Customize AccessURL property](/microsoft-365/copilot/connectors/servicenow-knowledge-deployment#customize-accessurl-property).
 
 > [!NOTE]
 > Currently, you can't edit the URL property for an existing connection. You can only customize the URL when you initially set up the connection. If you have an existing connection, create a new connection and follow the steps to customize the URL.

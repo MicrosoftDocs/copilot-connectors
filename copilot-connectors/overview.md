@@ -101,7 +101,7 @@ Microsoft offers over 100 prebuilt connectors for popular services, including:
 
 To use a prebuilt connector, select the connector in the Microsoft 365 admin center, provide credentials and configuration details, and the Microsoft connector service handles the rest. Microsoft or certified partners maintain and update these connectors regularly.
 
-If no prebuilt connector exists for your system, you can build a custom connector by using the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-your-first-connector) or the [Microsoft Graph connectors API](/graph/connecting-external-content-connectors-api-overview). Building a custom connector requires a developer to define a schema, register the connection in Microsoft Entra ID, and write code to pull and push data.
+If no prebuilt connector exists for your system, you can build a custom connector by using the [Microsoft 365 Agents Toolkit](/microsoft-365/copilot/extensibility/build-your-first-connector) or the [Microsoft Graph connectors API](/graph/connecting-external-content-connectors-api-overview). Building a custom connector requires a developer to define a schema, register the connection in Microsoft Entra ID, and write code to pull and push data.
 
 For on-premises sources, you can use the [Microsoft Graph connector agent](connector-agent.md) to securely index local content.
 
@@ -154,7 +154,7 @@ Search relevance algorithms rank external and internal results equally, based on
 
 ## Custom agents and extensibility
 
-Connectors are essential knowledge sources for custom agents built with [Copilot Studio](/microsoft-365-copilot/extensibility/copilot-studio-experience) or the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents). These agents are tailored to specific domains or tasks, such as IT help desk or sales support.
+Connectors are essential knowledge sources for custom agents built with [Copilot Studio](/microsoft-365/copilot/extensibility/copilot-studio-experience) or the [Microsoft 365 Agents Toolkit](/microsoft-365/copilot/extensibility/build-declarative-agents). These agents are tailored to specific domains or tasks, such as IT help desk or sales support.
 
 Connectors enhance agents for Copilot with the following features:
 

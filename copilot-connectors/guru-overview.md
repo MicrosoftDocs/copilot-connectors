@@ -46,7 +46,7 @@ The following table lists common use cases for the Guru connector.
 
 ## Build agents with the Guru connector
 
-Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/copilot-studio-lite), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
+Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/copilot-studio-lite), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
 ### Eaxmple prompts
 

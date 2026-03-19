@@ -45,7 +45,7 @@ The following table lists common use cases for the Amazon S3 connector.
 Developers can use this connector as a knowledge source in declarative agents built with:
 
 - [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio)
-- [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder)
+- [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder)
 - [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit)
 
 ### Eaxmple prompts

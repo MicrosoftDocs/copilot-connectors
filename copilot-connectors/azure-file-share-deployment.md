@@ -56,7 +56,7 @@ Use **Windows authentication** with valid admin credentials. Select the register
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365-copilot/connectors/staged-rollout).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Azure File Share connector starts indexing content right away.
 
@@ -106,10 +106,10 @@ You can create custom properties that enhance metadata available for search. Use
 
 You can adjust the frequency of full or incremental crawls. The default full crawl runs daily. Customize these intervals based on content update patterns and performance expectations.
 
-For more information, see [Guidelines for sync settings](/microsoft-365-copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
 - [Azure File Share connector overview](azure-file-share-overview.md)
 - [Troubleshoot issues with the Azure File Share connector](azure-file-share-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365-copilot/connectors/deployment-overview)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)

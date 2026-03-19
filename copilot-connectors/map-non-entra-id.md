@@ -15,7 +15,7 @@ ms.date: 02/13/2026
 
 This article describes how to map non-Microsoft Entra ID identities to your Microsoft Entra identities. Mapping identities allows people in your access control list (ACL) with non-Microsoft Entra ID identities to view connector responses scoped to them.
 
-These steps are relevant for AI administrators who choose **Only people with access to this data source** when you [Customize connector settings](/microsoft-365-copilot/connectors/deployment-overview#customize-connector-settings-optional) and choose **Non-Entra ID**.
+These steps are relevant for AI administrators who choose **Only people with access to this data source** when you [Customize connector settings](/microsoft-365/copilot/connectors/deployment-overview#customize-connector-settings-optional) and choose **Non-Entra ID**.
 
 ## Select a Microsoft Entra user property  
 

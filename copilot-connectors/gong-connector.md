@@ -1,7 +1,7 @@
 --- 
 title: "Gong Copilot connector" 
-ms.author: rerabo
-author: vivg
+ms.author: lauragra
+author: lauragra
 manager: harshkum
 audience: Admin
 ms.audience: Admin 
@@ -41,7 +41,7 @@ With the Microsoft 365 Copilot connector for Gong, your organization can index c
 ## Get Started
 
 ### 1. Display name
-A display name is used to identify each reference in Copilot, making it easier for users to recognize the associated file or item. It also indicates that the content is trusted and serves as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters). While a default value is provided, you can customize the display name to something more familiar and meaningful for users in your organization.
+A display name is used to identify each reference in Copilot, making it easier for users to recognize the associated file or item. It also indicates that the content is trusted and serves as a [content source filter](/microsoft-365/copilot/connectors/custom-filters#content-source-filters). While a default value is provided, you can customize the display name to something more familiar and meaningful for users in your organization.
 
 ### 2. Gong URL
 Enter the Gong base URL that you copied during the [Prerequisites step](#prerequisites).

@@ -35,7 +35,7 @@ Allow your users to ask questions related to your IT services workflows in Copil
 
 ## Build agents with the ServiceNow Catalog connector
 
-Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Copilot Studio agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit). These agents can:
+Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Copilot Studio agent builder](/microsoft-365/copilot/extensibility/copilot-studio-agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit). These agents can:
 
 - Answer user questions about catalog items.
 - Guide users through service request processes.

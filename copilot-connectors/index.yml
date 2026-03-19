@@ -19,48 +19,48 @@ landingContent:
       - linkListType: overview
         links:
           - text: Connectors overview
-            url: /microsoft-365-copilot/connectors/overview
+            url: /microsoft-365/copilot/connectors/overview
           - text: Connectors gallery
-            url: /microsoft-365-copilot/connectors/connectors-gallery
+            url: /microsoft-365/copilot/connectors/connectors-gallery
           - text: Microsoft-built synced connectors
-            url: /microsoft-365-copilot/connectors/prebuilt-connectors-overview
+            url: /microsoft-365/copilot/connectors/prebuilt-connectors-overview
           - text: Federated connectors (early access preview))
-            url: /microsoft-365-copilot/connectors/federated-connectors-overview
+            url: /microsoft-365/copilot/connectors/federated-connectors-overview
 
   - title: Get started
     linkLists:
       - linkListType: get-started
         links:
           - text: Prerequisites
-            url: /microsoft-365-copilot/connectors/prerequisites
+            url: /microsoft-365/copilot/connectors/prerequisites
           - text: Deployment overview
-            url: /microsoft-365-copilot/connectors/deployment-overview 
+            url: /microsoft-365/copilot/connectors/deployment-overview 
           - text: Set up synced connectors
-            url: /microsoft-365-copilot/connectors/prebuilt-connectors-overview
+            url: /microsoft-365/copilot/connectors/prebuilt-connectors-overview
           - text: Frequently asked questions
-            url: /microsoft-365-copilot/connectors/frequently-asked-questions
+            url: /microsoft-365/copilot/connectors/frequently-asked-questions
 
   - title: Configure connectors
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Staged rollout
-            url: /microsoft-365-copilot/connectors/staged-rollout
+            url: /microsoft-365/copilot/connectors/staged-rollout
           - text: Map Entra identities
-            url: /microsoft-365-copilot/connectors/map-entra-identities
+            url: /microsoft-365/copilot/connectors/map-entra-identities
           - text: Map non-Entra identities
-            url: /microsoft-365-copilot/connectors/map-non-entra-identities
+            url: /microsoft-365/copilot/connectors/map-non-entra-identities
           - text: Enhance Copilot discovery
-            url: /microsoft-365-copilot/connectors/enhance-copilot-discovery
+            url: /microsoft-365/copilot/connectors/enhance-copilot-discovery
           - text: Connector agent
-            url: /microsoft-365-copilot/connectors/connector-agent
+            url: /microsoft-365/copilot/connectors/connector-agent
 
   - title: Build custom connectors
     linkLists:
       - linkListType: tutorial
         links:
           - text: Microsoft 365 Agents Toolkit
-            url: /microsoft-365-copilot/extensibility/build-your-first-connector
+            url: /microsoft-365/copilot/extensibility/build-your-first-connector
           - text: Connectors SDK
             url: /graph/custom-connector-sdk-sample-overview
           - text: Connectors API
@@ -71,13 +71,13 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Manage connections
-            url: /microsoft-365-copilot/connectors/manage-connections
+            url: /microsoft-365/copilot/connectors/manage-connections
           - text: View connection details
-            url: /microsoft-365-copilot/connectors/view-details
+            url: /microsoft-365/copilot/connectors/view-details
           - text: Validate indexed content
-            url: /microsoft-365-copilot/connectors/validate-indexed-content
+            url: /microsoft-365/copilot/connectors/validate-indexed-content
           - text: Monitor errors
-            url: /microsoft-365-copilot/connectors/error-responses
+            url: /microsoft-365/copilot/connectors/error-responses
 
   - title: Related content
     linkLists:
@@ -86,8 +86,8 @@ landingContent:
           - text: Microsoft 365 Copilot overview
             url: /copilot/microsoft-365/microsoft-365-copilot-overview
           - text: Extend Microsoft 365 Copilot
-            url: /microsoft-365-copilot/extensibility/
+            url: /microsoft-365/copilot/extensibility/
           - text: Power Platform connectors
             url: /connectors/
           - text: Microsoft Search documentation
-            url: /microsoft-365-copilot/connectors/
+            url: /microsoft-365/copilot/connectors/
