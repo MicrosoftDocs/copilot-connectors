@@ -36,7 +36,7 @@ Before you deploy the connector, make sure that the following prerequisites are 
 - You must be a Microsoft 365 admin.
 - Install the [Microsoft Graph connector agent)](connector-agent.md) on a Windows computer on the same network as the Confluence server.
 - Install the Confluence On-prem plugin from the [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1234846?tab=reviews&hosting=datacenter).
-- In Confluence, go to **Settings** > **Manage apps**, and verify that the **Confluence Mobile Web Plugin** is enabled. The plugin is active by default; reenable it if it's deactivated.
+- In Confluence, go to **Settings** > **Manage apps**, and verify that the **Confluence Mobile Web Plugin** is enabled. The plugin is active by default; re-enable it if it's deactivated.
 - Validate that the **User Email Visibility** parameter is configured as **public** in Confluence Security Configuration.
 - Ensure authentication credentials are available with Confluence admin permissions.
 - Confirm that your Confluence version is 8.0 or higher.
