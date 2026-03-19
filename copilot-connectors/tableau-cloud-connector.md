@@ -1,7 +1,7 @@
 --- 
 title: "Tableau Cloud Microsoft 365 Copilot connector(preview)" 
-ms.author: rantang
-author: ranran1998
+ms.author: lauragra
+author: lauragra
 manager: jecui
 audience: Admin
 ms.audience: Admin 
