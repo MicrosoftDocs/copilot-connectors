@@ -68,10 +68,10 @@ Schema recommendations analyze your connector schema and highlight missing seman
 
 Schema recommendations currently check for four missing semantic labels:
 
-- **Title** – Semantically indexes the primary display name of an item. Required for meaningful result rendering and relevant Copilot results.
-- **URL** – Identifies the canonical link to the source item. Required for Copilot citations to link back to the source system.
-- **LastModifiedBy** – Identifies who last updated an item. Improves attribution in Copilot responses.
-- **LastModifiedDateTime** – Indicates when an item was last updated. Enables Copilot to reason over recency and answer time-based questions.
+- **`title`** – Semantically indexes the primary display name of an item. Required for meaningful result rendering and relevant Copilot results.
+- **`url`** – Identifies the canonical link to the source item. Required for Copilot citations to link back to the source system.
+- **Last modified by** – Identifies who last updated an item. Improves attribution in Copilot responses.
+- **Last modified date time** – Indicates when an item was last updated. Enables Copilot to reason over recency and answer time-based questions.
 
 :::image type="content" alt-text="Schema recommendations can be accessed via the connection detail panel." source="media/manage-connector/schema-recommendations-2.png" lightbox="media/manage-connector/schema-recommendations-2.png":::
 
