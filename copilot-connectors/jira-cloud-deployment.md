@@ -16,7 +16,7 @@ description: "Find information about how to deploy the Jira Cloud Copilot connec
 
 The Jira Cloud Microsoft 365 Copilot connector allows your organization to index Jira issues. After you configure the connector and index content from the Jira site, users can search for those items in Microsoft Search and Microsoft 365 Copilot experiences.
 
-This article describes the steps to deploy and customize the Atlassian Jira Cloud connector.
+This article describes the steps to deploy and customize the Jira Cloud connector.
 
 > [!IMPORTANT]
 > The Jira Cloud Copilot connector supports only Jira cloud-hosted instances. This connector doesn't support Jira Server and Jira Data Center versions.
@@ -27,9 +27,9 @@ For Jira Cloud service configuration information, see [Set up the Jira Cloud ser
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-*   You must be the search admin for your organization's Microsoft 365 tenant.
-*   Make sure that you know the Jira Cloud instance URL for your organization. To connect to your Jira data, you need your organization's Jira instance URL.
-*   To connect to Jira and allow the Jira Cloud connector to update issues regularly, you need a service account with the following permissions granted to it.
+- You must be the search admin for your organization's Microsoft 365 tenant.
+- Make sure that you know the Jira Cloud instance URL for your organization. To connect to your Jira data, you need your organization's Jira instance URL.
+- To connect to Jira and allow the Jira Cloud connector to update issues regularly, you need a service account with the following permissions granted to it.
 
 | Permission | Type | Usage |
 | :--- | :--- | :--- |
@@ -56,7 +56,7 @@ For more information about connector display names and descriptions, see [Enhanc
 
 ### Set instance URL
 
-To connect to your Jira cloud data, you need your organization's Jira instance URL. Your organization's Jira instance URL typically looks like the following: `https://<your-organization-domain>.atlassian.net`.
+To connect to your Jira cloud data, you need your organization's Jira instance URL. Your organization's Jira instance URL typically looks like the following URL: `https://<your-organization-domain>.atlassian.net`.
 
 If you don't have an instance already, see [Atlassian Jira](https://www.atlassian.com/software/jira) to create a test instance.
 
@@ -126,19 +126,19 @@ The following are the default values for the connector:
 
 **Users**
 
-*   **Access permissions**: Only people with access to content in Data source.
-*   **Map Identities**: Data source identities mapped using Microsoft Entra IDs.
+- **Access permissions**: Only people with access to content in Data source.
+- **Map identities**: Data source identities mapped using Microsoft Entra IDs.
 
 **Content**
 
-*   **Site projects**: All projects are indexed.
-*   **Filter data**: All issues are indexed. No time filter or JQL criteria is applied.
-*   **Manage Properties**: To check default properties and their schema, see Customize content settings
+- **Site projects**: All projects are indexed.
+- **Filter data**: All issues are indexed. No time filter or JQL criteria is applied.
+- **Manage Properties**: To check default properties and their schema, see Customize content settings
 
 **Sync**
 
-*   **Incremental Crawl**: Frequency: Every 15 mins
-*   **Full Crawl**: Frequency: Every day
+- **Incremental crawl**: Frequency: Every 15 mins
+- **Full crawl**: Frequency: Every day
 
 After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
@@ -155,14 +155,13 @@ The Jira Cloud Copilot connector supports search permissions visible to **Everyo
 In Atlassian Jira, security permissions are defined using project permission schemes containing site-level groups and project roles. Issue-level security can also be defined using issue-level permission schemes.
 
 > **Important**
->
 > The Jira Cloud Copilot connector must be able to read a user's email ID in Jira to appropriately assign security permissions in Microsoft Search and Microsoft 365 Copilot. This requires you to ensure either of the following:
 >
-> *   All users should select the **Anyone** option for their profile visibility settings. To learn more about profile visibility settings, see [Update your profile and visibility settings](https://support.atlassian.com/atlassian-account/docs/update-your-profile-and-visibility-settings/).
-> *   For organizations that use [managed accounts](https://support.atlassian.com/user-management/docs/what-are-managed-accounts/):
->     *   All users must have the managed account setting selected in profile visibility settings.
->     *   Users who aren't part of the managed account (same as crawling account) must have **Anyone** selected in their profile visibility settings.
->     *   The crawling account used during connection configuration must have the managed account domain.
+> - All users should select the **Anyone** option for their profile visibility settings. To learn more about profile visibility settings, see [Update your profile and visibility settings](https://support.atlassian.com/atlassian-account/docs/update-your-profile-and-visibility-settings/).
+> - For organizations that use [managed accounts](https://support.atlassian.com/user-management/docs/what-are-managed-accounts/):
+> - All users must have the managed account setting selected in profile visibility settings.
+> - Users who aren't part of the managed account (same as crawling account) must have **Anyone** selected in their profile visibility settings.
+> - The crawling account used during connection configuration must have the managed account domain.
 
 #### Map identities
 
@@ -183,7 +182,7 @@ The default method for mapping your data source identities with Microsoft Entra 
     - If you choose individual projects, only Jira issues in the selected projects are indexed.
 
     > [!NOTE]
-    > When you grant the **Browse projects** permission to a Jira project, it's listed in the project selection and can be crawled. If a project is missing, check the permissions for your account.
+    > When you grant the **Browse projects** permission to a Jira project, the project is listed in the project selection and can be crawled. If a project is missing, check the permissions for your account.
 
 - **Filter data**: You can choose to filter the Jira issues that are indexed in two ways:
     - Specify the issue modified time period. This option only indexes the Jira issues that are created or modified in the time period selected on a rolling basis based on the current crawl.
@@ -238,13 +237,13 @@ Use the preview results button to verify the sample values of the selected prope
 
 The refresh interval determines how often your data is synced between the data source and the Jira Cloud Copilot connector index. The following are the two types of refresh intervals:
 
-*   **Incremental crawl**: Every 15 mins
-*   **Full crawl**: Every day
+- **Incremental crawl**: Every 15 mins
+- **Full crawl**: Every day
 
 You can change the default values of the refresh interval. For more information, see [Guidelines for sync settings](https://learn.microsoft.com/en-us/microsoftsearch/configure-connector#guidelines-for-sync-settings).
 
 ## Related content
 
-*   [Jira Cloud connector overview](https://learn.microsoft.com/en-us/microsoftsearch/jira-cloud-overview)
-*   [Troubleshoot issues with the Jira Cloud connector](https://learn.microsoft.com/en-us/microsoftsearch/jira-cloud-troubleshooting)
-*   [Set up Copilot connectors in the Microsoft 365 admin center](https://learn.microsoft.com/en-us/microsoftsearch/configure-connector)
+- [Jira Cloud connector overview](https://learn.microsoft.com/en-us/microsoftsearch/jira-cloud-overview)
+- [Troubleshoot issues with the Jira Cloud connector](https://learn.microsoft.com/en-us/microsoftsearch/jira-cloud-troubleshooting)
+- [Set up Copilot connectors in the Microsoft 365 admin center](https://learn.microsoft.com/en-us/microsoftsearch/configure-connector)
