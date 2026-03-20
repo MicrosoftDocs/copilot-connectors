@@ -111,10 +111,9 @@ To authenticate and sync issues from Jira, choose one of the following supported
     7.  Choose **Save**.
     8.  Go to **Settings** in the left pane to get the client ID and secret. Complete the connection settings step using the Client ID and Secret.
 
-    > **Note**
-    >
-    > *   For more information about Jira permissions, see [Jira scopes for OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/#list-of-scopes).
-    > *   The original (classic) OAuth permissions for Jira Cloud are deprecated. For more information, see the [changelog announcement](https://developer.atlassian.com/cloud/jira/platform/changelog/#CHANGE-517).
+    > [!NOTE]
+    > - For more information about Jira permissions, see [Jira scopes for OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/#list-of-scopes).
+    > - The original (classic) OAuth permissions for Jira Cloud are deprecated. For more information, see the [changelog announcement](https://developer.atlassian.com/cloud/jira/platform/changelog/#CHANGE-517).
 
 ### Roll out
 
