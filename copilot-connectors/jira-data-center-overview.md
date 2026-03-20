@@ -1,5 +1,5 @@
 ---
-title: "Atlassian Jira Data Center Microsoft 365 Copilot connector overview"
+title: "Jira Data Center Microsoft 365 Copilot connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -10,10 +10,10 @@ ms.topic: concept-article
 ms.service: copilot-connectors
 ms.date: 12/17/2025
 ms.localizationpriority: Medium
-description: "Learn about the capabilities, limitations, and use cases for the Atlassian Jira Data Center Microsoft 365 Copilot connector."
+description: "Learn about the capabilities, limitations, and use cases for the Jira Data Center Microsoft 365 Copilot connector."
 ---
 
-# Atlassian Jira Data Center Microsoft 365 Copilot connector overview
+# Jira Data Center Microsoft 365 Copilot connector overview
 
 The Jira Data Center Microsoft 365 Copilot connector allows your organization to index Jira Data Center issues and related project data so they become discoverable and actionable in Microsoft 365 experiences. By integrating securely with your on-premises Jira Data Center environment through the Microsoft Graph Connector Agent, the connector allows users to retrieve, summarize, and analyze project and issue information directly in Microsoft 365 Copilot and Microsoft Search.
 

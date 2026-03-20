@@ -1,5 +1,5 @@
 ---
-title: "Atlassian Jira Data Center Microsoft 365 Copilot connector troubleshooting"
+title: "Jira Data Center Microsoft 365 Copilot connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -10,10 +10,10 @@ ms.topic: troubleshooting-general
 ms.service: copilot-connectors
 ms.date: 12/17/2025
 ms.localizationpriority: Medium
-description: "Find troubleshooting information for the Atlassian Jira Data Center Microsoft 365 Copilot connector."
+description: "Find troubleshooting information for the Jira Data Center Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Atlassian Jira Data Center Microsoft 365 Copilot connector
+# Troubleshoot issues with the Jira Data Center Microsoft 365 Copilot connector
 
 The Jira Data Center Microsoft 365 Copilot connector indexes Jira Data Center issues and project data so users can retrieve and analyze content in Microsoft 365. This article provides troubleshooting information for common errors that you might encounter when you deploy the Jira Data Center connector or run the connection.
 
