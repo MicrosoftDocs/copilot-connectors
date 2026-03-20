@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 03/18/2026
+ms.date: 03/19/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Veeva PromoMats Microsoft 365 Copilot connector."
 ---
@@ -74,6 +74,7 @@ The Veeva PromoMats connector has the following limitations:
 - Updates to user or group permissions in PromoMats might not be reflected immediately in the index (depending on crawl cadence)—there might be a delay before new access restrictions are honored.
 - The indexing speed is constrained by the API rate limits imposed by the Veeva platform. If you have a high volume of documents, you might experience longer completion times. 
 - Document fields set to be hidden on the Veeva platform aren't indexed.
+- Your Veeva Vault (PromoMats) instance must not hide the following fields. Hiding these fields blocks connector creation and crawling: `id`, `global_id__sys`, `document_number__v`, `filename__v`, `status__v`, `version_id`, `major_version_number__v`, `minor_version_number__v`, `size__v`.
 
 ## Data types indexed from PromoMats
 
