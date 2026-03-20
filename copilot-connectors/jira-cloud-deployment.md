@@ -153,7 +153,7 @@ The Jira Cloud Copilot connector supports search permissions visible to **Everyo
 
 In Atlassian Jira, security permissions are defined using project permission schemes containing site-level groups and project roles. Issue-level security can also be defined using issue-level permission schemes.
 
-> **Important**
+> [!IMPORTANT]
 > The Jira Cloud Copilot connector must be able to read a user's email ID in Jira to appropriately assign security permissions in Microsoft Search and Microsoft 365 Copilot. This requires you to ensure either of the following:
 >
 > - All users should select the **Anyone** option for their profile visibility settings. To learn more about profile visibility settings, see [Update your profile and visibility settings](https://support.atlassian.com/atlassian-account/docs/update-your-profile-and-visibility-settings/).
