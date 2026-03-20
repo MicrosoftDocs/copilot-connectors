@@ -226,7 +226,7 @@ To manage customized properties, ensure the following conditions are met:
 5.  **Name** length is less than or equal to 26 characters.
 6.  **Name** contains only letters and numbers (no special characters).
 
-Users can access `{{Jira instance url}}/rest/api/2/field` and review the returned data.
+Users can access `https://<your-organization-domain>.atlassian.net/rest/api/2/field` and review the returned data.
 
 #### Preview data
 
