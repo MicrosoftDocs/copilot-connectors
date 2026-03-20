@@ -164,7 +164,7 @@ In Atlassian Jira, security permissions are defined using project permission sch
 
 #### Map identities
 
-The default method for mapping your data source identities with Microsoft Entra ID is to make the email ID of Jira users the same as the user principal name (UPN) or email address of the users in Microsoft Entra ID. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Azure AD Identities](https://learn.microsoft.com/en-us/microsoftsearch/map-non-aad).
+The default method for mapping your data source identities with Microsoft Entra ID is to make the email ID of Jira users the same as the user principal name (UPN) or email address of the users in Microsoft Entra ID. If the default mapping doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map your non-Microsoft Entra ID identities](./map-non-entra-id.md).
 
 *   Choose the **Microsoft Entra ID** option if the email ID of Jira users is the same as the UPN of users in Microsoft Entra ID.
 *   Choose the **Non-Microsoft Entra ID** option if the email ID of Jira users is different from the UPN and email of users in Entra ID.
