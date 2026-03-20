@@ -239,7 +239,7 @@ The refresh interval determines how often your data is synced between the data s
 - **Incremental crawl**: Every 15 mins
 - **Full crawl**: Every day
 
-You can change the default values of the refresh interval. For more information, see [Guidelines for sync settings](https://learn.microsoft.com/en-us/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+You can change the default values of the refresh interval. For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 
