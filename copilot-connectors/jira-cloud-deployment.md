@@ -243,6 +243,7 @@ You can change the default values of the refresh interval. For more information,
 
 ## Related content
 
-- [Jira Cloud connector overview](https://learn.microsoft.com/en-us/microsoftsearch/jira-cloud-overview)
-- [Troubleshoot issues with the Jira Cloud connector](https://learn.microsoft.com/en-us/microsoftsearch/jira-cloud-troubleshooting)
-- [Set up Copilot connectors in the Microsoft 365 admin center](https://learn.microsoft.com/en-us/microsoftsearch/configure-connector)
+- [Atlassian Jira Cloud connector overview](jira-cloud-overview.md)
+- [Troubleshoot issues with the Atlassian Jira Cloud connector](jira-cloud-troubleshooting.md)
+- [Jira result layout](jira-result-layout.md)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)
