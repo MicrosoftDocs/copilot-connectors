@@ -21,7 +21,7 @@ This article describes the steps to deploy and customize the Jira Cloud connecto
 > [!IMPORTANT]
 > The Jira Cloud Copilot connector supports only Jira cloud-hosted instances. This connector doesn't support Jira Server and Jira Data Center versions.
 
-For Jira Cloud service configuration information, see [Set up the Jira Cloud service for connector ingestion](https://learn.microsoft.com/en-us/microsoftsearch/jira-cloud-admin-setup).
+For Jira Cloud service configuration information, see [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
 
 ## Prerequisites
 
