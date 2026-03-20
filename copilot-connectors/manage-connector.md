@@ -55,7 +55,7 @@ When the visibility is off, the connector is excluded from all Copilot Search an
 
 The default behavior is visible by default, with changes syncing automatically with search, without affecting declarative agents and their data.
 
-> [!Note]
+> [!NOTE]
 > After you update the visibility settings at the connection level, allow up to 30 minutes for the changes to propagate across all Copilot experiences.
 
 ## Manage schema recommendations for custom Copilot connectors
