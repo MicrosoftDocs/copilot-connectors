@@ -57,8 +57,28 @@ When the visibility is off, the connector is excluded from all Copilot Search an
 
 The default behavior is visible by default, with changes syncing automatically with search, without affecting declarative agents and their data.
 
-> [!Note]
+> [!NOTE]
 > After you update the visibility settings at the connection level, allow up to 30 minutes for the changes to propagate across all Copilot experiences.
+
+## Manage schema recommendations for custom Copilot connectors
+
+When you build a custom Copilot connector, the schema you define determines how your content is indexed and surfaced in Microsoft 365 Copilot. To help you get started, the Microsoft 365 admin center provides schema recommendations for published custom connectors.
+
+Schema recommendations analyze your connector schema and highlight missing semantic labels for key properties that Copilot relies on to understand, rank, and cite content.
+
+### Supported recommendations
+
+Schema recommendations currently check for four missing semantic labels:
+
+- **`title`** – Semantically indexes the primary display name of an item. Required for meaningful result rendering and relevant Copilot results.
+- **`url`** – Identifies the canonical link to the source item. Required for Copilot citations to link back to the source system.
+- **Last modified by** – Identifies who last updated an item. Improves attribution in Copilot responses.
+- **Last modified date time** – Indicates when an item was last updated. Enables Copilot to reason over recency and answer time-based questions.
+
+:::image type="content" alt-text="Schema recommendations can be accessed via the connection detail panel." source="media/manage-connector/schema-recommendations-2.png" lightbox="media/manage-connector/schema-recommendations-2.png":::
+
+> [!NOTE]
+> Schema recommendations aren't exhaustive and don't replace the full schema design guidance for Copilot connectors. For comprehensive schema best practices, property attributes, and semantic label guidance, see [Semantic labels](/graph/connecting-external-content-manage-schema#semantic-labels).
 
 ## Notifications for permanent crawl failures in your connections
 
