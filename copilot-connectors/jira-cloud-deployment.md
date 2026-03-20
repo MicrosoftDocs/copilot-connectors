@@ -52,7 +52,7 @@ The display name is used to identify references in Copilot responses to help use
 
 You can accept the default **Jira Cloud** display name, or customize the value to use a display name that users in your organization recognize.
 
-For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](https://learn.microsoft.com/en-us/microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content).
+For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](./enhance-copilot-discovery.md).
 
 ### Set instance URL
 
