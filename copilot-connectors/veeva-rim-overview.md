@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 03/18/2026
+ms.date: 03/19/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Veeva Vault RIM Microsoft 365 Copilot connector."
 ---
@@ -63,6 +63,7 @@ The Veeva Vault RIM connector has the following limitations:
 - Each document can include up to 4 MB of parsed (extracted) text for ingestion and indexing. In most .docx, .pptx, and .pdf files, the extracted text represents roughly 10% of the original file size, which allows many documents of 30–40 MB to be fully indexed. For other file types, this ratio might differ. If the extracted text exceeds the 4 MB limit, only the first portion is indexed, which might result in partial coverage and incomplete answers in Copilot and Search.
 - The indexing speed is constrained by the API rate limits imposed by the Veeva platform. If you have a high volume of documents, you might experience longer completion times. 
 - Document fields set to be hidden on the Veeva platform aren't indexed.
+- Your Veeva Vault instance must not hide the following fields. Hiding these fields blocks connector creation and crawling: `id`, `global_id__sys`, `document_number__v`, `filename__v`, `status__v`, `version_id`, `major_version_number__v`, `minor_version_number__v`, `size__v`.
 
 ## Data types indexed from Veeva Vault RIM
 
