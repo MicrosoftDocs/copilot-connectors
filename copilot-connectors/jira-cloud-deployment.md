@@ -117,7 +117,7 @@ To authenticate and sync issues from Jira, choose one of the following supported
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](https://learn.microsoft.com/en-us/microsoftsearch/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](staged-rollout.md).
 
 Choose **Create** to deploy the connection. The Jira Cloud Copilot connector starts indexing content right away.
 
