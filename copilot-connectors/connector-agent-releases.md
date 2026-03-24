@@ -20,7 +20,28 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 
 [Download latest Graph Connector Agent](https://aka.ms/gca)
 
-## Version 3.1.16.0 (*January 16, 2026*)
+## Version 3.1.19.0 (*March 12, 2026*)
+
+* Improved git clone feature for on-premises connectors.
+* Improved  repository filtering, preview, and incremental crawl for Bitbucket connector.
+* Added first-party authentication support for government cloud environments.
+* Improved file share connector reliability and exception handling.
+* Added retry logic for authentication token refresh failures for Confluence on-prem connector.
+* Bug fixes and reliability improvements.
+
+## Version 3.1.18.0 (*February 11, 2026*)
+
+* Added Browse Project permissions during crawl for Jira Data Center.
+* Improved reliability of user and group synchronization for on-premises connections.
+* Updated Bitbucket Server Knowledge connector to align with Bitbucket Cloud for consistent search behavior.
+* Crawl error fixes for Documentum connector.
+* Bug fixes and reliability improvements.
+
+## Version 3.1.17.0 (*February 5, 2025*)
+
+* Bug fixes and critical updates.
+*
+* ## Version 3.1.16.0 (*January 16, 2026*)
 
 * Bug fixes and reliability improvements.
 
