@@ -32,6 +32,8 @@ The File Share Microsoft 365 Copilot connector allows users in your organization
 
 To index your Windows file shares, you must install and register the connector agent. For more information, see [Install the Microsoft Graph connector agent](connector-agent.md#install-the-agent). Make sure that the data source and agent computers are on the same network to get the best latency and throughput for indexing files.
 
+If you have some old file formats in your data source, such as .msg and .doc, you must install the Microsoft Visual C++ 2012 Redistributable Update 4 (x86 and x64) on the connector agent host to enable ingestion of such files. [Download Visual C++ Redistributable for Visual Studio 2012 Update 4 from Official Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=30679).
+
 ## Get Started
 
 ### Choose display name
