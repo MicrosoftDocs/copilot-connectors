@@ -18,7 +18,7 @@ Indexing on-premises data sources requires you to install *Microsoft Graph conne
 
 For help with installation, see [Install the agent](connector-agent.md#install-the-agent).
 
-[Download latest Graph Connector Agent](https://aka.ms/gca)
+[Download latest Microsoft Graph connector agent](https://aka.ms/gca)
 
 ## Version 3.1.19.0 (*March 12, 2026*)
 
