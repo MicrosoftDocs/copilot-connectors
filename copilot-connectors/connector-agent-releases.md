@@ -23,7 +23,7 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 ## Version 3.1.19.0 (*March 12, 2026*)
 
 * Improved git clone feature for on-premises connectors.
-* Improved  repository filtering, preview, and incremental crawl for Bitbucket connector.
+* Improved repository filtering, preview, and incremental crawl for Bitbucket connector.
 * Added first-party authentication support for government cloud environments.
 * Improved file share connector reliability and exception handling.
 * Added retry logic for authentication token refresh failures for Confluence on-prem connector.
