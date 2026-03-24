@@ -26,7 +26,7 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 * Improved repository filtering, preview, and incremental crawl for Bitbucket connector.
 * Added first-party authentication support for government cloud environments.
 * Improved file share connector reliability and exception handling.
-* Added retry logic for authentication token refresh failures for Confluence on-prem connector.
+* Added retry logic for authentication token refresh failures for Confluence on-premises connector.
 * Bug fixes and reliability improvements.
 
 ## Version 3.1.18.0 (*February 11, 2026*)
@@ -37,7 +37,7 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 * Crawl error fixes for Documentum connector.
 * Bug fixes and reliability improvements.
 
-## Version 3.1.17.0 (*February 5, 2025*)
+## Version 3.1.17.0 (*February 5, 2026*)
 
 * Bug fixes and critical updates.
 
