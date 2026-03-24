@@ -40,9 +40,8 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 ## Version 3.1.17.0 (*February 5, 2025*)
 
 * Bug fixes and critical updates.
-*
-* ## Version 3.1.16.0 (*January 16, 2026*)
 
+## Version 3.1.16.0 (*January 16, 2026*)
 * Bug fixes and reliability improvements.
 
 ## Version 3.1.15.0 (*December 20, 2025*)
