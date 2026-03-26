@@ -47,6 +47,8 @@ SharePoint Server Copilot Connector (Graph Connector) allows users in your organ
 
 - Creating a Declarative Agent (DA) for SharePoint On-premises currently requires a pro code approach using Visual Studio Code and a manually authored DA manifest, [Declarative agent schema 1.2 for Microsoft 365 Copilot | Microsoft Learn](/microsoft-365/copilot/extensibility/declarative-agent-manifest-1.2?tabs=json).
 
+- Creating custom engine agents in Microsoft Copilot Studio using SharePoint On-premises connector content is not supported.
+
 ## Before you get started
 
 ### Install the Graph Connector Agent
@@ -93,11 +95,10 @@ Choose the authentication type from the drop-down menu of options. The supported
 - Microsoft Entra ID OIDC
 
 > [!NOTE]
-> - Basic authentication is **not** recommended.  It is currently included for compatibility with legacy systems but may be removed in the future. 
-> - Use Domain\username format in the "Username" field to authenticate to the SharePoint server instance using the Windows option.
-> - For Windows authentication, only NTLM is currently supported, Kerberos is not.
-> - ADFS is currently not supported.
-> - Unlike Basic and Windows, Entra ID (OIDC) authentication requires additional configuration, as outlined in the next section. 
+> - The account used for authentication must have **Full Read** permission at the Web Application level in SharePoint, regardless of the authentication type selected.
+> - Basic authentication is **not** recommended. It is currently included for compatibility with legacy systems but may be removed in the future.
+> - For Windows authentication, use Domain\username format in the "Username" field. Only NTLM is currently supported; Kerberos and ADFS are not.
+> - Unlike Basic and Windows, Entra ID (OIDC) authentication requires additional configuration, as outlined in the next section.
 
 To authenticate with the provided credentials, select Sign-in to load the list of available site collections.
 
@@ -138,7 +139,44 @@ Before using the Microsoft Entra ID-based authentication method, ensure the foll
 1. Under "Authorized Scopes", select the user_impersonation scope for your web app and select "Add application".
 
    ![Screenshot that shows how to Add a Client Application.](media/sharepoint-server-connector/add-a-client-application.png)
-   
+
+
+###### Configure ScopedClientIdentifier
+
+When using OIDC authentication with SharePoint Server, you must additionally set the `ScopedClientIdentifier` property on the `SPTrustedIdentityTokenIssuer` for the Graph Connector to authenticate and crawl your content. This property maps each SharePoint site URL to an Entra ID application registration (the app identity configured during your OIDC setup), so SharePoint knows which app is permitted to access each site.
+
+> [!IMPORTANT]
+> Setting the `ScopedClientIdentifier` is not required for OIDC to function in SharePoint Server itself, but it is mandatory for the Graph Connector. Without this mapping, SharePoint Server cannot verify the connector's identity for the site, resulting in a 401 Unauthorized error.
+
+Before you begin, have the following ready:
+
+- **Application ID URI**: Set in the [Configure "Expose an API"](#configure-expose-an-api) section above (e.g., `api://xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`).
+- **Token Issuer Name**: The name of the `SPTrustedIdentityTokenIssuer` — the SharePoint object that trusts your Entra ID identity provider — created in step 3 of your initial OIDC setup. If you don't remember the name, run `Get-SPTrustedIdentityTokenIssuer` without parameters to list all configured issuers.
+
+Run the following PowerShell commands in the SharePoint Management Shell as a Farm Administrator:
+
+```PowerShell
+# Get the existing trusted identity token issuer
+$t = Get-SPTrustedIdentityTokenIssuer -Identity "<TrustedIdentityTokenIssuerName>"
+
+# (Optional) Verify the current ScopedClientIdentifier value
+$t.ScopedClientIdentifier
+
+# Add the scoped client identifier for the SharePoint site
+# The .Add() method requires a Uri object (not a plain string) and the Application ID URI
+$uri = New-Object System.Uri("<SharePointSiteUrl>")
+$t.ScopedClientIdentifier.Add($uri, "<EntraIdAppIdentifierUri>")
+$t.Update()
+```
+
+| Placeholder | Description | Example |
+|---|---|---|
+| `<TrustedIdentityTokenIssuerName>` | Name of the SPTrustedIdentityTokenIssuer created during OIDC setup | `OIDC Entra ID` |
+| `<SharePointSiteUrl>` | URL of the SharePoint site collection | `https://sharepoint.contoso.com/` |
+| `<EntraIdAppIdentifierUri>` | Application ID URI of the Entra ID app registration | `api://xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
+
+> [!TIP]
+> If you are crawling multiple site collections (e.g., `https://portal.contoso.com` and `https://hr.contoso.com`), you must repeat the `$t.ScopedClientIdentifier.Add()` command for each unique URL before calling `$t.Update()`.
 
 ### 5. Select Site Collections
 
