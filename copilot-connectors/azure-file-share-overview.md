@@ -47,7 +47,7 @@ The following table lists common use cases for the Azure File Share connector.
 
 Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit). Once Azure File Share content is indexed into Microsoft Graph, agents can perform semantic search, summarization, comparisons, and content generation across file-share content.
 
-### Eaxmple prompts
+### Example prompts
 
 The following examples show prompts that agent builders can use to help their users retrieve information from Azure File Share:
 
