@@ -14,7 +14,7 @@ ms.date: 03/30/2026
 
 # SharePoint Server Microsoft 365 Copilot connector (preview)
 
-The SharePoint Server Microsoft 365 Copilot Connector allows users in your organization to search for content stored in an on-premises SharePoint Server farm or use the content in Copilot for specific use cases and scenarios. It crawls documents and site pages from SharePoint on-premises farms. On-premises versions of SharePoint Server 2016, 2019, and Subscription Edition (SPSE) are supported.
+The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for content stored in an on-premises SharePoint Server farm or use the content in Copilot for specific use cases and scenarios. It crawls documents and site pages from SharePoint on-premises farms. On-premises versions of SharePoint Server 2016, 2019, and Subscription Edition (SPSE) are supported.
 
 > [!NOTE]
 > Active Directory synchronization is a prerequisite for enabling security trimming in SharePoint Server content search. For more information, see [Microsoft Entra Connect Sync: Understand and customize synchronization](/entra/identity/hybrid/connect/how-to-connect-sync-whatis).
@@ -51,11 +51,11 @@ The SharePoint Server Microsoft 365 Copilot Connector allows users in your organ
 
 ## Before you get started
 
-### Install the Graph Connector Agent
+### Install the Graph  Agent
 
-To index your SharePoint On-premises content, you must install and register the Graph Connector Agent (GCA). See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more. The Graph Connector Agent can be installed on the same machine as the SharePoint server or on a machine that has access to the SharePoint On-premises server.
+To index your SharePoint on-premises content, you must install and register the Graph Connector Agent (GCA). See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more. The Graph Connector Agent can be installed on the same machine as the SharePoint server or on a machine that has access to the SharePoint on-premises server.
 
-Each source (SharePoint web application) can be configured in one connection. One Graph Connector Agent can be used to source content from multiple connections of SharePoint On-premises sources. It's advised to limit the number of connections to an agent to three sources to ensure an optimal ingestion rate.
+Each source (SharePoint web application) can be configured in one connection. One Graph Connector Agent can be used to source content from multiple connections of SharePoint on-premises sources. It's advised to limit the number of connections to an agent to three sources to ensure an optimal ingestion rate.
 
 The account used for indexing should have full control access to the SharePoint web applications or should be a farm admin. Items that the account doesn't have permission to are skipped during indexing.
 
@@ -73,7 +73,7 @@ To get you quickly started with Copilot connectors, the steps in the setup proce
 
 For more information, see general [setup instructions](./deployment-overview.md).
 
-[![Screenshot that shows connection creation screen for Microsoft 365 Copilot Connector for SharePoint Server.](media/sharepoint-server/firstscreen.png)](media/sharepoint-server/firstscreen.png#lightbox).
+[![Screenshot that shows connection creation screen for Microsoft 365 Copilot connector for SharePoint Server.](media/sharepoint-server/firstscreen.png)](media/sharepoint-server/firstscreen.png#lightbox).
 
 ### 1. Display name
 
@@ -103,7 +103,7 @@ Choose the authentication type from the drop-down menu of options. The supported
 
 To authenticate with the provided credentials, select Sign-in to load the list of available site collections.
 
-#### Microsoft Entra ID-based authentication for Microsoft SharePoint Server Copilot Connector
+#### Microsoft Entra ID-based authentication for Microsoft SharePoint Server Copilot connector
 
 > [!NOTE]
 > The steps in this subsection are only required if you're using Microsoft Entra ID (OIDC) authentication.  If you're using Windows or Basic, you can skip to step 5. Select Site Collections.
@@ -147,7 +147,7 @@ Before using the Microsoft Entra ID-based authentication method, ensure the foll
 When using OIDC authentication with SharePoint Server, you must additionally set the `ScopedClientIdentifier` property on the `SPTrustedIdentityTokenIssuer` for the Graph Connector to authenticate and crawl your content. This property maps each SharePoint site URL to an Entra ID application registration (the app identity configured during your OIDC setup), so SharePoint knows which app is permitted to access each site.
 
 > [!IMPORTANT]
-> Setting the `ScopedClientIdentifier` is not required for OIDC to function in SharePoint Server itself, but it is mandatory for the Graph Connector. Without this mapping, SharePoint Server cannot verify the connector's identity for the site, resulting in a 401 Unauthorized error.
+> Setting the `ScopedClientIdentifier` is not required for OIDC to function in SharePoint Server itself, but it is mandatory for the connector. Without this mapping, SharePoint Server cannot verify the connector's identity for the site, resulting in a 401 Unauthorized error.
 
 Before you begin, have the following ready:
 
@@ -219,7 +219,7 @@ The default and preferred option is "Only people with access to this data source
 
 [![Screenshot that shows users tab](media/sharepoint-server/userstabsp.png)](media/sharepoint-server/userstabsp.png#lightbox)
 
-The SharePoint On-premises connector supports the existing Access Control List (ACL) on given items. Indexed data appears in the search results and is visible only to users who have permission to view it. Microsoft 365 experiences understand and honor Entra ID permissions. To support Access Control Lists on items, we require that Active Directory identities and Entra ID Identities are synced.
+The SharePoint on-premises connector supports the existing Access Control List (ACL) on given items. Indexed data appears in the search results and is visible only to users who have permission to view it. Microsoft 365 experiences understand and honor Entra ID permissions. To support Access Control Lists on items, we require that Active Directory identities and Entra ID Identities are synced.
 
 ### Content
 
