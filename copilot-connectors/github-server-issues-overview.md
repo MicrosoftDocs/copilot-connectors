@@ -52,7 +52,7 @@ By connecting GitHub Issues to these agents, you can build experiences that:
 - Summarize related issues for a given feature or incident.
 - Help teams plan sprints and releases using live issue data.
 
-### Eaxmple prompts
+### Example prompts
 
 The following examples show prompts that agent builders can use to help their users retrieve information from GitHub Server Issues:
 

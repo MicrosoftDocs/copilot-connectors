@@ -30,7 +30,7 @@ The following are the key benefits of the Veeva Vault RIM Copilot connector:
 
 Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
-### Eaxmple prompts
+### Example prompts
 
 The following examples show prompts that agent builders can use to help their users retrieve information from Veeva Vault RIM:
 
