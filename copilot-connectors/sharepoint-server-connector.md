@@ -9,12 +9,12 @@ ms.topic: install-set-up-deploy
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the SharePoint Server Microsoft 365 Copilot connector."
-ms.date: 08/15/2025
+ms.date: 03/30/2026
 ---
 
 # SharePoint Server Microsoft 365 Copilot connector (preview)
 
-SharePoint Server Copilot Connector (Graph Connector) allows users in your organization to search for content stored in an on-premises SharePoint Server farm or use the content in Copilot for specific use cases and scenarios. It crawls documents and site pages from SharePoint on-premises farms. On-premises versions of SharePoint Server 2016, 2019, and Subscription Edition (SPSE) are supported.
+The SharePoint Server Microsoft 365 Copilot Connector allows users in your organization to search for content stored in an on-premises SharePoint Server farm or use the content in Copilot for specific use cases and scenarios. It crawls documents and site pages from SharePoint on-premises farms. On-premises versions of SharePoint Server 2016, 2019, and Subscription Edition (SPSE) are supported.
 
 > [!NOTE]
 > Active Directory synchronization is a prerequisite for enabling security trimming in SharePoint Server content search. For more information, see [Microsoft Entra Connect Sync: Understand and customize synchronization](/entra/identity/hybrid/connect/how-to-connect-sync-whatis).
@@ -45,9 +45,9 @@ SharePoint Server Copilot Connector (Graph Connector) allows users in your organ
 
 - [Staged rollout](staged-rollout.md) is not supported in SharePoint On-premises connections.
 
-- Creating a Declarative Agent (DA) for SharePoint On-premises currently requires a pro code approach using Visual Studio Code and a manually authored DA manifest, [Declarative agent schema 1.2 for Microsoft 365 Copilot | Microsoft Learn](/microsoft-365/copilot/extensibility/declarative-agent-manifest-1.2?tabs=json).
+- Creating a declarative agent for SharePoint On-premises currently requires using Visual Studio Code and a manually authored [declarative agent manifest](/microsoft-365/copilot/extensibility/declarative-agent-manifest-1.6).
 
-- Creating custom engine agents in Microsoft Copilot Studio using SharePoint On-premises connector content is not supported.
+- Creating custom engine agents in Microsoft Copilot Studio using the SharePoint On-premises connector content is not supported.
 
 ## Before you get started
 
