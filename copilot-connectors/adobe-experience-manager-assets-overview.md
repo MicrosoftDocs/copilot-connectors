@@ -37,7 +37,7 @@ The following table lists use cases for different audiences.
 
 Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
-### Eaxmple prompts
+### Example prompts
 
 The following examples show prompts that agent builders can use to help their users retrieve information from Adobe Experience Manager Assets:
 
@@ -55,7 +55,7 @@ The Adobe Experience Manager Assets connector allows users to:
 - Create workflows using this connection with plugins from Copilot Studio.
 - Apply ingestion filters based on page paths (exact matches and regular-expression phrase matches).
 - Apply ingestion filters based on metadata properties (standard and custom) using JSON paths and operators.
-- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to help users find relevant content.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to help users find relevant content.
 
 The Adobe Experience Manager Assets connector has the following limitations:
 

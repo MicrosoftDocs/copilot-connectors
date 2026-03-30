@@ -40,7 +40,7 @@ By incorporating GitHub pull request data into agents, developers allow users to
 - Identify PRs tied to feature work, milestones, or infrastructure changes.
 - Provide visibility into engineering progress during planning and release cycles.
 
-### Eaxmple prompts
+### Example prompts
 
 The following examples show prompts that agent builders can use to help users retrieve information from GitHub Server Pull Requests.
 

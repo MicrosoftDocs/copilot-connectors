@@ -36,7 +36,7 @@ Common use cases include:
 
 Developers can use the Shortcut Story connector as a knowledge source in declarative agents built with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
-### Eaxmple prompts
+### Example prompts
 
 Agent builders can use the following prompts to help users retrieve information from Shortcut stories by department or role:
 
