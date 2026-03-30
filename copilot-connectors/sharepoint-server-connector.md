@@ -47,7 +47,7 @@ The SharePoint Server Microsoft 365 Copilot connector allows users in your organ
 
 - Creating a declarative agent for SharePoint On-premises currently requires using Visual Studio Code and a manually authored [declarative agent manifest](/microsoft-365/copilot/extensibility/declarative-agent-manifest-1.6).
 
-- Creating custom engine agents in Microsoft Copilot Studio using the SharePoint On-premises connector content is not supported.
+- Creating custom engine agents in Microsoft Copilot Studio using the SharePoint on-premises connector content is not supported.
 
 ## Before you get started
 
