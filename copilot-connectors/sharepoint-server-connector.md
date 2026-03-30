@@ -97,7 +97,8 @@ Choose the authentication type from the drop-down menu of options. The supported
 > [!NOTE]
 > - At a minimum, the account used for authentication must have **Full Read** permission at the Web Application level in SharePoint, regardless of the authentication type selected. In most deployments this account is also used as the indexing account, for which we recommend granting full control at the Web Application level or making it a farm administrator, as described earlier in this article.
 > - Basic authentication is **not** recommended. It is currently included for compatibility with legacy systems but may be removed in the future.
-> - For Windows authentication, use Domain\username format in the "Username" field. Only NTLM is currently supported; Kerberos and ADFS are not.
+> - For Windows authentication, use Domain\username format in the "Username" field. Only NTLM is currently supported; Kerberos is not supported.
+> - Active Directory Federation Services (ADFS) authentication is not supported.
 > - Unlike Basic and Windows, Entra ID (OIDC) authentication requires additional configuration, as outlined in the next section.
 
 To authenticate with the provided credentials, select Sign-in to load the list of available site collections.
