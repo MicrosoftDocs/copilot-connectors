@@ -177,7 +177,7 @@ $t.Update()
 | `<EntraIdAppIdentifierUri>` | Application ID URI of the Entra ID app registration | `api://xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
 
 > [!TIP]
-> If you are crawling multiple site collections (e.g., `https://portal.contoso.com` and `https://hr.contoso.com`), you must repeat the `$t.ScopedClientIdentifier.Add()` command for each unique URL before calling `$t.Update()`.
+> If you are crawling multiple site collections (for example, `https://portal.contoso.com` and `https://hr.contoso.com`), you must run `$t.ScopedClientIdentifier.Add()` for each unique URL. You can either batch multiple `.Add()` calls and then run `$t.Update()` once, or call `$t.Update()` after each individual `.Add()`.
 
 ### 5. Select Site Collections
 
