@@ -55,7 +55,7 @@ The Adobe Experience Manager Assets connector allows users to:
 - Create workflows using this connection with plugins from Copilot Studio.
 - Apply ingestion filters based on page paths (exact matches and regular-expression phrase matches).
 - Apply ingestion filters based on metadata properties (standard and custom) using JSON paths and operators.
-- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to help users find relevant content.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to help users find relevant content.
 
 The Adobe Experience Manager Assets connector has the following limitations:
 
