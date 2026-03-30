@@ -51,17 +51,17 @@ The SharePoint Server Microsoft 365 Copilot connector allows users in your organ
 
 ## Before you get started
 
-### Install the Graph  Agent
+### Install the Microsoft Graph connector agent
 
-To index your SharePoint on-premises content, you must install and register the Graph Connector Agent (GCA). See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more. The Graph Connector Agent can be installed on the same machine as the SharePoint server or on a machine that has access to the SharePoint on-premises server.
+To index your SharePoint on-premises content, you must install and register the Microsoft Graph connector agent. See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more. The agent can be installed on the same computer as the SharePoint server or on a computer that has access to the SharePoint on-premises server.
 
-Each source (SharePoint web application) can be configured in one connection. One Graph Connector Agent can be used to source content from multiple connections of SharePoint on-premises sources. It's advised to limit the number of connections to an agent to three sources to ensure an optimal ingestion rate.
+Each source (SharePoint web application) can be configured in one connection. One Microsoft Graph connector agent can be used to source content from multiple connections of SharePoint on-premises sources. We recommend limiting the number of connections to an agent to three sources to ensure an optimal ingestion rate.
 
 The account used for indexing should have full control access to the SharePoint web applications or should be a farm admin. Items that the account doesn't have permission to are skipped during indexing.
 
 ## Mandatory and optional settings
 
-To get you quickly started with Copilot connectors, the steps in the setup process are split into two groups:
+To get started with Copilot connectors, the steps in the setup process are split into two groups:
 
 **Mandatory settings** - Default setup screen that you see when you enter the setup flow. You must provide inputs for these fields to create the connection. The inputs (connection name, data source settings, etc.) vary based on your organization's context and use case.
 
