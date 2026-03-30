@@ -36,7 +36,7 @@ Developers can use the Jira Data Center connector as a data source in declarativ
 - [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder)
 - [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit)
 
-### Eaxmple prompts
+### Example prompts
 
 The following examples show prompts that agent builders can use to help their users retrieve information from Jira Data Center:
 

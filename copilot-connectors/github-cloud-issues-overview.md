@@ -37,7 +37,7 @@ Developers can use this connector as a knowledge source in declarative agents th
 - [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/copilot-studio-agent-builder)
 - [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit)
 
-### Eaxmple prompts
+### Example prompts
 
 The following table lists examples of prompts that users can use to retrieve information from the GitHub Cloud Issues connector.
 

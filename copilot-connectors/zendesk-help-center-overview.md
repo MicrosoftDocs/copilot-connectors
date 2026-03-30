@@ -30,7 +30,7 @@ The Zendesk Help Center connector helps organizations centralize support knowled
 
 Developers can use the Zendesk Help Center connector as a knowledge source in declarative agents built with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/copilot-studio-lite), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
-### Eaxmple prompts
+### Example prompts
 
 The following examples show prompts users can use to retrieve information from Zendesk Help Center:
 

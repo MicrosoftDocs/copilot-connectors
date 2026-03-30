@@ -29,7 +29,7 @@ Organizations that use Smartsheet often need to make project plans, schedules, a
 
 Developers can use the Smartsheet Sheet connector as a data source in declarative agents built with Copilot Studio or Agent Builder in Microsoft 365 Copilot.
 
-### Eaxmple prompts
+### Example prompts
 
 The following examples show prompts that users can use to retrieve information from Smartsheet:
 

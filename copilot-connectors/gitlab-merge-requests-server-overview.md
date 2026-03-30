@@ -44,7 +44,7 @@ By incorporating GitLab merge request data into agents, developers enable users 
 - Identify merge requests linked to features, milestones, or infrastructure changes.
 - Gain visibility into engineering progress during planning and release cycles.
 
-### Eaxmple prompts
+### Example prompts
 
 The following examples show prompts that agent builders can use to help users retrieve information from GitLab Merge Requests Server:
 
