@@ -60,15 +60,15 @@ For guidance, see [Enhance Copilot discovery of connector content](enhance-copil
 
 You can customize the default values for connector settings. On the connector page in the admin center, choose **Custom setup**. This option includes three tabs:
 
-- **User**
-- **Data**
-- **Crawl**
+- **Users**
+- **Content**
+- **Sync**
 
-### User settings
+### Users settings
 
 :::image type="content" alt-text="Screenshot that shows the User configuration screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/customize-user.png" lightbox="media/deployment-overview/customize-user.png":::
 
-On the **User** tab, under **Access Permissions**, choose whether indexed data is visible to:
+On the **Users** tab, under **Access Permissions**, choose whether indexed data is visible to:
 
 - Only users with access to the content
 - Everyone in the organization
@@ -76,11 +76,11 @@ On the **User** tab, under **Access Permissions**, choose whether indexed data i
 By default, users are mapped by matching their email to `UserPrincipalName` or `Mail` in Microsoft Entra ID. In the **Map Identities** section, you can provide a custom mapping formula.
 
 
-### Data settings
+### Content settings
 
 :::image type="content" alt-text="Screenshot that shows the Content configuration screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/customize-data.png" lightbox="media/deployment-overview/customize-data.png":::
 
-On the **Data** tab, under **Manage properties**, you can:
+On the **Content** tab, under **Manage properties**, you can:
 
 - Configure properties to be searchable, queryable, or refinable.
 - Assign semantic labels and aliases to improve search relevance.
@@ -134,11 +134,11 @@ Search schema attributes include options to **Query**, **Search**, **Retrieve**,
 
 Only string properties can be marked as searchable.
 
-### Crawl settings
+### Sync settings
 
 :::image type="content" alt-text="Screenshot of the crawl settings in the Microsoft 365 admin center." source="media/deployment-overview/customize-crawl.png" lightbox="media/deployment-overview/customize-crawl.png":::
 
-On the **Crawl** tab, you can configure how often data syncs between the source and the connector index.
+On the **Sync** tab, you can configure how often data syncs between the source and the connector index.
 
 - **Full crawl**: Syncs all data at scheduled intervals.
 - **Incremental crawl**: Syncs only new or changed data.
@@ -146,7 +146,7 @@ On the **Crawl** tab, you can configure how often data syncs between the source 
 > [!NOTE]
 > Incremental crawls don't support permission updates. Run full crawls periodically to maintain sync accuracy.
 
-### Crawl scheduling
+#### Crawl scheduling
 
 Configure crawl frequency and timing:
 
@@ -156,7 +156,7 @@ Configure crawl frequency and timing:
 - **Start time**: When the crawl begins
 - **Reset**: Revert to default schedule
 
-If fields are left blank, Copilot connectors choose optimal crawl times.
+If fields are left blank, the optimal crawl times are set by default.
 
 ### IP firewall rules
 
