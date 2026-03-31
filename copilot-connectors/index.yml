@@ -47,9 +47,9 @@ landingContent:
           - text: Staged rollout
             url: /microsoft-365/copilot/connectors/staged-rollout
           - text: Map Entra identities
-            url: /microsoft-365/copilot/connectors/map-entra-identities
+            url: /microsoft-365/copilot/connectors/map-entra-id
           - text: Map non-Entra identities
-            url: /microsoft-365/copilot/connectors/map-non-entra-identities
+            url: /microsoft-365/copilot/connectors/map-non-entra-id
           - text: Enhance Copilot discovery
             url: /microsoft-365/copilot/connectors/enhance-copilot-discovery
           - text: Connector agent
