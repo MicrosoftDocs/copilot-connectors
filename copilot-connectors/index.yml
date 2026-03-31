@@ -71,11 +71,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Manage connections
-            url: /microsoft-365/copilot/connectors/manage-connections
+            url: /microsoft-365/copilot/connectors/manage-connector
           - text: View connection details
             url: /microsoft-365/copilot/connectors/view-details
           - text: Validate indexed content
-            url: /microsoft-365/copilot/connectors/validate-indexed-content
+            url: /microsoft-365/copilot/connectors/indexed-content
           - text: Monitor errors
             url: /microsoft-365/copilot/connectors/error-responses
 
