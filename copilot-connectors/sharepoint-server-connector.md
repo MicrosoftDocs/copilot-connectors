@@ -142,9 +142,9 @@ Before using the Microsoft Entra ID-based authentication method, ensure the foll
    ![Screenshot that shows how to Add a Client Application.](media/sharepoint-server-connector/add-a-client-application.png)
 
 
-###### Configure ScopedClientIdentifier
+###### Configure the scoped client identifier
 
-When using OIDC authentication with SharePoint Server, you must additionally set the `ScopedClientIdentifier` property on the `SPTrustedIdentityTokenIssuer` for the Graph Connector to authenticate and crawl your content. This property maps each SharePoint site URL to an Entra ID application registration (the app identity configured during your OIDC setup), so SharePoint knows which app is permitted to access each site.
+When using OIDC authentication with SharePoint Server, you must additionally set the `ccopedClientIdentifier` property on the `sPTrustedIdentityTokenIssuer` for the Copilot connector to authenticate and crawl your content. This property maps each SharePoint site URL to an Entra ID application registration (the app identity configured during your OIDC setup), so SharePoint knows which app is permitted to access each site.
 
 > [!IMPORTANT]
 > Setting the `ScopedClientIdentifier` is not required for OIDC to function in SharePoint Server itself, but it is mandatory for the connector. Without this mapping, SharePoint Server cannot verify the connector's identity for the site, resulting in a 401 Unauthorized error.
@@ -152,7 +152,7 @@ When using OIDC authentication with SharePoint Server, you must additionally set
 Before you begin, have the following ready:
 
 - **Application ID URI**: Set in the [Configure "Expose an API"](#configure-expose-an-api) section above (e.g., `api://xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`).
-- **Token Issuer Name**: The name of the `SPTrustedIdentityTokenIssuer` — the SharePoint object that trusts your Entra ID identity provider — created in step 3 of your initial OIDC setup. If you don't remember the name, run `Get-SPTrustedIdentityTokenIssuer` without parameters to list all configured issuers.
+- **Token issuer name**: The name of the `sPTrustedIdentityTokenIssuer` — the SharePoint object that trusts your Entra ID identity provider — created in step 3 of your initial OIDC setup. If you don't remember the name, run `get-SPTrustedIdentityTokenIssuer` without parameters to list all configured issuers.
 
 Run the following PowerShell commands in the SharePoint Management Shell as a Farm Administrator:
 
@@ -172,7 +172,7 @@ $t.Update()
 
 | Placeholder | Description | Example |
 |---|---|---|
-| `<TrustedIdentityTokenIssuerName>` | Name of the SPTrustedIdentityTokenIssuer created during OIDC setup | `OIDC Entra ID` |
+| `<TrustedIdentityTokenIssuerName>` | Name of the sPTrustedIdentityTokenIssuer created during OIDC setup | `OIDC Entra ID` |
 | `<SharePointSiteUrl>` | URL of the SharePoint site collection | `https://sharepoint.contoso.com/` |
 | `<EntraIdAppIdentifierUri>` | Application ID URI of the Entra ID app registration | `api://xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
 
