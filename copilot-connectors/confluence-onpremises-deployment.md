@@ -166,6 +166,30 @@ You can adjust the synchronization frequency:
 
 For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
+### API endpoints
+
+
+
+|Endpoint|Auth application permission|User permission|
+|----|----|----|
+|GET /rest/api/content/search|Read|User|
+|GET /rest/api/space|Read|User|
+|GET /rest/api/content/{id}|Read|User|
+|GET /rest/api/content/{id}/child/comment|Read|User|
+|GET /rest/api/content/{id}/child/page|Read|User|
+|GET /rest/api/content/{id}/restriction/byOperation/{op}|Read|User|
+|GET /rest/api/group|Read|User|
+|GET /rest/api/group/{groupName}/member|Admin|Admin|
+|GET /rest/mobile/1.0/profile/{username}|Admin|Admin|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/toplevelpages|Read|User|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpages|Read|User|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpagesV2|Read|User|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/permissions|Read|User|
+|GET /rest/api/msplugin/1.0/healthcheck/version|Read|User|
+
+
+
+
 ## Related content
 
 - [Confluence On-premises connector overview](confluence-onpremises-overview.md)
