@@ -9,12 +9,12 @@ ms.topic: install-set-up-deploy
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the SharePoint Server Microsoft 365 Copilot connector."
-ms.date: 08/15/2025
+ms.date: 03/30/2026
 ---
 
 # SharePoint Server Microsoft 365 Copilot connector (preview)
 
-SharePoint Server Copilot Connector (Graph Connector) allows users in your organization to search for content stored in an on-premises SharePoint Server farm or use the content in Copilot for specific use cases and scenarios. It crawls documents and site pages from SharePoint on-premises farms. On-premises versions of SharePoint Server 2016, 2019, and Subscription Edition (SPSE) are supported.
+The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for content stored in an on-premises SharePoint Server farm or use the content in Copilot for specific use cases and scenarios. It crawls documents and site pages from SharePoint on-premises farms. On-premises versions of SharePoint Server 2016, 2019, and Subscription Edition (SPSE) are supported.
 
 > [!NOTE]
 > Active Directory synchronization is a prerequisite for enabling security trimming in SharePoint Server content search. For more information, see [Microsoft Entra Connect Sync: Understand and customize synchronization](/entra/identity/hybrid/connect/how-to-connect-sync-whatis).
@@ -45,21 +45,23 @@ SharePoint Server Copilot Connector (Graph Connector) allows users in your organ
 
 - [Staged rollout](staged-rollout.md) is not supported in SharePoint On-premises connections.
 
-- Creating a Declarative Agent (DA) for SharePoint On-premises currently requires a pro code approach using Visual Studio Code and a manually authored DA manifest, [Declarative agent schema 1.2 for Microsoft 365 Copilot | Microsoft Learn](/microsoft-365/copilot/extensibility/declarative-agent-manifest-1.2?tabs=json).
+- Creating a declarative agent for SharePoint On-premises currently requires using Visual Studio Code and a manually authored [declarative agent manifest](/microsoft-365/copilot/extensibility/declarative-agent-manifest-1.6).
+
+- Creating custom engine agents in Microsoft Copilot Studio using the SharePoint on-premises connector content is not supported.
 
 ## Before you get started
 
-### Install the Graph Connector Agent
+### Install the Microsoft Graph connector agent
 
-To index your SharePoint On-premises content, you must install and register the Graph Connector Agent (GCA). See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more. The Graph Connector Agent can be installed on the same machine as the SharePoint server or on a machine that has access to the SharePoint On-premises server.
+To index your SharePoint on-premises content, you must install and register the Microsoft Graph connector agent. See [Install the Microsoft Graph connector agent](connector-agent.md) to learn more. The agent can be installed on the same computer as the SharePoint server or on a computer that has access to the SharePoint on-premises server.
 
-Each source (SharePoint web application) can be configured in one connection. One Graph Connector Agent can be used to source content from multiple connections of SharePoint On-premises sources. It's advised to limit the number of connections to an agent to three sources to ensure an optimal ingestion rate.
+Each source (SharePoint web application) can be configured in one connection. One Microsoft Graph connector agent can be used to source content from multiple connections of SharePoint on-premises sources. We recommend limiting the number of connections to an agent to three sources to ensure an optimal ingestion rate.
 
 The account used for indexing should have full control access to the SharePoint web applications or should be a farm admin. Items that the account doesn't have permission to are skipped during indexing.
 
 ## Mandatory and optional settings
 
-To get you quickly started with Copilot connectors, the steps in the setup process are split into two groups:
+To get started with Copilot connectors, the steps in the setup process are split into two groups:
 
 **Mandatory settings** - Default setup screen that you see when you enter the setup flow. You must provide inputs for these fields to create the connection. The inputs (connection name, data source settings, etc.) vary based on your organization's context and use case.
 
@@ -71,7 +73,7 @@ To get you quickly started with Copilot connectors, the steps in the setup proce
 
 For more information, see general [setup instructions](./deployment-overview.md).
 
-[![Screenshot that shows connection creation screen for Microsoft 365 Copilot Connector for SharePoint Server.](media/sharepoint-server/firstscreen.png)](media/sharepoint-server/firstscreen.png#lightbox).
+[![Screenshot that shows connection creation screen for Microsoft 365 Copilot connector for SharePoint Server.](media/sharepoint-server/firstscreen.png)](media/sharepoint-server/firstscreen.png#lightbox).
 
 ### 1. Display name
 
@@ -93,15 +95,15 @@ Choose the authentication type from the drop-down menu of options. The supported
 - Microsoft Entra ID OIDC
 
 > [!NOTE]
-> - Basic authentication is **not** recommended.  It is currently included for compatibility with legacy systems but may be removed in the future. 
-> - Use Domain\username format in the "Username" field to authenticate to the SharePoint server instance using the Windows option.
-> - For Windows authentication, only NTLM is currently supported, Kerberos is not.
-> - ADFS is currently not supported.
-> - Unlike Basic and Windows, Entra ID (OIDC) authentication requires additional configuration, as outlined in the next section. 
+> - At a minimum, the account used for authentication must have **Full Read** permission at the Web Application level in SharePoint, regardless of the authentication type selected. In most deployments this account is also used as the indexing account, for which we recommend granting full control at the Web Application level or making it a farm administrator, as described earlier in this article.
+> - Basic authentication is **not** recommended. It is currently included for compatibility with legacy systems but may be removed in the future.
+> - For Windows authentication, use Domain\username format in the "Username" field. Only NTLM is currently supported; Kerberos is not supported.
+> - Active Directory Federation Services (ADFS) authentication is not supported.
+> - Unlike Basic and Windows, Entra ID (OIDC) authentication requires additional configuration, as outlined in the next section.
 
 To authenticate with the provided credentials, select Sign-in to load the list of available site collections.
 
-#### Microsoft Entra ID-based authentication for Microsoft SharePoint Server Copilot Connector
+#### Microsoft Entra ID-based authentication for Microsoft SharePoint Server Copilot connector
 
 > [!NOTE]
 > The steps in this subsection are only required if you're using Microsoft Entra ID (OIDC) authentication.  If you're using Windows or Basic, you can skip to step 5. Select Site Collections.
@@ -138,7 +140,44 @@ Before using the Microsoft Entra ID-based authentication method, ensure the foll
 1. Under "Authorized Scopes", select the user_impersonation scope for your web app and select "Add application".
 
    ![Screenshot that shows how to Add a Client Application.](media/sharepoint-server-connector/add-a-client-application.png)
-   
+
+
+###### Configure the scoped client identifier
+
+When using OIDC authentication with SharePoint Server, you must additionally set the `ccopedClientIdentifier` property on the `sPTrustedIdentityTokenIssuer` for the Copilot connector to authenticate and crawl your content. This property maps each SharePoint site URL to an Entra ID application registration (the app identity configured during your OIDC setup), so SharePoint knows which app is permitted to access each site.
+
+> [!IMPORTANT]
+> Setting the `ScopedClientIdentifier` is not required for OIDC to function in SharePoint Server itself, but it is mandatory for the connector. Without this mapping, SharePoint Server cannot verify the connector's identity for the site, resulting in a 401 Unauthorized error.
+
+Before you begin, have the following ready:
+
+- **Application ID URI**: Set in the [Configure "Expose an API"](#configure-expose-an-api) section above (e.g., `api://xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`).
+- **Token issuer name**: The name of the `sPTrustedIdentityTokenIssuer` — the SharePoint object that trusts your Entra ID identity provider — created in step 3 of your initial OIDC setup. If you don't remember the name, run `get-SPTrustedIdentityTokenIssuer` without parameters to list all configured issuers.
+
+Run the following PowerShell commands in the SharePoint Management Shell as a Farm Administrator:
+
+```powershell
+# Get the existing trusted identity token issuer
+$t = Get-SPTrustedIdentityTokenIssuer -Identity "<TrustedIdentityTokenIssuerName>"
+
+# (Optional) Verify the current ScopedClientIdentifier value
+$t.ScopedClientIdentifier
+
+# Add the scoped client identifier for the SharePoint site
+# The .Add() method requires a Uri object (not a plain string) and the Application ID URI
+$uri = New-Object System.Uri("<SharePointSiteUrl>")
+$t.ScopedClientIdentifier.Add($uri, "<EntraIdAppIdentifierUri>")
+$t.Update()
+```
+
+| Placeholder | Description | Example |
+|---|---|---|
+| `<TrustedIdentityTokenIssuerName>` | Name of the sPTrustedIdentityTokenIssuer created during OIDC setup | `OIDC Entra ID` |
+| `<SharePointSiteUrl>` | URL of the SharePoint site collection | `https://sharepoint.contoso.com/` |
+| `<EntraIdAppIdentifierUri>` | Application ID URI of the Entra ID app registration | `api://xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
+
+> [!TIP]
+> If you are crawling multiple site collections (for example, `https://portal.contoso.com` and `https://hr.contoso.com`), you must run `$t.ScopedClientIdentifier.Add()` for each unique URL. You can either batch multiple `.Add()` calls and then run `$t.Update()` once, or call `$t.Update()` after each individual `.Add()`.
 
 ### 5. Select Site Collections
 
@@ -180,7 +219,7 @@ The default and preferred option is "Only people with access to this data source
 
 [![Screenshot that shows users tab](media/sharepoint-server/userstabsp.png)](media/sharepoint-server/userstabsp.png#lightbox)
 
-The SharePoint On-premises connector supports the existing Access Control List (ACL) on given items. Indexed data appears in the search results and is visible only to users who have permission to view it. Microsoft 365 experiences understand and honor Entra ID permissions. To support Access Control Lists on items, we require that Active Directory identities and Entra ID Identities are synced.
+The SharePoint on-premises connector supports the existing Access Control List (ACL) on given items. Indexed data appears in the search results and is visible only to users who have permission to view it. Microsoft 365 experiences understand and honor Entra ID permissions. To support Access Control Lists on items, we require that Active Directory identities and Entra ID Identities are synced.
 
 ### Content
 
