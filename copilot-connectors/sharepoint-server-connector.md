@@ -77,7 +77,7 @@ For more information, see general [setup instructions](./deployment-overview.md)
 
 ### 1. Display name
 
-A display name is a user-facing name in Copilot. Choose the right display name for your users to identify with the content of the data source. The name is also useful for users who wish to add Graph connectors knowledge to their Copilot Agents. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365/copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is a user-facing name in Copilot. Choose the right display name for your users to identify with the content of the data source. The name is also useful for users who wish to add Graph connectors knowledge to their Copilot Agents. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. SharePoint Instance URL
 
@@ -271,4 +271,4 @@ Default values of refresh interval:
 
 ### Set up search result page
 
-After creating the connection, you need to customize the search results page with verticals and result types. To learn about customizing search results, review how to [manage verticals](/microsoft-365/copilot/connectors/manage-verticals) and [result types](/microsoft-365/copilot/connectors/manage-result-types).
+After creating the connection, you need to customize the search results page with verticals and result types. To learn about customizing search results, review how to [manage verticals](/microsoftsearch/manage-verticals) and [result types](/microsoftsearch/manage-result-types).
