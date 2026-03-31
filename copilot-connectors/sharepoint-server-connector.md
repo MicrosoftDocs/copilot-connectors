@@ -156,7 +156,7 @@ Before you begin, have the following ready:
 
 Run the following PowerShell commands in the SharePoint Management Shell as a Farm Administrator:
 
-```PowerShell
+```powershell
 # Get the existing trusted identity token issuer
 $t = Get-SPTrustedIdentityTokenIssuer -Identity "<TrustedIdentityTokenIssuerName>"
 
