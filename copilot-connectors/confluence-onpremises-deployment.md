@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 03/19/2026
+ms.date: 03/31/2026
 ms.localizationpriority: Medium
 ---
 
@@ -168,8 +168,6 @@ For more information, see [Guidelines for sync settings](deployment-overview.md#
 
 ### API endpoints
 
-
-
 |Endpoint|Auth application permission|User permission|
 |----|----|----|
 |GET /rest/api/content/search|Read|User|
@@ -186,9 +184,6 @@ For more information, see [Guidelines for sync settings](deployment-overview.md#
 |GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpagesV2|Read|User|
 |GET /rest/api/msplugin/1.0/content/service/space/{key}/permissions|Read|User|
 |GET /rest/api/msplugin/1.0/healthcheck/version|Read|User|
-
-
-
 
 ## Related content
 
