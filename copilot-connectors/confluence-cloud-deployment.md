@@ -1,5 +1,5 @@
 ---
-ms.date: 01/05/2026
+ms.date: 04/01/2026
 title: "Deploy the Confluence Cloud Microsoft 365 Copilot connector in the Microsoft 365 Admin Center"
 ms.author: lauragra
 author: lauragra
@@ -191,9 +191,9 @@ The refresh interval determines how often your data is synchronized between the 
 
 You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
-## API Endpoints
+#### API endpoints
 
-Here are the API endpoints that Confluence Cloud connector calls to crawl data.
+The following table lists the API endpoints that the connector calls to crawl data and the permissions required for each endpoint.
 
 | Endpoint | OAuth Scope  |
 |----------|---------------------------|
