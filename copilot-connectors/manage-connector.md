@@ -60,7 +60,7 @@ The default behavior is visible by default, with changes syncing automatically w
 > [!NOTE]
 > After you update the visibility settings at the connection level, allow up to 30 minutes for the changes to propagate across all Copilot experiences.
 
-## Manage schema recommendations for custom Copilot connectors
+## View schema recommendations for custom Copilot connectors
 
 When you build a custom Copilot connector, the schema you define determines how your content is indexed and surfaced in Microsoft 365 Copilot. To help you get started, the Microsoft 365 admin center provides schema recommendations for published custom connectors.
 
@@ -72,8 +72,8 @@ Schema recommendations currently check for four missing semantic labels:
 
 - **`title`** – Semantically indexes the primary display name of an item. Required for meaningful result rendering and relevant Copilot results.
 - **`url`** – Identifies the canonical link to the source item. Required for Copilot citations to link back to the source system.
-- **Last modified by** – Identifies who last updated an item. Improves attribution in Copilot responses.
-- **Last modified date time** – Indicates when an item was last updated. Enables Copilot to reason over recency and answer time-based questions.
+- **`lastModifiedBy`** – Identifies who last updated an item. Improves attribution in Copilot responses.
+- **`lastModifiedDateTime`** – Indicates when an item was last updated. Enables Copilot to reason over recency and answer time-based questions.
 
 :::image type="content" alt-text="Schema recommendations can be accessed via the connection detail panel." source="media/manage-connector/schema-recommendations-2.png" lightbox="media/manage-connector/schema-recommendations-2.png":::
 
