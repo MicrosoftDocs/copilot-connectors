@@ -33,7 +33,8 @@ Before you deploy the Confluence Cloud connector, make sure that the Confluence 
 
 To deploy the connector, you must meet the following prerequisites:
 
-- You must be an admin for your organization's Microsoft 365 tenant and your organization's Confluence site.
+- You must be an admin for your organization's Microsoft 365 tenant.
+- The service account used to crawl data from Confluence Cloud must have read access to the spaces and pages you want to index.
 - You must have authentication credentials with the right access.
 
 ## Deploy the connector
@@ -189,6 +190,29 @@ The refresh interval determines how often your data is synchronized between the 
 - **Incremental crawl** - Syncs new and modified content. Incremental crawls do not pick up ACL changes or deleted items. By default, incremental crawls run every 15 minutes.
 
 You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
+
+## API Endpoints
+
+Here are the API endpoints that Confluence Cloud connector calls to crawl data.
+
+| Endpoint | OAuth Scope  |
+|----------|---------------------------|
+| GET /wiki/rest/api/content/search | read:content-details:confluence |
+| GET /wiki/rest/api/space | read:space-details:confluence |
+| GET /wiki/rest/api/space/{spaceKey} | read:space-details:confluence |
+| GET /wiki/rest/api/group | read:group:confluence |
+| GET /wiki/rest/api/group/{groupId}/membersByGroupId | read:group:confluence, read:user:confluence |
+| GET /wiki/rest/api/content/{id}/label | read:label:confluence, read:content-details:confluence |
+| GET /wiki/rest/api/content/{id}/child/attachment | read:content-details:confluence |
+| GET /wiki/rest/api/content/{id}/child/attachment/{attId}/download | read:attachment:confluence |
+| GET /wiki/rest/api/content/{id}/child/comment | read:content-details:confluence |
+| GET /wiki/rest/api/user/bulk | read:user:confluence |
+| GET /wiki/api/v2/spaces | read:space:confluence |
+| GET /wiki/api/v2/spaces/{id}/permissions | read:space:confluence |
+| GET /wiki/api/v2/pages/{id}/inline-comments | read:comment:confluence |
+| GET /wiki/api/v2/pages/{id}/footer-comments | read:comment:confluence |
+| GET /wiki/api/v2/blogposts/{id}/inline-comments | read:comment:confluence |
+| GET /wiki/api/v2/blogposts/{id}/footer-comments | read:comment:confluence |
 
 ## Related content
 
