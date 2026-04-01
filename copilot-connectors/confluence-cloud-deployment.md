@@ -35,7 +35,8 @@ To deploy the connector, you must meet the following prerequisites:
 
 - You must be an admin for your organization's Microsoft 365 tenant.
 - The service account used to crawl data from Confluence Cloud must have read access to the spaces and pages you want to index.
-- You must have authentication credentials with the right access.
+- You must have authentication credentials with the appropriate access for both Microsoft 365 and Confluence Cloud.
+- You must be a Confluence admin, or have an Atlassian account with Confluence admin permissions, to register the OAuth integration in the Atlassian Developer console.
 
 ## Deploy the connector
 
