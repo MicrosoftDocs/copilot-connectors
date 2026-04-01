@@ -168,7 +168,7 @@ For more information, see [Guidelines for sync settings](deployment-overview.md#
 
 #### API endpoints
 
-The following table lists the API endpoints that the connector calls to crawl data and the permissions required for each endpoint.
+The following table lists the API endpoints that the connector calls to crawl data and the minimum permissions required for each endpoint.
 
 |Endpoint|Auth application permission|User permission|
 |----|----|----|
