@@ -161,12 +161,14 @@ You can customize content settings in the following ways:
 
 You can adjust the synchronization frequency:
 
-- **Incremental crawl**: Syncs new and modified content. Incremental crawls don't pick up ACL changes or deleted items. Default is every 15 minutes.
-- **Full crawl**: Performs a complete synchronization of all content. Full crawls detect deleted items and sync access control list (ACL) changes. Default is daily.
+- **Incremental crawl**: Syncs new and modified content. Incremental crawls don't pick up access control list (ACL) changes or deleted items. Default is every 15 minutes.
+- **Full crawl**: Performs a complete synchronization of all content. Full crawls detect deleted items and sync ACL changes. Default is daily.
 
 For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
-### API endpoints
+#### API endpoints
+
+The following table lists the API endpoints that the connector calls during crawls and the permissions required for each endpoint.
 
 |Endpoint|Auth application permission|User permission|
 |----|----|----|
