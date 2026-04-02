@@ -1,5 +1,5 @@
 ---
-ms.date: 02/23/2026
+ms.date: 04/02/2026
 title: "Grant table access to a service account in ServiceNow Knowledge"
 ms.author: lauragra
 author: lauragra
@@ -17,13 +17,14 @@ description: "Grant table access to a service account in ServiceNow that can be 
 
 This article explains how to grant table access to a service account in ServiceNow Knowledge. The process involves creating a role, assigning it to a user, and configuring row-level and field-level access controls.
 
+> [!TIP]
+> Instead of following the manual steps in this article, you can run background scripts that create the user, role, and ACLs automatically. For more information, see [Set up prerequisites using background scripts](servicenow-knowledge-setup-scripts.md).
+
 ## Prerequisites
 
 - Admin access in ServiceNow.
 - Elevate to the `security_admin` role to make changes to access control lists (ACLs).
   
-> [!TIP]
-> Instead of following the manual steps in this article, you can run background scripts that create the user, role, and ACLs automatically. For more information, see [Set up prerequisites using background scripts](servicenow-knowledge-setup-scripts.md).
 ## Create a user
 
 To create a user:
