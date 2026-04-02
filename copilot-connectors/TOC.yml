@@ -436,8 +436,6 @@ items:
       - name: Set up the ServiceNow service
         href: servicenow-catalog-admin-setup.md
         items:
-        - name: Set up using background scripts
-          href: servicenow-knowledge-setup-scripts.md
         - name: Grant table access to a user
           href: granting-table-access-servicenow-catalog.md
       - name: Deploy the connector
@@ -451,10 +449,10 @@ items:
       - name: Set up the ServiceNow service
         href: servicenow-knowledge-admin-setup.md
         items:
-        - name: Set up using background scripts
-          href: servicenow-knowledge-setup-scripts.md
         - name: Grant table access to a user
           href: granting-table-access-servicenow-knowledge.md
+        - name: Set up using background scripts
+          href: servicenow-knowledge-setup-scripts.md
       - name: Deploy the connector
         href: servicenow-knowledge-deployment.md
       - name: Troubleshooting
@@ -466,8 +464,6 @@ items:
       - name: Set up the ServiceNow service
         href: servicenow-tickets-admin-setup.md
         items:
-        - name: Set up using background scripts
-          href: servicenow-knowledge-setup-scripts.md
         - name: Grant table access to a user
           href: granting-table-access-servicenow-tickets.md
       - name: Deploy the connector
