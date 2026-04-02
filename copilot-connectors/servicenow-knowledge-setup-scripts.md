@@ -15,9 +15,9 @@ ms.date: 04/02/2026
 
 # Set up ServiceNow Knowledge connector prerequisites by using background scripts
 
-You can run background scripts that automate the configuration steps for the [ServiceNow Knowledge Microsoft 365 Copilot connector](servicenow-knowledge-overview.md) instead of completing the steps manually. The scripts are hosted on GitHub at [microsoft/copilot-servicenow-connector-setup-scripts](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts).
+You can run background scripts that automate the configuration steps for the [ServiceNow Knowledge Microsoft 365 Copilot connector](servicenow-knowledge-overview.md). These scripts perform the same configuration as the manual steps described in [Set up the ServiceNow service](servicenow-knowledge-admin-setup.md) and [Grant table access](granting-table-access-servicenow-knowledge.md). They don't introduce any extra permissions, plugins, or external connections.
 
-These scripts perform the same configuration as the manual steps described in [Set up the ServiceNow service](servicenow-knowledge-admin-setup.md) and [Grant table access](granting-table-access-servicenow-knowledge.md). They don't introduce any extra permissions, plugins, or external connections.
+The scripts are hosted in the [ServiceNow Knowledge connector setup scripts GitHub repo](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts).
 
 ## Prerequisites
 
@@ -27,6 +27,8 @@ The scripts require the following prerequisites:
 - Access to **System Definition > Scripts - Background** in your ServiceNow instance.
 
 ## Scripts overview
+
+The following table lists and describes the scripts.
 
 | Script | What it does | Equivalent manual steps |
 |--------|-------------|------------------------|
@@ -147,4 +149,4 @@ After you run the scripts, use the **Copilot Connector Checker Tool** to confirm
 - [Set up the ServiceNow service for connector ingestion](servicenow-knowledge-admin-setup.md)
 - [Grant table access to a service account in ServiceNow](granting-table-access-servicenow-knowledge.md)
 - [Deploy the ServiceNow Knowledge connector](servicenow-knowledge-deployment.md)
-- [Setup scripts on GitHub](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts)
+- [Setup scripts GitHub repo](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts)
