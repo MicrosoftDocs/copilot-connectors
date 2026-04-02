@@ -199,11 +199,11 @@ The following table lists the API endpoints that the connector calls to crawl da
 | Endpoint | OAuth Scope  |
 |----------|---------------------------|
 | GET /wiki/rest/api/content/search | read:content-details:confluence |
-| GET /wiki/rest/api/space | read:space-details:confluence |
-| GET /wiki/rest/api/space/{spaceKey} | read:space-details:confluence |
+| GET /wiki/rest/api/space | read:space:confluence |
+| GET /wiki/rest/api/space/{spaceKey} | read:space:confluence |
 | GET /wiki/rest/api/group | read:group:confluence |
 | GET /wiki/rest/api/group/{groupId}/membersByGroupId | read:group:confluence, read:user:confluence |
-| GET /wiki/rest/api/content/{id}/label | read:label:confluence, read:content-details:confluence |
+| GET /wiki/rest/api/content/{id}/label | read:content-details:confluence |
 | GET /wiki/rest/api/content/{id}/child/attachment | read:content-details:confluence |
 | GET /wiki/rest/api/content/{id}/child/attachment/{attId}/download | read:attachment:confluence |
 | GET /wiki/rest/api/content/{id}/child/comment | read:content-details:confluence |
