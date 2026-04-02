@@ -98,6 +98,8 @@ Hierarchical permissions are supported for the ServiceNow Knowledge connector. T
 ## Set up connector prerequisites
 
 The following sections describe the prerequisite steps to complete before deploying the ServiceNow connector.
+> [!TIP]
+> You can automate the prerequisite setup steps using background scripts instead of following the manual steps below. For more information, see [Set up prerequisites using background scripts](servicenow-knowledge-setup-scripts.md).
 
 ### Create service account and set up permissions to index items
 
