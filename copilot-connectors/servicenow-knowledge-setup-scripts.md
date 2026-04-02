@@ -1,5 +1,5 @@
 ---
-title: Set up ServiceNow Knowledge connector prerequisites by using background scripts - Microsoft 365 Copilot connectors
+title: Set up ServiceNow Knowledge connector prerequisites by using background scripts
 description: Use background scripts to automate the ServiceNow configuration steps required for the ServiceNow Knowledge Microsoft 365 Copilot connector, including service account creation, ACL setup, and Scripted REST API configuration.
 ms.author: mayanksethi
 author: mayanksethi
@@ -15,11 +15,13 @@ ms.date: 04/02/2026
 
 # Set up ServiceNow Knowledge connector prerequisites by using background scripts
 
-Instead of following the manual setup steps for the [ServiceNow Knowledge Microsoft 365 Copilot connector](servicenow-knowledge-overview.md), run background scripts that automate the configuration in a single run. The scripts are hosted on GitHub at [microsoft/copilot-servicenow-connector-setup-scripts](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts).
+You can run background scripts that automate the configuration steps for the [ServiceNow Knowledge Microsoft 365 Copilot connector](servicenow-knowledge-overview.md) instead of completing the steps manually. The scripts are hosted on GitHub at [microsoft/copilot-servicenow-connector-setup-scripts](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts).
 
 These scripts perform the same configuration as the manual steps described in [Set up the ServiceNow service](servicenow-knowledge-admin-setup.md) and [Grant table access](granting-table-access-servicenow-knowledge.md). They don't introduce any extra permissions, plugins, or external connections.
 
 ## Prerequisites
+
+The scripts require the following prerequisites:
 
 - ServiceNow admin account with the `security_admin` role elevated.
 - Access to **System Definition > Scripts - Background** in your ServiceNow instance.
@@ -34,13 +36,11 @@ These scripts perform the same configuration as the manual steps described in [S
 
 All scripts are:
 
-- **Idempotent** — safe to run multiple times. Existing records are reused, not duplicated.
-- **Non-destructive** — scripts don't modify, delete, or overwrite any existing records.
-- **Self-contained** — no external dependencies or network calls outside your ServiceNow instance.
+- **Idempotent** — Safe to run multiple times. Existing records are reused, not duplicated.
+- **Non-destructive** — Sripts don't modify, delete, or overwrite any existing records.
+- **Self-contained** — No external dependencies or network calls outside your ServiceNow instance.
 
-## Recommended order
-
-### Step 1. Create service account and grant row-level access
+## Step 1: Create service account and grant row-level access
 
 The `row_level_acl_setup.js` script creates a service account user, a custom role, assigns the role to the user, and creates row-level READ ACLs for all tables required by the connector.
 
@@ -59,7 +59,7 @@ The `row_level_acl_setup.js` script creates a service account user, a custom rol
 - It doesn't grant field-level access. If the service account can view rows but field values aren't visible, you need to grant field-level access separately. See [Step 3](#step-3-grant-field-level-access-if-needed).
 - It doesn't set the service account password. You must set the password manually after running the script.
 
-### Step 2. Verify row-level access
+## Step 2: Verify row-level access
 
 After running the row-level script, verify that the service account can access the required tables.
 
@@ -79,7 +79,7 @@ After running the row-level script, verify that the service account can access t
 
 If rows are returned with field values populated, skip to [Step 4](#step-4-set-up-rest-api-for-advanced-flow). If rows are returned but field values are empty, continue to Step 3.
 
-### Step 3. Grant field-level access (if needed)
+## Step 3: Grant field-level access (if needed)
 
 If the service account can view rows but field values appear empty, run the `field_level_acl_setup.js` script. This script creates a field-level READ ACL (`table.*`) for each configured table and links it to the custom role created in Step 1.
 
@@ -98,9 +98,9 @@ If the service account can view rows but field values appear empty, run the `fie
 1. Use a REST client to query a table as the service account (same approach as Step 2).
 1. Confirm that both rows **and** field values are now returned in the response.
 
-### Step 4. Set up REST API for Advanced flow
+## Step 4: Set up REST API for advanced flow
 
-If your ServiceNow instance uses advanced scripts in user criteria (rather than simple user or group-based criteria), select the **Advanced** flow when configuring the connector in the Microsoft 365 admin center. Run the `scripted_rest_api_setup.js` script to create the Scripted REST API endpoint that the connector calls to resolve user criteria at query time.
+If your ServiceNow instance uses advanced scripts in user criteria (rather than simple user or group-based criteria), select the **Advanced** flow when you configure the connector in the Microsoft 365 admin center. Run the `scripted_rest_api_setup.js` script to create the Scripted REST API endpoint that the connector calls to resolve user criteria at query time.
 
 To determine whether your instance uses advanced user criteria, see [Check for advanced scripts and hierarchical permissions](servicenow-knowledge-admin-setup.md#check-for-advanced-scripts-and-hierarchical-permissions-in-servicenow).
 
@@ -109,7 +109,7 @@ To determine whether your instance uses advanced user criteria, see [Check for a
 1. Copy the script from [scripted_rest_api_setup.js](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts/blob/main/scripted_rest_api_setup.js) and paste it into the script editor.
 
     > [!TIP]
-    > If your crawling service account uses a custom role instead of `admin`, update the `ROLE_NAME` variable at the top of the script before running it. For example: `var ROLE_NAME = 'copilot_connector';`
+    > If your crawling service account uses a custom role instead of `admin`, update the `ROLE_NAME` variable at the top of the script before you run it. For example: `var ROLE_NAME = 'copilot_connector';`
 
 1. Choose **Run script** and review the output summary. A successful run ends with:
 
@@ -135,7 +135,7 @@ Each script includes a clearly marked **CONFIGURATION** section at the top where
 
 ## Verify service account permissions
 
-After running the scripts, use the **Copilot Connector Checker Tool** to confirm that all required permissions are configured correctly:
+After you run the scripts, use the **Copilot Connector Checker Tool** to confirm that all required permissions are configured correctly:
 
 1. Open the [Copilot Connector Checker Tool](https://testconnectivity.microsoft.com/tests/CopilotServiceNowGraphConnectors/input).
 1. Choose the authentication type in the **Authentication Type** field: Basic or OAuth (recommended).
