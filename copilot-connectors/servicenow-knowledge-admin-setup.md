@@ -190,7 +190,10 @@ When the connector is set up and item sync is completed, you can check the index
 
 ### Set up REST API
 
-To allow the connector to fetch advanced user criteria, create a scripted REST API in your ServiceNow instance. 
+To allow the connector to fetch advanced user criteria, create a scripted REST API in your ServiceNow instance.
+
+> [!TIP]
+> You can automate this setup using a background script. For more information, see [Set up REST API for Advanced flow](servicenow-knowledge-setup-scripts.md#step-4-set-up-rest-api-for-advanced-flow). 
 
 - Elevate your role in ServiceNow to `security_admin`.
 
