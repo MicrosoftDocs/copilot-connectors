@@ -111,7 +111,7 @@ To determine whether your instance uses advanced user criteria, see [Check for a
 1. Copy the script from [scripted_rest_api_setup.js](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts/blob/main/scripted_rest_api_setup.js) and paste it into the script editor.
 
     > [!TIP]
-    > If your crawling service account uses a custom role instead of `admin`, update the `ROLE_NAME` variable at the top of the script before you run it. For example: `var ROLE_NAME = 'copilot_connector';`
+    > By default, the scripts use the `copilot_connector` role for the crawling service account. If your service account uses a different custom role, update the `ROLE_NAME` variable at the top of the script before you run it. For example: `var ROLE_NAME = 'copilot_connector';`
 
 1. Choose **Run script** and review the output summary. A successful run ends with:
 
