@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the Adobe Experience Manager Sites Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the Adobe Experience Manager Sites connector"
 ms.author: lauragra
 author: lauragra
 manager: lauragra
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for common errors that you might encounter when you deploy the Adobe Experience Manager Sites Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Adobe Experience Manager Sites Microsoft 365 Copilot connector
+# Troubleshoot issues with the Adobe Experience Manager Sites connector
 
 With the Adobe Experience Manager Sites Microsoft 365 Copilot connector, your organization can index published webpages from Adobe Experience Manager (AEM) Sites so people can discover and use them across Microsoft 365 Copilot and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the Adobe Experience Manager Sites connector or when the connector indexes data.
 

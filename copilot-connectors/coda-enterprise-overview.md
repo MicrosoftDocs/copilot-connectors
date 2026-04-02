@@ -1,5 +1,5 @@
 ---
-title: "Coda Enterprise Microsoft 365 Copilot connector overview"
+title: "Coda Enterprise connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Coda Enterprise Microsoft 365 Copilot connector."
 ---
 
-# Coda Enterprise Microsoft 365 Copilot connector overview
+# Coda Enterprise connector overview
 
 The Coda Enterprise Microsoft 365 Copilot connector allows your organization to index documents and pages from your Coda Enterprise environment. After you configure the connector, users can search and retrieve Coda content directly from Microsoft 365 Copilot and Microsoft Search. The connector maintains Coda access controls to ensure that users can only see content they have permission to view.
 

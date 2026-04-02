@@ -1,5 +1,5 @@
 ---
-title: "Bitbucket Knowledge Microsoft 365 Copilot connector troubleshooting"
+title: "Bitbucket Knowledge connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Bitbucket Knowledge Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Bitbucket Knowledge Microsoft 365 Copilot connector
+# Troubleshoot issues with the Bitbucket Knowledge connector
 
 The Bitbucket Knowledge connector indexes Markdown (.md) and text (.txt) files from your Bitbucket Cloud repositories so users can retrieve documentation through Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common issues you might encounter when deploying or indexing content with the Bitbucket Knowledge connector.
 

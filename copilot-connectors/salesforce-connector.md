@@ -1,6 +1,6 @@
 ---
 ms.date: 11/03/2020
-title: "Salesforce CRM Microsoft 365 Copilot connector"
+title: "Salesforce CRM connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind

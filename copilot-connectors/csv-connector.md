@@ -1,5 +1,5 @@
 --- 
-title: "CSV Microsoft 365 Copilot connector" 
+title: "CSV connector" 
 ms.author: lauragra 
 author: lauragra 
 manager: calvind 
@@ -12,7 +12,7 @@ description: "Set up the CSV Microsoft 365 Copilot connector for SharePoint or A
 ms.date: 03/08/2022
 ---
 
-# CSV Microsoft 365 Copilot connector
+# CSV connector
 
 The CSV Microsoft 365 Copilot connector allows your organization to ingest content from CSV files stored in SharePoint libraries and Azure Data Lake Storage (ADLS). After you configure the connector and index content from these sources, end users can find CSV files in Microsoft Search and Microsoft 365 Copilot.
 

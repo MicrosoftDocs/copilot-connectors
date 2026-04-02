@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Asana Microsoft 365 Copilot connector"
+title: "Deploy the Asana connector"
 ms.author: lauragra
 author: Kai-Cloud
 manager: zezhangzhao
@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Asana Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Asana Microsoft 365 Copilot connector
+# Deploy the Asana connector
 
 The Asana Microsoft 365 Copilot connector integrates Asana tasks into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant task information directly within apps like Microsoft Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the Asana connector. 
 

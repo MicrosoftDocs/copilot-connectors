@@ -1,6 +1,6 @@
 ---
 ms.date: 09/12/2024
-title: "PostgreSQL Microsoft 365 Copilot connector for Microsoft Search"
+title: "PostgreSQL connector for Microsoft Search"
 ms.author: vivg
 author: vivg
 manager: harshkum
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Set up the PostgreSQL Microsoft 365 Copilot connector for Microsoft Search and Copilot"
 ---
 
-# PostgreSQL Microsoft 365 Copilot connectors (Preview)
+# PostgreSQL connectors (Preview)
 
 The PostgreSQL Microsoft 365 Copilot connector allows your organization to index records from a PostgreSQL database. After you configure the connector, end users can search for these records from PostgreSQL in Microsoft 365 Copilot and from any Microsoft Search client.
 

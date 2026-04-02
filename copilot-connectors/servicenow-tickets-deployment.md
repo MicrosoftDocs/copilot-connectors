@@ -1,5 +1,5 @@
 ---
-title: "Deploy the ServiceNow Tickets Microsoft 365 Copilot connector"
+title: "Deploy the ServiceNow Tickets connector"
 ms.author: lauragra
 author: lauragra
 manager: calvindrover

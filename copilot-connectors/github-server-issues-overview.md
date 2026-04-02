@@ -1,5 +1,5 @@
 ---
-title: "GitHub Server Issues Microsoft 365 Copilot connector overview"
+title: "GitHub Server Issues connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Server Issues Microsoft 365 Copilot connector."
 ---
 
-# GitHub Server Issues Microsoft 365 Copilot connector overview
+# GitHub Server Issues connector overview
 
 The GitHub Server Issues Microsoft 365 Copilot connector integrates GitHub issue data into Microsoft 365. When you deploy this connector, Microsoft 365 Copilot and Microsoft Search experiences can surface relevant issues directly within apps like Teams, Outlook, and SharePoint. When you index data from GitHub Enterprise repositories, users can search and reason over issues in Copilot and Microsoft Search. This capability helps development teams track work, triage bugs, and understand project status without leaving their flow of work.
 

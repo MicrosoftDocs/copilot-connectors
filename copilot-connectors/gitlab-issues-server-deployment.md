@@ -1,5 +1,5 @@
 ---
-title: "Deploy the GitLab Issues Server Microsoft 365 Copilot connector"
+title: "Deploy the GitLab Issues Server connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the GitLab Issues Server Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the GitLab Issues Server Microsoft 365 Copilot connector
+# Deploy the GitLab Issues Server connector
 
 The GitLab Issues Server Microsoft 365 Copilot connector integrates GitLab issue data into Microsoft 365. When you deploy this connector, Microsoft 365 Copilot and Microsoft Search can surface relevant GitLab issues directly in apps such as Teams, Outlook, and SharePoint. This article describes the steps to deploy and configure the GitLab Issues Server connector.
 

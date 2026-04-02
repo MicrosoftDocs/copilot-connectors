@@ -1,5 +1,5 @@
 ---
-title: "Shortcut Story Microsoft 365 Copilot connector troubleshooting"
+title: "Shortcut Story connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Shortcut Story Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Shortcut Story Microsoft 365 Copilot connector
+# Troubleshoot issues with the Shortcut Story connector
 
 The Shortcut Story Microsoft 365 Copilot connector empowers your organization to index and search Shortcut stories across your enterprise. This article provides troubleshooting information for common errors that you might encounter when you deploy the Shortcut Story connector. Use these steps to resolve issues and ensure successful indexing of Shortcut stories.
 

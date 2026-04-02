@@ -1,5 +1,5 @@
 ---
-title: "Google Drive Microsoft 365 Copilot connector troubleshooting"
+title: "Google Drive connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Google Drive Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Google Drive Microsoft 365 Copilot connector
+# Troubleshoot issues with the Google Drive connector
 
 The Google Drive Microsoft 365 Copilot connector allows your organization in Microsoft 365 to index files from Google Drive, making them available to Microsoft 365 Copilot and Microsoft 365 Search. This article provides troubleshooting information for common errors you might encounter when deploying or managing this connector.
 

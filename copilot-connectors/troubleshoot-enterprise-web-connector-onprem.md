@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Troubleshooting the Enterprise Websites on-premises Microsoft 365 Copilot connector"
+title: "Troubleshooting the Enterprise Websites on-premises connector"
 ms.author: vivg
 author: vivg
 manager: harshkum
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Troubleshooting the Enterprise websites on-premises Microsoft 365 Copilot connector."
 ---
 
-# Troubleshooting the Enterprise Websites on-premises Microsoft 365 Copilot connector
+# Troubleshooting the Enterprise Websites on-premises connector
 
 The following common errors are observed while configuring the connector, or during crawling, and their possible reasons.
 

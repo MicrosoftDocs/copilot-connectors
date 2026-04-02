@@ -1,5 +1,5 @@
 ---
-title: "Deploy the GitHub Server Issues Microsoft 365 Copilot connector"
+title: "Deploy the GitHub Server Issues connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the GitHub Server Issues Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the GitHub Server Issues Microsoft 365 Copilot connector
+# Deploy the GitHub Server Issues connector
 
 The GitHub Server Issues Microsoft 365 Copilot connector integrates GitHub issue data into Microsoft 365. This article describes the steps to deploy and customize the GitHub Server Issues connector. 
 

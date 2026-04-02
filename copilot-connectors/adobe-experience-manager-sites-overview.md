@@ -1,5 +1,5 @@
 ---
-title: "Adobe Experience Manager Sites Microsoft 365 Copilot connector overview"
+title: "Adobe Experience Manager Sites connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Adobe Experience Manager Sites Microsoft 365 Copilot connector."
 ---
 
-# Adobe Experience Manager Sites Microsoft 365 Copilot connector overview
+# Adobe Experience Manager Sites connector overview
 
 With the Adobe Experience Manager Sites Microsoft 365 Copilot connector, your organization can index published webpages from Adobe Experience Manager (AEM) Sites so people can discover and use them across Microsoft 365 Copilot and Microsoft Search. After configuration and indexing, end users can search for those published webpages in Copilot and any Microsoft Search client, helping teams reuse trusted web content without switching tools.
 

@@ -1,5 +1,5 @@
 ---
-title: "Azure File Share Microsoft 365 Copilot connector troubleshooting"
+title: "Azure File Share connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Azure File Share Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Azure File Share Microsoft 365 Copilot connector
+# Troubleshoot issues with the Azure File Share connector
 
 The Azure File Share Microsoft 365 Copilot connector integrates Azure File Share content into Microsoft 365, allowing Microsoft 365 Copilot and Microsoft Search experiences to surface relevant files and folders directly in apps like Teams, Outlook, and SharePoint. This article provides troubleshooting information for common errors that you might encounter when you deploy the Azure File Share connector.
 

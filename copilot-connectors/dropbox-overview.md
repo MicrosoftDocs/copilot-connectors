@@ -1,5 +1,5 @@
 ---
-title: "Dropbox Microsoft 365 Copilot connector overview"
+title: "Dropbox connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Dropbox Microsoft 365 Copilot connector."
 ---
 
-# Dropbox Microsoft 365 Copilot connector overview
+# Dropbox connector overview
 
 The Dropbox connector for Microsoft 365 Copilot allows your organization to index Dropbox content — including team folders, shared folders, and private folders — and surface the content in Microsoft 365 Copilot and Microsoft Search experiences.
 

@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Bitbucket Pull Request Microsoft 365 Copilot connector"
+title: "Deploy the Bitbucket Pull Request connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Bitbucket Pull Request Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Bitbucket Pull Request Microsoft 365 Copilot connector
+# Deploy the Bitbucket Pull Request connector
 
 The Bitbucket Pull Request Microsoft 365 Copilot connector integrates Bitbucket pull request content into Microsoft 365, allowing Copilot, Copilot Search, and Microsoft Search to surface relevant pull requests and engineering context directly within Microsoft 365. This article describes the steps to deploy and customize the Bitbucket Pull Request connector.
 

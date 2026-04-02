@@ -1,6 +1,6 @@
 --- 
 ms.date: 09/11/2024 
-title: "Troubleshooting the CSV Microsoft 365 Copilot connector" 
+title: "Troubleshooting the CSV connector" 
 ms.author: gladysa
 author: gladysa
 manager: brian.jackett
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Troubleshooting the CSV Microsoft 365 Copilot connector" 
 --- 
 
-# Troubleshooting the CSV Microsoft 365 Copilot connector 
+# Troubleshooting the CSV connector 
 
 ### Review "spaces" in the CSV header, which results in errors while trying to authenticate
 No spaces are allowed in headers. Not only leading or trailing spaces, but no spaces are allowed even in the middle of the header name.

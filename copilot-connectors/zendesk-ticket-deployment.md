@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Zendesk Ticket Microsoft 365 Copilot connector"
+title: "Deploy the Zendesk Ticket connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Zendesk Ticket Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Zendesk Ticket Microsoft 365 Copilot connector
+# Deploy the Zendesk Ticket connector
 
 The Zendesk Ticket Microsoft 365 Copilot connector allows your organization to index tickets from Zendesk. After you configure the connector, users can search for these tickets from Zendesk in Microsoft 365 Copilot and from any Microsoft Search client.
 

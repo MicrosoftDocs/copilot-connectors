@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Aha! Microsoft 365 Copilot connector"
+title: "Deploy the Aha! connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Aha! Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Aha! Microsoft 365 Copilot connector
+# Deploy the Aha! connector
 
 The Aha! Features and Ideas Microsoft 365 Copilot connectors empower your organization to index and search Aha! features and ideas across your enterprise. This article describes the steps to deploy and customize the Aha! connector.
 

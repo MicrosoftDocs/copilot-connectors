@@ -1,6 +1,6 @@
 ---
 ms.date: 02/09/2026
-title: "Search and validate indexed Microsoft 365 Copilot connector content"
+title: "Search and validate indexed connector content"
 ms.author: danielabo
 author: danielabom
 manager: calvind

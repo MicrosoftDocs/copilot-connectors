@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Troubleshooting the Oracle SQL Microsoft 365 Copilot connector"
+title: "Troubleshooting the Oracle SQL connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ROBOTS: NoIndex
 description: "Troubleshoot issues with the Oracle SQL Microsoft 365 Copilot connector."
 ---
 
-# Troubleshooting the Oracle SQL Microsoft 365 Copilot connector.
+# Troubleshooting the Oracle SQL connector.
 
 The following common errors are observed while configuring the connector or during crawling, and their possible reasons.
 

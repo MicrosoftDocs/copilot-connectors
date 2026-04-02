@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Bitbucket Knowledge Microsoft 365 Copilot connector"
+title: "Deploy the Bitbucket Knowledge connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Bitbucket Knowledge Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Bitbucket Knowledge Microsoft 365 Copilot connector
+# Deploy the Bitbucket Knowledge connector
 
 The Bitbucket Knowledge Microsoft 365 Copilot connector integrates documentation files from your Bitbucket repositories into Microsoft 365. This integration allows Copilot, Copilot Search, and Microsoft Search to surface Markdown (.md) and text (.txt) documentation—including runbooks, onboarding guides, architecture notes, and operational workflows—directly within Microsoft 365 apps. This article describes the steps to deploy and customize the Bitbucket Knowledge connector.
 

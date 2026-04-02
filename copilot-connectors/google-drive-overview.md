@@ -1,5 +1,5 @@
 ---
-title: Google Drive Microsoft 365 Copilot connector overview
+title: Google Drive connector overview
 description: Learn about the Google Drive Microsoft 365 Copilot connector, including its capabilities, limitations, and how it works with Microsoft 365 Copilot and Microsoft Search.
 ms.topic: overview
 ms.service: copilot-connectors
@@ -9,7 +9,7 @@ manager: calvind
 ms.date: 12/15/2025
 ---
 
-# Google Drive Microsoft 365 Copilot connector overview
+# Google Drive connector overview
 
 The Google Drive Microsoft 365 Copilot connector enables your organization to index files stored in Google Drive and make them available in Microsoft 365 Copilot and Microsoft 365 Search. By connecting Google Drive to Microsoft 365, users can find and interact with Google Drive content by using natural language queries and Copilot experiences.
 

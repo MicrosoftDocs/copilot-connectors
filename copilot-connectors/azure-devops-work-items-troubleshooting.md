@@ -1,5 +1,5 @@
 ---
-title: "Azure DevOps Work Items Microsoft 365 Copilot connector troubleshooting"
+title: "Azure DevOps Work Items connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Azure DevOps Work Items Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Azure DevOps Work Items Microsoft 365 Copilot connector
+# Troubleshoot issues with the Azure DevOps Work Items connector
 
 The Azure DevOps Work Items connector indexes work items—such as user stories, tasks, bugs, and features—from Azure DevOps Services into Microsoft 365 so users can search and retrieve work tracking data directly in Copilot and Microsoft Search. This article provides troubleshooting information for common issues you might encounter when you deploy or manage the connector.
 

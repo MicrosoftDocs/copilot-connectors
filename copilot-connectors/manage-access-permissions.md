@@ -1,6 +1,6 @@
 ---
 ms.date: 02/17/2026
-title: "Manage access permissions for Microsoft 365 Copilot connectors"
+title: "Manage access permissions for connectors"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 description: "Learn how to update and manage access permissions for Microsoft 365 Copilot connectors in the Microsoft 365 admin center."
 ---
 
-# Manage access permissions for Microsoft 365 Copilot connectors
+# Manage access permissions for connectors
  
 Microsoft 365 Copilot connectors index content from external data sources into Microsoft 365 Copilot and Microsoft Copilot. To ensure secure and compliant access, the access permissions configured during connector setup must reflect your organization's intended visibility model. Incorrect access permission settings, such as granting access to **Everyone**, can lead to oversharing of sensitive content.
 

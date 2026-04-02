@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Copilot extension for Microsoft 365 Copilot connectors
+title: Copilot extension for connectors
 ms.author: danielabo
 author: danipocket
 manager: calvind
@@ -11,7 +11,7 @@ ms.date: 02/13/2026
 description: Learn how the Microsoft 365 Copilot extension works with Microsoft 365 Copilot connectors to capture user activity signals, improve personalization, and enhance Copilot and Search experiences.
 ---
 
-# Microsoft 365 Copilot extension for Copilot connectors
+# Extension for Copilot connectors
 
 The Microsoft 365 Copilot extension is a browser-based extension that works with Microsoft 365 Copilot connectors to capture user activity signals from external applications. These signals help improve personalization and relevance in Microsoft 365 Copilot and Microsoft Search by prioritizing content that users actively engage with in connected systems.
 

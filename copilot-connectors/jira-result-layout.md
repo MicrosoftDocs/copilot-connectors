@@ -1,6 +1,6 @@
 --- 
 
-title: "Result Layout for Jira Microsoft 365 Copilot connector" 
+title: "Result Layout for Jira connector" 
 ms.author: vivg 
 author: vivg 
 manager: harshkum 
@@ -13,7 +13,7 @@ description: "Result layout JSON for the Jira Microsoft 365 Copilot."
 ms.date: 05/28/2022
 ---
 
-# Result layout for Jira Microsoft 365 Copilot connector
+# Result layout for Jira connector
 
 The Atlassian Jira Microsoft 365 Copilot connector allows your organization to index Jira issues. After you configure the connector and index content from the Jira site, you need to set up a search result page.
 

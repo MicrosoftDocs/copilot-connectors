@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the GitLab Issues Server Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the GitLab Issues Server connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the GitLab Issues Server Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the GitLab Issues Server Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitLab Issues Server connector
 
 The GitLab Issues Server Microsoft 365 Copilot connector integrates GitLab issue data into Microsoft 365. This article provides troubleshooting information for common errors that you might encounter when you deploy the GitLab Issues Server connector.  
 

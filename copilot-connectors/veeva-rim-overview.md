@@ -1,5 +1,5 @@
 ---
-title: "Veeva Vault RIM Microsoft 365 Copilot connector overview"
+title: "Veeva Vault RIM connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Veeva Vault RIM Microsoft 365 Copilot connector."
 ---
 
-# Veeva Vault RIM Microsoft 365 Copilot connector overview
+# Veeva Vault RIM connector overview
 
 The Veeva Vault RIM Microsoft 365 Copilot connector allows organizations to index regulatory submissions and compliance documents from Veeva Vault into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search. The connector integrates the Vault RIM permission model to ensure that users can only access authorized content. It enhances content generation and review speed through intelligent content analysis and preparation. By streamlining the entire regulatory submission lifecycle, the connector helps submitters track submission status more effectively and significantly reduces turnaround times.
 

@@ -1,5 +1,5 @@
 ---
-title: "Shortcut Story Microsoft 365 Copilot connector overview"
+title: "Shortcut Story connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Shortcut Story Microsoft 365 Copilot connector."
 ---
 
-# Shortcut Story Microsoft 365 Copilot connector overview
+# Shortcut Story connector overview
 
 The Shortcut Story Microsoft 365 Copilot connector empowers your organization to index and search Shortcut stories across your enterprise. After you configure and deploy the connector, it automatically crawls Shortcut stories, making them easily discoverable through Microsoft 365 Copilot and any Microsoft Search client. 
 

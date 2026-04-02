@@ -1,6 +1,6 @@
 ---
 ms.date: 02/23/2026
-title: "File Share Microsoft 365 Copilot connector"
+title: "File Share connector"
 ms.author: danielabo
 author: danielabom
 manager: SteveWilkins1123
@@ -11,7 +11,7 @@ ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the File Share Microsoft 365 Copilot connector"
 ---
-# File Share Microsoft 365 Copilot connector
+# File Share connector
 
 The File Share Microsoft 365 Copilot connector allows users in your organization to search on premises Windows file shares. After you configure the connector and index data from the file path, end users can search for that content in Microsoft Search and Microsoft 365 Copilot. 
  

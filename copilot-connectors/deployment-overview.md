@@ -1,5 +1,5 @@
 ---
-title: "Deploy Microsoft 365 Copilot connectors in the Microsoft 365 admin center"
+title: "Deploy connectors in the Microsoft 365 admin center"
 description: Learn how to deploy and customize Copilot connectors in the Microsoft 365 admin center.
 ms.author: souravpoddar
 author: souravpoddar001
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 ms.date: 07/24/2025
 ---
 
-# Deploy Microsoft 365 Copilot connectors in the Microsoft 365 admin center
+# Deploy connectors in the Microsoft 365 admin center
 
 This article describes how to set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center. The setup process is streamlined and requires minimal input, making it easy to create connections. You can also choose a custom setup to fine-tune specific settings.
 

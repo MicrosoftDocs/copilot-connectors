@@ -1,6 +1,6 @@
 ---
 
-title: "PagerDuty Escalation Policies Microsoft 365 Copilot connector (preview)" 
+title: "PagerDuty Escalation Policies connector (preview)" 
 ms.author: wangchen
 author: wangchen
 manager: zezhangzhao

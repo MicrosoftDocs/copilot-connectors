@@ -1,5 +1,5 @@
 ---
-title: "Coda Enterprise Microsoft 365 Copilot connector troubleshooting"
+title: "Coda Enterprise connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Coda Enterprise Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Coda Enterprise Microsoft 365 Copilot connector
+# Troubleshoot issues with the Coda Enterprise connector
 
 The Coda Enterprise connector allows your organization to index documents and pages from Coda Enterprise. This article provides troubleshooting information for common issues you might encounter when you deploy or use the Coda Enterprise connector.
 

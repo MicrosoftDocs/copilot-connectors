@@ -1,5 +1,5 @@
 ---
-title: "Amazon S3 Microsoft 365 Copilot connector (preview)"
+title: "Amazon S3 connector (preview)"
 description: "Learn about the Amazon S3 connector for Microsoft 365 Copilot, including its benefits, use cases, capabilities, and limitations."
 ms.author: lauragra
 author: Kai-Cloud
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.date: 12/02/2025
 ---
 
-# Amazon S3 Microsoft 365 Copilot connector
+# Amazon S3 connector
 
 The Amazon S3 Microsoft 365 Copilot connector integrates content from Amazon S3 buckets into Microsoft 365. It enables Microsoft 365 Copilot, Copilot Search, and Microsoft Search to surface relevant files directly within apps like Microsoft Teams, Outlook, and SharePoint.
 

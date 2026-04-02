@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Azure File Share Microsoft 365 Copilot connector"
+title: "Deploy the Azure File Share connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Azure File Share Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Azure File Share Microsoft 365 Copilot connector
+# Deploy the Azure File Share connector
 
 The Azure File Share Microsoft 365 Copilot connector enables organizations to integrate Azure File Share content into Microsoft 365. This article describes the steps to deploy and customize the Azure File Share connector in the Microsoft 365 admin center.
 

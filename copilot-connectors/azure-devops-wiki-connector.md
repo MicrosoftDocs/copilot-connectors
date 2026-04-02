@@ -1,5 +1,5 @@
 --- 
-title: "Azure DevOps Wiki Microsoft 365 Copilot connector" 
+title: "Azure DevOps Wiki connector" 
 ms.author: vivg 
 author: vivg 
 manager: harshkum 
@@ -12,7 +12,7 @@ description: "Set up the Azure DevOps Wiki Microsoft 365 Copilot connector"
 ms.date: 03/09/2026
 ---
 
-# Azure DevOps Wiki Microsoft 365 Copilot connector
+# Azure DevOps Wiki connector
 
 The Azure DevOps Wiki Microsoft 365 Copilot connector allows your organization to index wikis in its instance of the Azure DevOps service. After you configure the connector, end users can search for project wikis and code wikis from Azure DevOps in Microsoft Search and Microsoft 365 Copilot.
 

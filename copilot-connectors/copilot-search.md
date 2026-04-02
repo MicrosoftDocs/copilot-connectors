@@ -1,5 +1,5 @@
 ---
-title: "Microsoft 365 Copilot connectors and Copilot Search"
+title: "Connectors and Copilot Search"
 ms.author: lauragra
 author: lauragra
 manager: calvind

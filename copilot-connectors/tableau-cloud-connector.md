@@ -1,5 +1,5 @@
 --- 
-title: "Tableau Cloud Microsoft 365 Copilot connector(preview)" 
+title: "Tableau Cloud connector(preview)" 
 ms.author: lauragra
 author: lauragra
 manager: jecui
@@ -12,7 +12,7 @@ description: "Set up the Tableau Cloud  Microsoft 365 Copilot connector"
 ms.date: 08/15/2025
 ---
 
-# Tableau Cloud  Microsoft 365 Copilot connector (preview)
+# Tableau Cloud  connector (preview)
 
 With the Tableau Cloud  Microsoft 365 Copilot connector, your organization can index Tableau sheets in your Tableau Cloud. After you configure the connector and index content from Tableau Cloud, end users can search for those sheets in Microsoft 365 Copilot and from any Microsoft Search client.
 

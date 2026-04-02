@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Confluence On-premises Microsoft 365 Copilot connector"
+title: "Deploy the Confluence On-premises connector"
 description: "Find information about how to deploy the Confluence On-premises Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ms.author: lauragra
 author: lauragra

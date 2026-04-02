@@ -1,5 +1,5 @@
 ---
-title: "Zendesk Ticket Microsoft 365 Copilot connector overview"
+title: "Zendesk Ticket connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Zendesk Ticket Microsoft 365 Copilot connector."
 ---
 
-# Zendesk Ticket Microsoft 365 Copilot connector overview
+# Zendesk Ticket connector overview
 
 The Zendesk Ticket Microsoft 365 Copilot connector allows your organization to index tickets from Zendesk. After you configure the connector, users can search for these tickets from Zendesk in Microsoft 365 Copilot and from any Microsoft Search client. The Zendesk ticket system is a centralized customer support platform that turns customer inquiries from multiple channels into tickets. Teams can track, prioritize, assign, and resolve tickets efficiently with automation, workflow tools, and contextual customer data—helping support teams streamline communication, improve response times, and deliver consistent service at scale.
 
