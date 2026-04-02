@@ -65,7 +65,7 @@ The `row_level_acl_setup.js` script creates a service account user, a custom rol
 
 After running the row-level script, verify that the service account can access the required tables.
 
-1. Set a password for the service account (for example, `microsoft.copilot`).
+1. Set a strong, unique password for the service account that complies with your organization's password policy.
 1. Use a REST client (for example, curl or Postman) to query a table as the service account:
 
     ```http
