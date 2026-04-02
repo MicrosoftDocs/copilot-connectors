@@ -23,7 +23,7 @@ This article explains how to grant table access to a service account in ServiceN
 - Elevate to the `security_admin` role to make changes to access control lists (ACLs).
   
 > [!TIP]
-> Instead of following the manual steps below, you can run background scripts that create the user, role, and ACLs automatically. For more information, see [Set up prerequisites using background scripts](servicenow-knowledge-setup-scripts.md).
+> Instead of following the manual steps in this article, you can run background scripts that create the user, role, and ACLs automatically. For more information, see [Set up prerequisites using background scripts](servicenow-knowledge-setup-scripts.md).
 ## Create a user
 
 To create a user:

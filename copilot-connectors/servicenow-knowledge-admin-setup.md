@@ -99,7 +99,7 @@ Hierarchical permissions are supported for the ServiceNow Knowledge connector. T
 
 The following sections describe the prerequisite steps to complete before deploying the ServiceNow connector.
 > [!TIP]
-> You can automate the prerequisite setup steps using background scripts instead of following the manual steps below. For more information, see [Set up prerequisites using background scripts](servicenow-knowledge-setup-scripts.md).
+> You can automate the prerequisite setup steps by using background scripts instead of following the manual steps in this article. For more information, see [Set up prerequisites using background scripts](servicenow-knowledge-setup-scripts.md).
 
 ### Create service account and set up permissions to index items
 
@@ -193,7 +193,7 @@ When the connector is set up and item sync is completed, you can check the index
 To allow the connector to fetch advanced user criteria, create a scripted REST API in your ServiceNow instance.
 
 > [!TIP]
-> You can automate this setup using a background script. For more information, see [Set up REST API for Advanced flow](servicenow-knowledge-setup-scripts.md#step-4-set-up-rest-api-for-advanced-flow). 
+> You can automate this setup by using a background script. For more information, see [Set up REST API for Advanced flow](servicenow-knowledge-setup-scripts.md#step-4-set-up-rest-api-for-advanced-flow). 
 
 - Elevate your role in ServiceNow to `security_admin`.
 
