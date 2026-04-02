@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 03/10/2026
+ms.date: 04/02/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Knowledge Copilot connector."
 ---
@@ -98,8 +98,9 @@ Hierarchical permissions are supported for the ServiceNow Knowledge connector. T
 ## Set up connector prerequisites
 
 The following sections describe the prerequisite steps to complete before deploying the ServiceNow connector.
+
 > [!TIP]
-> You can automate the prerequisite setup steps by using background scripts instead of following the manual steps in this article. For more information, see [Set up prerequisites using background scripts](servicenow-knowledge-setup-scripts.md).
+> You can automate the prerequisite setup steps by using background scripts instead of the manual steps described in this article. For more information, see [Set up prerequisites using background scripts](servicenow-knowledge-setup-scripts.md).
 
 ### Create service account and set up permissions to index items
 
