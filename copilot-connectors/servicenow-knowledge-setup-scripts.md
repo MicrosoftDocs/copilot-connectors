@@ -38,7 +38,7 @@ The following table lists and describes the scripts.
 
 All scripts are:
 
-- **Idempotent** — Safe to run multiple times. Existing records are reused, not duplicated.
+- **Idempotent** — Safe to run multiple times. The scripts reuse existing records and don't create duplicates.
 - **Non-destructive** — Sripts don't modify, delete, or overwrite any existing records.
 - **Self-contained** — No external dependencies or network calls outside your ServiceNow instance.
 
