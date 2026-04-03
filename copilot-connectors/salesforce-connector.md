@@ -149,23 +149,23 @@ For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Sch
 
 | Users | Description |
 |----|---|
-| Access permissions | _Only people with access to content in Data source._ |
-| Map Identities | _Data source identities mapped using Microsoft Entra IDs._ |
+| Access permissions | Only people with access to content in Data source. |
+| Map Identities | Data source identities mapped using Microsoft Entra IDs. |
 
 | Content | Description |
 |---|---|
-| Salesforce objects | _All objects are indexed._ |
-| Filter data | _All objects are indexed. No time filter or [SOQL](https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_conditionexpression.htm) criteria is applied._ |
-| Manage Properties | _To check default properties and their schema, see [content](#content)._ |
+| Salesforce objects | All objects are indexed. |
+| Filter data | All objects are indexed. No time filter or [SOQL](https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_conditionexpression.htm) criteria is applied. |
+| Manage Properties | To check default properties and their schema, see [content](#content). |
 
 | Sync | Description |
 |---|---|
-| Incremental Crawl | _Frequency: Every 15 mins_ |
-| Full Crawl | _Frequency: Every Day_ |
+| Incremental Crawl | Frequency: Every 15 mins |
+| Full Crawl | Frequency: Every Day |
 
-If you want to edit any of these values, you need to choose the "Custom Setup" option.
+If you want to edit any of these values, choose the **Custom Setup** option.
 
-## Custom Setup
+## Custom setup
 
 Custom setup is for those admins who want to edit the default values for settings listed in the above table. Once you click on the "Custom Setup" option, you see three more tabs - Users, Content, and Sync.
 
@@ -173,16 +173,16 @@ Custom setup is for those admins who want to edit the default values for setting
 
 [![Screenshot that shows Users tab where you can configure access permissions and user mapping rules.](media/salesforce-connector/SalesforceUsersTab.png)](media/salesforce-connector/SalesforceUsersTab.png#lightbox)
 
-**Access Permissions**
+**Access permissions**
 
 The Salesforce CRM connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them. Choose the option that is most appropriate for your organization.
 
-**Mapping Identities**
+**Map identities**
 
 You can choose to ingest access control lists (ACLs) from your Salesforce instance or allow everyone in your organization to see search results from this data source. ACLs can include Microsoft Entra identities (users who are federated from Entra ID to Salesforce), non-Entra ID identities (Salesforce users who have corresponding identities in Entra ID), or both.
 
->[!NOTE]
->If you use a third-party Identity Provider like Ping ID or secureAuth, select **non-Microsoft Entra** as the identity type.
+> [!NOTE]
+> If you use a third-party Identity Provider like Ping ID or secureAuth, select **non-Microsoft Entra** as the identity type.
 
 If you choose to ingest an ACL from your Salesforce instance and select **non-ME ID** for the identity type, see [Map your non-Microsoft Entra Identities](map-non-entra-id.md) for instructions on mapping the identities.
 
@@ -200,7 +200,7 @@ Select the Salesforce objects that you want the connector to crawl and include i
 > [!NOTE]
 > If a field has field level security (FLS) set for a profile, the connector doesn't ingest that field for any profiles in that Salesforce org. As a result, users can't search for values for those fields or show up in the results.
 
-_Filter data_
+**Filter data**
 
    You can filter the Salesforce content that is indexed in two ways:
 
@@ -213,11 +213,11 @@ _Filter data_
    > [!TIP]
    > You can leave the **WHERE** clause empty if you want to index all the content of the particular entity
 
-**Manage Properties**
+**Manage properties**
 
 Add or remove available properties from your Salesforce CRM data source. Assign a schema to the property by defining whether a property is searchable, queryable, retrievable, or refinable. Change the semantic label and add an alias to the property. While this step isn't mandatory, having some property labels improves the relevance and ensures better results for end users. By default, the connector assigns source properties to some of the labels, such as **Title**, **URL**, **CreatedBy**, and **LastModifiedBy**. The following list shows the properties that are selected by default.
 
-*The list of properties that you select here can impact how you filter, search, and view your results in Microsoft 365 Copilot.*
+The list of properties that you select can impact how you filter, search, and view your results in Microsoft 365 Copilot.
 
 **Source property** | **Label** | **Description**
 --- | --- | ---
@@ -229,13 +229,11 @@ LastModifiedBy   | `lastModifiedBy` | Name of the person who most recently edite
 LastModifiedDateTime  | `lastModifiedDateTime` | Date and time the item was last modified in the data source.
 Name   | `title` | The title of the item that you want to show in search and other experiences.
 
-**Preview Data**
+**Preview data**
 
 Use the preview results button to verify the sample values of the selected properties and query filter.
 
 ### Sync
-
-[![Screenshot that shows Sync tab where you can configure crawl frequency.](media/salesforce-connector/SalesforceSyncTab.png)](media/salesforce-connector/SalesforceSyncTab.png#lightbox)
 
 The refresh interval determines how often your data syncs between the data source and the connector index. Two types of refresh intervals are available - full crawl and incremental crawl. For more details, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 
