@@ -20,7 +20,7 @@ The Enterprise Websites on-premises Microsoft 365 Copilot connector enables your
 - Index webpages from on-premises or private cloud-hosted websites.
 - Index up to 50 websites in a single connection.
 - Exclude webpages from crawl using exclusion rules.
-- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content.
 
 These are the supported file types.
 
@@ -94,7 +94,7 @@ These are the supported  MIME types.
 [![Screenshot that shows connection creation screen for the Enterprise Websites on-premises Microsoft 365 Copilot connector.](media/enterprise-web-connector/enterprise-website-onprem-create-page.png)](media/enterprise-web-connector/enterprise-website-onprem-create-page.png#lightbox)
 
 ### Display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365/copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Add website URLs to the index
 Specify the root of the website that you'd like to crawl. The Enterprise Websites on-premises Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection.

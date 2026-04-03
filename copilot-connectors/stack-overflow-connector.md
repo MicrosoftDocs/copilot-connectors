@@ -23,7 +23,7 @@ The Stack Overflow Copilot connector allows your organization to index questions
    - What are the best practices for handling large datasets in our CRM software?
    - What are the differences between using REST and GraphQL for our API services?
    - How can we improve the load time of our customer-facing web applications?
-- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 - The Stack Overflow Copilot connector supports Stack Overflow for Teams **Business** and **Enterprise**.
 
 ## Limitations

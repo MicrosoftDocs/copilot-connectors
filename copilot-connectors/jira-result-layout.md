@@ -222,5 +222,5 @@ And here's the layout's associated JSON file:
 ```
 ## Resources
 
-- [Customize search result page](/microsoft-365/copilot/connectors/customize-search-page)
-- [Manage search result layouts](/microsoft-365/copilot/connectors/customize-results-layout)
+- [Customize search result page](/microsoftsearch/customize-search-page)
+- [Manage search result layouts](/microsoftsearch/customize-results-layout)

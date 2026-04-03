@@ -38,7 +38,7 @@ The DataStax Microsoft 365 Copilot connector enables your organization to index 
 ## Get started
 
 ### 1. Choose a display name 
-The display name is used to identify each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters).
+The display name is used to identify each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters).
 
 A default value is provided; you can customize it to a name that users in your organization recognize.
 

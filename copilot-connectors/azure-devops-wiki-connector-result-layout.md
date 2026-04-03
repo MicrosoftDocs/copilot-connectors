@@ -146,4 +146,4 @@ The following is the associated JSON file.
 ## Related content
 
 - [Customize search verticles](/microsoft-365/copilot/connectors/manage-verticals)
-- [Manage search result layouts](/microsoft-365/copilot/connectors/customize-results-layout)
+- [Manage search result layouts](/microsoftsearch/customize-results-layout)

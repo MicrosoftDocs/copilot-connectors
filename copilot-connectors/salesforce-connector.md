@@ -115,7 +115,7 @@ You can now use the [Microsoft 365 Admin Center](https://admin.microsoft.com/) t
 
 ### 1. Display name
 
-A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365/copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. Salesforce CRM URL
 
@@ -249,7 +249,7 @@ You can change the default values of refresh interval from here if you want to.
 
 >[!TIP]
 >**Default result type**
->* The Salesforce connector automatically registers a [result type](/microsoft-365/copilot/connectors/customize-search-page#step-2-create-result-types) once the connector is published. The result type uses a dynamically generated [result layout](/microsoft-365/copilot/connectors/customize-results-layout) based on the fields selected in step 3.
+>* The Salesforce connector automatically registers a [result type](/microsoftsearch/customize-search-page#step-2-create-result-types) once the connector is published. The result type uses a dynamically generated [result layout](/microsoftsearch/customize-results-layout) based on the fields selected in step 3.
 >* You can manage the result type by navigating to [**Result types**](https://admin.microsoft.com/Adminportal/Home#/microsoft-365/copilot/connectors/resulttypes) in the [Microsoft 365 admin center](https://admin.microsoft.com). The default result type is named "`ConnectionId`Default". For example, if your connection ID is `Salesforce`, your result layout is named: "SalesforceDefault".
 >* Also, you can choose to create your own result type if needed.
 
