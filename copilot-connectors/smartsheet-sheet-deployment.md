@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Smartsheet Sheet Microsoft 365 Copilot connector"
+title: "Deploy the Smartsheet Sheet connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Smartsheet Sheet Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Smartsheet Sheet Microsoft 365 Copilot connector
+# Deploy the Smartsheet Sheet connector
 
 The Smartsheet Sheet Microsoft 365 Copilot connector allows your organization to index sheet content from Smartsheet so it becomes discoverable and actionable in Microsoft 365 Copilot and Microsoft Search experiences. This article describes the steps to deploy and customize the Smartsheet Sheet connector.
 

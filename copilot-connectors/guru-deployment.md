@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Guru Microsoft 365 Copilot connector"
+title: "Deploy the Guru connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Guru Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Guru Microsoft 365 Copilot connector
+# Deploy the Guru connector
 
 The Guru Microsoft 365 Copilot connector integrates Guru content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant Guru Cards directly within apps like Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the Guru connector. 
 

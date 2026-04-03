@@ -1,6 +1,6 @@
 --- 
 ms.date: 09/11/2024 
-title: "Troubleshooting guide for Media Wiki Microsoft 365 Copilot connector" 
+title: "Troubleshooting guide for Media Wiki connector" 
 ms.author: gladysa
 author: gladysa
 manager: brian.jackett 
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Troubleshoot issues with the Media Wiki Microsoft 365 Copilot connector." 
 --- 
 
-# Troubleshooting guide for Media Wiki Microsoft 365 Copilot connector
+# Troubleshooting guide for Media Wiki connector
 
 ### 1. **UnableToMapProperties = 3100 error code** 
 The 3100 error code can happen when there is an incorrect property mapping. Check your connection settings to resolve the error.

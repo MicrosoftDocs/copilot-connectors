@@ -1,5 +1,5 @@
 ---
-title: "Confluence On-premises Microsoft 365 Copilot connector troubleshooting"
+title: "Confluence On-premises connector troubleshooting"
 description: "Find troubleshooting information for the Confluence On-premises Microsoft 365 Copilot connector."
 ms.author: lauragra
 author: lauragra
@@ -12,7 +12,7 @@ ms.date: 01/05/2026
 ms.localizationpriority: Medium
 ---
 
-# Troubleshoot issues with the Confluence On-premises Microsoft 365 Copilot connector
+# Troubleshoot issues with the Confluence On-premises connector
 
 The Confluence On-premises Microsoft 365 Copilot connector enables Microsoft 365 to index and retrieve content from self-hosted Confluence Data Center or Server instances. It brings enterprise wiki content into Microsoft Search and Copilot, enhancing visibility and usability within the Microsoft 365 ecosystem.
 

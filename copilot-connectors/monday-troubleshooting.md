@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the Monday.com Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the Monday.com connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for common issues with the Monday.com Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Monday.com Microsoft 365 Copilot connector
+# Troubleshoot issues with the Monday.com connector
 
 The Monday.com Microsoft 365 Copilot connector allows organizations to index Monday.com boards, groups, tasks, and related metadata into Microsoft Graph so that the content can be discovered and used across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search.
 

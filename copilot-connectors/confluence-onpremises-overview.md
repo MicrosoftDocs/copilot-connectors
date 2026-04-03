@@ -1,5 +1,5 @@
 ---
-title: "Confluence On-premises Microsoft 365 Copilot connector overview"
+title: "Confluence On-premises connector overview"
 description: "Learn about the capabilities, limitations, and use cases for the Confluence On-premises Copilot connector."
 ms.author: lauragra
 author: lauragra

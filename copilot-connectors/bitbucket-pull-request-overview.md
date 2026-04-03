@@ -1,5 +1,5 @@
 ---
-title: "Bitbucket Pull Request Microsoft 365 Copilot connector overview"
+title: "Bitbucket Pull Request connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Bitbucket Pull Request Microsoft 365 Copilot connector."
 ---
 
-# Bitbucket Pull Request Microsoft 365 Copilot connector overview
+# Bitbucket Pull Request connector overview
 
 The Bitbucket Pull Request Microsoft 365 Copilot connector integrates Bitbucket pull request content into Microsoft 365, allowing Copilot, Copilot Search, and Microsoft Search to surface relevant pull requests and engineering context directly within apps like Teams, Outlook, and SharePoint. When you configure the Bitbucket Pull Request connector for your organization and index pull request data from Bitbucket, users can search for PRs in Microsoft Search and ask Copilot questions in natural language, and get answers grounded in pull request titles, descriptions, discussions, and metadata, with reference links back to the source.
 

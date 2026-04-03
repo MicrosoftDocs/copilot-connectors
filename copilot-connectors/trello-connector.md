@@ -1,6 +1,6 @@
 --- 
 
-title: "Trello Microsoft 365 Copilot connector (preview)" 
+title: "Trello connector (preview)" 
 ms.author: anggao
 author: ms-anggao
 manager: jecui
@@ -13,7 +13,7 @@ description: "Set up the Trello Microsoft 365 Copilot connector."
 ms.date: 08/15/2025
 ---
 
-# Trello Microsoft 365 Copilot connector (preview)
+# Trello connector (preview)
 
 The Trello Microsoft 365 Copilot connector allows your organization to index cards from Trello. After you configure the connector, users can search for these tickets from Trello in Microsoft 365 Copilot and from any Microsoft Search client.
 
@@ -24,7 +24,7 @@ The Trello Microsoft 365 Copilot connector allows your organization to index car
 - Index public cards from your Trello Workspace.
 - Customize your crawl frequency.  
 - Create workflows by using this connection and actions from Microsoft Copilot Studio.  
-- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content.
 
 ## Limitations
 
@@ -45,7 +45,7 @@ After you register your app, go to the **API key** tab to get the unique app key
 
 ### 1. Display name
 
-The display name identifies each citation in Copilot to help users recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoft-365/copilot/connectors/custom-filters#Content-source-filters). A default value is provided for this field; you can customize it to a name that users in your organization recognize.
+The display name identifies each citation in Copilot to help users recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoftsearch/custom-filters#Content-source-filters). A default value is provided for this field; you can customize it to a name that users in your organization recognize.
 
 ### 2. Authentication Type
 

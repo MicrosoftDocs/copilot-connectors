@@ -1,5 +1,5 @@
 ---
-title: "Deploy Microsoft 365 Copilot connectors in the Microsoft 365 admin center"
+title: "Deploy connectors in the Microsoft 365 admin center"
 description: Learn how to deploy and customize Copilot connectors in the Microsoft 365 admin center.
 ms.author: souravpoddar
 author: souravpoddar001
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 ms.date: 07/24/2025
 ---
 
-# Deploy Microsoft 365 Copilot connectors in the Microsoft 365 admin center
+# Deploy connectors in the Microsoft 365 admin center
 
 This article describes how to set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center. The setup process is streamlined and requires minimal input, making it easy to create connections. You can also choose a custom setup to fine-tune specific settings.
 
@@ -172,13 +172,13 @@ To secure access, configure your firewall to allow Copilot connector service IP 
 
 ### Content property
 
-We recommend that you select a **Content property** from the drop-down list, or keep the default selection if one is provided. The content property is used for full-text indexing and supports scenarios such as search result snippet generation, [result cluster](/microsoft-365/copilot/connectors/result-cluster) participation, language detection, HTML and text processing, ranking and relevance, and query formulation.
+Select a **Content property** from the drop-down list, or keep the default selection if one is provided. The content property is used for full-text indexing and supports scenarios such as search result snippet generation, [result cluster](/microsoftsearch/result-cluster) participation, language detection, HTML and text processing, ranking and relevance, and query formulation.
 
-When you select a content property, you can use the system-generated **ResultSnippet** property when you [create your result type](/microsoft-365/copilot/connectors/customize-results-layout). **ResultSnippet** acts as a placeholder for dynamic snippets that are generated at query time from the content property. When this property is included in a result type, snippets appear in search results automatically.
+When you select a content property, you can use the system-generated **ResultSnippet** property when you [create your result type](/microsoftsearch/customize-results-layout). **ResultSnippet** acts as a placeholder for dynamic snippets that are generated at query time from the content property. When you include this property in a result type, snippets appear in search results automatically.
 
 ### Aliases for source properties
 
-You can add aliases to properties by using the **Alias** column. Aliases are friendly names that you can use in queries and when creating filters. They also help normalize properties from multiple connections by mapping different source properties to a single, common name. This approach allows you to create a single filter for a vertical that spans multiple connections. For more information, see [Customize the search results page](/microsoft-365/copilot/connectors/customize-search-page).
+Add aliases to properties by using the **Alias** column. Aliases are friendly names that you can use in queries and when creating filters. They also help normalize properties from multiple connections by mapping different source properties to a single, common name. This approach allows you to create a single filter for a vertical that spans multiple connections. For more information, see [Customize the search results page](/microsoftsearch/customize-search-page).
 
 ### Semantic labels for source properties
 
@@ -200,9 +200,9 @@ The following table lists the supported semantic labels and their descriptions.
 
 The properties on this page are preselected based on your data source, but you can change the selection if a different property is better suited for a specific label.
 
-The **title** label is the most important semantic label. We *strongly recommend* that you map a property to this label so that your connection can participate in the [result cluster experience](/microsoft-365/copilot/connectors/result-cluster).
+The **title** label is the most important semantic label. We *strongly recommend* that you map a property to this label so that your connection can participate in the [result cluster experience](/microsoftsearch/result-cluster).
 
-Incorrect label mappings can degrade the search experience. Not all labels are required to have a property assigned.
+Incorrect label mappings can degrade the search experience. Not all labels require a property assignment.
 
 ### Search schema attributes
 
@@ -218,9 +218,9 @@ Copilot connectors support the following search schema attributes.
 | **SEARCH** | Makes the text content of a property searchable and includes it in the full-text index. | If the **title** property is searchable, a query for **Enterprise** returns items that contain **Enterprise** in the title or body text. |
 | **QUERY** | Allows querying against a specific property by name, either programmatically or by using query syntax. | If the **Title** property is queryable, the query `Title:Enterprise` is supported. |
 | **RETRIEVE** | Allows a property to be displayed in search results and used in result types. | Only retrievable properties can appear in search results. |
-| **REFINE** | Enables a property to be used as a filter on the Microsoft Search results page. | Users can [filter](/microsoft-365/copilot/connectors/custom-filters) by **URL** if the property is marked as refinable. |
+| **REFINE** | Enables a property to be used as a filter on the Microsoft Search results page. | Users can [filter](/microsoftsearch/custom-filters) by **URL** if the property is marked as refinable. |
 
-For all connectors except the File share Copilot connector, custom types must be configured manually. To enable search capabilities, the search schema must be mapped to a set of properties. The connection configuration assistant selects a default schema based on the source properties you choose, but you can modify it by selecting the appropriate attributes for each property on the search schema page.
+For all connectors except the File share Copilot connector, you must manually configure custom types. To enable search capabilities, map the search schema to a set of properties. The connection configuration assistant selects a default schema based on the source properties you choose, but you can modify it by selecting the appropriate attributes for each property on the search schema page.
 
 :::image type="content" alt-text="Screenshot that shows how the schema for a connector can be customized." source="media/deployment-overview/manageschema.png" lightbox="media/deployment-overview/manageschema.png":::
 
@@ -234,10 +234,10 @@ For all connectors except the File share Copilot connector, custom types must be
 - Properties with the **int** data type can’t be refined.
 - A refinable property should also be **queryable** and **retrievable**.
 - You can’t remove the **retrievable** attribute from a property.
-- You can’t add or remove the **refinable** attribute from a property after setup.
+- You can't add or remove the **refinable** attribute from a property after setup.
 
 > [!NOTE]
-> To update the schema after creating a connection, see [Manage search schema](/microsoft-365/copilot/connectors/manage-search-schema).
+> To update the schema after creating a connection, see [Manage search schema](/microsoftsearch/manage-search-schema).
 
 ### Customize values for certain schema properties
 

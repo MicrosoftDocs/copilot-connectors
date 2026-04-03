@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the Veeva QualityDocs Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the Veeva QualityDocs connector"
 ms.author: dannyyao
 author: dannyyaou
 manager: jecui
@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Veeva QualityDocs Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Veeva QualityDocs Microsoft 365 Copilot connector
+# Troubleshoot issues with the Veeva QualityDocs connector
 
 The Veeva QualityDocs Microsoft 365 Copilot connector enables organizations to index controlled quality documents—such as Standard Operating Procedures (SOPs), work instructions, policies, CAPAs, and batch records—from Veeva Vault QualityDocs into Microsoft Graph. 
 

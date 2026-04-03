@@ -1,5 +1,5 @@
 ---
-title: GitLab Knowledge Cloud Microsoft 365 Copilot connector overview
+title: GitLab Knowledge Cloud connector overview
 description: Learn about the capabilities, limitations, and use cases for the GitLab Knowledge Cloud Microsoft 365 Copilot connector.
 author: Lauragra
 ms.author: lauragra
@@ -13,7 +13,7 @@ ms.service: copilot-connectors
 ms.topic: concept-article
 ---
 
-# GitLab Knowledge Cloud Microsoft 365 Copilot connector overview
+# GitLab Knowledge Cloud connector overview
 
 The GitLab Knowledge Cloud Microsoft 365 Copilot connector indexes documentation and knowledge artifacts stored in GitLab projects on GitLab.com. These assets typically include project wikis, readme files, architecture and design documents, onboarding guides, runbooks, and other Markdown‑based knowledge used to document processes, systems, and best practices. These artifacts capture institutional knowledge and provide long‑term reference for engineering, operations, and cross‑functional teams.
 

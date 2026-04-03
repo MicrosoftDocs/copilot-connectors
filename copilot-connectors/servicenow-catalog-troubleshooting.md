@@ -1,5 +1,5 @@
 ---
-title: "ServiceNow Catalog Microsoft 365 Copilot connector troubleshooting"
+title: "ServiceNow Catalog connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the ServiceNow Catalog Copilot connector."
 ---
 
-# Troubleshoot issues with the ServiceNow Catalog Microsoft 365 Copilot connector
+# Troubleshoot issues with the ServiceNow Catalog connector
 
 The ServiceNow Catalog Microsoft 365 Copilot connector enables organizations to index service catalog items from ServiceNow into Microsoft Graph. Users can search for catalog items directly within Microsoft 365 experiences, including Copilot. This article provides troubleshooting information for common errors that you might encounter when you deploy the ServiceNow Catalog connector.
 

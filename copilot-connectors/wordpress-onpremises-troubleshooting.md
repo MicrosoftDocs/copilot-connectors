@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the WordPress.org Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the WordPress.org connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the WordPress.org Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the WordPress.org Microsoft 365 Copilot connector
+# Troubleshoot issues with the WordPress.org connector
 
 With the WordPress.org Microsoft 365 Copilot connector for WordPress.org websites, your organization can index published posts and pages so users can discover that content in Microsoft 365 Copilot and Microsoft Search experiences. After you configure the connector and index content, end users can search for those published posts and pages from Copilot and Microsoft Search clients.
 

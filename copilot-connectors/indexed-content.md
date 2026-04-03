@@ -1,6 +1,6 @@
 ---
 ms.date: 02/09/2026
-title: "Search and validate indexed Microsoft 365 Copilot connector content"
+title: "Search and validate indexed connector content"
 ms.author: danielabo
 author: danielabom
 manager: calvind
@@ -80,8 +80,8 @@ If an item is discovered but not indexed, check the **Errors** tab for any issue
 >[!NOTE]
 >- Changes to user or group permissions (ACLs) might take up to 24 hours to reflect in Microsoft Search and Microsoft 365 Copilot.
 >- Permissions updates occur during a full crawl, not an incremental crawl.
->- If your data source permissions change after the last full crawl, a new full crawl must be triggered on-demand or scheduled to update the index.
->- When testing in Microsoft Search or Microsoft 365 Copilot, make sure that you're searching with a searchable or queryable property. For more information, see [Manage schema](/microsoft-365/copilot/connectors/manage-search-schema). 
+>- If your data source permissions change after the last full crawl, you must trigger a new full crawl on-demand or schedule it to update the index.
+>- When testing in Microsoft Search or Microsoft 365 Copilot, make sure that you're searching with a searchable or queryable property. For more information, see [Manage schema](/microsoftsearch/manage-search-schema). 
 
 ## Related content
 

@@ -1,5 +1,5 @@
 ---
-title: "Deploy the ServiceNow Knowledge Microsoft 365 Copilot connector"
+title: "Deploy the ServiceNow Knowledge connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind

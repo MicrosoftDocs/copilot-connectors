@@ -1,5 +1,5 @@
 ---
-title: "Jira Cloud Microsoft 365 Copilot connector overview"
+title: "Jira Cloud connector overview"
 description: "Learn about the Jira Cloud Microsoft 365 Copilot connector, its capabilities, limitations, data indexed, permissions model, and how to build agents."
 ms.author: lauragra
 author: lauragra
@@ -9,7 +9,7 @@ ms.service: copilot-connectors
 ms.date: 12/15/2025
 ms.localizationpriority: medium
 ---
-# Jira Cloud Microsoft 365 Copilot connector overview
+# Jira Cloud connector overview
 
 The Jira Cloud Microsoft 365 Copilot connector enables your organization to index Jira Cloud issues and make them searchable in Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search experiences. When you integrate Jira Cloud with Microsoft 365, users can quickly discover issues, projects, and related data, improving productivity and collaboration.
 

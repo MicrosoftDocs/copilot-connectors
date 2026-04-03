@@ -1,6 +1,6 @@
 --- 
 ms.date: 02/12/2026
-title: "Staged rollout for Microsoft 365 Copilot connectors" 
+title: "Staged rollout for connectors" 
 ms.author: souravpoddar 
 author: souravpoddar 
 manager: srramam
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Use staged rollout to gradually introduce a Microsoft 365 Copilot connector to users in your organization. Staged rollout allows you to test, monitor, and adjust settings before deploying a connector to your organization." 
 ---
 
-# Staged rollout for Microsoft 365 Copilot connectors
+# Staged rollout for connectors
 
 Staged rollout of Microsoft 365 Copilot connectors allows you to gradually introduce a connector to a select group of users in your production environment. You can use it to deploy an existing or new connection to a limited set of users, monitor the performance, and adjust settings as needed. You can expand or reduce the scope of the rollout at any time. When you're ready, you can end the staged rollout and deploy the connection to the entire organization (or to all applicable users).
 

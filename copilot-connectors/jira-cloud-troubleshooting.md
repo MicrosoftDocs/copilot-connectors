@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the Jira Cloud Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the Jira Cloud connector"
 description: "Learn how to troubleshoot common issues with the Jira Cloud Microsoft 365 Copilot connector, including error messages, possible causes, and resolution steps."
 ms.author: lauragra
 author: lauragra
@@ -10,7 +10,7 @@ ms.date: 11/19/2025
 ms.localizationpriority: medium
 ---
 
-# Troubleshoot issues with the Jira Cloud Microsoft 365 Copilot connector
+# Troubleshoot issues with the Jira Cloud connector
 
 This article provides troubleshooting guidance for the Jira Cloud Microsoft 365 Copilot connector*, including common error messages, possible causes, and next steps.
 This article provides troubleshooting guidance for the Jira Cloud Microsoft 365 Copilot connector, including common error messages, possible causes, and next steps.

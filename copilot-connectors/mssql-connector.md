@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors"
+title: "Azure SQL and Microsoft SQL Server connectors"
 ms.author: danielabo
 author: danielabom
 manager: SteveWilkins1123
@@ -11,7 +11,7 @@ ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors."
 ---
-# Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors
+# Azure SQL and Microsoft SQL Server connectors
 
 The Microsoft SQL Server or Azure SQL Microsoft 365 Copilot connectors allow your organization to discover and index data from an on-premises SQL Server database or a database hosted in your Azure SQL instance in the cloud.
 The connector indexes specified content in Microsoft Search and Microsoft 365 Copilot. To keep the index up to date with source data, it supports periodic full and incremental crawls. With these SQL connectors, you can also restrict access to search results for certain users.

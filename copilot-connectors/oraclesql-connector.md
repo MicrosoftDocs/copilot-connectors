@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Oracle SQL Microsoft 365 Copilot connector"
+title: "Oracle SQL connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -11,7 +11,7 @@ ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the Oracle SQL Microsoft 365 Copilot connector."
 ---
-# Oracle SQL Microsoft 365 Copilot connector
+# Oracle SQL connector
 
 The Oracle SQL Microsoft 365 Copilot connector allows your organization to discover and index data from an on-premises Oracle database. The connector indexes specified content in Microsoft Search and Microsoft 365 Copilot. To keep the index up to date with source data, it supports periodic full and incremental crawls. With the Oracle SQL Copilot connector, you can also restrict access to search results for certain users.
 

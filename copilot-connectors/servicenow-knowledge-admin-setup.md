@@ -1,5 +1,5 @@
 ---
-title: "Set up the ServiceNow service for ServiceNow Knowledge Microsoft 365 Copilot connector ingestion"
+title: "Set up the ServiceNow service for ServiceNow Knowledge connector ingestion"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 03/10/2026
+ms.date: 04/02/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Knowledge Copilot connector."
 ---
@@ -99,6 +99,9 @@ Hierarchical permissions are supported for the ServiceNow Knowledge connector. T
 
 The following sections describe the prerequisite steps to complete before deploying the ServiceNow connector.
 
+> [!TIP]
+> You can automate the prerequisite setup steps by using background scripts instead of the manual steps described in this article. For more information, see [Set up prerequisites using background scripts](servicenow-knowledge-setup-scripts.md).
+
 ### Create service account and set up permissions to index items
 
 To connect to ServiceNow and allow the ServiceNow Knowledge connector to update items regularly, you need a service account with read access to specific ServiceNow table records. The following table lists the required table records.
@@ -188,7 +191,10 @@ When the connector is set up and item sync is completed, you can check the index
 
 ### Set up REST API
 
-To allow the connector to fetch advanced user criteria, create a scripted REST API in your ServiceNow instance. 
+To allow the connector to fetch advanced user criteria, create a scripted REST API in your ServiceNow instance.
+
+> [!TIP]
+> You can automate this setup by using a background script. For more information, see [Set up REST API for advanced flow](servicenow-knowledge-setup-scripts.md#step-4-set-up-rest-api-for-advanced-flow). 
 
 - Elevate your role in ServiceNow to `security_admin`.
 

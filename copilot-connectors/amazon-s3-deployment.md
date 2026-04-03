@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Amazon S3 Microsoft 365 Copilot connector"
+title: "Deploy the Amazon S3 connector"
 author: lauragra
 ms.author: kailiang
 manager: zezhangzhao

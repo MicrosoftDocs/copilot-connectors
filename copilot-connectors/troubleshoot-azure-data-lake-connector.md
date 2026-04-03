@@ -1,6 +1,6 @@
 --- 
 ms.date: 09/11/2024 
-title: "Troubleshooting the Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector" 
+title: "Troubleshooting the Azure Data Lake Storage Gen2 connector" 
 ms.author: gladysa
 author: gladysa
 manager: brian.jackett
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Troubleshooting the Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector"
 --- 
 
-# Troubleshooting the Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector 
+# Troubleshooting the Azure Data Lake Storage Gen2 connector 
 
 ### Common errors observed while configuring the connector.
 

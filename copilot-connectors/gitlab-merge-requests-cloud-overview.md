@@ -1,5 +1,5 @@
 ---
-title: "GitLab Merge Requests Cloud Microsoft 365 Copilot connector overview"
+title: "GitLab Merge Requests Cloud connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitLab Merge Requests Cloud Microsoft 365 Copilot connector."
 ---
 
-# GitLab Merge Requests Cloud Microsoft 365 Copilot connector overview
+# GitLab Merge Requests Cloud connector overview
 
 The GitLab Merge Requests Cloud Microsoft 365 Copilot connector allows your organization to index merge requests from GitLab projects hosted on GitLab.com and make them discoverable across Microsoft 365 Copilot and Microsoft Search. It surfaces key merge request information—such as review status, approvals, CI results, and discussions—so developers and stakeholders can retrieve and act on this context directly in Microsoft 365.
 

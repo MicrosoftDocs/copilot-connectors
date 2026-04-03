@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the Aha! Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the Aha! connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Aha! Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Aha! Microsoft 365 Copilot connector
+# Troubleshoot issues with the Aha! connector
 
 The Aha! Features and Ideas Microsoft 365 Copilot connectors empower your organization to index and search Aha! features and ideas across your enterprise.  This article provides troubleshooting information for common errors that you might encounter when you deploy the Aha! connector.
 

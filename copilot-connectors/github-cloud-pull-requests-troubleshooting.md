@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot issues with the GitHub Cloud Pull Requests Microsoft 365 Copilot connector
+title: Troubleshoot issues with the GitHub Cloud Pull Requests connector
 description: Find troubleshooting information for the GitHub Cloud Pull Requests Microsoft 365 Copilot connector, including common errors and steps to resolve them.
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
@@ -10,7 +10,7 @@ ms.date: 11/20/2025
 ms.localizationpriority: Medium
 ---
 
-# Troubleshoot issues with the GitHub Cloud Pull Requests Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitHub Cloud Pull Requests connector
 
 The GitHub Cloud Pull Requests Microsoft 365 Copilot connector enables your organization to index pull requests stored in GitHub repositories into Microsoft 365 Copilot and Microsoft Search experiences. This article provides troubleshooting information for common errors that you might encounter when you deploy or use the connector.
 

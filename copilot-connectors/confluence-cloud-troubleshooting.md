@@ -1,6 +1,6 @@
 ---
 ms.date: 09/05/2025
-title: "Troubleshoot issues with the Confluence Cloud Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the Confluence Cloud connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind

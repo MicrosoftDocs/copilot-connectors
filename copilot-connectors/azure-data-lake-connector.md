@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector"
+title: "Azure Data Lake Storage Gen2 connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -11,9 +11,9 @@ ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector"
 ---
-# Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector
+# Azure Data Lake Storage Gen2 connector
 
-The Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector allows users in your organization to search for files stored in [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) and [Azure Data Lake Gen 2 Storage](/azure/storage/blobs/data-lake-storage-introduction) accounts.
+The Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector indexes and enables users in your organization to search for files stored in [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) and [Azure Data Lake Gen 2 Storage](/azure/storage/blobs/data-lake-storage-introduction) accounts.
 
 This article is for anyone who configures, runs, and monitors an Azure Data Lake Storage Gen2 Copilot connector. It supplements the general setup process and shows instructions that apply only to the Azure Data Lake Storage Gen2 Copilot connector. It  also includes information about [Limitations](#limitations).
 

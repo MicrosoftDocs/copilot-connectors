@@ -1,5 +1,5 @@
 ---
-title: "Microsoft 365 Copilot connectors item delete notifications"
+title: "Connectors item delete notifications"
 ms.author: rmalhotra
 author: rmalhotra
 ms.date: 02/24/2025

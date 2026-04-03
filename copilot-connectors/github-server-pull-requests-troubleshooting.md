@@ -1,5 +1,5 @@
 ---
-title: "GitHub Server Pull Requests Microsoft 365 Copilot connector troubleshooting"
+title: "GitHub Server Pull Requests connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the GitHub Server Pull Requests Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the GitHub Server Pull Requests Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitHub Server Pull Requests connector
 
 The GitHub Server Pull Requests connector enables your organization to index pull request metadata from GitHub Enterprise Server and surface it in Microsoft 365 Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when deploying or indexing data with the GitHub Server Pull Requests connector.
 

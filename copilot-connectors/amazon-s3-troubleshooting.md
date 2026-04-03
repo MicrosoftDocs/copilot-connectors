@@ -1,5 +1,5 @@
 ---
-title: "Amazon S3 Microsoft 365 Copilot connector troubleshooting"
+title: "Amazon S3 connector troubleshooting"
 author: lauragra
 ms.author: kailiang
 manager: zezhangzhao

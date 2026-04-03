@@ -1,5 +1,5 @@
 ---
-title: "Deploy the monday.com Microsoft 365 Copilot connector"
+title: "Deploy the monday.com connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the monday.com Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and rollout guidance."
 ---
 
-# Deploy the monday.com Microsoft 365 Copilot connector
+# Deploy the monday.com connector
 
 The monday.com Microsoft 365 Copilot connector integrates monday.com items into the Microsoft 365 ecosystem, allowing Microsoft 365 Copilot, Copilot Search, and Microsoft Search to surface project and task data from monday.com across Microsoft 365 experiences.
 

@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Coda Enterprise Microsoft 365 Copilot connector"
+title: "Deploy the Coda Enterprise connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,9 +13,9 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Coda Enterprise Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Coda Enterprise Microsoft 365 Copilot connector
+# Deploy the Coda Enterprise connector
 
-The Coda Enterprise Microsoft 365 Copilot connector allows your organization to index documents and pages from your Coda Enterprise environment. This article describes the steps to deploy and customize the Coda Enterprise connector.
+The Coda Enterprise Microsoft 365 Copilot connector enables your organization to index documents and pages from your Coda Enterprise environment. This article describes the steps to deploy and customize the Coda Enterprise connector.
 
 ## Prerequisites
 
