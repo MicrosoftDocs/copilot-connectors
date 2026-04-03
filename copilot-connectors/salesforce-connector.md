@@ -163,11 +163,11 @@ For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Sch
 | Incremental Crawl | Frequency: Every 15 mins |
 | Full Crawl | Frequency: Every Day |
 
-If you want to edit any of these values, choose the **Custom Setup** option.
+If you want to change any of these values, select the **Custom Setup** option.
 
 ## Custom setup
 
-Custom setup is for those admins who want to edit the default values for settings listed in the above table. Once you click on the "Custom Setup" option, you see three more tabs - Users, Content, and Sync.
+Custom setup is for admins who want to change the default values for the settings listed in the preceding table. When you select **Custom Setup**, you see three more tabs - Users, Content, and Sync.
 
 ### Users
 
