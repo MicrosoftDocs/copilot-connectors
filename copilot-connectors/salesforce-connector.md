@@ -215,7 +215,7 @@ _Filter data_
 
 **Manage Properties**
 
-Add or remove available properties from your Salesforce CRM data source. Assign a schema to the property by defining whether a property is searchable, queryable, retrievable, or refinable. Change the semantic label and add an alias to the property. While this step isn't mandatory, having some property labels improves the relevance and ensures better results for end users. By default, the connector assigns source properties to some of the labels, such as "Title," "URL," "CreatedBy," and "LastModifiedBy." The following list shows the properties that are selected by default.
+Add or remove available properties from your Salesforce CRM data source. Assign a schema to the property by defining whether a property is searchable, queryable, retrievable, or refinable. Change the semantic label and add an alias to the property. While this step isn't mandatory, having some property labels improves the relevance and ensures better results for end users. By default, the connector assigns source properties to some of the labels, such as **Title**, **URL**, **CreatedBy**, and **LastModifiedBy**. The following list shows the properties that are selected by default.
 
 *The list of properties that you select here can impact how you filter, search, and view your results in Microsoft 365 Copilot.*
 
@@ -237,7 +237,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/salesforce-connector/SalesforceSyncTab.png)](media/salesforce-connector/SalesforceSyncTab.png#lightbox)
 
-The refresh interval determines how often your data syncs between the data source and the connector index. Two types of refresh intervals occur - full crawl and incremental crawl. For more details, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
+The refresh interval determines how often your data syncs between the data source and the connector index. Two types of refresh intervals are available - full crawl and incremental crawl. For more details, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 You can change the default values of the refresh interval.
 
