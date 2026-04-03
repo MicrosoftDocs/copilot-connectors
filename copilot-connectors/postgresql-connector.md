@@ -20,13 +20,13 @@ The PostgreSQL Microsoft 365 Copilot connector allows your organization to index
 >The PostgreSQL connector is in preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) ring for your Admin account.
 
 ## Capabilities
-- Index records from your PostgreSQL database using a SQL query.
-- Specify access permissions for every record with list of users or groups added in SQL query.
+- Index records from your PostgreSQL database by using a SQL query.
+- Specify access permissions for every record with a list of users or groups added in the SQL query.
 - Enable your end users to ask questions related to indexed records in Copilot.
 - Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
-- Supported PostgreSQL versions: The connector supports PostgreSQL version 14 or above.
+- Supported PostgreSQL versions: The connector supports PostgreSQL version 14 or later.
 - To support high crawl speed and better performance, the connector is built to support OLTP (Online Transaction Processing) workloads only. OLAP (Online Analytical Processing) workloads that don't execute the provided SQL query in 40-seconds timeout and aren't supported.
 - ACLs are only supported by using a User Principal Name (UPN), Microsoft Entra ID, or Active Directory Security.
 - Indexing rich content inside database columns isn't supported. Examples of such content are HTML, JSON, XML, blobs, and document parsings that exist as links inside the database columns.
@@ -43,7 +43,7 @@ The PostgreSQL Microsoft 365 Copilot connector allows your organization to index
 ## Get Started with Setup
 
 ### 1. Display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+The display name identifies each citation in Copilot, so users can easily recognize the associated file or item. The display name also signifies trusted content and serves as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. PostgreSQL server
 To connect to your PostgreSQL data, you need your PostgreSQL server address, port, and database name. 

@@ -142,7 +142,7 @@ You can filter issues by creation or update timestamp, or by using **JQL**. For 
 
 #### Manage properties
 
-Select the Jira fields (schema properties) you want to index. You can include built-in Jira fields or add custom fields. For more information, see [Manage search schema](/microsoftsearch/manage-search-schema). The following properties are indexed by default.
+Select the Jira fields (schema properties) you want to index. Include built-in Jira fields or add custom fields. For more information, see [Manage search schema](/microsoftsearch/manage-search-schema). The following properties are indexed by default.
 
 |Source property       | Semantic Label          | Schema  |               
 |:---------------------|:---------------------- |:---------------------- |

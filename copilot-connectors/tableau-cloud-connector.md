@@ -20,13 +20,13 @@ With the Tableau Cloud  Microsoft 365 Copilot connector, your organization can i
 
 ## Capabilities
 - Index sheets of your Tableau Cloud and supports ingestion filters based on top-level projects.
-- Retain access control lists (ACLs) defined by your organization
+- Retain access control lists (ACLs) defined by your organization.
 - Customize your crawl frequency.
 - Create workflows using this connection and plugins from Microsoft Copilot Studio.  
 - Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content.
 
 ## Limitations
-- Sheets in personal space aren't indexable.
+- Sheets in personal space can't be indexed.
 
 ## Prerequisites
 - You must be the **AI administrator** for your organization's Microsoft 365 tenant.

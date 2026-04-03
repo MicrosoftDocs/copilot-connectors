@@ -17,7 +17,7 @@ description: "Set up the Enterprise Websites cloud Microsoft 365 Copilot connect
 By using the Enterprise Websites cloud Microsoft 365 Copilot connector, your organization can index webpages and **content from your company-owned websites** or public websites on the internet. After you configure the connector and index content from the website, end users can search for that content in Microsoft Search and Microsoft 365 Copilot.
 
 >[!IMPORTANT]
->You may utilize the [Enterprise Websites on-premises Copilot connector](enterprise-web-connector-onprem.md) to index websites hosted on-premises or on private clouds.
+>To index websites hosted on-premises or on private clouds, use the [Enterprise Websites on-premises Copilot connector](enterprise-web-connector-onprem.md).
 
 ## Capabilities
 - Index webpages from cloud accessible websites.
@@ -93,10 +93,10 @@ These are the supported MIME types.
 [![Screenshot that shows connection creation screen for Enterprise Websites cloud Copilot connector.](media/enterprise-web-connector/enterprise-website-cloud-create-page.png)](media/enterprise-web-connector/enterprise-website-cloud-create-page.png#lightbox)
 
 ### Display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name identifies each citation in Copilot, so users can easily recognize the associated file or item. The display name also signifies trusted content. Use the display name as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
-### Add Website URLs to index
-Specify the root of the website that you'd like to crawl. The Enterprise Websites cloud Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection.
+### Add website URLs to index
+Specify the root of the website that you want to crawl. The Enterprise Websites cloud Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection.
 
 The connector only crawls webpages in the domain of root URLs and doesn't support crawling of out-of-domain URLs. Redirection is only supported within the same domain. If there are redirections in the webpages to be crawled, you may add the redirected URL directly in the list of URLs to be crawled.
 

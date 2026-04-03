@@ -25,7 +25,7 @@ The Salesforce Knowledge Copilot connector allows your organization to index art
 - Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
-- The Salesforce Knowledge connector currently supports permissions based only on knowledge entity access. It does not support data category-based permissions, field-level security (FLS), or sharing rules.
+- The Salesforce Knowledge connector currently supports permissions based only on knowledge entity access. It doesn't support data category-based permissions, field-level security (FLS), or sharing rules.
 - Supports only articles and items written in English.
 - Only published items are indexed.
 
