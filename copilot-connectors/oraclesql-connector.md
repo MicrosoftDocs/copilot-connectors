@@ -19,7 +19,7 @@ The Oracle SQL Microsoft 365 Copilot connector allows your organization to disco
 - Index records from your Oracle SQL database using a SQL query.
 - Specify access permissions for every record with a list of users or groups added in an SQL query.
 - Enable your end users to ask questions related to indexed records in Copilot.
-- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - Oracle SQL version: The on-premises database must run Oracle Database version 11g or later. The connector supports the Oracle database hosted on Windows, Linux, and Azure VM platforms.
@@ -41,7 +41,7 @@ The Oracle SQL Microsoft 365 Copilot connector allows your organization to disco
 ## Get Started with Setup
 
 ### 1. Display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365/copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. SQL server
 To connect to your SQL data, you need to specify the hostname, port, and service (database) name.

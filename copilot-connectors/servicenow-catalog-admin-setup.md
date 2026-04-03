@@ -142,7 +142,7 @@ You can also assign the following roles to the service account to ensure that ca
 - `user_criteria_admin`
 - `user_admin`
 
-For information about how to create a user, assign a role, and grant read permissions to all the applicable table records, see [Grant table access to a user in ServiceNow](/microsoft-365/copilot/connectors/granting-table-access-servicenow). 
+For information about how to create a user, assign a role, and grant read permissions to all the applicable table records, see [Grant table access to a user in ServiceNow](/microsoft-365/copilot/connectors/granting-table-access-servicenow-catalog). 
 
 If the service account doesn’t have the required permissions—or if row or field-level permissions are restricted—specific items are excluded from indexing on the Microsoft side.
 
