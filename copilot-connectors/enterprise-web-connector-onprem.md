@@ -14,7 +14,7 @@ description: "Set up the Enterprise Websites on-premises Microsoft 365 Copilot c
 
 # Enterprise Websites on-premises connector
 
-The Enterprise Websites on-premises Microsoft 365 Copilot connector allows your organization to index webpages and **content from your company-owned websites**. After you configure the connector and index content from the websites, end users can search for that content in Microsoft Search and Microsoft 365 Copilot.
+The Enterprise Websites on-premises Microsoft 365 Copilot connector enables your organization to index webpages and **content from your company-owned websites**. After you configure the connector and index content from the websites, end users can search for that content in Microsoft Search and Microsoft 365 Copilot.
 
 ## Capabilities
 - Index webpages from on-premises or private cloud-hosted websites.

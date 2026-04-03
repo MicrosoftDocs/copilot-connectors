@@ -15,7 +15,7 @@ description: "Find information about how to deploy the GitLab Issues Cloud Copil
 
 # Deploy the GitLab Issues Cloud connector
 
-The GitLab Issues Cloud connector allows your organization to index issues stored in GitLab and make them available in Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the GitLab Issues Cloud connector.
+The GitLab Issues Cloud connector enables your organization to index issues stored in GitLab and make them available in Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the GitLab Issues Cloud connector.
 
 ## Prerequisites
 

@@ -15,7 +15,7 @@ description: "Learn about the capabilities, limitations, and use cases for the G
 
 # GitLab Issues Cloud connector overview
 
-The GitLab Issues Cloud Microsoft 365 Copilot connector allows your organization to index issue data stored in GitLab.com and make that information available in Microsoft 365 Copilot and Microsoft Search. GitLab issues represent work items used to plan, track, and coordinate development, project, and operational tasks. By bringing GitLab issue data into Microsoft 365, teams can retrieve issue details, discussions, assignments, and context without leaving their Microsoft 365 workflows.
+The GitLab Issues Cloud Microsoft 365 Copilot connector enables your organization to index issue data stored in GitLab.com and make that information available in Microsoft 365 Copilot and Microsoft Search. GitLab issues represent work items used to plan, track, and coordinate development, project, and operational tasks. By bringing GitLab issue data into Microsoft 365, teams can retrieve issue details, discussions, assignments, and context without leaving their Microsoft 365 workflows.
 
 ## Why use the GitLab Issues Cloud connector to index your data?
 

@@ -15,7 +15,7 @@ description: "Get the steps that the Dropbox admin needs to complete for your or
 
 # Set up the Dropbox service for Dropbox connector ingestion
 
-The Dropbox connector for Microsoft 365 Copilot allows your organization to index Dropbox content—including team folders, shared folders, private folders, and Dropbox Paper documents—and surface the content in Microsoft 365 Copilot and Microsoft Search experiences. This article provides information about the configuration steps that Dropbox admins need to complete in order for your organization to deploy the [Dropbox connector](dropbox-overview.md).
+The Dropbox connector for Microsoft 365 Copilot enables your organization to index Dropbox content - including team folders, shared folders, private folders, and Dropbox Paper documents - and surface the content in Microsoft 365 Copilot and Microsoft Search experiences. This article provides information about the configuration steps that Dropbox admins need to complete to deploy the [Dropbox connector](dropbox-overview.md).
 
 For information about how to deploy the connector, see [Deploy the Dropbox connector](dropbox-deployment.md).
 

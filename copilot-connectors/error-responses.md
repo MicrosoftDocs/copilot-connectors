@@ -11,7 +11,7 @@ description: "Learn how to identify and handle error responses in Microsoft 365 
 ---
 # Monitor connector errors
 
-You can view a limited set of Microsoft 365 Copilot connector errors in the Microsoft 365 admin center UI. To view a comprehensive list of connections errors, use the following steps to run a PowerShell script.
+You can view a limited set of Microsoft 365 Copilot connector errors in the Microsoft 365 admin center UI. To view a comprehensive list of connection errors, use the following steps to run a PowerShell script.
 
 1. Open Windows PowerShell with administrator rights.
 2. Install the script from the PowerShell gallery by using the following cmdlet.

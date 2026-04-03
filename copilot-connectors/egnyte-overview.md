@@ -15,7 +15,7 @@ description: "Learn about the capabilities, limitations, and use cases for the E
 
 # Egnyte connector overview
 
-The Egnyte Microsoft 365 Copilot connector allows your organization to index files stored in Egnyte so users can retrieve them through Microsoft 365 Copilot and Microsoft Search. After you configure the connector, users can quickly find Egnyte files directly from experiences such as Teams, Outlook, and SharePoint. This connector helps teams work more efficiently by unifying content discovery across Microsoft 365 and Egnyte while maintaining Egnyte’s permissions model.
+The Egnyte Microsoft 365 Copilot connector enables your organization to index files stored in Egnyte so users can retrieve them through Microsoft 365 Copilot and Microsoft Search. After you configure the connector, users can quickly find Egnyte files directly from experiences such as Teams, Outlook, and SharePoint. This connector helps teams work more efficiently by unifying content discovery across Microsoft 365 and Egnyte while maintaining Egnyte’s permissions model.
 
 ## Why use the Egnyte connector to index your data?
 

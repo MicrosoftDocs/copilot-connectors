@@ -15,7 +15,7 @@ ms.localizationpriority: Medium
 
 # Deploy the GitLab Knowledge Cloud connector
 
-The GitLab Knowledge Cloud Microsoft 365 Copilot connector allows your organization to index documentation, wikis, and knowledge artifacts stored in GitLab and make them available in Microsoft 365 Copilot and Microsoft Search experiences. This article describes the steps to deploy and customize the GitLab Knowledge Cloud connector.
+The GitLab Knowledge Cloud Microsoft 365 Copilot connector enables your organization to index documentation, wikis, and knowledge artifacts stored in GitLab to make it available in Microsoft 365 Copilot and Microsoft Search experiences. This article describes the steps to deploy and customize the GitLab Knowledge Cloud connector.
 
 ## Prerequisites
 

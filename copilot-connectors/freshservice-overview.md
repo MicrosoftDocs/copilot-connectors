@@ -15,7 +15,7 @@ description: "Learn about the capabilities, limitations, and use cases for the F
 
 # Freshservice connector overview
 
-The Freshservice Microsoft 365 Copilot connector enables your organization to index Freshservice solution article data to make it available to Microsoft 365 Copilot and Microsoft Search. This connector is designed for Microsoft 365 AI administrators or anyone who configures, runs, and monitors the Freshservice Copilot connector.
+The Freshservice Microsoft 365 Copilot connector enables your organization to index Freshservice solution article data to make it available to Microsoft 365 Copilot and Microsoft Search. Microsoft 365 AI administrators or anyone who configures, runs, and monitors the Freshservice Copilot connector can use this connector.
 
 ## Why use the Freshservice connector to index your data?
 

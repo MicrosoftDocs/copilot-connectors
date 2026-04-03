@@ -15,7 +15,7 @@ description: "Find troubleshooting information for the Bitbucket Pull Request Mi
 
 # Troubleshoot issues with the Bitbucket Pull Request connector
 
-The Bitbucket Pull Request Microsoft 365 Copilot connector integrates Bitbucket pull request content into Microsoft 365, allowing Copilot, Copilot Search, and Microsoft Search to surface relevant pull requests and engineering context directly within Microsoft 365. This article provides troubleshooting information for common errors that you might encounter when you deploy the Bitbucket Pull Request connector.
+The Bitbucket Pull Request Microsoft 365 Copilot connector integrates Bitbucket pull request content into Microsoft 365, so Copilot, Copilot Search, and Microsoft Search can surface relevant pull requests and engineering context directly within Microsoft 365. This article provides troubleshooting information for common errors that you might encounter when you deploy the Bitbucket Pull Request connector.
 
 ## Bitbucket Pull Request connector troubleshooting
 

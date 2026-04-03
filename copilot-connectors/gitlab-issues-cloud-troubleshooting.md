@@ -15,7 +15,7 @@ description: "Find troubleshooting information for the GitLab Issues Cloud Micro
 
 # Troubleshoot issues with the GitLab Issues Cloud connector
 
-The GitLab Issues Cloud Microsoft 365 Copilot connector allows your organization to index issue data stored in GitLab.com and makes that information available in Microsoft 365 Copilot and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the GitLab Issues Cloud connector.
+The GitLab Issues Cloud Microsoft 365 Copilot connector enables your organization to index issue data stored in GitLab.com and makes that information available in Microsoft 365 Copilot and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the GitLab Issues Cloud connector.
 
 ## GitLab Issues Cloud connector troubleshooting
 

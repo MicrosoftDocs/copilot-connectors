@@ -15,7 +15,7 @@ description: "Find troubleshooting information for the Dropbox Microsoft 365 Cop
 
 # Troubleshoot issues with the Dropbox connector
 
-The Dropbox connector integrates Dropbox content into Microsoft 365, allowing Copilot and Microsoft Search to surface files and insights directly within apps such as Teams, Outlook, and SharePoint. This article provides troubleshooting guidance for common issues you might encounter when deploying the Dropbox connector.
+The Dropbox connector integrates Dropbox content into Microsoft 365, so Copilot and Microsoft Search can surface files and insights directly within apps such as Teams, Outlook, and SharePoint. This article provides troubleshooting guidance for common issues you might encounter when deploying the Dropbox connector.
 
 To verify Dropbox configuration and assist with troubleshooting, see [Set up the Dropbox service for Dropbox Microsoft 365 Copilot connector ingestion](dropbox-admin-setup.md).
 
