@@ -144,7 +144,7 @@ You can also assign the following roles to the service account to ensure that ca
 
 For information about how to create a user, assign a role, and grant read permissions to all the applicable table records, see [Grant table access to a user in ServiceNow](/microsoft-365/copilot/connectors/granting-table-access-servicenow-catalog). 
 
-If the service account doesn’t have the required permissions—or if row or field-level permissions are restricted—specific items are excluded from indexing on the Microsoft side.
+If the service account doesn't have the required permissions - or if row or field-level permissions are restricted - specific items are excluded from indexing on the Microsoft side.
 
 > [!NOTE]
 > Don't explicitly apply `snc_read_only` to the service account. This role denies any write action to any table the user has access to. The account needs to write token and other authentication-related information into some tables. Because tokens are refreshed on a regular basis, this account can't be made read-only after initial authentication. The service account needs write access to the `oauth_credential` table for authentication.
