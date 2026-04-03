@@ -15,7 +15,7 @@ description: "Find troubleshooting information for the Bitbucket Knowledge Micro
 
 # Troubleshoot issues with the Bitbucket Knowledge connector
 
-The Bitbucket Knowledge connector indexes Markdown (.md) and text (.txt) files from your Bitbucket Cloud repositories so users can retrieve documentation through Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common issues you might encounter when deploying or indexing content with the Bitbucket Knowledge connector.
+The Bitbucket Knowledge connector indexes Markdown (.md) and text (.txt) files from your Bitbucket Cloud repositories so users can retrieve documentation through Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common issues you might encounter when deploying or indexing content by using the Bitbucket Knowledge connector.
 
 ## Bitbucket Knowledge connector troubleshooting
 
