@@ -38,7 +38,7 @@ The connector has the following limitations:
 - The Salesforce Copilot connector doesn't currently support Apex-based sharing, territory-based sharing, or sharing by using personal groups from Salesforce.
 - There's a known bug in the Salesforce API that the connector uses, where the private org-wide defaults for leads aren't honored.  
 - If you set field-level security (FLS) for a profile, the connector doesn't ingest that field for any profiles in that Salesforce org. As a result, users can't search for values for those fields or see them in the results.  
-- In the **manage schema** screen, these common standard property names appear once. The options are **Query**, **Search**, **Retrieve**, and **Refine**, and they apply to all or none.
+- In the **Manage properties** section, these common standard property names appear once. The options are **Query**, **Search**, **Retrieve**, and **Refine**, and they apply to all or none.
     - Name
     - Url
     - Description
