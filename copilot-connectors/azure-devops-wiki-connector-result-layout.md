@@ -15,7 +15,7 @@ ms.date: 06/03/2022
 
 # Result layout for Azure DevOps Wiki connector
 
-The [Azure DevOps Wiki Microsoft 365 Copilot connector](azure-devops-wiki-connector.md) allows your organization to index wikis from the Azure DevOps service. After you configure the connector and index content, you need to set up a search result page.
+The [Azure DevOps Wiki Microsoft 365 Copilot connector](azure-devops-wiki-connector.md) enables your organization to index wikis from the Azure DevOps service. After you configure the connector and index content, you need to set up a search result page.
 
 To set up the search result page, you need to:
 1. Set up [search vertical](/microsoft-365/copilot/connectors/manage-verticals).
