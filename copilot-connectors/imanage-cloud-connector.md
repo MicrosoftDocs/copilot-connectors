@@ -148,9 +148,9 @@ The connector maps Entra ID identities to the corresponding iManage user account
 > These settings operate at different layers and must be configured separately.
 
 - For testing, you can choose [publish to limited audience](./staged-rollout.md#modify-staged-rollout)
-- Search and validate your indexed content and permissions using [index browser](indexed-content.md)
-- You might find answers to common questions in the [FAQ](./frequently-asked-questions.yml)
+- Search and validate your indexed content and permissions using [index browser](indexed-content.md).
+- You might find answers to common questions in the [FAQ](./frequently-asked-questions.yml).
 
-For Microsoft Search, if you need to customize the search results page, see [Customize the search results page](/microsoft-365/copilot/connectors/customize-search-page).
+For Microsoft Search, if you need to customize the search results page, see [Customize the search results page](/microsoftsearch/customize-search-page).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/graph/support).

@@ -38,9 +38,9 @@ The DataStax Microsoft 365 Copilot connector enables your organization to index 
 ## Get started
 
 ### 1. Choose a display name 
-The display name is used to identify each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters).
+Use the display name to identify each citation in Copilot and help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters).
 
-A default value is provided; you can customize it to a name that users in your organization recognize.
+A default value is provided. You can customize it to a name that users in your organization recognize.
 
 ### 2. Add the DataStax API Endpoint
 To connect to your DataStax database, you need the DataStax API Endpoint. The endpoint can be found in the overview of your database and is typically the following: `https://<your-database-id>-<region>.apps.astra.datastax.com`.

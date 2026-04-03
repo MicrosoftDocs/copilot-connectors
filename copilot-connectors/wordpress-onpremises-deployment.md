@@ -21,10 +21,10 @@ Use the WordPress.org Microsoft 365 Copilot connector to index published posts a
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- You must be the AI administrator for your organization's Microsoft 365 tenant.
+- You're the AI administrator for your organization's Microsoft 365 tenant.
 - You have the URL of your WordPress.org website.
 - You have an admin account for your WordPress.org website with permission to create an application password (used for REST API authentication with external services).
-- You installed and configured the [Microsoft Graph connector agent](/microsoft-365/copilot/connectors/graph-connector-agent) on a host that can reach your WordPress.org instance.
+- You installed and configured the [Microsoft Graph connector agent](/microsoft-365/copilot/connectors/connector-agent) on a host that can reach your WordPress.org instance.
 
 ## Deploy the connector
 
