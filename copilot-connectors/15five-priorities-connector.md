@@ -15,7 +15,7 @@ ms.date: 08/15/2025
 
 # 15Five Priorities connector (preview)
 
-The 15Five Priorities Microsoft 365 Copilot connector allows your organization to index 15Five priority data, using Microsoft 365 Copilot and Microsoft Search. 
+The 15Five Priorities Microsoft 365 Copilot connector allows your organization to index 15Five priority data. This indexing allows the data to surface in Microsoft 365 Copilot and Microsoft Search experiences. 
 
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 
