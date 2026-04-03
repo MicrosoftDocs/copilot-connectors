@@ -1,5 +1,5 @@
 ---
-title: "Microsoft-built Microsoft 365 Copilot connectors gallery"
+title: "Microsoft-built connectors gallery"
 ms.author: danielabo
 author: danielabom
 manager: calvind
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 description: "Find a list of Microsoft 365 Copilot connectors built and supported by Microsoft, organized by categories, including a description and link to each connector website."
 ms.date: 03/17/2026
 ---
-# Microsoft-built Microsoft 365 Copilot connectors gallery
+# Microsoft-built connectors gallery
 
 Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using synced connectors or connect to data in real time by using federated connectors. 
 

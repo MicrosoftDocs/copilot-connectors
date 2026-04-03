@@ -1,6 +1,6 @@
 --- 
 
-title: "Trello Microsoft 365 Copilot connector (preview)" 
+title: "Trello connector (preview)" 
 ms.author: anggao
 author: ms-anggao
 manager: jecui
@@ -13,7 +13,7 @@ description: "Set up the Trello Microsoft 365 Copilot connector."
 ms.date: 08/15/2025
 ---
 
-# Trello Microsoft 365 Copilot connector (preview)
+# Trello connector (preview)
 
 The Trello Microsoft 365 Copilot connector allows your organization to index cards from Trello. After you configure the connector, users can search for these tickets from Trello in Microsoft 365 Copilot and from any Microsoft Search client.
 

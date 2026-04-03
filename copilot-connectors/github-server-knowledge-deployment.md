@@ -1,5 +1,5 @@
 ---
-title: "Deploy the GitHub Server Knowledge Microsoft 365 Copilot connector"
+title: "Deploy the GitHub Server Knowledge connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the GitHub Server Knowledge Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the GitHub Server Knowledge Microsoft 365 Copilot connector
+# Deploy the GitHub Server Knowledge connector
 
 The GitHub Server Knowledge connector integrates GitHub Enterprise knowledge into Microsoft 365, enabling Copilot and Microsoft Search to surface relevant wiki pages, markdown files, and blogs directly within apps like Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the connector.
 

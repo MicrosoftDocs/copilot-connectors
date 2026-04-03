@@ -1,6 +1,6 @@
 ---
 ms.date: 02/27/2025
-title: "Prebuilt Microsoft 365 Copilot connectors"
+title: "Prebuilt connectors"
 ms.author: danielabo
 author: danielabom
 manager: calvind
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 description: "Get an overview of the prebuilt Microsoft 365 Copilot connectors that are available for integration with Microsoft Search and Microsoft 365 Copilot."
 ---
 
-# Prebuilt Microsoft 365 Copilot connectors
+# Prebuilt connectors
 
 Microsoft 365 Copilot connectors offer a streamlined way to integrate content from external services into Microsoft Graph. You can then use this data to enhance intelligent experiences such as Microsoft 365 Copilot and Microsoft Search. Microsoft Graph acts as the data fabric that supports these advanced capabilities.
 

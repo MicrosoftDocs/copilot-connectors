@@ -1,5 +1,5 @@
 ---
-title: "ServiceNow Tickets Microsoft 365 Copilot connector overview"
+title: "ServiceNow Tickets connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvindrover
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Tickets Microsoft 365 Copilot connector."
 ---
 
-# ServiceNow Tickets Microsoft 365 Copilot connector overview
+# ServiceNow Tickets connector overview
 
 The ServiceNow Tickets Microsoft 365 Copilot connector allows organizations to index ticket records from ServiceNow and makes them searchable across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search. After you deploy the connector, users can retrieve ticket information by using natural language queries in Copilot. This capability enhances visibility into IT service management workflows and improves operational efficiency.
 

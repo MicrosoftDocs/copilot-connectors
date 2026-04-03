@@ -1,5 +1,5 @@
 ---
-title: "GitLab Issues Server Microsoft 365 Copilot connector overview"
+title: "GitLab Issues Server connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitLab Issues Server Microsoft 365 Copilot connector."
 ---
 
-# GitLab Issues Server Microsoft 365 Copilot connector overview
+# GitLab Issues Server connector overview
 
 The GitLab Issues Server Microsoft 365 Copilot connector integrates GitLab issue data into Microsoft 365. When you deploy this connector, Microsoft 365 Copilot and Microsoft Search can surface relevant GitLab issues directly in apps such as Teams, Outlook, and SharePoint. By indexing issues from GitLab Server projects and groups, users can search, summarize, and reason over issue data using Copilot and Microsoft Search. This capability helps development and delivery teams track work, triage bugs, and understand project status without leaving their Microsoft 365 flow of work.  
 

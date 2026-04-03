@@ -1,5 +1,5 @@
 ---
-title: "Deploy the ServiceNow Catalog Microsoft 365 Copilot connector"
+title: "Deploy the ServiceNow Catalog connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Catalog Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the ServiceNow Catalog Microsoft 365 Copilot connector
+# Deploy the ServiceNow Catalog connector
 
 The ServiceNow Catalog Microsoft 365 Copilot connector enables your organization to index catalog items from ServiceNow and makes them discoverable in Microsoft 365 experiences, including Copilot and Microsoft Search. This article describes the steps to deploy and customize the connector.
 

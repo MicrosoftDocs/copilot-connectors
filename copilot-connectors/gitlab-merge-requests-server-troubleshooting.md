@@ -1,5 +1,5 @@
 ---
-title: "GitLab Merge Requests Server Microsoft 365 Copilot connector troubleshooting"
+title: "GitLab Merge Requests Server connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the GitLab Merge Requests Server Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the GitLab Merge Requests Server Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitLab Merge Requests Server connector
 
 The GitLab Merge Requests Server Microsoft 365 Copilot connector indexes merge request metadata from GitLab Self‑Managed (Server) so users can discover, summarize, and retrieve MR insights in Microsoft 365. This article provides troubleshooting steps for common issues you might encounter during deployment and operation of the connector.
 

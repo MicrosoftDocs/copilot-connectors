@@ -1,5 +1,5 @@
 ---
-title: "Veeva PromoMats Microsoft 365 Copilot connector overview"
+title: "Veeva PromoMats connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Veeva PromoMats Microsoft 365 Copilot connector."
 ---
 
-# Veeva PromoMats Microsoft 365 Copilot connector overview
+# Veeva PromoMats connector overview
 
 The Veeva PromoMats Microsoft 365 Copilot connector enables organizations to index and surface approved promotional marketing materials and related compliant content from Veeva Vault PromoMats into the Microsoft 365 ecosystem. After the connector is configured, content stored in PromoMats is accessible in apps such as Microsoft Teams, Outlook, and SharePoint via Microsoft 365 Copilot and Microsoft Search experiences. This integration supports faster content creation, reuse, review, and distribution by making compliant marketing content, localization-ready assets, and regulatory-reviewed documents available directly within Microsoft 365 workflows. 
 

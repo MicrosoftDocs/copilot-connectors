@@ -1,5 +1,5 @@
 ---
-title: Federated Microsoft 365 Copilot connectors overview (early access preview)
+title: Federated connectors overview (early access preview)
 description: Get an overview of MCP-based Microsoft 365 Copilot federated connectors.
 #customer intent: As an admin, I want to learn about federated connectors and whether and how to enable them in the Microsoft 365 admin center.
 author: Lauragra
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 ms.audience: Admin
 ---
  
-# Federated Microsoft 365 Copilot connectors overview (early access preview)
+# Federated connectors overview (early access preview)
  
 Microsoft 365 Copilot supports federated connectors, a new way to bring your organization's data into Microsoft 365 without traditional indexing. Unlike synced Microsoft 365 Copilot connectors that crawl and index content into Microsoft Graph, federated connectors use a Model Context Protocol (MCP) to read content in real time. This capability allows organizations to connect live, dynamic data sources that can't or shouldn't be indexed, and make it discoverable through Copilot experiences.
  

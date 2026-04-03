@@ -1,5 +1,5 @@
 ---
-title: "Adobe Experience Manager Assets Microsoft 365 Copilot connector overview"
+title: "Adobe Experience Manager Assets connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Adobe Experience Manager Assets Microsoft 365 Copilot connector."
 ---
 
-# Adobe Experience Manager Assets Microsoft 365 Copilot connector overview
+# Adobe Experience Manager Assets connector overview
 
 The Adobe Experience Manager (AEM) Assets Copilot connector indexes published assets from your AEM Assets instance so users can discover, preview, and reuse brand‑approved content directly in Microsoft 365 Copilot and Microsoft Search across Microsoft 365. This integration helps reduce app‑switching and ensures that teams work with authoritative, on‑brand materials.
 

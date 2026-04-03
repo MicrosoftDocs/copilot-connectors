@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "MediaWiki Microsoft 365 Copilot connector"
+title: "MediaWiki connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind

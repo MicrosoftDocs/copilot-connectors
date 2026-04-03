@@ -1,5 +1,5 @@
 --- 
-title: "Stack Overflow Microsoft 365 Copilot connector" 
+title: "Stack Overflow connector" 
 ms.author: lauragra
 author: lauragra
 manager: ereza
@@ -12,7 +12,7 @@ description: "Set up the Stack Overflow Microsoft 365 Copilot connector."
 ms.date: 12/25/2025
 ---
 
-# Stack Overflow Microsoft 365 Copilot connector
+# Stack Overflow connector
 
 The Stack Overflow Copilot connector allows your organization to index questions and answers from Stack Overflow. After you configure the connector, end users can search for these posts from Stack Overflow in Microsoft 365 Copilot and from any Microsoft Search client. 
 

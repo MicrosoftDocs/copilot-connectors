@@ -1,5 +1,5 @@
 --- 
-title: "DataStax Microsoft 365 Copilot connector" 
+title: "DataStax connector" 
 ms.author:  kailiang
 author: Kai-Cloud
 manager: zezhangzhao
@@ -12,9 +12,9 @@ description: "Set up the DataStax Microsoft 365 Copilot connector."
 ms.date: 08/15/2025
 ---
 
-# DataStax Microsoft 365 Copilot connector
+# DataStax connector
 
-The DataStax Microsoft 365 Copilot connector allows your organization to index records in your DataStax Astra DB collections. After you configure the connector and index content from the DataStax databases, users can search for those items in Microsoft 365 Copilot.
+The DataStax Microsoft 365 Copilot connector enables your organization to index records in your DataStax Astra DB collections. After you configure the connector and index content from the DataStax databases, users can search for those items in Microsoft 365 Copilot.
 
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 

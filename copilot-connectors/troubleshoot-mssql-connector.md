@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Troubleshooting the Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors."
+title: "Troubleshooting the Azure SQL and Microsoft SQL Server connectors."
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Troubleshooting the Azure SQL and Microsoft SQL Microsoft 365 Copilot connectors."
 ---
 
-# Troubleshooting the Azure SQL and Microsoft SQL Microsoft 365 Copilot connectors
+# Troubleshooting the Azure SQL and Microsoft SQL connectors
 
 The following are common errors observed while configuring the connectors, or during crawling, and their possible reasons.
 

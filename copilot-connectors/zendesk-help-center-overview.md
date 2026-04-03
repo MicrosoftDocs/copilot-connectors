@@ -1,5 +1,5 @@
 ---
-title: "Zendesk Help Center Microsoft 365 Copilot connector overview"
+title: "Zendesk Help Center connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Zendesk Help Center Copilot connector."
 ---
 
-# Zendesk Help Center Microsoft 365 Copilot connector overview
+# Zendesk Help Center connector overview
 
 The Zendesk Help Center Microsoft 365 Copilot connector enables organizations to index published articles from Zendesk Help Center (also known as Zendesk Guide). After you configure the connector, users can discover and search for support content directly within Microsoft 365 Copilot and Microsoft Search experiences. This integration allows end users to ask questions and reference Zendesk articles without leaving Microsoft 365.
 

@@ -1,5 +1,5 @@
 ---
-title: "Deploy the WordPress.org Microsoft 365 Copilot connector"
+title: "Deploy the WordPress.org connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the WordPress.org Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the WordPress.org Microsoft 365 Copilot connector
+# Deploy the WordPress.org connector
 
 Use the WordPress.org Microsoft 365 Copilot connector to index published posts and pages from WordPress.org websites so users can discover this content in Copilot and Microsoft Search. This article describes the steps to deploy and customize the connector.
 

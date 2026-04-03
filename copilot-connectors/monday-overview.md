@@ -1,5 +1,5 @@
 ---
-title: "monday.com Microsoft 365 Copilot connector overview"
+title: "monday.com connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the monday.com Microsoft 365 Copilot connector."
 ---
 
-# monday.com Microsoft 365 Copilot connector overview
+# monday.com connector overview
 
 The monday.com Microsoft 365 Copilot connector enables organizations to index monday.com items, boards, groups, and workspace metadata into Microsoft Graph. After you deploy the connector, monday.com content is surfaced in Microsoft 365 Copilot, Copilot Search, and Microsoft Search  experiences and within apps like Microsoft Teams, Outlook, and SharePoint. This integration helps users discover, summarize, and work with project and task data without leaving Microsoft 365.
 

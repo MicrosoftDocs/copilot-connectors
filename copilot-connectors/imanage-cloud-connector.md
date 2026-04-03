@@ -1,6 +1,6 @@
 ---
 ms.date: 11/19/2025
-title: "iManage Cloud Microsoft 365 Copilot connector (preview)"
+title: "iManage Cloud connector (preview)"
 ms.author: danielabo
 author: danielabo
 manager: laugra
@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Set up the iManage Cloud Microsoft 365 Copilot connector."
 ---
 
-# iManage Cloud Microsoft 365 Copilot connector (preview)
+# iManage Cloud connector (preview)
 
 The iManage Cloud Microsoft 365 Copilot connector enables your organization to index content from iManage Cloud so users can discover it in Microsoft 365 Copilot experiences and Microsoft Search clients. This connector is part of the Microsoft 365 Copilot connectors platform and supports Copilot extensibility scenarios.
 

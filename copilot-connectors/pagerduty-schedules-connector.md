@@ -1,6 +1,6 @@
 ---
 
-title: "PagerDuty Schedules Microsoft 365 Copilot connector (preview)" 
+title: "PagerDuty Schedules connector (preview)" 
 ms.author: wangchen
 author: wangchen
 manager: zezhangzhao

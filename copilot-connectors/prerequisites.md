@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for deploying Microsoft 365 Copilot connectors"
+title: "Prerequisites for deploying connectors"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -11,7 +11,7 @@ description: "Learn about the licensing requirements for deploying Copilot conne
 ms.date: 02/24/2026
 ---
 
-# Prerequisites for deploying Microsoft 365 Copilot connectors
+# Prerequisites for deploying connectors
 
 Microsoft 365 Copilot connectors enable your organization to bring external data into the intelligent experiences within Microsoft 365. This article describes the prerequisites required to deploy Copilot connectors in your organization.
 

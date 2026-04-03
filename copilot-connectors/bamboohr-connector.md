@@ -1,5 +1,5 @@
 ---
-title: "BambooHR Microsoft 365 Copilot connector"
+title: "BambooHR connector"
 ms.author: zmwangi
 author: zarrko
 manager: helgesol
@@ -12,9 +12,9 @@ description: "Set up the BambooHR Microsoft 365 Copilot connector."
 ms.date: 11/14/2025
 ---
 
-# BambooHR Microsoft 365 Copilot connector
+# BambooHR connector
 
-The [Microsoft 365 Copilot connector for people data](/graph/peopleconnectors) allows organizations to index data from external systems, including BambooHR, into Microsoft 365. The BambooHR Microsoft 365 Copilot connector allows organizations to index profiles from BambooHR into Microsoft Graph to make them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search.
+The [Microsoft 365 Copilot connector for people data](/graph/peopleconnectors) enables organizations to index data from external systems, including BambooHR, into Microsoft 365. By using the BambooHR Microsoft 365 Copilot connector, organizations can index profiles from BambooHR into Microsoft Graph, so they're accessible across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search.
 
 The following video provides an overview of the BambooHR connector.
 

@@ -1,6 +1,6 @@
 ---
 ms.date: 01/05/2026
-title: "Deploy the Confluence Cloud Microsoft 365 Copilot connector in the Microsoft 365 Admin Center"
+title: "Deploy the Confluence Cloud connector in the Microsoft 365 Admin Center"
 ms.author: lauragra
 author: lauragra
 manager: calvind

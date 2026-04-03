@@ -1,5 +1,5 @@
 ---
-title: Deploy the GitHub Cloud Pull Requests Microsoft 365 Copilot connector
+title: Deploy the GitHub Cloud Pull Requests connector
 description: Find information about how to deploy the GitHub Cloud Pull Requests Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options.
 ms.topic: how-to
 ms.service: copilot-connectors
@@ -10,7 +10,7 @@ ms.date: 12/02/2025
 ms.localizationpriority: Medium
 ---
 
-# Deploy the GitHub Cloud Pull Requests Microsoft 365 Copilot connector
+# Deploy the GitHub Cloud Pull Requests connector
 
 The GitHub Cloud Pull Requests Microsoft 365 Copilot connector enables your organization to index pull requests stored in GitHub repositories into Microsoft 365 Copilot and Microsoft Search experiences. This article describes the steps to deploy and customize the connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview).
 

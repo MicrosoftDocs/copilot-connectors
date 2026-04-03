@@ -1,5 +1,5 @@
 ---
-title: "Set up the ServiceNow service for ServiceNow Catalog Microsoft 365 Copilot connector ingestion"
+title: "Set up the ServiceNow service for ServiceNow Catalog connector ingestion"
 ms.author: lauragra
 author: lauragra
 manager: calvind

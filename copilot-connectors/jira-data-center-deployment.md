@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Jira Data Center Microsoft 365 Copilot connector"
+title: "Deploy the Jira Data Center connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Jira Data Center Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Jira Data Center Microsoft 365 Copilot connector
+# Deploy the Jira Data Center connector
 
 The Jira Data Center Microsoft 365 Copilot connector allows your organization to index Jira Data Center issues and related project data so they become discoverable and actionable in Microsoft 365 and Microsoft Search experiences. This article describes the steps to deploy and customize the Jira Data Center connector.
 

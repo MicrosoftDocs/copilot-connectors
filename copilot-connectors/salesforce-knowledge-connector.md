@@ -1,5 +1,5 @@
 --- 
-title: "Salesforce Knowledge connector for Microsoft Search and Microsoft 365 Copilot" 
+title: "Salesforce Knowledge connector for Microsoft Search and" 
 ms.author: lauragra
 author: lauragra
 manager: ereza
