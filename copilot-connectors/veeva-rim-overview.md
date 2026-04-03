@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 03/19/2026
+ms.date: 04/03/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Veeva Vault RIM Microsoft 365 Copilot connector."
 ---
