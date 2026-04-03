@@ -22,7 +22,7 @@ The Jira Data Center Microsoft 365 Copilot connector allows your organization to
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You must be a Microsoft 365 admin.
-- Install the [Microsoft Graph connector agent](/microsoft-365/copilot/connectors/graph-connector-agent) on a Windows computer within the same network as your Jira Data Center instance. If the agent is already installed, verify that you're running version **3.1.15.0 or later**.
+- Install the [Microsoft Graph connector agent](/microsoft-365/copilot/connectors/connector-agent) on a Windows computer within the same network as your Jira Data Center instance. If the agent is already installed, verify that you're running version **3.1.15.0 or later**.
 - Install the Jira Data Center plugin from the Microsoft 365 Copilot connector listing in the [Atlassian Marketplace](https://marketplace.atlassian.com/).  
   > [!NOTE]
   > The plugin supports Jira Data Center versions **8.10.0 – 10.5.1**.
