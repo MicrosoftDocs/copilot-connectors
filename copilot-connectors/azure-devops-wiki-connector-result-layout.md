@@ -19,7 +19,7 @@ The [Azure DevOps Wiki Microsoft 365 Copilot connector](azure-devops-wiki-connec
 
 To set up the search result page, you need to:
 1. Set up [search vertical](/microsoftsearch/manage-verticals).
-2. Set up [search result type](/microsoftsearch/manage-result-types).
+1. Set up [search result type](/microsoftsearch/manage-result-types).
 
 This article provides a result layout JSON example to set up your result layout for the Azure DevOps Wiki Copilot connector.
 
@@ -145,5 +145,5 @@ The following is the associated JSON file.
 ```
 ## Related content
 
-- [Customize search verticles](/microsoftsearch/manage-verticals)
+- [Customize search verticals](/microsoftsearch/manage-verticals)
 - [Manage search result layouts](/microsoftsearch/customize-results-layout)
