@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Azure DevOps Work Items Microsoft 365 Copilot connector"
+title: "Deploy the Azure DevOps Work Items connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,9 +13,9 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Azure DevOps Work Items Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Azure DevOps Work Items Microsoft 365 Copilot connector
+# Deploy the Azure DevOps Work Items connector
 
-The Azure DevOps Work Items connector indexes work items—such as user stories, tasks, bugs, and features—from your Azure DevOps Services organization into Microsoft 365. This guide describes the steps to deploy and customize the connector.
+The Azure DevOps Work Items connector indexes work items - such as user stories, tasks, bugs, and features - from your Azure DevOps Services organization into Microsoft 365. This guide describes the steps to deploy and customize the connector.
 
 For Azure DevOps configuration information, see [Set up the Azure DevOps environment for connector ingestion](azure-devops-work-items-admin-setup.md).
 
@@ -142,7 +142,7 @@ When you're signed in as an admin, the Microsoft Entra app is automatically auth
 
 ### Roll out
 
-To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users or groups to roll the connector out to. This allows you to validate the connector before a full deployment. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout-for-graph-connectors).
+To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users or groups to roll the connector out to. This allows you to validate the connector before a full deployment. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Azure DevOps Work Items connector begins indexing content immediately.
 
@@ -216,11 +216,11 @@ You can adjust how frequently the connector crawls your Azure DevOps organizatio
 
 The default sync settings are optimized for most organizations.
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/configure-connector#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Azure DevOps Work Items connector overview](azure-devops-work-items-overview.md)
 - [Troubleshoot issues with the Azure DevOps Work Items connector](azure-devops-work-items-troubleshooting.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/configure-connector)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)
 

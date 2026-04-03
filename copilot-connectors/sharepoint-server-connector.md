@@ -1,5 +1,5 @@
 ---
-title: "SharePoint Server Microsoft 365 Copilot connector (preview)"
+title: "SharePoint Server connector (preview)"
 ms.author: misvenso
 author: antarikshp
 manager: harshkum
@@ -12,7 +12,7 @@ description: "Set up the SharePoint Server Microsoft 365 Copilot connector."
 ms.date: 03/30/2026
 ---
 
-# SharePoint Server Microsoft 365 Copilot connector (preview)
+# SharePoint Server connector (preview)
 
 The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for content stored in an on-premises SharePoint Server farm or use the content in Copilot for specific use cases and scenarios. It crawls documents and site pages from SharePoint on-premises farms. On-premises versions of SharePoint Server 2016, 2019, and Subscription Edition (SPSE) are supported.
 

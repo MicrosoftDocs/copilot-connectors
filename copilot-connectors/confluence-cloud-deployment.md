@@ -1,6 +1,6 @@
 ---
-ms.date: 04/01/2026
-title: "Deploy the Confluence Cloud Microsoft 365 Copilot connector in the Microsoft 365 Admin Center"
+ms.date: 01/05/2026
+title: "Deploy the Confluence Cloud connector in the Microsoft 365 Admin Center"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Confluence Cloud Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Confluence Cloud Copilot connector in the Microsoft 365 admin center
+# Deploy the Confluence Cloud connector in the Microsoft 365 admin center
 
 The Confluence Cloud Microsoft 365 Copilot connector integrates Confluence content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant wiki pages and blogs directly within apps like Teams, Outlook, and SharePoint.
 

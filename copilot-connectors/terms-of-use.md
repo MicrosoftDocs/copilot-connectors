@@ -1,6 +1,6 @@
 ---
 ms.date: 11/18/2025
-title: "Microsoft 365 Copilot connectors: Terms of use"
+title: "Connectors: Terms of use"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -10,7 +10,7 @@ ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Learn about the legal terms and conditions for Microsoft 365 Copilot connectors."
 ---
-# Microsoft 365 Copilot connectors: Terms of use
+# Connectors: Terms of use
 
 By enabling Microsoft 365 Copilot connectors, you authorize Microsoft to: 1) create an index of third-party data; 2) send your Customer Data and Personal Data, defined in and subject to your separate agreement with Microsoft, to third-party services, subject to those third-party services terms and privacy policies, and retrieve third-party data; and 3) for each of points 1) and 2) import the third-party index or data into your Microsoft 365 tenant subject to your configurations, [Set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
 

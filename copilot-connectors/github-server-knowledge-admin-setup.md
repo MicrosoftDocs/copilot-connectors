@@ -1,5 +1,5 @@
 ---
-title: "Set up the GitHub service for GitHub Server Knowledge Microsoft 365 Copilot connector ingestion"
+title: "Set up the GitHub service for GitHub Server Knowledge connector ingestion"
 ms.author: lauragra
 author: lauragra
 manager: calvind

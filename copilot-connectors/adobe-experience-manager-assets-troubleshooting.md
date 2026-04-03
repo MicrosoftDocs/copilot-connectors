@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the Adobe Experience Manager Assets Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the Adobe Experience Manager Assets connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,9 +13,9 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Adobe Experience Manager Assets Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Adobe Experience Manager Assets Microsoft 365 Copilot connector
+# Troubleshoot issues with the Adobe Experience Manager Assets connector
 
-The Adobe Experience Manager Assets Microsoft 365 Copilot connector integrates Adobe Experience Manager (AEM) Assets content into the Microsoft 365 ecosystem to enable Copilot and search experiences to surface published assets. 
+The Adobe Experience Manager Assets Microsoft 365 Copilot connector integrates Adobe Experience Manager (AEM) Assets content into the Microsoft 365 ecosystem. This integration allows Copilot and Microsoft Search experiences to surface published assets. 
 
 This article provides troubleshooting information for common errors that you might encounter when you deploy the connector.
 

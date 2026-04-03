@@ -1,5 +1,5 @@
 ---
-title: "GitLab Merge Requests Server Microsoft 365 Copilot connector overview"
+title: "GitLab Merge Requests Server connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitLab Merge Requests Server Microsoft 365 Copilot connector."
 ---
 
-# GitLab Merge Requests Server Microsoft 365 Copilot connector overview
+# GitLab Merge Requests Server connector overview
 
 The GitLab Merge Requests Server Microsoft 365 Copilot connector integrates merge request data from GitLab Self-Managed (Server) into Microsoft 365. After you configure the connector and index GitLab content, users can discover, summarize, and retrieve merge request information directly from Microsoft Search, Microsoft 365 Copilot, and Copilot Search. This indexing enables engineering teams to quickly access work-in-progress changes, code review insights, release readiness information, and repository activity without leaving Microsoft 365.
 

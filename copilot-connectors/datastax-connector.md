@@ -1,5 +1,5 @@
 --- 
-title: "DataStax Microsoft 365 Copilot connector" 
+title: "DataStax connector" 
 ms.author:  kailiang
 author: Kai-Cloud
 manager: zezhangzhao
@@ -12,9 +12,9 @@ description: "Set up the DataStax Microsoft 365 Copilot connector."
 ms.date: 08/15/2025
 ---
 
-# DataStax Microsoft 365 Copilot connector
+# DataStax connector
 
-The DataStax Microsoft 365 Copilot connector allows your organization to index records in your DataStax Astra DB collections. After you configure the connector and index content from the DataStax databases, users can search for those items in Microsoft 365 Copilot.
+The DataStax Microsoft 365 Copilot connector enables your organization to index records in your DataStax Astra DB collections. After you configure the connector and index content from the DataStax databases, users can search for those items in Microsoft 365 Copilot.
 
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 
@@ -38,9 +38,9 @@ The DataStax Microsoft 365 Copilot connector allows your organization to index r
 ## Get started
 
 ### 1. Choose a display name 
-The display name is used to identify each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoft-365-copilot/connectors/custom-filters#content-source-filters).
+Use the display name to identify each citation in Copilot and help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters).
 
-A default value is provided; you can customize it to a name that users in your organization recognize.
+A default value is provided. You can customize it to a name that users in your organization recognize.
 
 ### 2. Add the DataStax API Endpoint
 To connect to your DataStax database, you need the DataStax API Endpoint. The endpoint can be found in the overview of your database and is typically the following: `https://<your-database-id>-<region>.apps.astra.datastax.com`.

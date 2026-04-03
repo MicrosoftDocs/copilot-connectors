@@ -1,5 +1,5 @@
 ---
-title: "ServiceNow Tickets Microsoft 365 Copilot connector troubleshooting"
+title: "ServiceNow Tickets connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvindrover
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the ServiceNow Tickets Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the ServiceNow Tickets Microsoft 365 Copilot connector
+# Troubleshoot issues with the ServiceNow Tickets connector
 
 The ServiceNow Tickets Microsoft 365 Copilot connector allows organizations to index ticket records from ServiceNow and make them searchable across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the ServiceNow Tickets connector. 
 

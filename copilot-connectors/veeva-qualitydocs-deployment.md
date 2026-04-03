@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Veeva QualityDocs Microsoft 365 Copilot connector"
+title: "Deploy the Veeva QualityDocs connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Veeva QualityDocs Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Veeva QualityDocs Microsoft 365 Copilot connector
+# Deploy the Veeva QualityDocs connector
 
 The Veeva QualityDocs Microsoft 365 Copilot connector enables organizations to index controlled quality documents—such as Standard Operating Procedures (SOPs), work instructions, policies, CAPAs, and batch records—from Veeva Vault QualityDocs into Microsoft Graph. This integration makes them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot   and Microsoft Search. The connector respects Vault QualityDocs' granular permission model, ensuring that only authorized users can see or interact with relevant documents. By pairing Microsoft's AI capabilities with QualityDocs' single source of truth, quality, regulatory, manufacturing, and supply-chain teams can collaborate more efficiently while maintaining compliance.
 

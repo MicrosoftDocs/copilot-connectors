@@ -1,5 +1,5 @@
 --- 
-title: "Stack Overflow Microsoft 365 Copilot connector" 
+title: "Stack Overflow connector" 
 ms.author: lauragra
 author: lauragra
 manager: ereza
@@ -12,7 +12,7 @@ description: "Set up the Stack Overflow Microsoft 365 Copilot connector."
 ms.date: 12/25/2025
 ---
 
-# Stack Overflow Microsoft 365 Copilot connector
+# Stack Overflow connector
 
 The Stack Overflow Copilot connector allows your organization to index questions and answers from Stack Overflow. After you configure the connector, end users can search for these posts from Stack Overflow in Microsoft 365 Copilot and from any Microsoft Search client. 
 
@@ -23,7 +23,7 @@ The Stack Overflow Copilot connector allows your organization to index questions
    - What are the best practices for handling large datasets in our CRM software?
    - What are the differences between using REST and GraphQL for our API services?
    - How can we improve the load time of our customer-facing web applications?
-- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 - The Stack Overflow Copilot connector supports Stack Overflow for Teams **Business** and **Enterprise**.
 
 ## Limitations

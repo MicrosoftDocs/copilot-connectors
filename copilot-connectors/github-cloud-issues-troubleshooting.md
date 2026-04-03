@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot issues with the GitHub Cloud Issues Microsoft 365 Copilot connector
+title: Troubleshoot issues with the GitHub Cloud Issues connector
 description: "Learn about troubleshooting the GitHub Cloud Issues Microsoft 365 Copilot connector."
 author: Lauragra
 ms.author: lauragra
@@ -10,7 +10,7 @@ ms.service: copilot-connectors
 ms.topic: concept-article
 ---
 
-# Troubleshoot issues with the GitHub Cloud Issues Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitHub Cloud Issues connector
 
 The GitHub Cloud Issues Microsoft 365 Copilot connector enables your organization to index GitHub issues so they can be surfaced in Microsoft 365 Copilot and Microsoft Search experiences. This article provides troubleshooting information for common errors that you might encounter when you deploy or use the connector.
 

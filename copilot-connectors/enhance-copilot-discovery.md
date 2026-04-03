@@ -1,6 +1,6 @@
 ---
 ms.date: 06/17/2024
-title: "Enhance Copilot Discovery of Microsoft 365 Copilot connectors content"
+title: "Enhance Copilot Discovery of connectors content"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: harshkum
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Enhance the discoverability of Microsoft 365 Copilot connectors' content within Microsoft 365 Copilot."
 ---
 
-# Enhance Copilot discovery of Microsoft 365 Copilot connectors content
+# Enhance Copilot discovery of connectors content
 
 This article describes how to optimize Microsoft 365 Copilot connector connection names and descriptions to enhance Copilot discovery of the connector content. Choose a meaningful connection name and description to help Copilot better match the connector content to the user's request. 
 

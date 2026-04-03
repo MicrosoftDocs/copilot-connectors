@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Zendesk Help Center Microsoft 365 Copilot connector"
+title: "Deploy the Zendesk Help Center connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Zendesk Help Center Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Zendesk Help Center Microsoft 365 Copilot connector
+# Deploy the Zendesk Help Center connector
 
 The Zendesk Help Center Microsoft 365 Copilot connector enables your organization to index published articles from Zendesk Help Center (also known as Zendesk Guide). After you configure the connector, users can search for these articles in Microsoft 365 Copilot and Microsoft Search clients. 
 

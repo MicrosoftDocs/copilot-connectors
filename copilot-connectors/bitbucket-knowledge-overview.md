@@ -1,5 +1,5 @@
 ---
-title: "Bitbucket Knowledge Microsoft 365 Copilot connector overview"
+title: "Bitbucket Knowledge connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Bitbucket Knowledge Microsoft 365 Copilot connector."
 ---
 
-# Bitbucket Knowledge Microsoft 365 Copilot connector overview
+# Bitbucket Knowledge connector overview
 
 The Bitbucket Knowledge Microsoft 365 Copilot connector integrates documentation files stored in Bitbucket into Microsoft 365. When you configure the connector and index documentation from Bitbucket repositories, users can discover and retrieve Markdown (.md) and text (.txt) knowledge files directly through Copilot, Copilot Search, and Microsoft Search. This indexing helps teams access engineering runbooks, onboarding guides, architecture notes, and operational documentation without leaving their Microsoft 365 workflow.
 

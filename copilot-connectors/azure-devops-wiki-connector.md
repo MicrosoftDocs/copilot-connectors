@@ -1,5 +1,5 @@
 --- 
-title: "Azure DevOps Wiki Microsoft 365 Copilot connector" 
+title: "Azure DevOps Wiki connector" 
 ms.author: vivg 
 author: vivg 
 manager: harshkum 
@@ -12,9 +12,9 @@ description: "Set up the Azure DevOps Wiki Microsoft 365 Copilot connector"
 ms.date: 03/09/2026
 ---
 
-# Azure DevOps Wiki Microsoft 365 Copilot connector
+# Azure DevOps Wiki connector
 
-The Azure DevOps Wiki Microsoft 365 Copilot connector allows your organization to index wikis in its instance of the Azure DevOps service. After you configure the connector, end users can search for project wikis and code wikis from Azure DevOps in Microsoft Search and Microsoft 365 Copilot.
+The Azure DevOps Wiki Microsoft 365 Copilot connector enables your organization to index wikis in its instance of the Azure DevOps service. After you configure the connector, end users can search for project wikis and code wikis from Azure DevOps in Microsoft Search and Microsoft 365 Copilot.
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Azure DevOps Wiki Copilot connector.
 
@@ -54,7 +54,7 @@ The Azure DevOps Wiki connector includes the following custom data filters for C
 ## Get Started
 
 ### Choose display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365/copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+A display name identifies each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Provide authentication type
 To authenticate and sync wikis from Azure DevOps, choose **one of the two** supported methods:<br>

@@ -1,6 +1,6 @@
 --- 
 
-title: "Result Layout for Confluence Cloud Microsoft 365 Copilot connector" 
+title: "Result Layout for Confluence Cloud connector" 
 ms.author: vivg 
 author: vivg 
 manager: harshkum 
@@ -13,7 +13,7 @@ description: "Get a JSON example of a Microsoft Search result layout for the Con
 ms.date: 03/08/2023
 ---
 
-# Result layout for Confluence Cloud Microsoft 365 Copilot connector
+# Result layout for Confluence Cloud connector
 
 The [Confluence Cloud Microsoft 365 Copilot connector](confluence-cloud-overview.md) allows your organization to index Confluence content. After you configure the connector and index data from the Confluence site, users can search for that content in Microsoft Search.
 

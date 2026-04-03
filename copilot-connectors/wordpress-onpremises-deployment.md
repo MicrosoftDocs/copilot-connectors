@@ -1,5 +1,5 @@
 ---
-title: "Deploy the WordPress.org Microsoft 365 Copilot connector"
+title: "Deploy the WordPress.org connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the WordPress.org Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the WordPress.org Microsoft 365 Copilot connector
+# Deploy the WordPress.org connector
 
 Use the WordPress.org Microsoft 365 Copilot connector to index published posts and pages from WordPress.org websites so users can discover this content in Copilot and Microsoft Search. This article describes the steps to deploy and customize the connector.
 
@@ -21,10 +21,10 @@ Use the WordPress.org Microsoft 365 Copilot connector to index published posts a
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- You must be the AI administrator for your organization's Microsoft 365 tenant.
+- You're the AI administrator for your organization's Microsoft 365 tenant.
 - You have the URL of your WordPress.org website.
 - You have an admin account for your WordPress.org website with permission to create an application password (used for REST API authentication with external services).
-- You installed and configured the [Microsoft Graph connector agent](/microsoft-365/copilot/connectors/graph-connector-agent) on a host that can reach your WordPress.org instance.
+- You installed and configured the [Microsoft Graph connector agent](/microsoft-365/copilot/connectors/connector-agent) on a host that can reach your WordPress.org instance.
 
 ## Deploy the connector
 

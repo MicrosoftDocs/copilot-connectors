@@ -1,5 +1,5 @@
 ---
-title: "Deploy the GitLab Knowledge Server Microsoft 365 Copilot connector"
+title: "Deploy the GitLab Knowledge Server connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the GitLab Knowledge Server Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the GitLab Knowledge Server Microsoft 365 Copilot connector
+# Deploy the GitLab Knowledge Server connector
 
 The GitLab Knowledge Server Microsoft 365 Copilot connector allows your organization to index knowledge content stored in GitLab self-managed (on-premises) instances and make it available in Microsoft 365 Copilot and Microsoft Search experiences. This article describes the steps to deploy and customize the GitLab Knowledge Server connector.
 

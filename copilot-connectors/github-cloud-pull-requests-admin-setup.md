@@ -1,5 +1,5 @@
 ---
-title: Set up the GitHub service for GitHub Cloud Pull Request Microsoft 365 Copilot connector ingestion
+title: Set up the GitHub service for GitHub Cloud Pull Request connector ingestion
 description: Learn how to configure your GitHub environment and prerequisites before you deploy the GitHub Cloud Pull Requests connector for Microsoft 365 Copilot.
 ms.topic: how-to
 ms.service: copilot-connectors

@@ -1,5 +1,5 @@
 ---
-title: "GitHub Cloud Pull Requests Microsoft 365 Copilot connector overview"
+title: "GitHub Cloud Pull Requests connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Cloud Pull Requests Copilot connector."
 ---
 
-# GitHub Cloud Pull Requests Microsoft 365 Copilot connector overview
+# GitHub Cloud Pull Requests connector overview
 
 The GitHub Cloud Pull Requests Microsoft 365 Copilot connector enables organizations to index pull requests stored in GitHub repositories and make them searchable in Microsoft 365 Copilot and Microsoft Search experiences. By integrating GitHub data, users can retrieve information about pull requests directly within Copilot, streamlining collaboration and decision-making for development teams.
 

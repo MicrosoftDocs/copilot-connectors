@@ -1,5 +1,5 @@
 ---
-title: "Asana Microsoft 365 Copilot connector troubleshooting"
+title: "Asana connector troubleshooting"
 ms.author: lauragra
 author: Kai-Cloud
 manager: zezhangzhao

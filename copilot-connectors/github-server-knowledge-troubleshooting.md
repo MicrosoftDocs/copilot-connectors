@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the GitHub Server Knowledge Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the GitHub Server Knowledge connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,9 +13,9 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the GitHub Server Knowledge Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the GitHub Server Knowledge Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitHub Server Knowledge connector
 
-The GitHub Server Knowledge connector integrates GitHub Enterprise knowledge into Microsoft 365, allowing Copilot and Microsoft Search to surface relevant wiki pages, Markdown files, and blogs. This article provides troubleshooting information for common errors that you might encounter when deploying or indexing data with the connector.
+The GitHub Server Knowledge connector integrates GitHub Enterprise knowledge into Microsoft 365, so Copilot and Microsoft Search can surface relevant wiki pages, Markdown files, and blogs. This article provides troubleshooting information for common errors that you might encounter when deploying or indexing data by using the connector.
 
 To verify GitHub configuration information to help troubleshoot errors, see [Set up the GitHub service for connector ingestion](github-server-knowledge-admin-setup.md).
 

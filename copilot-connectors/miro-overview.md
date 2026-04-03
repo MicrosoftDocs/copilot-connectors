@@ -1,5 +1,5 @@
 ---
-title: "Miro Microsoft 365 Copilot connector overview"
+title: "Miro connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Miro Microsoft 365 Copilot connector."
 ---
 
-# Miro Microsoft 365 Copilot connector overview
+# Miro connector overview
 
 The Miro Microsoft 365 Copilot connector allows your organization to index Miro boards so users can discover, access, and use Miro content directly within Microsoft 365 experiences. By integrating Miro with Microsoft 365 Copilot and Microsoft Search, users can find boards from designated Miro teams without leaving the apps they use every day, including Teams, Outlook, and SharePoint. The connector preserves Miro permissions, supports secure access, and makes Miro knowledge available in Copilot responses and search results.
 

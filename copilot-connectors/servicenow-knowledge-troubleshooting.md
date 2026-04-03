@@ -1,6 +1,6 @@
 ---
 ms.date: 03/10/2026
-title: "Troubleshoot issues with the ServiceNow Knowledge Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the ServiceNow Knowledge connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind

@@ -1,5 +1,5 @@
 ---
-title: "Deploy the GitHub Server Pull Requests Microsoft 365 Copilot connector"
+title: "Deploy the GitHub Server Pull Requests connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the GitHub Server Pull Requests Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the GitHub Server Pull Requests Microsoft 365 Copilot connector
+# Deploy the GitHub Server Pull Requests connector
 
 The GitHub Server Pull Requests Microsoft 365 Copilot connector integrates pull request metadata from GitHub Enterprise Server into Microsoft 365. After deployment, the connector indexes PR titles, descriptions, labels, timestamps, authors, reviewers, milestones, and repository context so users can search, summarize, and retrieve PR insights using Microsoft 365 Copilot, Copilot Search, and Microsoft Search.
 

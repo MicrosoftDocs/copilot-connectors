@@ -1,5 +1,5 @@
 ---
-title: "Set up the ServiceNow service for ServiceNow Tickets Microsoft 365 Copilot connector ingestion"
+title: "Set up the ServiceNow service for ServiceNow Tickets connector ingestion"
 ms.author: lauragra
 author: lauragra
 manager: calvindrover

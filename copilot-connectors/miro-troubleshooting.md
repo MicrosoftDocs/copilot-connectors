@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the Miro Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the Miro connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Miro Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Miro Microsoft 365 Copilot connector
+# Troubleshoot issues with the Miro connector
 
 The Miro Microsoft 365 Copilot connector integrates Miro board content into Microsoft 365 so that users can surface boards in Copilot and Microsoft Search. This article provides troubleshooting information for common errors you might encounter when deploying or managing the Miro connector.
 

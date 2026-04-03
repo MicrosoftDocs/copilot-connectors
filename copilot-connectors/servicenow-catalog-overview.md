@@ -1,5 +1,5 @@
 ---
-title: "ServiceNow Catalog Microsoft 365 Copilot connector overview"
+title: "ServiceNow Catalog connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Catalog Microsoft 365 Copilot connector."
 ---
 
-# ServiceNow Catalog Microsoft 365 Copilot connector overview
+# ServiceNow Catalog connector overview
 
 The ServiceNow Catalog Microsoft 365 Copilot connector enables your organization to index catalog items from ServiceNow and make them discoverable across Microsoft 365 experiences, including Microsoft 365 Copilot, Copilot Search, and Microsoft Search. By integrating catalog data into Microsoft Graph, users can interact with catalog items using natural language prompts, which improves service request workflows and operational efficiency.
 

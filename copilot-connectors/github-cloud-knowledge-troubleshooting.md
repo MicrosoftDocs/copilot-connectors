@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the GitHub Cloud Knowledge Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the GitHub Cloud Knowledge connector"
 ms.author: lauragra
 author: Lauragra
 manager: calvind
@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the GitHub Cloud Knowledge Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the GitHub Cloud Knowledge Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitHub Cloud Knowledge connector
 
 The GitHub Cloud Knowledge Microsoft 365 Copilot connector enables organizations to index markdown and text files from GitHub repositories into Microsoft 365 Copilot and Microsoft Search experiences. This article provides troubleshooting information for common errors that you might encounter when deploying or managing the connector.
 

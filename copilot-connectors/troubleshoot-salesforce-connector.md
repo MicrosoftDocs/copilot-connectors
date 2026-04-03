@@ -1,6 +1,6 @@
 --- 
 ms.date: 09/11/2024 
-title: "Troubleshoot issues with the Salesforce Microsoft 365 Copilot connector" 
+title: "Troubleshoot issues with the Salesforce connector" 
 ms.author: gladysa
 author: gladysa
 manager: brian.jackett 
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Troubleshoot issues with the Salesforce Microsoft 365 Copilot connector." 
 --- 
 
-# Troubleshoot issues with the Salesforce Microsoft 365 Copilot connector 
+# Troubleshoot issues with the Salesforce connector 
 
 The Salesforce CRM Microsoft 365 Copilot connector allows your organization to index contacts, opportunities, leads, cases, and accounts objects in your Salesforce instance. This article provides information about how to troubleshoot issues with the Salesforce CRM connector.
 

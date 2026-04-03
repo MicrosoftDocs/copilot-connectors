@@ -1,5 +1,5 @@
 ---
-title: "Set up the Egnyte service for Egnyte Microsoft 365 Copilot connector ingestion"
+title: "Set up the Egnyte service for Egnyte connector ingestion"
 ms.author: lauragra
 author: lauragra
 manager: calvind

@@ -1,5 +1,5 @@
 ---
-title: "GitLab Knowledge Server Microsoft 365 Copilot connector troubleshooting"
+title: "GitLab Knowledge Server connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the GitLab Knowledge Server Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the GitLab Knowledge Server Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitLab Knowledge Server connector
 
 The GitLab Knowledge Server connector allows Microsoft 365 Copilot and Microsoft Search to index knowledge content stored in your GitLab self‑managed instance. This article provides troubleshooting guidance for common errors you might encounter during connector deployment, configuration, or ingestion.
 

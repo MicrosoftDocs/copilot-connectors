@@ -1,5 +1,5 @@
 ---
-title: "Aha! Microsoft 365 Copilot connector overview"
+title: "Aha! connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Aha! Microsoft 365 Copilot connector."
 ---
 
-# Aha! Microsoft 365 Copilot connector overview
+# Aha! connector overview
 
 The Aha! Features and Ideas Microsoft 365 Copilot connectors empower your organization to index and search Aha! features and ideas across your enterprise. After you configure the connector, it automatically crawls Aha! features and ideas and makes them discoverable through Microsoft 365 Copilot and any Microsoft Search client. This indexing allows users to find relevant product management content and drive collaboration across teams.
 

@@ -1,5 +1,5 @@
 ---
-title: "Guru Microsoft 365 Copilot connector overview"
+title: "Guru connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Guru Microsoft 365 Copilot connector."
 ---
 
-# Guru Microsoft 365 Copilot connector overview
+# Guru connector overview
 
 The Guru Microsoft 365 Copilot connector integrates Guru content into Microsoft 365, allowing Microsoft 365 Copilot, and Microsoft Search experiences to surface relevant Guru Cards directly within apps like Teams, Outlook, and SharePoint. When you configure the Guru connector for your organization and index data from the Guru instance, users can search for Guru content in Microsoft Search, Microsoft 365 Copilot, and Copilot Search.
 

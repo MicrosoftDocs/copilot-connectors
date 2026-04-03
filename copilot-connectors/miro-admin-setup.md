@@ -1,5 +1,5 @@
 ---
-title: "Set up the Miro service for Miro Microsoft 365 Copilot connector ingestion"
+title: "Set up the Miro service for Miro connector ingestion"
 ms.author: lauragra
 author: lauragra
 manager: calvind

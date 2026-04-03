@@ -1,5 +1,5 @@
 ---
-title: "GitHub Server Pull Requests Microsoft 365 Copilot connector overview"
+title: "GitHub Server Pull Requests connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Server Pull Requests Microsoft 365 Copilot connector."
 ---
 
-# GitHub Server Pull Requests Microsoft 365 Copilot connector overview
+# GitHub Server Pull Requests connector overview
 
 The GitHub Server Pull Requests Microsoft 365 Copilot connector integrates pull request data from GitHub Enterprise Server into Microsoft 365. After you configure the connector and index GitHub content, users can discover, summarize, and retrieve pull request information directly from Microsoft Search, Microsoft 365 Copilot, and Copilot Search. This indexing gives engineering teams faster access to work‑in‑progress changes, code review insights, release information, and repository activity—without switching applications.
 
