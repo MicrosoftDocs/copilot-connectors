@@ -15,7 +15,7 @@ description: "Find information about how to deploy the Azure DevOps Work Items C
 
 # Deploy the Azure DevOps Work Items connector
 
-The Azure DevOps Work Items connector indexes work items—such as user stories, tasks, bugs, and features—from your Azure DevOps Services organization into Microsoft 365. This guide describes the steps to deploy and customize the connector.
+The Azure DevOps Work Items connector indexes work items - such as user stories, tasks, bugs, and features - from your Azure DevOps Services organization into Microsoft 365. This guide describes the steps to deploy and customize the connector.
 
 For Azure DevOps configuration information, see [Set up the Azure DevOps environment for connector ingestion](azure-devops-work-items-admin-setup.md).
 
