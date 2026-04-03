@@ -16,8 +16,8 @@ description: "Set up the Salesforce Copilot connector for Microsoft Search and M
 
 The Salesforce CRM Microsoft 365 Copilot connector enables your organization to index contacts, opportunities, leads, cases, and accounts objects in your Salesforce instance. After you configure the connector and index content from Salesforce, end users can search for those items from any Microsoft Search and Microsoft 365 Copilot client.
 
->[!IMPORTANT]
->The Salesforce Copilot connector currently supports Summer 19 and later.
+> [!IMPORTANT]
+> The Salesforce Copilot connector currently supports Summer 19 and later.
 
 ## Capabilities
 
@@ -94,7 +94,7 @@ To connect to your Salesforce instance, you need your Salesforce instance URL, t
       > ![API section in Salesforce instance after admin has entered all required configurations listed above.](media/salesforce-connector/sf1.png)
 
 1. Use this consumer key and secret as the client ID and the client secret when you configure the connection settings for your Salesforce Copilot connector in the Microsoft 365 admin portal. Acquire this information as follows:
-    1. Go to **Setup** and navigate to **Apps** > **App Manager**.
+    1. Go to **Setup** and go to **Apps** > **App Manager**.
     1. Select the connected app you created in the previous step.
     1. Select **Manage Consumer Details**.
     1. Copy the consumer key and the consumer secret.
@@ -115,8 +115,6 @@ You can now use the [Microsoft 365 Admin Center](https://admin.microsoft.com/) t
 
 ## Get started
 
-[![Screenshot that shows connection creation screen for Copilot Connector for Salesforce CRM.](media/salesforce-connector/SalesforceCRMSetup.jpg)](media/salesforce-connector/SalesforceCRMSetup.jpg#lightbox)
-
 ### 1. Display name
 
 The display name identifies each reference in Copilot, so users can easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
@@ -129,20 +127,17 @@ For the Instance URL, use `https://[domain].my.salesforce.com` where the domain 
 
 To authenticate and sync content from Salesforce CRM, select **OAuth 2.0**. Enter the client ID and client secret you got from your Salesforce instance, and select **Authorize**.
 
-The first time you attempt to sign in with these settings, a pop-up prompts you to sign in to Salesforce by using your admin username and password. The following screenshot shows the pop-up. Enter your credentials and select **Sign In**.
+The first time you attempt to sign in with these settings, a pop-up prompts you to sign in to Salesforce by using your admin username and password. The following screenshot shows the pop-up. Enter your credentials and select **Log In**.
 
-  ![Login pop up asking for Username and password.](media/salesforce-connector/sf4.png)
+  ![Pop-up asking for Username and password.](media/salesforce-connector/sf4.png)
 
-  >[!NOTE]
+  > [!NOTE]
   >
   > - If the pop-up doesn't appear, your browser might block it. To fix this problem, allow pop-ups and redirects.
-  > - Ensure that the Salesforce account you use to sign in for the Graph connector is the same as the user already signed in to Salesforce.
-  > - Ensure the user signing in has all the necessary object permissions for the organization.
+  > - Make sure that the Salesforce account you use to sign in for the connector is the same as the user already signed in to Salesforce.
+  > - Make sure that the user signing in has all the necessary object permissions for the organization.
 
-Check that the connection was successful by looking for a green check mark that shows correct credentials as shown in the following screenshot.
-
-  > [!div class="mx-imgBorder"]
-  > ![Screenshot of successful sign in. The green banner that says "Connection successful" is located under the field for your Salesforce Instance URL](media/salesforce-connector/salesforce-connector-connection-settings.png)
+Verify that the connection was successful by looking for a green check mark that shows correct credentials.
 
 ### 4. Roll out to limited audience
 
@@ -184,22 +179,17 @@ The Salesforce CRM connector supports search permissions visible to **Everyone
 
 **Mapping Identities**
 
-You can choose to ingest Access Control Lists (ACLs) from your Salesforce instance or allow everyone in your organization to see search results from this data source. ACLs can include Microsoft Entra identities (users who are federated from Entra ID to Salesforce), non-Azure AD identities (native Salesforce users who have corresponding identities in Entra ID), or both.
+You can choose to ingest access control lists (ACLs) from your Salesforce instance or allow everyone in your organization to see search results from this data source. ACLs can include Microsoft Entra identities (users who are federated from Entra ID to Salesforce), non-Entra ID identities (Salesforce users who have corresponding identities in Entra ID), or both.
 
 >[!NOTE]
->If you use a third-party Identity Provider like Ping ID or secureAuth, select "non-Microsoft Entra" as the identity type.
+>If you use a third-party Identity Provider like Ping ID or secureAuth, select **non-Microsoft Entra** as the identity type.
 
-If you choose to ingest an ACL from your Salesforce instance and select "non-ME ID" for the identity type, see [Map your non-Microsoft Entra Identities](map-non-entra-id.md) for instructions on mapping the identities.
+If you choose to ingest an ACL from your Salesforce instance and select **non-ME ID** for the identity type, see [Map your non-Microsoft Entra Identities](map-non-entra-id.md) for instructions on mapping the identities.
 
-If you choose to ingest an ACL from your Salesforce instance and select "ME-ID" for the identity type, see [Map your Microsoft Entra Identities](map-entra-id.md) for instructions on mapping the identities. To learn how to set up Entra SSO for Salesforce, see this [tutorial](/azure/active-directory/saas-apps/salesforce-tutorial).
+If you choose to ingest an ACL from your Salesforce instance and select **ME-ID** for the identity type, see [Map your Microsoft Entra Identities](map-entra-id.md) for instructions on mapping the identities. To learn how to set up Entra SSO for Salesforce, see this [tutorial](/azure/active-directory/saas-apps/salesforce-tutorial).
 
->[!NOTE]
->
+> [!NOTE]
 > Updates to groups governing access permissions sync in full crawls only. Incremental crawls don't support processing of updates to permissions.
-
-In this video, you can see the process to authenticate to your Salesforce instance, sync your non-Microsoft Entra identities to your Entra identities, and apply the proper security trimmings to your Salesforce items.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/SZYiFxZMKcM]
 
 ### Content
 
@@ -207,8 +197,8 @@ In this video, you can see the process to authenticate to your Salesforce instan
 
 Select the Salesforce objects that you want the connector to crawl and include in search results. If you select Contact, Account is automatically selected as well.
 
->[!NOTE]
->If a field has field level security (FLS) set for a profile, the connector doesn't ingest that field for any profiles in that Salesforce org. As a result, users can't search for values for those fields or show up in the results.
+> [!NOTE]
+> If a field has field level security (FLS) set for a profile, the connector doesn't ingest that field for any profiles in that Salesforce org. As a result, users can't search for values for those fields or show up in the results.
 
 _Filter data_
 
