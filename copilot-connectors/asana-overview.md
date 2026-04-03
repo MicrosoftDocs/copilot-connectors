@@ -14,7 +14,7 @@ description: "Learn about the capabilities, limitations, and use cases for the A
 
 # Asana connector overview
 
-The Asana Microsoft 365 Copilot connector integrates Asana tasks into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant task information directly within apps like Microsoft Teams, Outlook, and SharePoint. When you configure the Asana connector for your organization and index data from Asana workspaces, users can search for Asana tasks in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. The connector improves project tracking, task visibility, and overall productivity.
+The Asana Microsoft 365 Copilot connector integrates Asana tasks into Microsoft 365. This integration allows Copilot, Copilot Search, and Microsoft Search to surface relevant task information directly within apps like Microsoft Teams, Outlook, and SharePoint. When you configure the Asana connector for your organization and index data from Asana workspaces, users can search for Asana tasks in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. The connector improves project tracking, task visibility, and overall productivity.
 
 ## Why use the Asana connector to index your data?
 
