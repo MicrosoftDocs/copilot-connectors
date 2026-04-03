@@ -15,7 +15,7 @@ description: "Learn about the capabilities, limitations, and use cases for the A
 
 # Azure DevOps Work Items connector overview
 
-The Azure DevOps Work Items Microsoft 365 Copilot connector indexes work items from your Azure DevOps Services instance—such as user stories, tasks, bugs, and features—into Microsoft 365. This index allows users to search and retrieve work tracking data directly in Microsoft Search and Microsoft 365 Copilot, streamlining access to development insights across the organization.
+The Azure DevOps Work Items Microsoft 365 Copilot connector indexes work items from your Azure DevOps Services instance - such as user stories, tasks, bugs, and features - into Microsoft 365. This index allows users to search and retrieve work tracking data directly in Microsoft Search and Microsoft 365 Copilot, streamlining access to development insights across the organization.
 
 ## Why use the Azure DevOps Work Items connector to index your data?
 
