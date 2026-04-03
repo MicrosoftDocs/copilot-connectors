@@ -15,7 +15,7 @@ description: "Find troubleshooting information for the Azure DevOps Work Items M
 
 # Troubleshoot issues with the Azure DevOps Work Items connector
 
-The Azure DevOps Work Items connector indexes work items—such as user stories, tasks, bugs, and features—from Azure DevOps Services into Microsoft 365 so users can search and retrieve work tracking data directly in Copilot and Microsoft Search. This article provides troubleshooting information for common issues you might encounter when you deploy or manage the connector.
+The Azure DevOps Work Items connector indexes work items - such as user stories, tasks, bugs, and features - from Azure DevOps Services into Microsoft 365 so users can search and retrieve work tracking data directly in Copilot and Microsoft Search. This article provides troubleshooting information for common issues you might encounter when you deploy or manage the connector.
 
 ## Azure DevOps Work Items connector troubleshooting
 
