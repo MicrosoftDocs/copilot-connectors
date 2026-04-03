@@ -60,9 +60,9 @@ Use the following steps to validate table permissions by using REST API Explorer
 
 1.  Review the response: 
 
-    - If you receive a `403 Status Code` and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365/copilot/connectors/granting-table-access-servicenow) to provide table-level access. 
+    - If you receive a `403 Status Code` and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-tickets) to provide table-level access. 
 
-    - If you receive a `200 Status Code` but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow#step-5-grant-field-level-access). 
+    - If you receive a `200 Status Code` but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-tickets#grant-field-level-access). 
 
 If you don't see the table name in the dropdown, it might indicate lack of access to the table itself. 
 
