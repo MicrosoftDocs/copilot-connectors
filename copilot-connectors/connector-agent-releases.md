@@ -20,6 +20,14 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 
 [Download latest Microsoft Graph connector agent](https://aka.ms/gca)
 
+## Version 3.1.20.0 (*March 31, 2026*)
+
+* Updated Confluence on-premises connector to use OAuth 2.0 for retrieving groups and group members.
+* Improved admin error messages for file share authentication to provide clearer guidance on resolving issues.
+* Improved exception handling for the file share connector to prevent crawl failures on unexpected errors.
+* Improved Bitbucket Server git clone crawling.
+* Bug fixes and reliability improvements.
+  
 ## Version 3.1.19.0 (*March 12, 2026*)
 
 * Improved git clone feature for on-premises connectors.
