@@ -14,7 +14,7 @@ ms.date: 04/06/2026
 
 # Release history for Microsoft Graph connector agent
 
-Indexing on-premises data sources requires you to install the Microsoft Graph connector agent. The agent allows for secure data transfer between on-premises data and the Microsoft 365 Copilot connector APIs.
+Indexing on-premises data sources requires installing the Microsoft Graph connector agent. The agent securely transfers data between on-premises data and the Microsoft 365 Copilot connector APIs.
 
 For help with installation, see [Install the agent](connector-agent.md#install-the-agent).
 
