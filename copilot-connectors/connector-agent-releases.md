@@ -14,11 +14,11 @@ ms.date: 04/06/2026
 
 # Release history for Microsoft Graph connector agent
 
-Indexing on-premises data sources requires you to install *Microsoft Graph connector agent* software. It allows for secure data transfer between on-premises data and the connector APIs.
+Indexing on-premises data sources requires you to install the Microsoft Graph connector agent. The agent allows for secure data transfer between on-premises data and the Microsoft 365 Copilot connector APIs.
 
 For help with installation, see [Install the agent](connector-agent.md#install-the-agent).
 
-[Download latest Microsoft Graph connector agent](https://aka.ms/gca)
+To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
 
 ## Version 3.1.20.0 (*March 31, 2026*)
 
