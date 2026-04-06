@@ -1,38 +1,38 @@
-# Troubleshoot the Credly Microsoft 365 Copilot connector
+﻿# Troubleshoot the Credly Microsoft 365 Copilot connector
 
-This article helps Microsoft 365 administrators diagnose and resolve common issues with the Credly Microsoft 365 Copilot connector.
+Use this article to diagnose and resolve common issues with the Credly Microsoft 365 Copilot connector.
 
-## Badges not appearing on user profiles
+## Badges don't appear on user profiles
 
-If Credly badges aren't showing on a user's Microsoft 365 profile card, check the following:
+| Possible cause | Resolution |
+|---|---|
+| The user's email in Credly doesn't match their UPN or primary SMTP address in Microsoft Entra ID. | Verify that the employee's Credly account uses their organization email address. The connector matches identities by email only. |
+| The user hasn't accepted or shared the badge publicly on Credly. | Ask the user to accept the badge on their Credly profile. The connector doesn't index private or unaccepted badges. |
+| The user account is inactive in your directory. | The connector only indexes credentials for active users. Confirm the user is active and licensed in your Microsoft 365 tenant. |
+| The initial sync hasn't completed. | Go to **Settings** > **Copilot** > **Connectors** in the Microsoft 365 admin center and check the connector status. Incremental crawls run daily and full crawls run weekly by default. |
 
-- **Email mismatch** &mdash; The connector relies on email address matching for identity resolution. The badge recipient's email in Credly must match their UPN or primary SMTP address in Microsoft Entra ID. If the user registered in Credly with a personal email or a misspelled address, their badges can't be mapped and are skipped during indexing. Verify that employees use their organization email in Credly.
-- **Badge not accepted** &mdash; The connector only ingests badges that users have publicly accepted or shared on their Credly profiles. Unaccepted (private) badges aren't downloaded or indexed.
-- **Inactive user** &mdash; The connector only indexes credentials for active users in your directory. If a user has left the organization or is marked as inactive, their Credly badges are filtered out.
-- **Sync not completed** &mdash; After initial setup, wait for the first crawl cycle to complete. Incremental crawls run approximately every day and full crawls run weekly by default. Check the connector status on the **Connectors** page in the Microsoft 365 admin center to confirm the sync has completed.
+## Copilot doesn't return Credly data
 
-## Copilot not returning Credly data
+| Possible cause | Resolution |
+|---|---|
+| Badge data hasn't synced yet. | Newly earned badges require at least one completed crawl cycle before Copilot can surface them. Verify a successful sync on the **Connectors** page in the Microsoft 365 admin center. |
+| Copilot cites office.com instead of Credly. | This is expected behavior. Microsoft 365 aggregates profile data from multiple sources and attributes responses to the unified profile endpoint (office.com). |
 
-If Microsoft 365 Copilot doesn't surface badge or certification information when users ask questions:
+## Connection setup fails
 
-- **Sync delay** &mdash; Newly earned badges require at least one successful crawl cycle before they're available to Copilot. Verify that the connector status shows a completed sync on the **Connectors** page in the Microsoft 365 admin center.
-- **Citation source** &mdash; When Copilot cites information from a user's profile (including Credly-provided details), the source is listed as office.com rather than "Credly." Microsoft 365 aggregates profile data from multiple sources and attributes the response to the unified profile endpoint. This is expected behavior.
-
-## Connection setup failures
-
-If the connector fails during setup in the Microsoft 365 admin center:
-
-- **Invalid Organization ID** &mdash; The Credly Organization ID must be a valid GUID obtained from the Credly Developers portal. Verify the format and value.
-- **Expired or incorrect credentials** &mdash; Confirm that the Client ID and Client Secret are correct and haven't expired. If the Client Secret wasn't saved during creation, generate a new OAuth application in the Credly Developers portal.
-- **Wrong API endpoint** &mdash; Verify the base URL for the Credly OAuth 2.0 token service. For production accounts, use `https://www.credly.com`. Sandbox environments use a different URL.
+| Possible cause | Resolution |
+|---|---|
+| Invalid Organization ID format. | The Credly Organization ID must be a valid GUID. Copy the value directly from the Credly Developers portal. |
+| Incorrect or expired Client ID or Client Secret. | Verify your credentials in the Credly Developers portal. If the Client Secret wasn't saved at creation time, create a new OAuth application to generate new credentials. |
+| Wrong API endpoint URL. | For production accounts, use `https://www.credly.com`. Sandbox environments require a different URL. |
 
 ## Multiple Credly organizations
 
-The connector can be configured for a single Credly Organization ID at a time. If your company manages multiple separate Credly organizations (for example, due to multiple subsidiaries), set up a separate connector instance for each Credly Organization ID in the Microsoft 365 admin center.
+Each connector instance supports a single Credly Organization ID. If your company manages multiple Credly organizations (for example, separate subsidiaries), create a separate connector instance for each Organization ID in the Microsoft 365 admin center.
 
-## Schema and customization limitations
+## Schema can't be customized
 
-The Credly connector uses a predefined set of profile attributes in Microsoft Graph (specifically the "Awards" and "Certifications" properties). Administrators can't add or remove properties in the connector's content schema in this release. All ingested badges are mapped to the existing profile fields.
+The connector uses a fixed set of profile attributes in Microsoft Graph (the **Awards** and **Certifications** properties). You can't add, remove, or modify properties in the content schema in this release.
 
 ## Related content
 
