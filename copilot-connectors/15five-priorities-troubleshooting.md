@@ -23,7 +23,7 @@ The following table lists common errors and troubleshooting steps.
 
 | Error | Resolution |
 |-------|------------|
-| Your security credentials have expired for this session. Please go back and sign in again with your App key and app secret. | Credential information expired. Create a new key in the 15Five integrations settings and copy the latest access token from the settings tab in 15Five to authenticate. |
+| Your security credentials expired for this session. Please go back and sign in again with your app key and app secret. | Credential information expired. Create a new key in the 15Five integrations settings and copy the latest access token from the settings tab in 15Five to authenticate. |
 | Invalid credentials detected. Please check the credential info and check the permission scopes of the 15Five App. | This error indicates invalid credentials. Go to the 15Five integrations settings and verify that the access token is correct. |
 
 ## Related content
