@@ -98,7 +98,7 @@ The following properties are available for configuration.
 
 ### Customize sync intervals
 
-You can configure full and incremental crawls based on scheduling options. The following values are the default values:
+You can configure full and incremental crawls based on scheduling options. The default values are:
 
 - Incremental crawl - Every 15 minutes.
 - Full crawl - Every day.
