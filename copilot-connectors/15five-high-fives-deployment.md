@@ -90,7 +90,7 @@ You can configure full and incremental crawls based on scheduling options. The f
 - Incremental crawl - Every 15 minutes.
 - Full crawl - Every day.
 
-Adjust these schedules to fit your data refresh needs. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+Adjust these schedules to fit your data refresh needs. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 
