@@ -46,6 +46,10 @@ Enter your 15Five instance URL. The default 15Five instance URL is `https://my.1
 
 ### Choose authentication type
 
+The connector uses the following authentication option:
+
+- Access token generated from your 15Five company API key.
+
 In the **Authentication type** box, select **API Key** and enter the access token that you got from your 15Five company API keys setting.
 
 ### Roll out
