@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 03/31/2026
+ms.date: 04/07/2026
 ms.localizationpriority: Medium
 ---
 
@@ -166,7 +166,7 @@ You can adjust the synchronization frequency:
 
 For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
-#### API endpoints
+## API endpoints
 
 The following table lists the API endpoints that the connector calls to crawl data and the minimum permissions required for each endpoint.
 
@@ -179,13 +179,17 @@ The following table lists the API endpoints that the connector calls to crawl da
 |GET /rest/api/content/{id}/child/page|Read|User|
 |GET /rest/api/content/{id}/restriction/byOperation/{op}|Read|User|
 |GET /rest/api/group|Read|User|
-|GET /rest/api/group/{groupName}/member|Admin|Admin|
-|GET /rest/mobile/1.0/profile/{username}|Admin|Admin|
+|GET /rest/api/group/{groupName}/member\*|Admin|Admin|
+|GET /rest/mobile/1.0/profile/{username}\**|Admin|Admin|
 |GET /rest/api/msplugin/1.0/content/service/space/{key}/toplevelpages|Read|User|
 |GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpages|Read|User|
 |GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpagesV2|Read|User|
 |GET /rest/api/msplugin/1.0/content/service/space/{key}/permissions|Read|User|
 |GET /rest/api/msplugin/1.0/healthcheck/version|Read|User|
+
+\* Requires both admin permissions.
+
+\** Requires either admin permission.
 
 ## Related content
 
