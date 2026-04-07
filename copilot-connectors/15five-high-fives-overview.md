@@ -41,7 +41,7 @@ The following examples show prompts that users can use to retrieve information f
 | Team lead | Who has received high fives this month for collaboration? |
 | Employee | Show the most recent high fives shared in my organization. |
 
-## 15Five High Five connector capabilities and limitations
+## 15Five High Fives connector capabilities and limitations
 
 This connector enables users to:
 
