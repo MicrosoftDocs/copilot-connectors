@@ -170,22 +170,25 @@ For more information, see [Guidelines for sync settings](deployment-overview.md#
 
 The following table lists the API endpoints that the connector calls to crawl data and the minimum permissions required for each endpoint.
 
-|Endpoint|Auth application permission|User permission|Note|
-|----|----|----|----|
-|GET /rest/api/content/search|Read|User||
-|GET /rest/api/space|Read|User||
-|GET /rest/api/content/{id}|Read|User||
-|GET /rest/api/content/{id}/child/comment|Read|User||
-|GET /rest/api/content/{id}/child/page|Read|User||
-|GET /rest/api/content/{id}/restriction/byOperation/{op}|Read|User||
-|GET /rest/api/group|Read|User||
-|GET /rest/api/group/{groupName}/member|Admin|Admin|Require both admin permissions|
-|GET /rest/mobile/1.0/profile/{username}|Admin|Admin|Require either admin permission|
-|GET /rest/api/msplugin/1.0/content/service/space/{key}/toplevelpages|Read|User||
-|GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpages|Read|User||
-|GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpagesV2|Read|User||
-|GET /rest/api/msplugin/1.0/content/service/space/{key}/permissions|Read|User||
-|GET /rest/api/msplugin/1.0/healthcheck/version|Read|User||
+|Endpoint|Auth application permission|User permission|
+|----|----|----|
+|GET /rest/api/content/search|Read|User|
+|GET /rest/api/space|Read|User|
+|GET /rest/api/content/{id}|Read|User|
+|GET /rest/api/content/{id}/child/comment|Read|User|
+|GET /rest/api/content/{id}/child/page|Read|User|
+|GET /rest/api/content/{id}/restriction/byOperation/{op}|Read|User|
+|GET /rest/api/group|Read|User|
+|GET /rest/api/group/{groupName}/member\*|Admin|Admin|
+|GET /rest/mobile/1.0/profile/{username}|Admin|Admin|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/toplevelpages|Read|User|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpages|Read|User|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpagesV2|Read|User|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/permissions|Read|User|
+|GET /rest/api/msplugin/1.0/healthcheck/version|Read|User|
+
+\* Requires both admin permissions.
+\** Require either admin permission.
 
 ## Related content
 
