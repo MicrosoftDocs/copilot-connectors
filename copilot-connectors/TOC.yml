@@ -29,8 +29,12 @@ items:
       href: prebuilt-connectors-overview.md
     - name: 15Five High Fives
       items:
-      - name: Setup
-        href: 15five-high-fives-connector.md
+      - name: Overview
+        href: 15five-high-fives-overview.md
+      - name: Deployment guide
+        href: 15five-high-fives-deployment.md
+      - name: Troubleshooting
+        href: 15five-high-fives-troubleshooting.md
     - name: 15Five Priorities
       items:
         - name: Setup
