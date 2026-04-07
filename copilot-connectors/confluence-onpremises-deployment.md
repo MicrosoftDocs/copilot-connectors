@@ -188,6 +188,7 @@ The following table lists the API endpoints that the connector calls to crawl da
 |GET /rest/api/msplugin/1.0/healthcheck/version|Read|User|
 
 \* Requires both admin permissions.
+
 \** Requires either admin permission.
 
 ## Related content
