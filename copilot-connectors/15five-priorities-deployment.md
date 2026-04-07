@@ -1,9 +1,9 @@
 ---
 title: "Deploy the 15Five Priorities connector"
-ms.author: wangchen
+ms.author: lauragra
 author: wangchen
 manager: zezhangzhao
-ms.reviewer:
+ms.reviewer: wangchen
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
