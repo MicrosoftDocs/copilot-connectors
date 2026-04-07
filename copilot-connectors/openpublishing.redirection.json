@@ -1,9 +1,0 @@
-{
-  "redirections": [
-    {
-      "source_path_from_root": "/copilot-connectors/15five-high-fives-connector.md",
-      "redirect_url": "/microsoft-365/copilot/connectors/15five-high-fives-deployment",
-      "redirect_document_id": true
-    }
-  ]
-}
