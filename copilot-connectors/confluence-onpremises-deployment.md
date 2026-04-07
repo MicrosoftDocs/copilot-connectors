@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 03/31/2026
+ms.date: 04/07/2026
 ms.localizationpriority: Medium
 ---
 
@@ -188,6 +188,7 @@ The following table lists the API endpoints that the connector calls to crawl da
 |GET /rest/api/msplugin/1.0/healthcheck/version|Read|User|
 
 \* Requires both admin permissions.
+
 \** Requires either admin permission.
 
 ## Related content
