@@ -37,12 +37,12 @@ items:
         href: 15five-high-fives-troubleshooting.md
     - name: 15Five Priorities
       items:
-        - name: Overview
-          href: 15five-priorities-overview.md
-        - name: Deployment guide
-          href: 15five-priorities-deployment.md
-        - name: Troubleshooting
-          href: 15five-priorities-troubleshooting.md
+      - name: Overview
+        href: 15five-priorities-overview.md
+      - name: Deployment guide
+        href: 15five-priorities-deployment.md
+      - name: Troubleshooting
+        href: 15five-priorities-troubleshooting.md
     - name: Adobe Experience Manager Sites
       items:
       - name: Overview

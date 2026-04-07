@@ -41,7 +41,7 @@ The following examples show prompts that users can use to retrieve information f
 | Management | Show the current status of priorities for my direct reports. |
 | Leadership | Summarize employee priorities across my organization. |
 
-## 15Five High Fives connector capabilities and limitations
+## 15Five Priorities connector capabilities and limitations
 
 This connector enables users to:
 
