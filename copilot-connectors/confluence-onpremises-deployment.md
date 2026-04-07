@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 03/31/2026
+ms.date: 04/07/2026
 ms.localizationpriority: Medium
 ---
 
