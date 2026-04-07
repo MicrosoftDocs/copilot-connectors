@@ -48,7 +48,7 @@ Enter your 15Five instance URL. The default 15Five instance URL is `https://my.1
 
 In the **Authentication type** box, select **API Key** and enter the access token that you got from your 15Five company API keys setting.
 
-### Roll out 
+### Roll out
 
 Deploy this connection to a limited user base to validate it in Microsoft 365 Copilot and other Microsoft Search experiences before you roll it out to a broader audience.
 

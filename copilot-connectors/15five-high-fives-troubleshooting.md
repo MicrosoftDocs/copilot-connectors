@@ -17,7 +17,7 @@ description: "Find troubleshooting information for the 15Five High Fives Microso
 
 The 15Five High Fives Microsoft 365 Copilot connector enables your organization to index 15Five high-five data to make it available to Microsoft 365 Copilot and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the connector.
 
-## 15Five High Five connector troubleshooting
+## 15Five High Fives connector troubleshooting
 
 The following table lists common errors and troubleshooting steps.
 
