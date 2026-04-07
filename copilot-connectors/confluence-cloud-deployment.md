@@ -192,7 +192,7 @@ The refresh interval determines how often your data is synchronized between the 
 
 You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
-#### API endpoints
+## API endpoints
 
 The following table lists the API endpoints that the connector calls to crawl data and the permissions required for each endpoint.
 
