@@ -322,6 +322,9 @@ If you choose **Everyone**, indexed data appears in the search results for all
 > [!NOTE]
 > If a knowledge article and its knowledge base don't have any `Can Read` user criteria applied, the article appears in the results for everyone in the organization, provided that the `glide.knowman.block_access_with_no_user_criteria` property is set to `false` in your ServiceNow instance. If this property is `true`, or if the service account doesn't have access to the `sys_properties` table (in which case the connector defaults to `true`), articles without user criteria are blocked from appearing in search results. For more information, see [Set up hierarchical permissions](servicenow-knowledge-admin-setup.md#set-up-hierarchical-permissions).
 
+> [!WARNING]
+> If your ServiceNow instance includes knowledge bases in the **HR Service Delivery** (`sn_hr_core`) application scope, verify that the service account has the `sn_hr_core.content_reader` or `sn_hr_core.admin` role. Without one of these roles, the service account can't read HR-scoped user criteria. Because the connector receives empty results rather than an error, it may interpret HR-restricted articles as having no access restrictions and index them as accessible to all users. This can result in sensitive HR content—such as compensation policies, benefits information, or disciplinary procedures—appearing in Copilot and Microsoft Search results for unauthorized users. For more information, see [Additional roles for HR Service Delivery (HRSD) content](servicenow-knowledge-admin-setup.md#additional-roles-for-hr-service-delivery-hrsd-content).
+
 #### Map identities
 
 By default, ServiceNow maps email IDs to Microsoft Entra ID (UPN or Mail). You can provide a custom mapping formula if your organization uses different identity attributes. For more information, see [Map non-Microsoft Entra ID identities](map-non-entra-id.md).
