@@ -15,23 +15,23 @@ description: "Find troubleshooting information for the ServiceNow Knowledge Copi
 
 # Troubleshoot issues with the ServiceNow Knowledge Copilot connector
 
-The ServiceNow Knowledge Microsoft 365 Copilot connector allows organizations to index ServiceNow knowledge articles into Microsoft 365 Copilot and search experiences. This article provides troubleshooting information for common errors that you might encounter when you deploy the ServiceNow Knowledge connector.
+The ServiceNow Knowledge Microsoft 365 Copilot connector enables organizations to index ServiceNow knowledge articles into Microsoft 365 Copilot and search experiences. This article provides troubleshooting information for common errors that you might encounter when you deploy the ServiceNow Knowledge connector.
 
-To verify ServiceNow configuration information to help troubleshoot errors, see [Set up the ServiceNow service for connector ingestion](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup).
+To verify ServiceNow configuration information and help troubleshoot errors, see [Set up the ServiceNow service for connector ingestion](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup).
 
 ## Can't find ServiceNow Knowledge articles in Copilot or Microsoft Search
 
-To troubleshoot this issue:
+To troubleshoot this issue, try the following steps:
 
 1. Determine whether the user searching for the article has the [required permissions to access the ServiceNow Knowledge articles.](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#create-service-account-and-set-up-permissions-to-index-items)
 
-1. Determine whether the user is correctly mapped to a Microsoft Entra identity. Mapping issues show as a 2006 error on the **Error** tab. Check the user mapping formula and update as needed.
+1. Check whether the user is correctly mapped to a Microsoft Entra identity. Mapping problems show as a 2006 error on the **Error** tab. Check the user mapping formula and update it as needed.
 
-    :::image type="content" source="media/servicenow-knowledge-troubleshooting/error-tab.png" alt-text="Screenshot of the Error tab showing mapping issues with 2006 error code.":::
+    :::image type="content" source="media/servicenow-knowledge-troubleshooting/error-tab.png" alt-text="Screenshot of the Error tab showing mapping problems with 2006 error code.":::
 
-1. Determine whether an advanced script in any of the user criteria grant access to the article. Advanced scripts aren't currently supported. If you're using advanced scripts, be sure to select **Advanced flow** when you set up the connection and [Set up the REST API](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
+1. Check whether an advanced script in any of the user criteria grants access to the article. Advanced scripts aren't currently supported. If you're using advanced scripts, be sure to select **Advanced flow** when you set up the connection and [Set up the REST API](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
 
-1. Use the [User criteria diagnostics](https://docs.servicenow.com/bundle/washingtondc-servicenow-platform/page/product/knowledge-management/concept/diagnose-knowledge-user-criteria.html) tool in ServiceNow to see if the service account has access to the item in ServiceNow
+1. Use the [User criteria diagnostics](https://docs.servicenow.com/bundle/washingtondc-servicenow-platform/page/product/knowledge-management/concept/diagnose-knowledge-user-criteria.html) tool in ServiceNow to see if the service account has access to the item in ServiceNow.
 
 1. Use the [Access Analyzer tool in ServiceNow](https://www.servicenow.com/docs/bundle/zurich-platform-security/page/integrate/identity/task/view-permissions-for-a-user.html) to debug further if the service account user  missed access to any particular table, field, or record (for example, the `user_criteria` table). If you find any access control list (ACL) or role that blocks access to a required table, field, or record, provide the required roles and ACLs to the service account.
 
@@ -50,7 +50,7 @@ To troubleshoot this issue:
         - List of user criteria `sys_id` in the `can_read_user_criteria` field of the article
         - List of user criteria `sys_id` in the `cannot_read_user_criteria` field of the article
 
-    When the required access is provided in ServiceNow, start a full crawl for the configured ServiceNow connection.
+    When you provide the required access in ServiceNow, start a full crawl for the configured ServiceNow connection.
 
 ## Missing access to certain tables
 
@@ -93,21 +93,21 @@ Alternatively, you can use a browser to verify access:
 
 When the required access is provided in ServiceNow, start a full crawl for the configured ServiceNow connection.
 
-## Articles without user criteria not appearing in search results
+## Articles without user criteria don't appear in search results
 
-If knowledge articles that have no user criteria applied aren't appearing in Copilot or Microsoft Search results, verify that the service account has read access to the `sys_properties` table in ServiceNow.
+If knowledge articles without user criteria don't appear in Copilot or Microsoft Search results, verify that the service account has read access to the `sys_properties` table in ServiceNow.
 
 The connector reads two system properties to determine how to handle articles without user criteria:
 
 - `glide.knowman.apply_article_read_criteria`
 - `glide.knowman.block_access_with_no_user_criteria`
 
-If the service account can't read these properties, the connector defaults to the most restrictive settings, which blocks articles without explicit user criteria from appearing in search results. No error is shown in the admin center when this happens.
+If the service account can't read these properties, the connector defaults to the most restrictive settings. This restriction blocks articles without explicit user criteria from appearing in search results. The admin center shows no error when this restriction happens.
 
 To resolve this issue:
 
  1. Grant the service account read access to the `sys_properties` table. For more information, see [Grant table access to a service account in ServiceNow](/microsoftsearch/granting-table-access-servicenow-knowledge).
- 2. After granting access, start a full crawl for the configured ServiceNow connection.
+ 1. After granting access, start a full crawl for the configured ServiceNow connection.
 
 > [!NOTE] 
 > This access applies to both Simple and Advanced flows.
@@ -216,7 +216,7 @@ The ServiceNow Knowledge connector allows you to customize the URL of the knowle
 
 ## Issues with Only people with access to this data source permission
 
-### Unable to choose Only people with access to this data source
+### Can't select Only people with access to this data source
 
 The **Only people with access to this data source** option might be unavailable if the service account lacks read permissions to the required tables. Make sure that the account can read tables related to user criteria permissions.
 
@@ -224,7 +224,7 @@ The **Only people with access to this data source** option might be unavailable 
 
 ServiceNow user accounts that don't have a corresponding Microsoft 365 user in Microsoft Entra ID fail to map. Service accounts and nonuser accounts are expected to fail mapping. You can view mapping failures in the identity stats area of the connection detail window and download logs from the **Error** tab.
 
-## Logout Successful window appears when you complete the OAuth process
+## Logout successful window appears when you complete the OAuth process
 
 When you complete the OAuth process, a **Logout successful** window might appear without prompting for ServiceNow credentials.
 
@@ -242,15 +242,16 @@ To resolve this issue:
 
 ## Issue with OIDC based authorization
 
-Customers with tightened security controls on Entra ID might enable the [Assignment required](/entra/identity/enterprise-apps/application-properties#assignment-required) option on the Enterprise application registered for OpenID Connect (OIDC). This causes the following error during the authorization phase of connector setup:
+Customers with tightened security controls on Entra ID might enable the [Assignment required](/entra/identity/enterprise-apps/application-properties#assignment-required) option on the Enterprise application registered for OpenID Connect (OIDC). This setting causes the following error during the authorization phase of connector setup:
 
 `Failed to authenticate using client credentials. Please check the client ID, secret, and scope configuration. If the issue persists, contact your data source administrator or Microsoft Support. Error from the data source while getting the token: Error Description: AADSTS501051: Application '\<AppID\>'(\<App Name\>) is not assigned to a role for the application '\<AppID\>'(\<App Name\>). Trace ID: \<GUID\> Correlation ID: \<GUID\> Timestamp: \<Timestamp\>, Error: invalid_grant.`
 
 To resolve this issue, disable the option in Microsoft Entra ID:
 
-1. In the Microsoft Entra admin center, go to **Enterprise Apps** \> **All apps**.
-2. Choose the app you registered for OIDC and choose to **Properties** \> **Turn off Assignment required**. \> Save.
-3. Choose **Save**.
+1. In the Microsoft Entra admin center, go to **Enterprise Apps** > **All apps**.
+1. Choose the app you registered for OIDC and choose **Properties**.
+1. Turn off **Assignment required**.
+1. Choose **Save**.
 
 ## Related content
 
