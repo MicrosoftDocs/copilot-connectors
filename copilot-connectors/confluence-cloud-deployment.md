@@ -185,12 +185,12 @@ Choose the **Preview results** button to verify the selected properties and filt
 
 ### Customize sync intervals
 
-The refresh interval determines how often your data is synchronized between the data source and the Confluence Cloud connector index. Copilot connectors use two types of refresh intervals:
+The refresh interval determines how often your data synchronizes between the data source and the Confluence Cloud connector index. Copilot connectors use two types of refresh intervals:
 
 - **Full crawl** - Performs a complete synchronization of all content. Full crawls detect deleted items and sync access control list (ACL) changes. By default, full crawls run every 24 hours.
-- **Incremental crawl** - Syncs new and modified content. Incremental crawls do not pick up ACL changes or deleted items. By default, incremental crawls run every 15 minutes.
+- **Incremental crawl** - Syncs new and modified content. Incremental crawls don't pick up ACL changes or deleted items. By default, incremental crawls run every 15 minutes.
 
-You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
+You can change the default values of the refresh intervals. For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## API endpoints
 

@@ -150,10 +150,10 @@ The following table lists the properties that are indexed by default.
 
 You can configure the frequency of full and incremental crawls:
 
-- **Full crawl**: Recommended every 24 hours to ensure complete data refresh.
-- **Incremental crawl**: Recommended every 15 minutes to capture recent changes.
+- **Full crawl**: Schedule every 24 hours to ensure complete data refresh.
+- **Incremental crawl**: Schedule every 15 minutes to capture recent changes.
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
