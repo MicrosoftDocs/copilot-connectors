@@ -214,8 +214,7 @@ After adding custom properties, you can customize the schema attributes for any 
 
 ### Customize sync intervals
 
-You can change how often full crawls happen to match your organization's needs. By default, the crawls include:
-- Full crawl - daily.
+You can change how often full crawls happen to match your organization's needs. By default, the full crawl runs daily.
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
