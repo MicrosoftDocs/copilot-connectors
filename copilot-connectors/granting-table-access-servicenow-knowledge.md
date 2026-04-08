@@ -1,5 +1,5 @@
 ---
-ms.date: 04/02/2026
+ms.date: 04/08/2026
 title: "Grant table access to a service account in ServiceNow Knowledge"
 ms.author: lauragra
 author: lauragra
@@ -58,7 +58,7 @@ To assign the role to a user:
     > [!NOTE]
     > You might also assign the following roles to the service account so knowledge articles are indexed without any blocking ACL issues: `knowledge_admin`, `user_criteria_admin`, `user_admin`. Assigning these roles is optional.
     >
-    > If your ServiceNow instance uses the HR Service Delivery module with knowledge bases in the **Human Resources: Core** (`sn_hr_core`) application scope, also assign `sn_hr_core.content_reader` (or `sn_hr_core.admin` for broader access). Without this role, the service account can't read HR-scoped user criteria, which can result in HR articles being indexed as accessible to all users. For more information, see [Additional roles for HR Service Delivery (HRSD) content](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#additional-roles-for-hr-service-delivery-hrsd-content).
+    > If your ServiceNow instance uses the HR Service Delivery module with knowledge bases in the **Human Resources: Core** (`sn_hr_core`) application scope, also assign `sn_hr_core.content_reader` (or `sn_hr_core.admin` for broader access). Without this role, the service account can't read HR-scoped user criteria, and HR articles might be indexed as accessible to all users. For more information, see [Additional roles for HR Service Delivery (HRSD) content](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#additional-roles-for-hr-service-delivery-hrsd-content).
 
 1. Select **Save** to finalize the assignment.
 1. Select **Update** to update the user record.
