@@ -9,7 +9,7 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-ms.date: 07/24/2025
+ms.date: 04/07/2026
 ---
 
 # Deploy connectors in the Microsoft 365 admin center
@@ -64,7 +64,7 @@ You can customize the default values for connector settings. On the connector pa
 - **Content**
 - **Sync**
 
-### Users settings
+### Users tab
 
 :::image type="content" alt-text="Screenshot that shows the User configuration screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/customize-user.png" lightbox="media/deployment-overview/customize-user.png":::
 
@@ -76,7 +76,7 @@ On the **Users** tab, under **Access Permissions**, choose whether indexed data 
 By default, users are mapped by matching their email to `UserPrincipalName` or `Mail` in Microsoft Entra ID. In the **Map Identities** section, you can provide a custom mapping formula.
 
 
-### Content settings
+### Content tab
 
 :::image type="content" alt-text="Screenshot that shows the Content configuration screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/customize-data.png" lightbox="media/deployment-overview/customize-data.png":::
 
@@ -134,7 +134,7 @@ Search schema attributes include options to **Query**, **Search**, **Retrieve**,
 
 Only string properties can be marked as searchable.
 
-### Sync settings
+### Sync tab
 
 :::image type="content" alt-text="Screenshot of the crawl settings in the Microsoft 365 admin center." source="media/deployment-overview/customize-crawl.png" lightbox="media/deployment-overview/customize-crawl.png":::
 
