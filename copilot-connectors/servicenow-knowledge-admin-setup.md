@@ -162,7 +162,7 @@ If your ServiceNow instance uses the HR Service Delivery module with knowledge b
 These roles are independent — `sn_hr_core.admin` doesn't contain `sn_hr_core.content_reader` in the default ServiceNow role hierarchy. They grant access through different mechanisms: `sn_hr_core.content_reader` satisfies a specific ACL, while `sn_hr_core.admin` provides implicit scope-level access. Assign one or the other based on your organization's least-privilege requirements.
 
 > [!WARNING]
-> Without one of these roles, the service account can query the `user_criteria` table through the global-scope ACL but HR-scoped user criteria rows are silently filtered out. The connector receives empty results rather than an error, and might treat HR knowledge articles as accessible to all users. This condition can result in unintended exposure of sensitive HR content — such as compensation policies, benefits information, or disciplinary procedures — in Copilot and Microsoft Search results.
+> Without one of these roles, the service account can query the `user_criteria` table through the global-scope ACL but HR-scoped user criteria rows are silently filtered out. The connector receives empty results rather than an error, and might treat HR knowledge articles as accessible to all users. This condition can result in unintended exposure of sensitive HR content - such as compensation policies, benefits information, or disciplinary procedures - in Copilot and Microsoft Search results.
 
 
 ### Verify service account permissions

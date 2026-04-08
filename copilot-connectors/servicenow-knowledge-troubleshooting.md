@@ -139,7 +139,7 @@ To resolve the issue:
 
 ## Issue reading all user criteria from ServiceNow
 
-Sometimes content access can be restricted because the service account isn't reading all user criteria. This issue can happen if you use the `gs.getUserId()` or the `gs.getUser()` function within any user criteria. If you use these functions, update the user criteria to remove them. ServiceNow recommends using the `user_id`.
+Sometimes content access is restricted because the service account can't read all user criteria. This issue can happen if you use the `gs.getUserId()` or the `gs.getUser()` function within any user criteria. If you use these functions, update the user criteria to remove them. ServiceNow recommends using the `user_id`.
 
 :::image type="content" source="media/servicenow-knowledge-troubleshooting/user-criteria.png" alt-text="Screenshot of user criteria showing the use of gs.getUserId() function." lightbox="media/servicenow-knowledge-troubleshooting/user-criteria.png":::
 
