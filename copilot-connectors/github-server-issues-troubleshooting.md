@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the GitHub Server Issues Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the GitHub Server Issues connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the GitHub Server Issues Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the GitHub Server Issues Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitHub Server Issues connector
 
 The GitHub Server Issues Microsoft 365 Copilot connector integrates GitHub issue data into Microsoft 365. This article provides troubleshooting information for common errors that you might encounter when you deploy the GitHub Server Issues connector. 
 

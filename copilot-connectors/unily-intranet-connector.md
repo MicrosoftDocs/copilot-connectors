@@ -1,5 +1,5 @@
 ---
-title: "Unily Microsoft 365 Copilot connector" 
+title: "Unily connector" 
 ms.author: lauragra
 author: lauragra
 manager: ereza
@@ -12,7 +12,7 @@ description: "Set up the Unily Microsoft 365 Copilot connector."
 ms.date: 12/25/2025
 ---
 
-# Unily Microsoft 365 Copilot connector
+# Unily connector
 
 The Unily Microsoft 365 Copilot connector allows your organization to index content from the Unily intranet. After you configure the connector, end users can search for this content in Microsoft 365 Copilot and from any Microsoft Search client. 
 
@@ -22,7 +22,7 @@ The Unily Microsoft 365 Copilot connector allows your organization to index cont
    - What are the company holidays for 2025?
    - What events are planned for National Heritage Month?
    - What training programs are available?
-- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - Currently, Copilot responses aren't customized for specific audiences as defined in Unily, such as utilizing the 'target audience' property.

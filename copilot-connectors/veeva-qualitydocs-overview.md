@@ -1,5 +1,5 @@
 ---
-title: "Veeva QualityDocs Microsoft 365 Copilot connector"
+title: "Veeva QualityDocs connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -10,10 +10,10 @@ ms.topic: overview
 ms.service: copilot-connectors
 ms.localizationpriority: Medium
 description: "Learn about the Veeva QualityDocs Microsoft 365 Copilot connector, including capabilities, use cases, and benefits for quality, regulatory, manufacturing, and supply-chain teams."
-ms.date: 03/19/2026
+ms.date: 04/03/2026
 ---
 
-# Veeva QualityDocs Microsoft 365 Copilot connector overview
+# Veeva QualityDocs connector overview
 
 The Veeva QualityDocs Microsoft 365 Copilot connector integrates Veeva QualityDocs content into Microsoft 365, allowing Microsoft 365 Copilot and Microsoft Search to surface relevant SOPs, work instructions, policies, CAPAs, batch records, and other GxP documents directly within apps like Teams, Outlook, and SharePoint. By pairing Microsoft's AI capabilities with QualityDocs as the single source of truth for controlled quality documents, the connector improves audit readiness, reduces cycle times for changes, and supports more consistent, compliant documentation practices across quality, regulatory, manufacturing, and supply-chain teams.
 

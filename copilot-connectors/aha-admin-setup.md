@@ -1,5 +1,5 @@
 ---
-title: "Set up the Aha! service for Aha! Microsoft 365 Copilot connector ingestion"
+title: "Set up the Aha! service for Aha! connector ingestion"
 ms.author: lauragra
 author: lauragra
 manager: calvind

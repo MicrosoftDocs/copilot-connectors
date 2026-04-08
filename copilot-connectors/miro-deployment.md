@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Miro Microsoft 365 Copilot connector"
+title: "Deploy the Miro connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Miro Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Miro Microsoft 365 Copilot connector
+# Deploy the Miro connector
 
 The Miro Microsoft 365 Copilot connector allows your organization to index Miro boards so users can discover, access, and use Miro content directly within Microsoft 365 experiences. This article describes the steps to deploy and customize the Miro connector.
 

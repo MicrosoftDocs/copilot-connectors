@@ -1,6 +1,6 @@
 ---
 
-title: "15Five High Fives Microsoft 365 Copilot connector (preview)" 
+title: "15Five High Fives connector (preview)" 
 ms.author: wangchen
 author: wangchen
 manager: zezhangzhao
@@ -13,7 +13,7 @@ description: "Set up the 15Five High Fives Microsoft 365 Copilot connector (prev
 ms.date: 08/15/2025
 ---
 
-# 15Five High Fives Microsoft 365 Copilot connector (preview)
+# 15Five High Fives connector (preview)
 
 The 15Five High Fives Microsoft 365 Copilot connector enables your organization to index 15Five high-five data to make it available to Microsoft 365 Copilot and Microsoft Search. 
 

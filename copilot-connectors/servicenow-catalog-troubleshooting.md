@@ -1,5 +1,5 @@
 ---
-title: "ServiceNow Catalog Microsoft 365 Copilot connector troubleshooting"
+title: "ServiceNow Catalog connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the ServiceNow Catalog Copilot connector."
 ---
 
-# Troubleshoot issues with the ServiceNow Catalog Microsoft 365 Copilot connector
+# Troubleshoot issues with the ServiceNow Catalog connector
 
 The ServiceNow Catalog Microsoft 365 Copilot connector enables organizations to index service catalog items from ServiceNow into Microsoft Graph. Users can search for catalog items directly within Microsoft 365 experiences, including Copilot. This article provides troubleshooting information for common errors that you might encounter when you deploy the ServiceNow Catalog connector.
 
@@ -62,12 +62,12 @@ Use the following steps to validate table permissions by using REST API Explorer
 
     :::image type="content" source="media/servicenow-catalog-troubleshooting/sysparm-light-field.png" alt-text="Screenshot of the REST API explorer with the sysparm_light field highlighted.":::
 
-5.  Choose **Send**.
-6.  Review the response:
+1.  Choose **Send**.
+1.  Review the response:
 
-   - If you receive a `403 Status Code` and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365/copilot/connectors/granting-table-access-servicenow) to provide table-level access.
+   - If you receive a `403 Status Code` and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-catalog) to provide table-level access.
 
-   - If you receive a `200 Status Code` but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow#step-5-grant-field-level-access).
+   - If you receive a `200 Status Code` but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-catalog#grant-field-level-access).
 
    :::image type="content" source="media/servicenow-catalog-troubleshooting/response-body.png" alt-text="Screenshot of the Response section.":::
 

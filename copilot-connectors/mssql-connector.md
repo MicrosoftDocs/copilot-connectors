@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors"
+title: "Azure SQL and Microsoft SQL Server connectors"
 ms.author: danielabo
 author: danielabom
 manager: SteveWilkins1123
@@ -11,16 +11,16 @@ ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors."
 ---
-# Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors
+# Azure SQL and Microsoft SQL Server connectors
 
 The Microsoft SQL Server or Azure SQL Microsoft 365 Copilot connectors allow your organization to discover and index data from an on-premises SQL Server database or a database hosted in your Azure SQL instance in the cloud.
 The connector indexes specified content in Microsoft Search and Microsoft 365 Copilot. To keep the index up to date with source data, it supports periodic full and incremental crawls. With these SQL connectors, you can also restrict access to search results for certain users.
 
 ## Capabilities
-- Index records from your MS SQL server or Azure SQL database using a SQL query.
+- Index records from your MS SQL server or Azure SQL database by using a SQL query.
 - Specify access permissions for every record with a list of users or groups added in the SQL query.
 - Enable your end users to ask questions related to indexed records in Copilot.
-- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - Microsoft SQL Server Copilot connector: The on-premises database must run SQL Server version 2008 or later.
@@ -40,7 +40,7 @@ The connector indexes specified content in Microsoft Search and Microsoft 365 Co
 ## Get Started with Setup
 
 ### 1. Display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365/copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+The display name identifies each citation in Copilot, so users can easily recognize the associated file or item. The display name also signifies trusted content, and acts as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. SQL server
 To connect to your SQL data, you need your SQL server address and database name.

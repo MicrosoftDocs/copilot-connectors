@@ -1,6 +1,6 @@
 ---
 ms.date: 12/19/2025
-title: "Confluence Cloud Microsoft 365 Copilot Connector Overview"
+title: "Confluence Cloud Connector Overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind

@@ -1,5 +1,5 @@
 ---
-title: Set up the Salesforce service for Salesforce CRM Microsoft 365 Copilot connector ingestion
+title: Set up the Salesforce service for Salesforce CRM connector ingestion
 description: Get the steps that the Salesforce CRM admin needs to complete for your organization to configure the Salesforce CRM Microsoft 365 Copilot connector.
 author: lauragra
 ms.author: lauragra

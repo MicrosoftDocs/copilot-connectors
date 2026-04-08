@@ -1,6 +1,6 @@
 --- 
 ms.date: 08/28/2024 
-title: "Troubleshooting the File Share Microsoft 365 Copilot connector" 
+title: "Troubleshooting the File Share connector" 
 ms.author: gladysa
 author: gladysa
 manager: brian.jackett
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Troubleshooting the File Share Microsoft 365 Copilot connector." 
 --- 
 
-# Troubleshooting the File Share Microsoft 365 Copilot connector
+# Troubleshooting the File Share connector
 
 ###  Common errors observed while configuring the connector
 

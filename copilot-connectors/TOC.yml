@@ -451,6 +451,8 @@ items:
         items:
         - name: Grant table access to a user
           href: granting-table-access-servicenow-knowledge.md
+        - name: Set up using background scripts
+          href: servicenow-knowledge-setup-scripts.md
       - name: Deploy the connector
         href: servicenow-knowledge-deployment.md
       - name: Troubleshooting

@@ -1,5 +1,5 @@
 ---
-title: "GitLab Knowledge Server Microsoft 365 Copilot connector overview"
+title: "GitLab Knowledge Server connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -12,7 +12,7 @@ ms.date: 01/26/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitLab Knowledge Server Microsoft 365 Copilot connector."
 ---
-# GitLab Knowledge Server Microsoft 365 Copilot connector overview
+# GitLab Knowledge Server connector overview
 
 The GitLab Knowledge Server Microsoft 365 Copilot connector enables organizations to index knowledge content stored in GitLab self-managed (on-premises) instances—including Markdown files, wiki pages, and other documentation repositories—and make this content available through Microsoft Search and Microsoft 365 Copilot. After the connector is configured and data is indexed, GitLab knowledge appears directly in Microsoft 365 applications such as Teams, Outlook, and SharePoint. This indexing allows employees to discover and reuse organizational knowledge without leaving their daily workflow.
 

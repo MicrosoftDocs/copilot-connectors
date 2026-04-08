@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Egnyte Microsoft 365 Copilot connector"
+title: "Deploy the Egnyte connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,9 +13,9 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Egnyte Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Egnyte Microsoft 365 Copilot connector
+# Deploy the Egnyte connector
 
-The Egnyte Microsoft 365 Copilot connector allows your organization to index files stored in Egnyte so users can retrieve them through Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Egnyte Microsoft 365 Copilot connector.
+The Egnyte Microsoft 365 Copilot connector enables your organization to index files stored in Egnyte so users can retrieve them through Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Egnyte Microsoft 365 Copilot connector.
 
 For advanced Egnyte configuration information, see  
 [Set up the Egnyte service for connector ingestion](egnyte-admin-setup.md).

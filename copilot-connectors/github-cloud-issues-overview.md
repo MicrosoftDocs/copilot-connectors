@@ -1,5 +1,5 @@
 ---
-title: GitHub Cloud Issues Microsoft 365 Copilot connector overview
+title: GitHub Cloud Issues connector overview
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Cloud Issues Microsoft 365 Copilot connector."
 author: Lauragra
 ms.author: lauragra
@@ -10,9 +10,9 @@ ms.service: copilot-connectors
 ms.topic: concept-article
 ---
 
-# GitHub Cloud Issues Microsoft 365 Copilot connector overview
+# GitHub Cloud Issues connector overview
 
-The GitHub Cloud Issues Microsoft 365 Copilot connector enables your organization to index issues stored in GitHub so they can be surfaced in Microsoft 365 Copilot and Microsoft Search experiences. After you configure and deploy the connector, users can search and retrieve GitHub issues data directly in Microsoft 365.
+The GitHub Cloud Issues Microsoft 365 Copilot connector enables your organization to index issues stored in GitHub so they can surface in Microsoft 365 Copilot and Microsoft Search experiences. After you configure and deploy the connector, users can search and retrieve GitHub issues data directly in Microsoft 365.
 
 
 ## Why use the GitHub Cloud Issues connector to index your data?

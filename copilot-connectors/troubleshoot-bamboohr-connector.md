@@ -1,6 +1,6 @@
 ---
 ms.date: 11/14/2025
-title: "Troubleshoot issues with the BambooHR Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the BambooHR connector"
 ms.author: danielabo
 author: danipocket
 manager: laugra
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Find troubleshooting information for the BambooHR Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the BambooHR Microsoft 365 Copilot connector
+# Troubleshoot issues with the BambooHR connector
 
 The BambooHR Microsoft 365 Copilot connector allows organizations to index profiles from BambooHR into Microsoft Graph to make them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search.
 

@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the GitLab Knowledge Cloud Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the GitLab Knowledge Cloud connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the GitLab Knowledge Cloud Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the GitLab Knowledge Cloud Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitLab Knowledge Cloud connector
 
 The GitLab Knowledge Cloud Microsoft 365 Copilot connector indexes documentation and knowledge artifacts stored in GitLab projects on GitLab.com. This article provides troubleshooting information for common errors that you might encounter when you deploy and use the GitLab Knowledge Cloud connector. These issues are typically related to authentication, permissions, missing content, or GitLab API access.
 

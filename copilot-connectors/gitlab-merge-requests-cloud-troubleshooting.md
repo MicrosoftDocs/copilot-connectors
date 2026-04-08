@@ -1,5 +1,5 @@
 ---
-title: "GitLab Merge Requests Cloud Microsoft 365 Copilot connector troubleshooting"
+title: "GitLab Merge Requests Cloud connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the GitLab Merge Requests Cloud Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the GitLab Merge Requests Cloud Microsoft 365 Copilot connector
+# Troubleshoot issues with the GitLab Merge Requests Cloud connector
 
 The GitLab Merge Requests Cloud Microsoft 365 Copilot connector allows your organization to index merge request data stored in GitLab and make it available across Microsoft 365 Copilot and Microsoft Search experiences. This article provides troubleshooting guidance for common issues you might encounter when you deploy or manage the GitLab Merge Requests Cloud connector. These issues typically relate to authentication, permissions, configuration, ingestion, and sync behavior.
 

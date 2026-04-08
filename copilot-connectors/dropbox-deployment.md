@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Dropbox Microsoft 365 Copilot connector"
+title: "Deploy the Dropbox connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Dropbox Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Dropbox Microsoft 365 Copilot connector
+# Deploy the Dropbox connector
 
 This article describes the steps to deploy and customize the Dropbox connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview).
 

@@ -1,5 +1,5 @@
 ---
-title: "Azure File Share Microsoft 365 Copilot connector overview"
+title: "Azure File Share connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,9 +13,9 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Azure File Share Microsoft 365 Copilot connector."
 ---
 
-# Azure File Share Microsoft 365 Copilot connector overview
+# Azure File Share connector overview
 
-The Azure File Share Microsoft 365 Copilot connector integrates Azure File Share content into Microsoft 365, allowing Microsoft 365 Copilot and Microsoft Search experiences to surface relevant files and folders directly in apps like Teams, Outlook, and SharePoint. When you configure the connector and index content from your file shares, users can search enterprise file-share data in Microsoft 365 without switching between tools. The connector brings more consistent information management and improved discovery, and preserves New Technology File System (NTFS)-based security trimming.
+The Azure File Share Microsoft 365 Copilot connector integrates Azure File Share content into Microsoft 365. This integration eanbles Microsoft 365 Copilot and Microsoft Search experiences to surface relevant files and folders directly in apps like Teams, Outlook, and SharePoint. When you configure the connector and index content from your file shares, users can search enterprise file-share data in Microsoft 365 without switching between tools. The connector brings more consistent information management and improved discovery, and preserves New Technology File System (NTFS)-based security trimming.
 
 ## Why use the Azure File Share connector to index your data?
 

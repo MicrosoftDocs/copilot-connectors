@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting the Azure DevOps Wiki Microsoft 365 Copilot connector"
+title: "Troubleshooting the Azure DevOps Wiki connector"
 ms.author: vivg
 author: vivg
 manager: harshkum
@@ -12,7 +12,7 @@ description: "Troubleshooting the Azure DevOps Wiki Microsoft 365 Copilot connec
 ms.date: 06/03/2022
 ---
 
-# Troubleshooting the Azure DevOps Wiki Microsoft 365 Copilot connector
+# Troubleshooting the Azure DevOps Wiki connector
 
 The following common errors are observed while configuring the connector or during crawling and their possible reason.
 

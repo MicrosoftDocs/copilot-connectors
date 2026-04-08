@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Shortcut Story Microsoft 365 Copilot connector"
+title: "Deploy the Shortcut Story connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Shortcut Story Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Shortcut Story Microsoft 365 Copilot connector
+# Deploy the Shortcut Story connector
 
 The Shortcut Story connector allows your organization to index Shortcut stories and make them discoverable in Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Shortcut Story connector.
 

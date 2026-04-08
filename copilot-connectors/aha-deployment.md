@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Aha! Microsoft 365 Copilot connector"
+title: "Deploy the Aha! connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Aha! Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Aha! Microsoft 365 Copilot connector
+# Deploy the Aha! connector
 
 The Aha! Features and Ideas Microsoft 365 Copilot connectors empower your organization to index and search Aha! features and ideas across your enterprise. This article describes the steps to deploy and customize the Aha! connector.
 
@@ -68,7 +68,7 @@ The Aha! connector uses OAuth 2.0 for authentication. To configure:
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout-for-graph-connectors).
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The Aha! Copilot connector starts indexing content right away.
 
@@ -161,7 +161,7 @@ You can customize the sync intervals for full crawl and incremental crawl. Defau
 - Incremental crawl: Every 15 minutes
 - Full crawl: Every day
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/configure-connector#guidelines-for-crawl-settings).
+For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 #### Rate limits
 

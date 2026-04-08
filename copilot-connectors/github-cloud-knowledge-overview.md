@@ -1,5 +1,5 @@
 ---
-title: "GitHub Cloud Knowledge Microsoft 365 Copilot connector overview"
+title: "GitHub Cloud Knowledge connector overview"
 ms.author: lauragra
 author: Lauragra
 manager: calvind
@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Cloud Knowledge Copilot connector."
 ---
 
-# GitHub Cloud Knowledge Microsoft 365 Copilot connector overview
+# GitHub Cloud Knowledge connector overview
 
 The GitHub Cloud Knowledge Microsoft 365 Copilot connector enables organizations to index markdown and text files from GitHub repositories into Microsoft 365 Copilot and Microsoft Search experiences. By integrating GitHub content with Microsoft 365, users can access project documentation and technical guides directly in familiar apps, reducing context switching and improving productivity.
 

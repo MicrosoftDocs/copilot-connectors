@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Adobe Experience Manager Assets Microsoft 365 Copilot connector"
+title: "Deploy the Adobe Experience Manager Assets connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Adobe Experience Manager Assets Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Adobe Experience Manager Assets Microsoft 365 Copilot connector
+# Deploy the Adobe Experience Manager Assets connector
 
 The Adobe Experience Manager (AEM) Assets Copilot connector integrates AEM Assets content into the Microsoft 365 ecosystem to enable Copilot and search experiences to surface published assets. This article describes the steps to deploy and customize the connector.
 

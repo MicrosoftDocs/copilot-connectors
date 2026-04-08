@@ -1,5 +1,5 @@
 ---
-title: "Veeva PromoMats Microsoft 365 Copilot connector troubleshooting"
+title: "Veeva PromoMats connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Veeva PromoMats Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Veeva PromoMats Microsoft 365 Copilot connector
+# Troubleshoot issues with the Veeva PromoMats connector
 
 The Veeva PromoMats Microsoft 365 Copilot connector enables organizations to index and surface approved promotional marketing materials and related compliant content from Veeva Vault PromoMats into the Microsoft 365 ecosystem. 
 

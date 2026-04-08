@@ -1,5 +1,5 @@
 ---
-title: "Smartsheet Sheet Microsoft 365 Copilot connector overview"
+title: "Smartsheet Sheet connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Smartsheet Sheet Microsoft 365 Copilot connector."
 ---
 
-# Smartsheet Sheet Microsoft 365 Copilot connector overview
+# Smartsheet Sheet connector overview
 
 The Smartsheet Sheet Microsoft 365 Copilot connector allows your organization to index sheet content from Smartsheet. After you configure the connector, users can search for content from Smartsheet in Microsoft 365 Copilot and from any Microsoft Search client. This connector is designed for organizations that want to bring Smartsheet content into Microsoft 365 while preserving existing security and permission structures.
 

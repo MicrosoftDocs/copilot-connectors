@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Adobe Experience Manager Sites Microsoft 365 Copilot connector"
+title: "Deploy the Adobe Experience Manager Sites connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,9 +13,9 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Adobe Experience Manager (AEM) Sites Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Adobe Experience Manager Sites Microsoft 365 Copilot connector
+# Deploy the Adobe Experience Manager Sites connector
 
-With the Adobe Experience Manager Sites Microsoft 365 Copilot connector, your organization can index published webpages from Adobe Experience Manager (AEM) Sites so people can discover and use them across Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Adobe Experience Manager Sites connector. 
+By using the Adobe Experience Manager Sites Microsoft 365 Copilot connector, your organization can index published webpages from Adobe Experience Manager (AEM) Sites so people can discover and use them across Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Adobe Experience Manager Sites connector. 
 
 ## Prerequisites
 

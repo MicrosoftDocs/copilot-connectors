@@ -1,5 +1,5 @@
 ---
-title: Deploy the GitHub Cloud Issues Microsoft 365 Copilot connector
+title: Deploy the GitHub Cloud Issues connector
 description: "Find information about how to deploy the GitHub Cloud Issues Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 author: Lauragra
 ms.author: lauragra
@@ -10,9 +10,9 @@ ms.service: copilot-connectors
 ms.topic: concept-article
 ---
 
-# Deploy the GitHub Cloud Issues Microsoft 365 Copilot connector
+# Deploy the GitHub Cloud Issues connector
 
-The GitHub Cloud Issues Microsoft 365 Copilot connector enables your organization to index GitHub issues so they can be surfaced in Microsoft 365 Copilot and Microsoft Search experiences. This article describes the steps to deploy and customize the connector in the Microsoft 365 admin center.
+The GitHub Cloud Issues Microsoft 365 Copilot connector enables your organization to index GitHub issues so they can surface in Microsoft 365 Copilot and Microsoft Search experiences. This article describes the steps to deploy and customize the connector in the Microsoft 365 admin center.
 
 For advanced GitHub configuration information, see [Set up the GitHub service for connector ingestion](github-cloud-issues-admin-setup.md).
 

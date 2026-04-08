@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Confluence On-premises Microsoft 365 Copilot connector"
+title: "Deploy the Confluence On-premises connector"
 description: "Find information about how to deploy the Confluence On-premises Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ms.author: lauragra
 author: lauragra
@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 03/19/2026
+ms.date: 04/07/2026
 ms.localizationpriority: Medium
 ---
 
@@ -161,10 +161,35 @@ You can customize content settings in the following ways:
 
 You can adjust the synchronization frequency:
 
-- **Incremental crawl**: Syncs new and modified content. Incremental crawls don't pick up ACL changes or deleted items. Default is every 15 minutes.
-- **Full crawl**: Performs a complete synchronization of all content. Full crawls detect deleted items and sync access control list (ACL) changes. Default is daily.
+- **Incremental crawl**: Syncs new and modified content. Incremental crawls don't pick up access control list (ACL) changes or deleted items. Default is every 15 minutes.
+- **Full crawl**: Performs a complete synchronization of all content. Full crawls detect deleted items and sync ACL changes. Default is daily.
 
 For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
+
+## API endpoints
+
+The following table lists the API endpoints that the connector calls to crawl data and the minimum permissions required for each endpoint.
+
+|Endpoint|Auth application permission|User permission|
+|----|----|----|
+|GET /rest/api/content/search|Read|User|
+|GET /rest/api/space|Read|User|
+|GET /rest/api/content/{id}|Read|User|
+|GET /rest/api/content/{id}/child/comment|Read|User|
+|GET /rest/api/content/{id}/child/page|Read|User|
+|GET /rest/api/content/{id}/restriction/byOperation/{op}|Read|User|
+|GET /rest/api/group|Read|User|
+|GET /rest/api/group/{groupName}/member\*|Admin|Admin|
+|GET /rest/mobile/1.0/profile/{username}\**|Admin|Admin|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/toplevelpages|Read|User|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpages|Read|User|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/restrictedpagesV2|Read|User|
+|GET /rest/api/msplugin/1.0/content/service/space/{key}/permissions|Read|User|
+|GET /rest/api/msplugin/1.0/healthcheck/version|Read|User|
+
+\* Requires both admin permissions.
+
+\** Requires either admin permission.
 
 ## Related content
 

@@ -1,5 +1,5 @@
 ---
-title: Set up the GitHub service for GitHub Cloud Issues Microsoft 365 Copilot connector ingestion
+title: Set up the GitHub service for GitHub Cloud Issues connector ingestion
 description: "Get the steps that the GitHub admin needs to complete to configure the service for your organization so you can deploy the GitHub Cloud Issues Microsoft 365 Copilot connector."
 author: Lauragra
 ms.author: lauragra

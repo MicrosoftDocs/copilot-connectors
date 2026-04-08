@@ -1,5 +1,5 @@
 ---
-title: "Smartsheet Sheet Microsoft 365 Copilot connector troubleshooting"
+title: "Smartsheet Sheet connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Smartsheet Sheet Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Smartsheet Sheet Microsoft 365 Copilot connector
+# Troubleshoot issues with the Smartsheet Sheet connector
 
 The Smartsheet Sheet Microsoft 365 Copilot connector indexes Smartsheet content so users can retrieve and analyze it in Microsoft 365 Copilot and Microsoft Search experiences. This article provides troubleshooting information for common issues you might encounter.
 

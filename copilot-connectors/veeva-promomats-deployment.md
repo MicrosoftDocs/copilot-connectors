@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Veeva PromoMats Microsoft 365 Copilot connector"
+title: "Deploy the Veeva PromoMats connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Veeva PromoMats Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Veeva PromoMats Microsoft 365 Copilot connector
+# Deploy the Veeva PromoMats connector
 
 The Veeva PromoMats Microsoft 365 Copilot connector allows organizations to index promotional marketing materials from Veeva PromoMats into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search. The connector integrates the Vault PromoMats built-in permission model to ensure that users only access authorized content, and supports faster content generation and review through content analysis and preparation. It helps maintain brand consistency by improving efficiency throughout the content lifecycle. This functionality is beneficial for marketing, medical affairs, and regulatory teams, enabling informed decision-making and reducing the time-to-market for promotional materials.
 

@@ -1,5 +1,5 @@
 ---
-title: "Deploy the GitLab Merge Requests Cloud Microsoft 365 Copilot connector"
+title: "Deploy the GitLab Merge Requests Cloud connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the GitLab Merge Requests Cloud Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the GitLab Merge Requests Cloud Microsoft 365 Copilot connector
+# Deploy the GitLab Merge Requests Cloud connector
 
 The GitLab Merge Requests Cloud Microsoft 365 Copilot connector allows your organization to index merge request data stored in GitLab and make it available across Microsoft 365 Copilot and Microsoft Search experiences.
 

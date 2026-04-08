@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Oracle SQL Microsoft 365 Copilot connector"
+title: "Oracle SQL connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -11,15 +11,15 @@ ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the Oracle SQL Microsoft 365 Copilot connector."
 ---
-# Oracle SQL Microsoft 365 Copilot connector
+# Oracle SQL connector
 
 The Oracle SQL Microsoft 365 Copilot connector allows your organization to discover and index data from an on-premises Oracle database. The connector indexes specified content in Microsoft Search and Microsoft 365 Copilot. To keep the index up to date with source data, it supports periodic full and incremental crawls. With the Oracle SQL Copilot connector, you can also restrict access to search results for certain users.
 
 ## Capabilities
-- Index records from your Oracle SQL database using a SQL query.
+- Index records from your Oracle SQL database by using a SQL query.
 - Specify access permissions for every record with a list of users or groups added in an SQL query.
 - Enable your end users to ask questions related to indexed records in Copilot.
-- Use [Semantic search in Copilot](/microsoft-365/copilot/connectors/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to help users find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - Oracle SQL version: The on-premises database must run Oracle Database version 11g or later. The connector supports the Oracle database hosted on Windows, Linux, and Azure VM platforms.
@@ -41,10 +41,10 @@ The Oracle SQL Microsoft 365 Copilot connector allows your organization to disco
 ## Get Started with Setup
 
 ### 1. Display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/microsoft-365/copilot/connectors/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+The display name identifies each citation in Copilot, so users can easily recognize the associated file or item. The display name also signifies trusted content and serves as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. SQL server
-To connect to your SQL data, you need to specify the hostname, port, and service (database) name.
+To connect to your SQL data, specify the hostname, port, and service (database) name.
 
 If the service name isn't available and you connect using System Identifier (SID), the service name can be derived using one of the following commands (to be executed as sys admin).
 * select SERVICE_NAME from gv$session where sid in (select sid from v$MYSTAT);

@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Troubleshooting the Enterprise Websites cloud Microsoft 365 Copilot connector"
+title: "Troubleshooting the Enterprise Websites cloud connector"
 ms.author: vivg
 author: vivg
 manager: harshkum
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Troubleshooting the Enterprise Websites Cloud Microsoft 365 Copilot connector."
 ---
 
-# Troubleshooting the Enterprise Websites Cloud Microsoft 365 Copilot connector
+# Troubleshooting the Enterprise Websites Cloud connector
 
 ## Common errors
 

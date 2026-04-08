@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the Freshservice Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the Freshservice connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Freshservice Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Freshservice Microsoft 365 Copilot connector
+# Troubleshoot issues with the Freshservice connector
 
 The Freshservice Microsoft 365 Copilot connector enables your organization to index Freshservice solution article data and make it available to Microsoft 365 Copilot and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the Freshservice connector.
 

@@ -1,5 +1,5 @@
 ---
-title: "Zendesk Help Center Microsoft 365 Copilot connector troubleshooting"
+title: "Zendesk Help Center connector troubleshooting"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Zendesk Help Center Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Zendesk Help Center Microsoft 365 Copilot connector
+# Troubleshoot issues with the Zendesk Help Center connector
 
 The Zendesk Help Center Microsoft 365 Copilot connector enables your organization to index articles from Zendesk Help Center (also known as Zendesk Guide). This article provides troubleshooting information for common errors that you might encounter when deploying or managing the Zendesk Help Center connector.
 

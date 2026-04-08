@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with the Guru Microsoft 365 Copilot connector"
+title: "Troubleshoot issues with the Guru connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -13,7 +13,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Guru Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Guru Microsoft 365 Copilot connector
+# Troubleshoot issues with the Guru connector
 
 The Guru Microsoft 365 Copilot connector integrates Guru content into Microsoft 365, allowing Copilot and Microsoft Search to surface relevant Guru Cards directly within apps like Teams, Outlook, and SharePoint. This article provides troubleshooting information for common errors that you might encounter when you deploy the Guru connector.
 

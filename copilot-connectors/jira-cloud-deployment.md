@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Jira Cloud Microsoft 365 Copilot connector"
+title: "Deploy the Jira Cloud connector"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Find information about how to deploy the Jira Cloud Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Jira Cloud Microsoft 365 Copilot connector
+# Deploy the Jira Cloud connector
 
 The Jira Cloud Microsoft 365 Copilot connector allows your organization to index Jira issues. After you configure the connector and index content from the Jira site, users can search for those items in Microsoft Search and Microsoft 365 Copilot experiences.
 
