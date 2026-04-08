@@ -125,7 +125,7 @@ The refresh interval determines how often your data is synced between Amazon S3 
 - **Incremental crawl:** Every 15 minutes.
 - **Full crawl:** Every day.
 
-You can customize these values. For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+You can customize these values. For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
