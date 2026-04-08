@@ -118,22 +118,22 @@ If HR knowledge articles that are restricted in ServiceNow appear in Copilot or 
 
 ### Cause
 
-ServiceNow's HR Service Delivery module uses the **Human Resources: Core** (`sn_hr_core`) application scope, which enforces a separate scoped ACL on the `user_criteria` table. This ACL requires either the `sn_hr_core.content_reader` or `sn_cd.content_manager` role. Without one of these roles, the service account can query the `user_criteria` table through the global-scope ACL, but HR-scoped user criteria rows are silently filtered out. The connector receives empty results rather than an error, and may default to granting access to all users for those articles.
+ServiceNow's HR Service Delivery module uses the **Human Resources: Core** (`sn_hr_core`) application scope. This scope enforces a separate scoped ACL on the `user_criteria` table. This ACL requires either the `sn_hr_core.content_reader` or `sn_cd.content_manager` role. Without one of these roles, the service account can query the `user_criteria` table through the global-scope ACL, but HR-scoped user criteria rows are silently filtered out. The connector receives empty results rather than an error, and it might default to granting access to all users for those articles.
 
 ### Resolution
 
-1. Assign the `sn_hr_core.content_reader` role to the service account. This is the minimum-privilege role that satisfies the HR-scoped ACL on the `user_criteria` table. Alternatively, assign `sn_hr_core.admin` for broader scope-level access to all HR Core data.
+1. Assign the `sn_hr_core.content_reader` role to the service account. This role provides the minimum privileges needed to satisfy the HR-scoped ACL on the `user_criteria` table. Alternatively, assign the `sn_hr_core.admin` role for broader scope-level access to all HR Core data.
 
 1. Verify that the service account can read HR-scoped user criteria by querying the following URL as the service account:
 
     `https://<instance-name>.service-now.com/api/now/table/user_criteria?sysparm_limit=10`
 
-    Confirm that user criteria records associated with HR knowledge bases appear in the response. If the response contains only global-scope user criteria and HR-scoped records are missing, the role assignment hasn't taken effect.
+    Confirm that user criteria records associated with HR knowledge bases appear in the response. If the response contains only global-scope user criteria and HR-scoped records are missing, the role assignment didn't take effect.
 
 1. After assigning the role, start a full crawl for the configured ServiceNow connection to re-index permissions.
 
 > [!NOTE]
-> The `sn_hr_core.admin` role does not contain `sn_hr_core.content_reader` in the default ServiceNow role hierarchy. Either role independently satisfies the HR-scoped ACL, but through different mechanisms. For more information, see [Additional roles for HR Service Delivery (HRSD) content](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#additional-roles-for-hr-service-delivery-hrsd-content).
+> The `sn_hr_core.admin` role doesn't include `sn_hr_core.content_reader` in the default ServiceNow role hierarchy. Either role independently satisfies the HR-scoped ACL, but through different mechanisms. For more information, see [Additional roles for HR Service Delivery (HRSD) content](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#additional-roles-for-hr-service-delivery-hrsd-content).
 
 ## Issue reading all user criteria from ServiceNow
 
