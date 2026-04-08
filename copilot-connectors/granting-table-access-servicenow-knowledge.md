@@ -43,7 +43,7 @@ To create a role:
 
 1. Go to **User Administration > Roles**.
 1. Select **New**.
-1. Enter a unique name for the role (for example, `Copilot Connector Account`).
+1. Enter a unique name for the role, such as `Copilot Connector Account`.
 1. Select **Submit** to save the role.
 
 ## Assign the role to a user
@@ -51,14 +51,14 @@ To create a role:
 To assign the role to a user:
 
 1. Go to **User Administration > Users**.
-1. Open the user record for the intended user (for example, `Microsoft Copilot`).
+1. Open the user record for the intended user, such as `Microsoft Copilot`.
 1. In the **Roles** related list, select **Edit**.
 1. Add the newly created role (`Copilot Connector Account`).
 
     > [!NOTE]
     > - To index knowledge articles without blocking ACL problems, you might also assign the following roles to the service account: `knowledge_admin`, `user_criteria_admin`, and `user_admin`. Assigning these roles is optional.
     >
-    > - If your ServiceNow instance uses the HR Service Delivery module with knowledge bases in the **Human Resources: Core** (`sn_hr_core`) application scope, also assign `sn_hr_core.content_reader` (or `sn_hr_core.admin` for broader access). Without this role, the service account can't read HR-scoped user criteria, and HR articles might be indexed as accessible to all users. For more information, see [Additional roles for HR Service Delivery (HRSD) content](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#additional-roles-for-hr-service-delivery-hrsd-content).
+    > - If your ServiceNow instance uses the HR Service Delivery module with knowledge bases in the **Human Resources: Core** (`sn_hr_core`) application scope, also assign `sn_hr_core.content_reader` (or `sn_hr_core.admin` for broader access). Without one of these roles, the service account can't read HR-scoped user criteria, and HR articles might be indexed as accessible to all users. For more information, see [Additional roles for HR Service Delivery (HRSD) content](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#additional-roles-for-hr-service-delivery-hrsd-content).
 
 1. Select **Save** to finalize the assignment.
 1. Select **Update** to update the user record.
@@ -108,11 +108,11 @@ You successfully granted table access to a service account in ServiceNow.
 
 ## Verify service account permissions
 
-You can use the **Copilot Connector Checker Tool** to confirm that all required permissions for ServiceNow Knowledge Base (KB) tables are configured correctly:
+Use the **Copilot Connector Checker Tool** to confirm that all required permissions for ServiceNow Knowledge Base (KB) tables are configured correctly:
 
 1. Open the [Copilot Connector Checker Tool](https://testconnectivity.microsoft.com/tests/CopilotServiceNowGraphConnectors/input).
 1. Choose the authentication type in the **Authentication Type** field: Basic or OAuth (recommended).
-1. Complete the fields and choose **Perform Test**.
+1. Complete the fields and select **Perform Test**.
 1. The tool automatically validates connectivity, verifies credentials, checks table-level permissions, provides a summary of results, and recommends next steps as needed.
 
-If you have feedback about the tool, choose the **Feedback** link at the bottom of the page.
+If you have feedback about the tool, select the **Feedback** link at the bottom of the page.

@@ -118,7 +118,7 @@ If HR knowledge articles that are restricted in ServiceNow appear in Copilot or 
 
 ### Cause
 
-ServiceNow's HR Service Delivery module uses the **Human Resources: Core** (`sn_hr_core`) application scope. This scope enforces a separate scoped ACL on the `user_criteria` table. This ACL requires either the `sn_hr_core.content_reader` or `sn_cd.content_manager` role. Without one of these roles, the service account can query the `user_criteria` table through the global-scope ACL, but HR-scoped user criteria rows are silently filtered out. The connector receives empty results rather than an error, and it might default to granting access to all users for those articles.
+ServiceNow's HR Service Delivery module uses the **Human Resources: Core** (`sn_hr_core`) application scope. This scope enforces a separate scoped ACL on the `user_criteria` table. This ACL requires either the `sn_hr_core.content_reader` or `sn_hr_core.admin` role. Without one of these roles, the service account can query the `user_criteria` table through the global-scope ACL, but HR-scoped user criteria rows are silently filtered out. The connector receives empty results rather than an error, and it might default to granting access to all users for those articles.
 
 ### Resolution
 
