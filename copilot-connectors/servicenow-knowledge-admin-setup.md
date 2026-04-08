@@ -139,30 +139,31 @@ You can also assign the following roles to the service account to ensure that kn
 - `user_criteria_admin`
 - `user_admin` 
 
-#### Additional roles for HR Service Delivery (HRSD) content
-
-If your ServiceNow instance uses the HR Service Delivery module with knowledge bases in the **Human Resources: Core** (`sn_hr_core`) application scope, assign one of the following roles to the service account:
-
-- `sn_hr_core.content_reader` — Satisfies the HR Core-scoped access control list (ACL) on the `user_criteria` table. This is the minimum-privilege option.
-- `sn_hr_core.admin` — Provides scope-level admin access to all data within the HR Core application scope, including user criteria. This is a broader option that avoids the need to configure individual ACLs for HR-scoped tables.
-
-Without one of these roles, the service account can query the `user_criteria` table through the global-scope ACL but HR-scoped user criteria rows are silently filtered out. The connector receives empty results rather than an error, and may treat HR knowledge articles as accessible to all users, resulting in unintended content oversharing of sensitive HR content.
-
-> [!IMPORTANT]
-> The `sn_hr_core.admin` role does not contain `sn_hr_core.content_reader` in the default ServiceNow role hierarchy. These are independent roles that grant access through different mechanisms—`sn_hr_core.content_reader` satisfies a specific ACL, while `sn_hr_core.admin` provides implicit scope-level access. Assign one or the other based on your organization's least-privilege requirements.
-
 For information about how to create a user, assign a role, and grant read permissions on all the applicable table records, see [Grant table access to a user in ServiceNow](granting-table-access-servicenow-knowledge.md).
 
 If the service account doesn't have the required permissions—or if row or field-level permissions are restricted—specific items are excluded from indexing on the Microsoft side.
 
-> [!Note]
-> Don't explicitly apply `snc_read_only` to the service account. This role denies any write action to any table the user has access to. The account needs to write token and other authentication-related information into some tables. Because tokens are refreshed on a regular basis, this account can't be made read-only after initial authentication.
-> The service account needs write access to the `oauth_credential` table for authentication. 
+> [!NOTE]
+> Don't explicitly apply `snc_read_only` to the service account. This role denies any write action to any table the user has access to. The account needs to write token and other authentication-related information into some tables. Because tokens are refreshed on a regular basis, this account can't be made read-only after initial authentication. The service account needs write access to the `oauth_credential` table for authentication.
 
-> [!Important]
-> The `sys_properties` table is required for both Simple and Advanced flows. The connector reads `glide.knowman.apply_article_read_criteria` and `glide.knowman.block_access_with_no_user_criteria` from this table. If the service account can't read these properties, the connector silently defaults to the most restrictive settings (`true` for both), which blocks articles without explicit user criteria from appearing in search results. No error is shown in the admin center when this happens.
+> [!IMPORTANT]
+> - The `sys_properties` table is required for both Simple and Advanced flows. The connector reads `glide.knowman.apply_article_read_criteria` and `glide.knowman.block_access_with_no_user_criteria` from this table. If the service account can't read these properties, the connector silently defaults to the most restrictive settings (`true` for both), which blocks articles without explicit user criteria from appearing in search results. No error is shown in the admin center when this happens.
+> - If the service account doesn't have access to the full User Criteria table, inconsistent behavior related to user permissions, including unintended content oversharing, can occur. This is particularly relevant for knowledge bases in non-global application scopes such as HR Service Delivery (`sn_hr_core`). For more information, see [Additional roles for HR Service Delivery (HRSD) content](#additional-roles-for-hr-service-delivery-hrsd-content).
 
-If the service account doesn’t have access to the full User Criteria table, inconsistent behavior related to user permissions, including unintended content oversharing, can occur. This is particularly relevant for knowledge bases in non-global application scopes such as HR Service Delivery (`sn_hr_core`), where a separate scoped ACL controls access to user criteria records. For more information, see [Additional roles for HR Service Delivery (HRSD) content](#additional-roles-for-hr-service-delivery-hrsd-content).
+#### Additional roles for HR Service Delivery (HRSD) content
+
+If your ServiceNow instance uses the HR Service Delivery module with knowledge bases in the **Human Resources: Core** (`sn_hr_core`) application scope, assign one of the following roles to the service account:
+
+| Role | Description |
+|------|-------------|
+| `sn_hr_core.content_reader` | Satisfies the HR Core-scoped ACL on the `user_criteria` table. This is the minimum-privilege option. |
+| `sn_hr_core.admin` | Provides scope-level admin access to all data within the HR Core application scope, including user criteria. This is a broader option that avoids the need to configure individual ACLs for HR-scoped tables. |
+
+These roles are independent—`sn_hr_core.admin` does not contain `sn_hr_core.content_reader` in the default ServiceNow role hierarchy. They grant access through different mechanisms: `sn_hr_core.content_reader` satisfies a specific ACL, while `sn_hr_core.admin` provides implicit scope-level access. Assign one or the other based on your organization's least-privilege requirements.
+
+> [!WARNING]
+> Without one of these roles, the service account can query the `user_criteria` table through the global-scope ACL but HR-scoped user criteria rows are silently filtered out. The connector receives empty results rather than an error, and may treat HR knowledge articles as accessible to all users. This can result in unintended exposure of sensitive HR content—such as compensation policies, benefits information, or disciplinary procedures—in Copilot and Microsoft Search results.
+
 
 ### Verify service account permissions
 
