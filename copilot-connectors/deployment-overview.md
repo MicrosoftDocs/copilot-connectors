@@ -17,7 +17,7 @@ ms.date: 04/07/2026
 This article describes how to set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center. The setup process is streamlined and requires minimal input, making it easy to create connections. You can also choose a custom setup to fine-tune specific settings.
 
 > [!NOTE]
-> The setup process is similar for all Copilot connectors, with some differences. We recommend that you reference the deployment guide specific to your data source.
+> The setup process is similar for all Copilot connectors, with some differences. Be sure to review the deployment guide for your specific data source.
 
 ## Prerequisites
 
