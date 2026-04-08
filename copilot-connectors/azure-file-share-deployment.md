@@ -106,7 +106,7 @@ You can create custom properties that enhance metadata available for search. Use
 
 You can adjust the frequency of full or incremental crawls. The default full crawl runs daily. Customize these intervals based on content update patterns and performance expectations.
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

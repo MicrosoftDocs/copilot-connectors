@@ -113,7 +113,7 @@ You can manage which properties are indexed from your Freshservice data source. 
 
 The Freshservice connector only supports full crawl. The default schedule of the full crawl is set for every day. You can adjust these schedules to fit your data refresh needs.
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

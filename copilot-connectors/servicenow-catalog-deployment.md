@@ -429,7 +429,7 @@ You can define the frequency of incremental and full crawls:
 > - During subsequent full crawls, content and identity sync happens in parallel. The full crawl is complete when both content and identity sync are completed. 
 > - Subsequent full crawls are faster than the first full crawl. The first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Subsequent full crawls only ingest the newly discovered items, users, and user criteria. 
 
-For more information about full and incremental crawls, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information about full and incremental crawls, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

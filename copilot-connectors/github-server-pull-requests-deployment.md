@@ -148,7 +148,7 @@ Two crawl types are available:
 - **Full crawl:** Runs daily to refresh the PR index.
 
 You can customize these values according to the needs of your organization. For more information, see  
-[Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+[Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
