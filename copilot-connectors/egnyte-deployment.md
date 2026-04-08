@@ -145,7 +145,7 @@ You can adjust the crawl frequency to fit your data refresh needs:
 
 Choose a schedule that balances content freshness with Egnyte API rate limits.
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 
 ## Related content

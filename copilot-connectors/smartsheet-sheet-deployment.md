@@ -127,7 +127,7 @@ You can adjust the crawl frequency to fit your data refresh needs. The following
 - **Full crawl**: Every day
 - **Incremental crawl**: Every 15 minutes
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
