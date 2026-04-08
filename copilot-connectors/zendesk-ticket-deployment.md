@@ -146,7 +146,7 @@ Use the **Preview results** button to verify sample values of the selected prope
 
 ### Customize sync intervals
 
-The refresh interval determines how often your data is synced between the data source and the Zendesk Ticket Copilot connector index. You can change the default refresh intervals for full and incremental crawls. For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+The refresh interval determines how often your data syncs between the data source and the Zendesk Ticket Copilot connector index. You can change the default refresh intervals for full and incremental crawls. For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

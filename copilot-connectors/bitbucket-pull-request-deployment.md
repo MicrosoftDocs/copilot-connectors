@@ -109,7 +109,7 @@ Map Bitbucket user identities to Microsoft Entra ID identities. Options include:
 Verify property mappings in sample data for metadata such as **content**, **label**, and **description**. To test sample data, choose **Preview data**.
 
 ### Customize sync intervals
-You can configure **incremental** and **full** crawls. The following are the default values:
+You can configure **incremental** and **full** crawls. The following values are the default values:
 
 - Incremental crawl: every 15 minutes
 - Full crawl: daily

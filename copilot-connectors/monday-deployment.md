@@ -240,7 +240,7 @@ By default, incremental crawls run every four hours and full crawls run daily. Y
 >
 > For more information, see [Rate limits](https://developer.monday.com/api-reference/docs/rate-limits#daily-call-limit).
 >
-> If crawl frequency is set too high, your organization might reach monday.com daily API limits, which can result in crawl failures.
+> If you set the crawl frequency too high, your organization might reach monday.com daily API limits, which can result in crawl failures.
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 

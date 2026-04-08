@@ -104,7 +104,7 @@ You can create custom properties that enhance metadata available for search. Use
 
 ### Customize sync intervals
 
-You can adjust the frequency of full or incremental crawls. The default full crawl runs daily. Customize these intervals based on content update patterns and performance expectations.
+You can adjust how often the connector runs full or incremental crawls. By default, the connector runs a full crawl daily. Choose sync intervals that match your content update patterns and performance expectations.
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 

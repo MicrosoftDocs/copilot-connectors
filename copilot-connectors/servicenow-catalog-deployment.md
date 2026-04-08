@@ -426,7 +426,7 @@ You can define the frequency of incremental and full crawls:
 > - Identities (users/groups) or access permissions are only updated during full crawls.
 > - Incremental crawls don't update access permissions or group memberships.
 > - During the first full crawl, identity sync (reading users, user criteria, and mapping of users to user criteria such as group memberships) runs first, followed by content sync. This ensures that the right permissions are mapped to the ingested items. 
-> - During subsequent full crawls, content and identity sync happens in parallel. The full crawl is complete when both content and identity sync are completed. 
+> - During subsequent full crawls, content and identity sync happen in parallel. The full crawl is complete when both content and identity sync are completed. 
 > - Subsequent full crawls are faster than the first full crawl. The first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Subsequent full crawls only ingest the newly discovered items, users, and user criteria. 
 
 For more information about full and incremental crawls, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).

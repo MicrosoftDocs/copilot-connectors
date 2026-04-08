@@ -121,7 +121,7 @@ The following sync intervals are configured by default:
 - Incremental crawl: Every 4 hours
 - Full crawl: Every day
 
-You can adjust these schedules to fit your data refresh needs.
+Adjust these schedules to fit your data refresh needs.
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 

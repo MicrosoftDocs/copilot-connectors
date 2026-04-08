@@ -135,7 +135,7 @@ Configure the full and incremental crawl sync intervals. The following are the d
 - **Incremental crawl:** Every 15 minutes
 - **Full crawl:** Daily
 
-You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+Adjust these intervals to meet your organization's needs. For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

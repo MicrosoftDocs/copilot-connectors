@@ -192,10 +192,10 @@ To add more custom properties:
 
 The refresh interval determines how often your data is synchronized between the data source and the Adobe Experience Manager Assets connector index. Copilot connectors use two types of refresh intervals: 
 
-- Full crawl: Default value is every day.
-- Incremental crawl: Default value is every 15 minutes.
+- Full crawl: The default value is every day.
+- Incremental crawl: The default value is every 15 minutes.
 
-You can change the default values of the refresh intervals. For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+You can change the default values of the refresh intervals. For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 
 ## Related content

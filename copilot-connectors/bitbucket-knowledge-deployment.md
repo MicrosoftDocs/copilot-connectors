@@ -125,8 +125,8 @@ Verify property mappings in sample data for metadata such as **content**, **labe
 
 You can configure the sync intervals:
 
-- **Incremental crawl**: Default is every 15 minutes.
-- **Full crawl**: Default is daily.
+- **Incremental crawl**: The default value is every 15 minutes.
+- **Full crawl**: The default value is daily.
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
