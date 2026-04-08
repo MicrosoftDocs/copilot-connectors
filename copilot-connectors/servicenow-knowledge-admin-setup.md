@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 04/02/2026
+ms.date: 04/08/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Knowledge Copilot connector."
 ---
@@ -152,17 +152,17 @@ If the service account doesn't have the required permissions—or if row or fiel
 
 #### Additional roles for HR Service Delivery (HRSD) content
 
-If your ServiceNow instance uses the HR Service Delivery module with knowledge bases in the **Human Resources: Core** (`sn_hr_core`) application scope, assign one of the following roles to the service account:
+If your ServiceNow instance uses the HR Service Delivery module with knowledge bases in the **Human Resources: Core** (`sn_hr_core`) application scope, assign one of the following roles to the service account.
 
 | Role | Description |
 |------|-------------|
 | `sn_hr_core.content_reader` | Satisfies the HR Core-scoped ACL on the `user_criteria` table. This is the minimum-privilege option. |
 | `sn_hr_core.admin` | Provides scope-level admin access to all data within the HR Core application scope, including user criteria. This is a broader option that avoids the need to configure individual ACLs for HR-scoped tables. |
 
-These roles are independent—`sn_hr_core.admin` doesn't contain `sn_hr_core.content_reader` in the default ServiceNow role hierarchy. They grant access through different mechanisms: `sn_hr_core.content_reader` satisfies a specific ACL, while `sn_hr_core.admin` provides implicit scope-level access. Assign one or the other based on your organization's least-privilege requirements.
+These roles are independent — `sn_hr_core.admin` doesn't contain `sn_hr_core.content_reader` in the default ServiceNow role hierarchy. They grant access through different mechanisms: `sn_hr_core.content_reader` satisfies a specific ACL, while `sn_hr_core.admin` provides implicit scope-level access. Assign one or the other based on your organization's least-privilege requirements.
 
 > [!WARNING]
-> Without one of these roles, the service account can query the `user_criteria` table through the global-scope ACL but HR-scoped user criteria rows are silently filtered out. The connector receives empty results rather than an error, and might treat HR knowledge articles as accessible to all users. This condition can result in unintended exposure of sensitive HR content—such as compensation policies, benefits information, or disciplinary procedures—in Copilot and Microsoft Search results.
+> Without one of these roles, the service account can query the `user_criteria` table through the global-scope ACL but HR-scoped user criteria rows are silently filtered out. The connector receives empty results rather than an error, and might treat HR knowledge articles as accessible to all users. This condition can result in unintended exposure of sensitive HR content — such as compensation policies, benefits information, or disciplinary procedures — in Copilot and Microsoft Search results.
 
 
 ### Verify service account permissions
