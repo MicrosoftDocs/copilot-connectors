@@ -124,7 +124,7 @@ To check available standard properties from your Adobe Experience Manager Sites,
 
 ### Customize sync intervals 
 
-The refresh interval determines how often your data is synchronized between the data source and the Adobe Experience Manager Sites connector index. Copilot connectors use two types of refresh intervals: 
+The refresh interval determines how often your data synchronizes between the data source and the Adobe Experience Manager Sites connector index. Copilot connectors use two types of refresh intervals: 
 
 - Full crawl: The default value is every day.
 - Incremental crawl: The default value is every 15 minutes.

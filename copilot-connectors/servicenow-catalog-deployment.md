@@ -423,9 +423,9 @@ You can define the frequency of incremental and full crawls:
 - **Incremental crawl** – Syncs only changed content, not permissions updates. The default frequency is every 15 minutes.
 
 > [!NOTE]
-> - Identities (users/groups) or access permissions are only updated during full crawls.
+> - Identities (users and groups) and access permissions are only updated during full crawls.
 > - Incremental crawls don't update access permissions or group memberships.
-> - During the first full crawl, identity sync (reading users, user criteria, and mapping of users to user criteria such as group memberships) runs first, followed by content sync. This ensures that the right permissions are mapped to the ingested items. 
+> - During the first full crawl, identity sync (reading users, user criteria, and mapping of users to user criteria such as group memberships) runs first, followed by content sync. This process ensures that the right permissions are mapped to the ingested items. 
 > - During subsequent full crawls, content and identity sync happen in parallel. The full crawl is complete when both content and identity sync are completed. 
 > - Subsequent full crawls are faster than the first full crawl. The first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Subsequent full crawls only ingest the newly discovered items, users, and user criteria. 
 

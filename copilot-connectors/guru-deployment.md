@@ -125,7 +125,7 @@ You can check the available properties from your Guru instance. Assign a schema 
 
 ### Customize sync intervals
 
-The refresh interval determines how often your data is synchronized between the data source and the Guru connector index. Copilot connectors use two types of refresh intervals:
+The refresh interval determines how often your data synchronizes between the data source and the Guru connector index. Copilot connectors use two types of refresh intervals:
 
 - **Full crawl**: The default is every day.
 - **Incremental crawl**: The default is every 15 minutes.

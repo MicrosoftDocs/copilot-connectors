@@ -34,13 +34,13 @@ Before you begin, make sure you have the following prerequisites:
 Use the following steps to deploy a connector:
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
-2. In the left pane, choose **Copilot** > **Connectors**.
-3. On the **Connectors** tab, in the left pane, choose **Gallery**, and select the data source you want to connect (for example, ServiceNow Knowledge or Salesforce).
-4. Enter a name to help users recognize the source in Copilot and search results. You can customize the default name.
-5. Provide the URL of your data source. For example: `https://your-organization-name.service-now.com`.
-6. Choose an authentication method to access the data source.
-7. Deploy the connector to a subset of users for validation before a broader rollout.
-8. Choose **Create** to deploy the connection. The connector begins indexing content using default settings.
+1. In the left pane, choose **Copilot** > **Connectors**.
+1. On the **Connectors** tab, in the left pane, choose **Gallery**, and select the data source you want to connect (for example, ServiceNow Knowledge or Salesforce).
+1. Enter a name to help users recognize the source in Copilot and search results. You can customize the default name.
+1. Provide the URL of your data source. For example: `https://your-organization-name.service-now.com`.
+1. Choose an authentication method to access the data source.
+1. Deploy the connector to a subset of users for validation before a broader rollout.
+1. Choose **Create** to deploy the connection. The connector begins indexing content using default settings.
 
 :::image type="content" alt-text="Screenshot that shows Connection creation screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/aha-setup.png" lightbox="media/deployment-overview/aha-setup.png":::
 
@@ -58,7 +58,7 @@ For guidance, see [Enhance Copilot discovery of connector content](enhance-copil
 
 ## Customize connector settings (optional)
 
-You can customize the default values for connector settings. On the connector page in the admin center, choose **Custom setup**. This option includes three tabs:
+You can customize the default values for connector settings. On the connector page in the admin center, select **Custom setup**. This option includes three tabs:
 
 - **Users**
 - **Content**
@@ -73,7 +73,7 @@ On the **Users** tab, under **Access Permissions**, choose whether indexed data 
 - Only users with access to the content
 - Everyone in the organization
 
-By default, users are mapped by matching their email to `UserPrincipalName` or `Mail` in Microsoft Entra ID. In the **Map Identities** section, you can provide a custom mapping formula.
+By default, the system maps users by matching their email to `UserPrincipalName` or `Mail` in Microsoft Entra ID. In the **Map Identities** section, you can provide a custom mapping formula.
 
 
 ### Content tab
@@ -90,7 +90,7 @@ On the **Content** tab, under **Manage properties**, you can:
 
 Select a **Content property** from the dropdown or use the default. This property supports full-text indexing, snippet generation, language detection, and relevance ranking.
 
-You can use the system-generated **ResultSnippet** property in your result type to display dynamic snippets.
+Use the system-generated **ResultSnippet** property in your result type to display dynamic snippets.
 
 #### Aliases
 
@@ -112,13 +112,13 @@ Assign semantic labels to source properties to integrate connector data into Mic
 | **File name** | Name of the file |
 | **File extension** | File type (PDF, DOC, etc.) |
 
-We recommend that you assign a property to the **title** label.
+Assign a property to the **title** label.
 
 Incorrect mapping labels can affect search experiences. Not all labels need to have a property assigned.
 
 #### Search schema attributes
 
-You can set the search schema attributes to control the search functionality of each source property. A search schema helps determine what results are displayed on the search results page and what information end users can view and access.
+Set the search schema attributes to control the search functionality of each source property. A search schema helps determine what results are displayed on the search results page and what information end users can view and access.
 
 Search schema attributes include options to **Query**, **Search**, **Retrieve**, and **Refine**. The following table lists the supported attributes.
 
@@ -156,7 +156,7 @@ Configure crawl frequency and timing:
 - **Start time**: When the crawl begins
 - **Reset**: Revert to default schedule
 
-If fields are left blank, the optimal crawl times are set by default.
+If you leave fields blank, the system sets the optimal crawl times by default.
 
 ### IP firewall rules
 
@@ -182,7 +182,7 @@ Add aliases to properties by using the **Alias** column. Aliases are friendly na
 
 ### Semantic labels for source properties
 
-You can assign semantic labels to source properties. Semantic labels are well-known tags provided by Microsoft that add meaning to your data and enable integration across Microsoft 365 experiences, including Copilot, enhanced search, people cards, intelligent discovery, and more.
+You can assign semantic labels to source properties. Microsoft provides semantic labels that add meaning to your data and enable integration across Microsoft 365 experiences, including Copilot, enhanced search, people cards, intelligent discovery, and more.
 
 The following table lists the supported semantic labels and their descriptions.
 
@@ -200,14 +200,14 @@ The following table lists the supported semantic labels and their descriptions.
 
 The properties on this page are preselected based on your data source, but you can change the selection if a different property is better suited for a specific label.
 
-The **title** label is the most important semantic label. We *strongly recommend* that you map a property to this label so that your connection can participate in the [result cluster experience](/microsoftsearch/result-cluster).
+The **title** label is the most important semantic label. Map a property to this label so that your connection can participate in the [result cluster experience](/microsoftsearch/result-cluster).
 
 Incorrect label mappings can degrade the search experience. Not all labels require a property assignment.
 
 ### Search schema attributes
 
 > [!NOTE]
-> Properties with the **int** data type can’t be refined, even if they’re marked as refinable.
+> You can't refine properties with the **int** data type, even if they're marked as refinable.
 
 Search schema attributes control how each source property behaves in search. The search schema determines which results appear on the search results page and what information users can view and access.
 
@@ -226,14 +226,14 @@ For all connectors except the File share Copilot connector, you must manually co
 
 ### Restrictions and recommendations for search schema settings
 
-- The **content** property supports **search** only. It can’t be marked as **retrieve** or **query**.
-- Rendering search results with the **content** property can cause performance issues. For example, using the **Text** field for a [ServiceNow](https://www.servicenow.com) knowledge base article can significantly affect performance.
+- The **content** property supports **search** only. You can't mark it as **retrieve** or **query**.
+- Rendering search results by using the **content** property can cause performance problems. For example, using the **Text** field for a [ServiceNow](https://www.servicenow.com) knowledge base article can significantly affect performance.
 - Only properties marked as **retrievable** can appear in search results and be used to create modern result types (MRTs).
 - Only string properties can be marked as **searchable**.
 - All properties mapped to semantic labels must be **retrievable**.
-- Properties with the **int** data type can’t be refined.
+- You can't refine properties with the **int** data type.
 - A refinable property should also be **queryable** and **retrievable**.
-- You can’t remove the **retrievable** attribute from a property.
+- You can't remove the **retrievable** attribute from a property.
 - You can't add or remove the **refinable** attribute from a property after setup.
 
 > [!NOTE]
