@@ -114,7 +114,7 @@ Configure sync intervals for full and incremental crawls:
 - **Incremental crawl:** Default is every 15 minutes.  
 - **Full crawl:** Default is daily.  
 
-You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
+You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 The following table lists the rate limits for GitLab Knowledge Cloud connector content ingestion.
 

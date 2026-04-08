@@ -131,9 +131,9 @@ Choose **Preview results** to verify sample values of selected properties and qu
 
 ### Customize sync intervals
 
-The sync interval determines how often your data is synced between the Miro data source and the index. Only full crawl refresh intervals are supported. You can adjust the default value as needed.
+The sync interval determines how often your data syncs between the Miro data source and the index. The connector supports only full crawl refresh intervals. Adjust the default value as needed.
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

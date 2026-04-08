@@ -111,7 +111,7 @@ The following table lists default properties and their schema.
 
 ### Customize sync intervals
 
-Configure **Full crawl** and **Incremental crawl** schedules to fit your refresh needs. By default, incremental crawl runs every 15 minutes and full crawl runs every day. For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+Configure **Full crawl** and **Incremental crawl** schedules to fit your refresh needs. By default, incremental crawl runs every 15 minutes and full crawl runs every day. For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 

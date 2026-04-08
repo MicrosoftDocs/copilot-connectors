@@ -161,7 +161,7 @@ You can customize the sync intervals for full crawl and incremental crawl. Defau
 - Incremental crawl: Every 15 minutes
 - Full crawl: Every day
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 #### Rate limits
 

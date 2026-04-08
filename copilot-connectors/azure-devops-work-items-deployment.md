@@ -216,7 +216,7 @@ You can adjust how frequently the connector crawls your Azure DevOps organizatio
 
 The default sync settings are optimized for most organizations.
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-sync-settings).
+For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
