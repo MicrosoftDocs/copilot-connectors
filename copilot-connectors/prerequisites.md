@@ -31,19 +31,6 @@ To deploy connectors, you need access to the data source, including:
 - Configuration of the external environment (Google Cloud Project for Google Drive, Confluence site URL). For information about the configuration details for specific connectors, see the deployment guide for that connector.
 - Permissions to access the content you want indexed (wiki pages, catalog items, meeting transcripts, and so on).
 
-### What represents items in an index quota?
-
-An item represents one unit of index quota. Each entity (or record) from the source system that is added to Microsoft Graph an item. In Microsoft Graph, each item appears as a unique citation in Microsoft 365 Copilot responses and as a distinct search result in Microsoft Search.
-
-Depending on the type of data source, an item is defined as:
-
-- One document (Word, Excel, PPT, PDF) in a file share
-- One wiki page in Confluence
-- One webpage on a website
-- One ticket or issue in Jira
-
-The total quota utilized is based on the number of items stored in the index. The frequency of updates or changes to an item doesn't affect the quota calculation.
-
 ## Copilot Studio and agent licensing
 
 If you're using Copilot Studio to build agents that use connectors, you need either:
