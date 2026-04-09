@@ -8,7 +8,7 @@ ms.topic: concept-article
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Learn about the licensing requirements for deploying Copilot connectors in your organization."
-ms.date: 02/24/2026
+ms.date: 04/09/2026
 ---
 
 # Prerequisites for deploying connectors
