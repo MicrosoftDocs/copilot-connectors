@@ -1,8 +1,8 @@
 ﻿---
 title: "Troubleshoot issues with the Credly connector"
-ms.author: lauragra
-author: lauragra
-manager: calvind
+ms.author: vivekdatir
+author: vivekdatir
+manager: rampo
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general

@@ -1,8 +1,8 @@
 ﻿---
 title: "Credly connector overview"
-ms.author: lauragra
-author: lauragra
-manager: calvind
+ms.author: vivekdatir
+author: vivekdatir
+manager: rampo
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article

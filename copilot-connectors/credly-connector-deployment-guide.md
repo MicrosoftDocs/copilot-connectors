@@ -1,8 +1,8 @@
 ﻿---
 title: "Deploy the Credly connector in the Microsoft 365 admin center"
-ms.author: lauragra
-author: lauragra
-manager: calvind
+ms.author: vivekdatir
+author: vivekdatir
+manager: rampo
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
