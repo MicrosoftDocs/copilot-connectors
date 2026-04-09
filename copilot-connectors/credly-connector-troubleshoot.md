@@ -1,6 +1,22 @@
-﻿# Troubleshoot the Credly Microsoft 365 Copilot connector
+﻿---
+title: "Troubleshoot issues with the Credly connector"
+ms.author: lauragra
+author: lauragra
+manager: calvind
+audience: Admin
+ms.audience: Admin
+ms.topic: troubleshooting-general
+ms.service: copilot-connectors
+ms.date: 04/09/2026
+ms.localizationpriority: Medium
+description: "Find troubleshooting information for the Credly Microsoft 365 Copilot connector."
+---
 
-Use this article to diagnose and resolve common issues with the Credly Microsoft 365 Copilot connector.
+# Troubleshoot issues with the Credly Copilot connector
+
+The Credly Microsoft 365 Copilot connector integrates digital credential data from your organization's Credly account into Microsoft 365, enabling Copilot and profile cards to surface verified badges, awards, and certifications directly within apps like Teams, Outlook, and SharePoint.
+
+This article provides troubleshooting information for common issues that you might encounter when you deploy the Credly connector.
 
 ## Badges don't appear on user profiles
 

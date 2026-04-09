@@ -1,4 +1,18 @@
-﻿# Deploy the Credly Copilot connector in the Microsoft 365 admin center
+﻿---
+title: "Deploy the Credly connector in the Microsoft 365 admin center"
+ms.author: lauragra
+author: lauragra
+manager: calvind
+audience: Admin
+ms.audience: Admin
+ms.topic: how-to
+ms.service: copilot-connectors
+ms.date: 04/09/2026
+ms.localizationpriority: Medium
+description: "Find information about how to deploy the Credly Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
+---
+
+# Deploy the Credly Copilot connector in the Microsoft 365 admin center
 
 The Credly Microsoft 365 Copilot connector integrates digital credential data from your organization's Credly platform into Microsoft 365, enabling Copilot and profile cards to surface verified badges, awards, and certifications directly within apps like Teams, Outlook, and SharePoint.
 
