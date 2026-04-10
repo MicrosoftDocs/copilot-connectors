@@ -508,8 +508,12 @@ items:
         href: tableau-cloud-connector.md
     - name: Trello
       items:
-      - name: Setup
-        href: trello-connector.md
+      - name: Overview
+        href: trello-overview.md
+      - name: Deployment guide
+        href: trello-deployment.md
+      - name: Troubleshooting
+        href: trello-troubleshooting.md
     - name: Unily
       items:
       - name: Setup
