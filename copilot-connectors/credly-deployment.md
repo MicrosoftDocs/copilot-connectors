@@ -18,6 +18,9 @@ The Credly Microsoft 365 Copilot connector integrates digital credential data fr
 
 This article describes the steps to deploy and customize the Credly connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview).
 
+> [!NOTE]
+> The Credly connector is currently in preview. Connector functionality and requirements are subject to change.
+
 ## Prerequisites
 
 To deploy the connector, you must meet the following prerequisites:
