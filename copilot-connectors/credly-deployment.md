@@ -1,5 +1,5 @@
 ﻿---
-title: "Deploy the Credly connector in the Microsoft 365 admin center"
+title: "Deploy the Credly connector (preview) in the Microsoft 365 admin center"
 ms.author: vivekdatir
 author: vivekdatir
 manager: rampo
@@ -12,32 +12,23 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Credly Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Credly connector in the Microsoft 365 admin center
+# Deploy the Credly connector (preview) in the Microsoft 365 admin center
 
-The Credly Microsoft 365 Copilot connector integrates digital credential data from your organization's Credly platform into Microsoft 365, enabling Copilot and profile cards to surface verified badges, awards, and certifications directly within apps like Teams, Outlook, and SharePoint.
+The Credly Microsoft 365 Copilot connector integrates digital credential data from your organization's Credly platform into Microsoft 365. This integration enables Copilot and profile cards to surface verified badges, awards, and certifications directly within Microsoft 365 experiences, including Teams, Outlook, and SharePoint.
 
-This article describes the steps to deploy and customize the Credly Copilot connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview).
+This article describes the steps to deploy and customize the Credly connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview).
 
 ## Prerequisites
-
-Before you deploy the Credly connector, make sure that the Credly environment is configured for your organization. The following table summarizes the steps to configure the Credly environment and deploy the connector.
-
-| Task | Role |
-|:---|:---|
-| Configure the Credly environment | Credly admin |
-| Set up API credentials | Credly admin |
-| Deploy the connector in the Microsoft 365 admin center | Microsoft 365 admin |
-| Customize connector settings (optional) | Microsoft 365 admin |
 
 To deploy the connector, you must meet the following prerequisites:
 
 - You must be a Global Administrator or Copilot Administrator for your organization's Microsoft 365 tenant.
-- Your organization must have an active Microsoft 365 tenant with [Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/overview) enabled (for the preview).
-- You must have a Credly account with administrative rights for your organization. In the Credly portal, navigate to **Developers** and locate your **Organization ID** (a GUID that uniquely identifies your organization on Credly).
+- Your organization must have an active Microsoft 365 tenant with [Microsoft 365 Copilot](/microsoft-365/copilot/overview) enabled (for the preview).
+- You must have a Credly account with administrative rights for your organization. In the Credly portal, go to **Developers** and locate your **Organization ID** (a GUID that uniquely identifies your organization on Credly).
 - You must have authentication credentials for the connector. Under **OAuth Applications** in the Credly Developers portal, create a new application (for example, named "Microsoft 365 Copilot Connector") to generate a **Client ID** and **Client Secret**.
 
 > [!IMPORTANT]
-> Copy and save the Client Secret when it's shown. Credly doesn't display the secret again after creation.
+> Copy and save the Client Secret. Credly doesn't display the secret again after creation.
 
 ## Deploy the connector
 
@@ -51,22 +42,22 @@ To add the Credly connector for your organization:
 
 The display name is used to identify references in Copilot responses to help users recognize the associated content. The display name also signifies trusted content and is used as a content source filter.
 
-You can accept the default Credly display name, or customize the value to use a display name that users in your organization recognize (for example, "Credly Profiles" or "Credly Badges").
+You can accept the default **Credly** display name, or customize the value to use a display name that users in your organization recognize (for example, Credly Profiles or Credly Badges).
 
 ### Set Credly Organization ID
 
-Enter your **Credly Organization ID** (the GUID obtained from the Credly Developers portal). The connector uses this ID to target the correct Credly organization account. The Organization ID must be in the proper GUID format.
+Enter your **Credly Organization ID** (the GUID you got from the Credly Developers portal). The connector uses this ID to target the correct Credly organization account. The Organization ID must be in the proper GUID format.
 
 ### Choose authentication type
 
-To authenticate and synchronize data from Credly, choose **OAuth 2.0 Client Credentials** as the authentication method. No interactive user sign-in is required; the connector uses the client credentials to access Credly programmatically.
+To authenticate and synchronize data from Credly, choose **OAuth 2.0 Client Credentials** for the authentication method. No interactive user sign-in is required; the connector uses the client credentials to access Credly programmatically.
 
 1. Provide the base URL for the Credly OAuth 2.0 token service. For a production Credly account, use `https://www.credly.com` as the authorization endpoint (the default value).
-1. Enter the **Client ID** and **Client Secret** that you obtained from the Credly Developers portal.
+1. Enter the **Client ID** and **Client Secret** that you got from the Credly Developers portal.
 
 ### Roll out
 
-To deploy the connector, choose **Create** in the Microsoft 365 admin center. The Credly Copilot connector starts indexing badges from your Credly account right away.
+To deploy the connector, choose **Create** in the Microsoft 365 admin center. The Credly connector starts indexing badges from your Credly account right away.
 
 The following table lists the default values that are set. These values work best with Credly data.
 
@@ -106,11 +97,11 @@ The refresh interval determines how often your data is synchronized between the 
 - **Full crawl** - Performs a complete synchronization of all content. By default, full crawls run every week.
 - **Incremental crawl** - Syncs new and modified content. By default, incremental crawls run every day.
 
-You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
-- [Credly connector overview](credly-connector-overview.md)
-- [Troubleshoot the Credly connector](credly-connector-troubleshoot.md)
-- [Set up Copilot connectors in the Microsoft 365 admin center](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview)
-- [Monitor Microsoft 365 Copilot connectors](https://learn.microsoft.com/en-us/microsoftsearch/manage-connector)
+- [Credly connector overview](credly-overview.md)
+- [Troubleshoot the Credly connector](credly-troubleshooting.md)
+- [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)
+- [Monitor connectors](/microsoftsearch/manage-connector)
