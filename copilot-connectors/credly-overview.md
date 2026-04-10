@@ -25,7 +25,7 @@ For information about connectors for people data, see [Microsoft 365 Copilot con
 
 ## Why use the Credly connector to index your data?
 
-Organizations that use Credly for digital credentials and badges often lack a centralized way to surface employees' qualifications within their daily workflow tools. The Credly connector addresses this problem by integrating Credly credential data into Microsoft 365. This allows employees to discover colleagues' badges, awards, and certifications through Copilot and profile cards--without leaving their flow of work. The result is a more transparent view of your workforce's skills and achievements that drive collaboration and informed decision-making.
+Organizations that use Credly for digital credentials and badges often lack a centralized way to surface employees' qualifications within their daily workflow tools. The Credly connector addresses this problem by integrating Credly credential data into Microsoft 365. This integration allows employees to discover colleagues' badges, awards, and certifications through Copilot and profile cards - without leaving their flow of work. The result is a more transparent view of your workforce's skills and achievements that drive collaboration and informed decision-making.
 
 The Credly Copilot connector provides the following benefits:
 
@@ -39,7 +39,7 @@ The Credly Copilot connector provides the following benefits:
 
 The following table lists common use cases for the Credly connector.
 
-| Department/role | Use case | Business benefit |
+| Department or role | Use case | Business benefit |
 |:---|:---|:---|
 | HR/People operations | View employee certifications and awards across the organization. | Identify qualified team members without manual tracking. |
 | Project managers | Ask Copilot "Who on my team has a project management badge?" | Quickly find the right people for project assignments. |
@@ -62,7 +62,7 @@ The following examples show prompts that users can use to retrieve credential in
 
 ## Connector capabilities and limitations
 
-The Credly connector has the following key capabilities:
+The Credly connector offers the following key capabilities:
 
 - **Indexes credential data** – Ingests badge names, descriptions, issuing organization, issue dates, and other relevant metadata into each user's Microsoft 365 profile.
 - **Integrates with profile cards** – Displays badges in a dedicated **Awards and Certifications** section on users' profile cards, with links to view details on Credly's site.
@@ -72,11 +72,11 @@ The Credly connector has the following key capabilities:
 
 The Credly connector has the following limitations:
 
-- **Awards and certifications only** – The connector indexes only badge data that users publicly accept or share on their Credly profiles. Private badges, badge evidence, related skills, user social profiles, and other noncredential data aren't indexed.
+- **Awards and certifications only** – The connector indexes only badge data that users publicly accept or share on their Credly profiles. It doesn't index private badges, badge evidence, related skills, user social profiles, or other noncredential data.
 - **Broad access permissions** – All imported badge data is visible to everyone in your organization by default. Granular per-user or group filtering isn't available in this release.
-- **Identity mapping requirement** – The connector relies on matching Credly user email addresses to Microsoft Entra ID accounts. If a Credly user's email doesn't exactly match their Entra ID UPN or primary SMTP address, those badges can't be mapped to a Microsoft 365 user profile and are skipped during indexing.
+- **Identity mapping requirement** – The connector relies on matching Credly user email addresses to Microsoft Entra ID accounts. If a Credly user's email doesn't exactly match their Entra ID UPN or primary SMTP address, the connector can't map those badges to a Microsoft 365 user profile and skips them during indexing.
 - **Fixed schema** – The connector uses a predefined set of profile attributes (**Awards** and **Certifications** properties in Microsoft Graph). You can't add or remove properties in this release.
-- **Active users only** – The connector only indexes credentials for active, licensed users. Badges for inactive users are filtered out.
+- **Active users only** – The connector only indexes credentials for active, licensed users. It filters out badges for inactive users.
 - **One organization per connection** – Each connector instance supports a single Credly Organization ID. Set up separate instances for multiple Credly organizations.
 
 > [!NOTE]

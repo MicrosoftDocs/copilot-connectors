@@ -37,13 +37,13 @@ To deploy the connector, you must meet the following prerequisites:
 
 To add the Credly connector for your organization:
 
-1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
+1. In the Microsoft 365 admin center, in the left pane, select **Copilot** > **Connectors**.
 1. Choose the **Connectors** tab, and in the left pane, choose **Gallery**.
 1. From the list of available connectors, choose **Credly**.
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated content. The display name also signifies trusted content and is used as a content source filter.
+The display name identifies references in Copilot responses to help users recognize the associated content. The display name also signifies trusted content and is used as a content source filter.
 
 You can accept the default **Credly** display name, or customize the value to use a display name that users in your organization recognize (for example, Credly Profiles or Credly Badges).
 
@@ -53,14 +53,14 @@ Enter your **Credly Organization ID** (the GUID you got from the Credly Develope
 
 ### Choose authentication type
 
-To authenticate and synchronize data from Credly, choose **OAuth 2.0 Client Credentials** for the authentication method. No interactive user sign-in is required; the connector uses the client credentials to access Credly programmatically.
+To authenticate and synchronize data from Credly, choose **OAuth 2.0 Client Credentials** for the authentication method. No interactive user sign-in is required. The connector uses the client credentials to access Credly programmatically.
 
 1. Provide the base URL for the Credly OAuth 2.0 token service. For a production Credly account, use `https://www.credly.com` as the authorization endpoint (the default value).
 1. Enter the **Client ID** and **Client Secret** that you got from the Credly Developers portal.
 
 ### Roll out
 
-To deploy the connector, choose **Create** in the Microsoft 365 admin center. The Credly connector starts indexing badges from your Credly account right away.
+To deploy the connector, select **Create** in the Microsoft 365 admin center. The Credly connector immediately starts indexing badges from your Credly account.
 
 The following table lists the default values that are set. These values work best with Credly data.
 
@@ -78,7 +78,7 @@ After you create your connection, you can review the status in the **Connectors*
 
 ## Customize settings (optional)
 
-You can customize the default values for the Credly connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**.
+You can customize the default values for the Credly connector settings. To customize settings, on the connector page in the admin center, select **Custom setup**.
 
 ### Customize user settings
 
