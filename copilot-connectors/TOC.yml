@@ -167,7 +167,7 @@ items:
         href: atlassian-plugin-eula.md
     - name: Credly (preview)
       items:
-      - name: Overivew
+      - name: Overview
         href: credly-overview.md
       - name: Deployment guide
         href: credly-deployment.md
