@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Credly Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Credly Copilot connector (preview)
+# Troubleshoot issues with the Credly connector (preview)
 
 The Credly Microsoft 365 Copilot connector integrates digital credential data from your organization's Credly account into Microsoft 365. This integration enables Copilot and profile cards to surface verified badges, awards, and certifications directly within apps like Teams, Outlook, and SharePoint.
 
@@ -23,6 +23,8 @@ This article provides troubleshooting information for common issues that you mig
 
 ## Badges don't appear on user profiles
 
+In some cases, badges might not appear on user profiles. The following table lists possible causes and resolutions for this issue.
+
 | Possible cause | Resolution |
 |---|---|
 | The user's email in Credly doesn't match their UPN or primary SMTP address in Microsoft Entra ID. | Verify that the employee's Credly account uses their organization email address. The connector matches identities by email only. |
@@ -32,12 +34,16 @@ This article provides troubleshooting information for common issues that you mig
 
 ## Copilot doesn't return Credly data
 
+In some cases Copilot might not return Credly data. The following table lists possible causes and resolutions for this issue.
+
 | Possible cause | Resolution |
 |---|---|
 | Badge data hasn't synced yet. | Newly earned badges require at least one completed crawl cycle before Copilot can surface them. Verify a successful sync on the **Connectors** page in the Microsoft 365 admin center. |
 | Copilot cites office.com instead of Credly. | This is expected behavior. Microsoft 365 aggregates profile data from multiple sources and attributes responses to the unified profile endpoint (office.com). |
 
 ## Connection setup fails
+
+The following table lists possible causes and resolutions for connection setup failures.
 
 | Possible cause | Resolution |
 |---|---|
