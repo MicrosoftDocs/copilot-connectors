@@ -76,7 +76,7 @@ The Trello connector supports search permissions visible to **Everyone** or **On
 
 #### Map identities
 
-The default method for mapping your data source identities with Microsoft Entra ID checks whether the email address of Trello users matches the user principal name (UPN) or email of users in Microsoft Entra ID. If the default mapping doesn't work for your organization,  provide a custom mapping formula.
+The default method for mapping your data source identities with Microsoft Entra ID checks whether the email address of Trello users matches the user principal name (UPN) or email of users in Microsoft Entra ID. If the default mapping doesn't work for your organization, provide a custom mapping formula.
 
 ### Customize content settings
 
