@@ -36,7 +36,7 @@ To add the connector for your organization:
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
+The display name identifies references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
 
 You can accept the default display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -97,10 +97,10 @@ The following table lists the properties that are selected by default.
 
 ### Customize sync intervals
 
-The refresh interval determines how often your data is synced between the data source and the Trello Copilot connector index. The default values are:
+The refresh interval determines how often your data syncs between the data source and the Trello Copilot connector index. The default values are:
 
 - Incremental crawl: Every 15 minutes.
-- Full crawl: Every day and incremental crawl.
+- Full crawl: Every day.
 
 For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
