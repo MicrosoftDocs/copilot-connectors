@@ -42,7 +42,7 @@ This article provides troubleshooting information for common issues that you mig
 | Possible cause | Resolution |
 |---|---|
 | Invalid Organization ID format. | The Credly Organization ID must be a valid GUID. Copy the value directly from the Credly Developers portal. |
-| Incorrect or expired Client ID or Client Secret. | Verify your credentials in the Credly Developers portal. If the Client Secret wasn't saved at creation time, create a new OAuth application to generate new credentials. |
+| Incorrect or expired Client ID or Client Secret. | Verify your credentials in the Credly Developers portal. If the Client Secret isn't saved at creation time, create a new OAuth application to generate new credentials. |
 | Wrong API endpoint URL. | For production accounts, use `https://www.credly.com`. Sandbox environments require a different URL. |
 
 ## Multiple Credly organizations
