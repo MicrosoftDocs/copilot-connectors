@@ -165,6 +165,14 @@ items:
         href: confluence-onpremises-troubleshooting.md
       - name: Plugin license agreement
         href: atlassian-plugin-eula.md
+    - name: Credly (preview)
+      items:
+      - name: Overivew
+        href: credly-overview.md
+      - name: Deployment guide
+        href: credly-deployment.md
+      - name: Troubleshooting
+        href: credly-troubleshooting
     - name: CSV
       items:
       - name: Setup
