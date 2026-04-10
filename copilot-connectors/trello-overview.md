@@ -19,7 +19,7 @@ The Trello Microsoft 365 Copilot connector enables your organization to index Tr
 
 ## Why use the Trello connector to index your data?
 
-Organizations use Trello to collaborate, plan, and manage projects. Indexing Trello cards with the Trello connector helps organizations:
+Organizations use Trello to collaborate, plan, and manage projects. Indexing Trello cards by using the Trello connector helps organizations:
 
 - Surface Trello content in Microsoft 365 Copilot responses and Microsoft Search.
 - Enable semantic search across indexed cards without duplicating content.
@@ -56,7 +56,7 @@ The connector enables users to:
 
 The connector has the following limitations:
 
-- Doesn't index comments.
+- It doesn't index comments.
 - Copilot returns only card URLs in search results and chat responses. Workspace or board URLs aren't supported.
 
 ## Data types indexed from Trello
