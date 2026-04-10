@@ -172,7 +172,7 @@ items:
       - name: Deployment guide
         href: credly-deployment.md
       - name: Troubleshooting
-        href: credly-troubleshooting
+        href: credly-troubleshooting.md
     - name: CSV
       items:
       - name: Setup
