@@ -1,5 +1,5 @@
 ﻿---
-title: "Credly connector overview"
+title: "Credly connector overview (preview)"
 ms.author: vivekdatir
 author: vivekdatir
 manager: rampo
@@ -12,18 +12,20 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Credly Microsoft 365 Copilot connector."
 ---
 
-# Credly Copilot connector overview
+# Credly connector overview (preview)
 
-The Credly Microsoft 365 Copilot connector integrates digital credential data from your organization's Credly account into Microsoft 365, enabling Copilot and profile cards to surface verified badges, awards, and certifications directly within apps like Teams, Outlook, and SharePoint.
+The Credly Microsoft 365 Copilot connector integrates digital credential data from your organization's Credly account into Microsoft 365. This integration enables Copilot and profile cards to surface verified badges, awards, and certifications directly within apps like Teams, Outlook, and SharePoint.
 
 When you configure the Credly connector for your organization and index data from Credly, employees' verified credentials are enriched in their Microsoft 365 user profiles. The Credly connector content can bring improved visibility into employee qualifications, faster identification of subject-matter experts, and enhanced collaboration across your organization.
 
 > [!NOTE]
-> The Credly connector is currently released as a Preview feature. Its functionality and requirements might change in future updates.
+> The Credly connector is currently in preview. Connector functionality and requirements are subject to change.
+
+For information about connectors for people data, see [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors).
 
 ## Why use the Credly connector to index your data?
 
-Organizations that use Credly for digital credentials and badges often lack a centralized way to surface employees' qualifications within their daily workflow tools. The Credly Copilot connector addresses this problem by integrating Credly credential data into Microsoft 365. This allows employees to discover colleagues' badges, awards, and certifications through Copilot and profile cards--without leaving their flow of work. The result is a more transparent view of your workforce's skills and achievements that drive collaboration and informed decision-making.
+Organizations that use Credly for digital credentials and badges often lack a centralized way to surface employees' qualifications within their daily workflow tools. The Credly connector addresses this problem by integrating Credly credential data into Microsoft 365. This allows employees to discover colleagues' badges, awards, and certifications through Copilot and profile cards--without leaving their flow of work. The result is a more transparent view of your workforce's skills and achievements that drive collaboration and informed decision-making.
 
 The Credly Copilot connector provides the following benefits:
 
@@ -50,13 +52,13 @@ The following examples show prompts that users can use to retrieve credential in
 
 **Discover credentials**
 
-- "What certifications does Jane Doe have?"
-- "Show me badges earned by my team members."
+- What certifications does Jane Doe have?
+- Show me badges earned by my team members.
 
 **Find experts**
 
-- "Who in my department has an Azure certification?"
-- "Which colleagues have a project management badge?"
+- Who in my department has an Azure certification?
+- Which colleagues have a project management badge?
 
 ## Connector capabilities and limitations
 
@@ -83,10 +85,4 @@ The Credly connector has the following limitations:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Credly Copilot connector](credly-connector-deployment-guide.md)
-
-## Related content
-
-- [Troubleshoot the Credly connector](credly-connector-troubleshoot.md)
-- [Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors)
-- [Microsoft 365 Copilot connectors overview](https://learn.microsoft.com/en-us/microsoftsearch/connectors-overview)
+> [Deploy the Credly Copilot connector](credly-deployment.md)
