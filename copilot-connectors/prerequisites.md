@@ -17,7 +17,7 @@ Microsoft 365 Copilot connectors enable your organization to bring external data
 
 Copilot connectors are available to all organizations with Microsoft 365 licenses. Access to experiences such as Microsoft 365 Copilot and Microsoft Search that surface connector content depends on your organization's licensing.
 
-Some prebuilt connectors also have unique prerequisites and setup steps. For information about prerequisites and setup steps for specific connnectors, see the deployment guide in [Microsoft-built synced connectors](prebuilt-connectors-overview.md).
+Some prebuilt connectors also have unique prerequisites and setup steps. For information about prerequisites and setup steps for specific connectors, see the deployment guide in [Microsoft-built synced connectors](prebuilt-connectors-overview.md).
 
 ## Admin roles and access
 
