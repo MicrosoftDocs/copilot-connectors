@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 01/05/2026
+ms.date: 04/13/2026
 ms.localizationpriority: Medium
 ---
 
