@@ -20,6 +20,10 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 
 To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
 
+## Version 3.1.21.0 (*April 10, 2026*)
+
+* Bug fixes and reliability improvements.
+
 ## Version 3.1.20.0 (*March 31, 2026*)
 
 * Updated Confluence on-premises connector to use OAuth 2.0 for retrieving groups and group members.
@@ -50,6 +54,7 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 * Bug fixes and critical updates.
 
 ## Version 3.1.16.0 (*January 16, 2026*)
+
 * Bug fixes and reliability improvements.
 
 ## Version 3.1.15.0 (*December 20, 2025*)
