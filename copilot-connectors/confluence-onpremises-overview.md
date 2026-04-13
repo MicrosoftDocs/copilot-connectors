@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 01/05/2026
+ms.date: 04/13/2026
 ms.localizationpriority: Medium
 ---
 
@@ -57,16 +57,16 @@ The Confluence On-premises connector enables users to:
 - Perform natural language queries across indexed Confluence pages.
 - Retrieve content using semantic search.
 - Index Confluence spaces and pages with metadata.
-- Filter content by space key and page creation/modification dates.
+- Index comments and attachments on the pages.
+- Filter content by space key and page creation or modification dates.
 - Map Confluence identities to Microsoft Entra ID for secure access.
 - Configure incremental and full crawls for synchronization.
 
 The Confluence On-premises connector has the following limitations:
 
-- Blogs, attachments, and comments aren't indexed.
+- Blogs aren't indexed.
 - Archived pages are excluded.
 - CQL (Confluence Query Language) isn't supported.
-- Only OAuth 2.0 authentication is supported.
 - Permission updates are only processed during full crawls.
 
 ## Data types indexed from Confluence On-premises
@@ -76,10 +76,10 @@ The connector indexes the following data types.
 | Data type | Description | 
 | --------- | ----------- |
 | Pages | Published pages from Confluence spaces. |
-| Metadata | Title, author, created/modified dates, labels, and space keys.| 
+| Metadata | Title, author, created and modified dates, labels, and space keys.| 
 | Space info | Space name and space key used for filtering and organization. |
 
-Indexed content is surfaced in Microsoft Search and Copilot experiences, enabling users to retrieve relevant information using natural language queries.
+Indexed content appears in Microsoft Search and Copilot experiences, so users can retrieve relevant information by using natural language queries.
 
 ## Permissions model and access control
 
@@ -88,13 +88,13 @@ The connector supports two identity mapping options:
 - **Microsoft Entra ID**: Maps Confluence user email to Microsoft Entra user principal name (UPN).
 - **Non-Microsoft Entra ID**: Uses regular expressions to map Confluence email to Microsoft Entra UPN.
 
-Permissions are evaluated using:
+The system evaluates permissions by using:
 
 - Page-level restrictions
 - Parent page restrictions
 - Space-level permissions
 
-Space name and space effective permission is computed as the intersection of these configurations. For Microsoft Graph Connector Agent versions earlier than 3.1.14, anonymous access settings aren't considered. Starting with Microsoft Graph Connector Agent version 3.1.14, anonymous access settings defined at the space level are considered.
+The system computes space name and space effective permission as the intersection of these configurations. For Microsoft Graph Connector Agent versions earlier than 3.1.14, the system doesn't consider anonymous access settings. Starting with Microsoft Graph Connector Agent version 3.1.14, the system considers anonymous access settings defined at the space level.
 
 ## Next step
 
