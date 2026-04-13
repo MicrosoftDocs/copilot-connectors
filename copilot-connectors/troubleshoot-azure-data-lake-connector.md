@@ -1,5 +1,5 @@
 --- 
-ms.date: 09/11/2024 
+ms.date: 04/13/2026
 title: "Troubleshooting the Azure Data Lake Storage Gen2 connector" 
 ms.author: gladysa
 author: gladysa
@@ -14,13 +14,20 @@ description: "Troubleshooting the Azure Data Lake Storage Gen2 Microsoft 365 Cop
 
 # Troubleshooting the Azure Data Lake Storage Gen2 connector 
 
-### Common errors observed while configuring the connector.
+The Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector indexes and enables users in your organization to search for files stored in [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) and [Azure Data Lake Gen 2 Storage](/azure/storage/blobs/data-lake-storage-introduction) accounts. This article provides troubleshooting information for common errors you might encounter when you configure or use the Azure Data Lake Storage Gen2 connector.
 
-| Configuration step | Error message | Possible reason(s) |
+## Azure Data Lake Storage Gen2 connector troubleshooting
+
+The following table lists common errors and possible resultion steps.
+
+| Configuration step | Error message | Possible resolution |
 |:----|:----|:----|
-| Connection settings | The connection fails even after allowing the public IP address in the ADLS firewall settings. |  Allow access to the VNet and the IP (for disaster recovery purposes) using a PowerShell command, as there is no option to do that in the Azure portal. |
-| Connection settings | InvalidConfigurationException |  Check if you have set up a valid storage for crawls, but have later deleted the storage account, which could result this situation. |
-| Connection settings / Crawl | EndpointUnsupportedAccountFeatures (Error code 7010) | Your Azure Data Lake Storage Gen2 account has **BlobStorageEvents** or **SoftDelete** enabled. This endpoint does not support these features. Disable BlobStorageEvents and SoftDelete on your storage account, then retry the connection. For steps, see [How to fix EndpointUnsupportedAccountFeatures](https://learn.microsoft.com/en-us/answers/questions/1853681/how-to-fix-the-problem-endpointunsupportedaccount). |
+| Connection settings | The connection fails even after allowing the public IP address in the ADLS firewall settings. |  Allow access to the VNet and the IP (for disaster recovery purposes) using a PowerShell command. There isn't an option to do that in the Azure portal. |
+| Connection settings | InvalidConfigurationException |  Check whether you have set up a valid storage for crawls, but later deleted the storage account. |
+| Connection settings/crawl | EndpointUnsupportedAccountFeatures (Error code 7010) | Your Azure Data Lake Storage Gen2 account has **BlobStorageEvents** or **SoftDelete** enabled. This endpoint doesn't support these features. Disable **BlobStorageEvents** and **SoftDelete** on your storage account, and then retry the connection. For details, see [How to fix EndpointUnsupportedAccountFeatures](https://learn.microsoft.com/en-us/answers/questions/1853681/how-to-fix-the-problem-endpointunsupportedaccount). |
 
+To view more error types, in the Microsoft 365 admin center, select **Connectors**. On the **Your Connections** tab, select the connector and then select the **Error** tab. For more information, see [Monitor errors](/microsoft-365/copilot/connectors/error-responses#monitor-errors). 
 
-To view more error types, select the connection and click **error details** > **error code**. For more information, see [Monitor your connections](./manage-connector.md). 
+## Related content
+
+- [Azure Data Lake Storage Gen2 connector](azure-data-lake-connector.md)
