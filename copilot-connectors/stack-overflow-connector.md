@@ -47,8 +47,8 @@ Use your organization's Stack Overflow Instance URL. For Stack Internal **Enterp
 
 ### 3. Authentication Type
 To authenticate and sync content from Stack Overflow, choose one of the two supported methods:<br>
-   - If you use Stack Internal **Enterprise**, select OAuth. To learn more about authentication and authorization in Stack Internal **Enterprise**, [click here](https://internal.stackoverflow.help/en/articles/8043418-stack-overflow-internal-api-v3#authentication-and-authorization).<br>
-   - If you use Stack Internal **Business**, select Basic authentication. To learn more about authentication and authorization in Stack Internal **Business**, [click here](https://internal.stackoverflow.help/en/articles/7913768-stack-overflow-internal-api-v3#authentication-and-authorization).
+   - If you use Stack Internal **Enterprise**, select OAuth. To learn more about authentication and authorization in Stack Internal **Enterprise**, see [Stack Internal Enterprise API v3 authentication and authorization](https://internal.stackoverflow.help/en/articles/8043418-stack-overflow-internal-api-v3#authentication-and-authorization).<br>
+   - If you use Stack Internal **Business**, select Basic authentication. To learn more about authentication and authorization in Stack Internal **Business**, see [Stack Internal Business API v3 authentication and authorization](https://internal.stackoverflow.help/en/articles/7913768-stack-overflow-internal-api-v3#authentication-and-authorization).
  
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
