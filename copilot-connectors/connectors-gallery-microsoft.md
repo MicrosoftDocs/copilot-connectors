@@ -8,7 +8,7 @@ ms.topic: landing-page
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Find a list of Microsoft 365 Copilot connectors built and supported by Microsoft, organized by categories, including a description and link to each connector website."
-ms.date: 03/17/2026
+ms.date: 04/13/2026
 ---
 # Microsoft-built connectors gallery
 
@@ -139,6 +139,7 @@ The following table lists the human resources and recruiting connectors that are
 | 15Five High Fives | Microsoft | Lets your organization connect with the High Five feature from 15Five to enhance collaboration and team recognition. | [15Five High Fives connector ](15five-high-fives-connector.md) |
 | 15Five High Fives Priorities | Microsoft | Allows your organization to index 15Five priority data, using Microsoft 365 Copilot and Microsoft Search. | [15Five Priorities connector ](15five-priorities-connector.md) |
 | BambooHR | Microsoft | Allows your organization to populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. | [BambooHR connector](bamboohr-connector.md) |
+| Credly (preview) | Integrates digital credential data from your organization's Credly platform into Microsoft 365. | [Credly connector (preview)](credly-overview.md) |
 | SAP SuccessFactors (preview) | Microsoft | Allows organizations to securely synchronize organization data and organize HR functions with SAP. | [Import organizational data from SAP SuccessFactors (preview)](/viva/import-org-data-success-factors) |
 | Workday (preview) | Microsoft | Lets organizations integrate with Workday to securely synchronize organization data and manage HR functions. | [Import organizational data from Workday](/viva/import-org-data-workday) |
 
