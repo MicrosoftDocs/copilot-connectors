@@ -9,7 +9,7 @@ ms.topic: article
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Release history of Microsoft Graph connector agent, which is used to index the on-premises data sources using Microsoft-built connectors" 
-ms.date: 04/06/2026
+ms.date: 04/13/2026
 --- 
 
 # Release history for Microsoft Graph connector agent
@@ -19,6 +19,10 @@ Indexing on-premises data sources requires installing the Microsoft Graph connec
 For help with installation, see [Install the agent](connector-agent.md#install-the-agent).
 
 To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
+
+## Version 3.1.21.0 (*April 10, 2026*)
+
+* Bug fixes and reliability improvements.
 
 ## Version 3.1.20.0 (*March 31, 2026*)
 
@@ -50,6 +54,7 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 * Bug fixes and critical updates.
 
 ## Version 3.1.16.0 (*January 16, 2026*)
+
 * Bug fixes and reliability improvements.
 
 ## Version 3.1.15.0 (*December 20, 2025*)
