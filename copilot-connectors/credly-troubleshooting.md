@@ -23,23 +23,23 @@ This article provides troubleshooting information for common issues that you mig
 
 ## Badges don't appear on user profiles
 
-In some cases, badges don't appear on user profiles. The following table lists possible causes and resolutions for this issue.
+In some cases, badges don't appear on user profiles. The following table lists possible causes and resolutions for this issue.
 
 | Possible cause | Resolution |
 |---|---|
 | The user's email in Credly doesn't match their UPN or primary SMTP address in Microsoft Entra ID. | Verify that the employee's Credly account uses their organization email address. The connector matches identities by email only. |
-| The user didn't accept or share the badge publicly on Credly. | Ask the user to accept the badge on their Credly profile. The connector doesn't index private or unaccepted badges. |
+| The user didn't accept or share the badge publicly on Credly. | Ask the user to accept the badge on their Credly profile. The connector doesn't index private or unaccepted badges. |
 | The user account is inactive in your directory. | The connector only indexes credentials for active users. Confirm the user is active and licensed in your Microsoft 365 tenant. |
-| The initial sync didn't complete. | Go to **Settings** > **Copilot** > **Connectors** in the Microsoft 365 admin center and check the connector status. Incremental crawls run daily and full crawls run weekly by default. |
+| The initial sync didn't complete. | Go to **Settings** > **Copilot** > **Connectors** in the Microsoft 365 admin center and check the connector status. Incremental crawls run daily and full crawls run weekly by default. |
 
 ## Copilot doesn't return Credly data
 
-In some cases, Copilot doesn't return Credly data. The following table lists possible causes and resolutions for this issue.
+In some cases, Copilot doesn't return Credly data. The following table lists possible causes and resolutions for this issue.
 
 | Possible cause | Resolution |
 |---|---|
-| Badge data isn't synced yet. | Newly earned badges require at least one completed crawl cycle before Copilot can surface them. Verify a successful sync on the **Connectors** page in the Microsoft 365 admin center. |
-| Copilot cites office.com instead of Credly. | This behavior is expected. Microsoft 365 aggregates profile data from multiple sources and attributes responses to the unified profile endpoint (office.com). |
+| Badge data isn't synced yet. | Newly earned badges require at least one completed crawl cycle before Copilot can surface them. Verify a successful sync on the **Connectors** page in the Microsoft 365 admin center. |
+| Copilot cites office.com instead of Credly. | This behavior is expected. Microsoft 365 aggregates profile data from multiple sources and attributes responses to the unified profile endpoint (office.com). |
 
 ## Connection setup fails
 
