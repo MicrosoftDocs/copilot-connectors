@@ -26,7 +26,7 @@ This article describes the steps to deploy and customize the Credly connector. F
 To deploy the connector, you must meet the following prerequisites:
 
 - You must be a Global Administrator or Copilot Administrator for your organization's Microsoft 365 tenant.
-- Your organization must have an active Microsoft 365 tenant with [Microsoft 365 Copilot](/microsoft-365/copilot/overview) enabled (for the preview).
+- Your organization must have an active Microsoft 365 tenant with [Microsoft 365 Copilot](/microsoft-365/copilot/microsoft-365-copilot-overview) enabled (for the preview).
 - You must have a Credly account with administrative rights for your organization. In the Credly portal, go to **Developers** and locate your **Organization ID** (a GUID that uniquely identifies your organization on Credly).
 - You must have authentication credentials for the connector. Under **OAuth Applications** in the Credly Developers portal, create a new application (for example, named "Microsoft 365 Copilot Connector") to generate a **Client ID** and **Client Secret**.
 
