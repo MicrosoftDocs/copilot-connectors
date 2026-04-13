@@ -9,16 +9,24 @@ ms.topic: article
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Release history of Microsoft Graph connector agent, which is used to index the on-premises data sources using Microsoft-built connectors" 
-ms.date: 12/16/2025
+ms.date: 04/06/2026
 --- 
 
 # Release history for Microsoft Graph connector agent
 
-Indexing on-premises data sources requires you to install *Microsoft Graph connector agent* software. It allows for secure data transfer between on-premises data and the connector APIs.
+Indexing on-premises data sources requires installing the Microsoft Graph connector agent. The agent securely transfers data between on-premises data and the Microsoft 365 Copilot connector APIs.
 
 For help with installation, see [Install the agent](connector-agent.md#install-the-agent).
 
-[Download latest Microsoft Graph connector agent](https://aka.ms/gca)
+To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
+
+## Version 3.1.20.0 (*March 31, 2026*)
+
+* Updated Confluence on-premises connector to use OAuth 2.0 for retrieving groups and group members.
+* Improved admin error messages for file share authentication to provide clearer guidance on resolving issues.
+* Improved exception handling for the file share connector to prevent crawl failures on unexpected errors.
+* Improved Bitbucket Server git clone crawling.
+* Bug fixes and reliability improvements.
 
 ## Version 3.1.19.0 (*March 12, 2026*)
 

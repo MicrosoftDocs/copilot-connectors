@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Confluence Cloud Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the Confluence Cloud Copilot connector in the Microsoft 365 admin center
+# Deploy the Confluence Cloud connector in the Microsoft 365 admin center
 
 The Confluence Cloud Microsoft 365 Copilot connector integrates Confluence content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant wiki pages and blogs directly within apps like Teams, Outlook, and SharePoint.
 
@@ -33,8 +33,10 @@ Before you deploy the Confluence Cloud connector, make sure that the Confluence 
 
 To deploy the connector, you must meet the following prerequisites:
 
-- You must be an admin for your organization's Microsoft 365 tenant and your organization's Confluence site.
-- You must have authentication credentials with the right access.
+- You must be an admin for your organization's Microsoft 365 tenant.
+- The service account used to crawl data from Confluence Cloud must have read access to the spaces and pages you want to index.
+- You must have authentication credentials with the appropriate access for both Microsoft 365 and Confluence Cloud.
+- You must be a Confluence admin, or have an Atlassian account with Confluence admin permissions, to register the OAuth integration in the Atlassian Developer console.
 
 ## Deploy the connector
 
@@ -183,12 +185,35 @@ Choose the **Preview results** button to verify the selected properties and filt
 
 ### Customize sync intervals
 
-The refresh interval determines how often your data is synchronized between the data source and the Confluence Cloud connector index. Copilot connectors use two types of refresh intervals:
+The refresh interval determines how often your data synchronizes between the data source and the Confluence Cloud connector index. Copilot connectors use two types of refresh intervals:
 
 - **Full crawl** - Performs a complete synchronization of all content. Full crawls detect deleted items and sync access control list (ACL) changes. By default, full crawls run every 24 hours.
-- **Incremental crawl** - Syncs new and modified content. Incremental crawls do not pick up ACL changes or deleted items. By default, incremental crawls run every 15 minutes.
+- **Incremental crawl** - Syncs new and modified content. Incremental crawls don't pick up ACL changes or deleted items. By default, incremental crawls run every 15 minutes.
 
-You can change the default values of the refresh intervals. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
+You can change the default values of the refresh intervals. For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
+
+## API endpoints
+
+The following table lists the API endpoints that the connector calls to crawl data and the permissions required for each endpoint.
+
+| Endpoint | OAuth Scope  |
+|----------|---------------------------|
+| GET /wiki/rest/api/content/search | read:content-details:confluence |
+| GET /wiki/rest/api/space | read:space:confluence |
+| GET /wiki/rest/api/space/{spaceKey} | read:space:confluence |
+| GET /wiki/rest/api/group | read:group:confluence |
+| GET /wiki/rest/api/group/{groupId}/membersByGroupId | read:group:confluence, read:user:confluence |
+| GET /wiki/rest/api/content/{id}/label | read:content-details:confluence |
+| GET /wiki/rest/api/content/{id}/child/attachment | read:content-details:confluence |
+| GET /wiki/rest/api/content/{id}/child/attachment/{attId}/download | read:attachment:confluence |
+| GET /wiki/rest/api/content/{id}/child/comment | read:content-details:confluence |
+| GET /wiki/rest/api/user/bulk | read:user:confluence |
+| GET /wiki/api/v2/spaces | read:space:confluence |
+| GET /wiki/api/v2/spaces/{id}/permissions | read:space:confluence |
+| GET /wiki/api/v2/pages/{id}/inline-comments | read:comment:confluence |
+| GET /wiki/api/v2/pages/{id}/footer-comments | read:comment:confluence |
+| GET /wiki/api/v2/blogposts/{id}/inline-comments | read:comment:confluence |
+| GET /wiki/api/v2/blogposts/{id}/footer-comments | read:comment:confluence |
 
 ## Related content
 

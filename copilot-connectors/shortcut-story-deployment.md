@@ -132,7 +132,7 @@ You can change the default refresh intervals to meet the needs of your organizat
 - **Incremental crawl**: Default is every 15 minutes.
 - **Full crawl**: Default is every day.
 
-For more information, see [Guidelines for sync settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 #### Rate limits
 

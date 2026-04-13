@@ -29,12 +29,20 @@ items:
       href: prebuilt-connectors-overview.md
     - name: 15Five High Fives
       items:
-      - name: Setup
-        href: 15five-high-fives-connector.md
+      - name: Overview
+        href: 15five-high-fives-overview.md
+      - name: Deployment guide
+        href: 15five-high-fives-deployment.md
+      - name: Troubleshooting
+        href: 15five-high-fives-troubleshooting.md
     - name: 15Five Priorities
       items:
-        - name: Setup
-          href: 15five-priorities-connector.md
+      - name: Overview
+        href: 15five-priorities-overview.md
+      - name: Deployment guide
+        href: 15five-priorities-deployment.md
+      - name: Troubleshooting
+        href: 15five-priorities-troubleshooting.md
     - name: Adobe Experience Manager Sites
       items:
       - name: Overview
@@ -508,8 +516,12 @@ items:
         href: tableau-cloud-connector.md
     - name: Trello
       items:
-      - name: Setup
-        href: trello-connector.md
+      - name: Overview
+        href: trello-overview.md
+      - name: Deployment guide
+        href: trello-deployment.md
+      - name: Troubleshooting
+        href: trello-troubleshooting.md
     - name: Unily
       items:
       - name: Setup
@@ -593,21 +605,23 @@ items:
   - name: Build custom synced connectors
     items:
     - name: Build with Agents Toolkit
-      href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=/microsoft-365-copilot/connectors/context
+      href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=/microsoft-365/copilot/connectors/context
     - name: Build with SDK
-      href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/connectors/context 
+      href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365/copilot/connectors/context 
     - name: Use the Copilot connectors API
       items:
       - name: Overview
-        href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/connectors/context
+        href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365/copilot/connectors/context
       - name: Manage connections
-        href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/connectors/context
+        href: /graph/connecting-external-content-manage-connections?context=/microsoft-365/copilot/connectors/context
       - name: Manage schema
-        href: /graph/connecting-external-content-manage-schema?context=/microsoft-365-copilot/connectors/context
+        href: /graph/connecting-external-content-manage-schema?context=/microsoft-365/copilot/connectors/context
       - name: Manage items
-        href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/connectors/context
+        href: /graph/connecting-external-content-manage-items?context=/microsoft-365/copilot/connectors/context
       - name: Use external groups
-        href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/connectors/context
+        href: /graph/connecting-external-content-external-groups?context=/microsoft-365/copilot/connectors/context
+    - name: Delegate connector administration
+      href: /microsoft-365/copilot/extensibility/connector-admin-delegation?context=/microsoft-365/copilot/connectors/context
 - name: Set up federated connectors (early access preview)
   items:
   - name: Overview
