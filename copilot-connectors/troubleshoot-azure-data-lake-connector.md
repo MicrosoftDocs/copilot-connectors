@@ -22,7 +22,7 @@ The following table lists common errors and possible resolution steps.
 
 | Configuration step | Error message | Possible resolution |
 |:----|:----|:----|
-| Connection settings | The connection fails even after allowing the public IP address in the ADLS firewall settings. |  Allow access to the VNet and the IP (for disaster recovery purposes) using a PowerShell command. There isn't an option to do that in the Azure portal. |
+| Connection settings | The connection fails even after allowing the public IP address in the ADLS firewall settings. | Allow access to both the virtual network and the IP address (for disaster recovery purposes) by using the Azure PowerShell `Add-AzStorageAccountNetworkRule` cmdlet. There isn't an option to do that in the Azure portal. For syntax and examples, see [Add-AzStorageAccountNetworkRule](/powershell/module/az.storage/add-azstorageaccountnetworkrule). |
 | Connection settings | InvalidConfigurationException |  Check whether you have set up a valid storage for crawls, but later deleted the storage account. |
 | Connection settings/crawl | EndpointUnsupportedAccountFeatures (Error code 7010) | Your Azure Data Lake Storage Gen2 account has **BlobStorageEvents** or **SoftDelete** enabled. This endpoint doesn't support these features. Disable **BlobStorageEvents** and **SoftDelete** on your storage account, and then retry the connection. For details, see [How to fix EndpointUnsupportedAccountFeatures](https://learn.microsoft.com/en-us/answers/questions/1853681/how-to-fix-the-problem-endpointunsupportedaccount). |
 
