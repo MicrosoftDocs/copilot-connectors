@@ -76,10 +76,10 @@ The connector indexes the following data types.
 | Data type | Description | 
 | --------- | ----------- |
 | Pages | Published pages from Confluence spaces. |
-| Metadata | Title, author, created and modified dates, labels, and space keys.| 
+| Metadata | Title, author, created and modified dates, labels, and space keys.| 
 | Space info | Space name and space key used for filtering and organization. |
 
-Indexed content appears in Microsoft Search and Copilot experiences, so users can retrieve relevant information by using natural language queries.
+Indexed content appears in Microsoft Search and Copilot experiences, so users can retrieve relevant information by using natural language queries.
 
 ## Permissions model and access control
 
@@ -88,13 +88,13 @@ The connector supports two identity mapping options:
 - **Microsoft Entra ID**: Maps Confluence user email to Microsoft Entra user principal name (UPN).
 - **Non-Microsoft Entra ID**: Uses regular expressions to map Confluence email to Microsoft Entra UPN.
 
-The system evaluates permissions by using:
+The system evaluates permissions by using:
 
 - Page-level restrictions
 - Parent page restrictions
 - Space-level permissions
 
-The system computes space name and space effective permission as the intersection of these configurations. For Microsoft Graph Connector Agent versions earlier than 3.1.14, the system doesn't consider anonymous access settings. Starting with Microsoft Graph Connector Agent version 3.1.14, the system considers anonymous access settings defined at the space level.
+The system computes space name and space effective permission as the intersection of these configurations. For Microsoft Graph Connector Agent versions earlier than 3.1.14, the system doesn't consider anonymous access settings. Starting with Microsoft Graph Connector Agent version 3.1.14, the system considers anonymous access settings defined at the space level.
 
 ## Next step
 
