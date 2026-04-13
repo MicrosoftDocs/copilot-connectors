@@ -57,16 +57,16 @@ The Confluence On-premises connector enables users to:
 - Perform natural language queries across indexed Confluence pages.
 - Retrieve content using semantic search.
 - Index Confluence spaces and pages with metadata.
+- Index comments and attachments on the pages.
 - Filter content by space key and page creation/modification dates.
 - Map Confluence identities to Microsoft Entra ID for secure access.
 - Configure incremental and full crawls for synchronization.
 
 The Confluence On-premises connector has the following limitations:
 
-- Blogs, attachments, and comments aren't indexed.
+- Blogs aren't indexed.
 - Archived pages are excluded.
 - CQL (Confluence Query Language) isn't supported.
-- Only OAuth 2.0 authentication is supported.
 - Permission updates are only processed during full crawls.
 
 ## Data types indexed from Confluence On-premises
