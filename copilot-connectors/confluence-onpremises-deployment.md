@@ -94,7 +94,7 @@ Choose **Create** to deploy the connection. The Confluence On-premises Copilot c
 The following table lists the default values that are set.
 
 | Category | Setting | Default Value |
-|----------|----------------|
+|----------|----------------|----------------|
 | Users    | Access permissions | Only people with access to content in the data source. |
 | Users    | Map identities | Data source identities are mapped using Microsoft Entra IDs. |
 | Content  | Include/exclude space | All spaces included. |
