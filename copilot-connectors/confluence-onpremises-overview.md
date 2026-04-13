@@ -58,7 +58,7 @@ The Confluence On-premises connector enables users to:
 - Retrieve content using semantic search.
 - Index Confluence spaces and pages with metadata.
 - Index comments and attachments on the pages.
-- Filter content by space key and page creation/modification dates.
+- Filter content by space key and page creation or modification dates.
 - Map Confluence identities to Microsoft Entra ID for secure access.
 - Configure incremental and full crawls for synchronization.
 
