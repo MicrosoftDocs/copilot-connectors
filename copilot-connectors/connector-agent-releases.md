@@ -9,7 +9,7 @@ ms.topic: article
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Release history of Microsoft Graph connector agent, which is used to index the on-premises data sources using Microsoft-built connectors" 
-ms.date: 04/06/2026
+ms.date: 04/13/2026
 --- 
 
 # Release history for Microsoft Graph connector agent
