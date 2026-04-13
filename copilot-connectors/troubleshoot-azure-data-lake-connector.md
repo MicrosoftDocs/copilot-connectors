@@ -18,7 +18,7 @@ The Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector indexes and ena
 
 ## Azure Data Lake Storage Gen2 connector troubleshooting
 
-The following table lists common errors and possible resultion steps.
+The following table lists common errors and possible resolution steps.
 
 | Configuration step | Error message | Possible resolution |
 |:----|:----|:----|
