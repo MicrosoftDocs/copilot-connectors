@@ -12,7 +12,7 @@ ms.date: 11/11/2025
 
 # Set up the Jira Cloud service for Jira Cloud Copilot connector ingestion
 
-The Jira Cloud connector for Microsoft 365 Copilot and Microsoft Search allows your organization to index and search Jira Cloud content directly within Microsoft 365 experiences. By integrating Jira Cloud with Microsoft 365, users can discover issues, projects, and other Jira data through Copilot and Microsoft Search, improving productivity and collaboration.
+The Jira Cloud connector for Microsoft 365 Copilot and Microsoft Search enables your organization to index and search Jira Cloud content directly within Microsoft 365 experiences. By integrating Jira Cloud with Microsoft 365, users can discover issues, projects, and other Jira data through Copilot and Microsoft Search, improving productivity and collaboration.
 
 This article describes the Jira Cloud configuration that must be completed before you deploy the Jira Cloud Copilot connector in the Microsoft 365 admin center.
 
