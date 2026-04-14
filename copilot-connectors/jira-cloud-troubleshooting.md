@@ -111,7 +111,7 @@ Record the scheme `id` and all configured issue security levels.
 
 Depending on the incident, attach screenshots of the following:
 
-- The Jira issue page showing the issue key
+- The Jira issue page that shows the issue key
 - The Jira project settings page
 - Project permissions or Permission helper output
 - Issue security configuration
