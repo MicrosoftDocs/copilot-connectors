@@ -89,7 +89,7 @@ If the incident involves role-based permissions, open:
 
 `https://<your-jira-site>.atlassian.net/rest/api/3/project/<projectKey>/role`
 
-This returns role names mapped to URLs. The numeric value at the end of each role URL is the `roleId`.
+This request returns role names mapped to URLs. The numeric value at the end of each role URL is the `roleId`.
 
 ### Permission scheme ID
 
