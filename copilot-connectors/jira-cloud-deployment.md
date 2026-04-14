@@ -28,7 +28,7 @@ For Jira Cloud service configuration information, see [Set up the Jira Cloud ser
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You must be the search admin for your organization's Microsoft 365 tenant.
-- Complete the Jira-side preparation in [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
+- You complete the Jira-side preparation in [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
 - Have the Jira Cloud instance URL available.
 - Have the authentication values available for the method that you plan to use:
     - Basic authentication: Jira username and API token.
