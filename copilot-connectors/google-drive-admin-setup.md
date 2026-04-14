@@ -11,7 +11,7 @@ ms.date: 11/11/2025
 
 # Set up the Google Workspace service for Google Drive connector ingestion
 
-The Google Drive Microsoft 365 Copilot connector allows your organization to index files that anyone can access in Google Drive and make them available to Microsoft 365 Copilot and Microsoft Search. This article provides information about the configuration steps that Google Workspace admins need to complete to deploy the [Google Drive connector](google-drive-overview.md).
+The Google Drive Microsoft 365 Copilot connector enables your organization to index files that anyone can access in Google Drive and make them available to Microsoft 365 Copilot and Microsoft Search. This article provides information about the configuration steps that Google Workspace admins need to complete to deploy the [Google Drive connector](google-drive-overview.md).
 
 For information about how to deploy the connector, see [Google Drive connector deployment](google-drive-deployment.md).
 
@@ -82,7 +82,7 @@ To create a Google Cloud service account:
 
     ![Screenshot that shows how to create a new service account step3.](media/google-drive-connector/step-7.png)
 
-1. Skip **Permissions** and **Principals with access**, then select **Done**.
+1. Skip **Permissions** and **Principals with access**, and then select **Done**.
 1. On the Service Accounts page, select the three-dot menu under **Actions** and select **Manage Keys**.
 
     ![Screenshot that shows how to get the keys step1.](media/google-drive-connector/step-8.png)   
@@ -118,7 +118,7 @@ To add OAuth scopes to your service account:
 
     ![Screenshot that shows how to add api scope.](media/google-drive-connector/step-13.png)
 
-### Get the OAuth 2.0 client ID
+## Get the OAuth 2.0 client ID
 
 To get the client ID:
 
