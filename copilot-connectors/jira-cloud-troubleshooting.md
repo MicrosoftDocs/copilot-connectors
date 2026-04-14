@@ -69,7 +69,7 @@ Regardless of the scenario, collect the following information before contacting 
 
 ### Project ID
 
-If the project ID is not visible in the Jira UI, open the following URL while signed in:
+If the project ID isn't visible in the Jira UI, open the following URL while signed in:
 
 `https://<your-jira-site>.atlassian.net/rest/api/3/project/<projectKey>`
 
