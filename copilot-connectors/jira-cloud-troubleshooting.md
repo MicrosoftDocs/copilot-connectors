@@ -109,7 +109,7 @@ Record the scheme `id` and all configured issue security levels.
 
 ## Screenshot checklist
 
-Depending on the incident, attach screenshots of the following:
+Depending on the incident, attach screenshots of the following items:
 
 - The Jira issue page that shows the issue key
 - The Jira project settings page
