@@ -14,7 +14,7 @@ ms.date: 11/11/2025
 
 The Jira Cloud connector for Microsoft 365 Copilot and Microsoft Search enables your organization to index and search Jira Cloud content directly within Microsoft 365 experiences. By integrating Jira Cloud with Microsoft 365, users can discover issues, projects, and other Jira data through Copilot and Microsoft Search, improving productivity and collaboration.
 
-This article describes the Jira Cloud configuration that must be completed before you deploy the Jira Cloud Copilot connector in the Microsoft 365 admin center.
+This article describes the Jira Cloud configuration that you must complete before you deploy the Jira Cloud Copilot connector in the Microsoft 365 admin center.
 
 For information about how to deploy the connector, see [Deploy the Jira Cloud connector](jira-cloud-deployment.md).
 
@@ -80,14 +80,14 @@ Grant the service account the permissions required for the connector.
 
 To authenticate and sync issues from Jira, choose one of the following supported authentication methods:
 
-*   **Basic authentication** - Enter your account's username (usually email ID) and API token to authenticate using basic auth. For information about how to generate an API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+*   **Basic authentication** - Enter your account's username (usually email ID) and API token to authenticate by using basic auth. For information about how to generate an API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 *   **Atlassian Jira OAuth 2.0 (recommended)** - To use the Jira OAuth for authentication:
 
     1.  Register an app in Atlassian Jira so the Microsoft Search app and Microsoft 365 Copilot can access the instance. For more information, see [Enable OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
-    2.  Sign in to the [Atlassian Developer console](https://developer.atlassian.com/console/myapps/) with your Atlassian Jira admin account.
-    3.  Choose **Create** and select **OAuth 2.0 integration**.
-    4.  Provide an appropriate name for the application and create the new app.
-    5.  Go to **Permissions** from the navigation pane on the left. Select **Add** for **Jira API** and select **Configure**. Under **Granular Permissions**, add the required scopes.
+    1.  Sign in to the [Atlassian Developer console](https://developer.atlassian.com/console/myapps/) with your Atlassian Jira admin account.
+    1.  Choose **Create** and select **OAuth 2.0 integration**.
+    1.  Provide an appropriate name for the application and create the new app.
+    1.  Go to **Permissions** from the navigation pane on the left. Select **Add** for **Jira API** and select **Configure**. Under **Granular Permissions**, add the required scopes.
 
         | # | Scope name | Code |
         | :--- | :--- | :--- |
@@ -121,11 +121,11 @@ To authenticate and sync issues from Jira, choose one of the following supported
         | 28 | Delete webhooks | `delete:webhook:jira` |
         | 29 | View epics and related issues | `read:epic:jira-software` |
 
-    6.  Go to **Authorization** from the navigation pane on the left to add the callback URL:
+    1.  Go to **Authorization** from the navigation pane on the left to add the callback URL:
         - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
         - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
-    7.  Choose **Save**.
-    8.  Go to **Settings** in the left pane to get the client ID and secret. Complete the connection settings step using the Client ID and Secret.
+    1.  Choose **Save**.
+    1.  Go to **Settings** in the left pane to get the client ID and secret. Complete the connection settings step by using the Client ID and Secret.
 
     > [!NOTE]
     > - For more information about Jira permissions, see [Jira scopes for OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/#list-of-scopes).
@@ -135,13 +135,13 @@ To authenticate and sync issues from Jira, choose one of the following supported
 The Jira Cloud Copilot connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them.
 
 > [!IMPORTANT]
->  If you plan to configure the connector with **Only people with access to this data source**, the Jira Cloud Copilot connector must be able to read a user's email ID in Jira to appropriately assign security permissions in Microsoft Search and Microsoft 365 Copilot. This requires you to ensure either of the following:
+>  If you plan to configure the connector with **Only people with access to this data source**, the Jira Cloud Copilot connector must be able to read a user's email ID in Jira to appropriately assign security permissions in Microsoft Search and Microsoft 365 Copilot. This requirement means you need to ensure one of the following conditions:
 >
-> - All users should select the **Anyone** option for their profile visibility settings. To learn more about profile visibility settings, see [Update your profile and visibility settings](https://support.atlassian.com/atlassian-account/docs/update-your-profile-and-visibility-settings/).
+> - All users select the **Anyone** option for their profile visibility settings. To learn more about profile visibility settings, see [Update your profile and visibility settings](https://support.atlassian.com/atlassian-account/docs/update-your-profile-and-visibility-settings/).
 > - For organizations that use [managed accounts](https://support.atlassian.com/user-management/docs/what-are-managed-accounts/):
-> - All users must have the managed account setting selected in profile visibility settings.
-> - Users who aren't part of the managed account (same as crawling account) must have **Anyone** selected in their profile visibility settings.
-> - The crawling account used during connection configuration must have the managed account domain.
+>   - All users select the managed account setting in profile visibility settings.
+>   - Users who aren't part of the managed account (same as crawling account) select **Anyone** in their profile visibility settings.
+>   - The crawling account used during connection configuration has the managed account domain.
 
 ## Estimate content scope
 

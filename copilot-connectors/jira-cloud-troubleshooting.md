@@ -45,7 +45,7 @@ Use the following steps to help resolve issues:
 
 ## Scenario-specific troubleshooting guides
 
-If the error table and resolution steps above do not resolve your issue, use the appropriate scenario guide below for step-by-step troubleshooting and instructions on what to collect before contacting Microsoft support.
+If the error table and resolution steps earlier in this article don't resolve your issue, use the appropriate scenario guide in this section for step-by-step troubleshooting and instructions on what to collect before contacting Microsoft support.
 
 - [Project or Issue Not Crawled - Jira Cloud](Project-or-Issue-Not-Crawled-%2D-Jira-Cloud.md)
 - [Issue Indexed but Not Searchable Due to Permissions - Jira Cloud](Issue-Indexed-but-Not-Searchable-Due-to-Permissions-%2D-Jira-Cloud.md)
