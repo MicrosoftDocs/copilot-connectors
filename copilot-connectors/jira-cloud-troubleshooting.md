@@ -116,7 +116,7 @@ Depending on the incident, attach screenshots of the following:
 - Project permissions or Permission helper output
 - Issue security configuration
 - The affected user's membership in groups or project roles
-- Index Browser result showing access granted or access denied
+- Index Browser result that shows access granted or access denied
 - The Copilot result, including the time and query text
 
 ## Related content
