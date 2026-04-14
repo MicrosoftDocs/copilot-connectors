@@ -188,7 +188,7 @@ The following table lists the API endpoints that the connector calls to crawl da
   |-------------|----------|-----------------|----------|
   | GET | `/rest/api/3/mypermissions` | `read:permission:jira` | Verify user permissions|
   | GET | `/rest/api/2/field` | `read:field:jira`, `read:avatar:jira`, `read:project-category:jira`, `read:project:jira`, `read:field-configuration:jira` |  Get issue fields metadata |
-  | GET | `/rest/api/2/search?jql={0}&startAt={1}&maxResults={2}&fields={3}&expand=renderedFields,changelog` | `read:issue-details:jira`,`read:jql:jira`,`read:issue-meta:jira`, `read:issue.changelog:jira` | Search issues with JQL，rendered fields, and changelog |
+  | GET | `/rest/api/2/search?jql={0}&startAt={1}&maxResults={2}&fields={3}&expand=renderedFields,changelog` | `read:issue-details:jira`,`read:jql:jira`,`read:issue-meta:jira`, `read:issue.changelog:jira` | Search issues with JQL, rendered fields, and changelog |
   | GET | `/rest/api/3/search/jql` | `read:issue-details:jira`, `read:jql:jira`, `read:group:jira`, `read:field:jira` | Post-based JQL search (v3) |
   | GET | `/rest/api/3/search/jql?jql=id={0}&fields=attachment,comment&maxResults=1` | `read:issue-details:jira`, `read:jql:jira`, `read:attachment:jira`, `read:comment:jira`, `read:comment.property:jira`  | Get issue comments and attachments in single call |
   | GET | `/rest/api/3/project/search?expand=lead&startAt={0}&maxResults={1}&status=live&action=browse` | `read:project:jira` | Get projects list with browse filter (v3) |
