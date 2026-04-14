@@ -6,7 +6,7 @@ author: lauragra
 manager: calvind
 ms.topic: troubleshooting
 ms.service: copilot-connectors
-ms.date: 11/19/2025
+ms.date: 04/14/2026
 ms.localizationpriority: medium
 ---
 
@@ -43,9 +43,9 @@ Use the following steps to help resolve issues:
   - Regenerate the API token if it expired or was deleted.
   - Confirm that the username and token match the Jira account used for crawling.
 
-## Scenario-specific troubleshooting guides
+## Scenario-specific troubleshooting steps
 
-If the error table and resolution steps earlier in this article don't resolve your issue, use the appropriate scenario guide in this section for step-by-step troubleshooting and instructions on what to collect before contacting Microsoft support.
+If the error table and resolution steps in this article don't resolve your issue, use the information in this section to troubleshoot issues.
 
 - [Project or Issue Not Crawled - Jira Cloud](Project-or-Issue-Not-Crawled-%2D-Jira-Cloud.md)
 - [Issue Indexed but Not Searchable Due to Permissions - Jira Cloud](Issue-Indexed-but-Not-Searchable-Due-to-Permissions-%2D-Jira-Cloud.md)
@@ -53,9 +53,9 @@ If the error table and resolution steps earlier in this article don't resolve yo
 - [Error Code 1010 - External Group Quota - Jira Cloud](Error-Code-1010-%2D-External-Group-Quota-%2D-Jira-Cloud.md)
 - [Issue-Level Security Not Working - Jira Cloud](Issue-Level-Security-Not-Working-%2D-Jira-Cloud.md)
 
-## Minimum information to collect before opening a support ticket
+## Information to collect to open a support ticket
 
-Regardless of the scenario, collect the following information before contacting Microsoft support:
+Regardless of the scenario, collect the following information before you contact Microsoft support:
 
 - Jira site URL (for example, `https://contoso.atlassian.net`)
 - Connection name and connection ID from the Microsoft 365 admin center
@@ -65,9 +65,9 @@ Regardless of the scenario, collect the following information before contacting 
 - Time of the latest reproduction in UTC
 - Screenshots of the relevant Jira settings and the Copilot or Index Browser result
 
-## How to collect Jira identifiers
+### Collect Jira identifiers
 
-### Project ID
+#### Project ID
 
 If the project ID isn't visible in the Jira UI, open the following URL while signed in:
 
@@ -75,7 +75,7 @@ If the project ID isn't visible in the Jira UI, open the following URL while sig
 
 Record the returned `id`, `key`, and `name`.
 
-### Issue ID
+#### Issue ID
 
 If you only know the issue key, open:
 
@@ -83,7 +83,7 @@ If you only know the issue key, open:
 
 Record the top-level issue `id`, the issue `key`, and the `project.id`.
 
-### Project role ID
+#### Project role ID
 
 If the incident involves role-based permissions, open:
 
@@ -91,7 +91,7 @@ If the incident involves role-based permissions, open:
 
 This request returns role names mapped to URLs. The numeric value at the end of each role URL is the `roleId`.
 
-### Permission scheme ID
+#### Permission scheme ID
 
 If the incident involves project permissions, open:
 
@@ -99,7 +99,7 @@ If the incident involves project permissions, open:
 
 Record the permission scheme `id` and the `BROWSE_PROJECTS` entries.
 
-### Issue security scheme ID
+#### Issue security scheme ID
 
 If the incident involves issue-level security, open:
 
@@ -107,7 +107,7 @@ If the incident involves issue-level security, open:
 
 Record the scheme `id` and all configured issue security levels.
 
-## Screenshot checklist
+### Screenshot checklist
 
 Depending on the incident, attach screenshots of the following items:
 

@@ -7,7 +7,7 @@ manager: calvind
 ms.reviewer: jecui
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 11/11/2025
+ms.date: 04/14/2026
 ---
 
 # Set up the Jira Cloud service for Jira Cloud Copilot connector ingestion
@@ -69,7 +69,7 @@ To create the service account:
 
 Grant the service account the permissions required for the connector.
 
-| Permission | Type | When it's required |
+| Permission | Type | Required when |
 | :--- | :--- | :--- |
 | Browse projects | Project permission | Required for all projects that you want to index. |
 | Issue level security permissions | Issue-level security | Required only if the indexed projects use issue-level security. |
@@ -83,11 +83,11 @@ To authenticate and sync issues from Jira, choose one of the following supported
 *   **Basic authentication** - Enter your account's username (usually email ID) and API token to authenticate by using basic auth. For information about how to generate an API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 *   **Atlassian Jira OAuth 2.0 (recommended)** - To use the Jira OAuth for authentication:
 
-    1.  Register an app in Atlassian Jira so the Microsoft Search app and Microsoft 365 Copilot can access the instance. For more information, see [Enable OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
+    1.  Register an app in Atlassian Jira so Microsoft Search and Microsoft 365 Copilot can access the instance. For more information, see [Enable OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
     1.  Sign in to the [Atlassian Developer console](https://developer.atlassian.com/console/myapps/) with your Atlassian Jira admin account.
     1.  Choose **Create** and select **OAuth 2.0 integration**.
     1.  Provide an appropriate name for the application and create the new app.
-    1.  Go to **Permissions** from the navigation pane on the left. Select **Add** for **Jira API** and select **Configure**. Under **Granular Permissions**, add the required scopes.
+    1.  On the left navigation pane, go to **Permissions**. Select **Add** for **Jira API** and select **Configure**. Under **Granular Permissions**, add the required scopes.
 
         | # | Scope name | Code |
         | :--- | :--- | :--- |
@@ -121,17 +121,18 @@ To authenticate and sync issues from Jira, choose one of the following supported
         | 28 | Delete webhooks | `delete:webhook:jira` |
         | 29 | View epics and related issues | `read:epic:jira-software` |
 
-    1.  Go to **Authorization** from the navigation pane on the left to add the callback URL:
+    1.  On the left navigation pane, go to **Authorization** to add the callback URL:
         - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
         - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
-    1.  Choose **Save**.
-    1.  Go to **Settings** in the left pane to get the client ID and secret. Complete the connection settings step by using the Client ID and Secret.
+    1.  Select **Save**.
+    1.  In the left pane, go to **Settings** to get the client ID and secret. Complete the connection settings step by using the Client ID and Secret.
 
     > [!NOTE]
     > - For more information about Jira permissions, see [Jira scopes for OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/#list-of-scopes).
     > - The original (classic) OAuth permissions for Jira Cloud are deprecated. For more information, see the [changelog announcement](https://developer.atlassian.com/cloud/jira/platform/changelog/#CHANGE-517).
 
 ## Review profile visibility for identity mapping
+
 The Jira Cloud Copilot connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them.
 
 > [!IMPORTANT]
@@ -150,8 +151,6 @@ Determine the number of projects and issues to index. For instances with more th
 - Enable incremental sync.
 - Plan for throttling.
 - Full indexing can take several hours. Schedule the initial sync during off-business hours.
-
-After you complete the Jira Cloud preparation in this article, continue with deployment in the Microsoft 365 admin center.
 
 ## Next step
 

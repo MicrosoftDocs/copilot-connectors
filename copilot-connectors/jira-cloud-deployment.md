@@ -7,7 +7,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 03/19/2026
+ms.date: 04/142026
 ms.localizationpriority: medium
 description: "Find information about how to deploy the Jira Cloud Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -28,9 +28,9 @@ For Jira Cloud service configuration information, see [Set up the Jira Cloud ser
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You must be the search admin for your organization's Microsoft 365 tenant.
-- You complete the Jira-side preparation in [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
-- You have the Jira Cloud instance URL available.
-- You have the authentication values available for the method that you plan to use:
+- You must complete the the steps to [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
+- You have the Jira Cloud instance URL.
+- You have the authentication values for the authentication method that you plan to use:
     - Basic authentication: Jira username and API token.
     - OAuth 2.0: Client ID and client secret.
 
@@ -38,9 +38,9 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 To add the Jira Cloud connector for your organization:
 
-1.  In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-2.  Go to the **Connectors** tab, and in the left pane, choose **Gallery**.
-3.  From the list of available connectors, choose **Jira Cloud**.
+1.  In the Microsoft 365 admin center, in the left pane, select **Copilot** > **Connectors**.
+2.  Go to the **Connectors** tab, and in the left pane, select **Gallery**.
+3.  From the list of available connectors, select **Jira Cloud**.
 
 ### Set display name
 
@@ -52,7 +52,7 @@ For more information about connector display names and descriptions, see [Enhanc
 
 ### Set instance URL
 
-To connect to your Jira cloud data, enter your organization's Jira instance URL. The URL typically looks like `https://<your-organization-domain>.atlassian.net`.
+To connect to your Jira cloud data, enter your organization's Jira instance URL. The URL is typically `https://<your-organization-domain>.atlassian.net`.
 
 ### Choose authentication type
 
@@ -182,6 +182,7 @@ You can change the default values of the refresh interval. For more information,
 
 
 ## API endpoints
+
 The following table lists the API endpoints that the connector calls to crawl data and the permissions required for each endpoint.
 
   | HTTP Method | Endpoint | OAuth 2.0 Scope | Used For |
