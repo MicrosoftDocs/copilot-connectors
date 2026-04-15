@@ -9,7 +9,7 @@ ms.topic: install-set-up-deploy
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Set up the Stack Overflow Microsoft 365 Copilot connector." 
-ms.date: 12/25/2025
+ms.date: 04/15/2026
 ---
 
 # Stack Overflow connector
@@ -24,17 +24,17 @@ The Stack Overflow Copilot connector allows your organization to index questions
    - What are the differences between using REST and GraphQL for our API services?
    - How can we improve the load time of our customer-facing web applications?
 - Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
-- The Stack Overflow Copilot connector supports Stack Overflow for Teams **Business** and **Enterprise**.
+- The Stack Overflow Copilot connector supports Stack Internal (formerly Stack Overflow for Teams) **Business** and **Enterprise**.
 
 ## Limitations
-- The connector doesn't support [private teams](https://stackoverflowteams.help/articles/9736637-enable-and-set-up-private-teams) in Stack Overflow for Teams **Enterprise**.
+- The connector doesn't support [private teams](https://internal.stackoverflow.help/en/articles/9736637-enable-and-set-up-private-teams) in Stack Internal **Enterprise**.
 
 ## Prerequisites
 - You must be an AI administrator for your organization's Microsoft 365 tenant.
 - To create a new connection, use your organization's Stack Overflow Instance URL.
-   - For Stack Overflow for Teams **Enterprise**, the instance URL is the home page URL, typically `https://<company_name>.stackenterprise.co`. 
-   - For Stack Overflow for Teams **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
-- For Stack Overflow for Teams **Enterprise**, when registering a new API application, set `office.com` as the approved domain (refer to the image below for a visual example).
+   - For Stack Internal **Enterprise**, the instance URL is the home page URL, typically `https://<company_name>.stackenterprise.co`. 
+   - For Stack Internal **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
+- For Stack Internal **Enterprise**, when registering a new API application, set `office.com` as the approved domain (refer to the image below for a visual example).
 [![Screenshot that shows how set up an API application in Stack Overflow.](media/stackoverflow-connector/stack-overflow-app.png)](media/stackoverflow-connector/stack-overflow-app.png#lightbox)
      
 ## Get Started
@@ -43,12 +43,12 @@ The Stack Overflow Copilot connector allows your organization to index questions
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a content source filter. A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. Stack Overflow URL
-Use your organization's Stack Overflow Instance URL. For Stack Overflow for Teams **Enterprise**, this will be the home page URL, typically `https://<company_name>.stackenterprise.co`. For Stack Overflow for Teams **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
+Use your organization's Stack Overflow Instance URL. For Stack Internal **Enterprise**, this will be the home page URL, typically `https://<company_name>.stackenterprise.co`. For Stack Internal **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
 
 ### 3. Authentication Type
 To authenticate and sync content from Stack Overflow, choose one of the two supported methods:<br>
-   - If you use Stack Overflow for Teams **Enterprise**, select OAuth. To learn more about authentication and authorization in Stack Overflow for Teams **Enterprise**, [click here](https://stackoverflowteams.help/articles/8043418-stack-overflow-for-teams-enterprise-api-v3#authentication-and-authorization).<br>
-   - If you use Stack Overflow for Teams **Business**, select Basic authentication. To learn more about authentication and authorization in Stack Overflow for Teams **Business**, [click here](https://stackoverflowteams.help/articles/7913768-stack-overflow-for-teams-api-v3#authentication-and-authorization).
+   - If you use Stack Internal **Enterprise**, select OAuth. To learn more about authentication and authorization in Stack Internal **Enterprise**, see [Stack Internal Enterprise API v3 authentication and authorization](https://internal.stackoverflow.help/en/articles/8043418-stack-overflow-internal-api-v3#authentication-and-authorization).<br>
+   - If you use Stack Internal **Business**, select Basic authentication. To learn more about authentication and authorization in Stack Internal **Business**, see [Stack Internal Business API v3 authentication and authorization](https://internal.stackoverflow.help/en/articles/7913768-stack-overflow-internal-api-v3#authentication-and-authorization).
  
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
