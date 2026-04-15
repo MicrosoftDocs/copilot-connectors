@@ -39,7 +39,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 To add the Jira Cloud connector for your organization:
 
 1.  In the Microsoft 365 admin center, in the left pane, select **Copilot** > **Connectors**.
-2.  Go to the **Connectors** tab, and in the left pane, select **Gallery**.
+1.  Go to the **Connectors** tab, and in the left pane, select **Gallery**.
 1.  From the list of available connectors, select **Jira Cloud**.
 
 ### Set display name
