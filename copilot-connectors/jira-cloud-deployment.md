@@ -7,7 +7,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 04/142026
+ms.date: 04/14/2026
 ms.localizationpriority: medium
 description: "Find information about how to deploy the Jira Cloud Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
