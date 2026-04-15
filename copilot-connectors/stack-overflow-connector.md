@@ -9,7 +9,7 @@ ms.topic: install-set-up-deploy
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Set up the Stack Overflow Microsoft 365 Copilot connector." 
-ms.date: 12/25/2025
+ms.date: 04/15/2026
 ---
 
 # Stack Overflow connector
@@ -24,7 +24,7 @@ The Stack Overflow Copilot connector allows your organization to index questions
    - What are the differences between using REST and GraphQL for our API services?
    - How can we improve the load time of our customer-facing web applications?
 - Use [Semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
-- The Stack Overflow Copilot connector supports Stack Internal **Business** and **Enterprise**.
+- The Stack Overflow Copilot connector supports Stack Internal (formerly Stack Overflow for Teams) **Business** and **Enterprise**.
 
 ## Limitations
 - The connector doesn't support [private teams](https://internal.stackoverflow.help/en/articles/9736637-enable-and-set-up-private-teams) in Stack Internal **Enterprise**.
