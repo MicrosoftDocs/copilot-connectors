@@ -47,11 +47,11 @@ Use the following steps to help resolve issues:
 
 If the error table and resolution steps in this article don't resolve your issue, use the information in this section to troubleshoot issues.
 
-- [Project or Issue Not Crawled - Jira Cloud](Project-or-Issue-Not-Crawled-%2D-Jira-Cloud.md)
-- [Issue Indexed but Not Searchable Due to Permissions - Jira Cloud](Issue-Indexed-but-Not-Searchable-Due-to-Permissions-%2D-Jira-Cloud.md)
-- [Oversharing - Jira Cloud](Oversharing-%2D-Jira-Cloud.md)
-- [Error Code 1010 - External Group Quota - Jira Cloud](Error-Code-1010-%2D-External-Group-Quota-%2D-Jira-Cloud.md)
-- [Issue-Level Security Not Working - Jira Cloud](Issue-Level-Security-Not-Working-%2D-Jira-Cloud.md)
+- [Project or Issue Not Crawled - Jira Cloud](Project-or-Issue-Not-Crawled-Jira-Cloud.md)
+- [Issue Indexed but Not Searchable Due to Permissions - Jira Cloud](Issue-Indexed-but-Not-Searchable-Due-to-Permissions-Jira-Cloud.md)
+- [Oversharing - Jira Cloud](Oversharing-Jira-Cloud.md)
+- [Error Code 1010 - External Group Quota - Jira Cloud](Error-Code-1010-External-Group-Quota-Jira-Cloud.md)
+- [Issue-Level Security Not Working - Jira Cloud](Issue-Level-Security-Not-Working-Jira-Cloud.md)
 
 ## Information to collect to open a support ticket
 
