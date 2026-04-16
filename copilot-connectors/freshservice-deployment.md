@@ -35,7 +35,7 @@ To add the Freshservice connector for your organization:
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
+The display name identifies references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
 
 You can accept the default **Freshservice** display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -77,11 +77,11 @@ You can customize the default values for the Freshservice connector settings. To
 
 #### Access permissions
 
-Only public solution articles with folder visibility set to **All** are indexed using the Freshservice Copilot connector. These solution articles are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
+The Freshservice connector indexes only public solution articles with folder visibility set to **All**. All Microsoft 365 users in your tenant can see these solution articles from Microsoft Search or Copilot.
 
 #### Mapping identities
 
-Identity mapping isn't required for public solution articles. All indexed content is accessible to users.
+You don't need identity mapping for public solution articles. All users can access the indexed content.
 
 ### Customize content settings
 
