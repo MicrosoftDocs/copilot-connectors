@@ -116,12 +116,10 @@ To add OAuth scopes to your service account:
     - `https://www.googleapis.com/auth/drive.readonly`
     - `https://www.googleapis.com/auth/admin.reports.audit.readonly`
 
-    ![Screenshot that shows how to add api scope.](media/google-drive-connector/step-13.png)
+    > [!NOTE]
+    > Legacy incremental crawl is deprecated effective May 15, 2026. The new reports API–based incremental crawl (available starting September 2025) requires adding the OAuth scope `https://www.googleapis.com/auth/admin.reports.audit.readonly` to the service account. To ensure incremental crawls continue to run, update all connections created before October 2025 to include this scope.
 
-> [!NOTE]
-> Legacy incremental crawl is deprecated effective May 15, 2026. The new reports API–based incremental crawl (available starting September 2025) requires adding the OAuth scope
-`https://www.googleapis.com/auth/admin.reports.audit.readonly` to the service account. To ensure incremental crawls continue to run, update all connections created before October 2025 to include this scope.
-   
+    ![Screenshot that shows how to add api scope.](media/google-drive-connector/step-13.png) 
 
 ## Get the OAuth 2.0 client ID
 
