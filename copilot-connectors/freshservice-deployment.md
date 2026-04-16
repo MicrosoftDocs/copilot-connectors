@@ -22,7 +22,7 @@ The Freshservice Microsoft 365 Copilot connector enables your organization to in
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You must be a Microsoft 365 admin.
-- You need a Freshservice account with administrator role and agent role permissions in the Freshservice application.
+- You need a Freshservice agent account with administrator permissions in the Freshservice application.
 - You must have access to the API key from your Freshservice user profile settings. For more information, see [Where do I find my API key](https://support.freshservice.com/support/solutions/folders/50000000029).
 
 ## Deploy the connector
@@ -35,7 +35,8 @@ To add the Freshservice connector for your organization:
 
 ### Set display name
 
-The display name identifies references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
+The display name identifies references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
+
 
 You can accept the default **Freshservice** display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -81,7 +82,8 @@ The Freshservice connector indexes only public solution articles with folder vis
 
 #### Mapping identities
 
-You don't need identity mapping for public solution articles. All users can access the indexed content.
+You don't need identity mapping for public solution articles. All users can access the indexed content.
+
 
 ### Customize content settings
 
