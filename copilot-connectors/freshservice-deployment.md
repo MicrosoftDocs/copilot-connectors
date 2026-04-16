@@ -15,7 +15,7 @@ description: "Find information about how to deploy the Freshservice Microsoft 36
 
 # Deploy the Freshservice connector
 
-The Freshservice Microsoft 365 Copilot connector enables your organization to index Freshservice solution article data and make it available to Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Freshservice connector. 
+The Freshservice Microsoft 365 Copilot connector enables your organization to index Freshservice solution article data and make it available to Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Freshservice connector.
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ Enter the domain URL of your Freshservice account. The typical structure is `htt
 
 ### Choose authentication type
 
-Select the available authentication type and enter the API key you obtained from your Freshservice user profile setting page. The available authentication option is:
+Select the authentication type and enter the API key you obtained from your Freshservice user profile setting page. The authentication option is:
 
 - API key authentication (recommended)
 
@@ -113,7 +113,7 @@ You can manage which properties are indexed from your Freshservice data source. 
 
 ### Customize sync intervals
 
-The Freshservice connector only supports full crawl. The default schedule for the full crawl is set to every day. You can adjust these schedules to fit your data refresh needs.
+The Freshservice connector only supports a full crawl. The default schedule for the full crawl is set to every day. You can adjust the schedule to fit your data refresh needs.
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
