@@ -34,7 +34,7 @@ The Stack Overflow Copilot connector allows your organization to index questions
 - To create a new connection, use your organization's Stack Overflow Instance URL.
    - For Stack Internal **Enterprise**, the instance URL is the home page URL, typically `https://<company_name>.stackenterprise.co`. 
    - For Stack Internal **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
-- For Stack Internal **Enterprise**, when registering a new API application, set `office.com` as the approved domain (refer to the image below for a visual example).
+- For Stack Internal **Enterprise**, when registering a new API application, set `office.com` as the approved domain (refer to the following image for a visual example).
 [![Screenshot that shows how set up an API application in Stack Overflow.](media/stackoverflow-connector/stack-overflow-app.png)](media/stackoverflow-connector/stack-overflow-app.png#lightbox)
      
 ## Get Started
@@ -43,7 +43,7 @@ The Stack Overflow Copilot connector allows your organization to index questions
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a content source filter. A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. Stack Overflow URL
-Use your organization's Stack Overflow Instance URL. For Stack Internal **Enterprise**, this will be the home page URL, typically `https://<company_name>.stackenterprise.co`. For Stack Internal **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
+Use your organization's Stack Overflow Instance URL. For Stack Internal **Enterprise**, use the home page URL, typically `https://<company_name>.stackenterprise.co`. For Stack Internal **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
 
 ### 3. Authentication Type
 To authenticate and sync content from Stack Overflow, choose one of the two supported methods:<br>

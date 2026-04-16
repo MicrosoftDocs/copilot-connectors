@@ -8,21 +8,21 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 11/25/2025
+ms.date: 04/16/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Freshservice Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
 # Deploy the Freshservice connector
 
-The Freshservice Microsoft 365 Copilot connector enables your organization to index Freshservice solution article data and make it available to Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Freshservice connector. 
+The Freshservice Microsoft 365 Copilot connector enables your organization to index Freshservice solution article data and make it available to Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Freshservice connector.
 
 ## Prerequisites
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You must be a Microsoft 365 admin.
-- You need a Freshservice account with administrator permissions in the Freshservice application.
+- You need a Freshservice agent account with administrator permissions in the Freshservice application.
 - You must have access to the API key from your Freshservice user profile settings. For more information, see [Where do I find my API key](https://support.freshservice.com/support/solutions/folders/50000000029).
 
 ## Deploy the connector
@@ -35,7 +35,8 @@ To add the Freshservice connector for your organization:
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
+The display name identifies references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
+
 
 You can accept the default **Freshservice** display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -47,7 +48,7 @@ Enter the domain URL of your Freshservice account. The typical structure is `htt
 
 ### Choose authentication type
 
-Select the available authentication type and enter the API key you obtained from your Freshservice user profile setting page. The available authentication option is:
+Select the authentication type and enter the API key you obtained from your Freshservice user profile setting page. The authentication option is:
 
 - API key authentication (recommended)
 
@@ -77,11 +78,12 @@ You can customize the default values for the Freshservice connector settings. To
 
 #### Access permissions
 
-Only public solution articles with folder visibility set to **All** are indexed using the Freshservice Copilot connector. These solution articles are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
+The Freshservice connector indexes only public solution articles with folder visibility set to **All**. All Microsoft 365 users in your tenant can see these solution articles from Microsoft Search or Copilot.
 
 #### Mapping identities
 
-Identity mapping isn't required for public solution articles. All indexed content is accessible to users.
+You don't need identity mapping for public solution articles. All users can access the indexed content.
+
 
 ### Customize content settings
 
@@ -111,7 +113,7 @@ You can manage which properties are indexed from your Freshservice data source. 
 
 ### Customize sync intervals
 
-The Freshservice connector only supports full crawl. The default schedule for the full crawl is set to every day. You can adjust these schedules to fit your data refresh needs.
+The Freshservice connector only supports a full crawl. The default schedule for the full crawl is set to every day. You can adjust the schedule to fit your data refresh needs.
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
