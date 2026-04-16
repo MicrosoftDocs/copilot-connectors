@@ -6,12 +6,12 @@ ms.service: copilot-connectors
 ms.author: lauragra
 author: lauragra
 manager: calvind
-ms.date: 11/11/2025
+ms.date: 04/16/2026
 ---
 
 # Set up the Google Workspace service for Google Drive connector ingestion
 
-The Google Drive Microsoft 365 Copilot connector allows your organization to index files that anyone can access in Google Drive and make them available to Microsoft 365 Copilot and Microsoft Search. This article provides information about the configuration steps that Google Workspace admins need to complete to deploy the [Google Drive connector](google-drive-overview.md).
+The Google Drive Microsoft 365 Copilot connector enables your organization to index files that anyone can access in Google Drive and make them available to Microsoft 365 Copilot and Microsoft Search. This article provides information about the configuration steps that Google Workspace admins need to complete to deploy the [Google Drive connector](google-drive-overview.md).
 
 For information about how to deploy the connector, see [Google Drive connector deployment](google-drive-deployment.md).
 
@@ -82,7 +82,7 @@ To create a Google Cloud service account:
 
     ![Screenshot that shows how to create a new service account step3.](media/google-drive-connector/step-7.png)
 
-1. Skip **Permissions** and **Principals with access**, then select **Done**.
+1. Skip **Permissions** and **Principals with access**, and then select **Done**.
 1. On the Service Accounts page, select the three-dot menu under **Actions** and select **Manage Keys**.
 
     ![Screenshot that shows how to get the keys step1.](media/google-drive-connector/step-8.png)   
@@ -116,9 +116,12 @@ To add OAuth scopes to your service account:
     - `https://www.googleapis.com/auth/drive.readonly`
     - `https://www.googleapis.com/auth/admin.reports.audit.readonly`
 
-    ![Screenshot that shows how to add api scope.](media/google-drive-connector/step-13.png)
+    > [!NOTE]
+    > Legacy incremental crawl is deprecated effective May 15, 2026. The new reports API–based incremental crawl (available starting September 2025) requires adding the OAuth scope `https://www.googleapis.com/auth/admin.reports.audit.readonly` to the service account. To ensure incremental crawls continue to run, update all connections created before October 2025 to include this scope.
 
-### Get the OAuth 2.0 client ID
+    ![Screenshot that shows how to add api scope.](media/google-drive-connector/step-13.png) 
+
+## Get the OAuth 2.0 client ID
 
 To get the client ID:
 
