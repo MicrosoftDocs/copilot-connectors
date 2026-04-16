@@ -119,7 +119,7 @@ To add OAuth scopes to your service account:
     ![Screenshot that shows how to add api scope.](media/google-drive-connector/step-13.png)
 
 > [!NOTE]
-> Legacy incremental crawl will be fully deprecated on May 15, 2026. The new reports API–based incremental crawl (available since September 2025) requires the OAuth scope
+> Legacy incremental crawl is deprecated on May 15, 2026. The new reports API–based incremental crawl (available since September 2025) requires the OAuth scope
 `https://www.googleapis.com/auth/admin.reports.audit.readonly` to be added to the service account. Mirosoft365 Admins must update all connections created before October 2025 to include this scope to ensure incremental crawls continue to run properly.
    
 
