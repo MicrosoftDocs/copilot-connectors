@@ -6,7 +6,7 @@ ms.service: copilot-connectors
 ms.author: lauragra
 author: lauragra
 manager: calvind
-ms.date: 11/11/2025
+ms.date: 04/16/2026
 ---
 
 # Set up the Google Workspace service for Google Drive connector ingestion
