@@ -120,7 +120,7 @@ To add OAuth scopes to your service account:
 
 > [!NOTE]
 > Legacy incremental crawl is deprecated on May 15, 2026. The new reports API–based incremental crawl (available since September 2025) requires the OAuth scope
-`https://www.googleapis.com/auth/admin.reports.audit.readonly` to be added to the service account. Mirosoft365 Admins must update all connections created before October 2025 to include this scope to ensure incremental crawls continue to run properly.
+`https://www.googleapis.com/auth/admin.reports.audit.readonly` to be added to the service account. Microsoft 365 admins must update all connections created before October 2025 to include this scope to ensure incremental crawls continue to run properly.
    
 
 ## Get the OAuth 2.0 client ID
