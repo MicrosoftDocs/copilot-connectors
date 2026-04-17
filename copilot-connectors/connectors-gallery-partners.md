@@ -20,7 +20,7 @@ This article provides a list of the partner connectors that are available across
 
 ## Certified for Microsoft 365 Copilot
 
-The following partner-built connectors are Microsoft certified for Microsoft 365 Copilot.
+The following partner-built connectors are Microsoft certified for Microsoft 365 Copilot. This certification means the connector meets Microsoft's requirements for compatibility, quality, and security for Microsoft 365 Copilot experiences. 
 
 | Connector name | Publisher | Description | Learn more |
 |:------ |:----------- |:----------- |:----------- |
@@ -227,7 +227,7 @@ The following table lists the learning connectors that are available.
 
 |Connector name|Publisher|Description| Learn more |
 |:------ |:----------- |:----------- | :----------- |
-|getAbstract (certified for Microsoft 365 Copilot)|getAbstract|Enhances Microsoft 365 Copilot with verified business knowledge from leading experts. The getAbstract connector delivers fully indexed and licensed knowledge from domains like leadership and strategy, sales, marketing, corporate finance, digital transformation, and more - helping employees solve business issues in the flow of work. | [getAbstract connector](https://www.getabstract.com/en/connector) |
+|getAbstract (certified for Microsoft 365 Copilot)|getAbstract|The getAbstract Copilot connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership & strategy, sales, marketing, corporate Finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work. | [getAbstract connector](https://www.getabstract.com/en/connector) |
 |Go1|Go1|Go1 integration with Microsoft Search allows your employees to find and access learning from Microsoft Search, in places like the Microsoft 365 app or SharePoint. Your employees can learn directly from Microsoft Search in their normal day-to-day routine. | [Go1 connector](https://www.go1.com/integrations/microsoft) |
 
 ## Social networks
