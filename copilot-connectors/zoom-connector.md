@@ -1,6 +1,6 @@
 --- 
 title: "Zoom Meetings connector (preview)" 
-ms.author: rerabo
+ms.author: lauragra
 author: vivg
 manager: ereza
 audience: Admin
@@ -24,7 +24,7 @@ The Zoom Meeting Microsoft 365 Copilot connector enables your organization to in
    - What are the action items from a specific meeting?
    - What are the outcomes of a specific meeting?
    - Summary of several meetings with a specific participant or on a specific subject.
-- Use [semantic search in Copilot](microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
 - The M365 Copilot connector app in the Zoom Marketplace is currently not available in the European Union (EU). 
@@ -111,7 +111,7 @@ The refresh interval determines how often your data is synced between the data s
 - Incremental crawl: Every 15 mins
 - Full crawl: Every day
 
-You can adjust the default values to meet the needs of your organization. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+You can adjust the default values to meet the needs of your organization. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 
