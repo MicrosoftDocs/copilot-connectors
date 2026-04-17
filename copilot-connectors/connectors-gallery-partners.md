@@ -20,7 +20,7 @@ This article provides a list of the partner connectors that are available across
 
 ## Certified for Microsoft 365 Copilot
 
-The following partner-built connectors are Microsoft certified for Microsoft 365 Copilot. This certification means the connector meets Microsoft's requirements for compatibility, quality, and security for Microsoft 365 Copilot experiences. 
+The following partner-built connectors are certified for Microsoft 365 Copilot. This certification means the connector meets Microsoft requirements for compatibility, quality, and security for Microsoft 365 Copilot experiences. 
 
 | Connector name | Publisher | Description | Learn more |
 |:------ |:----------- |:----------- |:----------- |
