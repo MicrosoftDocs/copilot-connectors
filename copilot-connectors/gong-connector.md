@@ -1,5 +1,5 @@
 --- 
-title: "Gong Copilot connector" 
+title: "Gong connector" 
 ms.author: lauragra
 author: lauragra
 manager: harshkum
@@ -8,11 +8,11 @@ ms.audience: Admin
 ms.topic: article 
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
-description: "Set up the Gong Copilot connector for Microsoft 365 Copilot and Microsoft Search" 
+description: "Find information about how to deploy the Gong Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options." 
 ms.date: 12/25/2025
 ---
 
-# Gong Copilot connector
+# Gong connector
 
 With the Microsoft 365 Copilot connector for Gong, your organization can index calls and meeting-related content like summaries, action items, and call metadata. The connector enables Gong users to retrieve this information through Microsoft 365 Copilot and any Microsoft Search client.
 
