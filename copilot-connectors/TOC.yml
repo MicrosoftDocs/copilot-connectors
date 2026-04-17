@@ -349,7 +349,7 @@ items:
           href: gitlab-merge-requests-server-deployment.md
         - name: Troubleshooting
           href: gitlab-merge-requests-server-troubleshooting.md
-    - name: Gong (preview)
+    - name: Gong
       items:
       - name: Setup
         href: gong-connector.md
