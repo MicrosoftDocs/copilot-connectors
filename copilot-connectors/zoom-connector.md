@@ -19,7 +19,7 @@ The Zoom Meeting Microsoft 365 Copilot connector enables your organization to in
 [!INCLUDE [connector-preview-access](includes/connector-preview-access.md)]
 
 ## Capabilities
-- Index meeting-related data such as transcripts, meeting details, key points and summary. 
+- Index meeting-related data such as transcripts, meeting details, key points, and summary. 
 - Enable your users to ask questions related to their Zoom meetings in Copilot. 
    - What are the action items from a specific meeting?
    - What are the outcomes of a specific meeting?
@@ -28,7 +28,7 @@ The Zoom Meeting Microsoft 365 Copilot connector enables your organization to in
 
 ## Limitations
 - The M365 Copilot connector app in the Zoom Marketplace is currently not available in the European Union (EU). 
-- Zoom API rate limits can impact a full data refresh. For more information, see [Zoom rate limits](https://developers.zoom.us/docs/api/rate-limits/).
+- Zoom API rate limits can affect a full data refresh. For more information, see [Zoom rate limits](https://developers.zoom.us/docs/api/rate-limits/).
 
 ## Prerequisites
 
@@ -39,11 +39,11 @@ The Zoom Meeting Microsoft 365 Copilot connector enables your organization to in
 ## Deploy the connector
 
 ### Set display name 
-A display name identifies each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). You can accept the **Zoom Meetings** customize it to a name that users in your organization will recognize.
+A display name identifies each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). You can accept the **Zoom Meetings** customize it to a name that users in your organization recognize.
 
 ### Authentication
 
-- Select **OAuth 2.0**
+- Select **OAuth 2.0**.
 - Select **Authorize** and authenticate to Zoom by signing in with a Zoom administrator account.
 - Complete the OAuth consent flow to grant the connector access to the required Zoom APIs.
 
@@ -58,7 +58,7 @@ Check the box next to the Notice section.
 
 Choose **Create** to deploy the connection. The Zoom Meetings connector starts indexing content right away.
 
-The following are the default values that are set:
+The following values are set by default:
 
 - **Users**
    - Access permissions: Only the **meeting owner** in Zoom has access to the meeting’s data in Microsoft Graph.
@@ -66,8 +66,8 @@ The following are the default values that are set:
 - **Content**
    - Manage properties: To check default properties and their schema, select **Custom Setup** > **Content**.
 - **Crawl**
-   - Incremental crawl: Every 15 mins
-   - Full crawl: Every day
+   - Incremental crawl: Every 15 minutes.
+   - Full crawl: Every day.
 
 To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 
@@ -89,7 +89,7 @@ The default method for mapping your data source identities with Microsoft Entra 
 
 #### Manage properties
 
-You can add or remove available properties from your Zoom data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property. The following table lists properties that are selected by default.
+You can add or remove properties from your Zoom data source, assign a schema to each property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. The following table lists properties that are selected by default.
 
 |Source property |Semantic label|Description|Schema|
 |--- | ---- | --- | ---|
@@ -106,12 +106,12 @@ You can add or remove available properties from your Zoom data source, assign a 
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Zoom Meetings connector index. The following are the default values:
+The refresh interval determines how often your data syncs between the data source and the Zoom Meetings connector index. The following values are the default values:
 
-- Incremental crawl: Every 15 mins
+- Incremental crawl: Every 15 minutes
 - Full crawl: Every day
 
-You can adjust the default values to meet the needs of your organization. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
+Adjust the default values to meet the needs of your organization. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 
