@@ -9,118 +9,87 @@ ms.topic: install-set-up-deploy
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Set up the Zoom Meetings Microsoft 365 Copilot connector." 
-ms.date: 08/15/2025
+ms.date: 04/17/2026
 ---
 
 # Zoom Meetings connector (preview)
 
-With the Zoom Meetings Microsoft 365 Copilot connector, your organization can index meeting related artifacts such as transcripts, summary and meta data. This allows the owners of meetings to search for such information in Microsoft Copilot and from any Microsoft Search client.
+The Zoom Meeting Microsoft 365 Copilot connector enables your organization to index meeting-related artifacts, such as transcripts and metadata, and allow the meeting owners to search for such information in Microsoft 365 Copilot and Microsoft Search clients.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Zoom Meetings Copilot connector.
-
-[!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
+[!INCLUDE [connector-preview-access](includes/connector-preview-access.md)]
 
 ## Capabilities
-- Index meeting related data such as transcript and summary. 
-- Enable your end users to ask questions related to their Zoom meetings in Copilot. 
+- Index meeting-related data such as transcripts, meeting details, key points and summary. 
+- Enable your users to ask questions related to their Zoom meetings in Copilot. 
    - What are the action items from a specific meeting?
    - What are the outcomes of a specific meeting?
    - Summary of several meetings with a specific participant or on a specific subject.
-- Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Use [semantic search in Copilot](microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+
+## Limitations
+- The M365 Copilot connector app in the Zoom Marketplace is currently not available in the European Union (EU). 
+- Zoom API rate limits can impact a full data refresh. For more information, see [Zoom rate limits](https://developers.zoom.us/docs/api/rate-limits/).
 
 ## Prerequisites
-- You must be the **search admin** for your organization's Microsoft 365 tenant.
-- **Zoom account**: To connect to your Zoom meetings data, you must have a paid Zoom plan (**Business** or **Enterprise**) with cloud recording enabled. 
-- **Create a Zoom marketplace app for the Zoom Meetings Copilot connector**: By creating a Zoom marketplace app, you can allow and control the access by the Zoom Meetings Copilot connector to your Zoom meetings data.
 
-### Create Zoom marketplace app
+- You must be an AI administrator for your organization's Microsoft 365 tenant.
+- To connect to your Zoom meetings data, you must have a paid Zoom plan (**Business** or **Enterprise**) with cloud recording enabled. 
+- A Zoom account administrator must authenticate and provide consent to create the connection.
 
-Create a Zoom marketplace app for theZoom Meetings Copilot connector:
+## Deploy the connector
 
-1. Go to the Zoom marketplace at [https://marketplace.zoom.us](https://marketplace.zoom.us) and log-in using a Zoom admin credentials.
+### Set display name 
+A display name identifies each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). You can accept the **Zoom Meetings** customize it to a name that users in your organization will recognize.
 
-2. Hover over the **Develop** menu, and select **Build app**:
-[![Screenshot that shows the Zoom app marketplace page.](media/zoom-connector/Zoom-marketplace-page.png)](media/zoom-connector/Zoom-marketplace-page.png#lightbox)
+### Authentication
 
-3. Select **Server to server OAuth app** and click the **Create** button:
-[![Screenshot that shows the Zoom app selection.](media/zoom-connector/Zoom-app-selection.png)](media/zoom-connector/Zoom-app-selection.png#lightbox)
+- Select **OAuth 2.0**
+- Select **Authorize** and authenticate to Zoom by signing in with a Zoom administrator account.
+- Complete the OAuth consent flow to grant the connector access to the required Zoom APIs.
 
-4. Provide a name for the app, and click **Create**:
-[![Screenshot that shows the Zoom app creation.](media/zoom-connector/Zoom-app-creation.png)](media/zoom-connector/Zoom-app-creation.png#lightbox)
 
-5. In the next page, note the Client ID and the Client Secret. You will need to insert these details when configuring the connector in the next section:
-[![Screenshot that shows the Zoom app credentials.](media/zoom-connector/Zoom-app-credentials.png)](media/zoom-connector/Zoom-app-credentials.png#lightbox)
+### Roll out to limited audience
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
-6. Click **Continue**.
+### Agree to the terms
+Check the box next to the Notice section.
 
-7. Fill out the information in the **Information** and **Feature** tabs, click **Continue** to get to the **Scopes** tab.
-[![Screenshot that shows the Zoom app scopes tab.](media/zoom-connector/Zoom-app-scopes.png)](media/zoom-connector/Zoom-app-scopes.png#lightbox)
+### Create the connection
 
-8. Click the **+Add scopes** button and select the following scopes (use the value in brackets below to search for a scope, and mark the checkbox next to it to select it):<br>
-   a. Dashboard → View all users’ meetings information on dashboard → View meeting metrics (dashboard:read:list_meetings:admin)<br>
-   b. Dashboard →  View all users’ meetings information on dashboard → View meeting participants’ metrics (dashboard:read:list_meeting_participants:admin)<br>
-   c. Meeting → View all user meetings → View a meeting (meeting:read:meeting:admin)<br>
-   d. Recording → View all user recordings → Returns all of a meeting’s recordings (cloud_recording:read:list_recording_files:admin)<br>
-   e. User → View all user information → View users (user:read:list_users:admin)<br>
-[![Screenshot that shows an example of adding a scope to the Zoom app.](media/zoom-connector/Zoom-app-scopes-sample.png)](media/zoom-connector/Zoom-app-scopes-sample.png#lightbox)
+Choose **Create** to deploy the connection. The Zoom Meetings connector starts indexing content right away.
 
-9. Click **Done** and then click **Continue**.
+The following are the default values that are set:
 
-10. In the final screen, click the **Activate your app** button:
-[![Screenshot that shows Zoom app activation.](media/zoom-connector/Zoom-app-activation.png)](media/zoom-connector/Zoom-app-activation.png#lightbox)
-
-11. Make sure the app is activated successfully:
-[![Screenshot that shows a successful Zoom app activation.](media/zoom-connector/Zoom-app-success.png)](media/zoom-connector/Zoom-app-success.png#lightbox)
-
-## Get Started
-
-### 1. Display name 
-A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
-
-### 2. Authentication Type
-
-To authenticate and sync content from Zoom, choose **OAuth 2.0**.
-
-Enter the Zoom account ID, the Client ID, and the Client secret which were created as part of the Zoom marketplace app before, to authenticate to your instance.
-
-### 3. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
-
-At this point, you are ready to create the connection for Zoom meetings. You can click on the **Create** button and the Zoom Meetings Copilot connector starts indexing meetings from your Zoom account.
-
-For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we have defaults set based on what works best with Zoom data. You can see the default values here:
 - **Users**
-   - Access Permissions: Only the **meeting owner** in Zoom has access to the meeting’s data in Microsoft Graph.
-   - Map Identities: Data source identities mapped using Microsoft Entra IDs.
+   - Access permissions: Only the **meeting owner** in Zoom has access to the meeting’s data in Microsoft Graph.
+   - Map identities: Data source identities mapped using Microsoft Entra IDs.
 - **Content**
-   - Manage Properties: To check default properties and their schema, select Custom Setup → Content
+   - Manage properties: To check default properties and their schema, select **Custom Setup** > **Content**.
 - **Crawl**
-   - Incremental Crawl: Frequency: Every 15 mins
-   - Full crawl: Frequency: Every day
+   - Incremental crawl: Every 15 mins
+   - Full crawl: Every day
 
-If you want to edit any of these values, you need to choose the "Custom Setup" option.
+To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 
-## Custom Setup
+## Customize settings (optional)
 
-Custom setup is for those admins who want to edit the default values for settings listed. Once you click on the "Custom Setup" option, you see three more tabs - Users, Content, and Sync.
+You can customize the default values for the {connector name} connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**.
 
-### Users
+### Customize user settings
 
 #### Access permissions
 
-In custom setup you can edit any of the default values for users, content, and sync.
+The Zoom Meetings connector supports access permissions only for the original owner of a meeting in Zoom. 
 
 #### Mapping identities
 
-The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the Email ID of Zoom users is same as the UserPrincipalName (UPN), or Mail of the users in Microsoft Entra ID. If you believe this configuration would not work for your organization, you can provide a custom mapping formula. To know more about, mapping Non-EntraID identities, click [here](map-non-aad.md).
+The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the Email ID of Zoom users is same as the user principal name (UPN) or email of the users in Microsoft Entra ID. If  this configuration doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map non-Entra IDs](map-non-entra-id.md).
 
-### Content
-
-Choose the repositories and file types (initially markdown files and other non-code documentation) you wish to make searchable.
+### Customize content settings
 
 #### Manage properties
 
-Here, you can add or remove available properties from your Zoom data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property. Properties that are selected by default are listed below.
+You can add or remove available properties from your Zoom data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property. The following table lists properties that are selected by default.
 
 |Source property |Semantic label|Description|Schema|
 |--- | ---- | --- | ---|
@@ -137,9 +106,14 @@ Here, you can add or remove available properties from your Zoom data source, ass
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Zoom Meetings Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Zoom Meetings connector index. The following are the default values:
 
-## Troubleshooting
-After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). 
+- Incremental crawl: Every 15 mins
+- Full crawl: Every day
 
-If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
+You can adjust the default values to meet the needs of your organization. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+
+## Related content
+
+- [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md)
+- [Manage connectors](manage-connector.md)
