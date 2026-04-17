@@ -20,13 +20,13 @@ This article provides a list of the partner connectors that are available across
 
 ## Certified for Microsoft 365 Copilot
 
-The following partner-built connectors are Microsoft certified for Microsoft 365 Copilot.
+The following partner-built connectors are Microsoft certified for Microsoft 365 Copilot. This certification means the connector has met Microsoft's requirements for compatibility, quality, and security for Microsoft 365 Copilot experiences. 
 
 | Connector name | Publisher | Description | Learn more |
 |:------ |:----------- |:----------- |:----------- |
 |Box|Box|With the Box connector, users can search for and surface their Box content from the Microsoft ecosystem, including Office 365, Office Online search, and SharePoint. It's easier than ever for joint Box and Microsoft users to explore, discover, and navigate to the content they need when they need it. | [Box connector](https://support.box.com/hc/articles/4403605037587) |
-|CB Insights |CB Insights|Integrate CB Insights’ proprietary data and insights directly into Microsoft Copilot to instantly generate unique insights across all Microsoft 365 applications. Access data for public and private companies like funding events, business relationships, predictive outlook, and more. The CBI connector allows you to research, analyze, and share trusted, data-backed insights to bet on the right markets, source the right companies, and stay ahead of competitors. All teams across an organization can benefit from the connector, from sales, to IT, to finance, to help make informed, data-driven decisions. | [CB Insights connector](https://www.cbinsights.com/copilot-connector/) |
-|getAbstract |getAbstract|The getAbstract Copilot connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership & strategy, sales, marketing, corporate Finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work. | [getAbstract connector](https://www.getabstract.com/en/connector) |
+|CB Insights|CB Insights|Integrate CB Insights’ proprietary data and insights directly into Microsoft Copilot to instantly generate unique insights across all Microsoft 365 applications. Access data for public and private companies like funding events, business relationships, predictive outlook, and more. The CBI connector allows you to research, analyze, and share trusted, data-backed insights to bet on the right markets, source the right companies, and stay ahead of competitors. All teams across an organization can benefit from the connector, from sales, to IT, to finance, to help make informed, data-driven decisions. | [CB Insights connector](https://www.cbinsights.com/copilot-connector/) |
+|getAbstract|getAbstract|The getAbstract Copilot connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership & strategy, sales, marketing, corporate Finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work. | [getAbstract connector](https://www.getabstract.com/en/connector) |
 
 ## Collaboration and communication
 
@@ -227,7 +227,7 @@ The following table lists the learning connectors that are available.
 
 |Connector name|Publisher|Description| Learn more |
 |:------ |:----------- |:----------- | :----------- |
-|getAbstract (certified for Microsoft 365 Copilot)|getAbstract|The getAbstract Copilot connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership & strategy, sales, marketing, corporate Finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work. | [getAbstract connector](https://www.getabstract.com/en/connector) |
+|getAbstract (certified for Microsoft 365 Copilot)|getAbstract|The getAbstract Copilot connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership and strategy, sales, marketing, corporate finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work. | [getAbstract connector](https://www.getabstract.com/en/connector) |
 |Go1|Go1|Go1 integration with Microsoft Search allows your employees to find and access learning from Microsoft Search, in places like the Microsoft 365 app or SharePoint. Your employees can learn directly from Microsoft Search in their normal day-to-day routine. | [Go1 connector](https://www.go1.com/integrations/microsoft) |
 
 ## Social networks
