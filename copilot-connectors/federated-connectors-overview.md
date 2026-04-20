@@ -65,7 +65,7 @@ Admins can:
 - View all the Microsoft-published federated connectors that are available in the tenant on the **Your Connections** tab.
 - Enable or disable connectors at the tenant level.
 - Limit availability to specific Microsoft Entra ID groups by choosing **Add staging** in the **Staged Rollout** column.
-- Bulk disable all federated connectors by using CLI commands, and selectively enable specific federated connectors in the Microsoft 365 admin center based on organizational policies and readiness. For more information, see [Manage federated connectors](manage-federated-connectors.md).
+- Bulk disable all federated connectors by using PowerShell cmdlets, and selectively enable specific federated connectors in the Microsoft 365 admin center based on organizational policies and readiness. For more information, see [Manage federated connectors](manage-federated-connectors.md).
  
 > [!NOTE]
 > **Admin review window**
