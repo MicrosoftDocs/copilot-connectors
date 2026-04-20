@@ -71,7 +71,7 @@ Use the `Set-FederatedConnectorToggle` cmdlet to enable or disable federated con
    - Select **Enable** to turn on all federated connectors.
 
 > [!NOTE]
-> The CLI setting applies automatically to future federated connectors. If the toggle is disabled, new connectors appear in a disabled state. If the toggle is enabled, new connectors follow the default rollout behavior.
+> The tenant toggle automatically applies to future federated connectors. If you disable the toggle, new connectors appear in a disabled state. If you enable the toggle, new connectors follow the default rollout behavior.
 
 ## Verify the changes
 
@@ -90,9 +90,8 @@ After you manage the federated connector toggle, you can:
 - Monitor connector usage in the Microsoft 365 admin center.
 - Selectively enable or disable individual connectors even when the global toggle is set to disable.
 - Review user feedback to determine which connectors provide the most value to your organization.
-- 
 ## Related content
 
 - [Federated Microsoft 365 Copilot connectors](federated-connectors-overview.md)
-- [Connector.cmd in the PowerShell Gallery](https://www.powershellgallery.com/packages/Connector.Cmd/2.1)
+- [Connector.Cmd in the PowerShell Gallery](https://www.powershellgallery.com/packages/Connector.Cmd/2.1)
  
