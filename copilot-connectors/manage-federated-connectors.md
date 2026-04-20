@@ -71,7 +71,7 @@ Use the `Set-FederatedConnectorToggle` cmdlet to enable or disable federated con
    - Select **Enable** to turn on all federated connectors.
 
 > [!NOTE]
-> The tenant toggle applies automatically to future federated connectors. If you disable the toggle, new connectors appear in a disabled state. If you enable the toggle, new connectors follow the default rollout behavior.
+> The tenant toggle automatically applies to future federated connectors. If you disable the toggle, new connectors appear in a disabled state. If you enable the toggle, new connectors follow the default rollout behavior.
 
 ## Verify the changes
 
