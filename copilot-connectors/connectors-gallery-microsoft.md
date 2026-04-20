@@ -8,7 +8,7 @@ ms.topic: landing-page
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Find a list of Microsoft 365 Copilot connectors built and supported by Microsoft, organized by categories, including a description and link to each connector website."
-ms.date: 04/13/2026
+ms.date: 04/20/2026
 ---
 # Microsoft-built connectors gallery
 
@@ -37,6 +37,7 @@ The following table lists the collaboration and communication connectors that ar
 | Notion (preview) | Microsoft | Organize notes, projects, and wikis. | [Federated connectors overview](federated-connectors-overview.md) |
 | Shortcut Story | Microsoft | Enables teams to manage agile software development projects with Shortcut. | [Shortcut Story connector](shortcut-story-overview.md) |
 | Trello | Microsoft | Allows organizations to enhance their project management by connecting with Trello's visual project management tools. | [Trello connector](trello-overview.md) |
+| Zoom | Enables your organization to index meeting-related artifacts, such as transcripts and metadata. | [Zoom connector](zoom-connector.md) |
 
 ## Content management systems
 

@@ -584,6 +584,10 @@ items:
         href: zendesk-ticket-deployment.md
       - name: Troubleshooting
         href: zendesk-ticket-troubleshooting.md
+    - name: Zoom
+      items:
+      - name: Deployment guide
+        href: zoom-connector.md
   - name: Install connector agent for on-premises connectors
     items:
     - name: Connector agent installation

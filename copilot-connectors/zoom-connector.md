@@ -1,5 +1,5 @@
 --- 
-title: "Zoom Meetings connector (preview)" 
+title: "Zoom Meetings connector" 
 ms.author: lauragra
 author: vivg
 manager: ereza
@@ -12,11 +12,9 @@ description: "Set up the Zoom Meetings Microsoft 365 Copilot connector."
 ms.date: 04/17/2026
 ---
 
-# Zoom Meetings connector (preview)
+# Zoom Meetings connector
 
 The Zoom Meeting Microsoft 365 Copilot connector enables your organization to index meeting-related artifacts, such as transcripts and metadata, and allow the meeting owners to search for such information in Microsoft 365 Copilot and Microsoft Search clients.
-
-[!INCLUDE [connector-preview-access](includes/connector-preview-access.md)]
 
 ## Capabilities
 - Index meeting-related data such as transcripts, meeting details, key points, and summary. 
