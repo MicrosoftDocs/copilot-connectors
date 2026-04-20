@@ -189,10 +189,15 @@ The following table lists other connectors that are available.
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
-| Canva (preview) | Microsoft | Design presentations and social media graphics. | [Federated connectors overview](federated-connectors-overview.md) |
-| Google Calendar (preview) | Microsoft | Schedule, manage, and share meetings. | [Federated connectors overview](federated-connectors-overview.md) |
-| Google Contacts (preview) | Microsoft | Organize contact information. | [Federated connectors overview](federated-connectors-overview.md) |
-| Intercom (preview) | Microsoft | Customer conversations, support tickets, and user engagement. | [Federated connectors overview](federated-connectors-overview.md) |
+| Canva | Microsoft | Connects to Canva design content to enable users to create, edit, search, and manage designs directly within their workflows. | [Federated connectors overview](federated-connectors-overview.md) |
+| Google Calendar | Microsoft | Connects to Google Calendar to enable users to access, manage, and query events and availability across their schedule. | [Federated connectors overview](federated-connectors-overview.md) |
+| Google Contacts | Microsoft | Connects to Google Contacts to enable users to retrieve and reference contact details such as names, email addresses, and phone numbers. | [Federated connectors overview](federated-connectors-overview.md) |
+| HubSpot | Microsoft | Connects to HubSpot CRM data to enable users to access and enrich responses with customer, sales, and marketing insights from HubSpot.| [Federated connectors overview](federated-connectors-overview.md) |
+| Intercom | Microsoft | Connects to Intercom customer communication data to help users access and work with customer interactions and support insights within their workflows. | [Federated connectors overview](federated-connectors-overview.md) |
+| Linear | Microsoft | Connects to Linear to surface and work with issues, projects, and product roadmap data, helping teams streamline development workflows and collaboration. | [Federated connectors overview](federated-connectors-overview.md) |
+| LSEG | Microsoft | Connects to LSEG's financial data platform to enable users to access real‑time market data, analytics, and valuation tools in conversational workflows.  | [Federated connectors overview](federated-connectors-overview.md) |
+| Moody | Microsoft | Connects to Moody's credit intelligence platform to provide access to credit ratings, research, and risk insights to support financial analysis and decision-making workflows. | [Federated connectors overview](federated-connectors-overview.md) |
+| Notion | Microsoft | Connects to Notion workspaces to enable users to search, retrieve, and use content from pages, databases, and notes directly in their workflows. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Related content
 
