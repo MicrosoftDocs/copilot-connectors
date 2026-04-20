@@ -14,7 +14,7 @@ ms.date: 04/17/2026
 
 # Zoom Meetings connector
 
-The Zoom Meeting Microsoft 365 Copilot connector enables your organization to index meeting-related artifacts, such as transcripts and metadata, so meeting owners can search for the information in Microsoft 365 Copilot and Microsoft Search clients.
+The Zoom Meetings Microsoft 365 Copilot connector enables your organization to index meeting-related artifacts, such as transcripts and metadata, so meeting owners can search for the information in Microsoft 365 Copilot and Microsoft Search clients.
 
 ## Capabilities
 - Index meeting-related data such as transcripts, meeting details, key points, and summary. 

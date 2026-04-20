@@ -37,7 +37,7 @@ The following table lists the collaboration and communication connectors that ar
 | Notion (preview) | Microsoft | Organize notes, projects, and wikis. | [Federated connectors overview](federated-connectors-overview.md) |
 | Shortcut Story | Microsoft | Enables teams to manage agile software development projects with Shortcut. | [Shortcut Story connector](shortcut-story-overview.md) |
 | Trello | Microsoft | Allows organizations to enhance their project management by connecting with Trello's visual project management tools. | [Trello connector](trello-overview.md) |
-| Zoom | Enables your organization to index meeting-related artifacts, such as transcripts and metadata. | [Zoom connector](zoom-connector.md) |
+| Zoom Meetings | Microsoft | Enables your organization to index meeting-related artifacts, such as transcripts and metadata. | [Zoom connector](zoom-connector.md) |
 
 ## Content management systems
 
