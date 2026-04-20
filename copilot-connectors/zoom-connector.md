@@ -14,7 +14,7 @@ ms.date: 04/17/2026
 
 # Zoom Meetings connector
 
-The Zoom Meeting Microsoft 365 Copilot connector enables your organization to index meeting-related artifacts, such as transcripts and metadata, and allow the meeting owners to search for such information in Microsoft 365 Copilot and Microsoft Search clients.
+The Zoom Meeting Microsoft 365 Copilot connector enables your organization to index meeting-related artifacts, such as transcripts and metadata, so meeting owners can search for the information in Microsoft 365 Copilot and Microsoft Search clients.
 
 ## Capabilities
 - Index meeting-related data such as transcripts, meeting details, key points, and summary. 
@@ -25,7 +25,7 @@ The Zoom Meeting Microsoft 365 Copilot connector enables your organization to in
 - Use [semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
-- The M365 Copilot connector app in the Zoom Marketplace is currently not available in the European Union (EU). 
+- The Microsoft 365 Copilot connector app in the Zoom Marketplace isn't currently available in the European Union (EU). 
 - Zoom API rate limits can affect a full data refresh. For more information, see [Zoom rate limits](https://developers.zoom.us/docs/api/rate-limits/).
 
 ## Prerequisites
@@ -37,7 +37,7 @@ The Zoom Meeting Microsoft 365 Copilot connector enables your organization to in
 ## Deploy the connector
 
 ### Set display name 
-A display name identifies each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). You can accept the **Zoom Meetings** customize it to a name that users in your organization recognize.
+A display name identifies each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). You can accept the **Zoom Meetings** name or customize it to a name that users in your organization recognize.
 
 ### Authentication
 
