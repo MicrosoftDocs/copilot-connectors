@@ -71,7 +71,7 @@ To customize these values, choose **Custom setup**. For more information, see [C
 
 ## Customize settings (optional)
 
-You can customize the default values for the {connector name} connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**.
+You can customize the default values for the {connector name} connector settings. To customize settings, on the connector page in the admin center, select **Custom setup**.
 
 ### Customize user settings
 
@@ -81,7 +81,7 @@ The Zoom Meetings connector supports access permissions only for the original ow
 
 #### Mapping identities
 
-The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the Email ID of Zoom users is same as the user principal name (UPN) or email of the users in Microsoft Entra ID. If  this configuration doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map non-Entra IDs](map-non-entra-id.md).
+The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the Email ID of Zoom users is the same as the user principal name (UPN) or email of the users in Microsoft Entra ID. If this configuration doesn't work for your organization, you can provide a custom mapping formula. For more information, see [Map non-Entra IDs](map-non-entra-id.md).
 
 ### Customize content settings
 
