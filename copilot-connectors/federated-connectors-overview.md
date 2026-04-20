@@ -15,7 +15,7 @@ ms.audience: Admin
  
 # Federated connectors overview
  
-Microsoft 365 Copilot supports Federated Copilot connectors to enable organizations to connect their data to Copilot by using Model Context Protocol (MCP). Federated connectors use MCP to access data in real time, allowing Copilot to retrieve up-to-date information directly from external systems. This makes it easy to integrate live, dynamic data sources while the data stays in its original location.
+Microsoft 365 Copilot supports federated Copilot connectors to enable organizations to connect their data to Copilot by using Model Context Protocol (MCP). Federated connectors use MCP to access data in real time, so Copilot can retrieve up-to-date information directly from external systems. This approach makes it easy to integrate live, dynamic data sources while keeping the data in its original location.
 
 By using federated connectors, organizations can extend Copilot to work seamlessly with their existing tools and data to unlock more relevant and timely insights across their workflows.
  
@@ -32,7 +32,7 @@ Federated Copilot connectors:
  
 ## Supported Copilot experiences
  
-Federated Copilot connectors are currently supported in the following Microsoft 365 Copilot experiences:
+Microsoft 365 Copilot currently supports federated Copilot connectors in the following experiences:
 
 - Copilot Chat
 - Copilot in Excel
@@ -120,7 +120,7 @@ Both federated and synced connectors can coexist in your tenant and appear toget
 
 ### Do I need to rerun the CLI cmdlet when Microsoft releases new federated connectors?
 
-The CLI setting applies automatically to future federated connectors. If the toggle is disabled, new connectors appear in a disabled state. If the toggle is enabled, new connectors follow the default rollout behavior.
+The CLI setting automatically applies to future federated connectors. If you disable the toggle, new connectors appear in a disabled state. If you enable the toggle, new connectors follow the default rollout behavior.
  
 ## Related content
  
