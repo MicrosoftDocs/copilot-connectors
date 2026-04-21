@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 04/07/2026
+ms.date: 04/21/2026
 ms.localizationpriority: Medium
 ---
 
@@ -74,9 +74,6 @@ The connector supports the following authentication methods:
 - **Basic authentication**: Use Confluence username and password.
 - **OAuth 1.0a**: Generate a public/private key pair and create an application link. For more information, see [OAuth](https://developer.atlassian.com/server/jira/platform/oauth/#step-1--configure-jira).
 - **OAuth 2.0 (recommended)**: Register an incoming application link with admin scope.
-
-> [!IMPORTANT]
-> Confluence Data Center versions 10.0 and later currently only support the  **Basic authentication** and **OAuth 1.0a** authentication methods.
 
 For OAuth 2.0 setup:
 

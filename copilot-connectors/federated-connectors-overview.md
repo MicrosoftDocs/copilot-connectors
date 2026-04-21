@@ -1,5 +1,5 @@
 ---
-title: Federated connectors overview (early access preview)
+title: Federated connectors overview
 description: Get an overview of MCP-based Microsoft 365 Copilot federated connectors.
 #customer intent: As an admin, I want to learn about federated connectors and whether and how to enable them in the Microsoft 365 admin center.
 author: Lauragra
@@ -7,18 +7,17 @@ ms.author: lauragra
 manager: calvind
 ms.reviewer: mansipakhale
 ms.service: copilot-connectors
-ms.date: 01/29/2026
+ms.date: 04/20/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ms.audience: Admin
 ---
  
-# Federated connectors overview (early access preview)
+# Federated connectors overview
  
-Microsoft 365 Copilot supports federated connectors, a new way to bring your organization's data into Microsoft 365 without traditional indexing. Unlike synced Microsoft 365 Copilot connectors that crawl and index content into Microsoft Graph, federated connectors use a Model Context Protocol (MCP) to read content in real time. This capability allows organizations to connect live, dynamic data sources that can't or shouldn't be indexed, and make it discoverable through Copilot experiences.
- 
-> [!NOTE]
-> Federated connectors are in early access preview and are available only to [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) and [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release) members. Early access preview features are still in development and are subject to change.
+Microsoft 365 Copilot supports federated Copilot connectors to enable organizations to connect their data to Copilot by using Model Context Protocol (MCP). Federated connectors use MCP to access data in real time, so Copilot can retrieve up-to-date information directly from external systems. This approach makes it easy to integrate live, dynamic data sources while keeping the data in its original location.
+
+By using federated connectors, organizations can extend Copilot to work seamlessly with their existing tools and data to unlock more relevant and timely insights across their workflows.
  
 ## What are federated connectors?
  
@@ -33,18 +32,24 @@ Federated Copilot connectors:
  
 ## Supported Copilot experiences
  
-Federated Copilot connectors are currently supported in the **Researcher** agent in Microsoft 365 Copilot.
+Microsoft 365 Copilot currently supports federated Copilot connectors in the following experiences:
+
+- Microsoft 365 Copilot Chat
+- Copilot in Excel
+- Researcher agent
  
 ## Microsoft-published federated connectors
  
 Microsoft provides a set of federated connectors by default. Currently, federated connectors are available for the following data sources:
  
 - Canva
-- HubSpot
-- Linear
-- Intercom
 - Google Calendar
 - Google Contacts
+- HubSpot
+- Intercom
+- Linear
+- LSEG
+- Moody's
 - Notion
  
 The following image shows federated connectors in the **Your connections** list in the Microsoft 365 admin center.
@@ -60,6 +65,7 @@ Admins can:
 - View all the Microsoft-published federated connectors that are available in the tenant on the **Your Connections** tab.
 - Enable or disable connectors at the tenant level.
 - Limit availability to specific Microsoft Entra ID groups by choosing **Add staging** in the **Staged Rollout** column.
+- Bulk disable all federated connectors by using PowerShell cmdlets, and selectively enable specific federated connectors in the Microsoft 365 admin center based on organizational policies and readiness. For more information, see [Manage federated connectors](manage-federated-connectors.md).
  
 > [!NOTE]
 > **Admin review window**
@@ -111,7 +117,12 @@ Synced connectors are supported at an organization level; federated connectors a
 ### Can I use both federated and synced connectors in my tenant?
  
 Both federated and synced connectors can coexist in your tenant and appear together in your connector list.
+
+### Do I need to rerun the CLI cmdlet when Microsoft releases new federated connectors?
+
+The CLI setting automatically applies to future federated connectors. If you disable the toggle, new connectors appear in a disabled state. If you enable the toggle, new connectors follow the default rollout behavior.
  
 ## Related content
  
+- [Manage federated connectors](manage-federated-connectors.md)
 - [Microsoft 365 Copilot connectors overview](overview.md)
