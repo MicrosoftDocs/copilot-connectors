@@ -34,7 +34,7 @@ Federated Copilot connectors:
  
 Microsoft 365 Copilot currently supports federated Copilot connectors in the following experiences:
 
-- Copilot Chat
+- Microsoft 365 Copilot Chat
 - Copilot in Excel
 - Researcher agent
  
