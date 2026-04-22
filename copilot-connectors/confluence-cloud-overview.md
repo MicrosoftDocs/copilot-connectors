@@ -37,12 +37,19 @@ The following table lists common use cases for the Confluence Cloud connector.
 
 | Department/role | Use case | Business benefit |
 | --------------- | -------- | ---------------- |
-| People                  | Summarize onboarding guides, policies, FAQs                     | Faster onboarding, reduced dependency on HR staff. |
-| IT support/help desk    | Retrieve troubleshooting steps or runbooks from Confluence via Copilot | Faster ticket resolution, improved consistency. |
-| Engineering/DevOps      | Access design docs, retrospectives, deployment guides           | Reduced context switching, faster execution.      |
-| Product management      | Query release plans, feature specs, team wikis                  | Better alignment, faster planning cycles.         |
-| Sales/marketing         | Discover case studies, messaging docs, campaign plans           | Improved collaboration, reduced duplicated work.  |
-| Executives/managers     | Ask Copilot for summaries of policy or project updates          | Faster decision-making, better visibility.        |
+| All | How do I submit an expense claim?  | Consolidate policy guidance from multiple knowledge bases into a single answer, reducing confusion and support tickets. |
+| All | Find documents related to the most recent project I'm working on. | Surface relevant project documents instantly, reducing time spent searching across multiple systems. |
+| All | Who should I reach out to as the subject matter expert for Data & Analytics? What is his email address? | Identify key contacts and their details from organizational wikis, reducing time spent finding the right person. |
+| Engineering | Create discussion points for the Sprint Review meeting to ensure all user stories are addressed, focusing on progress and blockers. Include questions to assess the team's comfort with the sprint's workload, task manageability, and unforeseen challenges. | Streamline sprint planning by automatically generating structured discussion points grounded in Confluence documentation. |
+| Engineering | Conduct an in-depth product analysis. Showcase our strengths and pinpoint areas where enhancements are possible. | Leverage internal competitive research docs in Confluence to produce actionable competitive insights. |
+| Product | Create a Product Requirements Document based on the meeting notes in Confluence. | Accelerate PRD creation by synthesizing meeting notes from Confluence into structured product specs. |
+| Product | Write a project report summary . For each item, include a short section with a clear explanation, emphasizing only the most important details. | Generate concise executive summaries from project wiki pages, saving time on manual status reporting. |
+| Marketing | Rewrite this release note as social media post and ensure it complies with our social media standards. | Repurpose Confluence release content into social-ready formats while maintaining brand compliance. |
+| Marketing | Create a detailed go-to-market plan, covering the intended audience, unique value, marketing approach, schedule, and key performance indicators. | Transform product documentation into comprehensive GTM strategies, accelerating time-to-market. |
+| Sales | Examine the account plan from the attachments to spot upsell possibilities using data, product shortcomings, and recent support cases.  | Combine account plans with Confluence knowledge to identify data-driven upsell opportunities. |
+| Helpdesk | Find all HR policies relevant for onboarding new employees, and present them in a table format. | Aggregate onboarding guides and policies from Confluence into structured, easy-to-follow formats for faster onboarding. |
+| Customer support | Compose a brief, assertive, and positive reply to a customer's concern. Address the objection constructively and highlight how it can be leveraged as an opportunity. | Draft customer responses grounded in Confluence knowledge base articles, improving response quality and consistency. |
+| Security | Develop a thorough incident response strategy. Include detection, communication, containment, and recovery steps, customized to the situation's unique risks. | Build comprehensive incident response plans leveraging institutional knowledge from Confluence runbooks and past incident records. |
 
 ## Build agents with the Confluence Cloud connector
 
