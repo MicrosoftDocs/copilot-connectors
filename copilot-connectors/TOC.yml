@@ -489,13 +489,13 @@ items:
     - name: SharePoint Server (preview)
       items:
       - name: Overview
-        href: sharepoint-server-overview.md
-      - name: Set up the SharePoint service
-        href: sharepoint-server-admin-setup.md
-      - name: Deployment guide
-        href: sharepoint-server-deployment.md
+        href: sharepoint-server-connector-overview.md
+      - name: Configure SharePoint Server
+        href: sharepoint-server-configuration.md
+      - name: Deploy SharePoint Server connector
+        href: sharepoint-server-connector-deployment.md
       - name: Troubleshooting
-        href: sharepoint-server-troubleshooting.md
+        href: sharepoint-server-connector-troubleshooting.md
     - name: Shortcut Story
       items:
       - name: Overview
