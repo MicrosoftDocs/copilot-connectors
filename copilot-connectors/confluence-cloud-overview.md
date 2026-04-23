@@ -39,7 +39,7 @@ The following table lists common use cases for the Confluence Cloud connector.
 | --------------- | -------- | ---------------- |
 | All | How do I submit an expense claim?  | Consolidate policy guidance from multiple knowledge bases into a single answer, reducing confusion and support tickets. |
 | All | Find documents related to the most recent project I'm working on. | Surface relevant project documents instantly, reducing time spent searching across multiple systems. |
-| All | Who should I reach out to as the subject matter expert for Data & Analytics? What is his email address? | Identify key contacts and their details from organizational wikis, reducing time spent finding the right person. |
+| All | Who is the subject matter expert for Data & Analytics, and where can I find their contact information? | Identify key contacts and their details from organizational wikis, reducing time spent finding the right person. |
 | Engineering | Create discussion points for the Sprint Review meeting to ensure all user stories are addressed, focusing on progress and blockers. Include questions to assess the team's comfort with the sprint's workload, task manageability, and unforeseen challenges. | Streamline sprint planning by automatically generating structured discussion points grounded in Confluence documentation. |
 | Engineering | Conduct an in-depth product analysis. Showcase our strengths and pinpoint areas where enhancements are possible. | Leverage internal competitive research docs in Confluence to produce actionable competitive insights. |
 | Product | Create a Product Requirements Document based on the meeting notes in Confluence. | Accelerate PRD creation by synthesizing meeting notes from Confluence into structured product specs. |
