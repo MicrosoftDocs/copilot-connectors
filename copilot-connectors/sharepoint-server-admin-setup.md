@@ -1,46 +1,78 @@
 ---
-ms.date: 04/22/2026
-title: "Configure SharePoint Server"
+title: "Set up the SharePoint Server service for connector ingestion"
 ms.author: venk
 author: venk
 manager: srramam
+ms.reviewer: zezhangzhao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.localizationpriority: medium
-description: "Learn how to install the Microsoft Graph connector agent and configure authentication to prepare your environment for the SharePoint Server connector."
+ms.date: 04/22/2026
+ms.localizationpriority: Medium
+description: "Get the steps that the SharePoint Server admin needs to complete for your organization to configure the SharePoint Server Microsoft 365 Copilot connector."
 ---
 
-# Configure SharePoint Server
+# Set up the SharePoint Server service for connector ingestion
 
-Before you can deploy the SharePoint Server connector, you need to prepare your SharePoint Server environment. This page covers installing the Microsoft Graph connector agent—a Windows service that acts as a secure bridge between your SharePoint farm and Microsoft 365—and configuring authentication prerequisites.
+The SharePoint Server connector enables Microsoft 365 Copilot to index content from your on-premises SharePoint Server farm, making it discoverable through Copilot experiences while respecting your existing SharePoint permissions.
 
-Complete the steps in this page before proceeding to [Deploy the SharePoint Server connector](sharepoint-server-connector-deployment.md).
+This article provides information about the configuration steps that SharePoint Server admins need to complete in order for your organization to deploy the [SharePoint Server connector](sharepoint-server-overview.md).
+
+For information about how to deploy the connector, see [Deploy the SharePoint Server connector](sharepoint-server-connector-deployment.md).
 
 ## Setup checklist
 
+The following checklists list the steps involved in configuring the environment and setting up the connector prerequisites.
+
+### Configure the environment
+
 | Task | Role |
-| ---- | ------ |
+| ---- | ---- |
+| [Identify the SharePoint Server instance URL](#identify-the-sharepoint-server-instance-url) | SharePoint Server farm administrator |
 | [Install & Configure the Microsoft Graph connector agent](#install--configure-the-microsoft-graph-connector-agent) | AI administrator (agent installation), Azure App admin (app registration in Entra ID) |
 | [Sync Active Directory to Microsoft Entra ID](#sync-active-directory-to-microsoft-entra-id) (required for the default "Only people with access" permission mode) | Entra ID admin |
+
+### Set up prerequisites
+
+| Task | Role |
+| ---- | ---- |
 | [Configure authentication](#configure-authentication) | Basic / Windows (NTLM): SharePoint Server farm administrator. Microsoft Entra ID OIDC: Entra ID admin (Microsoft Entra ID Connect installation, app registration), SharePoint Server farm administrator (SharePoint trust configuration) |
 
-## Install & Configure the Microsoft Graph connector agent
+## Configure the SharePoint Server environment
+
+The following sections describe the admin tasks to configure the SharePoint Server environment to enable and optimize the connection.
+
+### Identify the SharePoint Server instance URL
+
+The SharePoint Server instance URL is the root URL of the web application you want to crawl (for example, `https://sharepoint.contoso.com`). You'll need this URL when registering the Microsoft Graph connector agent and when configuring the connector.
+
+To identify the URL:
+
+1. Open SharePoint Central Administration as a SharePoint Server farm administrator.
+1. Go to **Application Management** > **Manage web applications**.
+1. Select the web application that hosts the content you want to index, and note the URL listed in the **URL** column.
+
+If you plan to crawl multiple site collections under different host headers, record each URL — you'll reference all of them during connector setup and OIDC configuration.
+
+### Install & Configure the Microsoft Graph connector agent
 
 The Microsoft Graph connector agent (GCA) is a Windows service that crawls your SharePoint Server content locally and securely sends it to Microsoft 365 for indexing - without exposing your internal farm directly to the internet. You must install and register the Microsoft Graph connector agent to use the SharePoint Server connector. See [Install and configure the Microsoft Graph connector agent](connector-agent.md) to learn more. The agent can be installed on the SharePoint server itself or on any machine with network access to the farm.
 
-
-## Sync Active Directory to Microsoft Entra ID
+### Sync Active Directory to Microsoft Entra ID
 
 The connector defaults to **Only people with access** permission mode, which respects your SharePoint Server permissions and ensures users see only content they're authorized to access.
 
 > [!IMPORTANT]
 > Active Directory sync is a critical prerequisite for this permission mode. Without it, the connector cannot map SharePoint Server permissions to Microsoft 365 user identities, and the **Only people with access** mode will not function correctly.
 
-See [What is Microsoft Entra Connect Sync?](/entra/identity/hybrid/connect/how-to-connect-sync-whatis) to learn more and configure the sync.
+For more information, see [What is Microsoft Entra Connect Sync?](/entra/identity/hybrid/connect/how-to-connect-sync-whatis).
 
-## Configure authentication
+## Set up connector prerequisites
+
+The following sections describe the prerequisite steps to complete before deploying the SharePoint Server connector.
+
+### Configure authentication
 
 The SharePoint Server connector supports the following authentication types:
 
@@ -51,14 +83,12 @@ The SharePoint Server connector supports the following authentication types:
 > [!NOTE]
 > - At a minimum, the account used for authentication during connection setup must have **Full Read** permission at the Web Application level in SharePoint Server, regardless of the authentication type selected. For indexing, we recommend granting this account full control at the Web Application level or making it a SharePoint Server farm administrator. Web Application-level permissions are set in SharePoint Central Administration and require SharePoint Server farm administrator access.
 > - Items this account doesn't have access to are skipped during indexing.
+> - Active Directory Federation Services (ADFS) authentication is not supported. If your SharePoint farm uses ADFS as its identity provider, use Basic, Windows (NTLM), or Microsoft Entra ID OIDC authentication instead.
 
-> [!NOTE]
-> Active Directory Federation Services (ADFS) authentication is not supported. If your SharePoint farm uses ADFS as its identity provider, use Basic, Windows (NTLM), or Microsoft Entra ID OIDC authentication instead.
-
-> [!NOTE]
+> [!TIP]
 > If you're using Basic or Windows (NTLM) authentication, proceed to [Deploy the SharePoint Server connector](sharepoint-server-connector-deployment.md). If you're using Microsoft Entra ID OIDC, complete the steps in the following section.
 
-### Set up Microsoft Entra ID OIDC authentication
+#### Set up Microsoft Entra ID OIDC authentication
 
 OIDC (OpenID Connect) is a modern authentication protocol that lets SharePoint Server verify identities through Microsoft Entra ID, enabling token-based access and single sign-on without passing credentials directly. It's the most secure option, but requires the additional setup steps in this section.
 
@@ -68,16 +98,16 @@ Before using Microsoft Entra ID-based authentication, ensure the following prere
 - Microsoft Entra ID-based authentication is supported only for SharePoint Server Subscription Edition. Make sure the farm is patched to the November 2024 build (16.0.17928.20238) or later. Refer to [SharePoint Updates](/officeupdates/sharepoint-updates).
 - You'll need to set up OpenID Connect (OIDC) with Microsoft Entra ID. Since OpenID Connect (OIDC) requires HTTPS, ensure your SharePoint web applications are configured to use HTTPS.
 
-#### Install Microsoft Entra ID Connect
+##### Install Microsoft Entra ID Connect
 
 1. [Download](https://www.microsoft.com/download/details.aspx?id=47594) Microsoft Entra ID Connect.
 1. Follow the [steps](/entra/identity/hybrid/connect/how-to-connect-install-roadmap) to install Microsoft Entra ID Connect.
 
-#### Set up OIDC with Microsoft Entra ID
+##### Set up OIDC with Microsoft Entra ID
 
 Set up and enable OpenID Connect (OIDC) with Microsoft Entra ID using the steps described in [Set up OIDC authentication in SharePoint Server with Microsoft Entra ID](/sharepoint/security-for-sharepoint-server/set-up-oidc-auth-in-sharepoint-server-with-msaad). This step requires you to set up a third-party application in the Microsoft Entra admin center. Ensure that you have admin rights to perform this step.
 
-#### Configure Expose an API
+##### Configure Expose an API
 
 1. Browse to the Microsoft Entra admin center and sign in as a Microsoft Entra ID admin.
 1. Select **App registrations**, and choose the application that you created to enable OIDC authentication for your SharePoint Server web app.
@@ -95,7 +125,7 @@ Set up and enable OpenID Connect (OIDC) with Microsoft Entra ID using the steps 
 
    ![Screenshot that shows how to Add a Client Application.](media/sharepoint-server-connector/add-a-client-application.png)
 
-#### Configure the scoped client identifier
+##### Configure the scoped client identifier
 
 When using OIDC authentication with SharePoint Server, you must additionally set the `ScopedClientIdentifier` property on the `SPTrustedIdentityTokenIssuer` for the SharePoint Server connector to authenticate and crawl your content. This property maps each SharePoint site URL to an Entra ID application registration (the app identity configured during your OIDC setup), so SharePoint knows which app is permitted to access each site.
 
