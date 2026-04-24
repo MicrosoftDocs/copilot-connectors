@@ -1,6 +1,6 @@
 ---
 ms.date: 04/22/2026
-title: "SharePoint Server Copilot connector overview"
+title: "SharePoint Server connector overview"
 ms.author: venk
 author: venk
 manager: srramam
@@ -9,12 +9,12 @@ ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-description: "Learn about the capabilities, limitations, and use cases for the SharePoint Server Copilot connector."
+description: "Learn about the capabilities, limitations, and use cases for the SharePoint Server Microsoft 365 Copilot connector."
 ---
 
-# SharePoint Server Copilot connector overview
+# SharePoint Server connector overview
 
-The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for and reason over content stored in a SharePoint Server farm across Microsoft Search, Copilot Search, Copilot Chat, and Declarative Agents. It can crawl documents and site pages from SharePoint Server 2016, 2019, and Subscription Edition (SPSE) farms.
+The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for and reason over content stored in a SharePoint Server farm across Microsoft Search, Copilot Search, Copilot Chat, and declarative agents. It can crawl documents and site pages from SharePoint Server 2016, 2019, and Subscription Edition (SPSE) farms.
 
 ## Why use the SharePoint Server connector to index your data?
 
@@ -109,7 +109,7 @@ The SharePoint Server connector has the following limitations:
 
 ## Item types indexed from SharePoint Server
 
-The SharePoint Server connector indexes the following item types:
+The SharePoint Server connector indexes the following item types.
 
 | Item type | Description |
 |-----------|-------------|
@@ -124,9 +124,9 @@ The SharePoint Server connector supports two access permission modes that contro
 - **Everyone** – All users in your organization can see the indexed content, regardless of their SharePoint permissions.
 
 > [!NOTE]
-> Distribution Lists are not supported as Access Control Lists in SharePoint Server. If your SharePoint permissions include groups that contain nested Distribution Lists, members of those Distribution Lists may gain unintended access to content through the connector.
+> Distribution lists are not supported as access control lists (ACLs) in SharePoint Server. If your SharePoint permissions include groups that contain nested Distribution Lists, members of those distribution lists might gain unintended access to content through the connector.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Configure SharePoint Server](sharepoint-server-configuration.md)
+> [Configure SharePoint Server](sharepoint-server-admin-setup.md)
