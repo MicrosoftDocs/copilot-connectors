@@ -64,7 +64,7 @@ The Microsoft Graph connector agent (GCA) is a Windows service that crawls your 
 The connector defaults to **Only people with access** permission mode, which respects your SharePoint Server permissions and ensures users see only content they're authorized to access.
 
 > [!IMPORTANT]
-> Active Directory sync is a critical prerequisite for this permission mode. Without it, the connector cannot map SharePoint Server permissions to Microsoft 365 user identities, and the **Only people with access** mode will not function correctly.
+> Active Directory sync is a critical prerequisite for this permission mode. Without it, the connector can't map SharePoint Server permissions to Microsoft 365 user identities, and the **Only people with access** mode doesn't function correctly.
 
 For more information, see [What is Microsoft Entra Connect Sync?](/entra/identity/hybrid/connect/how-to-connect-sync-whatis).
 
@@ -77,12 +77,12 @@ The following sections describe the prerequisite steps to complete before deploy
 The SharePoint Server connector supports the following authentication types:
 
 - **Basic** - Not recommended. Included for compatibility with legacy systems, but will be removed in the future.
-- **Windows (NTLM)** - Use the Domain\username format in the **Username** field. Only NTLM is currently supported; Kerberos is not supported.
+- **Windows (NTLM)** - Use the Domain\username format in the **Username** field. Only NTLM is currently supported; Kerberos isn't supported.
 - **Microsoft Entra ID OIDC** - Requires additional configuration described in the following sections.
 
 > [!NOTE]
-> - At a minimum, the account used for authentication during connection setup must have **Full Read** permission at the Web Application level in SharePoint Server, regardless of the authentication type selected. For indexing, we recommend granting this account full control at the Web Application level or making it a SharePoint Server farm administrator. Web Application-level permissions are set in SharePoint Central Administration and require SharePoint Server farm administrator access.
-> - Items this account doesn't have access to are skipped during indexing.
+> - At a minimum, the account used for authentication during connection setup must have **Full Read** permission at the Web Application level in SharePoint Server, regardless of the authentication type selected. For indexing, grant this account full control at the Web Application level or make it a SharePoint Server farm administrator. Set Web Application-level permissions in SharePoint Central Administration and require SharePoint Server farm administrator access.
+> - The indexing process skips items that this account doesn't have access to.
 > - Active Directory Federation Services (ADFS) authentication is not supported. If your SharePoint farm uses ADFS as its identity provider, use Basic, Windows (NTLM), or Microsoft Entra ID OIDC authentication instead.
 
 > [!TIP]
@@ -90,13 +90,13 @@ The SharePoint Server connector supports the following authentication types:
 
 #### Set up Microsoft Entra ID OIDC authentication
 
-OIDC (OpenID Connect) is a modern authentication protocol that lets SharePoint Server verify identities through Microsoft Entra ID, enabling token-based access and single sign-on without passing credentials directly. It's the most secure option, but requires the additional setup steps in this section.
+OIDC (OpenID Connect) is a modern authentication protocol that lets SharePoint Server verify identities through Microsoft Entra ID. By using OIDC, you can enable token-based access and single sign-on without passing credentials directly. It's the most secure option, but it requires the additional setup steps in this section.
 
 Before using Microsoft Entra ID-based authentication, ensure the following prerequisites are met:
 
-- Microsoft Entra ID-based authentication is supported for Microsoft Graph connector agent (GCA) version 3.1.2.0 and above. Upgrade your agent before proceeding. See [Install and configure the Microsoft Graph connector agent](connector-agent.md) to learn more.
-- Microsoft Entra ID-based authentication is supported only for SharePoint Server Subscription Edition. Make sure the farm is patched to the November 2024 build (16.0.17928.20238) or later. Refer to [SharePoint Updates](/officeupdates/sharepoint-updates).
-- You'll need to set up OpenID Connect (OIDC) with Microsoft Entra ID. Since OpenID Connect (OIDC) requires HTTPS, ensure your SharePoint web applications are configured to use HTTPS.
+- Microsoft Graph connector agent (GCA) version 3.1.2.0 and later supports Microsoft Entra ID-based authentication. Upgrade your agent before proceeding. To learn more, see [Install and configure the Microsoft Graph connector agent](connector-agent.md).
+- Microsoft Entra ID-based authentication supports only SharePoint Server Subscription Edition. Make sure the farm is patched to the November 2024 build (16.0.17928.20238) or later. For more information, see [SharePoint Updates](/officeupdates/sharepoint-updates).
+- You need to set up OpenID Connect (OIDC) with Microsoft Entra ID. Since OpenID Connect (OIDC) requires HTTPS, ensure your SharePoint web applications are configured to use HTTPS.
 
 ##### Install Microsoft Entra ID Connect
 
@@ -105,7 +105,7 @@ Before using Microsoft Entra ID-based authentication, ensure the following prere
 
 ##### Set up OIDC with Microsoft Entra ID
 
-Set up and enable OpenID Connect (OIDC) with Microsoft Entra ID using the steps described in [Set up OIDC authentication in SharePoint Server with Microsoft Entra ID](/sharepoint/security-for-sharepoint-server/set-up-oidc-auth-in-sharepoint-server-with-msaad). This step requires you to set up a third-party application in the Microsoft Entra admin center. Ensure that you have admin rights to perform this step.
+Set up and enable OpenID Connect (OIDC) with Microsoft Entra ID by using the steps described in [Set up OIDC authentication in SharePoint Server with Microsoft Entra ID](/sharepoint/security-for-sharepoint-server/set-up-oidc-auth-in-sharepoint-server-with-msaad). This step requires you to set up a third-party application in the Microsoft Entra admin center. Ensure that you have admin rights to perform this step.
 
 ##### Configure Expose an API
 
@@ -127,15 +127,15 @@ Set up and enable OpenID Connect (OIDC) with Microsoft Entra ID using the steps 
 
 ##### Configure the scoped client identifier
 
-When using OIDC authentication with SharePoint Server, you must additionally set the `ScopedClientIdentifier` property on the `SPTrustedIdentityTokenIssuer` for the SharePoint Server connector to authenticate and crawl your content. This property maps each SharePoint site URL to an Entra ID application registration (the app identity configured during your OIDC setup), so SharePoint knows which app is permitted to access each site.
+When using OIDC authentication with SharePoint Server, you must set the `ScopedClientIdentifier` property on the `SPTrustedIdentityTokenIssuer` for the SharePoint Server connector to authenticate and crawl your content. This property maps each SharePoint site URL to an Entra ID application registration (the app identity configured during your OIDC setup), so SharePoint knows which app is permitted to access each site.
 
 > [!IMPORTANT]
-> Setting the `ScopedClientIdentifier` is not required for OIDC to function in SharePoint Server itself, but it is mandatory for the connector. Without this mapping, SharePoint Server cannot verify the connector's identity for the site, resulting in a 401 Unauthorized error.
+> Setting the `ScopedClientIdentifier` property isn't required for OIDC to function in SharePoint Server itself, but it's mandatory for the connector. Without this mapping, SharePoint Server can't verify the connector's identity for the site, resulting in a 401 Unauthorized error.
 
 Before you begin, have the following ready:
 
 - **Application ID URI**: Set in the [Configure Expose an API](#configure-expose-an-api) section above (for example, `api://xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`).
-- **Token issuer name**: The name of the `SPTrustedIdentityTokenIssuer` — the SharePoint object that trusts your Entra ID identity provider, created in the [Set up OIDC with Microsoft Entra ID](#set-up-oidc-with-microsoft-entra-id) section. If you don't remember the name, run `Get-SPTrustedIdentityTokenIssuer` without parameters to list all configured issuers.
+- **Token issuer name**: The name of the `SPTrustedIdentityTokenIssuer` - the SharePoint object that trusts your Entra ID identity provider, created in the [Set up OIDC with Microsoft Entra ID](#set-up-oidc-with-microsoft-entra-id) section. If you don't remember the name, run `Get-SPTrustedIdentityTokenIssuer` without parameters to list all configured issuers.
 
 Run the following PowerShell commands in the SharePoint Management Shell as a SharePoint Server farm administrator:
 
@@ -160,7 +160,7 @@ $t.Update()
 | `<EntraIdAppIdentifierUri>` | Application ID URI of the Entra ID app registration | `api://xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
 
 > [!TIP]
-> If you are crawling multiple site collections (for example, `https://portal.contoso.com` and `https://hr.contoso.com`), you must run `$t.ScopedClientIdentifier.Add()` for each unique URL. You can either batch multiple `.Add()` calls and then run `$t.Update()` once, or call `$t.Update()` after each individual `.Add()`.
+> If you're crawling multiple site collections (for example, `https://portal.contoso.com` and `https://hr.contoso.com`), you must run `$t.ScopedClientIdentifier.Add()` for each unique URL. You can either batch multiple `.Add()` calls and then run `$t.Update()` once, or call `$t.Update()` after each individual `.Add()`.
 
 ## Next step
 
