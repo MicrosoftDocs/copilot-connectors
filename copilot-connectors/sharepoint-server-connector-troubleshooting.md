@@ -16,8 +16,8 @@ description: "Resolve common authentication, indexing, and configuration errors 
 
 This article covers common errors you might encounter when deploying or running the SharePoint Server connector, and steps to resolve them.
 
-- For authentication and OIDC setup errors, see [Configure SharePoint Server](sharepoint-server-configuration.md).
-- For errors during the Microsoft 365 admin center deployment steps, see [Deploy the SharePoint Server connector](sharepoint-server-connector-deployment.md).
+- For authentication and OIDC setup errors, see [Configure SharePoint Server](sharepoint-server-admin-setup.md).
+- For errors during the Microsoft 365 admin center deployment steps, see [Deploy the SharePoint Server connector](sharepoint-server-deployment.md).
 
 ## Common errors
 
@@ -35,6 +35,6 @@ You might encounter the following errors when you deploy the SharePoint Server c
 
 ## Related content
 
-- [SharePoint Server connector overview](sharepoint-server-connector-overview.md)
-- [Configure SharePoint Server](sharepoint-server-configuration.md)
-- [Deploy the SharePoint Server connector](sharepoint-server-connector-deployment.md)
+- [SharePoint Server connector overview](sharepoint-server-overview.md)
+- [Configure SharePoint Server](sharepoint-server-admin-setup.md)
+- [Deploy the SharePoint Server connector](sharepoint-server-deployment.md)
