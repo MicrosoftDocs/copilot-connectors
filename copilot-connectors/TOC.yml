@@ -486,16 +486,16 @@ items:
         href: servicenow-tickets-deployment.md
       - name: Troubleshooting
         href: servicenow-tickets-troubleshooting.md
-    - name: SharePoint Server (preview)
+    - name: SharePoint Server
       items:
       - name: Overview
-        href: sharepoint-server-connector-overview.md
-      - name: Configure SharePoint Server
-        href: sharepoint-server-configuration.md
-      - name: Deploy SharePoint Server connector
-        href: sharepoint-server-connector-deployment.md
+        href: sharepoint-server-overview.md
+      - name: Set up SharePoint Server
+        href: sharepoint-server-admin.md
+      - name: Deployment guide
+        href: sharepoint-server-deployment.md
       - name: Troubleshooting
-        href: sharepoint-server-connector-troubleshooting.md
+        href: sharepoint-server-troubleshooting.md
     - name: Shortcut Story
       items:
       - name: Overview
