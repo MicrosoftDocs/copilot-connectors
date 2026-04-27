@@ -43,64 +43,110 @@ Use the following steps to help resolve issues:
   - Regenerate the API token if it expired or was deleted.
   - Confirm that the username and token match the Jira account used for crawling.
 
-## Scenario-specific troubleshooting steps
-
 ### Project or issue not crawled - Jira Cloud
 
-Use this scenario when a Jira project or issue doesn't appear in the connector content.
+Use this scenario when a Jira project or issue doesn't appear in the connector content set.
 
-- Confirm the project is included in the connector configuration in the Microsoft 365 admin center.
-- Verify that the connector account can open the project and the issue in Jira.
-- Confirm that the connector account has **Browse projects** permission by using Permission helper.  
-  ![JiraPermissionHelper](copilot-connectors/media/JiraPermissionHelper.png)
-- If only one issue is missing, verify whether the issue has a different issue-level security configuration.
-- Confirm whether the issue was recently created and might still be pending the next crawl cycle.
+1. Confirm the project is in scope.
+   - Open the Jira connector in the Microsoft 365 admin center.
+   - Go to `Edit -> Content` and expand **Choose projects and filter data**.
+   - Verify whether the connection crawls the entire site or specific projects.
+   - Capture a screenshot of the configuration.
+
+2. Verify that the connector account can access the project and issue in Jira.
+   - Sign in using the connector authentication account.
+   - Open the project and capture a screenshot.
+   - Open the issue directly and confirm it loads successfully.
+   - If the issue cannot be opened, this indicates a Jira permissions issue.
+
+3. Confirm project permissions using Permission helper.
+   - Navigate to `Project settings -> Permissions`.
+   - Open **Permission helper**.
+   - Select the connector account and an issue.
+   - Select **Browse Projects** and submit.
+   - Capture screenshots of the result.
+   ![JiraPermissionHelper](copilot-connectors/media/JiraPermissionHelper.png)
+
+4. If only one issue is missing, check issue-level restrictions.
+   - Open the issue and verify whether a different security level is applied.
+   - Capture screenshots of the issue details and security configuration if applicable.
+
+5. Confirm whether the issue is pending ingestion.
+   - Record the issue creation time.
+   - Compare it with the expected crawl timing.
 
 ### Issue indexed but not searchable due to permissions - Jira Cloud
 
-Use this scenario when an issue has been crawled but isn't returned in Copilot or Microsoft Search.
+Use this scenario when an issue has been crawled and indexed, but isn't returned due to access issues.
 
-- Confirm that the issue is present in the index by using Index Browser.
-- Use Jira Permission helper to verify how access is granted to the affected user.  
-  ![JiraPermissionHelper](copilot-connectors/media/JiraPermissionHelper.png)
-- Review the project permission scheme and identify the group or role that grants access.
-- If access is granted through a project role, collect the role identifier.
-- Compare the Jira permission result with the Index Browser result to identify mismatches.
+1. Confirm that the issue is present in the index.
+   - Open Index Browser and search using the exact issue ID.
+   - Capture screenshots showing the item and access result.
+
+2. Verify access using Jira Permission helper.
+   - Navigate to `Project settings -> Permissions`.
+   - Open **Permission helper**.
+   - Select the affected user and issue.
+   - Select **Browse Projects** and submit.
+   - Capture screenshots showing the result and granting group or role.
+   ![JiraPermissionHelper](copilot-connectors/media/JiraPermissionHelper.png)
+
+3. Review the project permission scheme.
+   - Capture entries related to issue visibility.
+   - Record group names and project roles.
+
+4. If access is role-based, collect role details.
+   - Open:
+     `https://<your-jira-site>.atlassian.net/rest/api/3/project/<projectKey>/role`
+   - Record the role URL and `roleId`.
+
+5. Compare Jira access with Index Browser.
+   - Document whether access is granted or denied in both.
+   - Identify mismatches between expected and actual access.
 
 ### Issue-level security not working - Jira Cloud
 
 Use this scenario when issue-level security isn't enforced as expected.
 
-- Confirm that the issue has an assigned issue security level.  
-  ![IssueLevelSecurity](copilot-connectors/media/IssueLevelSecurity.png)
-- Capture the issue security scheme and the configured security levels.  
-  ![IssueLevelSecurityScheme](copilot-connectors/media/IssueLevelSecurityScheme.png)
-- Compare the expected Jira access with the Index Browser access result.
+1. Confirm that an issue security level is assigned.
+   - Open the issue and capture the assigned security level.
+   ![IssueLevelSecurity](copilot-connectors/media/IssueLevelSecurity.png)
 
-[!Note]: Configurations that rely on **Group custom field values** aren't currently supported.
+2. Capture the issue security scheme.
+   - Open the issue configuration and navigate to security settings.
+   - Capture the scheme name, levels, and associated rules.
+   ![IssueLevelSecurityScheme](copilot-connectors/media/IssueLevelSecurityScheme.png)
+
+3. Compare Jira security with Index Browser behavior.
+   - Capture screenshots showing access results for the affected user.
+
+**Note:** Configurations that rely on **Group custom field values** aren't currently supported.
 
 ### Oversharing - Jira Cloud
 
-Use this scenario when a user can access Jira content they shouldn't have access to.
+Use this scenario when a user can access content they shouldn't have access to.
 
 If Index Browser shows `access denied`:
 
-- Update the issue content, for example by editing the summary or description.
-- Wait for the next crawl and propagation cycle.
-- Test access again for the same user.
-- Validate the behavior with another issue the user hasn't previously accessed.
+1. Confirm whether access was recently removed in Jira.
+2. Update the issue content, such as editing the summary or description.
+3. Wait for the next crawl and propagation.
+4. Test again using the same user.
+5. Test another issue the user hasn't accessed before.
 
 If Index Browser shows `access granted`:
 
-- Confirm that the user can't open the issue in Jira.
-- Capture the Jira permission configuration that should deny access.
-- Capture Index Browser showing `access granted` for the affected user.
+1. Confirm that the user can't open the issue in Jira.
+2. Capture the Jira permission configuration that should deny access.
+3. Capture Index Browser showing `access granted`.
 
-### Error code 1010 - external group quota - Jira Cloud
+### Error Code 1010 - external group quota - Jira Cloud
 
-Use this scenario when error code `1010` indicates that the tenant has reached the external group quota.
+Use this scenario when error code `1010` indicates the tenant has reached the external group quota.
 
 `External groups per Microsoft 365 tenant has reached the 100,000 quota.`
+
+This typically occurs when a large number of external groups are created during ACL ingestion.
 
 - Request a quota increase for external groups in the Microsoft 365 tenant.
 
