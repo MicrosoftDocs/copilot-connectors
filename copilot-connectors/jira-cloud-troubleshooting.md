@@ -59,7 +59,7 @@ Use this scenario when a Jira project or issue doesn't appear in the connector c
    - Open the issue directly and confirm it loads successfully.
    - If the issue cannot be opened, this indicates a Jira permissions issue.
 
-3. Confirm project permissions using Permission helper.
+3. Confirm project permissions using the permission helper.
    - Navigate to `Project settings -> Permissions`.
    - Open **Permission helper**.
    - Select the connector account and an issue.
