@@ -79,7 +79,6 @@ Use this scenario when issue-level security isn't enforced as expected.
 
 [!Note]: Configurations that rely on **Group custom field values** aren't currently supported.
 
-
 ### Oversharing - Jira Cloud
 
 Use this scenario when a user can access Jira content they shouldn't have access to.
