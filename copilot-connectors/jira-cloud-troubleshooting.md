@@ -110,7 +110,7 @@ Use this scenario when issue-level security isn't enforced as expected.
 
 1. Confirm that an issue security level is assigned.
    - Open the issue and capture the assigned security level.
-   ![IssueLevelSecurity](copilot-connectors/media/jira-cloud/IssueLevelSecurity.png)
+ :::image type="content" source="media/jira-cloud/issuelevelsecurity.png" alt-text="Screenshot of an issue Level security." lightbox="media/jira-cloud/issuelevelsecurity.png.png":::
 
 2. Capture the issue security scheme.
    - Open the issue configuration and navigate to security settings.
