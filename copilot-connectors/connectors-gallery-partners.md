@@ -8,7 +8,7 @@ ms.topic: landing-page
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Find a list of Microsoft 365 Copilot connectors built and supported by partners, organized by categories, including a description and link to each connector website."
-ms.date: 04/17/2026
+ms.date: 04/27/2026
 ---
 # Partner-built connectors gallery
 
@@ -20,7 +20,7 @@ This article provides a list of the partner connectors that are available across
 
 ## Certified for Microsoft 365 Copilot
 
-The following partner-built connectors are certified for Microsoft 365 Copilot. This certification means the connector meets Microsoft requirements for compatibility, quality, and security for Microsoft 365 Copilot experiences. 
+The following partner-built connectors are certified for Microsoft 365 Copilot. This certification means the connectors are ready for enterprise use and were validated for consistent retrieval behavior across Copilot and Microsoft Search experiences.
 
 | Connector name | Publisher | Description | Learn more |
 |:------ |:----------- |:----------- |:----------- |
