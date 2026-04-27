@@ -140,7 +140,7 @@ If Index Browser shows `access granted`:
 2. Capture the Jira permission configuration that should deny access.
 3. Capture Index Browser showing `access granted`.
 
-### Error Code 1010 - external group quota - Jira Cloud
+### Error code 1010 - external group quota - Jira Cloud
 
 Use this scenario when error code `1010` indicates the tenant has reached the external group quota.
 
