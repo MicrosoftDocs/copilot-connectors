@@ -75,7 +75,7 @@ Use this scenario when a Jira project or issue doesn't appear in the connector c
    - Record the issue creation time.
    - Compare it with the expected crawl timing.
 
-### Issue indexed but not searchable due to permissions - Jira Cloud
+## Issue indexed but not searchable due to permissions
 
 Use this scenario when an issue has been crawled and indexed, but isn't returned due to access issues.
 
@@ -104,7 +104,7 @@ Use this scenario when an issue has been crawled and indexed, but isn't returned
    - Document whether access is granted or denied in both.
    - Identify mismatches between expected and actual access.
 
-### Issue-level security not working - Jira Cloud
+## Issue-level security not working
 
 Use this scenario when issue-level security isn't enforced as expected.
 
@@ -122,7 +122,7 @@ Use this scenario when issue-level security isn't enforced as expected.
 
 **Note:** Configurations that rely on **Group custom field values** aren't currently supported.
 
-### Oversharing - Jira Cloud
+## Oversharing
 
 Use this scenario when a user can access content they shouldn't have access to.
 
@@ -140,7 +140,7 @@ If Index Browser shows `access granted`:
 2. Capture the Jira permission configuration that should deny access.
 3. Capture Index Browser showing `access granted`.
 
-### Error code 1010 - external group quota - Jira Cloud
+## Error code 1010 - external group quota
 
 Use this scenario when error code `1010` indicates the tenant has reached the external group quota.
 
