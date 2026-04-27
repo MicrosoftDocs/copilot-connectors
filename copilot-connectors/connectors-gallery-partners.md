@@ -20,7 +20,7 @@ This article provides a list of the partner connectors that are available across
 
 ## Certified for Microsoft 365 Copilot
 
-The following partner-built connectors are certified for Microsoft 365 Copilot. This certification means the connector is ready for enterprise use and was validated for consistent retrieval behavior across Copilot and search experiences.
+The following partner-built connectors are certified for Microsoft 365 Copilot. This certification means the connectors are ready for enterprise use and were validated for consistent retrieval behavior across Copilot and Microsoft Search experiences.
 
 | Connector name | Publisher | Description | Learn more |
 |:------ |:----------- |:----------- |:----------- |
