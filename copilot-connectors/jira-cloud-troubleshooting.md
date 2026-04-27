@@ -65,7 +65,7 @@ Use this scenario when a Jira project or issue doesn't appear in the connector c
    - Select the connector account and an issue.
    - Select **Browse Projects** and submit.
    - Capture screenshots of the result.
-   ![JiraPermissionHelper](copilot-connectors/media/jira-cloud/JiraPermissionHelper.png)
+ :::image type="content" source="media/jira-cloud/jirapermissionhelper.png" alt-text="Screenshot of a Jira permission helper." lightbox="media/jira-cloud/jirapermissionhelper.png":::
 
 4. If only one issue is missing, check issue-level restrictions.
    - Open the issue and verify whether a different security level is applied.
@@ -89,7 +89,7 @@ Use this scenario when an issue has been crawled and indexed, but isn't returned
    - Select the affected user and issue.
    - Select **Browse Projects** and submit.
    - Capture screenshots showing the result and granting group or role.
-   ![JiraPermissionHelper](copilot-connectors/media/jira-cloud/JiraPermissionHelper.png)
+ :::image type="content" source="media/jira-cloud/jirapermissionhelper.png" alt-text="Screenshot of a Jira permission helper." lightbox="media/jira-cloud/jirapermissionhelper.png":::
 
 3. Review the project permission scheme.
    - Capture entries related to issue visibility.
@@ -110,12 +110,12 @@ Use this scenario when issue-level security isn't enforced as expected.
 
 1. Confirm that an issue security level is assigned.
    - Open the issue and capture the assigned security level.
- :::image type="content" source="media/jira-cloud/issuelevelsecurity.png" alt-text="Screenshot of an issue Level security." lightbox="media/jira-cloud/issuelevelsecurity.png.png":::
+ :::image type="content" source="media/jira-cloud/issuelevelsecurity.png" alt-text="Screenshot of an issue level security." lightbox="media/jira-cloud/issuelevelsecurity.png":::
 
 2. Capture the issue security scheme.
    - Open the issue configuration and navigate to security settings.
    - Capture the scheme name, levels, and associated rules.
- :::image type="content" source="media/jira-cloud/IssueLevelSecurityScheme.png" alt-text="Screenshot of an issue Level security scheme." lightbox="media/jira-cloud/IssueLevelSecurityScheme.png":::
+ :::image type="content" source="media/jira-cloud/issuelevelsecurityscheme.png" alt-text="Screenshot of an issue level security scheme." lightbox="media/jira-cloud/issuelevelsecurityscheme.png":::
 
 3. Compare Jira security with Index Browser behavior.
    - Capture screenshots showing access results for the affected user.
