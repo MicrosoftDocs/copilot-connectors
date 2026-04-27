@@ -190,17 +190,17 @@ The following table lists the API endpoints that the connector calls to crawl da
   GET | `/rest/api/3/mypermissions` | `read:permission:jira` | Verify user permissions
   GET | `/rest/api/2/field` | `read:field:jira`, `read:avatar:jira`, `read:project-category:jira`, `read:project:jira`, `read:field-configuration:jira` | Get issue fields metadata
   GET | `/rest/api/2/search?jql={0}&startAt={1}&maxResults={2}&fields={3}&expand=renderedFields,changelog` | `read:issue-details:jira`,`read:jql:jira`,`read:issue-meta:jira`, `read:issue.changelog:jira` | Search issues with JQL, rendered fields, and changelog
-  GET | `/rest/api/3/search/jql` | `read:issue-details:jira`, `read:jql:jira`, `read:group:jira`, `read:field:jira` | Post-based JQL search (v3)
+  GET | `/rest/api/3/search/jql` | `read:issue-details:jira`, `read:jql:jira`, `read:group:jira`, `read:field:jira` | JQL search (v3)
   GET | `/rest/api/3/search/jql?jql=id={0}&fields=attachment,comment&maxResults=1` | `read:issue-details:jira`, `read:jql:jira`, `read:attachment:jira`, `read:comment:jira`, `read:comment.property:jira` | Get issue comments and attachments in single call
   GET | `/rest/api/3/project/search?expand=lead&startAt={0}&maxResults={1}&status=live&action=browse` | `read:project:jira` | Get projects list with browse filter (v3)
   GET | `/rest/api/3/project/{0}?expand=lead` | `read:project:jira` | Get single project by ID or key
   GET | `/rest/api/2/project/{0}/permissionscheme?expand=user` | `read:permission-scheme:jira` | Get project permission scheme
   GET | `/rest/api/2/project/{0}/issuesecuritylevelscheme` | `read:issue-security-scheme:jira` | Get issue security level scheme for project
   GET | `/rest/api/2/issuesecurityschemes/{0}/members?startAt={1}&maxResults={2}` | `read:issue-security-level:jira` | Get issue security scheme members
-  GET | `/rest/api/2/role` | `read:role:jira` | Get all project roles
-  GET | `/rest/api/2/role/{0}` | `read:role:jira` | Get specific project role details
+  GET | `/rest/api/2/role` | `read:project-role:jira` | Get all project roles
+  GET | `/rest/api/2/role/{0}` | `read:project-role:jira` | Get specific project role details
   GET | `/rest/api/2/project/{0}/role/{1}` | `read:project-role:jira` | Get project-specific role actors
-  GET | `/rest/api/3/group/bulk?{0}startAt={1}&maxResults={2}` | `read:group:jira` | Get groups in bulk
+  GET | `/rest/api/3/group/bulk?{0}&startAt={1}&maxResults={2}` | `read:group:jira` | Get groups in bulk
   GET | `/rest/api/2/group/member?groupname={0}&startAt={1}&maxResults={2}` | `read:group:jira` | Get group members by name
   GET | `/rest/api/2/group/member?groupId={0}&startAt={1}&maxResults={2}` | `read:group:jira` | Get group members by ID
   GET | `/rest/api/2/user?accountId={0}` | `read:user:jira` | Get single user details
