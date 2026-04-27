@@ -115,7 +115,7 @@ Use this scenario when issue-level security isn't enforced as expected.
 2. Capture the issue security scheme.
    - Open the issue configuration and navigate to security settings.
    - Capture the scheme name, levels, and associated rules.
- :::image type="content" source="media/jira-cloud/IssueLevelSecurityScheme.png":::
+ :::image type="content" source="media/jira-cloud/IssueLevelSecurityScheme.png" alt-text="Screenshot of an issue Level security scheme." lightbox="media/jira-cloud/IssueLevelSecurityScheme.png":::
 
 3. Compare Jira security with Index Browser behavior.
    - Capture screenshots showing access results for the affected user.
