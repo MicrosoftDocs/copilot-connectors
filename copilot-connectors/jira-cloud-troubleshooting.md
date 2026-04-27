@@ -43,24 +43,24 @@ Use the following steps to help resolve issues:
   - Regenerate the API token if it expired or was deleted.
   - Confirm that the username and token match the Jira account used for crawling.
 
-### Project or issue not crawled - Jira Cloud
+## Project or issue not crawled
 
-Use this scenario when a Jira project or issue doesn't appear in the connector content set.
+If a Jira project or issue doesn't appear in the connector content set, use the following steps to troubleshoot:
 
 1. Confirm the project is in scope.
    - Open the Jira connector in the Microsoft 365 admin center.
-   - Go to `Edit -> Content` and expand **Choose projects and filter data**.
-   - Verify whether the connection crawls the entire site or specific projects.
+   - Go to **Edit** > **Content** and expand **Choose projects and filter data**.
+   - Verify that the connection crawls the entire site or specific projects.
    - Capture a screenshot of the configuration.
 
 2. Verify that the connector account can access the project and issue in Jira.
    - Sign in using the connector authentication account.
    - Open the project and capture a screenshot.
-   - Open the issue directly and confirm it loads successfully.
-   - If the issue cannot be opened, this indicates a Jira permissions issue.
+   - Open the issue directly and confirm that it loads successfully.
+   - If you can't open an issue, you don't have permission to the Jira project.
 
-3. Confirm project permissions using the permission helper.
-   - Navigate to `Project settings -> Permissions`.
+3. Use the permission helper to confirm project permissions.
+   - Go to **Project settings** > **Permissions**.
    - Open **Permission helper**.
    - Select the connector account and an issue.
    - Select **Browse Projects** and submit.
@@ -77,14 +77,14 @@ Use this scenario when a Jira project or issue doesn't appear in the connector c
 
 ## Issue indexed but not searchable due to permissions
 
-Use this scenario when an issue has been crawled and indexed, but isn't returned due to access issues.
+If an issue was crawled and indexed, but isn't returned due to access issues, use the following steps to troubleshoot:
 
 1. Confirm that the issue is present in the index.
    - Open Index Browser and search using the exact issue ID.
    - Capture screenshots showing the item and access result.
 
 2. Verify access using Jira Permission helper.
-   - Navigate to `Project settings -> Permissions`.
+   - Go to **Project settings** > **Permissions**.
    - Open **Permission helper**.
    - Select the affected user and issue.
    - Select **Browse Projects** and submit.
