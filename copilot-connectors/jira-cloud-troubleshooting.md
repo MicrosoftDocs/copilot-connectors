@@ -65,7 +65,7 @@ Use this scenario when a Jira project or issue doesn't appear in the connector c
    - Select the connector account and an issue.
    - Select **Browse Projects** and submit.
    - Capture screenshots of the result.
-   ![JiraPermissionHelper](copilot-connectors/media/JiraPermissionHelper.png)
+   ![JiraPermissionHelper](copilot-connectors/media/jira-cloud/JiraPermissionHelper.png)
 
 4. If only one issue is missing, check issue-level restrictions.
    - Open the issue and verify whether a different security level is applied.
@@ -89,7 +89,7 @@ Use this scenario when an issue has been crawled and indexed, but isn't returned
    - Select the affected user and issue.
    - Select **Browse Projects** and submit.
    - Capture screenshots showing the result and granting group or role.
-   ![JiraPermissionHelper](copilot-connectors/media/JiraPermissionHelper.png)
+   ![JiraPermissionHelper](copilot-connectors/media/jira-cloud/JiraPermissionHelper.png)
 
 3. Review the project permission scheme.
    - Capture entries related to issue visibility.
@@ -110,12 +110,12 @@ Use this scenario when issue-level security isn't enforced as expected.
 
 1. Confirm that an issue security level is assigned.
    - Open the issue and capture the assigned security level.
-   ![IssueLevelSecurity](copilot-connectors/media/IssueLevelSecurity.png)
+   ![IssueLevelSecurity](copilot-connectors/media/jira-cloud/IssueLevelSecurity.png)
 
 2. Capture the issue security scheme.
    - Open the issue configuration and navigate to security settings.
    - Capture the scheme name, levels, and associated rules.
-   ![IssueLevelSecurityScheme](copilot-connectors/media/IssueLevelSecurityScheme.png)
+   ![IssueLevelSecurityScheme](copilot-connectors/media/jira-cloud/IssueLevelSecurityScheme.png)
 
 3. Compare Jira security with Index Browser behavior.
    - Capture screenshots showing access results for the affected user.
