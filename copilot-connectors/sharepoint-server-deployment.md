@@ -230,7 +230,7 @@ Copilot connectors use two types of refresh intervals:
 - **Full crawl** — Runs on a recurrence you set (default: every day). You can optionally specify a starting time.
 - **Incremental crawl** — Runs on a recurrence and frequency you set (default: every day, every 15 minutes). You can toggle this option on or off independently of the full crawl.
 
-For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 [![Screenshot that shows crawl schedule.](media/sharepoint-server/crawlschedulesync.png)](media/sharepoint-server/crawlschedulesync.png#lightbox)
 
