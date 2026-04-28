@@ -10,23 +10,21 @@ ms.date: 04/14/2026
 ms.localizationpriority: medium
 ---
 
-# Jira Cloud connector troubleshooting
-
-This article provides troubleshooting guidance for the Jira Cloud Microsoft 365 Copilot connector, including common error messages, possible causes, and resolution steps. To verify Jira Cloud configuration information, see [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
+This article provides troubleshooting guidance for the Jira Cloud Microsoft 365 Copilot connector. To verify Jira Cloud configuration information, see [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
 
 ## Common error messages
 
 The following table lists common errors that can occur during connector configuration or crawling, along with possible reasons.
 
 | Step | Error message | Possible reason |
-|------|---------------|----------------|
+| --- | --- | --- |
 | **Connection settings** | The request is malformed or incorrect. | Incorrect Jira site URL. |
 | **Connection settings** | Unable to reach the Jira cloud service for your Jira site. | Incorrect Jira site URL. |
 | **Connection settings** | The client doesn't have permission to perform the action. | Invalid API token provided for Basic authentication. |
 | **Connection settings** | "Something went wrong" error in OAuth pop-up window. | The scopes granted to the OAuth app don't match. The mismatched scopes are listed in the pop-up window. |
-| **Crawl time (post-configuration)** | Can't authenticate with the data source. Verify the credentials associated with this data source are correct. | The user doesn't have one or more permissions required to crawl Jira. |
-| **Crawl time (post-configuration)** | You don't have permission to access this data source. You can contact the owner of this data source to request permission. | If using OAuth, the app scopes might have changed, or the app might have expired or been deleted.<br>If using Basic authentication, the API token might have expired or been deleted. |
-| **Crawl time (post-configuration)** | Error code: 1003 - You don't have permission to access this data source.<br>Detailed error code: 7612 | The crawl account doesn't have **Browse projects** permission for the listed project (shown in the **Item ID** column). |
+| **Crawl time (post-configuration)** | Can't authenticate with the data source. Verify the credentials associated with this data source are correct. | The connector account doesn't have one or more permissions required to crawl Jira. |
+| **Crawl time (post-configuration)** | You don't have permission to access this data source. You can contact the owner of this data source to request permission. | If using OAuth, the app scopes might have changed, or the app might have expired or been deleted. If using Basic authentication, the API token might have expired or been deleted. |
+| **Crawl time (post-configuration)** | Error code: 1003 - You don't have permission to access this data source. Detailed error code: 7612 | The crawl account doesn't have **Browse projects** permission for the listed project (shown in the **Item ID** column). |
 
 ## Issue resolution steps
 
@@ -65,7 +63,7 @@ If a Jira project or issue doesn't appear in the connector content set, use the 
    - Select the connector account and an issue.
    - Select **Browse Projects** and submit.
    - Capture screenshots of the result.
- :::image type="content" source="media/jira-cloud/jirapermissionhelper.png" alt-text="Screenshot of a Jira permission helper." lightbox="media/jira-cloud/jirapermissionhelper.png":::
+   :::image type="content" source="media/jira-cloud/jirapermissionhelper.png" alt-text="Screenshot of a Jira permission helper." lightbox="media/jira-cloud/jirapermissionhelper.png":::
 
 4. If only one issue is missing, check issue-level restrictions.
    - Open the issue and verify whether a different security level is applied.
@@ -89,7 +87,7 @@ If an issue was crawled and indexed, but isn't returned due to access issues, us
    - Select the affected user and issue.
    - Select **Browse Projects** and submit.
    - Capture screenshots showing the result and granting group or role.
- :::image type="content" source="media/jira-cloud/jirapermissionhelper.png" alt-text="Screenshot of a Jira permission helper." lightbox="media/jira-cloud/jirapermissionhelper.png":::
+   :::image type="content" source="media/jira-cloud/jirapermissionhelper.png" alt-text="Screenshot of a Jira permission helper." lightbox="media/jira-cloud/jirapermissionhelper.png":::
 
 3. Review the project permission scheme.
    - Capture entries related to issue visibility.
@@ -106,25 +104,26 @@ If an issue was crawled and indexed, but isn't returned due to access issues, us
 
 ## Issue-level security not working
 
-When issue-level security isn't enforced as expected., use the following steps to troubleshoot:
+If issue-level security isn't enforced as expected, use the following steps to troubleshoot:
 
 1. Confirm that an issue security level is assigned.
    - Open the issue and capture the assigned security level.
- :::image type="content" source="media/jira-cloud/issuelevelsecurity.png" alt-text="Screenshot of an issue level security." lightbox="media/jira-cloud/issuelevelsecurity.png":::
+   :::image type="content" source="media/jira-cloud/issuelevelsecurity.png" alt-text="Screenshot of issue-level security." lightbox="media/jira-cloud/issuelevelsecurity.png":::
 
 2. Capture the issue security scheme.
    - Open the issue configuration and navigate to security settings.
    - Capture the scheme name, levels, and associated rules.
- :::image type="content" source="media/jira-cloud/issuelevelsecurityscheme.png" alt-text="Screenshot of an issue level security scheme." lightbox="media/jira-cloud/issuelevelsecurityscheme.png":::
+   :::image type="content" source="media/jira-cloud/issuelevelsecurityscheme.png" alt-text="Screenshot of an issue-level security scheme." lightbox="media/jira-cloud/issuelevelsecurityscheme.png":::
 
 3. Compare Jira security with Index Browser behavior.
    - Capture screenshots showing access results for the affected user.
 
-**Note:** Configurations that rely on **Group custom field values** aren't currently supported.
+> [!NOTE]
+> Configurations that rely on **Group custom field values** aren't currently supported.
 
 ## Oversharing
 
-If a user can access content they shouldn't have access to, use the following steps to troubleshoot.
+If a user can access content they shouldn't, use the following steps to troubleshoot.
 
 If Index Browser shows `access denied`:
 
@@ -143,12 +142,6 @@ If Index Browser shows `access granted`:
 ## Error code 1010 - external group quota
 
 Error code `1010 External groups per Microsoft 365 tenant has reached the 100,000 quota` indicates that the tenant has reached the external group quota. This typically occurs when a large number of external groups are created during ACL ingestion. To resolve the issue:
-
-- Request a quota increase for external groups in the Microsoft 365 tenant.
-
-`External groups per Microsoft 365 tenant has reached the 100,000 quota.`
-
-This typically occurs when a large number of external groups are created during ACL ingestion.
 
 - Request a quota increase for external groups in the Microsoft 365 tenant.
 
