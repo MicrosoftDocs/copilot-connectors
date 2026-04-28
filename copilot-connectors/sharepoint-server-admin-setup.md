@@ -31,13 +31,13 @@ The following checklists list the steps involved in configuring the environment 
 | ---- | ---- |
 | [Identify the SharePoint Server instance URL](#identify-the-sharepoint-server-instance-url) | SharePoint Server farm administrator |
 | [Install & Configure the Microsoft Graph connector agent](#install-and-configure-the-microsoft-graph-connector-agent) | AI administrator (agent installation), Azure App admin (app registration in Entra ID) |
-| [Sync Active Directory to Microsoft Entra ID](#sync-active-directory-to-microsoft-entra-id) (required for the default "Only people with access" permission mode) | Entra ID admin |
+| [Sync Active Directory to Microsoft Entra ID](#sync-active-directory-to-microsoft-entra-id) (required for **Only people with access** permission option) | Entra ID admin |
 
 ### Set up prerequisites
 
 | Task | Role |
 | ---- | ---- |
-| [Configure authentication](#configure-authentication) | Basic / Windows (NTLM): SharePoint Server farm administrator. Microsoft Entra ID OIDC: Entra ID admin (Microsoft Entra ID Connect installation, app registration), SharePoint Server farm administrator (SharePoint trust configuration) |
+| [Configure authentication](#configure-authentication) | Basic / Windows (NTLM), SharePoint trust configuration: SharePoint Server farm administrator.<br />Microsoft Entra ID OpenID Connect (OIDC): Entra ID admin |
 
 ## Configure the SharePoint Server environment
 
@@ -57,7 +57,9 @@ If you plan to crawl multiple site collections under different host headers, rec
 
 ### Install and configure the Microsoft Graph connector agent
 
-The Microsoft Graph connector agent (GCA) is a Windows service that crawls your SharePoint Server content locally and securely sends it to Microsoft 365 for indexing - without exposing your internal farm directly to the internet. You must install and register the Microsoft Graph connector agent to use the SharePoint Server connector. See [Install and configure the Microsoft Graph connector agent](connector-agent.md) to learn more. You can install the agent on the SharePoint server itself or on any computer with network access to the farm.
+The Microsoft Graph connector agent is a Windows service that crawls your SharePoint Server content locally and securely sends it to Microsoft 365 for indexing - without exposing your internal farm directly to the internet. You must install and register the Microsoft Graph connector agent to use the SharePoint Server connector.  You can install the agent on the SharePoint server itself or on any computer with network access to the farm.
+
+For more information, see [Install and configure the Microsoft Graph connector agent](connector-agent.md).
 
 ### Sync Active Directory to Microsoft Entra ID
 
@@ -66,7 +68,7 @@ The connector defaults to **Only people with access** permission mode, which res
 > [!IMPORTANT]
 > Active Directory sync is a critical prerequisite for this permission mode. Without it, the connector can't map SharePoint Server permissions to Microsoft 365 user identities, and the **Only people with access** mode doesn't function correctly.
 
-For more information, see [What is Microsoft Entra Connect Sync?](/entra/identity/hybrid/connect/how-to-connect-sync-whatis).
+For more information, see [What is Microsoft Entra Connect Sync](/entra/identity/hybrid/connect/how-to-connect-sync-whatis).
 
 ## Set up connector prerequisites
 
@@ -96,7 +98,7 @@ Before using Microsoft Entra ID-based authentication, ensure the following prere
 
 - Microsoft Graph connector agent (GCA) version 3.1.2.0 and later supports Microsoft Entra ID-based authentication. Upgrade your agent before proceeding. To learn more, see [Install and configure the Microsoft Graph connector agent](connector-agent.md).
 - Microsoft Entra ID-based authentication supports only SharePoint Server Subscription Edition. Make sure the farm is patched to the November 2024 build (16.0.17928.20238) or later. For more information, see [SharePoint Updates](/officeupdates/sharepoint-updates).
-- You need to set up OpenID Connect (OIDC) with Microsoft Entra ID. Since OpenID Connect (OIDC) requires HTTPS, ensure your SharePoint web applications are configured to use HTTPS.
+- Set up OIDC with Microsoft Entra ID. Because OIDC requires HTTPS, make sure your SharePoint web applications are configured to use HTTPS.
 
 ##### Install Microsoft Entra ID Connect
 
@@ -105,7 +107,7 @@ Before using Microsoft Entra ID-based authentication, ensure the following prere
 
 ##### Set up OIDC with Microsoft Entra ID
 
-Set up and enable OpenID Connect (OIDC) with Microsoft Entra ID by using the steps described in [Set up OIDC authentication in SharePoint Server with Microsoft Entra ID](/sharepoint/security-for-sharepoint-server/set-up-oidc-auth-in-sharepoint-server-with-msaad). This step requires you to set up a third-party application in the Microsoft Entra admin center. Ensure that you have admin rights to perform this step.
+Set up and enable OIDC with Microsoft Entra ID by using the steps described in [Set up OIDC authentication in SharePoint Server with Microsoft Entra ID](/sharepoint/security-for-sharepoint-server/set-up-oidc-auth-in-sharepoint-server-with-msaad). This step requires you to set up a third-party application in the Microsoft Entra admin center. Make sure that you have admin rights to perform this step.
 
 ##### Configure Expose an API
 
@@ -120,7 +122,7 @@ Set up and enable OpenID Connect (OIDC) with Microsoft Entra ID by using the ste
 
    > [!NOTE]
    > This scope grants the connector permission to act on behalf of authenticated users when accessing SharePoint content, ensuring it retrieves only what each user is authorized to see.
-1. Select **Add a client application**. Enter the GCA client ID: **cb15c983-0c91-416f-8dc0-6c0e1de4ed42**.
+1. Select **Add a client application**. Enter the connector agent client ID: **cb15c983-0c91-416f-8dc0-6c0e1de4ed42**.
 1. Under **Authorized Scopes**, select the user_impersonation scope for your web app and select **Add application**.
 
    ![Screenshot that shows how to Add a Client Application.](media/sharepoint-server-connector/add-a-client-application.png)
