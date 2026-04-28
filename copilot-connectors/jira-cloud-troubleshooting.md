@@ -78,7 +78,7 @@ If a Jira project or issue doesn't appear in the connector content set, use the 
 If an issue was crawled and indexed, but isn't returned due to access issues, use the following steps to troubleshoot:
 
 1. Confirm that the issue is present in the index.
-   - Open Index Browser and search using the exact issue ID.
+   - Open Index Browser and search using the exact issue Id.
    - Capture screenshots showing the item and access result.
 
 2. Verify access using Jira Permission helper.
@@ -147,11 +147,11 @@ Error code `1010 External groups per Microsoft 365 tenant has reached the 100,00
 
 Regardless of the scenario, collect the following information before you contact Microsoft support:
 
-- Jira site URL (for example, `https://contoso.atlassian.net`)
-- Connection name and connection ID from the Microsoft 365 admin center
-- Affected user `accountId`
-- Affected issue ID
-- Affected project ID
+- Jira site URL (for example, **https://contoso.atlassian.net**)
+- Connection name and connection Id from the Microsoft 365 admin center
+- Affected user account Id
+- Affected issue Id
+- Affected project Id
 - Time of the latest reproduction in UTC
 - Screenshots of the relevant Jira settings and the Copilot or Index Browser result
 
@@ -159,11 +159,11 @@ Regardless of the scenario, collect the following information before you contact
 
 #### Project ID
 
-If the project ID isn't visible in the Jira UI, open the following URL while signed in:
+If the project Id isn't visible in the Jira UI, open the following URL while signed in:
 
 `https://<your-jira-site>.atlassian.net/rest/api/3/project/<projectKey>`
 
-Record the returned `id`, `key`, and `name`.
+Record the returned **Id**, **key**, and **name**.
 
 #### Issue ID
 
@@ -171,7 +171,7 @@ If you only know the issue key, open:
 
 `https://<your-jira-site>.atlassian.net/rest/api/3/issue/<issueKey>?fields=id,key,project`
 
-Record the top-level issue `id`, the issue `key`, and the `project.id`.
+Record the top-level issue **Id**, the issue **key**, and the **project Id**.
 
 #### Project role ID
 
@@ -179,7 +179,7 @@ If the incident involves role-based permissions, open:
 
 `https://<your-jira-site>.atlassian.net/rest/api/3/project/<projectKey>/role`
 
-This request returns role names mapped to URLs. The numeric value at the end of each role URL is the `roleId`.
+This request returns role names mapped to URLs. The numeric value at the end of each role URL is the **roleId**.
 
 #### Permission scheme ID
 
@@ -187,7 +187,7 @@ If the incident involves project permissions, open:
 
 `https://<your-jira-site>.atlassian.net/rest/api/2/project/<projectKey>/permissionscheme?expand=user`
 
-Record the permission scheme `id` and the `BROWSE_PROJECTS` entries.
+Record the permission **scheme Id**  and the `BROWSE_PROJECTS` entries.
 
 #### Issue security scheme ID
 
@@ -195,7 +195,7 @@ If the incident involves issue-level security, open:
 
 `https://<your-jira-site>.atlassian.net/rest/api/2/project/<projectKey>/issuesecuritylevelscheme`
 
-Record the scheme `id` and all configured issue security levels.
+Record the **scheme Id** and all configured issue security levels.
 
 ### Screenshot checklist
 
