@@ -45,7 +45,7 @@ The following sections describe the admin tasks to configure the SharePoint Serv
 
 ### Identify the SharePoint Server instance URL
 
-The SharePoint Server instance URL is the root URL of the web application you want to crawl (for example, `https://sharepoint.contoso.com`). You'll need this URL when registering the Microsoft Graph connector agent and when configuring the connector.
+The SharePoint Server instance URL is the root URL of the web application you want to crawl (for example, `https://sharepoint.contoso.com`). You need this URL when you register the Microsoft Graph connector agent and when configuring the connector.
 
 To identify the URL:
 
@@ -53,11 +53,11 @@ To identify the URL:
 1. Go to **Application Management** > **Manage web applications**.
 1. Select the web application that hosts the content you want to index, and note the URL listed in the **URL** column.
 
-If you plan to crawl multiple site collections under different host headers, record each URL — you'll reference all of them during connector setup and OIDC configuration.
+If you plan to crawl multiple site collections under different host headers, record each URL. You'll reference all of them during connector setup and OIDC configuration.
 
-### Install & Configure the Microsoft Graph connector agent
+### Install and configure the Microsoft Graph connector agent
 
-The Microsoft Graph connector agent (GCA) is a Windows service that crawls your SharePoint Server content locally and securely sends it to Microsoft 365 for indexing - without exposing your internal farm directly to the internet. You must install and register the Microsoft Graph connector agent to use the SharePoint Server connector. See [Install and configure the Microsoft Graph connector agent](connector-agent.md) to learn more. The agent can be installed on the SharePoint server itself or on any machine with network access to the farm.
+The Microsoft Graph connector agent (GCA) is a Windows service that crawls your SharePoint Server content locally and securely sends it to Microsoft 365 for indexing - without exposing your internal farm directly to the internet. You must install and register the Microsoft Graph connector agent to use the SharePoint Server connector. See [Install and configure the Microsoft Graph connector agent](connector-agent.md) to learn more. You can install the agent on the SharePoint server itself or on any computer with network access to the farm.
 
 ### Sync Active Directory to Microsoft Entra ID
 
@@ -83,7 +83,7 @@ The SharePoint Server connector supports the following authentication types:
 > [!NOTE]
 > - At a minimum, the account used for authentication during connection setup must have **Full Read** permission at the Web Application level in SharePoint Server, regardless of the authentication type selected. For indexing, grant this account full control at the Web Application level or make it a SharePoint Server farm administrator. Set Web Application-level permissions in SharePoint Central Administration and require SharePoint Server farm administrator access.
 > - The indexing process skips items that this account doesn't have access to.
-> - Active Directory Federation Services (ADFS) authentication is not supported. If your SharePoint farm uses ADFS as its identity provider, use Basic, Windows (NTLM), or Microsoft Entra ID OIDC authentication instead.
+> - Active Directory Federation Services (ADFS) authentication isn't supported. If your SharePoint farm uses ADFS as its identity provider, use Basic, Windows (NTLM), or Microsoft Entra ID OIDC authentication instead.
 
 > [!TIP]
 > If you're using Basic or Windows (NTLM) authentication, proceed to [Deploy the SharePoint Server connector](sharepoint-server-connector-deployment.md). If you're using Microsoft Entra ID OIDC, complete the steps in the following section.
