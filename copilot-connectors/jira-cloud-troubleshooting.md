@@ -68,10 +68,10 @@ If a Jira project or issue doesn't appear in the connector content set, use the 
    :::image type="content" source="media/jira-cloud/jirapermissionhelper.png" alt-text="Screenshot of a Jira permission helper." lightbox="media/jira-cloud/jirapermissionhelper.png":::
 
 4. If only one issue is missing, check issue-level restrictions.
-   - Open the issue and verify whether a different security level is applied.
+   - Open the issue and verify if a different security level is applied.
    - Capture screenshots of the issue details and security configuration if applicable.
 
-5. Confirm whether the issue is pending ingestion.
+5. Confirm if the issue is pending ingestion.
    - Record the issue creation time.
    - Compare it with the expected crawl timing.
 
@@ -101,7 +101,7 @@ If an issue was crawled and indexed, but isn't returned due to access issues, us
    - Record the role URL and **roleId**.
 
 5. Compare Jira access with Index Browser.
-   - Document whether access is granted or denied in both.
+   - Document if access is granted or denied in both.
    - Identify mismatches between expected and actual access.
 
 ## Issue-level security not working
@@ -129,7 +129,7 @@ If a user can access content they shouldn't, use the following steps to troubles
 
 If Index Browser shows `access denied`:
 
-1. Confirm whether access was recently removed in Jira.
+1. Confirm if access was recently removed in Jira.
 2. Update the issue content, such as editing the summary or description.
 3. Wait for the next crawl and propagation.
 4. Test again using the same user.
