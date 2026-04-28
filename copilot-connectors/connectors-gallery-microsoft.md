@@ -56,7 +56,7 @@ The following table lists the content management systems connectors that are ava
 | MediaWiki | Microsoft | Enables your organization to search knowledge-based articles on sites it creates with MediaWiki. | [MediaWiki connector](mediawiki-connector.md) |
 | Salesforce Knowledge | Microsoft | Allows your organization to index Salesforce Knowledge articles. | [Salesforce Knowledge connector](salesforce-knowledge-connector.md) |
 | ServiceNow Knowledge | Microsoft | Allows your organization to index knowledge base (KB) articles from ServiceNow instances. | [ServiceNow Knowledge connector](servicenow-knowledge-overview.md) |
-| SharePoint Server (preview) | Microsoft | Lets organizations connect to on-premises SharePoint sites for collaborating on and managing documents. | [SharePoint Server connector](sharepoint-server-connector.md) |
+| SharePoint Server | Microsoft | Lets organizations connect to on-premises SharePoint sites for collaborating on and managing documents. | [SharePoint Server connector](sharepoint-server-overview.md) |
 | Stack Overflow | Microsoft | Enables your organization to seamlessly index and search Stack Overflow questions and answers within Microsoft 365 Copilot and Microsoft Search, enhancing productivity and knowledge sharing. Unlock the potential of technical expertise by integrating Stack Overflow content directly into your workflow. | [Stack Overflow connector](stack-overflow-connector.md) |
 | Unily | Microsoft | Allows Copilot integration with Unily's digital workplace platform for enhanced communication and employee experience.  | [Unily connector](unily-intranet-connector.md) |
 | Veeva QualityDocs | Microsoft | Enables integration with Veeva Vault for quality content management. | [Veeva QualityDocs connector](veeva-qualitydocs-overview.md) |
@@ -141,8 +141,8 @@ The following table lists the human resources and recruiting connectors that are
 | 15Five High Fives Priorities | Microsoft | Allows your organization to index 15Five priority data, using Microsoft 365 Copilot and Microsoft Search. | [15Five Priorities connector ](15five-priorities-overview.md) |
 | BambooHR | Microsoft | Allows your organization to populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. | [BambooHR connector](bamboohr-connector.md) |
 | Credly (preview) | Integrates digital credential data from your organization's Credly platform into Microsoft 365. | [Credly connector (preview)](credly-overview.md) |
-| SAP SuccessFactors (preview) | Microsoft | Allows organizations to securely synchronize organization data and organize HR functions with SAP. | [Import organizational data from SAP SuccessFactors (preview)](/viva/import-org-data-success-factors) |
-| Workday (preview) | Microsoft | Lets organizations integrate with Workday to securely synchronize organization data and manage HR functions. | [Import organizational data from Workday](/viva/import-org-data-workday) |
+| SAP SuccessFactors | Microsoft |Allows organizations integrate with SAP SuccessFactors to securely synchronize organization data and organize HR functions via Organizational Data in Microsoft 365. | [Import organizational data from SAP SuccessFactors (preview)](/viva/import-org-data-success-factors) |
+| Workday | Microsoft | Allows organizations integrate with Workday to securely synchronize organization data and organize HR functions via Organizational Data in Microsoft 365. | [Import organizational data from Workday](/viva/import-org-data-workday) |
 
 ## IT service management tools
 
