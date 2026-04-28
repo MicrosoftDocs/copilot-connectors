@@ -14,24 +14,24 @@ description: "Learn about the capabilities, limitations, and use cases for the S
 
 # SharePoint Server connector overview
 
-The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for and reason over content stored in a SharePoint Server farm across Microsoft Search, Copilot Search, Copilot Chat, and declarative agents. It can crawl documents and site pages from SharePoint Server 2016, 2019, and Subscription Edition (SPSE) farms.
+The SharePoint Server Microsoft 365 Copilot connector enables users in your organization to search for and reason over content stored in a SharePoint Server farm across Microsoft Search, Copilot Search, Copilot Chat, and declarative agents. It can crawl documents and site pages from SharePoint Server 2016, 2019, and Subscription Edition (SPSE) farms.
 
 ## Why use the SharePoint Server connector to index your data?
 
-Organizations that use SharePoint Server for document management and collaboration often have valuable knowledge that isn't accessible through Microsoft 365 experiences. The SharePoint Server Copilot connector bridges this gap by integrating SharePoint Server content into Microsoft 365, allowing employees to search for and reason over documents and site pages through Microsoft Search, Copilot Search, and Copilot Chat - without leaving their flow of work.
+Organizations that use SharePoint Server for document management and collaboration often have valuable knowledge that isn't accessible through Microsoft 365 experiences. The SharePoint Server Copilot connector bridges this gap by integrating SharePoint Server content into Microsoft 365. Employees can search for and reason over documents and site pages through Microsoft Search, Copilot Search, and Copilot Chat - without leaving their flow of work.
 
 The SharePoint Server Copilot connector provides the following benefits:
 
-- **Get Copilot on content you've spent years building** — Bring AI-powered search and reasoning to documents, and site pages in SharePoint Server - no migration, no rebuilding, no waiting.
+- **Get Copilot on content you've spent years building** — Bring AI-powered search and reasoning to documents and site pages in SharePoint Server - no migration, no rebuilding, no waiting.
 - **Employees have questions, not search queries** — Natural language in Copilot Chat surfaces the right SharePoint Server content, even when users don't know what it's called or where it lives.
-- **Backed by Microsoft 365's enterprise compliance boundary** — Indexed content is processed within Microsoft's compliance infrastructure — the same environment trusted by regulated industries for Teams, Exchange, and SharePoint Online.
+- **Backed by Microsoft 365's enterprise compliance boundary** — Indexed content is processed within Microsoft's compliance infrastructure - the same environment trusted by regulated industries for Teams, Exchange, and SharePoint Online.
 - **Designed for enterprise networks** — The Microsoft Graph connector agent runs inside your network with outbound-only connections to Microsoft 365. No inbound firewall rules, no changes to your security perimeter.
 
 ### Use cases
 
 The following table lists common use cases for the SharePoint Server connector.
 
-| Department/role | Use case | Business benefit |
+| Department or role | Use case | Business benefit |
 | --------------- | -------- | ---------------- |
 | HR | Ask Copilot Chat questions about employee handbooks, leave policies, and benefits guides | Employees self-serve HR answers without calling HR. |
 | Legal & compliance | Reason over contract libraries, compliance frameworks, and regulatory filings | Faster contract review, audit prep, and compliance checks. |
@@ -118,13 +118,13 @@ The SharePoint Server connector indexes the following item types.
 
 ## Access permissions model
 
-The SharePoint Server connector supports two access permission modes that control which users can see indexed content in Copilot Chat, Copilot Search, Declarative Agents and Microsoft Search results:
+The SharePoint Server connector supports two access permission modes that control which users can see indexed content in Copilot Chat, Copilot Search, declarative agents, and Microsoft Search results:
 
 - **Only people with access to the content in the data source (recommended)** – Users see only content they have permission to access in SharePoint. Requires Active Directory identities to be synced with Microsoft Entra ID.
 - **Everyone** – All users in your organization can see the indexed content, regardless of their SharePoint permissions.
 
 > [!NOTE]
-> Distribution lists are not supported as access control lists (ACLs) in SharePoint Server. If your SharePoint permissions include groups that contain nested Distribution Lists, members of those distribution lists might gain unintended access to content through the connector.
+> SharePoint Server doesn't support distribution lists as access control lists (ACLs) in SharePoint Server. If your SharePoint permissions include groups that contain nested distribution lists, members of those distribution lists might gain unintended access to content through the connector.
 
 ## Next step
 
