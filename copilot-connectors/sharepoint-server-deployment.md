@@ -33,9 +33,9 @@ Before you deploy the SharePoint Server connector, make sure that your organizat
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You're an **AI administrator** in Microsoft 365 to deploy connectors in the Microsoft 365 admin center.
-- The SharePoint Server environment is configured. See [Set up the SharePoint Server service for SharePoint Server connector ingestion](sharepoint-server-admin-setup.md).
+- The SharePoint Server environment is configured. For details, see [Set up SharePoint Server](sharepoint-server-admin-setup.md).
 - The Microsoft Graph connector agent is installed and registered to your tenant.
-- If you plan to use Microsoft Entra ID OIDC authentication, OIDC and the scoped client identifier are configured. See [Set up Microsoft Entra ID OIDC authentication](sharepoint-server-admin-setup.md#set-up-microsoft-entra-id-oidc-authentication).
+- If you plan to use Microsoft Entra ID OpenID Connect (OIDC) authentication, OIDC and the scoped client identifier are configured. For details, see [Set up Microsoft Entra ID OIDC authentication](sharepoint-server-admin-setup.md#set-up-microsoft-entra-id-oidc-authentication).
 
 ## Deploy the connector
 
@@ -61,7 +61,7 @@ For more information about connector display names and descriptions, see [Enhanc
 
 Enter the URL for the SharePoint site or site collection in the format `https://{domain}/sites/{site-name}`. The connector uses this URL to identify the web application. After you authenticate, it lists all available site collections for you to choose from.
 
-### Select Microsoft Graph Connector Agent
+### Select Microsoft Graph connector agent
 
 Select from the list of available Graph Connector Agents registered to your tenant.
 
@@ -72,9 +72,9 @@ Select from the list of available Graph Connector Agents registered to your tena
 
 Choose the authentication type from the drop-down menu, and then enter the required credentials for your chosen method:
 
-- **Basic (Deprecating Soon)** — Enter a username and password. Don't use this option; it's deprecated and will be removed in a future release.
-- **Windows (NTLM)** — Enter credentials in **domain\alias** format and a password. Only NTLM is supported; Kerberos isn't supported. **Recommended** for farms that don't use Microsoft Entra ID OIDC.
-- **Entra ID OIDC** — Enter the **Client ID** of the Entra ID app registration created during OIDC setup. Complete all steps in [Set up the SharePoint Server service for SharePoint Server connector ingestion](sharepoint-server-admin-setup.md) before selecting this option. **Recommended** for the most secure, token-based authentication.
+- **Basic (deprecated)** — Enter a username and password. This option is deprecated and will be removed.
+- **Windows (NTLM)** — Enter credentials in **domain\alias** format and a password. Only NTLM is supported; Kerberos isn't supported. Recommended for farms that don't use Microsoft Entra ID OIDC.
+- **Entra ID OIDC** — Enter the **Client ID** of the Entra ID app registration created during OIDC setup. Complete all steps in [Set up the SharePoint Server service for SharePoint Server connector ingestion](sharepoint-server-admin-setup.md) before selecting this option. Recommended for the most secure, token-based authentication.
 
 > [!NOTE]
 > The account used for authentication must have at least **Full Read** permission at the Web Application level in SharePoint Server, regardless of the authentication type selected.
@@ -82,7 +82,7 @@ Choose the authentication type from the drop-down menu, and then enter the requi
 > [!NOTE]
 > Active Directory Federation Services (ADFS) authentication isn't supported.
 
-After entering credentials, select **Authorize** to verify access and load the list of available site collections.
+After you enter credentials, select **Authorize** to verify access and load the list of available site collections.
 
 ### Select site collections
 
