@@ -141,9 +141,7 @@ If Index Browser shows `access granted`:
 
 ## Error code 1010 - external group quota
 
-Error code `1010 External groups per Microsoft 365 tenant has reached the 100,000 quota` indicates that the tenant has reached the external group quota. This typically occurs when a large number of external groups are created during ACL ingestion. To resolve the issue:
-
-- Request a quota increase for external groups in the Microsoft 365 tenant.
+Error code `1010 External groups per Microsoft 365 tenant has reached the 100,000 quota` indicates that the tenant has reached the maximum allowed number of external groups, which typically occurs when a large volume of external groups is created during ACL ingestion. To resolve this issue, request a quota increase for external groups in the Microsoft 365 tenant.
 
 ## Information to collect to open a support ticket
 
