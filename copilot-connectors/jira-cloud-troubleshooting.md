@@ -98,7 +98,7 @@ If an issue was crawled and indexed, but isn't returned due to access issues, us
 4. If access is role-based, collect role details.
    - Open:
      `https://<your-jira-site>.atlassian.net/rest/api/3/project/<projectKey>/role`
-   - Record the role URL and `roleId`.
+   - Record the role URL and **roleId**.
 
 5. Compare Jira access with Index Browser.
    - Document whether access is granted or denied in both.
@@ -106,7 +106,7 @@ If an issue was crawled and indexed, but isn't returned due to access issues, us
 
 ## Issue-level security not working
 
-Use this scenario when issue-level security isn't enforced as expected.
+When issue-level security isn't enforced as expected., use the following steps to troubleshoot:
 
 1. Confirm that an issue security level is assigned.
    - Open the issue and capture the assigned security level.
@@ -124,7 +124,7 @@ Use this scenario when issue-level security isn't enforced as expected.
 
 ## Oversharing
 
-Use this scenario when a user can access content they shouldn't have access to.
+If a user can access content they shouldn't have access to, use the following steps to troubleshoot.
 
 If Index Browser shows `access denied`:
 
@@ -142,7 +142,9 @@ If Index Browser shows `access granted`:
 
 ## Error code 1010 - external group quota
 
-Use this scenario when error code `1010` indicates the tenant has reached the external group quota.
+Error code `1010 External groups per Microsoft 365 tenant has reached the 100,000 quota` indicates that the tenant has reached the external group quota. This typically occurs when a large number of external groups are created during ACL ingestion. To resolve the issue:
+
+- Request a quota increase for external groups in the Microsoft 365 tenant.
 
 `External groups per Microsoft 365 tenant has reached the 100,000 quota.`
 
