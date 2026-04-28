@@ -30,7 +30,7 @@ The following checklists list the steps involved in configuring the environment 
 | Task | Role |
 | ---- | ---- |
 | [Identify the SharePoint Server instance URL](#identify-the-sharepoint-server-instance-url) | SharePoint Server farm administrator |
-| [Install & Configure the Microsoft Graph connector agent](#install-and-configure-the-microsoft-graph-connector-agent) | AI administrator (agent installation), Azure App admin (app registration in Entra ID) |
+| [Install and configure the Microsoft Graph connector agent](#install-and-configure-the-microsoft-graph-connector-agent) | AI administrator (agent installation), Azure App admin (app registration in Entra ID) |
 | [Sync Active Directory to Microsoft Entra ID](#sync-active-directory-to-microsoft-entra-id) (required for **Only people with access** permission option) | Entra ID admin |
 
 ### Set up prerequisites

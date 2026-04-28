@@ -3,7 +3,6 @@ title: "Deploy the SharePoint Server connector"
 ms.author: venk
 author: venk
 manager: srramam
-ms.reviewer: 
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
@@ -15,7 +14,7 @@ description: "Find information about how to deploy the SharePoint Server Microso
 
 # Deploy the SharePoint Server connector
 
-The SharePoint Server connector enables Microsoft 365 Copilot to index content from your on-premises SharePoint Server farm. By using this connector, you can make documents, pages, and lists discoverable through Copilot experiences while respecting your existing SharePoint permissions.
+The SharePoint Server connector enables Microsoft 365 Copilot to index content from your on-premises SharePoint Server farm. By using this connector, you can make documents and site pages discoverable through Copilot experiences while respecting your existing SharePoint permissions.
 
 This article describes the steps to deploy and customize the SharePoint Server connector. For advanced SharePoint Server configuration information, see [Set up the SharePoint Server service](sharepoint-server-admin-setup.md).
 
@@ -96,8 +95,6 @@ Before you create the connection, make sure that:
 
 - **Authentication is successful** — After selecting **Authorize**, a green check mark appears next to the button confirming your credentials are valid and the site collections are loaded.
 - **Notice is accepted** — Read and accept the data indexing notice. The **Create** button remains disabled until you select this checkbox.
-
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
 Choose **Create** to deploy the connection. The SharePoint Server Copilot connector starts indexing content right away.
 
