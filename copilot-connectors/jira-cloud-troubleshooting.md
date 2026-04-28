@@ -10,6 +10,8 @@ ms.date: 04/14/2026
 ms.localizationpriority: medium
 ---
 
+# Jira Cloud connector troubleshooting
+
 This article provides troubleshooting guidance for the Jira Cloud Microsoft 365 Copilot connector. To verify Jira Cloud configuration information, see [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
 
 ## Common error messages
