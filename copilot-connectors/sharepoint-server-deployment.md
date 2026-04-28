@@ -163,10 +163,10 @@ The SharePoint Server connector supports the following user search permissions:
 - **Only people with access to the content in the data source (default)** – Indexed data appears in the search results or in Copilot responses to users who have permission to view it in SharePoint Server.
 - **Everyone** – The connection is open to everyone, and any user in your organization can see the content irrespective of the permissions in SharePoint Server.
 
-For the **Only people with access to the content in the data source** option to work correctly, Active Directory identities must be synced with Entra ID. See [Sync Active Directory to Microsoft Entra ID](sharepoint-server-admin-setup.md#sync-active-directory-to-microsoft-entra-id).
+For the **Only people with access to the content in the data source** option to work correctly, Active Directory identities must be synced with Entra ID. For details, see [Sync Active Directory to Microsoft Entra ID](sharepoint-server-admin-setup.md#sync-active-directory-to-microsoft-entra-id).
 
 > [!NOTE]
-> Copilot connectors support Users, Security Groups, and Distribution Lists. However, SharePoint Server doesn't support Distribution Lists as Access Control Lists. If there are nested distribution lists, members of those distribution lists might also get access to content through Graph connectors.
+> Microsoft 365 Copilot connectors support users, security groups, and distribution lists. However, SharePoint Server doesn't support distribution lists as access control lists (ACLs). If distribution lists are nested, members of those distribution lists might also get access to content through Copilot connectors.
 
 [![Screenshot that shows users tab](media/sharepoint-server/userstabsp.png)](media/sharepoint-server/userstabsp.png#lightbox)
 
@@ -174,7 +174,7 @@ For the **Only people with access to the content in the data source** option to 
 
 Active Directory synchronization with Entra ID handles identity mapping for the SharePoint Server connector. The connector uses the synced identities to evaluate **Only people with access** permissions against Microsoft 365 user accounts.
 
-If you have non-standard identity mappings (for example, different UPN suffixes between Active Directory and Entra ID), confirm that Microsoft Entra Connect Sync is configured correctly. See [Sync Active Directory to Microsoft Entra ID](sharepoint-server-admin-setup.md#sync-active-directory-to-microsoft-entra-id).
+If you have non-standard identity mappings (for example, different UPN suffixes between Active Directory and Entra ID), confirm that Microsoft Entra Connect Sync is configured correctly. For more information, see [Sync Active Directory to Microsoft Entra ID](sharepoint-server-admin-setup.md#sync-active-directory-to-microsoft-entra-id).
 
 ### Customize content settings
 
@@ -186,13 +186,13 @@ The SharePoint Server connector doesn't use a query string filter. Instead, you 
 
 Add the URLs of the sites you want to exclude from indexing. Exclusion rules work at the site or subsite level only. Don't add URLs to site contents like libraries or documents, as those exclusions aren't honored. You can use the wildcard `*` at the end of a URL to exclude all contents of sites and subsites that begin with that URL.
 
-If the URL ends with `/*`, then all URLs prefixed with the entered URL are excluded from indexing. For example, `abc.com/private/*` excludes `abc.com/private/terms.html` and all content inside `/private`. However, if you provide `abc.com/private/terms.html` as the URL to exclude, it's not honored because exclusion rules work only at the site or subsite level.
+If the URL ends with `/*`, all URLs prefixed with the entered URL are excluded from indexing. For example, `abc.com/private/*` excludes `abc.com/private/terms.html` and all content inside `/private`. However, if you provide `abc.com/private/terms.html` as the URL to exclude, it's not honored because exclusion rules work only at the site or subsite level.
 
 [![Screenshot that shows exclusion rules.](media/sharepoint-server/exclusionrulessp.png)](media/sharepoint-server/exclusionrulessp.png#lightbox)
 
 #### Manage properties
 
-Properties define what data is available for searching, querying, retrieving, and refining. From this setting, you can add or remove data source properties, assign a schema annotation to a property (searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias. The following properties are indexed by default.
+Properties define what data is available to search, query, retrieve, and refine. From this setting, you can add or remove data source properties, assign a schema annotation to a property (searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias. The following properties are indexed by default.
 
 > [!TIP]
 > For most deployments, the default properties are sufficient. Add custom properties only if your organization needs to search or filter on specific SharePoint columns.
@@ -213,10 +213,10 @@ Properties define what data is available for searching, querying, retrieving, an
 | ObjectType | | The type of object as returned from the data source | Query, Retrieve, Search |
 | Url | | Item URL | Retrieve |
 
-You can add custom properties defined in your sites to better manage the search or Copilot outcomes for your users. To add a custom property, select **Add property** and specify the exact string from the data source. Define a property name and data type (String, StringCollection, DateTime, Boolean, Int64, or Double). Custom properties match the custom columns in SharePoint.
+You can add custom properties defined in your sites to better manage the search or Copilot outcomes for your users. To add a custom property, select **Add property** and specify the exact string from the data source. Define a property name and data type (**String**, **StringCollection**, **DateTime**, **Boolean**, **Int64**, or **Double**). Custom properties match the custom columns in SharePoint.
 
 > [!IMPORTANT]
-> Property names must match the column names in SharePoint exactly. The connector silently ignores any property name that doesn't match an existing column during crawling. Double-check spelling before saving.
+> Property names must match the column names in SharePoint exactly. The connector silently ignores any property name that doesn't match an existing column during crawling. Double-check spelling before you save.
 
 > [!NOTE]
 > A total of 128 properties are supported. If you're selecting multiple site collections in a single connection, only default properties are supported. If you want to support custom properties defined in a site, create a different connection and add custom properties for that site.
@@ -227,8 +227,8 @@ The **Sync** tab controls how often your content is refreshed between SharePoint
 
 Copilot connectors use two types of refresh intervals:
 
-- **Full crawl** — Runs on a recurrence you set (default: every day). You can optionally specify a starting time.
-- **Incremental crawl** — Runs on a recurrence and frequency you set (default: every day, every 15 minutes). You can toggle this option on or off independently of the full crawl.
+- **Full crawl** — Runs on a recurrence you set (default is every day). You can optionally specify a start time.
+- **Incremental crawl** — Runs on a recurrence and frequency you set (default is every 15 minutes). You can toggle this option on or off independent of the full crawl.
 
 For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
@@ -236,7 +236,7 @@ For more information, see [Guidelines for sync settings](deployment-overview.md#
 
 ## Set up Microsoft Search result page
 
-This section applies to Microsoft Search only. After you create the connection, customize the search results page with verticals and result types to surface SharePoint Server content in Microsoft Search. To learn more, review how to [manage verticals](/microsoftsearch/manage-verticals) and [result types](/microsoftsearch/manage-result-types).
+After you create the connection, customize the search results page with verticals and result types to surface SharePoint Server content in Microsoft Search. For more information, see [manage verticals](/microsoftsearch/manage-verticals) and [result types](/microsoftsearch/manage-result-types).
 
 ## Related content
 
