@@ -19,7 +19,7 @@ The SharePoint Server connector enables Microsoft 365 Copilot to index content f
 
 This article provides information about the configuration steps that SharePoint Server admins need to complete in order for your organization to deploy the [SharePoint Server connector](sharepoint-server-overview.md).
 
-For information about how to deploy the connector, see [Deploy the SharePoint Server connector](sharepoint-server-connector-deployment.md).
+For information about how to deploy the connector, see [Deploy the SharePoint Server connector](sharepoint-server-deployment.md).
 
 ## Setup checklist
 
@@ -30,7 +30,7 @@ The following checklists list the steps involved in configuring the environment 
 | Task | Role |
 | ---- | ---- |
 | [Identify the SharePoint Server instance URL](#identify-the-sharepoint-server-instance-url) | SharePoint Server farm administrator |
-| [Install & Configure the Microsoft Graph connector agent](#install--configure-the-microsoft-graph-connector-agent) | AI administrator (agent installation), Azure App admin (app registration in Entra ID) |
+| [Install & Configure the Microsoft Graph connector agent](#install-and-configure-the-microsoft-graph-connector-agent) | AI administrator (agent installation), Azure App admin (app registration in Entra ID) |
 | [Sync Active Directory to Microsoft Entra ID](#sync-active-directory-to-microsoft-entra-id) (required for the default "Only people with access" permission mode) | Entra ID admin |
 
 ### Set up prerequisites
@@ -86,7 +86,7 @@ The SharePoint Server connector supports the following authentication types:
 > - Active Directory Federation Services (ADFS) authentication isn't supported. If your SharePoint farm uses ADFS as its identity provider, use Basic, Windows (NTLM), or Microsoft Entra ID OIDC authentication instead.
 
 > [!TIP]
-> If you're using Basic or Windows (NTLM) authentication, proceed to [Deploy the SharePoint Server connector](sharepoint-server-connector-deployment.md). If you're using Microsoft Entra ID OIDC, complete the steps in the following section.
+> If you're using Basic or Windows (NTLM) authentication, proceed to [Deploy the SharePoint Server connector](sharepoint-server-deployment.md). If you're using Microsoft Entra ID OIDC, complete the steps in the following section.
 
 #### Set up Microsoft Entra ID OIDC authentication
 
@@ -165,4 +165,4 @@ $t.Update()
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the SharePoint Server connector](sharepoint-server-connector-deployment.md)
+> [Deploy the SharePoint Server connector](sharepoint-server-deployment.md)
