@@ -63,7 +63,7 @@ To create the service account:
 
 - Sign in to the [Atlassian Admin Console](https://admin.atlassian.com/) as an organization or site admin.
 - Go to **Directory** > **Users**.
-- Choose **Invite users** and enter a dedicated email address, such as `jira-connector@yourdomain.com`.
+- Choose **Invite users** and enter a dedicated email address, such as `jira-connector@contoso.com`.
 - Under **Products**, select **Jira Software**.
 - Don't assign admin or project admin roles unless they're required for your indexing or security trimming scenario.
 
