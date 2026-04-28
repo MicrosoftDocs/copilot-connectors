@@ -14,7 +14,7 @@ description: "Find troubleshooting information for common authentication, indexi
 
 # Troubleshoot issues with the SharePoint Server connector
 
-The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for and reason over content stored in a SharePoint Server farm across Microsoft Search, Copilot Search, Copilot Chat, and declarative agents. This article covers common errors you might encounter when deploying or running the SharePoint Server connector, and steps to resolve them.
+The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for and reason over content stored in a SharePoint Server farm across Microsoft Search, Copilot Search, Copilot Chat, and declarative agents. This article provides troubleshooting information for common errors you might encounter when you deploy or use the SharePoint Server connector.
 
 For authentication and OIDC setup errors, see [Set up the SharePoint Server service](sharepoint-server-admin-setup.md). For errors during the Microsoft 365 admin center deployment steps, see [Deploy the SharePoint Server connector](sharepoint-server-deployment.md).
 
