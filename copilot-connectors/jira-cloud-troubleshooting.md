@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 # Jira Cloud connector troubleshooting
 
-This article provides troubleshooting guidance for the Jira Cloud Microsoft 365 Copilot connector. To verify Jira Cloud configuration information, see [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
+The Jira Cloud Microsoft 365 Copilot connector enables your organization to index Jira Cloud issues and make them searchable in Microsoft 365 Copilot and Microsoft Search experiences. This article provides troubleshooting guidance for the Jira Cloud Microsoft 365 Copilot connector. To verify Jira Cloud configuration information, see [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
 
 ## Common error messages
 
@@ -27,21 +27,6 @@ The following table lists common errors that can occur during connector configur
 | **Crawl time (post-configuration)** | Can't authenticate with the data source. Verify the credentials associated with this data source are correct. | The connector account doesn't have one or more permissions required to crawl Jira. |
 | **Crawl time (post-configuration)** | You don't have permission to access this data source. You can contact the owner of this data source to request permission. | If using OAuth, the app scopes might have changed, or the app might have expired or been deleted. If using Basic authentication, the API token might have expired or been deleted. |
 | **Crawl time (post-configuration)** | Error code: 1003 - You don't have permission to access this data source. Detailed error code: 7612 | The crawl account doesn't have **Browse projects** permission for the listed project (shown in the **Item ID** column). |
-
-## Issue resolution steps
-
-Use the following steps to help resolve issues:
-
-- Verify that the Jira Cloud instance URL is correct and resolves to your Jira dashboard.
-- Confirm that the service account has the required permissions:
-  - **Browse projects** (required)
-  - Issue-level security and user/group browsing permissions for security trimming (optional)
-- For OAuth issues:
-  - Check that all required scopes are granted.
-  - Verify that the callback URL is correct: `https://gcs.office.com/v1.0/admin/oauth/callback`
-- For Basic authentication:
-  - Regenerate the API token if it expired or was deleted.
-  - Confirm that the username and token match the Jira account used for crawling.
 
 ## Project or issue not crawled
 
@@ -71,7 +56,7 @@ If a Jira project or issue doesn't appear in the connector content set, use the 
    - Open the issue and verify if a different security level is applied.
    - Capture screenshots of the issue details and security configuration if applicable.
 
-5. Confirm if the issue is pending ingestion.
+5. Confirm that the issue is pending ingestion.
    - Record the issue creation time.
    - Compare it with the expected crawl timing.
 
@@ -145,23 +130,38 @@ If Index Browser shows `access granted`:
 
 Error code `1010 External groups per Microsoft 365 tenant has reached the 100,000 quota` indicates that the tenant has reached the maximum allowed number of external groups, which typically occurs when a large volume of external groups is created during ACL ingestion. To resolve this issue, request a quota increase for external groups in the Microsoft 365 tenant.
 
+## General issue resolution steps
+
+Use the following steps to help resolve issues:
+
+- Verify that the Jira Cloud instance URL is correct and resolves to your Jira dashboard.
+- Confirm that the service account has the required permissions:
+  - **Browse projects** (required)
+  - Issue-level security and user/group browsing permissions for security trimming (optional)
+- For OAuth issues:
+  - Check that all required scopes are granted.
+  - Verify that the callback URL is correct: `https://gcs.office.com/v1.0/admin/oauth/callback`
+- For Basic authentication:
+  - Regenerate the API token if it expired or was deleted.
+  - Confirm that the username and token match the Jira account used for crawling.
+
 ## Information to collect to open a support ticket
 
 Regardless of the scenario, collect the following information before you contact Microsoft support:
 
 - Jira site URL (for example, **https://contoso.atlassian.net**)
-- Connection name and connection Id from the Microsoft 365 admin center
-- Affected user account Id
-- Affected issue Id
-- Affected project Id
+- Connection name and connection ID from the Microsoft 365 admin center
+- Affected user account ID
+- Affected issue ID
+- Affected project ID
 - Time of the latest reproduction in UTC
 - Screenshots of the relevant Jira settings and the Copilot or Index Browser result
 
-### Collect Jira identifiers
+### Jira identifiers
 
 #### Project ID
 
-If the project Id isn't visible in the Jira UI, open the following URL while signed in:
+If the project ID isn't visible in the Jira UI, open the following URL while signed in:
 
 `https://<your-jira-site>.atlassian.net/rest/api/3/project/<projectKey>`
 
