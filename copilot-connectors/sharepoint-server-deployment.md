@@ -17,9 +17,7 @@ description: "Find information about how to deploy the SharePoint Server Microso
 
 The SharePoint Server connector enables Microsoft 365 Copilot to index content from your on-premises SharePoint Server farm. By using this connector, you can make documents, pages, and lists discoverable through Copilot experiences while respecting your existing SharePoint permissions.
 
-This article describes the steps to deploy and customize the SharePoint Server connector.
-
-For advanced SharePoint Server configuration information, see [Set up the SharePoint Server service for SharePoint Server connector ingestion](sharepoint-server-admin-setup.md).
+This article describes the steps to deploy and customize the SharePoint Server connector. For advanced SharePoint Server configuration information, see [Set up the SharePoint Server service](sharepoint-server-admin-setup.md).
 
 ## Prerequisites
 
@@ -88,7 +86,7 @@ After entering credentials, select **Authorize** to verify access and load the l
 
 ### Select site collections
 
-Select which site collections you want to index. The site collections belong to the web application within the SharePoint URL provided. This list can be long based on the number of site collections available in the data source.
+Select which site collections you want to index. The site collections belong to the web application within the SharePoint URL you provide. This list can be long based on the number of site collections available in the data source.
 
 [![Screenshot that shows site collections available for the account.](media/sharepoint-server/siteselection.png)](media/sharepoint-server/siteselection.png#lightbox)
 
@@ -200,7 +198,7 @@ Properties define what data is available for searching, querying, retrieving, an
 > For most deployments, the default properties are sufficient. Add custom properties only if your organization needs to search or filter on specific SharePoint columns.
 
 | Property | Semantic Label | Description | Schema Attributes |
-|---|---|---|---|
+|----------|----------------|-------------|-------------------|
 | Content | | Content of the item | Search |
 | CreatedBy | Created by | The owner who created the item | Query, Retrieve, Search |
 | CreatedByUpn | | The User Principal Name (UPN) of the owner who created the item | Query, Retrieve, Search |
