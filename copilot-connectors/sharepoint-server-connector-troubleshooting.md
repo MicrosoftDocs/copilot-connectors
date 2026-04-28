@@ -9,15 +9,14 @@ ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
 ms.localizationpriority: medium
-description: "Resolve common authentication, indexing, and configuration errors for the SharePoint Server Microsoft 365 Copilot connector."
+description: "Find troubleshooting information for common authentication, indexing, and configuration errors with the SharePoint Server Microsoft 365 Copilot connector."
 ---
 
 # Troubleshoot issues with the SharePoint Server connector
 
-This article covers common errors you might encounter when deploying or running the SharePoint Server connector, and steps to resolve them.
+The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for and reason over content stored in a SharePoint Server farm across Microsoft Search, Copilot Search, Copilot Chat, and declarative agents. This article covers common errors you might encounter when deploying or running the SharePoint Server connector, and steps to resolve them.
 
-- For authentication and OIDC setup errors, see [Configure SharePoint Server](sharepoint-server-admin-setup.md).
-- For errors during the Microsoft 365 admin center deployment steps, see [Deploy the SharePoint Server connector](sharepoint-server-deployment.md).
+For authentication and OIDC setup errors, see [Set up the SharePoint Server service](sharepoint-server-admin-setup.md). For errors during the Microsoft 365 admin center deployment steps, see [Deploy the SharePoint Server connector](sharepoint-server-deployment.md).
 
 ## Common errors
 
@@ -25,7 +24,7 @@ You might encounter the following errors when you deploy the SharePoint Server c
 
 | Deployment step | Error | Resolution |
 |:------------ |:------------ |:------------ |
-| Setup | No Graph Connector Agent available | No agent is registered to your tenant. Install and register the Microsoft Graph connector agent, and then refresh the agent list. See [Install and configure the Microsoft Graph connector agent](connector-agent.md). |
+| Setup | No Microsoft Graph connector agent available | No agent is registered to your tenant. Install and register the Microsoft Graph connector agent, and then refresh the agent list. See [Install and configure the Microsoft Graph connector agent](connector-agent.md). |
 | Authentication | 401 Unauthorized | When using Microsoft Entra ID OIDC authentication, the `ScopedClientIdentifier` property is likely not set on the `SPTrustedIdentityTokenIssuer`. Run `Get-SPTrustedIdentityTokenIssuer` to check the current value, and then follow the steps in [Configure the scoped client identifier](sharepoint-server-configuration.md#configure-the-scoped-client-identifier). |
 | Authentication | Authorization fails | Verify the account has at least **Full Read** permission at the Web Application level in SharePoint Server. For the indexing account, full control or SharePoint Server farm administrator role is recommended. See [Configure authentication](sharepoint-server-configuration.md#configure-authentication). |
 | Authentication | Microsoft Entra ID OIDC authentication not working | Verify prerequisites: the Microsoft Graph connector agent must be version 3.1.2.0 or later, and SharePoint Server must be Subscription Edition patched to the November 2024 build (16.0.17928.20238) or later. See [Set up Microsoft Entra ID OIDC authentication](sharepoint-server-configuration.md#set-up-microsoft-entra-id-oidc-authentication). |
