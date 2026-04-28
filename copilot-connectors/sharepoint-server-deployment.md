@@ -143,7 +143,7 @@ To validate that a document or site page was indexed, go to the **Index browser*
 - **Permissions** — Shows the item's visibility (for example, "visible to all users").
 - **Check user access** — Search by user name or email to confirm whether a specific user has access to the item.
 
-If items are missing or permissions look incorrect, refer to [Troubleshoot issues with the SharePoint Server connector](sharepoint-server-connector-troubleshooting.md).
+If items are missing or permissions look incorrect, refer to [Troubleshoot issues with the SharePoint Server connector](sharepoint-server-troubleshooting.md).
 
 ## Customize settings (optional)
 
