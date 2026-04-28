@@ -17,3 +17,6 @@ _repo.*/
 .documenor-session.json
 .content-mentor-open-file.json
 *.code-workspace
+
+# Claude Code working directory
+.claude/
