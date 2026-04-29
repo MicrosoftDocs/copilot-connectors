@@ -53,7 +53,7 @@ Microsoft provides a set of federated connectors by default. Currently, federate
 - Notion
  
 > [!IMPORTANT]
-> Admins can enable and disable all default federated connectors in their organization by using a tenant-wide toggle. When the feature is disabled, federated connectors aren't automatically enabled in the tenant. The admin must enable each connector individually. For more information, see [Manage federated connectors](manage-federated-connectors.md).
+> Admins can enable and disable all default federated connectors in their organization by using a tenant-wide toggle. When admins set the toggle to **disable**, federated connectors aren't enabled by default in the tenant. The admin must enable each connector individually. For more information, see [Manage federated connectors](manage-federated-connectors.md).
 
 The following image shows federated connectors in the **Your connections** list in the Microsoft 365 admin center.
  

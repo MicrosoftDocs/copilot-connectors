@@ -19,7 +19,7 @@ Federated connectors for Microsoft 365 Copilot enable users to access informatio
 
 As an administrator, you can use PowerShell to manage the availability of all default federated connectors across your tenant. This centralized management approach allows you to quickly disable or enable connectors organization-wide while maintaining visibility and control over individual connector settings.
 
-## Manage whether connectors are enabled or disabled for your organization
+## Manage federated connector availability for your organization
 
 The federated connector management capability provides a tenant-wide toggle that allows you to:
 
