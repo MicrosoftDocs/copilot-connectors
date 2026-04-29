@@ -52,13 +52,13 @@ Microsoft provides a set of federated connectors by default. Currently, federate
 - Moody's
 - Notion
  
-> [!IMPORTANT]
-> Admins can enable and disable all default federated connectors in their organization by using a tenant-wide toggle. When admins set the toggle to **disable**, federated connectors aren't enabled by default in the tenant. The admin must enable each connector individually. For more information, see [Manage federated connectors](manage-federated-connectors.md).
-
 The following image shows federated connectors in the **Your connections** list in the Microsoft 365 admin center.
  
 :::image type="content" source="media/federated-connectors/your-connections-tab.png" alt-text="Screenshot of the Your connections tab in the admin center with federated connectors appearing in the list." lightbox="media/federated-connectors/your-connections-tab.png":::
- 
+
+> [!IMPORTANT]
+> Admins can enable and disable all default federated connectors in their organization by using a tenant-wide toggle. When admins set the toggle to **disable**, federated connectors aren't enabled by default in the tenant. The admin must enable each connector individually. For more information, see [Manage federated connectors](manage-federated-connectors.md).
+
 ## Admin experience and controls
  
 Federated connectors are enabled by default for a tenant. Admins can manage federated Copilot connectors in the Microsoft 365 admin center by choosing **Copilot connectors** > **Your connections**.
