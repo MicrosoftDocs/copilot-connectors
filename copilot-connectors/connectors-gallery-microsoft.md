@@ -141,7 +141,7 @@ The following table lists the human resources and recruiting connectors that are
 | 15Five High Fives Priorities | Microsoft | Allows your organization to index 15Five priority data, using Microsoft 365 Copilot and Microsoft Search. | [15Five Priorities connector ](15five-priorities-overview.md) |
 | BambooHR | Microsoft | Allows your organization to populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. | [BambooHR connector](bamboohr-connector.md) |
 | Credly (preview) | Integrates digital credential data from your organization's Credly platform into Microsoft 365. | [Credly connector (preview)](credly-overview.md) |
-| SAP SuccessFactors | Microsoft |Allows organizations integrate with SAP SuccessFactors to securely synchronize organization data and organize HR functions via Organizational Data in Microsoft 365. | [Import organizational data from SAP SuccessFactors (preview)](/viva/import-org-data-success-factors) |
+| SAP SuccessFactors | Microsoft |Allows organizations integrate with SAP SuccessFactors to securely synchronize organization data and organize HR functions via Organizational Data in Microsoft 365. | [Import organizational data from SAP SuccessFactors](/viva/import-org-data-success-factors) |
 | Workday | Microsoft | Allows organizations integrate with Workday to securely synchronize organization data and organize HR functions via Organizational Data in Microsoft 365. | [Import organizational data from Workday](/viva/import-org-data-workday) |
 
 ## IT service management tools
