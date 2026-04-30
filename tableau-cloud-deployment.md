@@ -167,6 +167,6 @@ For more information, see [Guidelines for sync settings](deployment-overview.md#
 
 ## Related content
 
-- [Tableau Cloud connector overview](tableau-cloud-connector-overview.md)
-- [Troubleshoot issues with the Tableau Cloud connector](tableau-cloud-connector-troubleshooting.md)
+- [Tableau Cloud connector overview](tableau-cloud-overview.md)
+- [Troubleshoot issues with the Tableau Cloud connector](tableau-cloud-troubleshooting.md)
 - [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md)

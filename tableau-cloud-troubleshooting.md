@@ -1,9 +1,9 @@
 ---
 title: "Troubleshoot issues with the Tableau Cloud connector"
-ms.author:
-author:
-manager:
-ms.reviewer:
+ms.author: danielabo
+author: danipocket
+manager: calvind
+ms.reviewer: lauragra
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
@@ -30,5 +30,5 @@ You might encounter the following errors when you deploy the Tableau Cloud conne
 
 ## Related content
 
-- [Tableau Cloud connector overview](tableau-cloud-connector-overview.md)
-- [Deploy the Tableau Cloud connector](tableau-cloud-connector-deployment.md)
+- [Tableau Cloud connector overview](tableau-cloud-overview.md)
+- [Deploy the Tableau Cloud connector](tableau-cloud-deployment.md)
