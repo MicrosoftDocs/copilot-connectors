@@ -81,7 +81,7 @@ To configure and use Direct Trust authentication:
 | User | Admin user email. Use the admin account that configured Tableau Connected Apps with Direct Trust. |
 | Connected App Client ID | Client ID from the Tableau Connected App. |
 | Connected App Secret ID | Secret ID from the Tableau Connected App. |
-| Connected App Secret Key | Secret value from the Tableau Connected App. |
+| Connected App Secret Value | Secret value from the Tableau Connected App. |
 
 ### Rollout
 
