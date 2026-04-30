@@ -24,7 +24,7 @@ This article provides troubleshooting information for common errors that you mig
 You might encounter the following errors when you deploy the Tableau Cloud connector or when the connector indexes data.
 
 | Deployment step | Error or message | Possible reason | Resolution |
-|---|---|---|---|
+|---|---|---|
 | Connection settings | Can't authenticate with the data source. | The Tableau Cloud instance URL is incorrect, or authentication values are invalid. | Verify the Tableau Cloud site URL format and confirm that User, Connected App Client ID, Connected App Secret ID, and Connected App Secret Key values are correct. |
 | Connection settings | Don't have permission to access this data source. | The Tableau Cloud account or connected app doesn't have sufficient permissions to access sheets. | Use a Tableau Cloud site admin account, confirm the connected app is enabled, regenerate secret values if needed, and verify access to target projects and sheets. |
 
