@@ -1,5 +1,5 @@
 ---
-title: Manage federated connectors
+title: Manage federated connector availability
 description: Learn how to use PowerShell to control the availability of federated connectors for Microsoft 365 Copilot in your organization.
 #customer intent: As an admin, I want to learn how to manage federated connectors for Microsoft 365 Copilot using PowerShell.
 author: Lauragra
@@ -7,19 +7,19 @@ ms.author: lauragra
 manager: calvind
 ms.reviewer: mansipakhale
 ms.service: copilot-connectors
-ms.date: 04/20/2026
+ms.date: 04/28/2026
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.audience: Admin
 ---
 
-# Manage federated connectors
+# Manage federated connector availability
 
 Federated connectors for Microsoft 365 Copilot enable users to access information from external data sources directly within their Copilot experience. Microsoft provides default federated connectors that use the Model Context Protocol (MCP) to integrate with popular services and tools. While these connectors enhance Copilot's capabilities by extending its knowledge base, organizations might need to control their availability for security, compliance, or governance reasons.
 
 As an administrator, you can use PowerShell to manage the availability of all default federated connectors across your tenant. This centralized management approach allows you to quickly disable or enable connectors organization-wide while maintaining visibility and control over individual connector settings.
 
-## What you can manage
+## Manage federated connector availability for your organization
 
 The federated connector management capability provides a tenant-wide toggle that allows you to:
 
