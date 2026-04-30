@@ -140,7 +140,7 @@ By default, the connector indexes all published Tableau Cloud sheets in supporte
 Review and configure indexed properties, including schema attributes, semantic labels, and aliases.
 
 | Property | Semantic label | Description | Schema attributes |
-|---|---|---|
+|---|---|---|---|
 | CreatedAt | Created date time | Timestamp when the sheet was created. | Query, Retrieve |
 | IconUrl | IconUrl | Icon URL for worksheet, dashboard, or story item types. | Retrieve |
 | ItemPath | ItemPath | Hierarchical project path of the Tableau item. | Query, Retrieve, Search |
