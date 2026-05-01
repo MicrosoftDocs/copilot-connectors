@@ -12,13 +12,13 @@ ms.date: 05/01/2026
 # Set up custom federated connectors
 
 
-Many organizations have proprietary systems, internal databases, and line-of-business applications that hold critical operational data. Custom federated connectors enable you to bring this data into Microsoft 365 Copilot by using Model Context Protocol (MCP), unlocking real-time access and natural language interaction for your organization's unique workflows. After you connect your data source, users can interact with the data in real time by using natural language — just as they do with Microsoft 365 data.
+Many organizations have proprietary systems, internal databases, and line-of-business applications that hold critical operational data. By using custom federated connectors, you can bring this data into Microsoft 365 Copilot by using Model Context Protocol (MCP), unlocking real-time access and natural language interaction for your organization's unique workflows. After you connect your data source, users can interact with the data in real time by using natural language - just as they do with Microsoft 365 data.
 
 A custom federated connector starts with a Model Context Protocol (MCP) server that exposes read-only tools to safely surface your data. The MCP server acts as a bridge between Microsoft 365 Copilot and your internal systems. To keep access secure and user-scoped, custom federated connectors use industry-standard authentication.
 
 ## Prerequisites
 
-Before you begin, make sure you have the following:
+Before you begin, make sure you have the following items:
 
 - An **MCP server** URL with read-only tools exposed (for example, `search`, `fetch`, or `query`).
 - **Admin permissions**
@@ -39,7 +39,7 @@ Custom federated connectors support two authentication methods. Choose the metho
 
 ### Microsoft Entra SSO
 
-Microsoft Entra SSO lets users sign in to your MCP server with their existing Microsoft Entra credentials, which simplifies access management and removes the need for extra credentials. To use this option, your MCP server or API must use Microsoft Entra ID for access control.
+Microsoft Entra SSO simplifies access management by letting users sign in to your MCP server with their existing Microsoft Entra credentials, so they don't need extra credentials. To use this option, your MCP server or API must use Microsoft Entra ID for access control.
 
 To set up Microsoft Entra SSO:
 
@@ -47,7 +47,7 @@ To set up Microsoft Entra SSO:
 1. [Add the new token audience to your API](/microsoft-365/copilot/extensibility/api-plugin-authentication#add-the-new-token-audience-to-your-api).
 1. [Register an SSO client in the Teams Developer Portal](/microsoft-365/copilot/extensibility/api-plugin-authentication#register-an-sso-client-in-teams-developer-portal).
 
-When registration finishes, the Teams Developer Portal generates a **Microsoft Entra SSO registration ID**. Copy this ID—you'll need it when you configure the connector.
+When registration finishes, the Teams Developer Portal generates a **Microsoft Entra SSO registration ID**. Copy this ID - you need it when you configure the connector.
 
 ### OAuth 2.0
 
