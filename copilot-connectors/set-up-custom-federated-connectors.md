@@ -101,7 +101,7 @@ After you set up authentication, create the connector in the Microsoft 365 admin
 1. Select the **Gallery** tab.
 1. Under **Created by your org**, find the **Create a new connector** tile and select **Add**.
 
-   :::image type="content" source="media/federated-connectors/admin-center-connectors-gallery.png" alt-text="Screenshot of the Connectors page in the Microsoft 365 admin center, with the Gallery tab and the Create a new connector tile highlighted." lightbox=media/federated-connectors/admin-center-connectors-gallery.png:::
+   :::image type="content" source="media/federated-connectors/admin-center-connectors-gallery.png" alt-text="Screenshot of the Connectors page in the Microsoft 365 admin center, with the Gallery tab and the Create a new connector tile highlighted." lightbox="media/federated-connectors/admin-center-connectors-gallery.png":::
 
 1. On the **Custom connector** page, under **Connect to MCP server**, select **Add**.
 
