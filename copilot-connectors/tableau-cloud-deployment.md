@@ -34,7 +34,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 To add the Tableau Cloud connector for your organization:
 - In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
 - Choose the **Gallery** tab.
-- From the list of available connectors, choose **Tableau Cloud**.
+- From the list of available connectors, select **Tableau Cloud**.
 
 ### Set display name
 
@@ -52,7 +52,7 @@ Enter your Tableau Cloud site instance URL. The URL typically uses the following
 
 ### Choose authentication type
 
-Use Tableau Connected Apps with Direct Trust to authenticate the connector.
+Use Tableau connected apps with direct trust to authenticate the connector.
 
 To configure and use Direct Trust authentication:
 
@@ -79,7 +79,7 @@ To configure and use Direct Trust authentication:
 | Connected App Secret ID | Secret ID from the Tableau Connected App. |
 | Connected App Secret Value | Secret value from the Tableau Connected App. |
 
-### Rollout
+### Roll out
 
 Roll out to a limited audience first if you want to validate the connector behavior in Copilot and Search before a broader rollout.
 
