@@ -143,11 +143,11 @@ Review and configure indexed properties, including schema attributes, semantic l
 | iconUrl | iconUrl | Icon URL for worksheet, dashboard, or story item types. | Retrieve |
 | itemPath | itemPath | Hierarchical project path of the Tableau item. | Query, Retrieve, Search |
 | lastModifiedBy | last modified by | User who last modified the sheet. | Query, Retrieve, Search |
-| name | Title | display name of the sheet. | Query, Retrieve, Search |
+| name | Title | Display name of the sheet. | Query, Retrieve, Search |
 | projectName | none | Parent project name for the sheet. | Query, Search |
 | sheetType | itemType | Sheet type, such as worksheet, dashboard, or story. | Query, Refine, Retrieve |
 | sheetUrl | uRL | Direct link to the sheet in Tableau. | Retrieve |
-| tags | Tags | tags assigned to the sheet. | Query, Refine, Retrieve |
+| tags | Tags | Tags assigned to the sheet. | Query, Refine, Retrieve |
 | updatedAt | last modified date time | Timestamp of the most recent change. | Query, Retrieve |
 | workbookName | containerName | Workbook that contains the sheet. | Query, Retrieve, Search |
 | workbookUrl | containerUrl | URL of the workbook that contains the sheet. | Retrieve |
