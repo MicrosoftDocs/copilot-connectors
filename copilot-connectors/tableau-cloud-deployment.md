@@ -58,7 +58,7 @@ To configure and use Direct Trust authentication:
 
 1. Sign in to Tableau Cloud as a site admin.
 1. Go to **Settings** > **Connected Apps**.
-1. Choose **New Connected App** > **Direct Trust**.
+1. Select **New Connected App** > **Direct Trust**.
 1. In the connected app form, provide the required settings:
 
 | Field | Description | Recommended value |
@@ -69,23 +69,23 @@ To configure and use Direct Trust authentication:
 
 1. Select **Create**, then enable the connected app.
 1. On the connected app details page, select **Generate New Secret**.
-1. Save the **Client Id**, **Secret Id**, and **Secret value**.
+1. Save the **Client ID**, **Secret ID**, and **Secret value**.
 1. In the connector authentication pane in Microsoft 365 admin center, provide the required values:
 
 | Field | Description |
 |---|---|
 | User | Admin user email. Use the admin account that configured Tableau connected apps with direct trust. |
-| Connected app client Id | Client Id from the Tableau connected app. |
-| Connected app secret Id | Secret Id from the Tableau connected app. |
+| Connected app client ID | Client ID from the Tableau connected app. |
+| Connected app secret ID | Secret ID from the Tableau connected app. |
 | Connected app secret value | Secret value from the Tableau connected app. |
 
 ### Roll out
 
 Roll out to a limited audience first if you want to validate the connector behavior in Copilot and Search before a broader rollout.
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
+To roll out to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](staged-rollout.md).
 
-Select **Create** to deploy the connection. The Tableau Cloud Copilot connector starts indexing content right away.
+Select **Create** to deploy the connection. The Tableau Cloud connector starts indexing content right away.
 
 The following table lists the default values that are set.
 
@@ -95,13 +95,13 @@ The following table lists the default values that are set.
 | Content | All sheets except sheets in personal space. |
 | Sync | Incremental crawl every 15 minutes. Full crawl every day. |
 
-To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
+To customize these values, select **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 
 After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
 ## Customize settings (optional)
 
-You can customize the default values for the Tableau Cloud connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**.
+You can customize the default values for the Tableau Cloud connector settings. To customize settings, on the connector page in the admin center, select **Custom setup**.
 
 ### Customize user settings
 
@@ -112,13 +112,13 @@ The Tableau Cloud connector supports these access options:
 - **Only people with access to this data source** (recommended)
 - **Everyone**
 
-If you choose **Everyone**, indexed data appears in search results for all users.
+If you select **Everyone**, indexed data appears in search results for all users.
 
 When you use **Only people with access to this data source**, the connector applies permission evaluation logic similar to Tableau ACL behavior so content isn't overshared.
 
 #### Map identities
 
-When you use **Only people with access to this data source**, choose the identity type that matches your tenant:
+When you use **Only people with access to this data source**, select the identity type that matches your tenant:
 
 - **Microsoft Entra ID**: Use this option when Tableau user email addresses match Microsoft Entra user principal names (UPN).
 - **Non-AAD**: Use this option when Tableau user email addresses don't match Microsoft Entra UPN values. Configure regex-based identity mapping for this case.
