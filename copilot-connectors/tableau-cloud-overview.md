@@ -82,3 +82,5 @@ The connector supports both of these identity mapping models:
 
 > [!div class="nextstepaction"]
 > [Deploy the Tableau Cloud connector](tableau-cloud-connector-deployment.md)
+
+
