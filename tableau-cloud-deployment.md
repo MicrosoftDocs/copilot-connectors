@@ -15,9 +15,8 @@ description: "Find information about how to deploy the Tableau Cloud Microsoft 3
 
 # Deploy the Tableau Cloud connector
 
-The Tableau Cloud Copilot connector integrates Tableau Cloud items into Microsoft 365 experiences so users can discover and use published analytics content in Copilot, Copilot Search, and Microsoft Search.
+The Tableau Cloud Copilot connector integrates Tableau Cloud items into Microsoft 365 experiences so users can discover and use published analytics content in Copilot, Copilot Search, and Microsoft Search. This article describes the steps to deploy and customize the Tableau Cloud connector.
 
-This article describes the steps to deploy and customize the Tableau Cloud connector.
 
 ## Prerequisites
 
