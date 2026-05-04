@@ -15,17 +15,17 @@ description: "Find information about how to deploy the Tableau Cloud Microsoft 3
 
 # Deploy the Tableau Cloud connector
 
-The Tableau Cloud Copilot connector integrates Tableau Cloud items into Microsoft 365 experiences so users can discover and use published analytics content in Copilot, Copilot Search, and Microsoft Search. This article describes the steps to deploy and customize the Tableau Cloud connector.
+The Tableau Cloud Microsoft 365 Copilot connector integrates Tableau Cloud items into Microsoft 365 experiences so users can discover and use published analytics content in Copilot, Copilot Search, and Microsoft Search. This article describes the steps to deploy and customize the Tableau Cloud connector.
 
 
 ## Prerequisites
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- You must be a Search admin for your organization’s Microsoft 365 tenant.
+- You must be an AI Administrator for your organization’s Microsoft 365 tenant.
 - You must have Tableau Cloud site admin access.
-- Your Tableau Cloud environment must be configured with a Connected App that uses Direct Trust.
-- You must have the required Tableau Connected App values: Connected App Client ID, Connected App Secret ID, and Connected App Secret Key.
+- Your Tableau Cloud environment must be configured with a connected app that uses direct trust.
+- You must have the required Tableau connected app values: client ID, app secret ID, and secret key.
 - You must have an admin user email for Tableau Cloud that can access the sheets you want to index.
 
 > [!NOTE]
