@@ -638,6 +638,8 @@ items:
     href: federated-connectors-overview.md
   - name: Manage federated connectors
     href: manage-federated-connectors.md
+  - name: Set up custom federated connectors
+    href: set-up-custom-federated-connectors.md
 - name: Configure Microsoft 365 Copilot extension
   href: copilot-extension.md
 - name: Manage connections
