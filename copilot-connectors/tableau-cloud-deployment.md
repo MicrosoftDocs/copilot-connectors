@@ -32,8 +32,8 @@ Before you deploy the connector, make sure that you meet the following prerequis
 ## Deploy the connector
 
 To add the Tableau Cloud connector for your organization:
-- In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-- Choose the **Gallery** tab.
+- In the Microsoft 365 admin center, in the left pane, select **Copilot** > **Connectors**.
+- Select the **Gallery** tab.
 - From the list of available connectors, select **Tableau Cloud**.
 
 ### Set display name
@@ -67,17 +67,17 @@ To configure and use Direct Trust authentication:
 | Access level | Controls which content can be embedded. | All projects (or Only one project, if required) |
 | Domain allowlist | Domains where content can be embedded. | All domains |
 
-1. Choose **Create**, then enable the connected app.
-1. On the connected app details page, choose **Generate New Secret**.
-1. Save the **Client ID**, **Secret ID**, and **Secret Value**.
+1. Select **Create**, then enable the connected app.
+1. On the connected app details page, select **Generate New Secret**.
+1. Save the **Client Id**, **Secret Id**, and **Secret value**.
 1. In the connector authentication pane in Microsoft 365 admin center, provide the required values:
 
 | Field | Description |
 |---|---|
-| User | Admin user email. Use the admin account that configured Tableau Connected Apps with Direct Trust. |
-| Connected App Client ID | Client ID from the Tableau Connected App. |
-| Connected App Secret ID | Secret ID from the Tableau Connected App. |
-| Connected App Secret Value | Secret value from the Tableau Connected App. |
+| User | Admin user email. Use the admin account that configured Tableau connected apps with direct trust. |
+| Connected app client Id | Client Id from the Tableau connected app. |
+| Connected app secret Id | Secret Id from the Tableau connected app. |
+| Connected app secret value | Secret value from the Tableau connected app. |
 
 ### Roll out
 
@@ -85,7 +85,7 @@ Roll out to a limited audience first if you want to validate the connector behav
 
 To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
-Choose **Create** to deploy the connection. The Tableau Cloud Copilot connector starts indexing content right away.
+Select **Create** to deploy the connection. The Tableau Cloud Copilot connector starts indexing content right away.
 
 The following table lists the default values that are set.
 
