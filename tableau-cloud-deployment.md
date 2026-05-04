@@ -22,8 +22,8 @@ The Tableau Cloud Copilot connector integrates Tableau Cloud items into Microsof
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- You're a Search admin for your organization's Microsoft 365 tenant.
-- You have Tableau Cloud site admin access.
+- You must be a Search admin for your organization's Microsoft 365 tenant.
+- You must have Tableau Cloud site admin access.
 - Your Tableau Cloud environment is configured with a Connected App that uses Direct Trust.
 - You have the required Tableau Connected App values: Connected App Client ID, Connected App Secret ID, and Connected App Secret Key.
 - You have an admin user email for Tableau Cloud that can access the sheets that you want to index.
