@@ -1,9 +1,9 @@
 ---
 title: "Deploy the Tableau Cloud connector"
-ms.author:
-author:
-manager:
-ms.reviewer:
+ms.author: danielabo
+author: danipocket
+manager: calvind
+ms.reviewer: lauragra
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
@@ -15,19 +15,18 @@ description: "Find information about how to deploy the Tableau Cloud Microsoft 3
 
 # Deploy the Tableau Cloud connector
 
-The Tableau Cloud Copilot connector integrates Tableau Cloud items into Microsoft 365 experiences so users can discover and use published analytics content in Copilot, Copilot Search, and Microsoft Search.
+The Tableau Cloud Copilot connector integrates Tableau Cloud items into Microsoft 365 experiences so users can discover and use published analytics content in Copilot, Copilot Search, and Microsoft Search. This article describes the steps to deploy and customize the Tableau Cloud connector.
 
-This article describes the steps to deploy and customize the Tableau Cloud connector.
 
 ## Prerequisites
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- You're a Search admin for your organization's Microsoft 365 tenant.
-- You have Tableau Cloud site admin access.
-- Your Tableau Cloud environment is configured with a Connected App that uses Direct Trust.
-- You have the required Tableau Connected App values: Connected App Client ID, Connected App Secret ID, and Connected App Secret Key.
-- You have an admin user email for Tableau Cloud that can access the sheets that you want to index.
+- You must be a Search admin for your organization’s Microsoft 365 tenant.
+- You must have Tableau Cloud site admin access.
+- Your Tableau Cloud environment must be configured with a Connected App that uses Direct Trust.
+- You must have the required Tableau Connected App values: Connected App Client ID, Connected App Secret ID, and Connected App Secret Key.
+- You must have an admin user email for Tableau Cloud that can access the sheets you want to index.
 
 > [!NOTE]
 > The connector supports Tableau Cloud only. Tableau Server isn't supported. Sheets in personal space aren't indexed.
@@ -35,10 +34,9 @@ Before you deploy the connector, make sure that you meet the following prerequis
 ## Deploy the connector
 
 To add the Tableau Cloud connector for your organization:
-
-1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-1. Choose the **Gallery** tab.
-1. From the list of available connectors, choose **Tableau Cloud**.
+- In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
+- Choose the **Gallery** tab.
+- From the list of available connectors, choose **Tableau Cloud**.
 
 ### Set display name
 
@@ -81,7 +79,7 @@ To configure and use Direct Trust authentication:
 | User | Admin user email. Use the admin account that configured Tableau Connected Apps with Direct Trust. |
 | Connected App Client ID | Client ID from the Tableau Connected App. |
 | Connected App Secret ID | Secret ID from the Tableau Connected App. |
-| Connected App Secret Key | Secret value from the Tableau Connected App. |
+| Connected App Secret Value | Secret value from the Tableau Connected App. |
 
 ### Rollout
 
@@ -156,17 +154,17 @@ Review and configure indexed properties, including schema attributes, semantic l
 
 ### Customize sync intervals
 
-You can customize two refresh intervals:
+You can configure full and incremental crawls based on scheduling options. The default values are:
 
-- Full crawl
-- Incremental crawl
+- Full crawl - Every 15 minutes.
+- Incremental crawl - Every day.
 
 By default, incremental crawl runs every 15 minutes and full crawl runs every day.
 
-For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+Adjust these schedules to fit your data refresh needs. For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 
-- [Tableau Cloud connector overview](tableau-cloud-connector-overview.md)
-- [Troubleshoot issues with the Tableau Cloud connector](tableau-cloud-connector-troubleshooting.md)
+- [Tableau Cloud connector overview](tableau-cloud-overview.md)
+- [Troubleshoot issues with the Tableau Cloud connector](tableau-cloud-troubleshooting.md)
 - [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md)
