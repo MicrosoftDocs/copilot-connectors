@@ -15,7 +15,7 @@ description: "Find troubleshooting information for the Tableau Cloud Microsoft 3
 
 # Troubleshoot issues with the Tableau Cloud connector
 
-The Tableau Cloud Copilot connector integrates Tableau Cloud content into Microsoft 365 experiences, including Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the Tableau Cloud connector.
+The Tableau Cloud Microsoft 365 Copilot connector integrates Tableau Cloud content into Microsoft 365 experiences, including Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the Tableau Cloud connector.
 
 
 ## Tableau Cloud connector troubleshooting

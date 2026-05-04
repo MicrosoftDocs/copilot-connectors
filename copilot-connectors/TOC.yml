@@ -520,7 +520,7 @@ items:
       items:
       - name: Oveview
         href: tableau-cloud-overview.md
-      - name: Deployment
+      - name: Deployment guide
         href: tableau-cloud-deployment.md
       - name: Troubleshooting
         href: tableau-cloud-troubleshooting.md

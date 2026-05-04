@@ -15,7 +15,7 @@ description: "Learn about the capabilities, limitations, and use cases for the T
 
 # Tableau Cloud connector overview
 
-The Tableau Cloud Copilot connector integrates Tableau Cloud sheets, including worksheets, dashboards, and stories, into Microsoft 365. After deployment, users can find and use Tableau Cloud analytics content in Copilot, Copilot Search, and Microsoft Search across apps such as Teams, Outlook, and SharePoint.
+The Tableau Cloud Microsoft 365 Copilot connector integrates Tableau Cloud sheets, including worksheets, dashboards, and stories, into Microsoft 365. After deployment, users can find and use Tableau Cloud analytics content in Copilot, Copilot Search, and Microsoft Search across apps such as Teams, Outlook, and SharePoint.
 
 ## Why use the Tableau Cloud connector to index your data?
 
