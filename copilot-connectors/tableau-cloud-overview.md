@@ -60,18 +60,18 @@ The Tableau Cloud connector enables users to:
 
 The Tableau Cloud connector has the following limitations:
 
-- Supports Tableau Cloud only; Tableau Server is not supported.
+- Supports Tableau Cloud only; Tableau Server isn't supported.
 - Doesn't index sheets in personal space.
 
 ## Data types indexed from Tableau Cloud
 
-The connector indexes published Tableau Cloud sheets and associated metadata. Indexed content can be surfaced and referenced in Copilot, Copilot Search, and Microsoft Search.
+The connector indexes published Tableau Cloud sheets and associated metadata. You can surface and reference indexed content in Copilot, Copilot Search, and Microsoft Search.
 
 By default, the connector crawls all published sheets in your Tableau Cloud instance, except sheets in personal space.
 
 ## Permissions model and access control
 
-The Tableau Cloud connector respects Tableau Cloud access control behavior and layered permission evaluation. Indexed content is visible only to Microsoft 365 users who have access to the corresponding Tableau Cloud sheet.
+The Tableau Cloud connector respects Tableau Cloud access control behavior and layered permission evaluation. Microsoft 365 users can only see indexed content if they have access to the corresponding Tableau Cloud sheet.
 
 The connector supports both of these identity mapping models:
 

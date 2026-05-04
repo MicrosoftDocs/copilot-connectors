@@ -23,14 +23,14 @@ This article describes the steps to deploy and customize the Tableau Cloud conne
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- You are a Search admin for your organization's Microsoft 365 tenant.
+- You're a Search admin for your organization's Microsoft 365 tenant.
 - You have Tableau Cloud site admin access.
 - Your Tableau Cloud environment is configured with a Connected App that uses Direct Trust.
 - You have the required Tableau Connected App values: Connected App Client ID, Connected App Secret ID, and Connected App Secret Key.
 - You have an admin user email for Tableau Cloud that can access the sheets that you want to index.
 
 > [!NOTE]
-> The connector supports Tableau Cloud only. Tableau Server is not supported. Sheets in personal space are not indexed.
+> The connector supports Tableau Cloud only. Tableau Server isn't supported. Sheets in personal space aren't indexed.
 
 ## Deploy the connector
 
@@ -42,7 +42,7 @@ To add the Tableau Cloud connector for your organization:
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
+The display name identifies references in Copilot responses, so users can recognize the associated file or item. The display name also signifies trusted content and acts as a content source filter.
 
 You can accept the default **Tableau Cloud** display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -71,10 +71,10 @@ To configure and use Direct Trust authentication:
 | Access level | Controls which content can be embedded. | All projects (or Only one project, if required) |
 | Domain allowlist | Domains where content can be embedded. | All domains |
 
-5. Choose **Create**, then enable the connected app.
-6. On the connected app details page, choose **Generate New Secret**.
-7. Save the **Client ID**, **Secret ID**, and **Secret Value**.
-8. In the connector authentication pane in Microsoft 365 admin center, provide the required values:
+1. Choose **Create**, then enable the connected app.
+1. On the connected app details page, choose **Generate New Secret**.
+1. Save the **Client ID**, **Secret ID**, and **Secret Value**.
+1. In the connector authentication pane in Microsoft 365 admin center, provide the required values:
 
 | Field | Description |
 |---|---|
@@ -83,7 +83,7 @@ To configure and use Direct Trust authentication:
 | Connected App Secret ID | Secret ID from the Tableau Connected App. |
 | Connected App Secret Key | Secret value from the Tableau Connected App. |
 
-### Roll out
+### Rollout
 
 Roll out to a limited audience first if you want to validate the connector behavior in Copilot and Search before a broader rollout.
 
@@ -118,26 +118,26 @@ The Tableau Cloud connector supports these access options:
 
 If you choose **Everyone**, indexed data appears in search results for all users.
 
-When you use **Only people with access to this data source**, the connector applies permission evaluation logic similar to Tableau ACL behavior so content is not overshared.
+When you use **Only people with access to this data source**, the connector applies permission evaluation logic similar to Tableau ACL behavior so content isn't overshared.
 
 #### Map identities
 
 When you use **Only people with access to this data source**, choose the identity type that matches your tenant:
 
 - **Microsoft Entra ID**: Use this option when Tableau user email addresses match Microsoft Entra user principal names (UPN).
-- **Non-AAD**: Use this option when Tableau user email addresses do not match Microsoft Entra UPN values. Configure regex-based identity mapping for this case.
+- **Non-AAD**: Use this option when Tableau user email addresses don't match Microsoft Entra UPN values. Configure regex-based identity mapping for this case.
 
-Updates to users or groups that govern access permissions are synced during full crawls only.
+Updates to users or groups that govern access permissions sync during full crawls only.
 
 ### Customize content settings
 
 #### Query string
 
-By default, the connector indexes all published Tableau Cloud sheets in supported project scopes, excluding sheets in personal space. You can use content ingestion filters to narrow the indexed content.
+By default, the connector indexes all published Tableau Cloud sheets in supported project scopes, excluding sheets in personal space. Use content ingestion filters to narrow the indexed content.
 
 #### Manage properties
 
-You can review and configure indexed properties, including schema attributes, semantic labels, and aliases.
+Review and configure indexed properties, including schema attributes, semantic labels, and aliases.
 
 | Property | Semantic label | Description | Schema attributes |
 |---|---|---|---|
