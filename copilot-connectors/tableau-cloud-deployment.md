@@ -28,8 +28,6 @@ Before you deploy the connector, make sure that you meet the following prerequis
 - You must have the required Tableau connected app values: client ID, app secret ID, and secret key.
 - You must have an admin user email for Tableau Cloud that can access the sheets you want to index.
 
-> [!NOTE]
-> The connector supports Tableau Cloud only. Tableau Server isn't supported. Sheets in personal space aren't indexed.
 
 ## Deploy the connector
 
