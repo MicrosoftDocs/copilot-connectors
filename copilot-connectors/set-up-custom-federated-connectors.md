@@ -3,16 +3,18 @@ title: Set up custom federated connectors
 description: Learn how to build, authenticate, and deploy a custom federated connector that brings your organization's proprietary data into Microsoft 365 Copilot through the Model Context Protocol (MCP).
 author: lauragra
 ms.author: lauragra
+ms.manager: calvind
 ms.reviewer: mansipakhale
 ms.topic: how-to
-ms.service: microsoft-365-copilot
+ms.service: copilot-connectors
+ms.localizationpriority: Medium
 ms.date: 05/01/2026
 ---
 
 # Set up custom federated connectors
 
 
-Many organizations have proprietary systems, internal databases, and line-of-business applications that hold critical operational data. By using custom federated connectors, you can bring this data into Microsoft 365 Copilot by using Model Context Protocol (MCP), unlocking real-time access and natural language interaction for your organization's unique workflows. After you connect your data source, users can interact with the data in real time by using natural language - just as they do with Microsoft 365 data.
+Many organizations have proprietary systems, internal databases, and line-of-business applications that hold critical operational data. By using custom federated connectors, you can bring this data into Microsoft 365 Copilot by using Model Context Protocol (MCP), unlocking real-time access and natural language interaction for your organization's unique workflows. After you connect your data source, users can interact with the data in real time by using natural language — just as they do with Microsoft 365 data.
 
 A custom federated connector starts with a Model Context Protocol (MCP) server that exposes read-only tools to safely surface your data. The MCP server acts as a bridge between Microsoft 365 Copilot and your internal systems. To keep access secure and user-scoped, custom federated connectors use industry-standard authentication.
 
@@ -133,7 +135,6 @@ You can deploy the connector to selected users or groups before you release it t
 1. Select **Staged rollout**.
 1. Choose **Users** or **Groups**.
 1. Add the test users or groups.
-1. Monitor usage and feedback.
 1. When you're ready to release the connector, select **Deploy to all users**.
 
 ### Enable, disable, or delete the connector
