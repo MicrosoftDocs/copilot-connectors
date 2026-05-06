@@ -38,6 +38,7 @@ The following checklist lists the steps involved in configuring the environment 
 | Configure refresh token policy | Salesforce CRM admin |
 | Define identity mapping | Salesforce CRM admin |
 | Determine data ingestion filters | Salesforce CRM admin |
+| Verify field-level security (FLS) settings | Salesforce CRM admin |
 
 ## Identify the Salesforce instance URL
 
@@ -104,6 +105,15 @@ Your data source can include:
 You can filter indexed Salesforce content by:
 - **Modified time period**: Index items created or modified within a selected rolling time frame.
 - **SOQL query**: Use a WHERE clause to specify entities and conditions. Leave empty to index all content. For more information, see [SOQL and SOSL Reference](https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_conditionexpression.htm).
+
+## Verify field-level security (FLS) settings
+
+If your Salesforce org uses field-level security to hide fields from specific profiles or permission sets, the connector detects these restrictions and excludes the affected fields from the crawl by default. You can opt in to indexing specific FLS-restricted fields on the **Content** tab in the Microsoft 365 admin center. Before deploying the connector:
+
+- Confirm the connected app's profile has permission to read FLS metadata. The **System Administrator** profile already includes this access. For custom profiles, ensure **View Setup and Configuration** and **View All Profiles** are enabled (see [Enable API access](#enable-api-access)).
+- Verify the FLS settings for the indexed objects and decide which FLS-restricted fields are safe to index in Microsoft 365 and which must stay excluded.
+
+For how to opt in to FLS-restricted fields in the Microsoft 365 admin center, see [Include FLS-restricted fields](salesforce-connector.md#include-fls-restricted-fields).
 
 ## Next step
 
