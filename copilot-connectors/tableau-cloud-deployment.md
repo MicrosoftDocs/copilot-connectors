@@ -70,7 +70,7 @@ To configure and use Direct Trust authentication:
 1. Select **Create**, then enable the connected app.
  ![Screenshot of the Tableau connector configuration](media/tableau-cloud/tableau-direct-trust-configuration.png)
 1. On the connected app details page, select **Generate New Secret**.
-![Screenshot of the Tableau connector secret generation](media/tableau-generate-a-secret.png)
+![Screenshot of the Tableau connector secret generation](media/tableau-cloud/tableau-generate-a-secret.png)
 1. Save the **Client ID**, **Secret ID**, and **Secret value**.
 1. In the connector authentication pane in Microsoft 365 admin center, provide the required values:
 
