@@ -518,7 +518,7 @@ items:
         href: stack-overflow-connector.md
     - name: Tableau Cloud
       items:
-      - name: Oveview
+      - name: Overview
         href: tableau-cloud-overview.md
       - name: Deployment guide
         href: tableau-cloud-deployment.md

@@ -158,8 +158,8 @@ Review and configure indexed properties, including schema attributes, semantic l
 
 You can configure full and incremental crawls based on scheduling options. The default values are:
 
-- Full crawl - Every 15 minutes.
-- Incremental crawl - Every day.
+- Full crawl - Every day.
+- Incremental crawl - Every 15 minutes.
 
 By default, incremental crawl runs every 15 minutes and full crawl runs every day.
 

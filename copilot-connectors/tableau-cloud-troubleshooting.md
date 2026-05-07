@@ -29,5 +29,5 @@ The following table lists common errors and troubleshooting steps.
 
 ## Related content
 
-- [Tableau Cloud connector overview](tableau-cloud-connector-overview.md)
-- [Deploy the Tableau Cloud connector](tableau-cloud-connector-deployment.md)
+- [Tableau Cloud connector overview](tableau-cloud-overview.md)
+- [Deploy the Tableau Cloud connector](tableau-cloud-deployment.md)
