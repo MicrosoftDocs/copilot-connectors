@@ -120,7 +120,8 @@ The Tableau Cloud connector supports these access options:
 
 If you select **Everyone**, indexed data appears in search results for all users.
 
-When you use **Only people with access to this data source**, the connector applies permission evaluation logic similar to Tableau ACL behavior so content isn't overshared.
+When you use **Only people with access to this data source**, the connector applies permission evaluation logic similar to Tableau ACL behavior so content isn't overshared with users who don’t have the appropriate permissions within Tableau Cloud sites.
+![Screenshot of the Tableau connector ACL workflow](media/tableau-cloud/tableau-connector-acl-workflow.png)
 
 #### Map identities
 
