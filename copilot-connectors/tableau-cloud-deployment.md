@@ -71,7 +71,6 @@ To configure and use Direct Trust authentication:
  ![Screenshot of the Tableau connector configuration](media/tableau-cloud/tableau-direct-trust-configuration.png)
 1. On the connected app name, select **Actions**  > **Enable**.
 ![Screenshot of the Tableau connector configuration](media/tableau-cloud/tableau-direct-trust-configuration.png)
-
 1. On the connected app details page, select **Generate New Secret**.
 ![Screenshot of the Tableau connector enable app](media/tableau-cloud/tableau-enable-app.png)
 1. Save the **Client ID**, **Secret ID**, and **Secret value**.
