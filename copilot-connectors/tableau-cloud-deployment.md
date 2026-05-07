@@ -83,6 +83,7 @@ To configure and use Direct Trust authentication:
 | Connected app client ID | Client ID from the Tableau connected app. |
 | Connected app secret ID | Secret ID from the Tableau connected app. |
 | Connected app secret value | Secret value from the Tableau connected app. |
+
 ![Screenshot of the Tableau connector authorization](media/tableau-cloud/tableau-gc-auth.png)
 
 ### Roll out
