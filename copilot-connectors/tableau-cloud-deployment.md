@@ -26,7 +26,6 @@ Before you deploy the connector, make sure that you meet the following prerequis
 - You must have Tableau Cloud site admin access.
 - Your Tableau Cloud environment must be configured with a connected app that uses direct trust.
 - You must have the required Tableau connected app values: client ID, app secret ID, and secret key.
-- You must have an admin user email for Tableau Cloud that can access the sheets you want to index.
 
 
 ## Deploy the connector
@@ -50,7 +49,7 @@ Enter your Tableau Cloud site instance URL. The URL typically uses the following
 
 `https://<your-domain>.online.tableau.com/#/site/<site-name>`
 
-### Choose authentication type
+### Select authentication type
 
 Use Tableau connected apps with direct trust to authenticate the connector.
 
