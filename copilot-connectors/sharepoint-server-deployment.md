@@ -7,7 +7,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 04/22/2026
+ms.date: 05/11/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the SharePoint Server Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -141,6 +141,9 @@ To validate that a document or site page was indexed, go to the **Index browser*
 - **Check user access** — Search by user name or email to confirm whether a specific user has access to the item.
 
 If items are missing or permissions look incorrect, refer to [Troubleshoot issues with the SharePoint Server connector](sharepoint-server-troubleshooting.md).
+
+> [!NOTE]
+> When using Microsoft Entra ID OIDC authentication, if your tenant has a Conditional Access Sign-in Frequency policy applied to the Microsoft Entra ID account used to authorize the connection, ensure that the Sign-in frequency is at least twice your full crawl interval (for example, 48 hours for the default 24-hour full crawl). Otherwise, the refresh token can expire between crawls and the connection can lose access to SharePoint Server. For more information, see [Indexed items drop to zero after some time](sharepoint-server-troubleshooting.md#refresh-token-expired) in the troubleshooting guide.
 
 ## Customize settings (optional)
 
