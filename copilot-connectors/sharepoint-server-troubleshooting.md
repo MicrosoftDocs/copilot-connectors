@@ -1,5 +1,5 @@
 ---
-ms.date: 04/22/2026
+ms.date: 05/11/2026
 title: "Troubleshoot issues with the SharePoint Server connector"
 ms.author: venk
 author: venk
@@ -14,7 +14,7 @@ description: "Find troubleshooting information for common authentication, indexi
 
 # Troubleshoot issues with the SharePoint Server connector
 
-The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for and reason over content stored in a SharePoint Server farm across Microsoft Search, Copilot Search, Copilot Chat, and declarative agents. This article provides troubleshooting information for common errors you might encounter when you deploy or use the SharePoint Server connector.
+The SharePoint Server Microsoft 365 Copilot connector allows users in your organization to search for and reason over content stored in a SharePoint Server farm across Microsoft Search, Copilot Search, Copilot Chat, and declarative agents. This article provides troubleshooting information for common issues and errors you might encounter when you deploy or use the SharePoint Server connector.
 
 To verify setup information to help troubleshoot errors, see [Set up SharePoint Server](sharepoint-server-admin-setup.md) and [Deploy the SharePoint Server connector](sharepoint-server-deployment.md).
 
