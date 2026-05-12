@@ -56,10 +56,10 @@ Use Tableau connected apps with direct trust to authenticate the connector.
 To configure and use Direct Trust authentication:
 
 1. Sign in to Tableau Cloud as a site admin.
-1. Go to **Settings** > **Connected Apps**.
+2. Go to **Settings** > **Connected Apps**.
    ![Screenshot of the Tableau connector connected apps](media/tableau-cloud/tableau-navigation-to-settings-apps.png)
-1. Select **New Connected App** > **Direct Trust**.
-1. In the connected app form, provide the required settings:
+3. Select **New Connected App** > **Direct Trust**.
+4. In the connected app form, provide the required settings:
 
 | Field | Description | Recommended value |
 |---|---|---|
@@ -67,14 +67,14 @@ To configure and use Direct Trust authentication:
 | Access level | Controls which content can be embedded. | All projects (or Only one project, if required) |
 | Domain allowlist | Domains where content can be embedded. | All domains |
 
-1. Select **Create**, then enable the connected app.
+5. Select **Create**, then enable the connected app.
  ![Screenshot of the Tableau connector configuration](media/tableau-cloud/tableau-direct-trust-configuration.png)
-1. On the connected app name, select **Actions**  > **Enable**.
+6. On the connected app name, select **Actions**  > **Enable**.
 ![Screenshot of the Tableau connector configuration](media/tableau-cloud/tableau-enable-app.png)
-1. On the connected app details page, select **Generate New Secret**.
+7. On the connected app details page, select **Generate New Secret**.
 ![Screenshot of the Tableau connector enable app](media/tableau-cloud/tableau-generate-a-secret.png)
-1. Save the **Client ID**, **Secret ID**, and **Secret value**.
-1. In the connector authentication pane in Microsoft 365 admin center, provide the required values:
+8. Save the **Client ID**, **Secret ID**, and **Secret value**.
+9. In the connector authentication pane in Microsoft 365 admin center, provide the required values:
 
 | Field | Description |
 |---|---|
