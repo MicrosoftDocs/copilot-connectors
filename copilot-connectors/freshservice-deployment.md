@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 04/16/2026
+ms.date: 05/08/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Freshservice Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -22,7 +22,7 @@ The Freshservice Microsoft 365 Copilot connector enables your organization to in
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You must be a Microsoft 365 admin.
-- You need a Freshservice agent account with administrator permissions in the Freshservice application.
+- You need a Freshservice account with admin role and agent role permissions in the Freshservice application.
 - You must have access to the API key from your Freshservice user profile settings. For more information, see [Where do I find my API key](https://support.freshservice.com/support/solutions/folders/50000000029).
 
 ## Deploy the connector
