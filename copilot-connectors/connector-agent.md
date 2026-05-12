@@ -9,7 +9,7 @@ ms.topic: install-set-up-deploy
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Find the steps to install the Microsoft Graph connector agent to allow you to index on-premises content via Microsoft 365 Copilot connectors." 
-ms.date: 02/23/2026
+ms.date: 05/11/2026
 ---
 
 # Microsoft Graph connector agent
@@ -72,6 +72,14 @@ If your organization's proxy servers or firewalls block communication to unknown
 
 >[!NOTE]
 >Proxy authentication isn't supported. If your environment has a proxy that requires authentication, we recommend that you allow the connector agent to bypass the proxy.
+
+If your organization uses an outbound proxy, the agent's crawl requests to your data source also route through that proxy by default, which can cause crawl failures. Configure proxy bypass for your data source hostnames by using whichever method matches your proxy setup:
+
+- `NO_PROXY` system environment variable
+- Windows system proxy bypass settings
+- Your PAC file
+
+For example, if you use `HTTP_PROXY`/`HTTPS_PROXY` environment variables, set `NO_PROXY=sharepoint.contoso.com`. If `NO_PROXY` already exists, add your hostnames to it. After you change system environment variables, restart the **GcaHostService** Windows service.
 
 ## Upgrade the agent
 
