@@ -151,7 +151,7 @@ Review and configure indexed properties, including schema attributes, semantic l
 | name | Title | Display name of the sheet. | Query, Retrieve, Search |
 | projectName | none | Parent project name for the sheet. | Query, Search |
 | sheetType | itemType | Sheet type, such as worksheet, dashboard, or story. | Query, Refine, Retrieve |
-| sheetUrl | uRL | Direct link to the sheet in Tableau. | Retrieve |
+| sheetUrl | URL | Direct link to the sheet in Tableau. | Retrieve |
 | tags | Tags | Tags assigned to the sheet. | Query, Refine, Retrieve |
 | updatedAt | last modified date time | Timestamp of the most recent change. | Query, Retrieve |
 | workbookName | containerName | Workbook that contains the sheet. | Query, Retrieve, Search |
