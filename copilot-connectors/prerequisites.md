@@ -35,17 +35,17 @@ To deploy connectors, you need access to the data source, including:
 
 ## Licensing and eligibility
 
-Copilot connectors work across multiple Microsoft 365 surfaces. The surfaces available to your users depend on your organization's licensing.
+Copilot connectors work across multiple Microsoft 365 surfaces. The surfaces available to your users depend on your organization's licensing. Indexing of connector data incurs no additional cost for the tenants with Microsoft 365 licenses. 
 
 | License | Microsoft Search | Microsoft 365 Copilot grounding | Copilot Chat agents (grounded on connector data) |
 |---|---|---|---|
 | Microsoft 365 (any plan) | ✅ | ❌ | ❌ |
 | Microsoft 365 + Microsoft 365 Copilot add-on | ✅ | ✅ | ✅ |
-| Copilot Studio license | ✅ | ❌ | ✅ |
-| Usage billing (pay-as-you-go) enabled in tenant | ✅ | ❌ | ✅ |
+| Microsoft 365 + Copilot Studio license | ✅ | ❌ | ✅ |
+| Microsoft 365 Copilot pay-as-you-go enabled in tenant | ✅ | ❌ | ✅ |
 
 > [!NOTE]
-> Microsoft 365 Copilot is an add-on to Microsoft 365. If your organization has Microsoft 365 Copilot licenses, connector grounding in Copilot is included - no separate connector entitlement is required. Advanced features such as semantic search require at least one Microsoft 365 Copilot license in the tenant.
+> Microsoft 365 Copilot is an add-on to Microsoft 365. If your organization has Microsoft 365 Copilot licenses, connector grounding in Copilot is included - no additional charges apply. Advanced features such as semantic search require at least one Microsoft 365 Copilot license in the tenant.
 
 For more information, see [Agent capabilities and licensing models](/microsoft-365/copilot/extensibility/prerequisites).
 
