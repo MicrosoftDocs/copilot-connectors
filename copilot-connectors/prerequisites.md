@@ -8,7 +8,7 @@ ms.topic: concept-article
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Learn about the licensing requirements for deploying Microsoft 365 Copilot connectors in your organization."
-ms.date: 04/13/2026
+ms.date: 05/12/2026
 ---
 
 # Prerequisites for deploying connectors
@@ -17,7 +17,7 @@ Microsoft 365 Copilot connectors enable your organization to bring external data
 
 All organizations with Microsoft 365 licenses can access Copilot connectors. Your organization's licensing determines access to experiences such as Microsoft 365 Copilot and Microsoft Search that surface connector content.
 
-Some prebuilt connectors also have unique prerequisites and setup steps. For information about prerequisites and setup steps for specific connectors, see the deployment guide in [Microsoft-built synced connectors](prebuilt-connectors-overview.md).
+Some prebuilt connectors also have unique prerequisites and setup steps. For information about prerequisites and setup steps for specific connectors, see the [Microsoft-built synced connector](prebuilt-connectors-overview.md) deployment guide for your data source.
 
 ## Admin roles and access
 
@@ -35,7 +35,7 @@ To deploy connectors, you need access to the data source, including:
 
 ## Licensing and eligibility
 
-Copilot connectors work across multiple Microsoft 365 surfaces. The surfaces available to your users depend on your organization's licensing. Indexing of connector data incurs no additional cost for the tenants with Microsoft 365 licenses. 
+Copilot connectors work across multiple Microsoft 365 surfaces. The surfaces available to your users depend on your organization's licensing. Indexing of connector data incurs no additional cost for tenants with Microsoft 365 licenses. 
 
 | License | Microsoft Search | Microsoft 365 Copilot grounding | Copilot Chat agents (grounded on connector data) |
 |---|---|---|---|
@@ -45,7 +45,7 @@ Copilot connectors work across multiple Microsoft 365 surfaces. The surfaces ava
 | Microsoft 365 Copilot pay-as-you-go enabled in tenant | ✅ | ❌ | ✅ |
 
 > [!NOTE]
-> Microsoft 365 Copilot is an add-on to Microsoft 365. If your organization has Microsoft 365 Copilot licenses, connector grounding in Copilot is included - no additional charges apply. Advanced features such as semantic search require at least one Microsoft 365 Copilot license in the tenant.
+> Microsoft 365 Copilot is an add-on to Microsoft 365. If your organization has Microsoft 365 Copilot licenses, connector grounding in Copilot is included, and no additional charges apply. Advanced features such as semantic search require at least one Microsoft 365 Copilot license in the tenant.
 
 For more information, see [Agent capabilities and licensing models](/microsoft-365/copilot/extensibility/prerequisites).
 
