@@ -44,7 +44,7 @@ Before you install the agent, make sure that you have the required role-based ac
 |Create the service account on the target servers|See the deployment guide for the connector.|
 
 > [!NOTE]
-> If you're installing the connector agent on a server in a Government Community Cloud (GCC) environment, after you install the agent, make the following change:
+> If you're installing the connector agent on a server in a Government Community Cloud (GCCH) and DoD environment, after you install the agent, make the following change:
 > - In the `C:\Program Files\Graph connector agent\ConfigApp\appsettings.json` file, in the `CloudInstanceUrl` attribute, update the URL value to be `https://login.microsoftonline.us`.
 
 ### Recommended configuration
