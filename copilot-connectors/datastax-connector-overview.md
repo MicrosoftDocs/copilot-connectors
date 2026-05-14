@@ -1,8 +1,8 @@
 ---
 title: "DataStax connector overview"
-ms.author: kailiang
-author: Kai-Cloud
-manager: zezhangzhao
+ms.author: danielabo
+author: danipocket
+manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article

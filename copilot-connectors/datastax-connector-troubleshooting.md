@@ -1,8 +1,8 @@
 ---
 title: "DataStax connector troubleshooting"
-ms.author: kailiang
-author: Kai-Cloud
-manager: zezhangzhao
+ms.author: danielabo
+author: danipocket
+manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
