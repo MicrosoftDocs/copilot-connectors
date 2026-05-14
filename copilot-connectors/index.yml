@@ -37,6 +37,8 @@ landingContent:
             url: /microsoft-365/copilot/connectors/deployment-overview 
           - text: Set up synced connectors
             url: /microsoft-365/copilot/connectors/prebuilt-connectors-overview
+          - text: Set up custom federated connectors
+            url: /microsoft-365/copilot/connectors/set-up-custom-federated-connectors
           - text: Frequently asked questions
             url: /microsoft-365/copilot/connectors/frequently-asked-questions
 
