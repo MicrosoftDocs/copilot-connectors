@@ -90,7 +90,7 @@ Two extra parameters can be used to specify the date range for crawling final sc
 The crawl start date is (Today – Days Before) and the crawl end date is (Today + Days After).
 
 #### Manage properties
-To view available properties from your iManage Cloud, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias in the property. Some properties are selected by default.
+To view available properties, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias in the property. Some properties are selected by default.
 
 |Source property|Label|Description|
 |:---- |:---- |:---- |
