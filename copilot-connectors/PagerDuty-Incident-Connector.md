@@ -129,7 +129,7 @@ The PagerDuty Incidents Copilot connector supports both full crawl and increment
 The following common errors can occur and how to resolve them.
 
 1. Your security credentials have expired for this session. Please go back and sign in again with your Client ID and Client secret.
-Credential info expires. Create a new app id in PagerDuty app registration setting and copy the latest Client ID and Client secret from the setting tab to authenticate.
+Credential info expires. Create a new app ID in PagerDuty app registration setting and copy the latest Client ID and Client secret from the setting tab to authenticate.
 
 1. Invalid credentials detected. Please check the credential info and check the permission scopes of the PagerDuty App.
 Common credential error. Go back to the PagerDuty app registration setting and check if the Client ID and Client secret have the correct permission scope.
