@@ -8,22 +8,19 @@ ms.topic: overview
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Learn how your organization can use Microsoft 365 Copilot connectors to extend Microsoft Search and Microsoft 365 Copilot experiences. Get information about the types of Copilot connectors, requirements, and management and licensing information."
-ms.date: 01/29/2026
+ms.date: 05/14/2026
 ---
 
 # Connectors overview
 
-Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using **synced connectors** or connect to data in real time by using **federated connectors (early access preview)**. This flexibility ensures that users can securely search and interact with both enterprise and external data sources within Microsoft 365 apps and Copilot experiences.
-
-> [!NOTE]
-> Federated connectors are in early access preview and are available only to [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) and [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release) members. Early access preview features are still in development and are subject to change.
+Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using **synced connectors** or connect to data in real time by using **federated connectors**. This flexibility ensures that users can securely search and interact with both enterprise and external data sources within Microsoft 365 apps and Copilot experiences.
 
 ## Types of Copilot connectors
 
 The following types of Copilot connectors are available:
 
 - **Synced connectors:** Index data into Microsoft Graph for Copilot and search.
-- **Federated connectors (early access preview):** Use a Model Context Protocol (MCP) model to fetch data in real time, without indexing content into Microsoft 365. For more information, see [Federated connectors overview](federated-connectors-overview.md).
+- **Federated connectors:** Use a Model Context Protocol (MCP) model to fetch data in real time, without indexing content into Microsoft 365. For more information, see [Federated connectors overview](federated-connectors-overview.md).
 
 The following table summarizes the key differences between synced connectors and federated connectors.
 
@@ -55,7 +52,7 @@ The following video provides an overview of the synced connector setup process.
 
 For more information, see [Set up synced connectors in the admin center](deployment-overview.md).
 
-### Federated connectors (early access preview)
+### Federated connectors
 
 Federated connectors use an MCP model to fetch data in real time, without indexing content into Microsoft 365. Federated connectors are ideal for connecting to live, dynamic, or sensitive data sources that shouldn't be indexed.
 
@@ -72,7 +69,7 @@ Federated connectors have the following key features:
 The following diagram shows how both types of connectors integrate external data into Copilot and Microsoft Search experiences:
 
 - **Synced connectors:** Data flows from the source, is indexed in Microsoft Graph, and becomes available in search and Copilot.
-- **Federated connectors (early access preview):** Data remains in the source system and is fetched in real time when users query Copilot or Search.
+- **Federated connectors:** Data remains in the source system and is fetched in real time when users query Copilot or Search.
 
 :::image type="content" source="media/connectors-overview/highlevel-connectors.png" alt-text="Diagram: Synced connectors index data into Microsoft Graph; federated connectors fetch data live." lightbox="media/connectors-overview/highlevel-connectors.png":::
 
