@@ -122,7 +122,7 @@ To view available properties, assign a schema to the property (define whether a 
 
 
 ### Sync 
-Both full crawl and incremental crawl are supported by PagerDuty Incidents Copilot connector. The default schedule of the full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs. 
+The PagerDuty Incidents Copilot connector supports both full crawl and incremental crawl. By default, the full crawl runs every day. If needed, you can adjust these schedules to fit your data refresh needs. 
 
 ## Troubleshooting
 
