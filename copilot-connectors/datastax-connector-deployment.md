@@ -36,7 +36,7 @@ To add the DataStax connector for your organization:
 
 ### Set display name
 
-The display name is used to identify each citation in Copilot and help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters).
+The display name identifies each citation in Copilot and helps users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters).
 
 A default value is provided. You can customize it to a name that users in your organization recognize.
 
@@ -54,7 +54,7 @@ To use **DataStax Application Token** for authentication, a DataStax admin needs
 
 [![Screenshot that shows the DataStax API Endpoint, Database ID and Generate Token in the Astra DB overview.](media/datastax/datastax-api-endpoint.png)](media/datastax/datastax-api-endpoint.png#lightbox)
 
-Copy the generated application token from the token details, which is typically a long string that starts with "AstraCS:..." and paste it in the connector setup. Choose **Authorize**, and use the same token to authenticate permission to crawl.
+Copy the generated application token from the token details, which is typically a long string that starts with "AstraCS:...". Paste it in the connector setup. Choose **Authorize**, and use the same token to authenticate permission to crawl.
 
 ### Roll out to a limited audience
 
@@ -123,7 +123,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/datastax/DataStax-sync-tab.png)](media/datastax/DataStax-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the DataStax Copilot connector index. The DataStax connector only supports the refresh interval - full crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
+The refresh interval determines how often your data syncs between the data source and the DataStax Copilot connector index. The DataStax connector only supports the refresh interval - full crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 You can change the default values of the refresh interval.
 
