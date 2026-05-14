@@ -68,14 +68,14 @@ The DataStax connector indexes the following properties:
 - Title (created by combining collection name and record ID)
 - Icon URL
 
-These properties are searchable and retrievable in Copilot and Microsoft Search.
+You can search and retrieve these properties in Copilot and Microsoft Search.
 
 ## Permissions model and access control
 
 Admins can configure access control as:
 
 - **Everyone** - All users in the organization can see indexed data in search results.
-- **Only people with access to this data source** - Only users who have access to content in the DataStax data source can see indexed data in search results. Access permissions are mapped using Microsoft Entra IDs.
+- **Only people with access to this data source** - Only users who have access to content in the DataStax data source can see indexed data in search results. Microsoft Entra IDs map access permissions.
 
 ## Related content
 
