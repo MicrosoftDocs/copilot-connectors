@@ -48,9 +48,13 @@ To connect to your DataStax database, you need the DataStax API Endpoint. The en
 
 To connect to your DataStax database, you need the DataStax database ID. The database ID can be found in the overview of your database.
 
-### Generate the Application Token
+### Choose authentication type
 
-To use **DataStax Application Token** for authentication, a DataStax admin needs to generate the application token for the database with a proper user role, such as using "Read Only User".
+To sync data from DataStax, you need to authenticate using a DataStax Application Token.
+
+#### DataStax Application Token
+
+A DataStax admin needs to generate the application token for the database with a proper user role, such as using "Read Only User".
 
 [![Screenshot that shows the DataStax API Endpoint, Database ID and Generate Token in the Astra DB overview.](media/datastax/datastax-api-endpoint.png)](media/datastax/datastax-api-endpoint.png#lightbox)
 
