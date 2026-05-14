@@ -46,6 +46,8 @@ The PagerDuty Incidents Copilot connector enables your organization to index Pag
    - Users – Read Access
 
    - Incidents - Read Access
+     
+   - Incident Types - Read Access
 
 8. After you successfully complete app registration in PagerDuty, copy Client ID and Client Secret.
 
