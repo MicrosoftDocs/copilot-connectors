@@ -23,7 +23,7 @@ The PagerDuty Incidents Copilot connector enables your organization to index Pag
 - Access PagerDuty incidents in Copilot using the power of Semantic search.
 - Retain ACLs defined by your organization.
 - Customize your crawl frequency.
-- Create workflows using this connection and plugins from Microsoft Copilot Studio.
+- Create workflows by using this connection and plugins from Microsoft Copilot Studio.
 
 ## Prerequisites
 1. Create a PagerDuty account with administrator permission in the PagerDuty application.
