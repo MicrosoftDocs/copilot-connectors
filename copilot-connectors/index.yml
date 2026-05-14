@@ -24,7 +24,7 @@ landingContent:
             url: /microsoft-365/copilot/connectors/connectors-gallery
           - text: Microsoft-built synced connectors
             url: /microsoft-365/copilot/connectors/prebuilt-connectors-overview
-          - text: Federated connectors (early access preview))
+          - text: Federated connectors
             url: /microsoft-365/copilot/connectors/federated-connectors-overview
 
   - title: Get started
