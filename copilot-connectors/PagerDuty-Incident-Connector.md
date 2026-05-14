@@ -57,7 +57,7 @@ The PagerDuty Incidents Copilot connector enables your organization to index Pag
 Choose a display name that helps users easily recognize associated files or items in a Copilot response.
 
 ### 2. Add the Instance REST API URL
-PagerDuty allows customers to choose the geographic service region of the PagerDuty data centers that host their account. 
+PagerDuty customers can choose the geographic service region for the PagerDuty data centers that host their account. 
 
 - For the US service region, the REST API URL is (https://api.pagerduty.com).
 - For the EU service region, the REST API URL is (https://api.eu.pagerduty.com).
