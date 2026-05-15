@@ -7,7 +7,7 @@ manager: calvind
 ms.reviewer: jecui
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 04/14/2026
+ms.date: 05/15/2026
 ---
 
 # Set up the Jira Cloud service for Jira Cloud Copilot connector ingestion
@@ -80,8 +80,10 @@ Grant the service account the permissions required for the connector.
 
 To authenticate and sync issues from Jira, choose one of the following supported authentication methods:
 
-*   **OAuth (recommended)** - Use this simplified authentication method.
-*   **Customized Atlassian Jira OAuth 2.0** - To use the Jira OAuth for authentication:
+*   **OAuth (recommended)** 
+*   **Customized Atlassian Jira OAuth 2.0**
+
+To use the Jira OAuth for authentication:
 
     1.  Register an app in Atlassian Jira so Microsoft Search and Microsoft 365 Copilot can access the instance. For more information, see [Enable OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
     1.  Sign in to the [Atlassian Developer console](https://developer.atlassian.com/console/myapps/) with your Atlassian Jira admin account.
