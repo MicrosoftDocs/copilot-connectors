@@ -31,8 +31,8 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 If you use Tableau Bridge for live connections to local databases, evaluate your infrastructure capacity before you proceed. The connector’s periodic full crawls can generate a high volume of concurrent queries, which might overload the CPU and memory resources of your on-premises database. To mitigate this risk:
 
-- Use selective ingestion: Index only essential projects or folders during setup instead of your entire Tableau instance.
-- Adjust crawl frequency: Configure a longer interval for full crawls to reduce the continuous load on your local servers.
+- **Use selective ingestion** - Index only essential projects or folders during setup instead of your entire Tableau instance.
+- **Adjust crawl frequency** - Configure a longer interval for full crawls to reduce the continuous load on your local servers.
 
 ## Deploy the connector
 
