@@ -80,7 +80,7 @@ Grant the service account the permissions required for the connector.
 
 To authenticate and sync issues from Jira, choose one of the following supported authentication methods:
 
-*   **OAuth (recommended)** - Use the standard OAuth option in the connector. No Atlassian app registration or manual OAuth app setup is required from the Jira admin.
+*   **OAuth (recommended)** - Use the standard OAuth option in the connector. The Jira admin doesn't need to register an Atlassian app or set up an OAuth app manually.
 *   **Customized Atlassian Jira OAuth 2.0** - Use your own Atlassian OAuth 2.0 app registration and provide the client ID and secret during connector setup.
 
 To use **Customized Atlassian Jira OAuth 2.0** for authentication:
