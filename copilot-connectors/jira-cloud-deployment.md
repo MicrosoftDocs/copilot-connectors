@@ -30,9 +30,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 - You must be the search admin for your organization's Microsoft 365 tenant.
 - You completed the steps to [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
 - You have the Jira Cloud instance URL.
-- You have the authentication values for the authentication method that you plan to use:
-    - Basic authentication: Jira username and API token.
-    - OAuth 2.0: Client ID and client secret.
+- You have the authentication values if you plan to use Customized Atlassian Jira OAuth 2.0.
 
 ## Deploy the connector
 
@@ -59,9 +57,7 @@ To connect to your Jira cloud data, enter your organization's Jira instance URL.
 Choose one of the following supported authentication methods:
 
 - **OAuth (recommended)**
-- **Customized Atlassian Jira OAuth 2.0**
-
-If you choose Jira OAuth 2.0, enter the client ID and client secret from the OAuth 2.0 app that you created in Atlassian.
+- **Customized Atlassian Jira OAuth 2.0** - Enter the client ID and client secret from the OAuth 2.0 app that you created in Atlassian.
 
 ### Roll out
 
