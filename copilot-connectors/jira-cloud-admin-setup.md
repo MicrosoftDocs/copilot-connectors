@@ -80,8 +80,8 @@ Grant the service account the permissions required for the connector.
 
 To authenticate and sync issues from Jira, choose one of the following supported authentication methods:
 
-*   **Basic authentication** - Enter your account's username (usually email ID) and API token to authenticate by using basic auth. For information about how to generate an API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
-*   **Atlassian Jira OAuth 2.0 (recommended)** - To use the Jira OAuth for authentication:
+*   **OAuth (recommended)** - Highly recommend to use this simplifed authentication method.
+*   **Customized Atlassian Jira OAuth 2.0** - To use the Jira OAuth for authentication:
 
     1.  Register an app in Atlassian Jira so Microsoft Search and Microsoft 365 Copilot can access the instance. For more information, see [Enable OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
     1.  Sign in to the [Atlassian Developer console](https://developer.atlassian.com/console/myapps/) with your Atlassian Jira admin account.
