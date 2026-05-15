@@ -80,7 +80,7 @@ Grant the service account the permissions required for the connector.
 
 To authenticate and sync issues from Jira, choose one of the following supported authentication methods:
 
-*   **OAuth (recommended)** - Highly recommend to use this simplifed authentication method.
+*   **OAuth (recommended)** - Use this simplified authentication method.
 *   **Customized Atlassian Jira OAuth 2.0** - To use the Jira OAuth for authentication:
 
     1.  Register an app in Atlassian Jira so Microsoft Search and Microsoft 365 Copilot can access the instance. For more information, see [Enable OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
