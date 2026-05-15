@@ -45,7 +45,7 @@ Copilot connectors work across multiple Microsoft 365 surfaces. Indexing of conn
 | Microsoft 365 + Copilot Studio license | ✅ | ❌ | ✅ |
 | Microsoft 365 Copilot pay-as-you-go enabled in tenant | ✅ | ❌ | ✅ |
 
-Federated copilot connectors are available to users with M365 premium licenses only. Read [Microsoft-built Federated connectors](federated-connectors-overview.md) for more details.
+Federated copilot connectors are available to users with Microsoft 365 + Microsoft 365 Copilot add-on licenses only. Read [Microsoft-built Federated connectors](federated-connectors-overview.md) for more details.
 
 > [!NOTE]
 > Microsoft 365 Copilot is an add-on to Microsoft 365. If your organization has Microsoft 365 Copilot licenses, connector grounding in Copilot is included, and no additional charges apply. Advanced features such as semantic search require at least one Microsoft 365 Copilot license in the tenant.
