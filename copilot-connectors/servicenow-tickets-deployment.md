@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 03/11/2026
+ms.date: 05/15/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Tickets Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -166,7 +166,7 @@ Under **Auth Scope**, select **useraccount**, and enable **Allow access only to 
 
 **Assign roles to the integration user**
 
-Open the user record and, in the **Roles** related list, add these roles: `catalog_admin`, `user_criteria_admin`, `user_admin`.
+Open the user record and, in the **Roles** related list, add these roles: `itil`, `user_admin`.
 
 > [!NOTE]
 > If you assigned a customer role to the service account you created for crawling and connection setup, add that custom role to this integration user.
