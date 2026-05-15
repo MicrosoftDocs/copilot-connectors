@@ -58,7 +58,7 @@ To connect to your Jira cloud data, enter your organization's Jira instance URL.
 
 Choose one of the following supported authentication methods:
 
-- **OAuth (recommended)** - Highly recommend to use this simplifed authentication method.
+- **OAuth (recommended)** - Use this simplified authentication method.
 - **Customized Atlassian Jira OAuth 2.0 (recommended)**: Enter the client ID and client secret from the OAuth 2.0 app that you created in Atlassian.
 
 ### Roll out
