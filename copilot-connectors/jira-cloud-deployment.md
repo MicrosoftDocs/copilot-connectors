@@ -7,7 +7,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 04/14/2026
+ms.date: 05/15/2026
 ms.localizationpriority: medium
 description: "Find information about how to deploy the Jira Cloud Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -58,8 +58,10 @@ To connect to your Jira cloud data, enter your organization's Jira instance URL.
 
 Choose one of the following supported authentication methods:
 
-- **OAuth (recommended)** - Use this simplified authentication method.
-- **Customized Atlassian Jira OAuth 2.0 (recommended)**: Enter the client ID and client secret from the OAuth 2.0 app that you created in Atlassian.
+- **OAuth (recommended)**
+- **Customized Atlassian Jira OAuth 2.0**
+
+If you choose Jira OAuth 2.0, enter the client ID and client secret from the OAuth 2.0 app that you created in Atlassian.
 
 ### Roll out
 
