@@ -7,7 +7,7 @@ manager: calvind
 ms.reviewer: jecui
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 04/14/2026
+ms.date: 05/15/2026
 ---
 
 # Set up the Jira Cloud service for Jira Cloud Copilot connector ingestion
@@ -80,52 +80,54 @@ Grant the service account the permissions required for the connector.
 
 To authenticate and sync issues from Jira, choose one of the following supported authentication methods:
 
-*   **Basic authentication** - Enter your account's username (usually email ID) and API token to authenticate by using basic auth. For information about how to generate an API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
-*   **Atlassian Jira OAuth 2.0 (recommended)** - To use the Jira OAuth for authentication:
+*   **OAuth (recommended)** - Use the standard OAuth option in the connector. The Jira admin doesn't need to register an Atlassian app or set up an OAuth app manually.
+*   **Customized Atlassian Jira OAuth 2.0** - Use your own Atlassian OAuth 2.0 app registration and provide the client ID and secret during connector setup.
 
-    1.  Register an app in Atlassian Jira so Microsoft Search and Microsoft 365 Copilot can access the instance. For more information, see [Enable OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
-    1.  Sign in to the [Atlassian Developer console](https://developer.atlassian.com/console/myapps/) with your Atlassian Jira admin account.
-    1.  Choose **Create** and select **OAuth 2.0 integration**.
-    1.  Provide an appropriate name for the application and create the new app.
-    1.  On the left navigation pane, go to **Permissions**. Select **Add** for **Jira API** and select **Configure**. Under **Granular Permissions**, add the required scopes.
+To use **Customized Atlassian Jira OAuth 2.0** for authentication:
 
-        | # | Scope name | Code |
-        | :--- | :--- | :--- |
-        | 1 | View fields | `read:field:jira` |
-        | 2 | View avatars | `read:avatar:jira` |
-        | 3 | View project categories | `read:project-category:jira` |
-        | 4 | View projects | `read:project:jira` |
-        | 5 | Read field configurations | `read:field-configuration:jira` |
-        | 6 | View issue types | `read:issue-type:jira` |
-        | 7 | View project properties | `read:project.property:jira` |
-        | 8 | View users | `read:user:jira` |
-        | 9 | View application roles | `read:application-role:jira` |
-        | 10 | View groups | `read:group:jira` |
-        | 11 | Read issue type hierarchies | `read:issue-type-hierarchy:jira` |
-        | 12 | View project versions | `read:project-version:jira` |
-        | 13 | View project components | `read:project.component:jira` |
-        | 14 | View issue details | `read:issue-details:jira` |
-        | 15 | View audit logs | `read:audit-log:jira` |
-        | 16 | View issue meta | `read:issue-meta:jira` |
-        | 17 | View project roles | `read:project-role:jira` |
-        | 18 | View issue security levels | `read:issue-security-level:jira` |
-        | 19 | View issue security schemes | `read:issue-security-scheme:jira` |
-        | 20 | View permission schemes | `read:permission-scheme:jira` |
-        | 21 | View permissions | `read:permission:jira` |
-        | 22 | View attachments | `read:attachment:jira` |
-        | 23 | View comments | `read:comment:jira` |
-        | 24 | View comment properties | `read:comment.property:jira` |
-        | 25 | View webhooks | `read:webhook:jira` |
-        | 26 | View JQL | `read:jql:jira` |
-        | 27 | Create and update webhooks | `write:webhook:jira` |
-        | 28 | Delete webhooks | `delete:webhook:jira` |
-        | 29 | View epics and related issues | `read:epic:jira-software` |
+1.  Register an app in Atlassian Jira so Microsoft Search and Microsoft 365 Copilot can access the instance. For more information, see [Enable OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
+1.  Sign in to the [Atlassian Developer console](https://developer.atlassian.com/console/myapps/) with your Atlassian Jira admin account.
+1.  Choose **Create** and select **OAuth 2.0 integration**.
+1.  Provide an appropriate name for the application and create the new app.
+1.  On the left navigation pane, go to **Permissions**. Select **Add** for **Jira API** and select **Configure**. Under **Granular Permissions**, add the required scopes.
 
-    1.  On the left navigation pane, go to **Authorization** to add the callback URL:
-        - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
-        - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
-    1.  Select **Save**.
-    1.  In the left pane, go to **Settings** to get the client ID and secret. Complete the connection settings step by using the Client ID and Secret.
+    | # | Scope name | Code |
+    | :--- | :--- | :--- |
+    | 1 | View fields | `read:field:jira` |
+    | 2 | View avatars | `read:avatar:jira` |
+    | 3 | View project categories | `read:project-category:jira` |
+    | 4 | View projects | `read:project:jira` |
+    | 5 | Read field configurations | `read:field-configuration:jira` |
+    | 6 | View issue types | `read:issue-type:jira` |
+    | 7 | View project properties | `read:project.property:jira` |
+    | 8 | View users | `read:user:jira` |
+    | 9 | View application roles | `read:application-role:jira` |
+    | 10 | View groups | `read:group:jira` |
+    | 11 | Read issue type hierarchies | `read:issue-type-hierarchy:jira` |
+    | 12 | View project versions | `read:project-version:jira` |
+    | 13 | View project components | `read:project.component:jira` |
+    | 14 | View issue details | `read:issue-details:jira` |
+    | 15 | View audit logs | `read:audit-log:jira` |
+    | 16 | View issue meta | `read:issue-meta:jira` |
+    | 17 | View project roles | `read:project-role:jira` |
+    | 18 | View issue security levels | `read:issue-security-level:jira` |
+    | 19 | View issue security schemes | `read:issue-security-scheme:jira` |
+    | 20 | View permission schemes | `read:permission-scheme:jira` |
+    | 21 | View permissions | `read:permission:jira` |
+    | 22 | View attachments | `read:attachment:jira` |
+    | 23 | View comments | `read:comment:jira` |
+    | 24 | View comment properties | `read:comment.property:jira` |
+    | 25 | View webhooks | `read:webhook:jira` |
+    | 26 | View JQL | `read:jql:jira` |
+    | 27 | Create and update webhooks | `write:webhook:jira` |
+    | 28 | Delete webhooks | `delete:webhook:jira` |
+    | 29 | View epics and related issues | `read:epic:jira-software` |
+
+1.  On the left navigation pane, go to **Authorization** to add the callback URL:
+    - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
+    - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+1.  Select **Save**.
+1.  In the left pane, go to **Settings** to get the client ID and secret. Complete the connection settings step by using the Client ID and Secret.
 
     > [!NOTE]
     > - For more information about Jira permissions, see [Jira scopes for OAuth 2.0](https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/#list-of-scopes).
