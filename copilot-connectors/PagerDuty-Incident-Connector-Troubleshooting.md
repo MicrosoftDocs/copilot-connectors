@@ -13,7 +13,7 @@ description: "Find troubleshooting information for the PagerDuty Incidents Micro
 ms.date: 05/15/2026
 ---
 
-# Troubleshoot issues with the PagerDuty Incidents connector
+# Troubleshoot issues with the PagerDuty Incidents connector (preview)
 
 The PagerDuty Incidents Microsoft 365 Copilot connector integrates PagerDuty incident data into Microsoft 365, enabling Copilot and Microsoft Search to surface incident details directly within apps like Teams, Outlook, and SharePoint.
 
