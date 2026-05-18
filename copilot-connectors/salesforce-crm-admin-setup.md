@@ -6,7 +6,7 @@ ms.author: lauragra
 manager: calvind
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 11/13/2025
+ms.date: 05/18/2026
 ---
 
 # Set up the Salesforce service for Salesforce CRM connector ingestion
