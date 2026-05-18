@@ -48,7 +48,7 @@ The following table lists common use cases for the PagerDuty Incidents connector
 
 ## Build agents with the PagerDuty Incidents connector
 
-Developers can use this connector as a knowledge source in declarative agents they build with [Microsoft Copilot Studio](/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/en-us/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/en-us/microsoft-365/developer/overview-m365-agents-toolkit).
+Developers can use this connector as a knowledge source in declarative agents they build with Microsoft Copilot Studio, Agent Builder in Microsoft 365 Copilot, or the Microsoft 365 Agents Toolkit.
 
 ### Example prompts
 
@@ -101,4 +101,4 @@ You can control permissions in the following ways:
 
 ## Related articles
 
-- [Set up the PagerDuty Incidents connector](pagerduty-incidents-connector-deployment.md)
+- [Set up the PagerDuty Incidents connector](PagerDuty-Incident-Connector-Deployment.md)
