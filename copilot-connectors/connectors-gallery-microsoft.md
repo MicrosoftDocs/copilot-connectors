@@ -81,7 +81,7 @@ The following table lists the data visualization connectors that are available.
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
-| Tableau Cloud| Microsoft | Connect to Tableau Cloud for advanced data visualization and business intelligence functionality. | [Tableau Cloud connector](tableau-cloud-overview.md) |
+| Tableau Cloud (preview)| Microsoft | Connect to Tableau Cloud for advanced data visualization and business intelligence functionality. | [Tableau Cloud connector](tableau-cloud-overview.md) |
 
 ## Databases
 
