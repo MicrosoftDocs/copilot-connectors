@@ -19,7 +19,7 @@ The PagerDuty Incidents Microsoft 365 Copilot connector integrates PagerDuty inc
 
 This article provides troubleshooting information for common errors that you might encounter when you deploy the PagerDuty Incidents connector.
 
-To verify PagerDuty configuration information to help troubleshoot errors, see [Set up the PagerDuty Incidents connector](pagerduty-incidents-connector-deployment.md).
+To verify PagerDuty configuration information to help troubleshoot errors, see [Set up the PagerDuty Incidents connector](PagerDuty-Incident-Connector-Deployment.md).
 
 ## PagerDuty Incidents connector troubleshooting
 
