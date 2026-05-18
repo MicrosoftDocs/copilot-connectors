@@ -1,5 +1,5 @@
 ---
-ms.date: 04/03/2026
+ms.date: 05/18/2026
 title: "Salesforce CRM connector"
 ms.author: lauragra
 author: lauragra
