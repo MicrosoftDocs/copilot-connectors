@@ -90,38 +90,6 @@ The PagerDuty Incidents connector has the following limitations:
 - **Regional API support** — The connector supports PagerDuty US and EU service regions. Ensure you use the correct REST API URL for your account's region.
 - **Permission updates latency** — Changes to user access in PagerDuty are not reflected immediately in the Copilot index. Permission changes are picked up during the next full crawl cycle.
 
-## Data types indexed from PagerDuty
-
-The PagerDuty Incidents connector indexes incident records so they can be used in Copilot, Copilot Search, and Microsoft Search. The following table describes the properties that are indexed.
-
-| Source property | Label | Description |
-| --- | --- | --- |
-| AcknowledgedBy | Not applicable | The users who acknowledged the incident. |
-| AssignedTo | Not applicable | The users assigned to the incident. |
-| ConferenceNumber | Not applicable | The conference number for the incident. |
-| ConferenceUrl | Not applicable | The conference URL for the incident. |
-| Content | `CONTENT` | The content of the incident. |
-| CreatedDateTime | `createdDateTime` | The time at which the incident was created. |
-| EscalationPolicyName | Not applicable | The name of the escalation policy associated with the incident. |
-| HtmlUrl | `url` | URL of the incident in PagerDuty. |
-| IconUrl | `IconUrl` | |
-| Id | Not applicable | Unique ID of the incident. |
-| IncidentKey | Not applicable | The incident key. |
-| IncidentNumber | Not applicable | The incident number. |
-| IncidentType | Not applicable | The type of the incident. |
-| LastModifiedDateTime | `lastModifiedDateTime` | The time at which the incident was last modified. |
-| LastStatusChangeAt | Not applicable | The time at which the incident status was last changed. |
-| LastStatusChangeBy | Not applicable | The user who last changed the incident status. |
-| Priority | Not applicable | The priority of the incident. |
-| ResolveReason | Not applicable | The reason the incident was resolved. |
-| ResolvedAt | Not applicable | The time at which the incident was resolved. |
-| ServiceName | Not applicable | The name of the service associated with the incident. |
-| Status | Not applicable | The status of the incident. |
-| Summary | Not applicable | A short-form, server-generated string by PagerDuty that provides succinct, important information about the incident. |
-| Teams | Not applicable | The teams associated with the incident. |
-| Title | `title` | The title of the incident. |
-| Urgency | Not applicable | The urgency of the incident. |
-
 ## Permissions model and access control
 
 You can configure the PagerDuty Incidents connector to control who can see indexed incident data in Copilot responses and search results.
@@ -133,4 +101,4 @@ You can control permissions in the following ways:
 
 ## Related articles
 
-- [Set up the PagerDuty Incidents connector](pagerduty-incidents-connector.md)
+- [Set up the PagerDuty Incidents connector](pagerduty-incidents-connector-deployment.md)
