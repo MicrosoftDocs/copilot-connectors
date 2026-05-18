@@ -13,7 +13,7 @@ description: "Set up the PagerDuty Incidents Copilot connector for Microsoft Sea
 ms.date: 05/15/2026
 ---
 
-# PagerDuty Incidents Copilot connector (preview)
+# Deploy the PagerDuty Incidents connector in the Microsoft 365 admin center (preview)
 
 The PagerDuty Incidents Copilot connector enables your organization to index PagerDuty incidents data to make it available to Microsoft 365 Copilot and Microsoft Search. 
 
