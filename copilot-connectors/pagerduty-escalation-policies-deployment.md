@@ -53,7 +53,7 @@ To add the PagerDuty Escalation Policies connector for your organization:
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated escalation policy or item. The display name also signifies trusted content and is used as a content source filter.
+Use the display name to identify references in Copilot responses so users can recognize the associated escalation policy or item. The display name also signifies trusted content and is used as a content source filter.
 
 You can accept the default **PagerDuty Escalation Policies** display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -74,7 +74,7 @@ The PagerDuty Escalation Policies connector supports the following authenticatio
 
 - **OAuth 2.0** (recommended): Secure and scalable authentication by using PagerDuty's OAuth flow.
 
-To use **PagerDuty OAuth** for authentication, enter the **Client ID** and **Client Secret** you obtained from your PagerDuty app registration setting in the prerequisites section.
+To use **PagerDuty OAuth** for authentication, enter the **Client ID** and **Client Secret** you obtained from your PagerDuty app registration settings in the prerequisites section.
 
 ### Roll out to a limited audience
 

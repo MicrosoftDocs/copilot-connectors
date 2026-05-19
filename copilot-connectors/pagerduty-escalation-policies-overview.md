@@ -41,7 +41,7 @@ The PagerDuty Escalation Policies connector provides the following benefits:
 - **Advanced Permissions** – When Advanced Permissions is enabled in PagerDuty, only members of the teams linked to a specific escalation policy can access and search for that escalation policy in Microsoft Search and Microsoft 365 Copilot.
 - **License requirements** – A PagerDuty Business or Enterprise plan license is required to index the following data properties: createdBy, createdDateTime, lastModifiedBy, and lastModifiedDateTime.
 
-### Common use cases
+## Common use cases
 
 | Department or role       | Use case                                             | Business benefit                          |
 |-----------------------|------------------------------------------------------|-------------------------------------------|
