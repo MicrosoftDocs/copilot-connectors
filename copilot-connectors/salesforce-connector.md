@@ -1,5 +1,5 @@
 ---
-ms.date: 04/03/2026
+ms.date: 05/18/2026
 title: "Salesforce CRM connector"
 ms.author: lauragra
 author: lauragra
@@ -36,8 +36,12 @@ The connector has the following limitations:
 
 - The connector doesn't honor visibility permissions applied through managed permission sets or permission set groups. This limitation can lead to fields not being indexed or included in search results.
 - The Salesforce Copilot connector doesn't currently support Apex-based sharing, territory-based sharing, or sharing by using personal groups from Salesforce.
-- There's a known bug in the Salesforce API that the connector uses, where the private org-wide defaults for leads aren't honored.  
-- If you set field-level security (FLS) for a profile, the connector doesn't ingest that field for any profiles in that Salesforce org. As a result, users can't search for values for those fields or see them in the results.  
+- There's a known bug in the Salesforce API that the connector uses. The private org-wide defaults for leads aren't honored.
+- By default, if you set field-level security (FLS) for a profile, the connector doesn't ingest that field for any profiles in that Salesforce org unless an admin opts in to indexing specific FLS-restricted fields. As a result, users can't search for values for those fields or see them in the results unless those fields are explicitly opted in.
+
+> [!NOTE]
+> When you create a new Salesforce CRM connector, you can opt in to indexing specific FLS-restricted fields on the **Content** tab. Opted-in fields become visible to all Microsoft 365 users who have access to the records of the entity. For more information, see [Include FLS-restricted fields](#include-fls-restricted-fields).
+
 - In the **Manage properties** section, these common standard property names appear once. The options are **Query**, **Search**, **Retrieve**, and **Refine**, and they apply to all or none.
     - Name
     - Url
@@ -193,19 +197,33 @@ If you choose to ingest an ACL from your Salesforce instance and select **ME-ID*
 
 ### Content
 
-**Choose Salesforce objects and filter data**
+#### Choose Salesforce objects and filter data
 
 Select the Salesforce objects that you want the connector to crawl and include in search results. If you select Contact, Account is automatically selected as well.
 
-> [!NOTE]
-> If a field has field level security (FLS) set for a profile, the connector doesn't ingest that field for any profiles in that Salesforce org. As a result, users can't search for values for those fields or show up in the results.
+#### Include FLS-restricted fields
 
-**Filter data**
+Salesforce field-level security (FLS) hides specific fields from selected profiles or permission sets. The connector detects these fields in your selected entities and excludes them from the crawl by default. On the **Content** tab, you can opt in to index specific fields. Coordinate with your Salesforce admin first; for the Salesforce-side preparation, see [Verify field-level security (FLS) settings](salesforce-crm-admin-setup.md#verify-field-level-security-fls-settings).
 
-   You can filter the Salesforce content that is indexed in two ways:
+When the connector finds FLS-restricted fields, a banner appears at the top of the **Content** tab with the affected counts and a summary pill (for example, **0 of 6 FLS fields included**). Select **Show FLS Fields** to expand the **Field-Level Security Review** panel.
 
-   * Specify the item **modified time period**. This option only indexes the Salesforce content that is created or modified in the time period you select on a **rolling basis** based on current crawl.
-   * Enter the Salesforce query ([SOQL](https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_conditionexpression.htm)) specifying what you want to index using the **WHERE** clause.
+The panel groups fields by entity. Expand an entity, then for each field:
+
+- **Field Name** - the API name of the field in Salesforce.
+- **Restricted Permission Sets** - the Salesforce profiles or permission sets restricted from the field.
+- **Include in Crawl** - switch the toggle to **Yes** to index the field. Use **Select All** to include every FLS field in an entity at once.
+
+Opted-in fields appear in the **Manage properties** table with an **FLS** badge. Excluded FLS fields don't appear there.
+
+> [!WARNING]
+> When you set **Include in Crawl** to **Yes**, the field is indexed for all Microsoft 365 users who have access to the records of the entity, regardless of the Salesforce FLS restrictions. Only opt in after your Salesforce admin confirms the field is safe to share broadly in Microsoft Search and Microsoft 365 Copilot.
+
+#### Filter data
+
+You can filter the Salesforce content that is indexed in two ways:
+
+* Specify the item **modified time period**. This option only indexes the Salesforce content that is created or modified in the time period you select on a **rolling basis** based on current crawl.
+* Enter the Salesforce query ([SOQL](https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_conditionexpression.htm)) specifying what you want to index using the **WHERE** clause.
 
   > [!div class="mx-imgBorder"]
   > ![Screenshot of filtering options in the Salesforce connector](media/salesforce-connector/sf10.png)
@@ -213,7 +231,7 @@ Select the Salesforce objects that you want the connector to crawl and include i
    > [!TIP]
    > You can leave the **WHERE** clause empty if you want to index all the content of the particular entity
 
-**Manage properties**
+#### Manage properties
 
 Add or remove available properties from your Salesforce CRM data source. Assign a schema to the property by defining whether a property is searchable, queryable, retrievable, or refinable. Change the semantic label and add an alias to the property. While this step isn't mandatory, having some property labels improves the relevance and ensures better results for end users. By default, the connector assigns source properties to some of the labels, such as **Title**, **URL**, **CreatedBy**, and **LastModifiedBy**. The following list shows the properties that are selected by default.
 
@@ -229,7 +247,7 @@ LastModifiedBy   | `lastModifiedBy` | Name of the person who most recently edite
 LastModifiedDateTime  | `lastModifiedDateTime` | Date and time the item was last modified in the data source.
 Name   | `title` | The title of the item that you want to show in search and other experiences.
 
-**Preview data**
+#### Preview data
 
 Use the preview results button to verify the sample values of the selected properties and query filter.
 
