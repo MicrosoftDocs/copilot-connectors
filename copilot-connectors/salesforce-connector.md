@@ -203,7 +203,7 @@ Select the Salesforce objects that you want the connector to crawl and include i
 
 #### Include FLS-restricted fields
 
-Salesforce field-level security (FLS) hides specific fields from selected profiles or permission sets. The connector detects these fields in your selected entities and excludes them from the crawl by default. On the **Content** tab, you can opt in to indexing specific fields. Coordinate with your Salesforce admin first; for the Salesforce-side preparation, see [Verify field-level security (FLS) settings](salesforce-crm-admin-setup.md#verify-field-level-security-fls-settings).
+Salesforce field-level security (FLS) hides specific fields from selected profiles or permission sets. The connector detects these fields in your selected entities and excludes them from the crawl by default. On the **Content** tab, you can opt in to index specific fields. Coordinate with your Salesforce admin first; for the Salesforce-side preparation, see [Verify field-level security (FLS) settings](salesforce-crm-admin-setup.md#verify-field-level-security-fls-settings).
 
 When the connector finds FLS-restricted fields, a banner appears at the top of the **Content** tab with the affected counts and a summary pill (for example, **0 of 6 FLS fields included**). Select **Show FLS Fields** to expand the **Field-Level Security Review** panel.
 
