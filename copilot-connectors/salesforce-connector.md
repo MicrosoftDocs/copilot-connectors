@@ -37,7 +37,7 @@ The connector has the following limitations:
 - The connector doesn't honor visibility permissions applied through managed permission sets or permission set groups. This limitation can lead to fields not being indexed or included in search results.
 - The Salesforce Copilot connector doesn't currently support Apex-based sharing, territory-based sharing, or sharing by using personal groups from Salesforce.
 - There's a known bug in the Salesforce API that the connector uses. The private org-wide defaults for leads aren't honored.
-- If you set field-level security (FLS) for a profile, the connector doesn't ingest that field for any profiles in that Salesforce org. As a result, users can't search for values for those fields or see them in the results.
+- By default, if you set field-level security (FLS) for a profile, the connector doesn't ingest that field for any profiles in that Salesforce org unless an admin opts in to indexing specific FLS-restricted fields. As a result, users can't search for values for those fields or see them in the results unless those fields are explicitly opted in.
 
 > [!NOTE]
 > When you create a new Salesforce CRM connector, you can opt in to indexing specific FLS-restricted fields on the **Content** tab. Opted-in fields become visible to all Microsoft 365 users who have access to the records of the entity. For more information, see [Include FLS-restricted fields](#include-fls-restricted-fields).
