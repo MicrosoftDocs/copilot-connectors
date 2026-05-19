@@ -13,7 +13,7 @@ description: "Set up the PagerDuty Escalation Policies Copilot connector for Mic
 ms.date: 08/15/2025
 ---
 
-# PagerDuty Escalation Policies Copilot connector (preview)
+# PagerDuty Escalation Policies Copilot connector (preview) - update
 The PagerDuty Escalation Policies Copilot connector enables your organization to index PagerDuty escalation policy data to make it available to Microsoft 365 Copilot and Microsoft Search. 
 
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
