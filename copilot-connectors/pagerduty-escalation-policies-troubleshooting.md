@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the PagerDuty Escalation Policies Copilot connector."
 ---
 
-# Troubleshoot issues with the PagerDuty Escation Policies Copilot connector
+# Troubleshoot issues with the PagerDuty Escalation Policies Copilot connector
 
 The PagerDuty Escalation Policies Microsoft 365 Copilot connector enables users to surface PagerDuty escalation policy data in Microsoft 365 apps such as Teams, Outlook, and SharePoint using Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the PagerDuty Escalation Policies connector.
 
@@ -23,7 +23,7 @@ The PagerDuty Escalation Policies Microsoft 365 Copilot connector enables users 
 The following table lists common errors and recommended troubleshooting steps.
 
 | Error or issue | Possible cause | Recommended action |
-|---|---|---|
+| --- | --- | --- |
 | **Your security credentials have expired for this session. Please go back and sign in again with your Client ID and Client secret.** | OAuth credentials expired. | Create a new app ID in the PagerDuty app registration setting and copy the latest Client ID and Client Secret from **settings** to reauthenticate the connector. |
 | **Invalid credentials detected. Please check the credential info and check the permission scopes of the PagerDuty App.** | Incorrect Client ID or Client Secret, or missing required permission scopes. | Go back to the PagerDuty app registration setting and verify that the Client ID and Client Secret are correct and that all required permission scopes are selected: Audit records (Read), Escalation Policies (Read), Teams (Read), and Users (Read). |
 | **Escalation policies not appearing in Copilot or search** | Permissions mismatch or Advanced Permissions enabled in PagerDuty. | When Advanced Permissions is enabled in PagerDuty, only members of teams linked to a specific escalation policy can access it. Verify that users requesting access are members of the appropriate teams in PagerDuty. |

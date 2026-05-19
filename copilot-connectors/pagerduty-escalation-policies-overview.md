@@ -43,12 +43,12 @@ The PagerDuty Escalation Policies connector provides the following benefits:
 
 ## Common use cases
 
-| Department or role       | Use case                                             | Business benefit                          |
-|-----------------------|------------------------------------------------------|-------------------------------------------|
-| Incident management   | Quickly identify escalation paths for critical incidents | Faster incident resolution and reduced downtime |
-| IT Operations         | Review escalation policy assignments and team coverage | Better resource allocation and coverage planning |
+| Department or role | Use case | Business benefit |
+| --- | --- | --- |
+| Incident management | Quickly identify escalation paths for critical incidents | Faster incident resolution and reduced downtime |
+| IT Operations | Review escalation policy assignments and team coverage | Better resource allocation and coverage planning |
 | Site Reliability Engineering (SRE) | Understand escalation rules and notification timings | Improved incident response coordination |
-| DevOps teams          | Track which services are linked to escalation policies | Enhanced service ownership and accountability |
+| DevOps teams | Track which services are linked to escalation policies | Enhanced service ownership and accountability |
 
 ## Build agents with the PagerDuty Escalation Policies connector
 
@@ -58,19 +58,19 @@ Developers can use this connector as a knowledge source in declarative agents th
 
 The following examples show prompts that agent builders can use to help their users retrieve information from PagerDuty escalation policies.
 
-**Incident Management**
+#### Incident Management
 
 - Show me the escalation policy for the production database service.
 - What are the escalation rules for critical infrastructure incidents?
 - List all escalation policies that include the SRE team.
 
-**Policy Review**
+#### Policy Review
 
 - Which escalation policies were recently modified?
 - Show me all escalation policies created by [user name].
 - What services use the 24/7 on-call escalation policy?
 
-**Team Coordination**
+#### Team Coordination
 
 - What is the escalation path for incidents assigned to my team?
 - List all teams linked to escalation policies for the payment service.

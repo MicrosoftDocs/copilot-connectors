@@ -61,7 +61,7 @@ For more information about connector display names and descriptions, see [Enhanc
 
 ### Set instance REST API URL
 
-PagerDuty customers can choose the geographic service region for the PagerDuty data centers that host their account. 
+PagerDuty customers can choose the geographic service region for the PagerDuty data centers that host their account.
 
 - For the US service region, the REST API URL is: `https://api.pagerduty.com`
 - For the EU service region, the REST API URL is: `https://api.eu.pagerduty.com`
@@ -98,19 +98,19 @@ Determine which users in your organization can access each item in Copilot or Se
 
 You can add or remove properties from your PagerDuty Escalation Policy data source. Assign a schema, change the semantic label, and add an alias to the property. The following properties are indexed by default.
 
-| Source property     | Label                | Description |
-|:--------------------|:---------------------|:------------|
-| Id                  | Not applicable       | Unique ID of the escalation policy. |
-| HtmlUrl             | `url`                | URL of the escalation policy in PagerDuty. |
-| CreatedBy           | `createdBy`          | The name of the user who created the escalation policy. |
-| CreatedTime         | `createdDateTime`    | The time at which the escalation policy was created. |
-| LastModifiedBy      | `lastModifiedBy`     | The name of the user who last modified the escalation policy. |
-| LastModifiedTime    | `lastModifiedDateTime` | The time at which the escalation policy was last modified. |
-| Name                | `title`              | The name of the escalation policy. |
-| Summary             | Not applicable       | A short-form, server-generated string by PagerDuty that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, it's identical to `name`, though it is not intended to be an identifier. |
-| Description         | Not applicable       | Escalation policy description. |
-| RuleDetail          | Not applicable       | This property is a list of entries in the escalation policy, including the number of minutes before an unacknowledged incident escalates away from this rule, and the targets an incident should be assigned to upon reaching the rule. |
-| UsedByServices      | Not applicable       | The services associated with the escalation policy. |
+| Source property | Label | Description |
+| --- | --- | --- |
+| Id | Not applicable | Unique ID of the escalation policy. |
+| HtmlUrl | `url` | URL of the escalation policy in PagerDuty. |
+| CreatedBy | `createdBy` | The name of the user who created the escalation policy. |
+| CreatedTime | `createdDateTime` | The time at which the escalation policy was created. |
+| LastModifiedBy | `lastModifiedBy` | The name of the user who last modified the escalation policy. |
+| LastModifiedTime | `lastModifiedDateTime` | The time at which the escalation policy was last modified. |
+| Name | `title` | The name of the escalation policy. |
+| Summary | Not applicable | A short-form, server-generated string by PagerDuty that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, it's identical to `name`, though it is not intended to be an identifier. |
+| Description | Not applicable | Escalation policy description. |
+| RuleDetail | Not applicable | This property is a list of entries in the escalation policy, including the number of minutes before an unacknowledged incident escalates away from this rule, and the targets an incident should be assigned to upon reaching the rule. |
+| UsedByServices | Not applicable | The services associated with the escalation policy. |
 
 ### Sync
 
