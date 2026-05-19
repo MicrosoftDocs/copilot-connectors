@@ -37,11 +37,11 @@ The following table lists examples of prompts that users can use to retrieve inf
 
 | Role/Department           | Example prompt                                                                 |
 |---------------------------|--------------------------------------------------------------------------------|
-| Business Analyst          | Recommend a movie based on review texts and my interests.                      |
-| Content Manager           | Summarize the review text on movie Paa.                                        |
-| Marketing Lead            | Identify the movie that generates heated discussions in our database.          |
-| Product Manager           | Show me the top-rated items from the product reviews collection.               |
-| Data Analyst              | What are the most common themes in customer feedback from our reviews?         |
+| Business analyst          | Recommend a movie based on review texts and my interests.                      |
+| Content manager           | Summarize the review text on movie Paa.                                        |
+| Marketing lead            | Identify the movie that generates heated discussions in our database.          |
+| Product manager           | Show me the top-rated items from the product reviews collection.               |
+| Data analyst              | What are the most common themes in customer feedback from our reviews?         |
 
 ## DataStax connector capabilities and limitations
 

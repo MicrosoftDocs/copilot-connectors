@@ -114,7 +114,7 @@ To view available properties from your DataStax data source, assign a schema to 
 |:---|:---|:---|:---|
 | Collection | Not applicable | The collection name | Query, Retrieve, Search. |
 | Content | Not applicable | The record in the collection | Search. |
-| IconUrl | IconUrl | The icon url of the record | Retrieve. |
+| iconUrl | iconUrl | The icon URL of the record | Retrieve. |
 | Id | url | The record ID in the collection | Query, Retrieve. |
 | Keyspace | Not applicable | The keyspace for the collection | Query, Retrieve, Search. |
 | Title | Title | The title created by combining the collection name and the record ID  | Query, Retrieve, Search. |
