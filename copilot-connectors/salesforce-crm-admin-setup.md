@@ -110,7 +110,7 @@ You can filter indexed Salesforce content by:
 
 If your Salesforce org uses field-level security to hide fields from specific profiles or permission sets, the connector detects these restrictions and excludes the affected fields from the crawl by default. You can opt in to indexing specific FLS-restricted fields on the **Content** tab in the Microsoft 365 admin center. Before deploying the connector:
 
-- Confirm the connected app's profile has permission to read FLS metadata. The **System Administrator** profile already includes this access. For custom profiles, ensure **View Setup and Configuration** and **View All Profiles** are enabled (see [Enable API access](#enable-api-access)).
+- Confirm the Salesforce user account that signs in to the connector has permission to read FLS metadata. The **System Administrator** profile already includes this access. For custom profiles, ensure **View Setup and Configuration** and **View All Profiles** are enabled (see [Enable API access](#enable-api-access)).
 - Verify the FLS settings for the indexed objects and decide which FLS-restricted fields are safe to index in Microsoft 365 and which must stay excluded.
 
 For how to opt in to FLS-restricted fields in the Microsoft 365 admin center, see [Include FLS-restricted fields](salesforce-connector.md#include-fls-restricted-fields).
