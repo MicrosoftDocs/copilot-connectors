@@ -14,7 +14,7 @@ description: "Learn about the capabilities, limitations, and use cases for the P
 
 # PagerDuty Escalation Policies connector overview
 
-The PagerDuty Escalation Policies Microsoft 365 Copilot connector enables your organization to index PagerDuty escalation policy data to make it available to Microsoft 365 Copilot and Microsoft Search. This integration allows Copilot, Copilot Search, and Microsoft Search to surface relevant escalation policy information directly within apps like Microsoft Teams, Outlook, and SharePoint.
+The PagerDuty Escalation Policies Microsoft 365 Copilot connector enables your organization to index PagerDuty escalation policy data to make it available to Microsoft 365 Copilot and Microsoft Search. By using this integration, Copilot, Copilot Search, and Microsoft Search can surface relevant escalation policy information directly within apps like Microsoft Teams, Outlook, and SharePoint.
 
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 

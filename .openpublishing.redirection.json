@@ -29,6 +29,11 @@
       "source_path_from_root": "/copilot-connectors/pagerduty-escalation-policies-connector.md",
       "redirect_url": "/microsoft-365/copilot/connectors/pagerduty-escalation-policies-deployment",
       "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/PagerDuty-Escalation-Policies-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/pagerduty-escalation-policies-deployment",
+      "redirect_document_id": true
     }
   ]
 }
