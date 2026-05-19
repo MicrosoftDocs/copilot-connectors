@@ -16,7 +16,7 @@ description: "Find information about how to deploy the DataStax Copilot connecto
 
 The DataStax connector indexes records from your DataStax Astra DB collections into Microsoft 365. This guide describes the steps to deploy and customize the connector.
 
-[!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
+[!INCLUDE [connector-preview-access](includes/connector-preview-access.md)]
 
 ## Prerequisites
 
@@ -87,7 +87,7 @@ In custom setup you can edit any of the default values for users, content, and s
 
 ### Users
 
-[![Screenshot that shows Users tab where you can configure access permissions and user mapping rules.](media/datastax/DataStax-users-tab.png)](media/datastax/DataStax-users-tab.png#lightbox)
+[![Screenshot that shows Users tab where you can configure access permissions and user mapping rules.](media/datastax/datastax-users-tab.png)](media/datastax/datastax-users-tab.png#lightbox)
 
 #### Access permissions
 
@@ -104,7 +104,7 @@ To identify which option is best for your organization:
 
 ### Content
 
-[![Screenshot that shows Content tab where you can configure properties and schema.](media/datastax/DataStax-content-tab.png)](media/datastax/DataStax-content-tab.png#lightbox)
+[![Screenshot that shows Content tab where you can configure properties and schema.](media/datastax/datastax-content-tab.png)](media/datastax/datastax-content-tab.png#lightbox)
 
 #### Manage properties
 
@@ -125,7 +125,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 ### Sync
 
-[![Screenshot that shows Sync tab where you can configure crawl frequency.](media/datastax/DataStax-sync-tab.png)](media/datastax/DataStax-sync-tab.png#lightbox)
+[![Screenshot that shows Sync tab where you can configure crawl frequency.](media/datastax/datastax-sync-tab.png)](media/datastax/datastax-sync-tab.png#lightbox)
 
 The refresh interval determines how often your data syncs between the data source and the DataStax Copilot connector index. The DataStax connector only supports the refresh interval - full crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 

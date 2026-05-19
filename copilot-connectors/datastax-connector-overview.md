@@ -16,7 +16,7 @@ description: "Learn about the capabilities, limitations, and use cases for the D
 
 The DataStax Microsoft 365 Copilot connector enables your organization to index records in your DataStax Astra DB collections. After you configure the connector and index content from the DataStax databases, users can search for those items in Microsoft 365 Copilot.
 
-[!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
+[!INCLUDE [connector-preview-access](includes/connector-preview-access.md)]
 
 ## Why use the DataStax connector to index your data?
 
