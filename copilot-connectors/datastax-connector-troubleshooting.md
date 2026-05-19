@@ -16,7 +16,7 @@ description: "Find troubleshooting information for the DataStax Microsoft 365 Co
 
 The DataStax connector indexes records from your DataStax Astra DB collections into Microsoft 365 so users can search and retrieve database data directly in Copilot and Microsoft Search. This article provides troubleshooting information for common issues you might encounter when you deploy or manage the connector.
 
-[!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
+[!INCLUDE [connector-preview-access](includes/connector-preview-access.md)]
 
 ## DataStax connector troubleshooting
 
