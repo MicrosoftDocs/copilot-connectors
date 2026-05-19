@@ -31,10 +31,10 @@ The PagerDuty Escalation Policies connector provides the following benefits:
 
 ## Capabilities
 
-- **Semantic search** – Access PagerDuty escalation policies in Copilot using the power of semantic search.
+- **Semantic search** – Access PagerDuty escalation policies in Copilot by using the power of semantic search.
 - **ACL retention** – Retain access control lists (ACLs) defined by your organization.
 - **Customizable crawl frequency** – Customize your crawl frequency to fit your data refresh needs.
-- **Copilot Studio integration** – Create workflows using this connection and plugins from Microsoft Copilot Studio.
+- **Copilot Studio integration** – Create workflows by using this connection and plugins from Microsoft Copilot Studio.
 
 ## Limitations
 
@@ -43,7 +43,7 @@ The PagerDuty Escalation Policies connector provides the following benefits:
 
 ### Common use cases
 
-| Department/role       | Use case                                             | Business benefit                          |
+| Department or role       | Use case                                             | Business benefit                          |
 |-----------------------|------------------------------------------------------|-------------------------------------------|
 | Incident management   | Quickly identify escalation paths for critical incidents | Faster incident resolution and reduced downtime |
 | IT Operations         | Review escalation policy assignments and team coverage | Better resource allocation and coverage planning |

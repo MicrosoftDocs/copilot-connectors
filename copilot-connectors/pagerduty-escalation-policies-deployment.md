@@ -14,7 +14,7 @@ description: "Find information about how to deploy the PagerDuty Escalation Poli
 
 # Deploy the PagerDuty Escalation Policies connector
 
-The PagerDuty Escalation Policies Microsoft 365 Copilot connector integrates PagerDuty escalation policy data into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant escalation policy information directly within apps like Microsoft Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the PagerDuty Escalation Policies connector.
+The PagerDuty Escalation Policies Microsoft 365 Copilot connector integrates PagerDuty escalation policy data into Microsoft 365. By using this connector, Copilot, Copilot Search, and Microsoft Search can surface relevant escalation policy information directly within apps like Microsoft Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the PagerDuty Escalation Policies connector.
 
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 
@@ -23,33 +23,33 @@ The PagerDuty Escalation Policies Microsoft 365 Copilot connector integrates Pag
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You must be a Microsoft 365 admin.
-- You must have a PagerDuty account with administrator permission in the PagerDuty app.
-- The PagerDuty environment must be configured to allow API access.
+- You have a PagerDuty account with administrator permission in the PagerDuty app.
+- The PagerDuty environment is configured to allow API access.
 - For advanced features, a PagerDuty Business or Enterprise plan license is required to index audit-related properties (createdBy, createdDateTime, lastModifiedBy, lastModifiedDateTime).
 
 ### Configure PagerDuty OAuth application
 
-Before you deploy the connector, you must create an OAuth application in PagerDuty:
+Before you deploy the connector, create an OAuth application in PagerDuty:
 
 1. In PagerDuty, add a new app with OAuth 2.0 functionality enabled. For more information, see [OAuth Functionality](https://developer.pagerduty.com/docs/oauth-functionality) and [Register an App](https://developer.pagerduty.com/docs/register-an-app).
-2. Select **Scoped OAuth** in the PagerDuty new app registration setting page.
-3. Use the following links for the **Redirect URL** field in the PagerDuty new app registration setting page:
+1. Select **Scoped OAuth** in the PagerDuty new app registration setting page.
+1. Use the following links for the **Redirect URL** field in the PagerDuty new app registration setting page:
    - For M365 Enterprise, use: `https://gcs.office.com/v1.0/admin/oauth/callback`
    - For M365 Government, use: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
-4. Select the following scopes in the PagerDuty new app registration setting page:
+1. Select the following scopes in the PagerDuty new app registration setting page:
    - **Audit records** – Read Access
    - **Escalation Policies** – Read Access
    - **Teams** – Read Access
    - **Users** – Read Access
-5. After you successfully complete app registration in PagerDuty, copy the **Client ID** and **Client Secret**.
+1. After you successfully complete app registration in PagerDuty, copy the **Client ID** and **Client Secret**.
 
 ## Deploy the connector
 
 To add the PagerDuty Escalation Policies connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-2. Choose the **Gallery** tab.
-3. From the list of available connectors, choose **PagerDuty Escalation Policies**.
+1. Select the **Gallery** tab.
+1. From the list of available connectors, choose **PagerDuty Escalation Policies**.
 
 ### Set display name
 
@@ -61,7 +61,7 @@ For more information about connector display names and descriptions, see [Enhanc
 
 ### Set instance REST API URL
 
-PagerDuty allows customers to choose the geographic service region of the PagerDuty data centers that host their account.
+PagerDuty customers can choose the geographic service region for the PagerDuty data centers that host their account. 
 
 - For the US service region, the REST API URL is: `https://api.pagerduty.com`
 - For the EU service region, the REST API URL is: `https://api.eu.pagerduty.com`
@@ -72,7 +72,7 @@ For more information, see [Service regions](https://support.pagerduty.com/main/d
 
 The PagerDuty Escalation Policies connector supports the following authentication type:
 
-- **OAuth 2.0** (recommended): Secure and scalable authentication using PagerDuty's OAuth flow.
+- **OAuth 2.0** (recommended): Secure and scalable authentication by using PagerDuty's OAuth flow.
 
 To use **PagerDuty OAuth** for authentication, enter the **Client ID** and **Client Secret** you obtained from your PagerDuty app registration setting in the prerequisites section.
 
@@ -82,7 +82,7 @@ Deploy this connection to a limited user base to validate it in Copilot and othe
 
 ## Custom setup
 
-In custom setup you can edit any of the default values for users, content, and sync.
+In custom setup, you can edit any of the default values for users, content, and sync.
 
 ### Users
 
@@ -90,13 +90,13 @@ In custom setup you can edit any of the default values for users, content, and s
 
 Determine which users in your organization can access each item in Copilot or Search surfaces. Choose whether indexed data is visible to everyone in the organization or only to users who have access to the data source.
 
-**Important**: When Advanced Permissions is enabled in PagerDuty, only members of the teams linked to a specific escalation policy can access and search for that escalation policy in Microsoft Search and Microsoft 365 Copilot.
+**Important**: When you enable Advanced Permissions in PagerDuty, only members of the teams linked to a specific escalation policy can access and search for that escalation policy in Microsoft Search and Microsoft 365 Copilot.
 
 ### Content
 
 #### Manage properties
 
-You can add or remove available properties from your PagerDuty Escalation Policy data source. Assign a schema, change the semantic label, and add an alias to the property. The following properties are indexed by default.
+You can add or remove properties from your PagerDuty Escalation Policy data source. Assign a schema, change the semantic label, and add an alias to the property. The following properties are indexed by default.
 
 | Source property     | Label                | Description |
 |:--------------------|:---------------------|:------------|
