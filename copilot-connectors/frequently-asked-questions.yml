@@ -6,7 +6,7 @@ metadata:
   ms.author: lauragra
   ms.topic: faq
   ms.service: copilot-connectors
-  ms.date: 09/05/2025
+  ms.date: 05/18/2026
 
 title: "Microsoft 365 Copilot connectors FAQ"
 summary: |
@@ -40,9 +40,9 @@ sections:
         answer: |
           When you use connectors to bring your content into Microsoft 365, your security and data access controls are maintained. You map existing access control lists to objects in Microsoft 365 and Microsoft Entra ID to ensure that only individuals with the right permissions can access the content.
      
-      - question: "How are sensitivity labels handled for data synchronized from third-party systems into Microsoft 365?"
+      - question: "How are sensitivity labels handled for data synchronized from external systems into Microsoft 365?"
         answer: |
-          Sensitivity label inheritance and enforcement for data in Microsoft 365 is based on Microsoft Purview labels. Third-party source systems may use proprietary or non-standard classification models that do not automatically map to Purview labels. Sync connectors are an opt-in capability, and customers should evaluate their governance, compliance, and sensitivity labeling requirements before enabling data synchronization from third-party systems into Microsoft 365.
+          Sensitivity label inheritance and enforcement for data in Microsoft 365 is based on Microsoft Purview labels. External source systems might use proprietary or non-standard classification models that don't automatically map to Purview labels. Synced connectors are an opt-in capability. Customers should evaluate their governance, compliance, and sensitivity labeling requirements before enabling data synchronization from external systems into Microsoft 365.
     
       - question: "Where is the data stored when it's ingested?"
         answer: |
