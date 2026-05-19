@@ -1,0 +1,82 @@
+---
+title: "PagerDuty Escalation Policies connector overview"
+ms.author: wangchen
+author: wangchen
+manager: zezhangzhao
+audience: Admin
+ms.audience: Admin
+ms.topic: concept-article
+ms.service: copilot-connectors
+ms.date: 08/15/2025
+ms.localizationpriority: Medium
+description: "Learn about the capabilities, limitations, and use cases for the PagerDuty Escalation Policies Microsoft 365 Copilot connector."
+---
+
+# PagerDuty Escalation Policies connector overview
+
+The PagerDuty Escalation Policies Microsoft 365 Copilot connector enables your organization to index PagerDuty escalation policy data to make it available to Microsoft 365 Copilot and Microsoft Search. This integration allows Copilot, Copilot Search, and Microsoft Search to surface relevant escalation policy information directly within apps like Microsoft Teams, Outlook, and SharePoint.
+
+[!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
+
+## Why use the PagerDuty Escalation Policies connector to index your data?
+
+Organizations that use PagerDuty for incident management often face challenges in quickly accessing critical escalation policy information across multiple tools. The PagerDuty Escalation Policies connector addresses these challenges by integrating escalation policy data into Microsoft 365. This integration allows employees to surface PagerDuty escalation policies through Copilot, Copilot Search, and Microsoft Search—within everyday apps like Teams, Outlook, or SharePoint—without leaving their flow of work.
+
+The PagerDuty Escalation Policies connector provides the following benefits:
+
+- **Boosts productivity** – Access PagerDuty escalation policies directly within Microsoft 365 apps, reducing time spent switching platforms.
+- **Improves incident response** – Quick access to escalation policies ensures faster incident resolution and better accountability.
+- **Enhances collaboration** – Teams can easily understand escalation paths and responsibilities without leaving Microsoft 365.
+- **Preserves security and compliance** – The connector respects PagerDuty permissions to ensure that sensitive escalation policy information is only visible to authorized users.
+
+## Capabilities
+
+- **Semantic search** – Access PagerDuty escalation policies in Copilot using the power of semantic search.
+- **ACL retention** – Retain access control lists (ACLs) defined by your organization.
+- **Customizable crawl frequency** – Customize your crawl frequency to fit your data refresh needs.
+- **Copilot Studio integration** – Create workflows using this connection and plugins from Microsoft Copilot Studio.
+
+## Limitations
+
+- **Advanced Permissions** – When Advanced Permissions is enabled in PagerDuty, only members of the teams linked to a specific escalation policy can access and search for that escalation policy in Microsoft Search and Microsoft 365 Copilot.
+- **License requirements** – A PagerDuty Business or Enterprise plan license is required to index the following data properties: createdBy, createdDateTime, lastModifiedBy, and lastModifiedDateTime.
+
+### Common use cases
+
+| Department/role       | Use case                                             | Business benefit                          |
+|-----------------------|------------------------------------------------------|-------------------------------------------|
+| Incident management   | Quickly identify escalation paths for critical incidents | Faster incident resolution and reduced downtime |
+| IT Operations         | Review escalation policy assignments and team coverage | Better resource allocation and coverage planning |
+| Site Reliability Engineering (SRE) | Understand escalation rules and notification timings | Improved incident response coordination |
+| DevOps teams          | Track which services are linked to escalation policies | Enhanced service ownership and accountability |
+
+## Build agents with the PagerDuty Escalation Policies connector
+
+Developers can use this connector as a knowledge source in declarative agents they build with the [Copilot Studio full experience](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), the [Copilot Studio lite experience](/microsoft-365/copilot/extensibility/copilot-studio-agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
+
+### Example prompts
+
+The following examples show prompts that agent builders can use to help their users retrieve information from PagerDuty escalation policies.
+
+**Incident Management**
+
+- Show me the escalation policy for the production database service.
+- What are the escalation rules for critical infrastructure incidents?
+- List all escalation policies that include the SRE team.
+
+**Policy Review**
+
+- Which escalation policies were recently modified?
+- Show me all escalation policies created by [user name].
+- What services use the 24/7 on-call escalation policy?
+
+**Team Coordination**
+
+- What is the escalation path for incidents assigned to my team?
+- List all teams linked to escalation policies for the payment service.
+- How long does it take for an incident to escalate in the critical services policy?
+
+## Related content
+
+- [Deploy the PagerDuty Escalation Policies connector](pagerduty-escalation-policies-deployment.md)
+- [Troubleshoot issues with the PagerDuty Escalation Policies connector](pagerduty-escalation-policies-troubleshooting.md)
