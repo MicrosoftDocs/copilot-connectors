@@ -97,7 +97,7 @@ items:
         href: azure-devops-work-items-overview.md
       - name: Set up the Azure DevOps service
         href: azure-devops-work-items-admin-setup.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: azure-devops-work-items-deployment.md
       - name: Troubleshooting
         href: azure-devops-work-items-troubleshooting.md
@@ -197,7 +197,7 @@ items:
         href: dropbox-overview.md
       - name: Set up the Dropbox service
         href: dropbox-admin-setup.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: dropbox-deployment.md
       - name: Troubleshooting
         href: dropbox-troubleshooting.md
@@ -207,7 +207,7 @@ items:
         href: egnyte-overview.md
       - name: Set up the Egnyte service
         href: egnyte-admin-setup.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: egnyte-deployment.md
       - name: Troubleshooting
         href: egnyte-troubleshooting.md
@@ -245,7 +245,7 @@ items:
           href: github-cloud-issues-overview.md
         - name: Set up the GitHub service
           href: github-cloud-issues-admin-setup.md 
-        - name: Deploy the connector
+        - name: Deployment guide
           href: github-cloud-issues-deployment.md
         - name: Troubleshooting
           href: github-cloud-issues-troubleshooting.md
@@ -255,7 +255,7 @@ items:
           href: github-cloud-knowledge-overview.md
         - name: Set up the GitHub service
           href: github-cloud-knowledge-admin-setup.md
-        - name: Deploy the connector
+        - name: Deployment guide
           href: github-cloud-knowledge-deployment.md
         - name: Troubleshooting
           href: github-cloud-knowledge-troubleshooting.md
@@ -265,7 +265,7 @@ items:
           href: github-cloud-pull-requests-overview.md
         - name: Set up the GitHub service
           href: github-cloud-pull-requests-admin-setup.md
-        - name: Deploy the connector
+        - name: Deployment guide
           href: github-cloud-pull-requests-deployment.md
         - name: Troubleshooting
           href: github-cloud-pull-requests-troubleshooting.md 
@@ -275,7 +275,7 @@ items:
           href: github-server-issues-overview.md
         - name: Set up the GitHub service
           href: github-server-issues-admin-setup.md
-        - name: Deploy the connector
+        - name: Deployment guide
           href: github-server-issues-deployment.md
         - name: Troubleshooting
           href: github-server-issues-troubleshooting.md
@@ -285,7 +285,7 @@ items:
           href: github-server-knowledge-overview.md
         - name: Set up the GitHub service
           href: github-server-knowledge-admin-setup.md
-        - name: Deploy the connector
+        - name: Deployment guide
           href: github-server-knowledge-deployment.md
         - name: Troubleshooting
           href: github-server-knowledge-troubleshooting.md
@@ -295,7 +295,7 @@ items:
           href: github-server-pull-requests-overview.md
         - name: Set up the GitHub Server service
           href: github-server-pull-requests-admin-setup.md
-        - name: Deploy the connector
+        - name: Deployment guide
           href: github-server-pull-requests-deployment.md
         - name: Troubleshooting
           href: github-server-pull-requests-troubleshooting.md
@@ -313,7 +313,7 @@ items:
         items:
         - name: Overview
           href: gitlab-issues-server-overview.md
-        - name: Deploy the connector
+        - name: Deployment guide
           href: gitlab-issues-server-deployment.md
         - name: Troubleshooting
           href: gitlab-issues-server-troubleshooting.md
@@ -321,7 +321,7 @@ items:
         items:
         - name: Overview
           href: gitlab-knowledge-cloud-overview.md
-        - name: Deploy the connector
+        - name: Deployment guide
           href: gitlab-knowledge-cloud-deployment.md
         - name: Troubleshooting
           href: gitlab-knowledge-cloud-troubleshooting.md
@@ -359,7 +359,7 @@ items:
         href: google-drive-overview.md
       - name: Set up the Google Workspace service
         href: google-drive-admin-setup.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: google-drive-deployment.md
       - name: Troubleshooting
         href: google-drive-troubleshooting.md
@@ -381,7 +381,7 @@ items:
         href: jira-cloud-overview.md
       - name: Set up the Jira Cloud service
         href: jira-cloud-admin-setup.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: jira-cloud-deployment.md
       - name: Troubleshooting
         href: jira-cloud-troubleshooting.md
@@ -389,7 +389,7 @@ items:
       items:
       - name: Overview
         href: jira-data-center-overview.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: jira-data-center-deployment.md
       - name: Troubleshooting
         href: jira-data-center-troubleshooting.md
@@ -413,7 +413,7 @@ items:
       items:
       - name: Overview
         href: monday-overview.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: monday-deployment.md
       - name: Troubleshooting
         href: monday-troubleshooting.md
@@ -429,6 +429,14 @@ items:
         href: PagerDuty-Escalation-Policies-connector.md
       - name: Setup PagerDuty Schedules
         href: pagerduty-schedules-connector.md
+    - name: PagerDuty Incidents
+      items:
+      - name: Overview
+        href: pagerduty-incidents-overview.md
+      - name: Deployment guide
+        href: pagerduty-incidents-deployment.md
+      - name: Troubleshooting
+        href: pagerduty-incidents-troubleshooting.md
     - name: PostgreSQL
       items:
       - name: Setup
@@ -437,7 +445,7 @@ items:
       items:
       - name: Set up the Salesforce service
         href: salesforce-crm-admin-setup.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: salesforce-connector.md
       - name: Troubleshooting
         href: troubleshoot-salesforce-connector.md
@@ -454,7 +462,7 @@ items:
         items:
         - name: Grant table access to a user
           href: granting-table-access-servicenow-catalog.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: servicenow-catalog-deployment.md
       - name: Troubleshooting
         href: servicenow-catalog-troubleshooting.md
@@ -469,7 +477,7 @@ items:
           href: granting-table-access-servicenow-knowledge.md
         - name: Set up using background scripts
           href: servicenow-knowledge-setup-scripts.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: servicenow-knowledge-deployment.md
       - name: Troubleshooting
         href: servicenow-knowledge-troubleshooting.md
@@ -482,7 +490,7 @@ items:
         items:
         - name: Grant table access to a user
           href: granting-table-access-servicenow-tickets.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: servicenow-tickets-deployment.md
       - name: Troubleshooting
         href: servicenow-tickets-troubleshooting.md

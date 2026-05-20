@@ -8,7 +8,7 @@ ms.topic: landing-page
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Find a list of Microsoft 365 Copilot connectors built and supported by Microsoft, organized by categories, including a description and link to each connector website."
-ms.date: 04/20/2026
+ms.date: 05/20/2026
 ---
 # Microsoft-built connectors gallery
 
@@ -152,6 +152,7 @@ The following table lists the available IT service management tool connectors.
 | -------------- | --------- | ----------- | ---------- |
 | Freshservice | Microsoft | Allows organizations to connect to Freshservice to enhance team collaboration. | [Freshservice connector](freshservice-overview.md) |
 | PagerDuty Escalation Policies (preview)| Microsoft | Enables organizations to index and search PagerDuty escalation policies. | [PagerDuty Escalation Policies connector](pagerduty-escalation-policies-connector.md) |
+| PagerDuty Incidents | Microsoft | Enables organizations to index and search PagerDuty incidents. | [PagerDuty Schedules connector](pagerduty-incidents-overview.md) |
 | PagerDuty Schedules | Microsoft | Enables organizations to index and search PagerDuty schedules. | [PagerDuty Schedules connector](pagerduty-schedules-connector.md) |
 | ServiceNow Catalog | Microsoft | Allows your organization to find Catalog items to order from the ServiceNow instance. Supports item-level user criteria permissions too. | [ServiceNow Catalog connector](servicenow-catalog-overview.md) |
 | ServiceNow Tickets | Microsoft | Allows your organization to index incidents, change requests, and problem statuses from ServiceNow instances. | [ServiceNow Tickets connector](servicenow-tickets-overview.md) |
