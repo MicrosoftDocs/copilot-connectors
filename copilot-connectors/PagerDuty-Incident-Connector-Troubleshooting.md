@@ -27,9 +27,9 @@ You might encounter the following errors when you deploy the PagerDuty Incidents
 
 | Deployment step | Error or error message | Possible reason | Resolution |
 | --- | --- | --- | --- |
-| Connection settings | Your security credentials have expired for this session. Please go back and sign in again with your Client ID and Client Secret. | The OAuth credentials have expired. | Create a new app in the PagerDuty app registration settings and copy the latest Client ID and Client Secret from the settings tab to authenticate. For more information, see [Register an App](https://developer.pagerduty.com/docs/register-an-app). |
+| Connection settings | Your security credentials have expired for this session. Please go back and sign in again with your Client ID and Client Secret. | The OAuth credentials expired. | Create a new app in the PagerDuty app registration settings. Copy the latest Client ID and Client Secret from the settings tab to authenticate. For more information, see [Register an App](https://developer.pagerduty.com/docs/register-an-app). |
 | Connection settings | Invalid credentials detected. Please check the credential info and check the permission scopes of the PagerDuty App. | The Client ID or Client Secret is incorrect, or the app doesn't have the required permission scopes. | Go to the PagerDuty app registration settings and verify that the Client ID and Client Secret are correct. Ensure the app has the following scopes enabled: Audit Records (Read), Schedules (Read), Teams (Read), Users (Read), Incidents (Read), and Incident Types (Read). |
-| Crawl | Items are not being indexed or item count is lower than expected. | The **Since (Month)** content filter might be set to a short time range, or the PagerDuty account has restricted access to certain incidents. | Adjust the **Since (Month)** parameter in the content filter settings to include a wider date range. Verify that the authenticated PagerDuty account has access to the incidents you expect to be indexed. |
+| Crawl | Items aren't indexed or the item count is lower than expected. | The **Since (Month)** content filter might be set to a short time range, or the PagerDuty account has restricted access to certain incidents. | Adjust the **Since (Month)** parameter in the content filter settings to include a wider date range. Verify that the authenticated PagerDuty account has access to the incidents you expect to be indexed. |
 
 
 ## Common configuration issues
@@ -43,7 +43,7 @@ If authentication fails during setup, verify that the Redirect URL configured in
 
 ### OAuth scope configuration
 
-The PagerDuty app must be configured with **Scoped OAuth** and must have the following scopes enabled:
+Configure the PagerDuty app with **Scoped OAuth** and enable the following scopes:
 
 | Scope | Access level |
 | --- | --- |

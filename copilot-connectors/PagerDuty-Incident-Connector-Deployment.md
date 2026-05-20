@@ -27,15 +27,15 @@ The PagerDuty Incidents Copilot connector enables your organization to index Pag
 
 ## Prerequisites
 1. Create a PagerDuty account with administrator permission in the PagerDuty application.
-2. Add a new app in PagerDuty with OAuth 2.0 functionality enabled. For more information, see [OAuth Functionality](https://developer.pagerduty.com/docs/oauth-functionality) and [Register an App](https://developer.pagerduty.com/docs/register-an-app).
-3. Select 'Scoped OAuth' in PagerDuty new app registration setting page.
-4. Use the following links for the field 'Redirect URL' in PagerDuty new app registration setting page.
+1. Add a new app in PagerDuty with OAuth 2.0 functionality enabled. For more information, see [OAuth Functionality](https://developer.pagerduty.com/docs/oauth-functionality) and [Register an App](https://developer.pagerduty.com/docs/register-an-app).
+1. Select **Scoped OAuth** in PagerDuty new app registration setting page.
+1. Use the following links for the field **Redirect URL** in PagerDuty new app registration setting page.
    
    - For M365 Enterprise, use `https://gcs.office.com/v1.0/admin/oauth/callback)`
    
    - For M365 Government, use `(https://gcsgcc.office.com/v1.0/admin/oauth/callback)`
 
-7. Select the following scopes in PagerDuty new app registration setting page.
+1. Select the following scopes in PagerDuty new app registration setting page.
 
    - Audit records – Read Access
 
@@ -49,7 +49,7 @@ The PagerDuty Incidents Copilot connector enables your organization to index Pag
      
    - Incident Types - Read Access
 
-8. After you successfully complete app registration in PagerDuty, copy Client ID and Client Secret.
+1. After you successfully complete app registration in PagerDuty, copy Client ID and Client Secret.
 
 ## Get started
 
@@ -59,13 +59,13 @@ Choose a display name that helps users easily recognize associated files or item
 ### 2. Add the Instance REST API URL
 PagerDuty customers can choose the geographic service region for the PagerDuty data centers that host their account. 
 
-- For the US service region, the REST API URL is (https://api.pagerduty.com).
-- For the EU service region, the REST API URL is (https://api.eu.pagerduty.com).
+- For the US service region, the REST API URL is `https://api.pagerduty.com`.
+- For the EU service region, the REST API URL is `https://api.eu.pagerduty.com`.
 
 For more information, see [Service regions](https://support.pagerduty.com/main/docs/service-regions).
 
 ### 3. Choose authentication type
-Enter the Client ID and Client Secret you obtained from your PagerDuty app registration setting.
+Enter the Client ID and Client Secret you got from your PagerDuty app registration setting.
 
 ### 4. Roll out to a limited audience
 Deploy this connection to a limited user base to validate it in Copilot and other search surfaces before you roll it out to a broader audience.
@@ -83,7 +83,7 @@ Determine which users in your organization can access each item in Copilot or Se
 
 #### Content filter
 
-Two extra parameters can be used to specify the date range for crawling incidents content in PagerDuty.
+Use two extra parameters to specify the date range for crawling incidents content in PagerDuty.
 
 - Since (Month)
 
