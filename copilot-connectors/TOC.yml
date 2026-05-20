@@ -371,10 +371,6 @@ items:
         href: guru-deployment.md
       - name: Troubleshooting
         href: guru-troubleshooting.md
-    - name: iManage
-      items:
-      - name: Setup
-        href: imanage-cloud-connector.md
     - name: Jira Cloud
       items:
       - name: Overview
