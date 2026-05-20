@@ -24,7 +24,7 @@ This article describes the steps to deploy, customize, and manage the DataStax C
 
 To deploy the connector, you must meet the following prerequisites:
 
-- You must be an admin for your organization's Microsoft 365 tenant.
+- You're an admin for your organization's Microsoft 365 tenant.
 - You must have access to a DataStax Astra DB database.
 - You must have the DataStax API Endpoint for your database.
 - You must have the DataStax database ID.
@@ -40,26 +40,26 @@ Before deploying the connector, you need to generate an application token in Dat
 To generate an application token in DataStax Astra DB:
 
 1. Sign in to your [DataStax Astra DB](https://astra.datastax.com) account.
-1. Navigate to your database overview page.
-1. Locate the **Token Management** or **Generate Token** section.
-1. Choose **Generate Token** or **Create Token**.
-1. Select an appropriate role for the token:
-   - **Recommended**: Use **Read Only User** role to provide read access to database collections.
-   - Ensure the role has sufficient permissions to access all collections you want to index.
-1. Choose **Generate Token** to create the token.
-1. Copy the generated application token immediately. The token typically starts with `AstraCS:...` and is a long string.
+1. Go to your database overview page.
+1. Find the **Token Management** or **Generate Token** section.
+1. Select **Generate Token** or **Create Token**.
+1. Choose a role for the token:
+   - **Recommended**: Use the **Read Only User** role to give read access to database collections.
+   - Make sure the role has enough permissions to access all collections you want to index.
+1. Select **Generate Token** to create the token.
+1. Copy the generated application token right away. The token usually starts with `AstraCS:...` and is a long string.
 
 > [!IMPORTANT]
-> Store the application token securely. You need this token to authenticate the connector during deployment. The token is only displayed once during generation.
+> Store the application token securely. You need this token to authenticate the connector during deployment. The token is shown only once during generation.
 
 [![Screenshot that shows the DataStax API Endpoint, Database ID and Generate Token in the Astra DB overview.](media/datastax/datastax-api-endpoint.png)](media/datastax/datastax-api-endpoint.png#lightbox)
 
 ### Get DataStax API Endpoint and database ID
 
-While in your DataStax Astra DB database overview, also collect the following information:
+While you're in your DataStax Astra DB database overview, also collect the following information:
 
-- **API Endpoint**: The REST API endpoint for your database, typically in the format: `https://<your-database-id>-<region>.apps.astra.datastax.com`
-- **Database ID**: The unique identifier for your database, displayed in the database overview
+- **API Endpoint**: The REST API endpoint for your database, usually in the format: `https://<your-database-id>-<region>.apps.astra.datastax.com`
+- **Database ID**: The unique identifier for your database, shown in the database overview
 
 You need both values when deploying the connector in the Microsoft 365 admin center.
 
@@ -68,20 +68,20 @@ You need both values when deploying the connector in the Microsoft 365 admin cen
 To add the DataStax connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-1. Choose the **Connectors** tab, and in the left pane, choose **Gallery**.
+1. Select the **Connectors** tab. In the left pane, select **Gallery**.
 1. From the list of available connectors, choose **DataStax**.
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated database record or item. The display name also signifies trusted content and is used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters).
+Use the display name to identify references in Copilot responses so users can recognize the associated database record or item. The display name also signifies trusted content and is used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters).
 
 You can accept the default **DataStax** display name, or customize the value to use a display name that users in your organization recognize.
 
 For more information about connector display names and descriptions, see [Enhance Copilot discovery with Microsoft 365 Copilot connectors content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
-### Set DataStax API Endpoint
+### Set DataStax API endpoint
 
-To connect to your DataStax database, enter the DataStax API Endpoint. The endpoint can be found in the overview of your database in DataStax Astra DB.
+To connect to your DataStax database, enter the DataStax API Endpoint. You can find the endpoint in the overview of your database in DataStax Astra DB.
 
 The API Endpoint is typically in the following format:
 
@@ -106,14 +106,14 @@ The DataStax connector uses **DataStax Application Token** for authentication. T
 
 1. Select **DataStax Application Token** as the authentication type.
 1. Paste the application token that you generated in DataStax Astra DB.
-   - The token should start with `AstraCS:...`
-   - Make sure that the entire token is copied without truncation.
-1. Choose **Authorize** to validate the token and establish the connection.
+   - The token starts with `AstraCS:...`
+   - Make sure you copy the entire token without truncation.
+1. Select **Authorize** to validate the token and establish the connection.
 
 > [!NOTE]
 > The application token must have at least **Read Only User** permissions to access database collections. For more information, see [Generate an application token in DataStax](#generate-an-application-token-in-datastax).
 
-### Roll out to a limited audience
+### Roll out
 
 Deploy the connection to a limited set of users to validate it in Copilot and other search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
@@ -178,17 +178,17 @@ The DataStax connector indexes the following properties from DataStax Astra DB c
 
 #### Preview data
 
-Use the **Preview results** button to verify the sample values of the selected properties. This helps you confirm that the connector is indexing the expected data from your DataStax collections.
+Use the **Preview results** button to verify the sample values of the selected properties. This step helps you confirm that the connector is indexing the expected data from your DataStax collections.
 
 ### Customize sync settings
 
-The DataStax connector supports full crawl only. Incremental crawl is not available for this connector.
+The DataStax connector supports only full crawl. Incremental crawl isn't available for this connector.
 
-The default schedule for the full crawl is set to **Every day**. This means that the connector re-indexes all database records once per day.
+The default schedule for the full crawl is set to **Every day**. This schedule means that the connector re-indexes all database records once per day.
 
 You can adjust the full crawl schedule to fit your data refresh needs:
 
-- If your database collections change frequently, consider maintaining the daily full crawl frequency.
+- If your database collections change frequently, keep the daily full crawl frequency.
 - If your database content is relatively static, you can reduce the crawl frequency to every few days.
 
 To adjust the crawl schedule:
