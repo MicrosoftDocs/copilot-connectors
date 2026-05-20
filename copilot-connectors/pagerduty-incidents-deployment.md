@@ -148,7 +148,7 @@ To view available properties, assign a schema to the property (define whether a 
 
 The PagerDuty Incidents connector supports both full crawl and incremental crawl. By default, the full crawl runs every day. If needed, you can adjust these schedules to fit your data refresh needs.
 
-For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 
