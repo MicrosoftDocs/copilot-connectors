@@ -18,28 +18,72 @@ The PagerDuty Schedules Microsoft 365 Copilot connector integrates PagerDuty sch
 
 This article describes the steps to deploy, customize, and manage the PagerDuty Schedules Copilot connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview).
 
-For advanced PagerDuty configuration information, see [Set up the PagerDuty service for connector ingestion](pagerduty-schedules-admin-setup.md).
-
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 
 ## Prerequisites
-
-Before you deploy the PagerDuty Schedules connector, make sure that the PagerDuty environment is configured in your organization. The following table summarizes the steps to configure the PagerDuty environment and deploy the connector.
-
-| Task | Role |
-| ---- | ---- |
-| [Configure the environment](pagerduty-schedules-admin-setup.md#configure-the-pagerduty-environment) | PagerDuty admin |
-| [Set up prerequisites](pagerduty-schedules-admin-setup.md#set-up-connector-prerequisites) | PagerDuty admin |
-| [Deploy the connector in the Microsoft 365 admin center](#deploy-the-connector) | Microsoft 365 admin |
-| [Customize connector settings](#customize-settings-optional) (optional) | Microsoft 365 admin |
 
 To deploy the connector, you must meet the following prerequisites:
 
 - You must be an admin for your organization's Microsoft 365 tenant.
 - You must have a PagerDuty account with administrator permissions.
-- You must have registered an OAuth 2.0 app in PagerDuty with the required scopes. For more information, see [Register an OAuth 2.0 app in PagerDuty](pagerduty-schedules-admin-setup.md#register-an-oauth-20-app-in-pagerduty).
-- You must have the Client ID and Client Secret from your PagerDuty OAuth app registration.
 - You must have authentication credentials with the appropriate access for both Microsoft 365 and PagerDuty.
+
+## Set up PagerDuty OAuth app
+
+Before deploying the connector, you need to register an OAuth 2.0 app in PagerDuty to obtain the client credentials required for connector authentication.
+
+### Register an OAuth 2.0 app in PagerDuty
+
+To register an OAuth 2.0 app in PagerDuty:
+
+1. Sign in to your PagerDuty account with administrator permissions.
+1. Navigate to **Integrations** > **Developer Mode**.
+1. If Developer Mode is not enabled, enable it to access app registration.
+1. Choose **Create New App**.
+1. In the app registration form, provide the following information:
+   - **App Name**: Enter a descriptive name such as "Microsoft 365 Copilot Connector"
+   - **Description**: Enter a description such as "OAuth app for Microsoft 365 Copilot connector integration"
+   - **Category**: Select **Integration**
+
+1. Select **Scoped OAuth** as the OAuth type.
+
+For more information about OAuth functionality in PagerDuty, see [OAuth Functionality](https://developer.pagerduty.com/docs/oauth-functionality) and [Register an App](https://developer.pagerduty.com/docs/register-an-app) in the PagerDuty developer documentation.
+
+### Configure redirect URLs
+
+OAuth 2.0 authentication requires redirect URLs (also called callback URLs) to complete the authorization flow. The redirect URL varies based on your Microsoft 365 environment.
+
+In your PagerDuty OAuth app settings, add the appropriate redirect URL for your environment:
+
+- **For Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`
+- **For Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+
+> [!IMPORTANT]
+> Make sure that you use the correct redirect URL for your environment. Using an incorrect redirect URL prevents the OAuth authorization flow from completing successfully.
+
+### Configure OAuth scopes
+
+The PagerDuty Schedules connector requires specific OAuth scopes to access schedule data. In your OAuth app settings in PagerDuty, select the following scopes:
+
+| Scope | Access level | Description |
+| ----- | ------------ | ----------- |
+| Audit records | Read Access | Required to access audit log information for schedules. |
+| Schedules | Read Access | Required to read schedule data including on-call rotations and coverage information. |
+| Teams | Read Access | Required when Advanced Permissions is enabled to enforce team-based access controls. |
+| Users | Read Access | Required to map PagerDuty users to Microsoft 365 identities for permission enforcement. |
+
+> [!NOTE]
+> The connector requires read-only access. Write or delete permissions are not required.
+
+### Get Client ID and Client Secret
+
+After configuring your OAuth app:
+
+1. Choose **Save** to create the app.
+1. In the app settings, copy the **Client ID** and **Client Secret**. You need these values when deploying the connector in the Microsoft 365 admin center.
+
+> [!IMPORTANT]
+> Store the Client ID and Client Secret securely. You need these credentials to authenticate the connector during deployment.
 
 ## Deploy the connector
 
@@ -59,12 +103,14 @@ For more information about connector display names and descriptions, see [Enhanc
 
 ### Set instance REST API URL
 
-To connect to your PagerDuty service, use the REST API URL that corresponds to your service region:
+PagerDuty allows customers to choose the geographic service region of the PagerDuty data centers that host their account. To connect to your PagerDuty service, use the REST API URL that corresponds to your service region:
 
 - **For the US service region**: `https://api.pagerduty.com`
 - **For the EU service region**: `https://api.eu.pagerduty.com`
 
-The instance URL must match your PagerDuty account's service region. For more information about identifying your service region, see [Identify the PagerDuty instance URL](pagerduty-schedules-admin-setup.md#identify-the-pagerduty-instance-url).
+To identify your PagerDuty service region, sign in to your PagerDuty account and review the URL in your browser address bar. For the US region, your URL typically appears as `https://[your-subdomain].pagerduty.com`. For the EU region, your URL typically appears as `https://[your-subdomain].eu.pagerduty.com`.
+
+For more information, see [Service regions](https://support.pagerduty.com/main/docs/service-regions) in the PagerDuty documentation.
 
 ### Choose authentication type
 
@@ -76,8 +122,6 @@ The PagerDuty Schedules connector uses OAuth 2.0 for authentication. To authenti
 1. Choose **Authorize** to initiate the OAuth authorization flow.
 1. Sign in to PagerDuty with your administrator account when prompted.
 1. Review the requested permissions and choose **Authorize** to grant access.
-
-For information about how to obtain the Client ID and Client Secret, see [Register an OAuth 2.0 app in PagerDuty](pagerduty-schedules-admin-setup.md#register-an-oauth-20-app-in-pagerduty).
 
 > [!NOTE]
 > Select **Scoped OAuth** when configuring your PagerDuty app registration to ensure proper authentication.
@@ -118,7 +162,8 @@ The PagerDuty Schedules connector supports the following user search permissions
 
 If you choose **Everyone**, indexed schedule data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed schedule data appears in the search results for users who have access to it in PagerDuty.
 
-When Advanced Permissions is enabled in PagerDuty, only members of the teams linked to a specific schedule can access and search for that schedule in Microsoft Search and Microsoft 365 Copilot.
+> [!NOTE]
+> When Advanced Permissions is enabled in PagerDuty, only members of the teams linked to a specific schedule can access and search for that schedule in Microsoft Search and Microsoft 365 Copilot. For more information about Advanced Permissions, see [Advanced Permissions](https://support.pagerduty.com/main/docs/advanced-permissions) in the PagerDuty documentation.
 
 If you choose **Only people with access to this data source**, you also need to choose whether your PagerDuty account has Microsoft Entra ID provisioned users or non-Entra ID users:
 
