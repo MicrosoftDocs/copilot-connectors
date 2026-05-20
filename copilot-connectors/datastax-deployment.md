@@ -219,10 +219,10 @@ If the connector encounters errors, see [Troubleshoot the DataStax connector](da
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Troubleshoot the DataStax connector](datastax-connector-troubleshooting.md)
+> [Troubleshoot the DataStax connector](datastax-troubleshooting.md)
 
 ## Related content
 
-- [DataStax connector overview](datastax-connector-overview.md)
-- [Troubleshoot issues with the DataStax connector](datastax-connector-troubleshooting.md)
+- [DataStax connector overview](datastax-overview.md)
+- [Troubleshoot issues with the DataStax connector](datastax-troubleshooting.md)
 - [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md)
