@@ -37,9 +37,9 @@ You might encounter the following errors when you deploy the DataStax connector 
 | Crawl | Partial data indexed. | The application token doesn't have access to all collections. | Verify that the application token has read permissions for all collections you want to index. Check for any collection-level access restrictions in DataStax. Review the connector logs in the Microsoft 365 admin center for specific errors about inaccessible collections. |
 | Crawl | Crawl failed with API rate limit error. | DataStax API rate limits exceeded. | Reduce the crawl frequency in the connector settings. Contact DataStax support if rate limits are consistently exceeded. Consider limiting the number of collections being indexed if your database is very large. |
 | Crawl | Slow crawl performance. | Large database or network latency issues. | Verify that your network connection to DataStax is stable. Check if the database is experiencing performance issues in the DataStax console. Consider adjusting the crawl frequency if performance issues persist. |
-| Permissions | Users see records they shouldn't have access to. | Access permissions set to **Everyone** in connector configuration. | Change the access permissions setting to **Only people with access to this data source** in the connector configuration. For more information, see [Customize user settings](datastax-connector-deployment.md#customize-user-settings). |
+| Permissions | Users see records they shouldn't have access to. | Access permissions set to **Everyone** in connector configuration. | Change the access permissions setting to **Only people with access to this data source** in the connector configuration. For more information, see [Customize user settings](datastax-deployment.md#customize-user-settings). |
 | Permissions | Users don't see records they should have access to. | Identity mapping between DataStax and Microsoft Entra ID is incorrect. | Verify that user email addresses in DataStax match Microsoft Entra ID user principal names (UPNs). If they don't match, configure a custom identity mapping. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md). |
-| Content | Records appear without proper titles or content. | Property mapping configuration issue. | Review the property mappings in the connector settings. Verify that the **Title** and **Content** properties are correctly mapped. For more information, see [Manage properties](datastax-connector-deployment.md#manage-properties). |
+| Content | Records appear without proper titles or content. | Property mapping configuration issue. | Review the property mappings in the connector settings. Verify that the **Title** and **Content** properties are correctly mapped. For more information, see [Manage properties](datastax-deployment.md#manage-properties). |
 | Content | Search results don't include expected database records. | Collections not included in indexing scope or search properties not configured. | Verify that all required collections are accessible to the application token. Check that searchable properties are correctly configured. Review the crawl history to ensure recent crawls completed successfully. |
 
 ## Common resolution steps
@@ -81,5 +81,5 @@ When contacting support, provide the following information:
 
 ## Related content
 
-- [DataStax connector overview](datastax-connector-overview.md)
+- [DataStax connector overview](datastax-overview.md)
 - [Deploy the DataStax connector](datastax-connector-deployment.md)

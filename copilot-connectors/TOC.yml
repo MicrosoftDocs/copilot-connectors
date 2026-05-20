@@ -190,7 +190,7 @@ items:
     - name: DataStax
       items:
       - name: Overview
-        href: datastax-connector-overview.md
+        href: datastax-overview.md
       - name: Deploy the connector
         href: datastax-connector.md
       - name: Troubleshooting

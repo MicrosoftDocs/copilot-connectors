@@ -214,7 +214,7 @@ The connector status page shows the following information:
 - **Items indexed**: The number of database records currently indexed and available in Copilot and Microsoft Search.
 - **Crawl history**: A log of recent crawl operations, including start time, duration, and results.
 
-If the connector encounters errors, see [Troubleshoot the DataStax connector](datastax-connector-troubleshooting.md) for resolution steps.
+If the connector encounters errors, see [Troubleshoot the DataStax connector](datastax-troubleshooting.md) for resolution steps.
 
 ## Next step
 
