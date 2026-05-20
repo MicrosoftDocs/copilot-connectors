@@ -13,7 +13,7 @@ description: "Set up the PagerDuty Schedules Copilot connector for Microsoft Sea
 ms.date: 08/15/2025
 ---
 
-# PagerDuty Schedules Copilot connector (preview)
+# PagerDuty Schedules Copilot connector (preview) - to be deleted
 
 The PagerDuty Schedules Copilot connector enables your organization to index PagerDuty schedule data to make it available to Microsoft 365 Copilot and Microsoft Search. 
 
