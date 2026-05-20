@@ -1,6 +1,6 @@
 ---
 ms.date: 05/20/2026
-title: "DataStax Connector Overview"
+title: "DataStax Copilot connector overview (preview)"
 ms.author: kailiang
 author: Kai-Cloud
 manager: zezhangzhao
@@ -128,4 +128,4 @@ This ensures that the system provides appropriate access to DataStax content in 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the DataStax connector](datastax-connector-deployment.md)
+> [Deploy the DataStax connector](datastax-deployment.md)

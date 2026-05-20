@@ -1,6 +1,6 @@
 ---
 ms.date: 05/20/2026
-title: "Deploy the DataStax connector in the Microsoft 365 Admin Center"
+title: "Deploy the DataStax connector in the Microsoft 365 admin center (preview)"
 ms.author: kailiang
 author: Kai-Cloud
 manager: zezhangzhao
@@ -149,7 +149,7 @@ If you choose **Everyone**, indexed database data appears in the search results 
 
 If you choose **Only people with access to this data source**, you also need to choose whether your DataStax account has Microsoft Entra ID provisioned users or non-Entra ID users:
 
-- Choose the Microsoft Entra ID option if the email ID of DataStax users is same as the user principal name (UPN) in Microsoft Entra ID.
+- Choose the Microsoft Entra ID option if the email ID of DataStax users is the same as the user principal name (UPN) in Microsoft Entra ID.
 - Choose the non-Entra ID option if the email ID of DataStax users is different from the UPN in Microsoft Entra ID. For more information about identity mapping, see [Map your non-Entra ID identities](map-non-entra-id.md).
 
 [![Screenshot that shows Users tab where you can configure access permissions and user mapping rules.](media/datastax/datastax-users-tab.png)](media/datastax/datastax-users-tab.png#lightbox)
@@ -197,7 +197,7 @@ To adjust the crawl schedule:
 1. Under **Full crawl**, choose the desired frequency from the dropdown.
 1. Choose **Save** to apply the changes.
 
-For more information about sync settings, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+For more information about sync settings, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/datastax/datastax-sync-tab.png)](media/datastax/datastax-sync-tab.png#lightbox)
 
