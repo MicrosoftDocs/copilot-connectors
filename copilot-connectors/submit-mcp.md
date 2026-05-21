@@ -16,7 +16,7 @@ ms.localizationpriority: Medium
 
 The federated Microsoft 365 Copilot Connector program allows partners to submit a remote Model Context Protocol (MCP) server to Microsoft to surface it in the Connectors Gallery for all Microsoft 365 Copilot tenants.
 
-After your federated connector is approved, Microsoft 365 Copilot connects to your remote MCP server through a public HTTPS endpoint and surfaces your content in Copilot experiences, such as the Copilot app and Researcher.
+After your federated connector is approved, Microsoft 365 Copilot connects to your remote MCP server through a public HTTPS endpoint and surfaces your content in Copilot experiences, such as the Copilot app and the Researcher agent.
 
 This article explains submission prerequisites, requirements, required artifacts, and what to expect during review and onboarding. For legal terms, see [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/MCA).
 
