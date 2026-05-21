@@ -647,7 +647,7 @@ items:
   - name: Manage federated connectors
     href: manage-federated-connectors.md
   - name: Set up custom federated connectors
-    href: set-up-custom-federated-connectors.m
+    href: set-up-custom-federated-connectors.md
   - name: Submit your federated connector
     href: submit-mcp.md
 - name: Configure Microsoft 365 Copilot extension
