@@ -9,7 +9,7 @@ ms.topic: article
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Release history of Microsoft Graph connector agent, which is used to index the on-premises data sources using Microsoft-built connectors" 
-ms.date: 04/13/2026
+ms.date: 05/21/2026
 --- 
 
 # Release history for Microsoft Graph connector agent
@@ -19,6 +19,18 @@ Indexing on-premises data sources requires installing the Microsoft Graph connec
 For help with installation, see [Install the agent](connector-agent.md#install-the-agent).
 
 To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
+
+## Version 3.1.22.0 (*May 13, 2026*)
+
+* Improved file download concurrency for the SharePoint connector to increase indexing throughput.
+* Fixed admin access validation during test connection for the Jira Data Center connector.
+* Fixed crawl failures caused by OAuth token expiration for the Jira Data Center connector.
+* Improved Confluence connector indexing for child pages when a CQL filter returns no match on the parent page.
+* Fixed semantic label numbering for connection schemas.
+* Improved connection reliability by adding fail-safe retry tracking to prevent repeated crashes from malformed items.
+* Improved reliability and efficiency of multi-instance recovery crawls.
+* Improved Fileshare connection validation and authentication setup.
+* Bug fixes and reliability improvements.
 
 ## Version 3.1.21.0 (*April 10, 2026*)
 
