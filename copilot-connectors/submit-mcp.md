@@ -1,5 +1,5 @@
 ---
-title: "Submit a federated connector"
+title: "Submit an MCP server"
 description: "Learn how to submit a remote MCP server as a federated Microsoft 365 Copilot connector, including requirements, metadata, and review expectations."
 ms.author: lauragra
 author: lauragra
@@ -12,11 +12,11 @@ ms.date: 05/21/2026
 ms.localizationpriority: Medium
 ---
 
-# Submit a federated Copilot connector
+# Submit an MCP server
 
 The federated Microsoft 365 Copilot Connector program allows partners to submit a remote Model Context Protocol (MCP) server to Microsoft to surface it in the Connectors Gallery for all Microsoft 365 Copilot tenants.
 
-After your federated connector is approved, Microsoft 365 Copilot connects to your remote MCP server through a public HTTPS endpoint and surfaces your content in Copilot experiences, such as the Copilot app and Researcher.
+After your MCP server is approved and added to the gallery as a federated connector, Microsoft 365 Copilot connects to your remote MCP server through a public HTTPS endpoint and surfaces your content in Copilot experiences, such as the Copilot app and Researcher.
 
 This article explains submission prerequisites, requirements, required artifacts, and what to expect during review and onboarding. For legal terms, see [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/MCA).
 
@@ -30,12 +30,6 @@ Before you submit your connector, make sure that all prerequisites are complete:
 - You have an active engagement with a Microsoft business development representative.
 - Your organization has signed a legal agreement that permits Microsoft to use your MCP server and its tools within Microsoft 365 Copilot.
 
-## Submission scope
-
-You can submit a remote MCP server for inclusion in the Connector Gallery in the Microsoft 365 admin center.
-
-Microsoft reviews all submissions for quality, usefulness, and safety before listing. Building an MCP server doesn't guarantee that it will be included in the gallery.
-
 ## Gallery requirements
 
 All submitted MCP connectors must meet the following requirements:
@@ -44,6 +38,8 @@ All submitted MCP connectors must meet the following requirements:
 - **Tool metadata:** Each tool has a clear title and includes the required `readOnlyHint` annotation.
 - **Authentication:** Authenticated scenarios use OAuth 2.0.
 - **Documentation quality:** Setup, usage, and support guidance are clear and complete.
+
+Microsoft reviews all submissions for quality, usefulness, and safety before listing. Building an MCP server doesn't guarantee that it will be included in the gallery.
 
 ## Submitter responsibilities
 
