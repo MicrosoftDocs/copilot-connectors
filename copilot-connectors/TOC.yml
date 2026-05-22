@@ -69,6 +69,14 @@ items:
         href: aha-deployment.md
       - name: Troubleshooting
         href: aha-troubleshooting.md
+    - name: Airtable
+      items:
+      - name: Overview
+        href: airtable-overview.md
+      - name: Deployment guide
+        href: airtable-deployment.md
+      - name: Troubleshooting
+        href: airtable-troubleshooting.md
     - name: Amazon S3
       items:
       - name: Overview
