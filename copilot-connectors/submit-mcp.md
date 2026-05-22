@@ -1,5 +1,5 @@
 ---
-title: "Submit an MCP server"
+title: "Submit a federated connector"
 description: "Learn how to submit a remote MCP server as a federated Microsoft 365 Copilot connector, including requirements, metadata, and review expectations."
 ms.author: lauragra
 author: lauragra
@@ -12,11 +12,11 @@ ms.date: 05/21/2026
 ms.localizationpriority: Medium
 ---
 
-# Submit an MCP server
+# Submit a federated connector
 
-The federated Microsoft 365 Copilot Connector program allows partners to submit a remote Model Context Protocol (MCP) server to Microsoft to surface it in the Connectors Gallery for all Microsoft 365 Copilot tenants.
+The federated Microsoft 365 Copilot Connector program allows partners to submit a remote Model Context Protocol (MCP) server to Microsoft for inclusion in the Connectors Gallery for Microsoft 365 Copilot tenants.
 
-After your MCP server is approved and added to the gallery as a federated connector, Microsoft 365 Copilot connects to your remote MCP server through a public HTTPS endpoint and surfaces your content in Copilot experiences, such as the Copilot app and the Researcher agent.
+After Microsoft approves your MCP server and adds it to the gallery as a federated connector, tenant admins can review and approve the connector for their organization. After an admin approves it, Microsoft 365 Copilot connects to your remote MCP server through a public HTTPS endpoint and surfaces your content in Copilot experiences, such as the Copilot app and the Researcher agent.
 
 This article explains submission prerequisites, requirements, required artifacts, and what to expect during review and onboarding. For legal terms, see [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/MCA).
 
@@ -32,7 +32,7 @@ Before you submit your connector, make sure that all prerequisites are complete:
 
 ## Gallery requirements
 
-All submitted MCP connectors must meet the following requirements:
+All submitted federated connectors must meet the following requirements:
 
 - **Security and privacy:** Meets Microsoft security and privacy standards.
 - **Tool metadata:** Each tool has a clear title and includes the required `readOnlyHint` annotation.
@@ -77,6 +77,7 @@ After submission:
 - Microsoft validates the submitted metadata, assets, and technical requirements.
 - Microsoft integrates the connector and coordinates validation through your Microsoft business development representative.
 - Microsoft proceeds with release discussions and ring-based rollout planning.
+- After Microsoft approves the connector and publishes it in the gallery, each customer organization's admin must approve the partner federated connector before it's enabled for that organization.
 
 Microsoft doesn't provide notifications for every intermediate status change. For status questions, contact your Microsoft representative.
 
