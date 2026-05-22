@@ -8,7 +8,7 @@ ms.topic: landing-page
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Find a list of Microsoft 365 Copilot connectors built and supported by Microsoft, organized by categories, including a description and link to each connector website."
-ms.date: 05/20/2026
+ms.date: 05/22/2026
 ---
 # Microsoft-built connectors gallery
 
@@ -163,6 +163,7 @@ The following table lists the project management connectors that are available.
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
+| Airtable | Microsoft | Integrates Airtable records into Microsoft 365. | [Airtable connector](airtable-overview) |
 | Asana | Microsoft | Allows your organization to integrate with Asana's project management platform. | [Asana connector](asana-overview.md) |
 | monday.com | Microsoft | Allows organizations to integrate with monday.com for project and workflow management. | [monday.com connector](monday-overview.md) |
 | Smartsheet Sheet | Microsoft | Enables organizations to index and search Smartsheet data. | [Smartsheet Sheet connector](smartsheet-sheet-overview.md) |
