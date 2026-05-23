@@ -26,7 +26,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 - You must be an admin for your organization's Microsoft 365 tenant.
 - You must have access to a DataStax Astra DB database.
-- You must have a DataStax application token with read permissions for the database. For more information, see [Generate an application token in DataStax](#generate-an-application-token-in-datastax).
+- You must have a DataStax application token with read permissions for the database.
 - You must have the DataStax API Endpoint and database ID for your database.
 
 ## Deploy the connector
