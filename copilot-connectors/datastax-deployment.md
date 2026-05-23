@@ -1,6 +1,6 @@
 ---
 ms.date: 05/20/2026
-title: "Deploy the DataStax connector in the Microsoft 365 admin center (preview)"
+title: "Deploy the DataStax connector (preview)"
 ms.author: kailiang
 author: Kai-Cloud
 manager: zezhangzhao
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 description: "Find information about how to deploy the DataStax Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the DataStax connector in the Microsoft 365 admin center (preview)
+# Deploy the DataStax connector (preview)
 
 The DataStax Microsoft 365 Copilot connector integrates DataStax Astra DB collections into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface database records directly within apps like Teams, Outlook, and SharePoint.
 
