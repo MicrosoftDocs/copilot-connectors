@@ -192,9 +192,9 @@ items:
       - name: Overview
         href: datastax-overview.md
       - name: Deploy the connector
-        href: datastax-connector.md
+        href: datastax-deployment.md
       - name: Troubleshooting
-        href: datastax-connector-troubleshooting.md
+        href: datastax-troubleshooting.md
     - name: Dropbox
       items:
       - name: Overview
