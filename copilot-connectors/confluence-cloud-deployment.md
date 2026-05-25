@@ -165,7 +165,7 @@ To add or remove available properties from your Confluence Cloud connector, assi
 
 | Default property | Label | Description |
 | ---------------- | ----- | ----------- |
-| Authors | `authors` | The names of all the people who participated/collaborated on the item in the data source. |
+| Authors | `authors` | The names of all the people who participated or collaborated on the item in the data source. |
 | Content | — | The main body content of the item in the data source. |
 | CreatedByName | `createdBy` | The person who created the item in the data source. |
 | CreatedOn | `createdDateTime` | The date and time that the item was created in the data source. |
