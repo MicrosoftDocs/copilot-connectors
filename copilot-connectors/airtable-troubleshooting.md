@@ -30,10 +30,7 @@ The following table lists common errors and recommended troubleshooting steps.
 | **"Invalid scope" error during authorization** | A required read scope isn't enabled, or an unsupported scope is enabled on the OAuth integration. | In the Airtable Builder Hub, enable only the read scopes listed in the deployment guide. Don't enable write or manage scopes. |
 | **Enterprise ID not accepted during setup** | The Enterprise ID is missing the `ent` prefix or was copied from the wrong location. | Confirm that the value starts with `ent` and was copied from the Airtable Admin Hub URL (`https://airtable.com/admin/{enterpriseId}/...`). |
 | **Connection stuck in Draft** | The OAuth authorization step wasn't completed. | Reopen the connector setup, choose **Authorize**, and complete the OAuth flow. The connection remains in Draft until authorization succeeds. |
-| **Records not appearing in Copilot or search** | Permissions mismatch between Airtable and Microsoft Entra ID. | Verify that identity mapping is correctly configured. Make sure that Airtable user emails match Microsoft Entra ID user principal names (UPNs). |
-| **Records from a specific base or table aren't indexed** | The base or table is excluded by the content filter, or the authorizing account doesn't have access to it. | Review the **Content filter** values on the connector's **Content** tab. Confirm that the Airtable account used to authorize the connector has access to the workspace, base, and table. |
 | **Permission changes not reflected immediately** | Connector sync delay. | Wait for the next scheduled crawl. Full crawls run every 24 hours; incremental crawls run every 15 minutes by default. |
-| **Crawl is slow or partial for large enterprises** | Airtable API rate limits apply per base. | Use the content filter to exclude bases and tables that don't need to be indexed for Copilot. Reduce the frequency of incremental crawls if needed. |
 
 ## Related content
 
