@@ -138,6 +138,7 @@ Customize content settings in the following ways:
 
 - Include or exclude specific spaces by using the space filter option. Each space has a space key identifier that forms part of the URL for that space. For more information, see [Space keys](https://confluence.atlassian.com/doc/space-keys-829076188.html).
 - Specify a date range for document indexing. You can filter pages by **Last Created Date** or **Last Modified Date**.
+- For advanced scenarios, you can use a Confluence Query Language (CQL) string to specify conditions for syncing pages. For more information, see [Advanced Searching using CQL](https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/).
 - Add or remove properties from the data source, assign a schema to properties (searchable, queryable, retrievable, refinable), and change semantic labels associated with properties. The following table lists the default properties.
 
 |Source property|Label|Schema|
