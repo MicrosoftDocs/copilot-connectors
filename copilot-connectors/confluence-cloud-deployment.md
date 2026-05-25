@@ -152,7 +152,7 @@ You can customize what data is included and excluded and customize the default c
 
 #### Include or exclude data
 
-By default, the Confluence Cloud connector indexes all blogs and pages. You can include or exclude spaces that you want to index. For advaced scenarios, you can use a Confluence Query Language (CQL) string to specify conditions for syncing pages. For example, you can choose to index only the pages that were modified in the last two years. For more information, see [Advanced Searching using CQL](https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/).
+By default, the Confluence Cloud connector indexes all blogs and pages. You can include or exclude spaces that you want to index. For advanced scenarios, use a Confluence Query Language (CQL) string to specify conditions for syncing pages. For example, you can choose to index only the pages that were modified in the last two years. For more information, see [Advanced Searching using CQL](https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/).
 
 > [!TIP]
 > You can use the CQL filter to index content modified after a certain time by using, for example, `lastModified >= "2024/12/31"`.
