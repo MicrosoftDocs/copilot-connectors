@@ -65,7 +65,7 @@ The `<organization_name>` value is the unique identifier for your Confluence Clo
 
 To authenticate and synchronize content from Confluence, choose one of the following authentication types:
 
-- **OAuth 2.0 (recommended)** - This authentication types allows you to authenticate with Microsoft managed OAuth 2.0 app.
+- **OAuth 2.0 (recommended)** - This authentication type allows you to authenticate by using a Microsoft managed OAuth 2.0 app.
 - **Basic authentication** - To authenticate using basic auth, enter your username (usually your email address) and API token. To generate an API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 - **OAuth 2.0 with customized app** - This authentication types allows you to authenticate with your own OAuth 2.0 app. Register an OAuth 2.0 app in Confluence Cloud first so that Microsoft Search and Microsoft 365 Copilot can access the instance. For more information, see [Enabling OAuth 2.0 (3LO)](https://developer.atlassian.com/cloud/confluence/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
 
