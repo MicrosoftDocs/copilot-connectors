@@ -163,7 +163,7 @@ The following table lists the project management connectors that are available.
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
-| Airtable | Microsoft | Integrates Airtable records into Microsoft 365. | [Airtable connector](airtable-overview) |
+| Airtable | Microsoft | Integrates Airtable records into Microsoft 365. | [Airtable connector](airtable-overview.md) |
 | Asana | Microsoft | Allows your organization to integrate with Asana's project management platform. | [Asana connector](asana-overview.md) |
 | monday.com | Microsoft | Allows organizations to integrate with monday.com for project and workflow management. | [monday.com connector](monday-overview.md) |
 | Smartsheet Sheet | Microsoft | Enables organizations to index and search Smartsheet data. | [Smartsheet Sheet connector](smartsheet-sheet-overview.md) |
