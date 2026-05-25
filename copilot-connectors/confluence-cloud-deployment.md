@@ -174,7 +174,7 @@ To add or remove available properties from your Confluence Cloud connector, assi
 | ItemPath | `itemPath` | Name of the space that the item belongs to in the data source. |
 | Labels | — | A set of labels associated with the item to categorize, filter, or group similar items. |
 | Likes | `numReactions` | Count of the likes on the item in the data source. |
-| PageTree | — | Array of name of items/spaces that the item belongs to in the data source. Last object in array being the immediate parent. |
+| PageTree | — | Array of name of items or spaces that the item belongs to in the data source. Last object in array being the immediate parent. |
 | SpaceDescription | — | Description of the space that the item belongs to in the data source. |
 | SpaceName | `containerName` | Name of the space that the item belongs to in the data source. |
 | SpaceURL | `containerUrl` | The direct URL to the container where the item resides, allowing quick access to its location. |
