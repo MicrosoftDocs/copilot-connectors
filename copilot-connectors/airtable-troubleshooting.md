@@ -30,7 +30,6 @@ The following table lists common errors and recommended troubleshooting steps.
 | **"Invalid scope" error during authorization** | A required read scope isn't enabled, or an unsupported scope is enabled on the OAuth integration. | In the Airtable Builder Hub, enable only the read scopes listed in the deployment guide. Don't enable write or manage scopes. |
 | **Enterprise ID not accepted during setup** | The Enterprise ID is missing the `ent` prefix or was copied from the wrong location. | Confirm that the value starts with `ent` and was copied from the Airtable Admin Hub URL (`https://airtable.com/admin/{enterpriseId}/...`). |
 | **Connection stuck in Draft** | The OAuth authorization step wasn't completed. | Reopen the connector setup, choose **Authorize**, and complete the OAuth flow. The connection remains in Draft until authorization succeeds. |
-| **Permission changes not reflected immediately** | Connector sync delay. | Wait for the next scheduled crawl. Full crawls run every 24 hours; incremental crawls run every 15 minutes by default. |
 
 ## Related content
 
