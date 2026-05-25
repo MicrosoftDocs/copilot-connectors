@@ -81,7 +81,7 @@ The Airtable connector has the following limitations:
 
 ## Data types indexed from Airtable
 
-The Airtable connector indexes record-level data so it can be used in Copilot, Copilot Search, and Microsoft Search. By default, the connector crawls all accessible bases in your Airtable enterprise account.
+The Airtable connector indexes record-level data so you can use it in Copilot, Copilot Search, and Microsoft Search. By default, the connector crawls all accessible bases in your Airtable enterprise account.
 
 | Airtable data type | Indexed and surfaced in Copilot and search |
 |---|---|
