@@ -134,7 +134,7 @@ The Confluence Cloud connector supports the following user search permissions:
 - Everyone
 - Only people with access to this data source (default)
  
-If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, search results will respect the same permission setup as the data source.
+If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, search results respect the same permission setup as the data source.
 
 If you choose **Only people with access to this data source**, you also need to choose whether your Confluence site has Microsoft Entra ID provisioned users or non-Entra ID users:
 
