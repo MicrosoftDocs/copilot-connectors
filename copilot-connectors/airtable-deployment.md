@@ -34,12 +34,12 @@ Before you deploy the connector, make sure that you meet the following prerequis
 To add the Airtable connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-2. Choose the **Gallery** tab.
-3. From the list of available connectors, choose **Airtable**.
+1. Select the **Gallery** tab.
+1. From the list of available connectors, choose **Airtable**.
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated record. The display name also signifies trusted content and is used as a content source filter.
+The display name identifies references in Copilot responses, so users can recognize the associated record. The display name also signifies trusted content and acts as a content source filter.
 
 You can accept the default **Airtable** display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -59,9 +59,9 @@ In **Enterprise ID**, enter your Airtable Enterprise ID. The connector uses this
 
 The Airtable connector supports the following authentication type:
 
-- **OAuth 2.0** (default): Secure authentication using Airtable's OAuth flow.
+- **OAuth 2.0** (default): Secure authentication by using Airtable's OAuth flow.
 
-To use **Airtable OAuth** for authentication, an Airtable admin must register an OAuth integration in the [Airtable Builder Hub](https://airtable.com/create/oauth). We recommend that the admin creates a dedicated service account in Airtable to register and authorize the integration, so that the connection isn't tied to an individual user. You can also use a regular Airtable admin account.
+To use **Airtable OAuth** for authentication, an Airtable admin must register an OAuth integration in the [Airtable Builder Hub](https://airtable.com/create/oauth). The admin should create a dedicated service account in Airtable to register and authorize the integration, so the connection isn't tied to an individual user. You can also use a regular Airtable admin account.
 
 Use the information in the following table to complete the OAuth integration registration form.
 
@@ -69,7 +69,7 @@ Use the information in the following table to complete the OAuth integration reg
 |---|---|---|
 | Name | Display name for the OAuth integration. | `Microsoft 365 Copilot Connector` |
 | OAuth redirect URLs | Required callback URLs that the authorization server redirects to. | For **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`</br></br>For **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback` |
-| Scopes | Read scopes that define what the connector can access. | Enable the following scopes: `data.records:read`, `data.recordComments:read`, `schema.bases:read`, `user.email:read`, `workspacesAndBases:read`, `enterprise.groups:read`, `enterprise.user:read`, `enterprise.account:read`, `enterprise.auditLogs:read`, `enterprise.changeEvents:read`. |
+| Scopes | Read scopes that define what the connector can access. | Enable the following scopes: `data.records:read`, `schema.bases:read`, `user.email:read`, `workspacesAndBases:read`, `enterprise.groups:read`, `enterprise.user:read`, `enterprise.account:read`, `enterprise.auditLogs:read`, `enterprise.changeEvents:read`. |
 
 After you save the integration, generate a client secret and copy both the **Client ID** and **Client Secret**. Store them securely; Airtable doesn't display the secret again.
 
@@ -81,11 +81,11 @@ Paste the **Client ID** and **Client Secret** into the corresponding fields on t
 > [!NOTE]
 > You authorize access to the Airtable integration in a popup window. Make sure that your browser permits popup windows, or grants access if the popup is blocked.
 
-### Roll out
+### Rollout
 
 To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
 
-Select the **Notice** checkbox to acknowledge the data indexing terms, then choose **Create** to deploy the connection. The Airtable Copilot connector starts indexing content right away.
+Select the **Notice** checkbox to acknowledge the data indexing terms, and then choose **Create** to deploy the connection. The Airtable Copilot connector starts indexing content right away.
 
 The following table lists the default values that are set.
 
@@ -137,13 +137,13 @@ By default, the connector indexes records from all bases that the authorizing Ai
 - Base IDs to exclude (prefix `app`).
 - Table IDs to exclude (prefix `tbl`).
 
-Records in any excluded workspace, base, or table aren't crawled.
+The connector doesn't crawl records in any excluded workspace, base, or table.
 
 #### Manage properties
 
 You can add or remove available properties from your Airtable records, assign a schema to a property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property.
 
-The following table lists the properties that are indexed by default.
+The following table lists the properties that the connector indexes by default.
 
 | Default property | Label | Description |
 |---|---|---|

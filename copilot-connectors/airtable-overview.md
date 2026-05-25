@@ -65,7 +65,7 @@ The following examples show prompts that agent builders can use to help their us
 
 ## Airtable connector capabilities and limitations
 
-The Airtable connector enables users to:
+The Airtable connector enables you to:
 
 - Index Airtable records from selected bases and tables.
 - Perform natural language queries in Copilot to retrieve record information.
@@ -74,9 +74,9 @@ The Airtable connector enables users to:
 
 The Airtable connector has the following limitations:
 
-- Doesn't index attachments or record comments.
-- Doesn't index views, automations, interfaces, or other entities beyond records.
-- Requires identity mapping if Airtable user emails differ from Microsoft Entra ID user principal names (UPNs).
+- It doesn't index attachments or record comments.
+- It doesn't index views, automations, interfaces, or other entities beyond records.
+- It requires identity mapping if Airtable user emails differ from Microsoft Entra ID user principal names (UPNs).
 - Permission updates might take time to reflect, as changes are applied during scheduled crawls.
 
 ## Data types indexed from Airtable
