@@ -1,5 +1,5 @@
 ---
-title: "PagerDuty Escalation Policies connector troubleshooting"
+title: "Troubleshoot issues with the PagerDuty Escalation Policies connector"
 ms.author: wangchen
 author: wangchen
 manager: zezhangzhao
@@ -7,16 +7,14 @@ audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
-ms.date: 08/15/2025
+ms.date: 05/26/2025
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the PagerDuty Escalation Policies Copilot connector."
 ---
 
 # Troubleshoot issues with the PagerDuty Escalation Policies connector
 
-The PagerDuty Escalation Policies Microsoft 365 Copilot connector enables users to surface PagerDuty escalation policy data in Microsoft 365 apps such as Teams, Outlook, and SharePoint using Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the PagerDuty Escalation Policies connector.
-
-[!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
+The PagerDuty Escalation Policies Microsoft 365 Copilot connector enables users to surface PagerDuty escalation policy data in Microsoft 365 experiences such as Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the PagerDuty Escalation Policies connector.
 
 ## PagerDuty Escalation Policies connector troubleshooting
 
