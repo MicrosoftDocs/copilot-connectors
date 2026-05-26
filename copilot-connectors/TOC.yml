@@ -422,7 +422,13 @@ items:
     - name: PagerDuty
       items:
       - name: Setup PagerDuty Escalation Policies
-        href: PagerDuty-Escalation-Policies-connector.md
+        items:
+      - name: Overview
+        href: pagerduty-escalation-policies-overview.md
+      - name: Deployment guide
+        href: pagerduty-escalation-policies-deployment.md
+      - name: Troubleshooting
+        href: pagerduty-escalation-policies-troubleshooting.md
       - name: PagerDuty Schedules
         items:
         - name: Overview
