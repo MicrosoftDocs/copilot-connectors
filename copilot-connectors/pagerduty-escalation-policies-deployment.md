@@ -78,9 +78,9 @@ To use **PagerDuty OAuth** for authentication, enter the **Client ID** and **Cli
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
+To roll out to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
-Choose **Create** to deploy the connection. The PagerDuty Escalation Policies connector starts indexing content right away.
+Select **Create** to deploy the connection. The PagerDuty Escalation Policies connector starts indexing content right away.
 
 The following table lists the default values that are set:
 
@@ -90,13 +90,13 @@ The following table lists the default values that are set:
 | Content | All default properties are indexed |
 | Sync | Full crawl runs daily |
 
-To customize these values, choose **Custom setup**. For more information, see [Customize settings (optional)](#customize-settings-optional).
+To customize these values, select **Custom setup**. For more information, see [Customize settings (optional)](#customize-settings-optional).
 
 After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
 ## Customize settings (optional)
 
-You can customize the default values for the PagerDuty Escalation Policies connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**.
+You can customize the default values for the PagerDuty Escalation Policies connector settings. To customize settings, on the connector page in the admin center, select **Custom setup**.
 
 ### Customize user settings
 

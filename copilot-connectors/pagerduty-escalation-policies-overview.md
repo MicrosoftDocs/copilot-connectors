@@ -95,7 +95,7 @@ The connector indexes escalation policy content and associated metadata to make 
 The PagerDuty Escalation Policies connector supports two permission models:
 
 - **Everyone in the organization**: All indexed escalation policies are visible to everyone in your Microsoft 365 organization. This is the default setting.
-- **Advanced Permissions (PagerDuty ACLs)**: When Advanced Permissions is enabled in PagerDuty, the connector respects PagerDuty's access control lists. Only members of the teams linked to a specific escalation policy can access and search for that policy in Microsoft Search and Microsoft 365 Copilot.
+- **Advanced Permissions (PagerDuty ACLs)**: When you enable Advanced Permissions in PagerDuty, the connector respects PagerDuty's access control lists. Only members of the teams linked to a specific escalation policy can access and search for that policy in Microsoft Search and Microsoft 365 Copilot.
 
 Admins can configure the access permissions during connector deployment or customize them later through the connector settings in the Microsoft 365 admin center.
 
