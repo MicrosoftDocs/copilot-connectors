@@ -34,6 +34,16 @@
       "source_path_from_root": "/copilot-connectors/pagerduty-schedules-connector.md",
       "redirect_url": "/microsoft-365/copilot/connectors/pagerduty-schedules-overview",
       "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/pagerduty-escalation-policies-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/pagerduty-escalation-policies-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/datastax-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/datastax-deployment",
+      "redirect_document_id": true
     }
   ]
 }
