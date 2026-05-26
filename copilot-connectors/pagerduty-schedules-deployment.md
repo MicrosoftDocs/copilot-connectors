@@ -171,18 +171,18 @@ The PagerDuty Schedules connector indexes the following properties from PagerDut
 
 The PagerDuty Schedules connector supports only full crawl. Incremental crawl isn't available for this connector.
 
-The default schedule for the full crawl is set to **Every day**. This means that the connector re-indexes all schedule data within the configured date range once per day.
+The default schedule for the full crawl is set to **Every day**. This setting means that the connector reindexes all schedule data within the configured date range once per day.
 
 You can adjust the full crawl schedule to fit your data refresh needs:
 
 - If schedules change frequently in your organization, consider maintaining the daily full crawl frequency.
-- If schedules are relatively static, you can reduce the crawl frequency to every few days or weekly.
+- If schedules are relatively static, reduce the crawl frequency to every few days or weekly.
 
 To adjust the crawl schedule:
 
-1. In the connector settings, navigate to the **Sync** section.
-1. Under **Full crawl**, choose the desired frequency from the dropdown.
-1. Choose **Save** to apply the changes.
+1. In the connector settings, go to the **Sync** section.
+1. Under **Full crawl**, select the desired frequency from the dropdown.
+1. Select **Save** to apply the changes.
 
 > [!NOTE]
 > Changes to the crawl frequency affect how quickly updates to PagerDuty schedules are reflected in Copilot and Microsoft Search results.

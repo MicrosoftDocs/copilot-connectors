@@ -14,7 +14,7 @@ description: "Learn about the capabilities, limitations, and use cases for the P
 
 # PagerDuty Schedules connector overview (preview)
 
-The PagerDuty Schedules Microsoft 365 Copilot connector integrates PagerDuty schedule data into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface schedule information directly within apps like Teams, Outlook, and SharePoint.
+The PagerDuty Schedules Microsoft 365 Copilot connector integrates PagerDuty schedule data into Microsoft 365. By using this connector, Copilot, Copilot Search, and Microsoft Search can surface schedule information directly within apps like Teams, Outlook, and SharePoint.
 
 When you configure the PagerDuty Schedules connector for your organization and index data from PagerDuty, users can search for schedule information in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. The PagerDuty Schedules connector content can bring improved operational efficiency, faster response times for incident management, and enhanced team coordination.
 
@@ -22,7 +22,7 @@ When you configure the PagerDuty Schedules connector for your organization and i
 
 ## Why use the PagerDuty Schedules connector to index your data?
 
-Organizations that use PagerDuty for incident management and on-call scheduling often struggle with fragmented information and inefficient schedule lookups. The PagerDuty Schedules Copilot connector addresses these problems by integrating schedule data into Microsoft 365. This allows employees to access PagerDuty schedules through Copilot, Copilot Search, and Microsoft Search – in everyday apps like Teams, Outlook, or SharePoint – without leaving their flow of work. The result is more efficient incident response and improved team coordination.
+Organizations that use PagerDuty for incident management and on-call scheduling often struggle with fragmented information and inefficient schedule lookups. The PagerDuty Schedules Copilot connector addresses these problems by integrating schedule data into Microsoft 365. This integration allows employees to access PagerDuty schedules through Copilot, Copilot Search, and Microsoft Search – in everyday apps like Teams, Outlook, or SharePoint – without leaving their flow of work. The result is more efficient incident response and improved team coordination.
 
 The PagerDuty Schedules Copilot connector provides the following benefits:
 
@@ -37,7 +37,7 @@ The PagerDuty Schedules Copilot connector provides the following benefits:
 
 The following table lists common use cases for the PagerDuty Schedules connector.
 
-| Department/role | Use case | Business benefit |
+| Department or role | Use case | Business benefit |
 | --------------- | -------- | ---------------- |
 | IT Operations | Who is on-call for the database team this week? | Quickly identify on-call engineers for immediate escalation during incidents. |
 | Engineering | Show me the schedule for the DevOps team for the next 7 days. | Plan deployments and maintenance windows around on-call coverage. |
@@ -92,16 +92,16 @@ The PagerDuty Schedules connector has the following key capabilities:
 
 The PagerDuty Schedules connector has the following limitations:
 
-- **Supports PagerDuty Cloud only** – This connector works with PagerDuty's cloud service. On-premises or self-hosted PagerDuty instances are not supported.
-- **Preview status** – This connector is currently in preview and may have limited availability. Preview features are subject to change.
-- **Full crawl only** – The connector only supports full crawl operations. Incremental crawl is not available, so all schedule data is re-indexed during each crawl cycle.
+- **Supports PagerDuty Cloud only** – This connector works with PagerDuty's cloud service. On-premises or self-hosted PagerDuty instances aren't supported.
+- **Preview status** – This connector is currently in preview and might have limited availability. Preview features are subject to change.
+- **Full crawl only** – The connector only supports full crawl operations. Incremental crawl isn't available, so all schedule data is re-indexed during each crawl cycle.
 - **Advanced Permissions enforcement** – When Advanced Permissions is enabled in PagerDuty, only members of the teams linked to a specific schedule can access and search for that schedule in Microsoft Search and Microsoft 365 Copilot.
-- **Date range limitation** – The connector only indexes schedule entries within the configured date range (defined by Days Before and Days After parameters). Historical schedules outside this range are not indexed.
+- **Date range limitation** – The connector only indexes schedule entries within the configured date range (defined by Days Before and Days After parameters). Historical schedules outside this range aren't indexed.
 - **Schedule focus** – The connector indexes schedule data only. It doesn't index incidents, alerts, or other PagerDuty objects.
 
 ## Data types indexed from PagerDuty Schedules
 
-The PagerDuty Schedules connector indexes schedule data so it can be used in Copilot, Copilot Search, and Microsoft Search. The connector crawls schedule information based on the configured date range.
+The PagerDuty Schedules connector indexes schedule data so you can use it in Copilot, Copilot Search, and Microsoft Search. The connector crawls schedule information based on the configured date range.
 
 | PagerDuty content type | Indexed and surfaced in Copilot and search |
 | ----------------------- | ------------------------------------------ |
@@ -114,15 +114,15 @@ The PagerDuty Schedules connector indexes schedule data so it can be used in Cop
 
 You can configure the PagerDuty Schedules connector to enforce that only users who have access to a schedule in PagerDuty can see it in Copilot responses and search results. The system uses the PagerDuty access control list (ACL) for schedules.
 
-The PagerDuty Schedules connector honors the same permission setup as the data source. This means that if a user can see a schedule in PagerDuty, they can see it in Copilot and Microsoft Search results. If they don't have access in PagerDuty, the schedule information won't appear in their results.
+The PagerDuty Schedules connector honors the same permission setup as the data source. This means that if a user can see a schedule in PagerDuty, they can see it in Copilot and Microsoft Search results. If they don't have access in PagerDuty, the schedule information doesn't appear in their results.
 
 You can control permissions in the following ways:
 
 - **Advanced Permissions enforcement** – When Advanced Permissions is enabled in PagerDuty, the connector respects team-based access controls. Only members of the teams linked to a specific schedule can access and search for that schedule in Microsoft Search and Microsoft 365 Copilot.
 
-- **User identity mapping** - The connector maps PagerDuty user accounts to Microsoft 365 (Entra ID) identities. If PagerDuty users' emails match their Entra ID UPNs, this mapping is automatic. If they differ, you can provide a mapping rule to map identities in PagerDuty to identities in Microsoft 365. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md). This ensures that the system provides appropriate access to PagerDuty schedule information in responses.
+- **User identity mapping** - The connector maps PagerDuty user accounts to Microsoft 365 (Entra ID) identities. If PagerDuty users' emails match their Entra ID UPNs, this mapping is automatic. If they differ, you can provide a mapping rule to map identities in PagerDuty to identities in Microsoft 365. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md). This mapping ensures that the system provides appropriate access to PagerDuty schedule information in responses.
 
-- **Visible to everyone option** - You can choose not to enforce per-user permissions (setting the connector to index content as **Visible to everyone**). In that case, all indexed PagerDuty schedule data is searchable by any user in the tenant. This works for organizations where schedule information is considered non-confidential. However, for most scenarios, we recommend using the restricted mode so that results mirror the PagerDuty permission boundaries.
+- **Visible to everyone option** - You can choose not to enforce per-user permissions (setting the connector to index content as **Visible to everyone**). In that case, all indexed PagerDuty schedule data is searchable by any user in the tenant. This option works for organizations where schedule information is considered non-confidential. However, for most scenarios, use the restricted mode so that results mirror the PagerDuty permission boundaries.
 
 ## Next step
 
