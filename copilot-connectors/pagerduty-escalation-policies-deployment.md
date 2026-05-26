@@ -7,16 +7,16 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 08/15/2025
+ms.date: 05/26/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the PagerDuty Escalation Policies Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
 # Deploy the PagerDuty Escalation Policies connector
 
-The PagerDuty Escalation Policies Microsoft 365 Copilot connector integrates PagerDuty escalation policy data into Microsoft 365. By using this connector, Copilot, Copilot Search, and Microsoft Search can surface relevant escalation policy information directly within apps like Microsoft Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the PagerDuty Escalation Policies connector.
+The PagerDuty Escalation Policies Microsoft 365 Copilot connector integrates PagerDuty escalation policy data into Microsoft 365. When you deploy this connector, Copilot, Copilot Search, and Microsoft Search can surface relevant escalation policy information directly within apps like Microsoft Teams, Outlook, and SharePoint. 
 
-[!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
+This article describes the steps to deploy and customize the PagerDuty Escalation Policies connector.
 
 ## Prerequisites
 
@@ -63,8 +63,8 @@ For more information about connector display names and descriptions, see [Enhanc
 
 PagerDuty customers can choose the geographic service region for the PagerDuty data centers that host their account.
 
-- For the US service region, the REST API URL is: `https://api.pagerduty.com`
-- For the EU service region, the REST API URL is: `https://api.eu.pagerduty.com`
+- For the US service region: `https://api.pagerduty.com`
+- For the EU service region: `https://api.eu.pagerduty.com`
 
 For more information, see [Service regions](https://support.pagerduty.com/main/docs/service-regions).
 
@@ -82,7 +82,7 @@ To roll out to a limited audience, select the toggle next to **Rollout to limite
 
 Select **Create** to deploy the connection. The PagerDuty Escalation Policies connector starts indexing content right away.
 
-The following table lists the default values that are set:
+The following table lists the default values that are set.
 
 | Category | Default value |
 | --- | --- |
