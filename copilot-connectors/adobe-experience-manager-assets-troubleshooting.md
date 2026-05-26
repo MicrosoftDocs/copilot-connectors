@@ -21,7 +21,7 @@ This article provides troubleshooting information for common errors that you mig
 
 ## Adobe Experience Manager Assets connector troubleshooting
 
-You might encounter the following errors when you deploy the connector or when the connector indexes data. This sentence ends with a period.
+You might encounter the following errors when you deploy the connector or when the connector indexes data.
 
 | Deployment step      | Error or error message                        | Possible reason |
 |-----------------------|----------------------------------------------|-----------------|
