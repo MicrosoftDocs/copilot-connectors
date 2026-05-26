@@ -166,7 +166,7 @@ The default schedule for the full crawl is set to **Every day**.
 
 You can adjust the full crawl schedule to fit your data refresh needs. If your database collections change frequently, keep the daily full crawl frequency. If your database content is relatively static, you can reduce the crawl frequency to every few days.
 
-For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 
