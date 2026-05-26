@@ -24,6 +24,11 @@
       "source_path_from_root": "/copilot-connectors/tableau-cloud-connector.md",
       "redirect_url": "/microsoft-365/copilot/connectors/tableau-cloud-deployment",
       "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/pagerduty-schedules-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/pagerduty-schedules-overview",
+      "redirect_document_id": true
     }
   ]
 }
