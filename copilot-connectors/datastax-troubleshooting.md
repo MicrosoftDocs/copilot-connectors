@@ -18,8 +18,6 @@ The DataStax Microsoft 365 Copilot connector integrates DataStax Astra DB collec
 
 This article provides troubleshooting information for common errors that you might encounter when you deploy the DataStax connector.
 
-[!INCLUDE [connector-preview-access](includes/connector-preview-access.md)]
-
 ## DataStax connector troubleshooting
 
 You might encounter the following errors when you deploy the DataStax connector or when the connector indexes data.
