@@ -3,12 +3,11 @@ title: "Set up the PagerDuty service for PagerDuty Schedules connector ingestion
 ms.author: wangchen
 author: wangchen
 manager: zezhangzhao
-ms.reviewer: 
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 08/15/2025
+ms.date: 05/20/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the PagerDuty admin needs to complete for your organization to configure the PagerDuty Schedules Microsoft 365 Copilot connector."
 ---
@@ -89,9 +88,9 @@ The PagerDuty Schedules connector uses OAuth 2.0 for authentication. You must re
 To register an OAuth 2.0 app:
 
 1. Sign in to your PagerDuty account with administrator permissions.
-1. Navigate to **Integrations** > **Developer Mode**.
-1. Choose **Create New App**.
-1. In the app registration form, provide the following information:
+1. Go to **Integrations** > **Developer Mode**.
+1. Select **Create New App**.
+1. In the app registration form, enter the following information:
    - **App Name**: Enter a descriptive name such as "Microsoft 365 Copilot Connector"
    - **Description**: Enter a description such as "OAuth app for Microsoft 365 Copilot connector integration"
    - **Category**: Select **Integration**
@@ -128,7 +127,7 @@ The PagerDuty Schedules connector requires specific OAuth scopes to access sched
 | Users | Read Access | Required to map PagerDuty users to Microsoft 365 identities for permission enforcement. |
 
 > [!NOTE]
-> The connector requires read-only access. Write or delete permissions are not required.
+> The connector requires read-only access. It doesn't require write or delete permissions.
 
 To configure OAuth scopes:
 

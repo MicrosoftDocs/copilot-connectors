@@ -35,8 +35,8 @@ Before you deploy the PagerDuty Schedules connector, make sure that the PagerDut
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- You must be an admin for your organization's Microsoft 365 tenant.
-- You must have a PagerDuty account with administrator permissions.
+- You're an admin for your organization's Microsoft 365 tenant.
+- You have a PagerDuty account with administrator permissions.
 - You must have completed the PagerDuty OAuth app setup and obtained the Client ID and Client Secret. For more information, see [Set up the PagerDuty service for connector ingestion](pagerduty-schedules-admin-setup.md).
 
 ## Deploy the connector
@@ -44,12 +44,12 @@ Before you deploy the connector, make sure that you meet the following prerequis
 To add the PagerDuty Schedules connector for your organization:
 
 1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
-1. Choose the **Connectors** tab, and in the left pane, choose **Gallery**.
-1. From the list of available connectors, choose **PagerDuty Schedules**.
+1. Select the **Connectors** tab. In the left pane, select **Gallery**.
+1. From the list of available connectors, select **PagerDuty Schedules**.
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated schedule or item. The display name also signifies trusted content and is used as a content source filter.
+The display name identifies references in Copilot responses to help users recognize the associated schedule or item. The display name also signifies trusted content and is used as a content source filter.
 
 You can accept the default **PagerDuty Schedules** display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -169,7 +169,7 @@ The PagerDuty Schedules connector indexes the following properties from PagerDut
 
 ### Customize sync settings
 
-The PagerDuty Schedules connector supports full crawl only. Incremental crawl is not available for this connector.
+The PagerDuty Schedules connector supports only full crawl. Incremental crawl isn't available for this connector.
 
 The default schedule for the full crawl is set to **Every day**. This means that the connector re-indexes all schedule data within the configured date range once per day.
 
