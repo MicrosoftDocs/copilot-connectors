@@ -26,8 +26,8 @@ Before you deploy the Confluence On-premises connector, make sure that the Confl
 
 | Role | Task |
 | ---- | ---- |
-| Confluence admin | [Configure the environment]() | 
-| Confluence admin/Network admin  | [Set up prerequisites]() |
+| Confluence admin | [Configure the environment](confluence-onpremises-admin-setup.md#configure-the-confluence-environment) | 
+| Confluence admin/Network admin  | [Set up prerequisites](confluence-onpremises-admin-setup.md#set-up-prerequisites) |
 | Microsoft 365 admin | [Deploy the connector in the Microsoft 365 admin center](#deploy-the-connector) |
 | Microsoft 365 admin | [Customize connector settings](#customize-settings) (optional) |
 
