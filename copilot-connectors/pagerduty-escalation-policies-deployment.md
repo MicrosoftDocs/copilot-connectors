@@ -130,7 +130,7 @@ You can add or remove properties from your PagerDuty Escalation Policy data sour
 
 The PagerDuty Escalation Policies connector only supports full crawl. The default schedule of the full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
 
-For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 
