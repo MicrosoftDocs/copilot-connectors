@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 04/21/2026
+ms.date: 05/26/2026
 ms.localizationpriority: Medium
 ---
 
@@ -26,8 +26,8 @@ Before you deploy the Confluence On-premises connector, make sure that the Confl
 
 | Role | Task |
 | ---- | ---- |
-| Confluence admin | [Configure the environment]() | 
-| Confluence admin/Network admin  | [Set up prerequisites]() |
+| Confluence admin | [Configure the environment](confluence-onpremises-admin-setup.md#configure-the-confluence-environment) | 
+| Confluence admin/Network admin  | [Set up prerequisites](confluence-onpremises-admin-setup.md#set-up-prerequisites) |
 | Microsoft 365 admin | [Deploy the connector in the Microsoft 365 admin center](#deploy-the-connector) |
 | Microsoft 365 admin | [Customize connector settings](#customize-settings) (optional) |
 
@@ -138,6 +138,7 @@ Customize content settings in the following ways:
 
 - Include or exclude specific spaces by using the space filter option. Each space has a space key identifier that forms part of the URL for that space. For more information, see [Space keys](https://confluence.atlassian.com/doc/space-keys-829076188.html).
 - Specify a date range for document indexing. You can filter pages by **Last Created Date** or **Last Modified Date**.
+- For advanced scenarios, use a Confluence Query Language (CQL) string to specify conditions for syncing pages. For more information, see [Advanced Searching using CQL](https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/). You need Microsoft Graph Connector Agent version 3.1.22 or later to use this feature.
 - Add or remove properties from the data source, assign a schema to properties (searchable, queryable, retrievable, refinable), and change semantic labels associated with properties. The following table lists the default properties.
 
 |Source property|Label|Schema|
