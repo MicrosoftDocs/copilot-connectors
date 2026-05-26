@@ -156,7 +156,7 @@ The DataStax connector indexes the following properties from DataStax Astra DB c
 
 #### Preview data
 
-Use the **Preview results** button to verify the sample values of the selected properties. This step helps you confirm that the connector is indexing the expected data from your DataStax collections.
+To verify the values of the selected properties, select **Preview results**. Preview the results to confirm that the connector is indexing the expected data from your DataStax collections.
 
 ### Customize sync intervals
 
