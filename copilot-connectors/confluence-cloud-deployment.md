@@ -1,5 +1,5 @@
 ---
-ms.date: 01/05/2026
+ms.date: 05/26/2026
 title: "Deploy the Confluence Cloud connector in the Microsoft 365 Admin Center"
 ms.author: lauragra
 author: lauragra
@@ -65,8 +65,9 @@ The `<organization_name>` value is the unique identifier for your Confluence Clo
 
 To authenticate and synchronize content from Confluence, choose one of the following authentication types:
 
-- **Basic authentication** - To authenticate using basic auth, enter your username (usually your email address) and API token. To  generate an API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
-- **OAuth 2.0 (recommended)** - Register an app in Confluence Cloud so that Microsoft Search and Microsoft 365 Copilot can access the instance. For more information, see [Enabling OAuth 2.0 (3LO)](https://developer.atlassian.com/cloud/confluence/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
+- **OAuth 2.0 (recommended)** - This authentication type allows you to authenticate by using a Microsoft managed OAuth 2.0 app.
+- **Basic authentication** - To authenticate by using basic auth, enter your username (usually your email address) and API token. To generate an API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+- **OAuth 2.0 with customized app** - This authentication type allows you to authenticate with your own OAuth 2.0 app. Register an OAuth 2.0 app in Confluence Cloud first so that Microsoft Search and Microsoft 365 Copilot can access the instance. For more information, see [Enabling OAuth 2.0 (3LO)](https://developer.atlassian.com/cloud/confluence/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
 
     To register the app:
 
@@ -133,16 +134,7 @@ The Confluence Cloud connector supports the following user search permissions:
 - Everyone
 - Only people with access to this data source (default)
  
-If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it. In Confluence Cloud, security permissions for users and groups are defined using space permissions and page restrictions. Page-level restrictions, if present, take precedence over space permissions.
-
-If no page restrictions are specified, the connector checks for space-level permissions, and applies the following:
-
-- If the space has **anonymous users** access enabled, the content is visible to all users in your tenant.
-- If the space doesn't have **anonymous access** enabled, the space-level permissions are honored.
-- If space-level permissions aren't defined, the content is not visible to any user in your tenant.
-
-> [!IMPORTANT]
-> Permissions are managed at the space and page level only. Parent page permissions aren't applied.
+If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, search results respect the same permission setup as the data source.
 
 If you choose **Only people with access to this data source**, you also need to choose whether your Confluence site has Microsoft Entra ID provisioned users or non-Entra ID users:
 
@@ -160,7 +152,7 @@ You can customize what data is included and excluded and customize the default c
 
 #### Include or exclude data
 
-By default, the Confluence Cloud connector indexes all blogs and pages. You can include or exclude data that you want to index. You can use a Confluence Query Language (CQL) string to specify conditions for syncing pages. For example, you can choose to index only the pages that were modified in the last two years. For more information, see [Advanced Searching using CQL](https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/).
+By default, the Confluence Cloud connector indexes all blogs and pages. You can include or exclude spaces that you want to index. For advanced scenarios, use a Confluence Query Language (CQL) string to specify conditions for syncing pages. For example, you can choose to index only the pages that were modified in the last two years. For more information, see [Advanced Searching using CQL](https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/).
 
 > [!TIP]
 > You can use the CQL filter to index content modified after a certain time by using, for example, `lastModified >= "2024/12/31"`.
@@ -173,19 +165,32 @@ To add or remove available properties from your Confluence Cloud connector, assi
 
 | Default property | Label | Description |
 | ---------------- | ----- | ----------- |
-| Authors | `authors` | Public name of people who participated/collaborated on the item in the data source. |
-| CreatedByName | `createdBy` | Public name of the person who most recently edited the item in the data source. |
-| IconUrl | `iconUrl` | The associated icon URL of the item. |
-| Title | `title` | The title of the item that you want to be shown in search and other experiences. |
-| UpdatedByName | `lastModifiedBy` | Public name of the person who most recently edited the item in the data source. |
-| UpdatedOn | `lastModifiedDateTime` | Date and time the item was last modified in the data source. |
+| Authors | `authors` | The names of all the people who participated or collaborated on the item in the data source. |
+| Content | — | The main body content of the item in the data source. |
+| CreatedByName | `createdBy` | The person who created the item in the data source. |
+| CreatedOn | `createdDateTime` | The date and time that the item was created in the data source. |
+| IconUrl | `iconUrl` | URL of the icon. |
+| Id | `secondaryId` | The Id of the item in the data source. |
+| ItemPath | `itemPath` | Name of the space that the item belongs to in the data source. |
+| Labels | — | A set of labels associated with the item to categorize, filter, or group similar items. |
+| Likes | `numReactions` | Count of the likes on the item in the data source. |
+| PageTree | — | Array of name of items or spaces that the item belongs to in the data source. Last object in array being the immediate parent. |
+| SpaceDescription | — | Description of the space that the item belongs to in the data source. |
+| SpaceName | `containerName` | Name of the space that the item belongs to in the data source. |
+| SpaceURL | `containerUrl` | The direct URL to the container where the item resides, allowing quick access to its location. |
+| Status | `state` | The current state of the item in the data source. |
+| Title | `title` | The title of the item in the data source. |
+| Type | `itemType` | The type or classification of the item in the data source that defines its purpose. |
+| UpdatedByName | `lastModifiedBy` | The person who most recently edited the item in the data source. |
+| UpdatedOn | `lastModifiedDateTime` | The date and time that the item was last modified in the data source. |
 | Url | `url` | The target URL of the item in the data source. |
 
 Choose the **Preview results** button to verify the selected properties and filters.
 
 ### Customize sync intervals
 
-The refresh interval determines how often your data synchronizes between the data source and the Confluence Cloud connector index. Copilot connectors use two types of refresh intervals:
+The refresh interval determines how often your data synchronizes between the data source and the Confluence Cloud connector index. Copilot connectors use two types of refresh intervals:
+
 
 - **Full crawl** - Performs a complete synchronization of all content. Full crawls detect deleted items and sync access control list (ACL) changes. By default, full crawls run every 24 hours.
 - **Incremental crawl** - Syncs new and modified content. Incremental crawls don't pick up ACL changes or deleted items. By default, incremental crawls run every 15 minutes.
