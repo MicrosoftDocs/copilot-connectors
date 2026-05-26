@@ -1,5 +1,5 @@
 ---
-ms.date: 01/05/2026
+ms.date: 05/26/2026
 title: "Deploy the Confluence Cloud connector in the Microsoft 365 Admin Center"
 ms.author: lauragra
 author: lauragra
