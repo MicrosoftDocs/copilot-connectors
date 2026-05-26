@@ -127,4 +127,4 @@ You can control permissions in the following ways:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the PagerDuty Schedules connector](pagerduty-schedules-deployment.md)
+> [Set up the PagerDuty service for connector ingestion](pagerduty-schedules-admin-setup.md)
