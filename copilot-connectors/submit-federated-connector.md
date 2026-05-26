@@ -14,18 +14,18 @@ ms.localizationpriority: Medium
 
 # Submit a federated connector
 
-The federated Microsoft 365 Copilot Connector program allows partners to submit a remote Model Context Protocol (MCP) server to Microsoft for inclusion in the Connectors Gallery for Microsoft 365 Copilot tenants.
+The federated Microsoft 365 Copilot Connector program allows partners to submit a remote Model Context Protocol (MCP) server to Microsoft for inclusion in the connectors gallery for Microsoft 365 Copilot tenants.
 
 After Microsoft approves your MCP server and adds it to the gallery as a federated connector, tenant admins can review and approve the connector for their organization. After an admin approves it, Microsoft 365 Copilot connects to your remote MCP server through a public HTTPS endpoint and surfaces your content in Copilot experiences, such as the Copilot app and the Researcher agent.
 
-This article explains submission prerequisites, requirements, required artifacts, and what to expect during review and onboarding. For legal terms, see [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/MCA).
+This article explains submission prerequisites, requirements, required artifacts, and what to expect during review and onboarding of a federated connector. For legal terms, see [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/MCA).
 
 > [!NOTE]
-> Microsoft enables only tools that perform search and fetch operations. Each tool must include the `readOnlyHint` annotation to be enabled in default connectors.
+> Microsoft enables only tools that perform search and fetch operations. Each tool must include the `readOnlyHint` annotation to be enabled in the connectors gallery in the Microsoft 365 admin center.
 
 ## Prerequisites
 
-Before you submit your connector, make sure that all prerequisites are complete:
+Before you submit your connector, make sure that you meet the following prerequisites:
 
 - You have an active engagement with a Microsoft business development representative.
 - Your organization has signed a legal agreement that permits Microsoft to use your MCP server and its tools within Microsoft 365 Copilot.
@@ -72,7 +72,7 @@ Provide the following artifacts with your submission.
 
 Microsoft accepts submissions on a rolling basis. Review time varies based on submission volume and completeness of provided artifacts.
 
-After submission:
+After you submit a federated connector:
 
 - Microsoft validates the submitted metadata, assets, and technical requirements.
 - Microsoft integrates the connector and coordinates validation through your Microsoft business development representative.
