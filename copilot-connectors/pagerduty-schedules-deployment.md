@@ -1,5 +1,5 @@
 ---
-ms.date: 05/20/2026
+ms.date: 05/26/2026
 title: "Deploy the PagerDuty Schedules connector"
 ms.author: wangchen
 author: wangchen

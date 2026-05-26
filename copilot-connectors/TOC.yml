@@ -425,12 +425,12 @@ items:
         href: troubleshoot-oraclesql-connector.md
     - name: PagerDuty Escalation Policies
       items:
-        - name: Overview
-          href: pagerduty-escalation-policies-overview.md
-        - name: Deployment guide
-          href: pagerduty-escalation-policies-deployment.md
-        - name: Troubleshooting
-          href: pagerduty-escalation-policies-troubleshooting.md
+      - name: Overview
+        href: pagerduty-escalation-policies-overview.md
+      - name: Deployment guide
+        href: pagerduty-escalation-policies-deployment.md
+      - name: Troubleshooting
+        href: pagerduty-escalation-policies-troubleshooting.md
     - name: PagerDuty Schedules
       items:
       - name: Overview
