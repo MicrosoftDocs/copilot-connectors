@@ -29,19 +29,7 @@ The PagerDuty Escalation Policies connector provides the following benefits:
 - **Enhances collaboration** – Teams can easily understand escalation paths and responsibilities without leaving Microsoft 365.
 - **Preserves security and compliance** – The connector respects PagerDuty permissions to ensure that sensitive escalation policy information is only visible to authorized users.
 
-## Capabilities
-
-- **Semantic search** – Access PagerDuty escalation policies in Copilot by using the power of semantic search.
-- **ACL retention** – Retain access control lists (ACLs) defined by your organization.
-- **Customizable crawl frequency** – Customize your crawl frequency to fit your data refresh needs.
-- **Copilot Studio integration** – Create workflows by using this connection and plugins from Microsoft Copilot Studio.
-
-## Limitations
-
-- **Advanced Permissions** – When Advanced Permissions is enabled in PagerDuty, only members of the teams linked to a specific escalation policy can access and search for that escalation policy in Microsoft Search and Microsoft 365 Copilot.
-- **License requirements** – A PagerDuty Business or Enterprise plan license is required to index the following data properties: createdBy, createdDateTime, lastModifiedBy, and lastModifiedDateTime.
-
-## Common use cases
+### Common use cases
 
 | Department or role | Use case | Business benefit |
 | --- | --- | --- |
@@ -49,27 +37,6 @@ The PagerDuty Escalation Policies connector provides the following benefits:
 | IT Operations | Review escalation policy assignments and team coverage | Better resource allocation and coverage planning |
 | Site Reliability Engineering (SRE) | Understand escalation rules and notification timings | Improved incident response coordination |
 | DevOps teams | Track which services are linked to escalation policies | Enhanced service ownership and accountability |
-
-## Data types indexed from PagerDuty Escalation Policies
-
-The PagerDuty Escalation Policies connector indexes the following data types from your PagerDuty environment:
-
-- **Escalation policy metadata**: Policy ID, name, summary, description, and URLs
-- **Audit information**: Created by, created date/time, last modified by, last modified date/time (requires PagerDuty Business or Enterprise plan)
-- **Escalation rules**: Rule details including escalation timeframes and notification targets
-- **Service associations**: Services that use each escalation policy
-- **Team relationships**: Teams linked to escalation policies (for Advanced Permissions)
-
-The connector indexes escalation policy content and associated metadata to make it searchable and accessible through Copilot, Copilot Search, and Microsoft Search within Microsoft 365 apps.
-
-## Permissions model and access control
-
-The PagerDuty Escalation Policies connector supports two permission models:
-
-- **Everyone in the organization**: All indexed escalation policies are visible to everyone in your Microsoft 365 organization. This is the default setting.
-- **Advanced Permissions (PagerDuty ACLs)**: When Advanced Permissions is enabled in PagerDuty, the connector respects PagerDuty's access control lists. Only members of the teams linked to a specific escalation policy can access and search for that policy in Microsoft Search and Microsoft 365 Copilot.
-
-Admins can configure the access permissions during connector deployment or customize them later through the connector settings in the Microsoft 365 admin center.
 
 ## Build agents with the PagerDuty Escalation Policies connector
 
@@ -96,6 +63,41 @@ The following examples show prompts that agent builders can use to help their us
 - What is the escalation path for incidents assigned to my team?
 - List all teams linked to escalation policies for the payment service.
 - How long does it take for an incident to escalate in the critical services policy?
+
+## PagerDuty Escalation Policies connector capabilities and limitations
+
+The PagerDuty Escalation Policies connector enables users to:
+
+- **Semantic search** – Access PagerDuty escalation policies in Copilot by using the power of semantic search.
+- **ACL retention** – Retain access control lists (ACLs) defined by your organization.
+- **Customizable crawl frequency** – Customize your crawl frequency to fit your data refresh needs.
+- **Copilot Studio integration** – Create workflows by using this connection and plugins from Microsoft Copilot Studio.
+
+The PagerDuty Escalation Policies connector has the following limitations:
+
+- **Advanced Permissions** – When Advanced Permissions is enabled in PagerDuty, only members of the teams linked to a specific escalation policy can access and search for that escalation policy in Microsoft Search and Microsoft 365 Copilot.
+- **License requirements** – A PagerDuty Business or Enterprise plan license is required to index the following data properties: createdBy, createdDateTime, lastModifiedBy, and lastModifiedDateTime.
+
+## Data types indexed from PagerDuty Escalation Policies
+
+The PagerDuty Escalation Policies connector indexes the following data types from your PagerDuty environment:
+
+- **Escalation policy metadata**: Policy ID, name, summary, description, and URLs
+- **Audit information**: Created by, created date/time, last modified by, last modified date/time (requires PagerDuty Business or Enterprise plan)
+- **Escalation rules**: Rule details including escalation timeframes and notification targets
+- **Service associations**: Services that use each escalation policy
+- **Team relationships**: Teams linked to escalation policies (for Advanced Permissions)
+
+The connector indexes escalation policy content and associated metadata to make it searchable and accessible through Copilot, Copilot Search, and Microsoft Search within Microsoft 365 apps.
+
+## Permissions model and access control
+
+The PagerDuty Escalation Policies connector supports two permission models:
+
+- **Everyone in the organization**: All indexed escalation policies are visible to everyone in your Microsoft 365 organization. This is the default setting.
+- **Advanced Permissions (PagerDuty ACLs)**: When Advanced Permissions is enabled in PagerDuty, the connector respects PagerDuty's access control lists. Only members of the teams linked to a specific escalation policy can access and search for that policy in Microsoft Search and Microsoft 365 Copilot.
+
+Admins can configure the access permissions during connector deployment or customize them later through the connector settings in the Microsoft 365 admin center.
 
 ## Next step
 

@@ -90,15 +90,15 @@ The following table lists the default values that are set:
 | Content | All default properties are indexed |
 | Sync | Full crawl runs daily |
 
-To customize these values, choose **Custom setup**. For more information, see [Customize settings](#custom-setup-optional).
+To customize these values, choose **Custom setup**. For more information, see [Customize settings (optional)](#customize-settings-optional).
 
 After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-## Custom setup (optional)
+## Customize settings (optional)
 
-In custom setup, you can edit any of the default values for users, content, and sync.
+You can customize the default values for the PagerDuty Escalation Policies connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**.
 
-### Users
+### Customize user settings
 
 #### Access permissions
 
@@ -106,7 +106,7 @@ Determine which users in your organization can access each item in Copilot or Se
 
 **Important**: When you enable Advanced Permissions in PagerDuty, only members of the teams linked to a specific escalation policy can access and search for that escalation policy in Microsoft Search and Microsoft 365 Copilot.
 
-### Content
+### Customize content settings
 
 #### Manage properties
 
@@ -126,19 +126,14 @@ You can add or remove properties from your PagerDuty Escalation Policy data sour
 | ruleDetail | Not applicable | This property is a list of entries in the escalation policy, including the number of minutes before an unacknowledged incident escalates away from this rule, and the targets an incident should be assigned to upon reaching the rule. |
 | usedByServices | Not applicable | The services associated with the escalation policy. |
 
-### Sync
+### Customize sync intervals
 
 The PagerDuty Escalation Policies connector only supports full crawl. The default schedule of the full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
 
 For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
 
-## Next steps
-
-After you publish your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
-
-If you have issues or want to provide feedback, contact [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
-
 ## Related content
 
 - [PagerDuty Escalation Policies connector overview](pagerduty-escalation-policies-overview.md)
 - [Troubleshoot issues with the PagerDuty Escalation Policies connector](pagerduty-escalation-policies-troubleshooting.md)
+- [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md)
