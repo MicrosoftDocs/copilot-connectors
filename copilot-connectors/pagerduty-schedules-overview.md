@@ -1,6 +1,6 @@
 ---
 ms.date: 05/20/2026
-title: "PagerDuty Schedules Connector Overview"
+title: "PagerDuty Schedules connector overview"
 ms.author: wangchen
 author: wangchen
 manager: zezhangzhao
@@ -12,7 +12,7 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the PagerDuty Schedules Copilot connector."
 ---
 
-# PagerDuty Schedules Copilot connector overview (preview)
+# PagerDuty Schedules connector overview (preview)
 
 The PagerDuty Schedules Microsoft 365 Copilot connector integrates PagerDuty schedule data into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface schedule information directly within apps like Teams, Outlook, and SharePoint.
 

@@ -12,11 +12,13 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the PagerDuty Schedules Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the PagerDuty Schedules Copilot connector (preview)
+# Troubleshoot issues with the PagerDuty Schedules connector (preview)
 
 The PagerDuty Schedules Microsoft 365 Copilot connector integrates PagerDuty schedule data into Microsoft 365, enabling Copilot and Microsoft Search to surface schedule information directly within apps like Teams, Outlook, and SharePoint.
 
 This article provides troubleshooting information for common errors that you might encounter when you deploy the PagerDuty Schedules connector.
+
+To verify PagerDuty configuration information to help troubleshoot errors, see [Set up the PagerDuty service for connector ingestion](pagerduty-schedules-admin-setup.md).
 
 [!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 
