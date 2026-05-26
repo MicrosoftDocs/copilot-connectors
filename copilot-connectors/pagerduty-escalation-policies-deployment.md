@@ -76,11 +76,25 @@ The PagerDuty Escalation Policies connector supports the following authenticatio
 
 To use **PagerDuty OAuth** for authentication, enter the **Client ID** and **Client Secret** you obtained from your PagerDuty app registration settings in the prerequisites section.
 
-### Roll out to a limited audience
+### Roll out
 
-Deploy this connection to a limited user base to validate it in Copilot and other search surfaces before you roll it out to a broader audience.
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
-## Custom setup
+Choose **Create** to deploy the connection. The PagerDuty Escalation Policies connector starts indexing content right away.
+
+The following table lists the default values that are set:
+
+| Category | Default value |
+| --- | --- |
+| Users | All users in the organization can access indexed escalation policies |
+| Content | All default properties are indexed |
+| Sync | Full crawl runs daily |
+
+To customize these values, choose **Custom setup**. For more information, see [Customize settings](#custom-setup-optional).
+
+After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
+
+## Custom setup (optional)
 
 In custom setup, you can edit any of the default values for users, content, and sync.
 
@@ -105,7 +119,7 @@ You can add or remove properties from your PagerDuty Escalation Policy data sour
 | createdBy | `createdBy` | The name of the user who created the escalation policy. |
 | createdTime | `createdDateTime` | The time at which the escalation policy was created. |
 | lastModifiedBy | `lastModifiedBy` | The name of the user who last modified the escalation policy. |
-| hastModifiedTime | `lastModifiedDateTime` | The time at which the escalation policy was last modified. |
+| lastModifiedTime | `lastModifiedDateTime` | The time at which the escalation policy was last modified. |
 | name | `title` | The name of the escalation policy. |
 | summary | Not applicable | A short-form, server-generated string by PagerDuty that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, it's identical to `name`, though it is not intended to be an identifier. |
 | description | Not applicable | Escalation policy description. |
@@ -114,7 +128,9 @@ You can add or remove properties from your PagerDuty Escalation Policy data sour
 
 ### Sync
 
-The PagerDuty Escalation Policies Copilot connector only supports full crawl. The default schedule of the full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
+The PagerDuty Escalation Policies connector only supports full crawl. The default schedule of the full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
+
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
 
 ## Next steps
 
