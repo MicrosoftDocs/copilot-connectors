@@ -189,8 +189,12 @@ items:
         href: troubleshoot-csv-connector.md
     - name: DataStax
       items:
-      - name: Setup
-        href: datastax-connector.md
+      - name: Overview
+        href: datastax-overview.md
+      - name: Deploy the connector
+        href: datastax-deployment.md
+      - name: Troubleshooting
+        href: datastax-troubleshooting.md
     - name: Dropbox
       items:
       - name: Overview
