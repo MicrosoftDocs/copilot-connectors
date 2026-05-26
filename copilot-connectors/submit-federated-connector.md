@@ -62,7 +62,7 @@ Provide the following artifacts with your submission.
 | **Synonyms** | Up to 10 comma-separated keywords users might search for. Avoid generic or competitor names. |
 | **Logo (color.png)** | 192 x 192 pixel full-color PNG. |
 | **Logo (outline.png)** | 32 x 32 pixel white-on-transparent PNG. |
-| **OAuth credentials** | OAuth reference ID for your Microsoft registration. For setup information, see [Create OAuth credentials](https://aka.ms/OAuth). |
+| **OAuth credentials** | OAuth reference ID for your Microsoft registration. For setup information, see [OAuth 2.0](set-up-custom-federated-connectors.md#oauth-20). |
 | **Tool list** | Complete list of tools with human-readable names and confirmation that each tool includes the `readOnlyHint` annotation. |
 | **Documentation and support** | Links to product documentation, privacy policy, and support channel. |
 | **Test credentials** | Test account details and step-by-step setup instructions for reviewers. |
@@ -90,4 +90,4 @@ To submit your connector, complete the [Federated Copilot connector submission f
 - [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/MCA)
 - [Federated connectors overview](federated-connectors-overview.md)
 - [Set up custom federated connectors](set-up-custom-federated-connectors.md)
-- [Create OAuth credentials](https://aka.ms/OAuth)
+- [Create OAuth credentials](set-up-custom-federated-connectors.md#oauth-20)
