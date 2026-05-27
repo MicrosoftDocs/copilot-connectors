@@ -30,38 +30,9 @@ The Airtable connector provides the following benefits:
 - **Enhances collaboration** – Teams can easily track and reference records across bases without leaving Microsoft 365.
 - **Preserves security and compliance** – The connector respects Airtable permissions so that content is only visible to authorized users.
 
-### Common use cases
-
-| Department/role | Use case | Business benefit |
-|---|---|---|
-| Project management | Summarize the status of in-progress projects and upcoming milestones. | Improved planning and prioritization. |
-| Operations | Look up deliverable owners, due dates, and completion rates. | Faster handoffs and clearer accountability. |
-| Engineering/Program management | Identify projects with risk flags or budget exposure. | Earlier escalation of at-risk work. |
-
 ## Build agents with the Airtable connector
 
 Developers can use this connector as a knowledge source in declarative agents they build with the [Copilot Studio full experience](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), the [Copilot Studio lite experience](/microsoft-365/copilot/extensibility/copilot-studio-agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
-
-### Example prompts
-
-The following examples show prompts that agent builders can use to help their users retrieve information from Airtable.
-
-**Project management**
-
-- Summarize the status of all in-progress projects and their project managers.
-- What are the upcoming milestones for the Cloud Infrastructure Optimization project?
-- List projects that are flagged as high risk and their budgets.
-
-**Operations**
-
-- Show open deliverables for the Mobile Application Redesign project and their owners.
-- What deliverables are due in the next 30 days across all projects?
-- Summarize the milestone completion rate for each active project.
-
-**Program management**
-
-- Which projects are over budget or behind schedule based on the latest status?
-- List projects sorted by end date and highlight any with no milestones completed.
 
 ## Airtable connector capabilities and limitations
 
@@ -77,7 +48,6 @@ The Airtable connector has the following limitations:
 - It doesn't index attachments or record comments.
 - It doesn't index views, automations, interfaces, or other entities beyond records.
 - It requires identity mapping if Airtable user emails differ from Microsoft Entra ID user principal names (UPNs).
-- Permission updates might take time to reflect, as changes are applied during scheduled crawls.
 
 ## Data types indexed from Airtable
 
