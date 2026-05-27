@@ -187,18 +187,6 @@ To adjust the crawl schedule:
 > [!NOTE]
 > Changes to the crawl frequency affect how quickly updates to PagerDuty schedules are reflected in Copilot and Microsoft Search results.
 
-## Manage your connector
-
-After you publish your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/). For more information, see [Manage your connector](manage-connector.md).
-
-The connector status page shows the following information:
-
-- **Last crawl status**: Indicates whether the most recent crawl completed successfully or encountered errors.
-- **Items indexed**: The number of schedule items currently indexed and available in Copilot and Microsoft Search.
-- **Crawl history**: A log of recent crawl operations, including start time, duration, and results.
-
-If the connector encounters errors, see [Troubleshoot the PagerDuty Schedules connector](pagerduty-schedules-troubleshooting.md) for resolution steps.
-
 ## Related content
 
 - [PagerDuty Schedules connector overview](pagerduty-schedules-overview.md)

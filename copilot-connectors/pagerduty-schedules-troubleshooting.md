@@ -42,41 +42,6 @@ You might encounter the following errors when you deploy the PagerDuty Schedules
 | Permissions | Users don't see schedules they should have access to. | Identity mapping between PagerDuty and Microsoft Entra ID is incorrect. | Verify that PagerDuty user email addresses match Microsoft Entra ID user principal names (UPNs). If they don't match, configure a custom identity mapping. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md). |
 | Permissions | Advanced Permissions not enforced. | Team assignments in PagerDuty are not configured or Advanced Permissions is not enabled. | Verify that Advanced Permissions is enabled in PagerDuty and that schedules are assigned to the appropriate teams. For more information, see [Advanced Permissions](https://support.pagerduty.com/main/docs/advanced-permissions) in the PagerDuty documentation. |
 
-## Common resolution steps
-
-If you encounter errors with the PagerDuty Schedules connector, try the following general resolution steps:
-
-1. **Verify PagerDuty admin access**: Make sure that the account used to authenticate the connector has administrator permissions in PagerDuty.
-
-1. **Check OAuth app configuration**: Review your PagerDuty OAuth app settings to ensure:
-   - The correct redirect URL is configured
-   - All required scopes are enabled
-   - Scoped OAuth is selected
-   - Client ID and Client Secret are valid
-
-1. **Verify REST API URL**: Confirm that you're using the correct REST API endpoint for your PagerDuty service region (US or EU).
-
-1. **Review date range settings**: Check the **Days Before** and **Days After** settings to ensure the configured date range includes the schedules you want to index.
-
-1. **Check network connectivity**: Verify that your network allows outbound HTTPS connections to PagerDuty API endpoints.
-
-1. **Review connector logs**: In the Microsoft 365 admin center, review the crawl history and error logs for specific error messages that can help identify the issue.
-
-1. **Reconfigure the connector**: If errors persist, consider deleting and recreating the connector with updated configuration settings.
-
-## Contact support
-
-If you have issues or want to provide feedback after trying the troubleshooting steps in this article, contact [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
-
-When contacting support, provide the following information:
-
-- Connector name and version
-- Error messages from the connector logs
-- Screenshots of the error (if applicable)
-- Steps you've already taken to troubleshoot the issue
-- PagerDuty service region (US or EU)
-- Microsoft 365 environment (Enterprise or Government)
-
 ## Related content
 
 - [PagerDuty Schedules connector overview](pagerduty-schedules-overview.md)
