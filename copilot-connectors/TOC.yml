@@ -197,8 +197,12 @@ items:
         href: troubleshoot-csv-connector.md
     - name: DataStax
       items:
-      - name: Setup
-        href: datastax-connector.md
+      - name: Overview
+        href: datastax-overview.md
+      - name: Deploy the connector
+        href: datastax-deployment.md
+      - name: Troubleshooting
+        href: datastax-troubleshooting.md
     - name: Dropbox
       items:
       - name: Overview
@@ -427,12 +431,14 @@ items:
         href: OracleSQL-connector.md
       - name: Troubleshooting
         href: troubleshoot-oraclesql-connector.md
-    - name: PagerDuty
+    - name: PagerDuty Escalation Policies
       items:
-      - name: Setup PagerDuty Escalation Policies
-        href: PagerDuty-Escalation-Policies-connector.md
-      - name: Setup PagerDuty Schedules
-        href: pagerduty-schedules-connector.md
+      - name: Overview
+        href: pagerduty-escalation-policies-overview.md
+      - name: Deployment guide
+        href: pagerduty-escalation-policies-deployment.md
+      - name: Troubleshooting
+        href: pagerduty-escalation-policies-troubleshooting.md
     - name: PagerDuty Incidents
       items:
       - name: Overview
@@ -656,6 +662,8 @@ items:
     href: manage-federated-connectors.md
   - name: Set up custom federated connectors
     href: set-up-custom-federated-connectors.md
+  - name: Submit a federated connector
+    href: submit-federated-connector.md
 - name: Configure Microsoft 365 Copilot extension
   href: copilot-extension.md
 - name: Manage connections

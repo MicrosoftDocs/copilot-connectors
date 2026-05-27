@@ -8,7 +8,7 @@ ms.topic: landing-page
 ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Find a list of Microsoft 365 Copilot connectors built and supported by Microsoft, organized by categories, including a description and link to each connector website."
-ms.date: 05/22/2026
+ms.date: 05/26/2026
 ---
 # Microsoft-built connectors gallery
 
@@ -92,7 +92,7 @@ The following table lists the database connectors that are available.
 | Airtable (preview) | Microsoft | Integrates Airtable bases, tables, and records into Microsoft 365. | [Airtable connector](airtable-overview.md) |
 | Azure SQL | Microsoft | Enables your organization to search for data from your Azure SQL. | [Azure SQL connector](mssql-connector.md) |
 | CSV | Microsoft | Enables your organization to search for content stored in CSV files. | [CSV connector](csv-connector.md) |
-| DataStax (preview) | Microsoft | Enables integration with DataStax for real-time data access. | [DataStax connector](datastax-connector.md) |
+| DataStax (preview) | Microsoft | Enables integration with DataStax for real-time data access. | [DataStax connector](datastax-overview.md) |
 | Microsoft SQL Server | Microsoft | Allows your organization to search on-premises Microsoft SQL Server databases. | [Microsoft SQL Server connector](mssql-connector.md) |
 | Oracle SQL | Microsoft | Enables your organization to discover and index data from an on-premises database. Indexes specified content into Microsoft Search and supports periodic crawls. You can also restrict access to search results for certain users. | [Oracle SQL connector](oraclesql-connector.md) |
 | PostgreSQL (preview) | Microsoft | Enables your organization to discover and index data from PostgreSQL databases. | [PostgreSQL connector](postgresql-connector.md) |
@@ -152,7 +152,7 @@ The following table lists the available IT service management tool connectors.
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
 | Freshservice | Microsoft | Allows organizations to connect to Freshservice to enhance team collaboration. | [Freshservice connector](freshservice-overview.md) |
-| PagerDuty Escalation Policies (preview)| Microsoft | Enables organizations to index and search PagerDuty escalation policies. | [PagerDuty Escalation Policies connector](pagerduty-escalation-policies-connector.md) |
+| PagerDuty Escalation Policies | Microsoft | Indexes and searches PagerDuty escalation policies. | [PagerDuty Escalation Policies connector](pagerduty-escalation-policies-overview.md) |
 | PagerDuty Incidents | Microsoft | Enables organizations to index and search PagerDuty incidents. | [PagerDuty Incidents connector](pagerduty-incidents-overview.md) |
 | PagerDuty Schedules | Microsoft | Enables organizations to index and search PagerDuty schedules. | [PagerDuty Schedules connector](pagerduty-schedules-connector.md) |
 | ServiceNow Catalog | Microsoft | Allows your organization to find Catalog items to order from the ServiceNow instance. Supports item-level user criteria permissions too. | [ServiceNow Catalog connector](servicenow-catalog-overview.md) |
