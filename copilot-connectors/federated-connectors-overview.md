@@ -7,7 +7,7 @@ ms.author: lauragra
 manager: calvind
 ms.reviewer: mansipakhale
 ms.service: copilot-connectors
-ms.date: 05/22/2026
+ms.date: 05/26/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ms.audience: Admin
@@ -56,7 +56,7 @@ Currently, Microsoft-published federated connectors are available for the follow
 - Moody's
 - Notion
  
-Partners who want to make a federated connector available in the gallery can submit their remote MCP server to Microsoft for review. For more information, see [Submit a federated connector](submit-mcp.md).
+Partners who want to make a federated connector available in the gallery can submit their remote MCP server to Microsoft for review. For more information, see [Submit a federated connector](submit-federated-connector.md).
 
 The following image shows federated connectors in the **Your connections** list in the Microsoft 365 admin center.
  
