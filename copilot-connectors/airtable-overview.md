@@ -7,7 +7,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 05/21/2026
+ms.date: 05/27/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Airtable Microsoft 365 Copilot connector."
 ---
