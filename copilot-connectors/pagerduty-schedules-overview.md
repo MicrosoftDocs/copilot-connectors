@@ -79,7 +79,7 @@ The following examples show prompts that agent builders can use to help their us
 - Compare on-call schedules across all engineering teams to identify overlapping coverage.
 - Summarize on-call distribution across the team to ensure balanced rotations.
 
-## Connector capabilities and limitations
+## PagerDuty Schedules connector capabilities and limitations
 
 The PagerDuty Schedules connector has the following key capabilities:
 
@@ -127,4 +127,4 @@ You can control permissions in the following ways:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Set up the PagerDuty service for connector ingestion](pagerduty-schedules-admin-setup.md)
+> [Deploy the PagerDuty Schedules connector](pagerduty-schedules-deployment.md)
