@@ -85,7 +85,7 @@ Paste the **Client ID** and **Client Secret** into the corresponding fields on t
 
 ### Rollout
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
+To roll out to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
 
 Select the **Notice** checkbox to acknowledge the data indexing terms, and then choose **Create** to deploy the connection. The Airtable Copilot connector starts indexing content right away.
 
