@@ -67,7 +67,7 @@ The following image shows federated connectors in the **Your connections** list 
 
 ## Admin experience and controls
  
-Microsoft-published federated connectors are enabled by default for a tenant unless admins disable them. Admins must approve partner federated connectors before enabling them for the organization. Admins can manage federated Copilot connectors in the Microsoft 365 admin center by choosing **Copilot connectors** > **Your connections**.
+Microsoft-published federated connectors are enabled by default for a tenant unless admins disable them. Admins must approve partner federated connectors before enabling them for the organization. Admins can manage federated Copilot connectors in the Microsoft 365 admin center by choosing **Copilot** > **Connectors** > **Your Connections**.
  
 Admins can:
  
