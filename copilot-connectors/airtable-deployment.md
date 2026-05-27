@@ -99,7 +99,7 @@ The following table lists the default values that are set.
 | Sync | Incremental crawl | Runs every 15 minutes. |
 | Sync | Full crawl | Runs every day. |
 
-To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
+To customize these values, select **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 
 After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
