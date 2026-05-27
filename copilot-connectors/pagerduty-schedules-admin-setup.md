@@ -153,17 +153,6 @@ To obtain your Client ID and Client Secret:
 > [!IMPORTANT]
 > Store the Client ID and Client Secret securely. You'll need these credentials when deploying the connector in the Microsoft 365 admin center. The Client Secret is shown only once. If you lose it, you'll need to generate a new secret.
 
-## Verify PagerDuty configuration
-
-Before proceeding to deploy the connector, verify that you have completed the following configuration steps:
-
-- [ ] Identified your PagerDuty service region and noted the REST API URL
-- [ ] Enabled Developer Mode in PagerDuty
-- [ ] Registered an OAuth 2.0 app in PagerDuty with **Scoped OAuth** selected
-- [ ] Configured the correct redirect URL for your Microsoft 365 environment
-- [ ] Selected all required OAuth scopes (Audit records, Schedules, Teams, Users)
-- [ ] Obtained and securely stored the Client ID and Client Secret
-
 ## Next step
 
 > [!div class="nextstepaction"]
