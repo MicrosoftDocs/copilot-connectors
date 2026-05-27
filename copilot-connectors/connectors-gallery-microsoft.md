@@ -89,6 +89,7 @@ The following table lists the database connectors that are available.
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
+| Airtable (preview) | Microsoft | Integrates Airtable bases, tables, and records into Microsoft 365. | [Airtable connector](airtable-overview.md) |
 | Azure SQL | Microsoft | Enables your organization to search for data from your Azure SQL. | [Azure SQL connector](mssql-connector.md) |
 | CSV | Microsoft | Enables your organization to search for content stored in CSV files. | [CSV connector](csv-connector.md) |
 | DataStax (preview) | Microsoft | Enables integration with DataStax for real-time data access. | [DataStax connector](datastax-connector.md) |
@@ -163,7 +164,6 @@ The following table lists the project management connectors that are available.
 
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
-| Airtable | Microsoft | Integrates Airtable records into Microsoft 365. | [Airtable connector](airtable-overview.md) |
 | Asana | Microsoft | Allows your organization to integrate with Asana's project management platform. | [Asana connector](asana-overview.md) |
 | monday.com | Microsoft | Allows organizations to integrate with monday.com for project and workflow management. | [monday.com connector](monday-overview.md) |
 | Smartsheet Sheet | Microsoft | Enables organizations to index and search Smartsheet data. | [Smartsheet Sheet connector](smartsheet-sheet-overview.md) |
