@@ -32,7 +32,17 @@ The Airtable connector provides the following benefits:
 
 ## Build agents with the Airtable connector
 
-Developers can use this connector as a knowledge source in declarative agents they build with the [Copilot Studio full experience](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), the [Copilot Studio lite experience](/microsoft-365/copilot/extensibility/copilot-studio-agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
+Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
+
+### Example prompts
+
+The following examples show prompts that users can use to retrieve information from Airtable:
+
+- "Show me all active projects in Airtable"
+- "What are the high-priority tasks assigned to me in Airtable?"
+- "Find Airtable records created in the last week"
+- "Summarize the status of all marketing campaigns in Airtable"
+- "What are the key deliverables for Q2 in our Airtable project tracker?"
 
 ## Airtable connector capabilities and limitations
 

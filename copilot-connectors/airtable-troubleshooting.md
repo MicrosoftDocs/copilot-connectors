@@ -12,9 +12,11 @@ ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Airtable Microsoft 365 Copilot connector."
 ---
 
-# Troubleshoot issues with the Airtable Copilot connector (preview)
+# Troubleshoot issues with the Airtable connector (preview)
 
 The Airtable Microsoft 365 Copilot connector enables users to surface Airtable records in Microsoft 365 apps such as Teams, Outlook, and SharePoint using Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the Airtable connector.
+
+To verify Airtable configuration information to help troubleshoot errors, see [Set up the Airtable service for connector ingestion](airtable-admin-setup.md).
 
 > [!NOTE]
 > The Airtable connector is currently in preview. Connector functionality and requirements are subject to change.
@@ -34,4 +36,5 @@ The following table lists common errors and recommended troubleshooting steps.
 ## Related content
 
 - [Airtable connector overview](airtable-overview.md)
+- [Set up the Airtable service for connector ingestion](airtable-admin-setup.md)
 - [Deploy the Airtable connector](airtable-deployment.md)

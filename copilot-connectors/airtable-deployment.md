@@ -16,18 +16,31 @@ description: "Find information about how to deploy the Airtable Microsoft 365 Co
 
 The Airtable Microsoft 365 Copilot connector integrates Airtable records into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant record information directly within apps like Microsoft Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the Airtable connector.
 
+For advanced Airtable configuration information, see [Set up the Airtable service for connector ingestion](airtable-admin-setup.md).
+
 > [!NOTE]
 > The Airtable connector is currently in preview. Connector functionality and requirements are subject to change.
 
 ## Prerequisites
 
+Before you deploy the Airtable connector, make sure that the Airtable environment is configured in your organization. The following table summarizes the steps to configure the Airtable environment and deploy the connector.
+
+| Task | Role |
+| ---- | ---- |
+| [Verify Airtable Enterprise plan](airtable-admin-setup.md#verify-airtable-enterprise-plan) | Airtable admin |
+| [Identify the Airtable Enterprise ID](airtable-admin-setup.md#identify-the-airtable-enterprise-id) | Airtable admin |
+| [Register an OAuth integration](airtable-admin-setup.md#register-an-oauth-integration) | Airtable admin |
+| [Allowlist the OAuth integration](airtable-admin-setup.md#allowlist-the-oauth-integration) | Airtable admin |
+| [Configure identity mapping](airtable-admin-setup.md#configure-identity-mapping) | Airtable admin / Microsoft 365 admin |
+| [Deploy the connector in the Microsoft 365 admin center](#deploy-the-connector) | Microsoft 365 admin |
+| [Customize connector settings](#customize-settings-optional) (optional) | Microsoft 365 admin |
+
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You must be a Microsoft 365 admin.
-- Your Airtable account must be on an [Airtable Enterprise](https://airtable.com/pricing) plan. The Enterprise plan is required to register and allowlist OAuth integrations.
-- You must have your Airtable Enterprise ID. The Enterprise ID has the format `entXXXXXXXXXXXXXX` and is visible in the URL of the Airtable Admin Hub (`https://airtable.com/admin/{enterpriseId}/...`).
-- An Airtable admin must register an OAuth integration for the connector and allowlist it for the enterprise (see [Choose authentication type](#choose-authentication-type)).
-- Identity mapping must be configured if Airtable user emails differ from Microsoft Entra ID user principal names (UPNs).
+- Your Airtable account must be on an Airtable Enterprise plan.
+- An Airtable admin must have completed the setup steps in [Set up the Airtable service for connector ingestion](airtable-admin-setup.md).
+- You must have the Airtable Enterprise ID, OAuth Client ID, and OAuth Client Secret from the Airtable admin.
 
 ## Deploy the connector
 
@@ -55,39 +68,29 @@ In **Airtable URL**, enter the base URL for the Airtable API. The typical value 
 
 In **Enterprise ID**, enter your Airtable Enterprise ID. The connector uses this ID to scope crawling and identity mapping to your enterprise account.
 
-The Enterprise ID has the format `entXXXXXXXXXXXXXX` (for example, `entABC123def456GH`). To find it, sign in to the [Airtable Admin Hub](https://airtable.com/admin) and copy the value from the URL: `https://airtable.com/admin/{enterpriseId}/...`.
+The Enterprise ID has the format `entXXXXXXXXXXXXXX` (for example, `entABC123def456GH`). For information about how to find your Enterprise ID, see [Identify the Airtable Enterprise ID](airtable-admin-setup.md#identify-the-airtable-enterprise-id).
 
 ### Choose authentication type
 
 The Airtable connector supports the following authentication type:
 
-- **OAuth 2.0** (default): Secure authentication by using Airtable's OAuth flow.
+- **OAuth 2.0**: Secure authentication by using Airtable's OAuth flow.
 
-To use **Airtable OAuth** for authentication, an Airtable admin must register an OAuth integration in the [Airtable Builder Hub](https://airtable.com/create/oauth). The admin should create a dedicated service account in Airtable to register and authorize the integration, so the connection isn't tied to an individual user. You can also use a regular Airtable admin account.
+Before you configure authentication, an Airtable admin must register an OAuth integration in the Airtable Builder Hub and allowlist it for the enterprise. For detailed steps, see [Register an OAuth integration](airtable-admin-setup.md#register-an-oauth-integration) and [Allowlist the OAuth integration](airtable-admin-setup.md#allowlist-the-oauth-integration).
 
-Use the information in the following table to complete the OAuth integration registration form.
+To configure OAuth authentication:
 
-| Field | Description | Recommended value |
-|---|---|---|
-| Name | Display name for the OAuth integration. | `Microsoft 365 Copilot Connector` |
-| OAuth redirect URLs | Required callback URL that the authorization server redirects to. | `https://gcs.office.com/v1.0/admin/oauth/callback` |
-| Scopes | Read scopes that define what the connector can access. | Enable the following scopes: `data.records:read`, `schema.bases:read`, `user.email:read`, `workspacesAndBases:read`, `enterprise.groups:read`, `enterprise.user:read`, `enterprise.account:read`, `enterprise.auditLogs:read`, `enterprise.changeEvents:read`. |
-
-After you save the integration, generate a client secret and copy both the **Client ID** and **Client Secret**. Store them securely; Airtable doesn't display the secret again.
-
-> [!IMPORTANT]
-> Airtable Enterprise accounts block third-party OAuth integrations by default. In the Airtable Admin Hub, under **Settings** > **Integrations & development** > **Third party integration allowlist**, choose **Allow integration** and enter the **Client ID** of the integration you registered. Without allowlisting, users can't authorize the connector during the OAuth flow.
-
-Paste the **Client ID** and **Client Secret** into the corresponding fields on the connector setup page. Choose **Authorize** and complete the OAuth flow with an Airtable account that has access to the bases you want to index.
+1. Paste the **Client ID** and **Client Secret** (provided by the Airtable admin) into the corresponding fields on the connector setup page.
+1. Choose **Authorize** and complete the OAuth flow with an Airtable account that has access to the bases you want to index.
 
 > [!NOTE]
 > You authorize access to the Airtable integration in a popup window. Make sure that your browser permits popup windows, or grants access if the popup is blocked.
 
 ### Rollout
 
-To roll out to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
+To roll out to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
-Select the **Notice** checkbox to acknowledge the data indexing terms, and then choose **Create** to deploy the connection. The Airtable Copilot connector starts indexing content right away.
+Select the **Notice** checkbox to acknowledge the data indexing terms, and then choose **Create** to deploy the connection. The Airtable connector starts indexing content right away.
 
 The following table lists the default values that are set.
 
@@ -167,10 +170,11 @@ You can configure the frequency of full and incremental crawls:
 - **Full crawl**: Schedule every 24 hours to ensure complete data refresh.
 - **Incremental crawl**: Schedule every 15 minutes to capture recent changes.
 
-For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
 
 ## Related content
 
 - [Airtable connector overview](airtable-overview.md)
+- [Set up the Airtable service for connector ingestion](airtable-admin-setup.md)
 - [Troubleshoot issues with the Airtable connector](airtable-troubleshooting.md)
 - [Set up Copilot connectors in the admin center](/microsoft-365/copilot/connectors/deployment-overview)
