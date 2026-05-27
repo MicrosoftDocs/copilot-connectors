@@ -55,6 +55,8 @@ In **Airtable URL**, enter the base URL for the Airtable API. The typical value 
 
 In **Enterprise ID**, enter your Airtable Enterprise ID. The connector uses this ID to scope crawling and identity mapping to your enterprise account.
 
+The Enterprise ID has the format `entXXXXXXXXXXXXXX` (for example, `entABC123def456GH`). To find it, sign in to the [Airtable Admin Hub](https://airtable.com/admin) and copy the value from the URL: `https://airtable.com/admin/{enterpriseId}/...`.
+
 ### Choose authentication type
 
 The Airtable connector supports the following authentication type:
