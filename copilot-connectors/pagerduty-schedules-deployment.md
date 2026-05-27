@@ -80,7 +80,7 @@ The PagerDuty Schedules connector uses OAuth 2.0 for authentication. To authenti
 > [!NOTE]
 > If you haven't completed the OAuth app setup in PagerDuty, see [Set up the PagerDuty service for connector ingestion](pagerduty-schedules-admin-setup.md) for detailed instructions.
 
-### Roll out to a limited audience
+### Roll out
 
 Deploy the connection to a limited set of users to validate it in Copilot and other search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
@@ -167,7 +167,7 @@ The PagerDuty Schedules connector indexes the following properties from PagerDut
 > [!TIP]
 > Consider making the **Description**, **Name**, and **Summary** properties searchable to improve the relevance of Copilot responses when users query for schedule information.
 
-### Customize sync settings
+### Customize sync intervals
 
 The PagerDuty Schedules connector supports only full crawl. Incremental crawl isn't available for this connector.
 
