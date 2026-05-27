@@ -39,7 +39,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 - You must be a Microsoft 365 admin.
 - Your Airtable account must be on an Airtable Enterprise plan.
-- An Airtable admin must have completed the setup steps in [Set up the Airtable service for connector ingestion](airtable-admin-setup.md).
+- An Airtable admin must complete the setup steps in [Set up the Airtable service for connector ingestion](airtable-admin-setup.md).
 - You must have the Airtable Enterprise ID, OAuth Client ID, and OAuth Client Secret from the Airtable admin.
 
 ## Deploy the connector

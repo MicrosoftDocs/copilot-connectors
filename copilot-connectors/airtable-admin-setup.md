@@ -42,7 +42,7 @@ The following sections describe the admin tasks to configure the Airtable enviro
 
 ### Verify Airtable Enterprise plan
 
-Your Airtable account must be on an [Airtable Enterprise](https://airtable.com/pricing) plan. The Enterprise plan is required to register and allowlist OAuth integrations.
+Your Airtable account must be on an [Airtable Enterprise](https://airtable.com/pricing) plan. You need the Enterprise plan to register and allowlist OAuth integrations.
 
 If your organization doesn't currently have an Enterprise plan, contact Airtable to upgrade your account.
 
@@ -57,7 +57,7 @@ To find your Enterprise ID:
 1. Sign in to the [Airtable Admin Hub](https://airtable.com/admin).
 1. Copy the Enterprise ID from the URL: `https://airtable.com/admin/{enterpriseId}/...`.
 
-You need to provide this Enterprise ID when you deploy the connector in the Microsoft 365 admin center.
+Provide this Enterprise ID when you deploy the connector in the Microsoft 365 admin center.
 
 ## Set up connector prerequisites
 
@@ -83,7 +83,7 @@ To register the OAuth integration:
    | Scopes | Read scopes that define what the connector can access. | Enable the following scopes: `data.records:read`, `schema.bases:read`, `user.email:read`, `workspacesAndBases:read`, `enterprise.groups:read`, `enterprise.user:read`, `enterprise.account:read`, `enterprise.auditLogs:read`, `enterprise.changeEvents:read`. |
 
    > [!IMPORTANT]
-   > Enable only the read scopes listed in the table. Do not enable write or manage scopes.
+   > Enable only the read scopes listed in the table. Don't enable write or manage scopes.
 
 1. Choose **Save** to create the integration.
 1. Generate a **Client Secret** and copy both the **Client ID** and **Client Secret**. Store them securely; Airtable doesn't display the secret again.
@@ -100,7 +100,7 @@ To allowlist the OAuth integration:
 1. Go to **Settings** > **Integrations & development** > **Third party integration allowlist**.
 1. Choose **Allow integration**.
 1. Enter the **Client ID** of the integration you registered.
-1. Choose **Save**.
+1. Select **Save**.
 
 Without allowlisting, users can't authorize the connector during the OAuth flow.
 

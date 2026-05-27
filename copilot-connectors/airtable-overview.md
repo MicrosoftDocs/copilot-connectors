@@ -38,10 +38,10 @@ Developers can use this connector as a knowledge source in declarative agents th
 
 The following examples show prompts that users can use to retrieve information from Airtable:
 
-- "Show me all active projects in Airtable"
+- "Show me all active projects in Airtable."
 - "What are the high-priority tasks assigned to me in Airtable?"
-- "Find Airtable records created in the last week"
-- "Summarize the status of all marketing campaigns in Airtable"
+- "Find Airtable records created in the last week."
+- "Summarize the status of all marketing campaigns in Airtable."
 - "What are the key deliverables for Q2 in our Airtable project tracker?"
 
 ## Airtable connector capabilities and limitations
