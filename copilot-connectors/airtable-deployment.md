@@ -70,7 +70,7 @@ Use the information in the following table to complete the OAuth integration reg
 | Field | Description | Recommended value |
 |---|---|---|
 | Name | Display name for the OAuth integration. | `Microsoft 365 Copilot Connector` |
-| OAuth redirect URLs | Required callback URLs that the authorization server redirects to. | For **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`</br></br>For **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback` |
+| OAuth redirect URLs | Required callback URL that the authorization server redirects to. | `https://gcs.office.com/v1.0/admin/oauth/callback` |
 | Scopes | Read scopes that define what the connector can access. | Enable the following scopes: `data.records:read`, `schema.bases:read`, `user.email:read`, `workspacesAndBases:read`, `enterprise.groups:read`, `enterprise.user:read`, `enterprise.account:read`, `enterprise.auditLogs:read`, `enterprise.changeEvents:read`. |
 
 After you save the integration, generate a client secret and copy both the **Client ID** and **Client Secret**. Store them securely; Airtable doesn't display the secret again.
