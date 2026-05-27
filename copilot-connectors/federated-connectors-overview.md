@@ -7,7 +7,7 @@ ms.author: lauragra
 manager: calvind
 ms.reviewer: mansipakhale
 ms.service: copilot-connectors
-ms.date: 04/28/2026
+ms.date: 05/26/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ms.audience: Admin
@@ -16,6 +16,8 @@ ms.audience: Admin
 # Federated connectors overview
  
 Microsoft 365 Copilot supports federated Copilot connectors to enable organizations to connect their data to Copilot by using Model Context Protocol (MCP). Federated connectors use MCP to access data in real time, so Copilot can retrieve up-to-date information directly from external systems. This approach makes it easy to integrate live, dynamic data sources while keeping the data in its original location.
+
+Federated connectors can be Microsoft-published or submitted by partners to Microsoft for approval and publication in the Connectors Gallery.
 
 By using federated connectors, organizations can extend Copilot to work seamlessly with their existing tools and data to unlock more relevant and timely insights across their workflows.
  
@@ -27,7 +29,7 @@ Federated Copilot connectors:
 - Access data using the user's identity and permissions.
 - Don't index external data into Microsoft 365.
 - Are managed and governed by admins in the Microsoft 365 admin center.
-- Are Microsoft-published (for popular external apps).
+- Can be Microsoft-published or partner-submitted and Microsoft-approved.
 - Are read-only and can be audited in Microsoft Purview.
  
 ## Supported Copilot experiences
@@ -38,9 +40,11 @@ Microsoft 365 Copilot currently supports federated Copilot connectors in the fol
 - Copilot in Excel
 - Researcher agent
  
-## Microsoft-published federated connectors
+## Federated connectors in the Connectors Gallery
  
-Microsoft provides a set of federated connectors by default. Currently, federated connectors are available for the following data sources:
+Microsoft provides a set of federated connectors in the Connectors Gallery. These connectors can be Microsoft-published or submitted by partners and approved by Microsoft.
+
+Currently, Microsoft-published federated connectors are available for the following data sources:
  
 - Canva
 - Google Calendar
@@ -52,6 +56,8 @@ Microsoft provides a set of federated connectors by default. Currently, federate
 - Moody's
 - Notion
  
+Partners who want to make a federated connector available in the gallery can submit their remote MCP server to Microsoft for review. For more information, see [Submit a federated connector](submit-federated-connector.md).
+
 The following image shows federated connectors in the **Your connections** list in the Microsoft 365 admin center.
  
 :::image type="content" source="media/federated-connectors/your-connections-tab.png" alt-text="Screenshot of the Your connections tab in the admin center with federated connectors appearing in the list." lightbox="media/federated-connectors/your-connections-tab.png":::
@@ -61,11 +67,11 @@ The following image shows federated connectors in the **Your connections** list 
 
 ## Admin experience and controls
  
-Federated connectors are enabled by default for a tenant. Admins can manage federated Copilot connectors in the Microsoft 365 admin center by choosing **Copilot connectors** > **Your connections**.
+Microsoft-published federated connectors are enabled by default for a tenant unless admins disable them. Admins must approve partner federated connectors before enabling them for the organization. Admins can manage federated Copilot connectors in the Microsoft 365 admin center by choosing **Copilot** > **Connectors** > **Your Connections**.
  
 Admins can:
  
-- View all the Microsoft-published federated connectors that are available in the tenant on the **Your Connections** tab.
+- View federated connectors that are available in the tenant on the **Your Connections** tab, including Microsoft-published connectors and partner connectors that Microsoft approved and the admin enabled.
 - Enable or disable connectors at the tenant level.
 - Limit availability to specific Microsoft Entra ID groups by choosing **Add staging** in the **Staged Rollout** column.
 - Bulk disable all federated connectors by using PowerShell cmdlets, and selectively enable specific federated connectors in the Microsoft 365 admin center based on organizational policies and readiness. For more information, see [Manage federated connectors](manage-federated-connectors.md).

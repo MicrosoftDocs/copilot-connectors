@@ -155,3 +155,4 @@ From the **Your Connections** list, you can take the following actions.
 - [Model Context Protocol (MCP) overview](https://modelcontextprotocol.io/)
 - [Federated connectors overview](federated-connectors-overview.md)
 - [Manage federated connectors](manage-federated-connectors.md)
+- [Submit a federated connector](submit-federated-connector.md)
