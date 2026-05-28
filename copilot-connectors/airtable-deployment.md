@@ -170,7 +170,7 @@ You can configure the frequency of full and incremental crawls:
 - **Full crawl**: Schedule every 24 hours to ensure complete data refresh.
 - **Incremental crawl**: Schedule every 15 minutes to capture recent changes.
 
-For more information, see [Guidelines for sync settings](deployment-overview.md#guidelines-for-sync-settings).
+For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 
