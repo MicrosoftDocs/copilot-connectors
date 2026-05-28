@@ -105,7 +105,7 @@ The Asana connector supports the following user access permissions:
 
 If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it. 
 
-In Asana, security permissions are defined via project permission schemes that contain site-level groups and project roles. Task-level security can also be defined via task-level permission schemes.
+In Asana, security permissions are defined via project permission schemes that contain site-level groups and project roles. You can also define task-level security through task-level permission schemes.
 
 #### Map identities
 
