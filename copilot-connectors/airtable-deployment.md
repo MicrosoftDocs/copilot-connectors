@@ -86,7 +86,7 @@ To configure OAuth authentication:
 > [!NOTE]
 > You authorize access to the Airtable integration in a popup window. Make sure that your browser permits popup windows, or grants access if the popup is blocked.
 
-### Rollout
+### Roll out
 
 To roll out to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
