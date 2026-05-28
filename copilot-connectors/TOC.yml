@@ -73,6 +73,8 @@ items:
       items:
       - name: Overview
         href: airtable-overview.md
+      - name: Set up the Airtable service
+        href: airtable-admin-setup.md
       - name: Deployment guide
         href: airtable-deployment.md
       - name: Troubleshooting
