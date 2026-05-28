@@ -152,16 +152,16 @@ The following table lists the properties that the connector indexes by default.
 
 | Default property | Label | Description |
 |---|---|---|
-| BaseId | `NA` | ID of the base that contains the record. |
-| BaseName | `NA` | Name of the base that contains the record. |
-| Content | `Content` | Concatenated content of the record's fields, used for full-text search. |
-| CreatedDateTime | `createdDateTime` | Date and time that the record was created. |
-| IconUrl | `IconUrl` | URL of the icon shown for the record in Copilot and search results. |
-| RecordId | `NA` | ID of the record. |
-| RecordUrl | `url` | Deep link to the record in Airtable. |
-| TableId | `NA` | ID of the table that contains the record. |
-| TableName | `NA` | Name of the table that contains the record. |
-| Title | `Title` | Primary field of the record, used as the result title. |
+| baseId | `NA` | ID of the base that contains the record. |
+| baseName | `NA` | Name of the base that contains the record. |
+| content | `Content` | Concatenated content of the record's fields, used for full-text search. |
+| createdDateTime | `createdDateTime` | Date and time that the record was created. |
+| iconUrl | `IconUrl` | URL of the icon shown for the record in Copilot and search results. |
+| recordId | `NA` | ID of the record. |
+| recordUrl | `url` | Deep link to the record in Airtable. |
+| tableId | `NA` | ID of the table that contains the record. |
+| tableName | `NA` | Name of the table that contains the record. |
+| title | `Title` | Primary field of the record, used as the result title. |
 
 ### Customize sync intervals
 
