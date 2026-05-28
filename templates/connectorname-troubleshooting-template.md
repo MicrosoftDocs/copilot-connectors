@@ -17,7 +17,7 @@ description: "Find troubleshooting information for the {connector name} Microsof
 
 {Provide an introduction that describes the connector and the capabilities that it enables for users in the organization.}
 
-The article provides troubleshooting information for common errors that you might encounter when you deploy the {connector name} connector.
+This article provides troubleshooting information for common errors that you might encounter when you deploy the {connector name} connector.
 
 {If applicable, include a link to the Set up topic, using the following construction:
 
@@ -25,7 +25,7 @@ To verify {service name} configuration information to help troubleshoot errors, 
 
 ## {Connector name} connector troubleshooting
 
-{Provide common errors and troubleshooting steps. If the content is brief, organize into a table. If the content is more extensive, use separate H2 headings for each error followed by text that explains the troubleshooting steps.}
+{Provide common errors and troubleshooting steps. If the content is brief, organize it into a table. If the content is more extensive, use separate H2 headings for each error followed by text that explains the troubleshooting steps.}
 
 ## Related content
 

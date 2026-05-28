@@ -19,7 +19,7 @@ description: "Learn about the capabilities, limitations, and use cases for the {
 
 ## Why use the {connector name} connector to index your data?
 
-{Provide a description of the scenarios and use cases for the connector, targeting business decision makers who will help decide whether to deploy the connector. This might include a list of common use cases for the connector.}
+{Provide a description of the scenarios and use cases for the connector, targeting business decision makers who help decide whether to deploy the connector. This description might include a list of common use cases for the connector.}
 
 ## Build agents with the {connector name} connector
 
@@ -55,7 +55,7 @@ The {connector name} connector includes the following custom data filters for Co
 
 ## Permissions model and access control
 
-{Provide information about how permissions to data types in Copilot and search results can be set by the admin.}
+{Provide information about how admins can set permissions to data types in Copilot and search results.}
 
 ## Next step
 

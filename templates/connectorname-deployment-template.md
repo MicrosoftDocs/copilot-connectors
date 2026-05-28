@@ -52,7 +52,7 @@ To add the {connector name} connector for your organization:
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
+The display name identifies references in Copilot responses so users can recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
 
 You can accept the default **{connector name}** display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -64,15 +64,15 @@ For more information about connector display names and descriptions, see [Enhanc
 
 ### Choose authentication type
 
-{Provide details about the authentication types that are available for the connector. Included a bulleted list with the authentication options, and call out which option is recommended.}
+{Provide details about the authentication types that are available for the connector. Include a bulleted list with the authentication options, and call out which option is recommended.}
 
 ### Roll out
 
 {Optional introduction to provide information about a staged rollout to a limited set of users before the full rollout.}
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
+To roll out to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
-Choose **Create** to deploy the connection. The {connector name} connector starts indexing content right away.
+Select **Create** to deploy the connection. The {connector name} connector starts indexing content right away.
 
 {Provide information about default values for the connector as applicable. The categories for the values are Users, Content, and Sync. Include the default values in a table as shown, or if necessary add subsections for each category to provide details.
 
@@ -85,13 +85,13 @@ The following table lists the default values that are set.
 | Sync     |               |
 }
 
-To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
+To customize these values, select **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 
 After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
 ## Customize settings (optional)
 
-You can customize the default values for the {connector name} connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**.
+You can customize the default values for the {connector name} connector settings. To customize settings, on the connector page in the admin center, select **Custom setup**.
 
 ### Customize user settings
 
