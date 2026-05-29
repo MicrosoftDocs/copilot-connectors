@@ -118,7 +118,7 @@ You can customize the default values for the {connector name} connector settings
 
 ### Customize sync intervals
 
-{Describe the sync intervals that can be customized. These are typically Full crawl and Incremental crawl. Provide the default values that are set.}
+{Describe the sync intervals that can be customized. These intervals typically include Full crawl and Incremental crawl. Provide the default values that are set.}
 
 For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 
