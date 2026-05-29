@@ -12,15 +12,13 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the PagerDuty Schedules Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-# Deploy the PagerDuty Schedules connector (preview)
+# Deploy the PagerDuty Schedules connector
 
 The PagerDuty Schedules Microsoft 365 Copilot connector integrates PagerDuty schedule data into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface schedule information directly within apps like Teams, Outlook, and SharePoint.
 
 This article describes the steps to deploy, customize, and manage the PagerDuty Schedules Copilot connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview).
 
 For advanced PagerDuty service configuration, see [Set up the PagerDuty service for connector ingestion](pagerduty-schedules-admin-setup.md).
-
-[!INCLUDE [conector-preview-access](includes/connector-preview-access.md)]
 
 ## Prerequisites
 
