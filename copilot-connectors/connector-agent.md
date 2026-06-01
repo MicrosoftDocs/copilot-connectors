@@ -73,6 +73,9 @@ If your organization's proxy servers or firewalls block communication to unknown
 >[!NOTE]
 >Proxy authentication isn't supported. If your environment has a proxy that requires authentication, we recommend that you allow the connector agent to bypass the proxy.
 
+>[!NOTE]
+>In case of interactive Entra ID sign-in dependencies, go over [link](https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide) to whitelist sign in urls
+
 If your organization uses an outbound proxy, the agent's crawl requests to your data source also route through that proxy by default, which can cause crawl failures. Configure proxy bypass for your data source hostnames by using whichever method matches your proxy setup:
 
 - `NO_PROXY` system environment variable
