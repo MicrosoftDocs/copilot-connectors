@@ -14,7 +14,7 @@ description: "Learn about the capabilities, limitations, and use cases for the G
 
 # GitHub Cloud Knowledge connector overview
 
-The GitHub Cloud Knowledge Microsoft 365 Copilot connector integrates GitHub repository documentation—including README files, markdown guides, and plain-text technical notes—into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant project knowledge directly within apps like Teams, Outlook, and SharePoint.
+The GitHub Cloud Knowledge Microsoft 365 Copilot connector integrates GitHub repository documentation—including README files, markdown guides, and plain-text technical notes—into Microsoft 365. By using this connector, Copilot, Copilot Search, and Microsoft Search can surface relevant project knowledge directly within apps like Teams, Outlook, and SharePoint.
 
 When you configure the GitHub Cloud Knowledge connector for your organization and index data from your GitHub.com repositories, users can search GitHub documentation in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. The connector helps reduce time spent context-switching between GitHub and Microsoft 365 apps, accelerates onboarding for new engineers, and makes institutional engineering knowledge easier to discover.
 
