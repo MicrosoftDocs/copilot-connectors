@@ -15,9 +15,9 @@ description: "Learn about the capabilities, limitations, and use cases for the G
 
 # GitHub Cloud Pull Requests connector overview
 
-The GitHub Cloud Pull Requests Microsoft 365 Copilot connector integrates pull request data from GitHub.com into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant pull requests directly within apps like Teams, Outlook, and SharePoint.
+The GitHub Cloud Pull Requests Microsoft 365 Copilot connector integrates pull request data from GitHub.com into Microsoft 365. This integration enables Copilot, Copilot Search, and Microsoft Search to surface relevant pull requests directly within apps like Teams, Outlook, and SharePoint.
 
-When you configure the GitHub Cloud Pull Requests connector for your organization and index data from your GitHub.com repositories, users can search, summarize, and reason over pull requests in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. This indexing gives engineering teams faster access to work-in-progress changes, code review insights, and release readiness signals—without switching applications.
+When you configure the GitHub Cloud Pull Requests connector for your organization and index data from your GitHub.com repositories, users can search, summarize, and reason over pull requests in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. This indexing gives engineering teams faster access to work-in-progress changes, code review insights, and release readiness signals - without switching applications.
 
 ## Why use the GitHub Cloud Pull Requests connector to index your data?
 
@@ -108,9 +108,9 @@ The following examples show prompts that agent builders can use to help users re
 
 ## GitHub Cloud Pull Requests connector capabilities and limitations
 
-The GitHub Cloud Pull Requests connector has the following key capabilities:
+The GitHub Cloud Pull Requests connector offers the following key capabilities:
 
-- **Indexes pull request metadata** – Crawls PR titles, descriptions, labels, state (open/closed/merged), authors, reviewers, assignees, milestones, due dates, and timestamps from your configured GitHub.com organizations and repositories.
+- **Indexes pull request metadata** – Crawls PR titles, descriptions, labels, state (open, closed, or merged), authors, reviewers, assignees, milestones, due dates, and timestamps from your configured GitHub.com organizations and repositories.
 - **Integrates with Copilot** – Enables Copilot, Copilot Search, and Microsoft Search to find and use PR data. Users can ask natural-language questions and get grounded answers with citations back to the PR in GitHub.
 - **Maintains GitHub access control** – The connector honors GitHub repository visibility and team permissions, so users only see PRs from repositories they have access to in GitHub.
 - **Configurable content scope and crawl behavior** – Admins choose which organizations and repositories to include, and can customize crawl frequency, identity mapping, and indexing preferences.
@@ -122,7 +122,7 @@ The GitHub Cloud Pull Requests connector has the following limitations:
 - **No code diffs or commit details** – Code diffs, file changes, inline review comments, and commit-level details aren't indexed.
 - **No CI/CD pipeline indexing** – CI/CD pipelines aren't indexed beyond status information that might appear on PRs.
 - **Optimized for GitHub Enterprise** – Free or Team plans might have limited functionality.
-- **SSO not supported during configuration** – Single sign-on (SSO) isn't supported during connector configuration; the admin must complete OAuth using a non-SSO sign-in.
+- **SSO not supported during configuration** – Single sign-on (SSO) isn't supported during connector configuration; the admin must complete OAuth by using a non-SSO sign-in.
 - **30-MB content size limit** – Only content up to 30 MB in size is supported. In most cases, PR content is well under this limit.
 - **All-public-repository organizations not supported** – For security reasons, the connector doesn't support indexing organizations where all repositories are public. To unblock this scenario, contact Microsoft support.
 
@@ -135,20 +135,20 @@ The following table describes the data types that the connector indexes and how 
 | **Pull request metadata** | Title, body/description, labels, state (open/closed/merged), author, reviewers, assignees, milestones, due dates, and timestamps. |
 | **Repository metadata** | Repository name, organization, item path, and contextual fields used for ranking and filtering PRs. |
 
-The following data types **aren't** indexed: code diffs, file changes, inline comments, commit details, CI/CD pipelines, or linked artifacts beyond PR metadata.
+The connector doesn't index the following data types: code diffs, file changes, inline comments, commit details, CI/CD pipelines, or linked artifacts beyond PR metadata.
 
 ## Permissions model and access control
 
 The connector enforces GitHub's permission model so that users only see pull request information they're authorized to view.
 
-- **Repository and team permissions** – Private repository PRs appear only for users with explicit repository access. Organization-level and team-based access restrictions are honored. Content that can't be mapped to a valid identity is hidden to prevent exposure.
+- **Repository and team permissions** – Private repository PRs appear only for users with explicit repository access. The connector honors organization-level and team-based access restrictions. It hides content that can't be mapped to a valid identity to prevent exposure.
 
 - **User identity mapping** – The connector maps GitHub user accounts to Microsoft Entra ID identities to enforce permissions. If GitHub user emails match their Microsoft Entra ID UPNs, the mapping is automatic. If they differ, admins can configure a mapping rule using email, sign-in (login), or name. Optional regex rules can transform identity attributes for consistent matching, and a manual fallback mapping is available when automatic mapping fails.
 
 - **Bring Your Own Key (BYOK) vs. Enterprise Managed Users (EMU)** – For enterprises that use BYOK rather than EMU, each user must enable the permission to share the required identity field in their GitHub account settings so the connector can map them to Microsoft Entra ID.
 
 > [!IMPORTANT]
-> When you authenticate using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account—the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
+> When you authenticate by using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account**.** The account must have access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
 
 ## Next step
 

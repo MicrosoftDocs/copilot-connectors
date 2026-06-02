@@ -21,7 +21,7 @@ When you configure the GitHub Server Issues connector for your organization and 
 
 ## Why use the GitHub Server Issues connector to index your data?
 
-For many engineering teams, GitHub Issues is the primary system of record for feature requests, bugs, and operational work items. However, this information is often siloed in GitHub Enterprise Server, which makes it harder for PMs, engineers, support, and stakeholders to understand what's happening without switching between tools. The GitHub Server Issues Copilot connector indexes issues from GitHub Enterprise Server so that developers, PMs, support staff, and engineering leaders can discover and summarize relevant issues within Microsoft 365. Users can ask natural-language questions—such as "What are the open bugs for the checkout service?"—and receive grounded, contextual responses with links back to the original issues in GitHub.
+For many engineering teams, GitHub Issues is the primary system of record for feature requests, bugs, and operational work items. However, this information is often siloed in GitHub Enterprise Server, which makes it harder for PMs, engineers, support, and stakeholders to understand what's happening without switching between tools. The GitHub Server Issues Copilot connector indexes issues from GitHub Enterprise Server so that developers, PMs, support staff, and engineering leaders can discover and summarize relevant issues within Microsoft 365. Users can ask natural-language questions - such as "What are the open bugs for the checkout service?" - and receive grounded, contextual responses with links back to the original issues in GitHub.
 
 The GitHub Server Issues connector provides the following benefits:
 
@@ -107,16 +107,16 @@ The following examples show prompts that agent builders can use to help users re
 
 ## GitHub Server Issues connector capabilities and limitations
 
-The GitHub Server Issues connector has the following key capabilities:
+The GitHub Server Issues connector offers the following key capabilities:
 
-- **Indexes GitHub issues** – Crawls issue title, body/description, labels, state (open/closed), assignees, milestones, due dates, and comments from your configured GitHub Enterprise Server organizations and repositories.
+- **Indexes GitHub issues** – Crawls issue title, body or description, labels, state (open or closed), assignees, milestones, due dates, and comments from your configured GitHub Enterprise Server organizations and repositories.
 - **Integrates with Copilot** – Enables Copilot, Copilot Search, and Microsoft Search to retrieve and summarize issue data. Users can ask questions in natural language and get grounded answers with citations back to the issue in GitHub.
 - **Maintains GitHub access control** – The connector honors GitHub's repository visibility and team permissions, so users only see issues from repositories they have access to in GitHub.
 - **Configurable content scope and crawl behavior** – Admins choose which organizations and repositories to include, and can customize crawl frequency and indexing preferences.
 
 The GitHub Server Issues connector has the following limitations:
 
-- **GitHub Enterprise Server only** – This connector is for GitHub Enterprise Server (on-premises/self-hosted) instances. For GitHub.com, use the [GitHub Cloud Issues connector](github-cloud-issues-overview.md).
+- **GitHub Enterprise Server only** – This connector is for GitHub Enterprise Server (on-premises or self-hosted) instances. For GitHub.com, use the [GitHub Cloud Issues connector](github-cloud-issues-overview.md).
 - **No CI/CD pipeline indexing** – GitHub Actions and CI/CD pipelines aren't indexed beyond any basic status information that might appear in issue fields.
 - **Optimized for GitHub Enterprise** – Organizations on GitHub Free or Team plans might experience limited functionality.
 - **All-public-repository organizations not supported** – For security reasons, the connector doesn't support indexing organizations where all repositories are public. To unblock this scenario, contact Microsoft support.
@@ -127,7 +127,7 @@ The following table describes the data types that the connector indexes and how 
 
 | GitHub entity | Indexed and surfaced in Copilot and search |
 | --- | --- |
-| **Issues** | Core issue fields such as title, body/description, labels, state (open/closed), assignees, milestones, and due dates. These fields appear in search results and as referenced items in Copilot responses. |
+| **Issues** | Core issue fields such as title, body or description, labels, state (open or closed), assignees, milestones, and due dates. These fields appear in search results and as referenced items in Copilot responses. |
 | **Issue comments** | Comment text on issues, used by Copilot to answer questions grounded in issue discussions. |
 | **Issue metadata** | Properties such as repository name, organization, item path, organization URL, creation and update timestamps, and issue number, used to improve ranking, filtering, and summarization. |
 
@@ -140,7 +140,7 @@ You can configure the GitHub Server Issues connector so that only users who have
 - **User identity mapping** – The connector maps GitHub user accounts to Microsoft Entra ID identities to accurately evaluate permissions. If GitHub user emails match their Microsoft Entra ID UPNs, the connector automatically maps them. If they differ, admins can configure identity mapping rules using email, sign-in (login), or name. Optional regex rules can transform identity attributes for consistent matching.
 
 > [!IMPORTANT]
-> When you authenticate using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account—the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
+> When you authenticate by using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account - the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
 
 ## Next step
 

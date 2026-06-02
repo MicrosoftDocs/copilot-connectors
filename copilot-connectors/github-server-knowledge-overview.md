@@ -129,10 +129,10 @@ You can control permissions in the following ways:
 
 - **User identity mapping** – The connector maps GitHub user accounts to Microsoft Entra ID identities. If GitHub user emails match their Microsoft Entra ID UPNs, the mapping is automatic. If they differ, admins can provide a mapping rule using email, sign-in (login), or name. If direct mapping fails, you can use regular expressions (regex) to transform identity data. For personal accounts, email domain variations and visibility settings can affect mapping accuracy.
 
-- **Visible to everyone option** – You can choose not to enforce per-user permissions (setting the connector to index content as **Visible to everyone**). In that case, all indexed GitHub documentation is searchable by any user in the tenant. For most scenarios, we recommend the restricted mode so that results mirror GitHub permissions.
+- **Visible to everyone option** – You can choose not to enforce per-user permissions (setting the connector to index content as **Visible to everyone**). In that case, all indexed GitHub documentation is searchable by any user in the tenant. For most scenarios, use the restricted mode so that results mirror GitHub permissions.
 
 > [!IMPORTANT]
-> When you authenticate using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account—the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
+> When you authenticate by using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account - the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
 
 ## Next step
 
