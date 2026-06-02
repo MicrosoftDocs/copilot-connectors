@@ -132,7 +132,7 @@ The following table describes the data types that the connector indexes and how 
 
 | GitHub entity | Indexed and surfaced in Copilot and search |
 | --- | --- |
-| **Pull request metadata** | Title, body/description, labels, state (open/closed/merged), author, reviewers, assignees, milestones, due dates, and timestamps. |
+| **Pull request metadata** | Title, body or description, labels, state (open, closed, or merged), author, reviewers, assignees, milestones, due dates, and timestamps. |
 | **Repository metadata** | Repository name, organization, item path, and contextual fields used for ranking and filtering PRs. |
 
 The following data types **aren't** indexed: code diffs, file changes, inline comments, commit details, CI/CD pipelines, or linked artifacts beyond PR metadata.
