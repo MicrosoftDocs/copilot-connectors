@@ -28,10 +28,17 @@ For information about how to deploy the connector, see [Deploy the Airtable conn
 
 The following checklist lists the steps involved in configuring the environment and setting up the connector prerequisites.
 
+### Configure the environment
+
 | Task | Role |
 | ---- | ---- |
 | [Verify Airtable Enterprise plan](#verify-airtable-enterprise-plan) | Airtable admin |
 | [Identify the Airtable Enterprise ID](#identify-the-airtable-enterprise-id) | Airtable admin |
+
+### Set up prerequisites
+
+| Task | Role |
+| ---- | ---- |
 | [Register an OAuth integration](#register-an-oauth-integration) | Airtable admin |
 | [Allowlist the OAuth integration](#allowlist-the-oauth-integration) | Airtable admin |
 | [Configure identity mapping](#configure-identity-mapping) | Airtable admin / Microsoft 365 admin |
@@ -98,11 +105,11 @@ To allowlist the OAuth integration:
 
 1. Sign in to the [Airtable Admin Hub](https://airtable.com/admin).
 1. Go to **Settings** > **Integrations & development** > **Third party integration allowlist**.
-1. Choose **Allow integration**.
+1. Select **Allow integration**.
 1. Enter the **Client ID** of the integration you registered.
 1. Select **Save**.
 
-Without allowlisting, users can't authorize the connector during the OAuth flow.
+Without allowing integration, users can't authorize the connector during the OAuth flow.
 
 ### Configure identity mapping
 
@@ -112,9 +119,9 @@ The default identity mapping method verifies that the email ID of Airtable users
 
 If the email ID of Airtable users is different than the UPN in Microsoft Entra ID, you need to provide a custom mapping formula. For more information, see [Map your non-Azure AD identities](map-non-entra-id.md).
 
-To prepare for identity mapping:
+To prepare for identity mapping, choose to:
 
-- Verify that Airtable user email addresses match Microsoft Entra ID user principal names (UPNs), or
+- Verify that Airtable user email addresses match Microsoft Entra ID user principal names (UPNs)
 - Prepare a custom mapping formula if email addresses differ from UPNs.
 
 You configure identity mapping in the Microsoft 365 admin center when you deploy the connector. For more information, see [Map identities](airtable-deployment.md#map-identities).

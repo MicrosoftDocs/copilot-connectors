@@ -27,12 +27,9 @@ Before you deploy the Airtable connector, make sure that the Airtable environmen
 
 | Task | Role |
 | ---- | ---- |
-| [Verify Airtable Enterprise plan](airtable-admin-setup.md#verify-airtable-enterprise-plan) | Airtable admin |
-| [Identify the Airtable Enterprise ID](airtable-admin-setup.md#identify-the-airtable-enterprise-id) | Airtable admin |
-| [Register an OAuth integration](airtable-admin-setup.md#register-an-oauth-integration) | Airtable admin |
-| [Allowlist the OAuth integration](airtable-admin-setup.md#allowlist-the-oauth-integration) | Airtable admin |
-| [Configure identity mapping](airtable-admin-setup.md#configure-identity-mapping) | Airtable admin / Microsoft 365 admin |
-| [Deploy the connector in the Microsoft 365 admin center](#deploy-the-connector) | Microsoft 365 admin |
+| [Configure the Airtable environment](airtable-admin-setup.md#configure-the-airtable-environment) | Airtable admin |
+| [Set up connector prerequisites](airtable-admin-setup.md#set-up-connector-prerequisites) | Airtable admin |
+| [Deploy the connector](#deploy-the-connector) | Microsoft 365 admin |
 | [Customize connector settings](#customize-settings-optional) (optional) | Microsoft 365 admin |
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
@@ -46,9 +43,9 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 To add the Airtable connector for your organization:
 
-1. In the Microsoft 365 admin center, in the left pane, choose **Copilot** > **Connectors**.
+1. In the Microsoft 365 admin center, in the left pane, select **Copilot** > **Connectors**.
 1. Select the **Gallery** tab.
-1. From the list of available connectors, choose **Airtable**.
+1. From the list of available connectors, select **Airtable**.
 
 ### Set display name
 
@@ -60,13 +57,13 @@ For more information about connector display names and descriptions, see [Enhanc
 
 ### Set Airtable URL
 
-In **Airtable URL**, enter the base URL for the Airtable API. The typical value is:
+In the **Airtable URL** field, enter the base URL for the Airtable API. The typical value is:
 
 `https://api.airtable.com`
 
 ### Set Enterprise ID
 
-In **Enterprise ID**, enter your Airtable Enterprise ID. The connector uses this ID to scope crawling and identity mapping to your enterprise account.
+In the **Enterprise ID** field, enter your Airtable Enterprise ID. The connector uses this ID to scope crawling and identity mapping to your enterprise account.
 
 The Enterprise ID has the format `entXXXXXXXXXXXXXX` (for example, `entABC123def456GH`). For information about how to find your Enterprise ID, see [Identify the Airtable Enterprise ID](airtable-admin-setup.md#identify-the-airtable-enterprise-id).
 
@@ -76,7 +73,7 @@ The Airtable connector supports the following authentication type:
 
 - **OAuth 2.0**: Secure authentication by using Airtable's OAuth flow.
 
-Before you configure authentication, an Airtable admin must register an OAuth integration in the Airtable Builder Hub and allowlist it for the enterprise. For detailed steps, see [Register an OAuth integration](airtable-admin-setup.md#register-an-oauth-integration) and [Allowlist the OAuth integration](airtable-admin-setup.md#allowlist-the-oauth-integration).
+Before you configure authentication, an Airtable admin must register an OAuth integration in the Airtable Builder Hub and add it to the allow list for the enterprise. For detailed steps, see [Register an OAuth integration](airtable-admin-setup.md#register-an-oauth-integration) and [Allowlist the OAuth integration](airtable-admin-setup.md#allowlist-the-oauth-integration).
 
 To configure OAuth authentication:
 
@@ -90,7 +87,7 @@ To configure OAuth authentication:
 
 To roll out to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
-Select the **Notice** checkbox to acknowledge the data indexing terms, and then choose **Create** to deploy the connection. The Airtable connector starts indexing content right away.
+Select the **Notice** checkbox to acknowledge the data indexing terms, and then select **Create** to deploy the connection. The Airtable connector starts indexing content right away.
 
 The following table lists the default values that are set.
 
@@ -177,4 +174,3 @@ For more information, see [Guidelines for crawl settings](deployment-overview.md
 - [Airtable connector overview](airtable-overview.md)
 - [Set up the Airtable service for connector ingestion](airtable-admin-setup.md)
 - [Troubleshoot issues with the Airtable connector](airtable-troubleshooting.md)
-- [Set up Copilot connectors in the admin center](/microsoft-365/copilot/connectors/deployment-overview)
