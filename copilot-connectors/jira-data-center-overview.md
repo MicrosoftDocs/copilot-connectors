@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 12/17/2025
+ms.date: 06/02/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Jira Data Center Microsoft 365 Copilot connector."
 ---
@@ -89,6 +89,49 @@ The connector evaluates permissions using the following hierarchy:
    - Single users
 
 If permissions are defined using unsupported assignment types, the connector blocks access for safety.
+
+## Jira REST APIs used by the connector
+
+The Jira Data Center connector calls the following Jira REST APIs during crawling, permission resolution, and identity synchronization. Endpoints prefixed with `/rest/api/msplugin/jira/1.0/` are provided by the [Microsoft Graph Connectors for Jira Data Center](https://marketplace.atlassian.com/apps/1235599/microsoft-graph-connectors-for-jira-data-center) plugin.
+
+### Content crawl
+
+| HTTP Method | Endpoint | Used For |
+| --- | --- | --- |
+| GET | `/rest/api/2/project` | Retrieve the list of projects |
+| GET | `/rest/api/2/project/{projectId}` | Retrieve project details including project lead |
+| GET | `/rest/api/2/search` | Search issues using JQL (primary crawl API) |
+| GET | `/rest/api/2/field` | Retrieve issue field definitions (built-in and custom) |
+| GET | `/rest/api/2/issue/{issueId}/comment` | Retrieve issue comments (paginated) |
+| GET | `/rest/api/2/issue/{issueId}` | Retrieve issue attachments metadata |
+| GET | `{attachment content URL}` | Download attachment content |
+
+### Permission and access control
+
+| HTTP Method | Endpoint | Used For |
+| --- | --- | --- |
+| GET | `/rest/api/2/mypermissions` | Check Browse Projects permission per project |
+| GET | `/rest/api/msplugin/jira/1.0/issuesecurityschemes/{schemeId}/members` | Retrieve issue security level holders (plugin) |
+| GET | `/rest/api/msplugin/jira/1.0/project/{projectId}/role/{roleId}` | Retrieve project role actors (plugin) |
+| GET | `/rest/api/msplugin/jira/1.0/group/bulk` | Search and retrieve group details (plugin) |
+| GET | `/rest/api/2/group/member` | Retrieve group members by group name or group ID |
+
+### Identity synchronization
+
+| HTTP Method | Endpoint | Used For |
+| --- | --- | --- |
+| GET | `/rest/api/2/user/picker` | Search for users |
+| GET | `/rest/api/2/user` | Retrieve user details by user key |
+
+### Validation and health
+
+| HTTP Method | Endpoint | Used For |
+| --- | --- | --- |
+| GET | `/rest/api/msplugin/jira/1.0/healthcheck/version` | Check plugin health and version (plugin) |
+| GET | `/rest/api/2/applicationrole` | Retrieve application roles |
+
+> [!NOTE]
+> Endpoints prefixed with `/rest/api/msplugin/jira/1.0/` are provided by the Microsoft Jira plugin and aren't part of the standard Jira REST API.
 
 ## Next step
 
