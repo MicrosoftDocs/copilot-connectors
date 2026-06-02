@@ -47,7 +47,7 @@ Make sure that users who access indexed GitHub data have corresponding Microsoft
 ### Sign in to the GitHub account
 
 > [!IMPORTANT]
-> Before you start the GitHub authentication flow, make sure your browser session is signed in to the **correct** GitHub account**.** The account needs access to the organizations and repositories you intend to index. OAuth (the recommended authentication method) authorizes whichever GitHub account is currently active in your browser, so signing in with the wrong account can grant the connector access to the wrong set of repositories.
+> Before you start the GitHub authentication flow, make sure your browser session is signed in to the **correct** GitHub account. The account needs access to the organizations and repositories you intend to index. OAuth (the recommended authentication method) authorizes whichever GitHub account is currently active in your browser, so signing in with the wrong account can grant the connector access to the wrong set of repositories.
 >
 > If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to start the OAuth flow with the intended account.
 

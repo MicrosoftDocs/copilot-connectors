@@ -106,7 +106,7 @@ The GitHub Server Knowledge connector has the following limitations:
 - **Documentation files only** – Only repository metadata, markdown, wiki pages, and blogs are indexed. Issues, pull requests, and comments aren't indexed by this connector; use the corresponding [GitHub Server Issues](github-server-issues-overview.md) or [GitHub Server Pull Requests](github-server-pull-requests-overview.md) connectors for those.
 - **No CI/CD pipeline indexing** – GitHub Actions and other CI/CD pipelines aren't indexed beyond status information.
 - **All-public-repository organizations not supported** – For security reasons, the connector doesn't support indexing organizations where all repositories are public. To unblock this scenario, contact Microsoft support.
-- **Free or Team plans** – Users on GitHub Free or Team plans might experience limited functionality or reduced support.
+- **GitHub.com not supported** – GitHub.com (including Free or Team plans) isn't supported by this connector. For GitHub.com, use the [GitHub Cloud Knowledge connector](github-cloud-knowledge-overview.md).
 
 ## Data types indexed from GitHub Server Knowledge
 

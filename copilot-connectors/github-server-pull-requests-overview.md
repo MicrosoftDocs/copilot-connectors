@@ -59,7 +59,7 @@ The following table lists common use cases for the GitHub Server Pull Requests c
 
 Developers can use this connector as a knowledge source in declarative agents they build with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
-By incorporating GitHub Pull Request data into agents, developers allow users to:
+By incorporating GitHub pull request data into agents, developers allow users to:
 
 - Retrieve and summarize PRs waiting for review.
 - Identify PRs tied to feature work, milestones, or infrastructure changes.
@@ -112,7 +112,7 @@ The following examples show prompts that agent builders can use to help users re
 
 The GitHub Server Pull Requests connector offers the following key capabilities:
 
-- **Indexes pull request metadata** – Crawls PR titles, descriptions, labels, state (open, closed, or merged), authors, reviewers, assignees, milestones, due dates, and timestamps from your configured GitHub Enterprise Server organizations and repositories.
+- **Indexes pull request metadata** – Crawls PR titles, descriptions, labels, timestamps, authors, reviewers, milestones, and repository context from your configured GitHub Enterprise Server organizations and repositories.
 - **Integrates with Copilot** – Enables Copilot, Copilot Search, and Microsoft Search to find and use PR data. Users can ask natural-language questions and get grounded answers with citations back to the PR in GitHub.
 - **Maintains GitHub access control** – The connector honors GitHub repository visibility and team permissions, so users only see PRs from repositories they have access to in GitHub.
 - **Configurable content scope and crawl behavior** – Admins choose which organizations and repositories to include, and can customize crawl frequency, identity mapping, and indexing preferences.
@@ -123,7 +123,7 @@ The GitHub Server Pull Requests connector has the following limitations:
 - **No code diffs or commit details** – Code diffs, file changes, inline review comments, and commit-level details aren't indexed.
 - **No CI/CD pipeline indexing** – CI/CD pipelines aren't indexed beyond basic status metadata that might appear on PRs.
 - **No PR comments or threaded discussions** – Comments, threaded discussions, and linked artifacts beyond PR metadata aren't crawled.
-- **Optimized for GitHub Enterprise** – Free or Team plans might have reduced compatibility.
+- **GitHub.com not supported** – GitHub.com (including Free or Team plans) isn't supported by this connector. For GitHub.com, use the [GitHub Cloud Pull Requests connector](github-cloud-pull-requests-overview.md).
 - **All-public-repository organizations not supported** – For security reasons, the connector doesn't support indexing organizations where all repositories are public. To unblock this scenario, contact Microsoft support.
 
 ## Data types indexed from GitHub Server Pull Requests

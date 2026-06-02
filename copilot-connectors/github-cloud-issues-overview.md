@@ -104,7 +104,7 @@ The following examples show prompts that agent builders can use to help users re
 
 - List issues in milestone elysia-10 and their related PRs, and draft an email to summarize it.
 - Find all PRs related to issue #31 in the elysia repo and draft a document to summarize it.
-- Find issues closed by afc163 and summarize related emails in a doc.
+- Find issues closed by afc163 and draft an email summarizing them.
 
 ## GitHub Cloud Issues connector capabilities and limitations
 

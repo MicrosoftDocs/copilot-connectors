@@ -15,7 +15,7 @@ description: "Learn about the capabilities, limitations, and use cases for the G
 
 # GitHub Server Issues connector overview
 
-The GitHub Server Issues Microsoft 365 Copilot connector integrates GitHub issue data from GitHub Enterprise Server into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant issues directly within apps like Teams, Outlook, and SharePoint.
+The GitHub Server Issues Microsoft 365 Copilot connector integrates GitHub issue data from GitHub Enterprise Server into Microsoft 365. This integration enables Copilot, Copilot Search, and Microsoft Search to surface relevant issues directly within apps like Teams, Outlook, and SharePoint.
 
 When you configure the GitHub Server Issues connector for your organization and index data from your GitHub Enterprise Server repositories, users can search and reason over issues in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. This capability helps development teams track work, triage bugs, and understand project status without leaving their flow of work in Microsoft 365.
 
@@ -118,7 +118,7 @@ The GitHub Server Issues connector has the following limitations:
 
 - **GitHub Enterprise Server only** – This connector is for GitHub Enterprise Server (on-premises or self-hosted) instances. For GitHub.com, use the [GitHub Cloud Issues connector](github-cloud-issues-overview.md).
 - **No CI/CD pipeline indexing** – GitHub Actions and CI/CD pipelines aren't indexed beyond any basic status information that might appear in issue fields.
-- **Optimized for GitHub Enterprise** – Organizations on GitHub Free or Team plans might experience limited functionality.
+- **GitHub.com not supported** – GitHub.com (including Free or Team plans) isn't supported by this connector. For GitHub.com, use the [GitHub Cloud Issues connector](github-cloud-issues-overview.md).
 - **All-public-repository organizations not supported** – For security reasons, the connector doesn't support indexing organizations where all repositories are public. To unblock this scenario, contact Microsoft support.
 
 ## Data types indexed from GitHub Server Issues

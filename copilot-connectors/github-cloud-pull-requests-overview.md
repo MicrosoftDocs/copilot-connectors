@@ -21,7 +21,7 @@ When you configure the GitHub Cloud Pull Requests connector for your organizatio
 
 ## Why use the GitHub Cloud Pull Requests connector to index your data?
 
-Modern software development teams rely on pull requests (PRs) to manage work, collaborate on changes, and assess release readiness. However, PR data is often siloed in GitHub, requiring engineers, PMs, DevOps, SREs, and stakeholders to manually search across repositories to locate relevant PRs. The GitHub Cloud Pull Requests connector indexes PR metadata from your GitHub.com organizations so users can search, filter, and summarize PRs directly from Microsoft 365. With Copilot, users can ask natural-language questions such as "What open PRs are waiting for review in our payments service?" and receive grounded, actionable responses with links back to GitHub.
+Modern software development teams rely on pull requests (PRs) to manage work, collaborate on changes, and assess release readiness. However, PR data is often siloed in GitHub, requiring engineers, PMs, DevOps, SREs, and stakeholders to manually search across repositories to locate relevant PRs. The GitHub Cloud Pull Requests connector indexes PR metadata from your GitHub.com organizations so users can search, filter, and summarize PRs directly from Microsoft 365. Users can ask Copilot natural-language questions such as "What open PRs are waiting for review in our payments service?" and receive grounded, actionable responses with links back to GitHub.
 
 The GitHub Cloud Pull Requests connector provides the following benefits:
 
@@ -57,7 +57,7 @@ The following table lists common use cases for the GitHub Cloud Pull Requests co
 
 Developers can use this connector as a knowledge source in declarative agents they build with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/copilot-studio-agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
-By incorporating GitHub Pull Request data into agents, developers allow users to:
+By incorporating GitHub pull request data into agents, developers allow users to:
 
 - Retrieve and summarize PRs waiting for review.
 - Identify PRs tied to feature work, milestones, or infrastructure changes.
@@ -148,7 +148,7 @@ The connector enforces GitHub's permission model so that users only see pull req
 - **Bring Your Own Key (BYOK) vs. Enterprise Managed Users (EMU)** – For enterprises that use BYOK rather than EMU, each user must enable the permission to share the required identity field in their GitHub account settings so the connector can map them to Microsoft Entra ID.
 
 > [!IMPORTANT]
-> When you authenticate by using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account**.** The account must have access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
+> When you authenticate by using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account. The account must have access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
 
 ## Next step
 

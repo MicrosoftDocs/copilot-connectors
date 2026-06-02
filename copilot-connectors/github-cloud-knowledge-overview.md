@@ -111,7 +111,7 @@ The GitHub Cloud Knowledge connector has the following limitations:
 - **Identity mapping requirement** – The connector relies on matching GitHub user identities to Microsoft Entra ID accounts to enforce permissions. If GitHub user emails don't match Microsoft Entra ID user principal names (UPNs), an admin must configure an identity mapping rule.
 
 > [!NOTE]
-> If your organization requires higher crawl throughput, use the [GitHub Server Knowledge connector](github-server-knowledge-overview.md) instead. The GitHub Server Knowledge connector uses a Microsoft Graph connector agent–based model to invoke `git clone` operations directly against your GitHub.com organization, providing improved crawl performance for large-scale organizations.
+> If your organization requires higher crawl throughput, use the [GitHub Server Knowledge connector](github-server-knowledge-overview.md) instead. The GitHub Server Knowledge connector uses a Microsoft Graph connector agent–based model to invoke `git clone` operations directly against your GitHub Enterprise Server instance, providing improved crawl performance for large-scale organizations.
 
 ## Data types indexed from GitHub Cloud Knowledge
 
