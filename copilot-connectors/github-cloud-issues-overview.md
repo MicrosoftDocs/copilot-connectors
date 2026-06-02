@@ -15,7 +15,7 @@ ms.localizationpriority: Medium
 
 # GitHub Cloud Issues connector overview
 
-The GitHub Cloud Issues Microsoft 365 Copilot connector integrates GitHub issue data into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant issues directly within apps like Teams, Outlook, and SharePoint.
+The GitHub Cloud Issues Microsoft 365 Copilot connector integrates GitHub issue data into Microsoft 365. By using this connector, Copilot, Copilot Search, and Microsoft Search can surface relevant issues directly within apps like Teams, Outlook, and SharePoint.
 
 When you configure the GitHub Cloud Issues connector for your organization and index data from your GitHub.com repositories, users can search and reason over issues in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. This capability helps development teams track work, triage bugs, and understand project status without leaving their flow of work in Microsoft 365.
 
