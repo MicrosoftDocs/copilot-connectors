@@ -36,7 +36,7 @@ Your tenant must have Microsoft 365 licenses. The surfaces available to your use
 
 Synced connectors require:
 
-- **Admin access to the external service.** For prebuilt synced connectors (such as Google Drive, Confluence, ServiceNow), you must have admin access to the data source — for example, Google Workspace Super Admin or Confluence Admin.
+- **Admin access to the external service.** For prebuilt synced connectors (such as Google Drive, Confluence, ServiceNow), you must have admin access to the data source - for example, Google Workspace Super Admin or Confluence Admin.
 - **Data source authentication credentials**, such as API keys or service account tokens.
 - **Configuration of the external environment**, such as a Google Cloud Project for Google Drive or a Confluence site URL. For configuration details, see the deployment guide for the specific connector.
 - **Permissions to access the content you want indexed**, such as wiki pages, catalog items, or meeting transcripts.
@@ -57,7 +57,7 @@ Unlike synced connectors, federated connectors don't require admin access to the
 
 The following table shows which connector types and Copilot experiences each licensing model supports.
 
-| License | Synced connectors — Microsoft Search | Synced connectors — Copilot grounding and agents | Federated connectors |
+| License | Synced connectors - Microsoft Search | Synced connectors - Copilot grounding and agents | Federated connectors |
 |---|---|---|---|
 | Microsoft 365 (any plan) | ✅ | ❌ | ❌ |
 | Microsoft 365 + Microsoft 365 Copilot add-on | ✅ | ✅ | ✅ |
