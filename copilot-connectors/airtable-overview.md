@@ -14,14 +14,14 @@ description: "Learn about the capabilities, limitations, and use cases for the A
 
 # Airtable connector overview (preview)
 
-The Airtable Microsoft 365 Copilot connector integrates Airtable records into Microsoft 365. This integration allows Copilot, Copilot Search, and Microsoft Search to surface relevant record information directly within apps like Microsoft Teams, Outlook, and SharePoint. When you configure the Airtable connector for your organization and index data from Airtable bases, users can search for Airtable records in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. The connector improves project tracking, operational visibility, and overall productivity.
+The Airtable Microsoft 365 Copilot connector integrates Airtable records into Microsoft 365. This integration allows Copilot, Copilot Search, and Microsoft Search to surface relevant record information directly within apps like Microsoft Teams, Outlook, and SharePoint. When you configure the Airtable connector for your organization and index data from Airtable bases, users can search for Airtable records in Microsoft 365 experiences. The connector improves project tracking, operational visibility, and overall productivity.
 
 > [!NOTE]
 > The Airtable connector is currently in preview. Connector functionality and requirements are subject to change.
 
 ## Why use the Airtable connector to index your data?
 
-Organizations that use Airtable to manage projects, operations, and structured data often face challenges surfacing that information alongside the content their teams work with every day. The Airtable connector addresses these challenges by integrating Airtable records into Microsoft 365. This integration allows employees to find Airtable records through Copilot, Copilot Search, and Microsoft Search, within everyday apps like Teams, Outlook, or SharePoint, without leaving their flow of work.
+Organizations that use Airtable to manage projects, operations, and structured data often face challenges surfacing that information alongside the content their teams work with every day. The Airtable connector addresses these challenges by integrating Airtable records into Microsoft 365. This integration allows employees to find Airtable records within Copilot and everyday apps like Teams, Outlook, or SharePoint, without leaving their flow of work.
 
 The Airtable connector provides the following benefits:
 
@@ -61,7 +61,7 @@ The Airtable connector has the following limitations:
 
 ## Data types indexed from Airtable
 
-The Airtable connector indexes record-level data so you can use it in Copilot, Copilot Search, and Microsoft Search. By default, the connector crawls all accessible bases in your Airtable enterprise account.
+The Airtable connector indexes record-level data. By default, the connector crawls all accessible bases in your Airtable enterprise account.
 
 | Airtable data type | Indexed and surfaced in Copilot and search |
 |---|---|
