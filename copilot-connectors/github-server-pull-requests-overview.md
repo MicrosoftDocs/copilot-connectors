@@ -119,7 +119,7 @@ The GitHub Server Pull Requests connector offers the following key capabilities:
 
 The GitHub Server Pull Requests connector has the following limitations:
 
-- **GitHub Enterprise Server only** – This connector is for GitHub Enterprise Server (on-premises/self-hosted) instances that meet API accessibility requirements. For GitHub.com, use the [GitHub Cloud Pull Requests connector](github-cloud-pull-requests-overview.md).
+- **GitHub Enterprise Server only** – This connector is for GitHub Enterprise Server (on-premises or self-hosted) instances that meet API accessibility requirements. For GitHub.com, use the [GitHub Cloud Pull Requests connector](github-cloud-pull-requests-overview.md).
 - **No code diffs or commit details** – Code diffs, file changes, inline review comments, and commit-level details aren't indexed.
 - **No CI/CD pipeline indexing** – CI/CD pipelines aren't indexed beyond basic status metadata that might appear on PRs.
 - **No PR comments or threaded discussions** – Comments, threaded discussions, and linked artifacts beyond PR metadata aren't crawled.
