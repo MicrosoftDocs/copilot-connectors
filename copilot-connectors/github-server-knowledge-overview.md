@@ -15,7 +15,7 @@ description: "Learn about the capabilities, limitations, and use cases for the G
 
 # GitHub Server Knowledge connector overview
 
-The GitHub Server Knowledge Microsoft 365 Copilot connector integrates knowledge stored in GitHub Enterprise Server repositories—including markdown files, wiki pages, and blogs—into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant technical documentation directly within apps like Teams, Outlook, and SharePoint.
+The GitHub Server Knowledge Microsoft 365 Copilot connector integrates knowledge stored in GitHub Enterprise Server repositories—including markdown files, wiki pages, and blogs—into Microsoft 365. By using this connector, Copilot, Copilot Search, and Microsoft Search can surface relevant technical documentation directly within apps like Teams, Outlook, and SharePoint.
 
 When you configure the GitHub Server Knowledge connector for your organization and index data from your GitHub Enterprise Server repositories, users can search GitHub knowledge in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. This connector is designed for organizations with large GitHub Enterprise Server estates that need higher crawl throughput than the cloud-API-based connector can provide.
 
