@@ -21,7 +21,7 @@ When you configure the GitHub Server Pull Requests connector for your organizati
 
 ## Why use the GitHub Server Pull Requests connector to index your data?
 
-Modern software development teams rely on pull requests (PRs) to manage work, collaborate on changes, and assess release readiness. However, PR data is often siloed in GitHub Enterprise Server, requiring engineers, PMs, DevOps, SREs, and stakeholders to manually search across repositories to locate relevant PRs. The GitHub Server Pull Requests connector indexes PR metadata from your GitHub Enterprise Server so users can search, filter, and summarize PRs directly from Microsoft 365. With Copilot, users can ask natural-language questions such as "What open PRs are waiting for review in our payments service?" and receive grounded, actionable responses with links back to GitHub.
+Modern software development teams rely on pull requests (PRs) to manage work, collaborate on changes, and assess release readiness. However, PR data is often siloed in GitHub Enterprise Server, requiring engineers, PMs, DevOps, SREs, and stakeholders to manually search across repositories to locate relevant PRs. The GitHub Server Pull Requests connector indexes PR metadata from your GitHub Enterprise Server so users can search, filter, and summarize PRs directly from Microsoft 365. By using Copilot, users can ask natural-language questions such as "What open PRs are waiting for review in our payments service?" and receive grounded, actionable responses with links back to GitHub.
 
 The GitHub Server Pull Requests connector provides the following benefits:
 
