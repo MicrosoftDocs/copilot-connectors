@@ -1,5 +1,5 @@
 ---
-title: "Connectors overview"
+title: "Copilot connectors overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
@@ -11,7 +11,7 @@ description: "Learn how your organization can use Microsoft 365 Copilot connecto
 ms.date: 05/14/2026
 ---
 
-# Connectors overview
+# Copilot connectors overview
 
 Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using **synced connectors** or connect to data in real time by using **federated connectors**. This flexibility ensures that users can securely search and interact with both enterprise and external data sources within Microsoft 365 apps and Copilot experiences.
 
