@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 12/17/2025
+ms.date: 06/02/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Jira Data Center Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -38,6 +38,9 @@ Before you deploy the connector, make sure that you meet the following prerequis
 - Allow unlimited requests to prevent throttling. In **System** > **Rate limiting** > **Exemptions** > **Add exemptions**, add the service account to the **exemptions** list.
 
    :::image type="content" alt-text="Screenshot that shows allowing unlimited requests for the Service Account" source="media/jira-data-center/jira-data-center-graph-connector-allow-unlimited-requests-for-service-account.png" lightbox="media/jira-data-center/jira-data-center-graph-connector-allow-unlimited-requests-for-service-account.png":::
+
+  > [!IMPORTANT]
+  > The connector generates a significant number of API calls during crawls. Exempt the service account from rate limiting entirely. If you must enforce rate limits, configure them on a **per-minute** or **per-hour** basis - don't use per-second limits. Per-second rate limiting can cause partial crawl failures where some issues are skipped and not indexed.
 
 ## Deploy the connector
 
@@ -138,7 +141,31 @@ If you use restrictive permissions, map Jira identities to Microsoft 365 identit
 
 #### Filter data
 
-You can filter issues by creation or update timestamp, or by using **JQL**. For example: `project = "PROJ" AND updated >= -30d`.
+You can filter issues by creation or update timestamp, or by using **JQL** (Jira Query Language).
+
+##### JQL configuration guidelines
+
+When configuring a JQL filter for the connector, follow these rules:
+
+- **Don't add a project filter.** If you need to filter by project, use the **Project filter** option in the connector configuration instead.
+- **Don't add an `ORDER BY` clause.** The connector manages result ordering internally. Adding a sort clause can interfere with pagination and crawl performance.
+- **Only include issue-level filter conditions.** The JQL should contain conditions that filter issues based on their properties, such as status, type, priority, labels, resolution, or custom fields.
+
+##### JQL examples
+
+| Scenario | JQL |
+|---|---|
+| Only index unresolved issues | `resolution = Unresolved` |
+| Exclude subtasks | `issuetype not in subtaskIssueTypes()` |
+| Only index bugs and tasks | `issuetype in (Bug, Task)` |
+| Filter by priority | `priority in (High, Highest)` |
+| Filter by label | `labels = "customer-facing"` |
+| Exclude issues in a specific status | `status != Closed` |
+| Only index issues updated in the last 90 days | `updated >= -90d` |
+| Combine multiple conditions | `issuetype in (Bug, Story) AND priority in (High, Highest) AND resolution = Unresolved` |
+
+> [!IMPORTANT]
+> Don't use `project = "PROJ"` in the JQL field. Use the dedicated **Project filter** setting to scope by project. Don't add `ORDER BY` clauses - the connector handles ordering automatically.
 
 #### Manage properties
 
