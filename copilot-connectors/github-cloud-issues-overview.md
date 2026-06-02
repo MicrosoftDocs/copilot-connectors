@@ -110,7 +110,7 @@ The following examples show prompts that agent builders can use to help users re
 
 The GitHub Cloud Issues connector has the following key capabilities:
 
-- **Indexes GitHub issues** – Crawls issue title, body/description, labels, state (open/closed), assignees, milestones, due dates, and comments from your configured GitHub.com organizations and repositories.
+- **Indexes GitHub issues** – Crawls issue title, body or description, labels, state (open or closed), assignees, milestones, due dates, and comments from your configured GitHub.com organizations and repositories.
 - **Integrates with Copilot** – Enables Copilot, Copilot Search, and Microsoft Search to retrieve and summarize issue data. Users can ask questions in natural language and get grounded answers with citations back to the issue in GitHub.
 - **Maintains GitHub access control** – The connector honors GitHub's repository visibility and team permissions, so users only see issues from repositories they have access to in GitHub.
 - **Configurable content scope and crawl behavior** – Admins choose which organizations and repositories to include, and can customize crawl frequency and indexing preferences.
