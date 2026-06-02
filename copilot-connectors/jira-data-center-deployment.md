@@ -147,7 +147,7 @@ You can filter issues by creation or update timestamp, or by using **JQL** (Jira
 
 When configuring a JQL filter for the connector, follow these rules:
 
-- **Do not add a project filter.** If you need to filter by project, use the **Project filter** option in the connector configuration instead.
+- **Don't add a project filter.** If you need to filter by project, use the **Project filter** option in the connector configuration instead.
 - **Do not add an ORDER BY clause.** The connector manages result ordering internally; adding a sort clause can interfere with pagination and crawl performance.
 - **Only include issue-level filter conditions.** The JQL should contain conditions that filter issues based on their properties, such as status, type, priority, labels, resolution, or custom fields.
 
