@@ -130,7 +130,7 @@ The following table describes the data types that the connector indexes and how 
 
 | GitHub entity | Indexed and surfaced in Copilot and search |
 | --- | --- |
-| **Issues** | Core issue fields such as title, body/description, labels, state (open/closed), assignees, milestones, and due dates. These fields appear in search results and as referenced items in Copilot responses. |
+| **Issues** | Core issue fields such as title, body or description, labels, state (open or closed), assignees, milestones, and due dates. These fields appear in search results and as referenced items in Copilot responses. |
 | **Issue comments** | Comment text on issues, used by Copilot to answer questions grounded in issue discussions. |
 | **Issue metadata** | Properties such as repository name, organization, item path, organization URL, creation and update timestamps, and issue number, used to improve ranking, filtering, and summarization. |
 
