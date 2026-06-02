@@ -131,7 +131,7 @@ The Jira Data Center connector calls the following Jira REST APIs during crawlin
 | GET | `/rest/api/2/applicationrole` | Retrieve application roles |
 
 > [!NOTE]
-> Endpoints prefixed with `/rest/api/msplugin/jira/1.0/` are provided by the Microsoft Jira plugin and are not part of the standard Jira REST API.
+> Endpoints prefixed with `/rest/api/msplugin/jira/1.0/` are provided by the Microsoft Jira plugin and aren't part of the standard Jira REST API.
 
 ## Next step
 
