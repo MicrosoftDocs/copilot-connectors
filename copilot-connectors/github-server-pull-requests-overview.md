@@ -141,7 +141,7 @@ The following data types **aren't** indexed: code diffs, file changes, inline co
 
 The connector enforces GitHub's permission model so that users only see pull request information they're authorized to view.
 
-- **Repository and team permissions** – Private repository PRs appear only for users with explicit repository access. Organization-level and team-based access restrictions are honored. Content that can't be mapped to a valid identity is hidden to prevent exposure.
+- **Repository and team permissions** – Private repository PRs appear only for users with explicit repository access. Organization-level and team-based access restrictions are honored. The connector hides content that can't be mapped to a valid identity to prevent exposure.
 
 - **User identity mapping** – The connector maps GitHub user accounts to Microsoft Entra ID identities. Automatic mapping occurs when GitHub email addresses match Microsoft Entra ID. Admins can also map by email, sign-in (login), or name. Optional regex rules can transform identity attributes for consistent matching, and a manual fallback mapping is available when automatic mapping fails.
 
