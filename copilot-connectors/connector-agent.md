@@ -9,7 +9,7 @@ ms.topic: install-set-up-deploy
 ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Find the steps to install the Microsoft Graph connector agent to allow you to index on-premises content via Microsoft 365 Copilot connectors." 
-ms.date: 05/11/2026
+ms.date: 06/02/2026
 ---
 
 # Microsoft Graph connector agent
@@ -70,8 +70,9 @@ If your organization's proxy servers or firewalls block communication to unknown
 | 5. `https://gcs.office.com/` | 5. `https://gcsgcc.office.com` | 5. `https://gcs.office365.us/`
 | 6. `https://graph.microsoft.com/` | 6. `https://graph.microsoft.com` | 6. `https://graph.microsoft.com/`, `https://graph.microsoft.us/`
 
->[!NOTE]
->Proxy authentication isn't supported. If your environment has a proxy that requires authentication, we recommend that you allow the connector agent to bypass the proxy.
+> [!NOTE]
+> - Proxy authentication isn't supported. If your environment has a proxy that requires authentication, allow the connector agent to bypass the proxy.
+> - If your data source requires interactive Entra ID sign in, add the sign-in URLs to the allow list. For more information, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 If your organization uses an outbound proxy, the agent's crawl requests to your data source also route through that proxy by default, which can cause crawl failures. Configure proxy bypass for your data source hostnames by using whichever method matches your proxy setup:
 
