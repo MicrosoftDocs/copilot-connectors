@@ -20,7 +20,7 @@ When you configure the GitHub Cloud Knowledge connector for your organization an
 
 ## Why use the GitHub Cloud Knowledge connector to index your data?
 
-Engineering organizations that rely on GitHub for source code typically also use GitHub as the system of record for project documentation, architecture notes, runbooks, and contribution guidelines. However, this content is often siloed from the productivity tools where employees spend most of their day. The GitHub Cloud Knowledge connector addresses this by indexing markdown and text files from your GitHub.com repositories into Microsoft 365. Developers, PMs, support engineers, and new hires can ask Copilot questions in natural language—such as "How do I set up Project Alpha?"—and receive grounded answers with links back to the source files in GitHub.
+Engineering organizations that rely on GitHub for source code typically also use GitHub as the system of record for project documentation, architecture notes, runbooks, and contribution guidelines. However, this content is often siloed from the productivity tools where employees spend most of their day. The GitHub Cloud Knowledge connector addresses this problem by indexing markdown and text files from your GitHub.com repositories into Microsoft 365. Developers, PMs, support engineers, and new hires can ask Copilot questions in natural language—such as "How do I set up Project Alpha?"—and receive grounded answers with links back to the source files in GitHub.
 
 The GitHub Cloud Knowledge connector provides the following benefits:
 
