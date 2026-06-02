@@ -112,7 +112,7 @@ The following examples show prompts that agent builders can use to help users re
 
 The GitHub Server Pull Requests connector offers the following key capabilities:
 
-- **Indexes pull request metadata** – Crawls PR titles, descriptions, labels, state (open/closed/merged), authors, reviewers, assignees, milestones, due dates, and timestamps from your configured GitHub Enterprise Server organizations and repositories.
+- **Indexes pull request metadata** – Crawls PR titles, descriptions, labels, state (open, closed, or merged), authors, reviewers, assignees, milestones, due dates, and timestamps from your configured GitHub Enterprise Server organizations and repositories.
 - **Integrates with Copilot** – Enables Copilot, Copilot Search, and Microsoft Search to find and use PR data. Users can ask natural-language questions and get grounded answers with citations back to the PR in GitHub.
 - **Maintains GitHub access control** – The connector honors GitHub repository visibility and team permissions, so users only see PRs from repositories they have access to in GitHub.
 - **Configurable content scope and crawl behavior** – Admins choose which organizations and repositories to include, and can customize crawl frequency, identity mapping, and indexing preferences.
