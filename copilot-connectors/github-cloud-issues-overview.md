@@ -21,7 +21,7 @@ When you configure the GitHub Cloud Issues connector for your organization and i
 
 ## Why use the GitHub Cloud Issues connector to index your data?
 
-For many engineering teams, GitHub Issues is the primary system of record for feature requests, bugs, and operational work items. However, this information is often siloed in GitHub, which makes it harder for PMs, engineers, support, and stakeholders to understand what's happening without switching between tools. The GitHub Cloud Issues Copilot connector indexes issues from GitHub.com so that developers, PMs, support staff, and engineering leaders can discover and summarize relevant issues within Microsoft 365. Users can ask natural-language questions—such as "What are the open bugs in the elysia repo?"—and receive grounded, contextual responses with links back to the original issues in GitHub.
+For many engineering teams, GitHub Issues is the primary system of record for feature requests, bugs, and operational work items. However, this information is often siloed in GitHub, which makes it harder for PMs, engineers, support, and stakeholders to understand what's happening without switching between tools. The GitHub Cloud Issues Copilot connector indexes issues from GitHub.com so that developers, PMs, support staff, and engineering leaders can discover and summarize relevant issues within Microsoft 365. Users can ask natural-language questions - such as "What are the open bugs in the elysia repo?" - and receive grounded, contextual responses with links back to the original issues in GitHub.
 
 The GitHub Cloud Issues connector provides the following benefits:
 
