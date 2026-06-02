@@ -110,7 +110,7 @@ The following examples show prompts that agent builders can use to help users re
 
 ## GitHub Server Pull Requests connector capabilities and limitations
 
-The GitHub Server Pull Requests connector has the following key capabilities:
+The GitHub Server Pull Requests connector offers the following key capabilities:
 
 - **Indexes pull request metadata** – Crawls PR titles, descriptions, labels, state (open/closed/merged), authors, reviewers, assignees, milestones, due dates, and timestamps from your configured GitHub Enterprise Server organizations and repositories.
 - **Integrates with Copilot** – Enables Copilot, Copilot Search, and Microsoft Search to find and use PR data. Users can ask natural-language questions and get grounded answers with citations back to the PR in GitHub.
