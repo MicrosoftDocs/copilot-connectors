@@ -48,6 +48,11 @@ Define the Microsoft Entra ID mapping rules. Make sure that users who access the
 
 ## Sign in to the GitHub account
 
+> [!IMPORTANT]
+> Before you start the GitHub authentication flow, make sure your browser session is signed in to the **correct** GitHub account—the one that has access to the organizations and repositories you intend to index. OAuth (the recommended authentication method) authorizes whichever GitHub account is currently active in your browser, so signing in with the wrong account can grant the connector access to the wrong set of repositories.
+>
+> If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to start the OAuth flow with the intended account.
+
 For enterprise-managed users who authenticate via single sign-on (SSO), make sure the account is signed in before you perform any setup actions. Currently, the GitHub authentication flow doesn't support SSO-based sign-in during configuration.
 
 ## Verify search admin permissions
