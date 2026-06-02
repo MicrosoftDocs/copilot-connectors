@@ -3,7 +3,7 @@ title: "GitHub Cloud Issues connector overview"
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Cloud Issues Microsoft 365 Copilot connector."
 author: Lauragra
 ms.author: lauragra
-ms.reviewer: dannyyao
+ms.reviewer: lauragra
 manager: calvind
 audience: Admin
 ms.audience: Admin

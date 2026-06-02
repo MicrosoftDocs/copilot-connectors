@@ -3,7 +3,6 @@ title: "GitHub Cloud Knowledge connector overview"
 ms.author: lauragra
 author: Lauragra
 manager: calvind
-ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
