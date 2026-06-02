@@ -35,6 +35,7 @@ The following table lists common use cases.
 | Business analysts | Find dashboards related to specific KPIs or domains. | Faster access to analytics content |
 | Team members | Retrieve sheets relevant to active projects. | Reduced context switching |
 | Leadership | Get summaries of dashboards and key metrics. | Better decision support |
+| All Users | Locate relevant analytics content without knowing the complex Tableau site structure. | Faster content discovery and improved productivity |
 
 ## Build agents with the Tableau Cloud connector
 
@@ -47,6 +48,10 @@ The following examples show prompts that users can use to retrieve information f
 - Find Tableau Cloud dashboards related to Q1 sales.
 - List Tableau Cloud sheets under the Marketing Analytics project.
 - Summarize key insights from the Revenue Dashboard in Tableau.
+- Is there any analysis on which ship mode experienced the largest spike in sales during winter?
+- What are the top 5 product names that contribute the most to profit?
+- Where can I find data on discount rates that influence profit margins?
+- Show me the item path of Profit by Region worksheet 
 
 ## Tableau Cloud connector capabilities and limitations
 
