@@ -42,7 +42,7 @@ The following table lists common use cases for the GitHub Cloud Pull Requests co
 | Engineering | Show PRs about "Release v0.2.5". | Group all PRs related to a release for review and changelog generation. |
 | Engineering | Explain PR #47 in swift-chat. | Get a quick summary of a specific PR—description, status, reviewers—without opening GitHub. |
 | Engineering | Find PRs created by EmilyyyLiu. | Spotlight contributions from specific engineers for reviews, recognition, or follow-up. |
-| Engineering | Find latest created PRs. | See the freshest work-in-progress across the org at a glance. |
+| Engineering | Find the latest created PRs. | See the freshest work-in-progress across the org at a glance. |
 | Quality assurance | Find closed PRs with the label "dependencies" in swift-chat. | Identify dependency upgrades that need regression testing. |
 | Quality assurance | What are the open PRs with the "dependencies" label? | Surface dependency PRs that still need review and validation. |
 | Release management | What's the status of PRs with milestones being "swift-chat-2"? | Quickly assess milestone readiness for go/no-go decisions. |
@@ -97,14 +97,14 @@ The following examples show prompts that agent builders can use to help users re
 **Engineering leadership**
 
 - Look at these PRs and count PRs per assignee so we can make sure the workload is balanced.
-- Summarize and prioritize these PRs: https://github.com/KCL-Benediction/swift-chat/pull/14;https://github.com/KCL-Benediction/swift-chat/pull/13.
+- Summarize and prioritize these PRs: `https://github.com/<org>/<repo>/pull/14`;`https://github.com/<org>/<repo>/pull/13`.
 - Find latest created PRs and group them by creation time.
 
 **Cross-entity workflows**
 
 - Find PRs that fix issue #56 in swift-chat.
 - Summarize PR #319 in drawer and its related email threads.
-- Create a document about https://github.com/KCL-Benediction/drawer/pull/319.
+- Create a document about `https://github.com/<org>/<repo>/pull/319`.
 
 ## GitHub Cloud Pull Requests connector capabilities and limitations
 

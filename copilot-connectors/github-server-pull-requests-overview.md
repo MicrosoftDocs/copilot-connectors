@@ -106,7 +106,7 @@ The following examples show prompts that agent builders can use to help users re
 
 - Find PRs that fix issue #56 in swift-chat.
 - Summarize PR #319 in drawer and its related email threads.
-- Create a document about https://github.com/KCL-Benediction/drawer/pull/319.
+- Create a document about `https://github.com/<org>/<repo>/pull/319`.
 
 ## GitHub Server Pull Requests connector capabilities and limitations
 
