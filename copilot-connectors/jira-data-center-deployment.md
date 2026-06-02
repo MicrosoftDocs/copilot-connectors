@@ -165,7 +165,7 @@ When configuring a JQL filter for the connector, follow these rules:
 | Combine multiple conditions | `issuetype in (Bug, Story) AND priority in (High, Highest) AND resolution = Unresolved` |
 
 > [!IMPORTANT]
-> Do **not** use `project = "PROJ"` in the JQL field. Use the dedicated **Project filter** setting to scope by project. Do **not** add `ORDER BY` clauses — the connector handles ordering automatically.
+> Don't use `project = "PROJ"` in the JQL field. Use the dedicated **Project filter** setting to scope by project. Don't add `ORDER BY` clauses - the connector handles ordering automatically.
 
 #### Manage properties
 
