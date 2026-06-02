@@ -40,7 +40,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
    :::image type="content" alt-text="Screenshot that shows allowing unlimited requests for the Service Account" source="media/jira-data-center/jira-data-center-graph-connector-allow-unlimited-requests-for-service-account.png" lightbox="media/jira-data-center/jira-data-center-graph-connector-allow-unlimited-requests-for-service-account.png":::
 
   > [!IMPORTANT]
-  > The connector generates a significant number of API calls during crawls. We strongly recommend exempting the service account from rate limiting entirely. If you must enforce rate limits, configure them on a **per-minute** or **per-hour** basis — do not use per-second limits. Per-second rate limiting can cause partial crawl failures where some issues are skipped and not indexed.
+  > The connector generates a significant number of API calls during crawls. Exempt the service account from rate limiting entirely. If you must enforce rate limits, configure them on a **per-minute** or **per-hour** basis - don't use per-second limits. Per-second rate limiting can cause partial crawl failures where some issues are skipped and not indexed.
 
 ## Deploy the connector
 
