@@ -92,7 +92,7 @@ If permissions are defined using unsupported assignment types, the connector blo
 
 ## Jira REST APIs used by the connector
 
-The Jira Data Center connector calls the following Jira REST APIs during crawling, permission resolution, and identity synchronization. Some endpoints require the [Microsoft Jira plugin](https://marketplace.atlassian.com/) to be installed.
+The Jira Data Center connector calls the following Jira REST APIs during crawling, permission resolution, and identity synchronization. Endpoints prefixed with `/rest/api/msplugin/jira/1.0/` are provided by the [Microsoft Graph Connectors for Jira Data Center](https://marketplace.atlassian.com/apps/1235599/microsoft-graph-connectors-for-jira-data-center) plugin.
 
 ### Content crawl
 
