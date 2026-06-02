@@ -71,7 +71,7 @@ If your organization's proxy servers or firewalls block communication to unknown
 | 6. `https://graph.microsoft.com/` | 6. `https://graph.microsoft.com` | 6. `https://graph.microsoft.com/`, `https://graph.microsoft.us/`
 
 > [!NOTE]
-> - Proxy authentication isn't supported. If your environment has a proxy that requires authentication, we recommend that you allow the connector agent to bypass the proxy.
+> - Proxy authentication isn't supported. If your environment has a proxy that requires authentication, allow the connector agent to bypass the proxy.
 > - If your data source requires interactive Entra ID sign in, add the sign-in URLs to the allow list. For more information, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 If your organization uses an outbound proxy, the agent's crawl requests to your data source also route through that proxy by default, which can cause crawl failures. Configure proxy bypass for your data source hostnames by using whichever method matches your proxy setup:
