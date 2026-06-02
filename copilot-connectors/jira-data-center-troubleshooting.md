@@ -28,7 +28,7 @@ The following table lists common issues you might encounter during connector dep
 | **Authentication** | The client doesn't have permission to perform the action. | The client ID or client secret from Jira Application Links might be invalid or incorrect. Confirm that the Application Link is configured as an *Incoming* connection with **Admin** scope selected. |
 | **Select properties** | No preview results appear. | The JQL string might be invalid, the selected projects might not contain matching items, or the service account might not have **Browse Projects** permission for the target projects. |
 | **Sync** | Permissions aren't syncing correctly. | Identity mapping might be misconfigured. Jira email addresses might not match Microsoft Entra ID user principal names (UPNs), or the Regex rule for non-Entra ID environments might be incorrect. |
-| **Sync** | Some issues are missing after a crawl completes. | Jira Data Center rate limiting might be rejecting API requests during the crawl. Verify that the service account is exempt from rate limiting, or that limits are set to per-minute or per-hour — not per-second. Per-second throttling causes partial crawl failures where some issues are silently skipped. |
+| **Sync** | Some issues are missing after a crawl completes. | Jira Data Center rate limiting might be rejecting API requests during the crawl. Verify that the service account is exempt from rate limiting, or that limits are set to per-minute or per-hour - not per-second. Per-second throttling causes partial crawl failures where some issues are silently skipped. |
 
 ## Related content
 
