@@ -44,6 +44,9 @@ To search for indexed content, enter the unique identifier of the item in the in
 |Intranet (Cloud/OnPrem)|URL|Final URL, all lowercase.| 
 |Jira| Issue ID| For information, see [How to get issue id from the Jira User Interface](https://confluence.atlassian.com/jirakb/how-to-get-issue-id-from-the-jira-user-interface-1115156394.html#:~:text=User%20needs%20to%20get%20the%20issue%20id%20in%20an%20easier).|
 |Confluence (Cloud/OnPrem)|Page blog post ID|Found in the item ID of the URL. Examples can be found in the Confluence Cloud URL from the data source.|
+|PagerDuty Incidents|Incident ID|Found in the incident URL. For example, in this URL: https://contoso.pagerduty.com/incidents/Q2E4AJBLCXV8CS, the incident id is Q2E4AJBLCXV8C.|
+|PagerDuty Escalation Policies|Policy ID|Found in the escalation policy URL. For example, in this URL: https://contoso.pagerduty.com/escalation_policies/P1H1CV3, the policy id is P1H1CV3.|
+|PagerDuty Schedules|Schedule ID|Found in the schedule URL. For example, in this URL: https://contoso.pagerduty.com/schedules/P25H5CH, the schedule id is P25H5CH.|
 |CSV|Unique identifier list, item key|Admin configured details.|
 |Azure SQL, Oracle DB, MS SQL|Values to all the columns in unique key columns|Admin configured details.|
 |Mediawiki|Page ID, namespace, sourceUrl|Admin configured details.|
