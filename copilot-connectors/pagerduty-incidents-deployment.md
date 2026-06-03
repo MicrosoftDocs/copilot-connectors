@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 05/20/2026
+ms.date: 06/03/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the PagerDuty Incidents Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -98,12 +98,14 @@ You can customize the default values for the PagerDuty Incidents connector setti
 
 ### Customize user settings
 
+#### Access permissions
+
 The PagerDuty Incidents connector supports the following user search permissions:
 
-- Everyone
 - Only people with access to this data source (default)
+- Everyone
  
-If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, search results respect the same permission setup as the data source.
+If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, search results respect the same permissions that are set for the data source.
 
 If you choose **Only people with access to this data source**, you also need to choose whether your PagerDuty instance has Microsoft Entra ID provisioned users or non-Entra ID users:
 
