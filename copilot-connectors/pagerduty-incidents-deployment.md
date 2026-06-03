@@ -98,13 +98,22 @@ You can customize the default values for the PagerDuty Incidents connector setti
 
 ### Customize user settings
 
-#### Access permissions
+The PagerDuty Incidents connector supports the following user search permissions:
 
-Determine which users in your organization can access each item in Copilot or Search surfaces. Choose whether indexed data is visible to everyone in the organization or only to users who have access to the data source in PagerDuty.
+- Everyone
+- Only people with access to this data source (default)
+ 
+If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, search results respect the same permission setup as the data source.
 
-#### Map identities
+If you choose **Only people with access to this data source**, you also need to choose whether your PagerDuty instance has Microsoft Entra ID provisioned users or non-Entra ID users:
 
-By default, the connector resolves PagerDuty user identities to Microsoft Entra identities by matching on the user's email address. If your organization's PagerDuty identities differ from Microsoft Entra identities, configure identity mapping so that access checks resolve to the correct Microsoft 365 users.
+- Choose the Microsoft Entra ID option if the email ID of PagerDuty users is same as the user principal name (UPN) in Microsoft Entra ID.
+- Choose the non-Entra ID option if the email ID of PagerDuty users is different from the UPN in Microsoft Entra ID.
+
+> [!NOTE]
+> - If you choose Microsoft Entra ID as the identity source, the connector maps user email IDs from PagerDuty to the UPN property in Microsoft Entra ID.
+> - If you choose non-Entra ID as the identity source, provide a regular expression to map email ID to UPN. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
+> - Updates to users or groups that govern access permissions are synced in full crawls only. Incremental crawls don't currently support processing updates to permissions.
 
 ### Customize content settings
 
