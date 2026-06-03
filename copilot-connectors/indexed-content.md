@@ -13,7 +13,7 @@ description: "Learn how to search and validate whether Microsoft 365 Copilot con
 
 # Search and validate indexed content
 
-When you're testing a Microsoft 365 Copilot connection, you can use the index browser to verify connector content indexing. If you need to verify properties and user access, it helps to review the metadata and access control lists (ACLs) of indexed items. It's also helpful for troubleshooting search issues. If users report issues accessing items, you can verify whether the item was indexed correctly and includes the correct data.
+When you test a Microsoft 365 Copilot connection, use the index browser to verify connector content indexing. To verify properties and user access, review the metadata and access control lists (ACLs) of indexed items. This review also helps troubleshoot search problems. If users report problems accessing items, you can check whether the item was indexed correctly and includes the correct data.
 
 :::image type="content" source="media/manage-connector/index-search.png" alt-text="Screenshot that shows the connector what users can see when they enter an item ID of an indexed item.":::
 
