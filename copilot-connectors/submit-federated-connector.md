@@ -85,7 +85,7 @@ Microsoft doesn't provide notifications for every intermediate status change. Fo
 
 To submit your connector, complete the [Federated Copilot connector submission form](https://aka.ms/FccSubmissionForm).
 
-For any questions, [contact us](mailto:submit-fcc@microsoft.com).
+For any questions related to submitting your remote MCP server, [send us and email](mailto:submit-fcc@microsoft.com).
 
 ## Related content
 

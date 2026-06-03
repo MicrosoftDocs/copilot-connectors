@@ -56,7 +56,7 @@ Currently, Microsoft-published federated connectors are available for the follow
 - Moody's
 - Notion
  
-Partners who want to make a federated connector available in the gallery can submit their remote MCP server to Microsoft for review. For more information, see [Submit a federated connector](submit-federated-connector.md). For any questions, [contact us](mailto:submit-fcc@microsoft.com).
+Partners who want to make a federated connector available in the gallery can submit their remote MCP server to Microsoft for review. For more information, see [Submit a federated connector](submit-federated-connector.md). For any questions related to submitting your remote MCP server, [send us and email](mailto:submit-fcc@microsoft.com).
 
 The following image shows federated connectors in the **Your connections** list in the Microsoft 365 admin center.
  
