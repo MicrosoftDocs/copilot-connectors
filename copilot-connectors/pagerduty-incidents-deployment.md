@@ -107,10 +107,10 @@ The PagerDuty Incidents connector supports the following user search permissions
  
 If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, search results respect the same permissions that are set for the data source.
 
-If you choose **Only people with access to this data source**, you also need to choose whether your PagerDuty instance has Microsoft Entra ID provisioned users or non-Entra ID users:
+If you choose **Only people with access to this data source**, you also need to choose whether your PagerDuty instance has Microsoft Entra ID-provisioned users or non-Entra ID users:
 
-- Choose the Microsoft Entra ID option if the email ID of PagerDuty users is same as the user principal name (UPN) in Microsoft Entra ID.
-- Choose the non-Entra ID option if the email ID of PagerDuty users is different from the UPN in Microsoft Entra ID.
+- Choose the Microsoft Entra ID option if the email ID of PagerDuty users is the same as the user principal name (UPN) in Microsoft Entra ID.
+- Choose the non-Entra ID option if the email ID of PagerDuty users is different from the UPN in Microsoft Entra ID.
 
 > [!NOTE]
 > - If you choose Microsoft Entra ID as the identity source, the connector maps user email IDs from PagerDuty to the UPN property in Microsoft Entra ID.
