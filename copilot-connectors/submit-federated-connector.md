@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 05/21/2026
+ms.date: 06/03/2026
 ms.localizationpriority: Medium
 ---
 
@@ -84,6 +84,8 @@ Microsoft doesn't provide notifications for every intermediate status change. Fo
 ## Submit your connector
 
 To submit your connector, complete the [Federated Copilot connector submission form](https://aka.ms/FccSubmissionForm).
+
+For any questions related to submitting your remote MCP server, [send us an email](mailto:submit-fcc@microsoft.com).
 
 ## Related content
 
