@@ -201,7 +201,7 @@ items:
       items:
       - name: Overview
         href: datastax-overview.md
-      - name: Deploy the connector
+      - name: Deployment guide
         href: datastax-deployment.md
       - name: Troubleshooting
         href: datastax-troubleshooting.md
