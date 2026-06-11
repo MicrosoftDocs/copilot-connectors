@@ -104,7 +104,8 @@ Airtable Enterprise accounts block third-party OAuth integrations by default. Yo
 To allowlist the OAuth integration:
 
 1. Sign in to the [Airtable Admin Hub](https://airtable.com/admin).
-1. Go to **Settings** > **Integrations & development** > **Third party integration allowlist**.
+1. Go to **Settings** > **Integrations & development**.
+1. Select the **Development** tab, and then select **Third party integration allowlist**.
 1. Select **Allow integration**.
 1. Enter the **Client ID** of the integration you registered.
 1. Select **Save**.
