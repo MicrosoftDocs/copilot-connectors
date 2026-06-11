@@ -72,7 +72,7 @@ The following table lists the customer relationship management connectors that a
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
 | HubSpot (preview) | Microsoft | Manage customer data and sales pipelines. | [Federated connectors overview](federated-connectors-overview.md) |
-| Salesforce CRM | Microsoft | Allows your organization to search your Salesforce instance for contacts, opportunities, leads, and accounts objects. | [Salesforce CRM connector](salesforce-connector.md) |
+| Salesforce CRM | Microsoft | Search your Salesforce instance for contacts, opportunities, leads, and accounts objects. | [Salesforce CRM connector](salesforce-crm-overview.md) |
 
 
 ## Data visualization

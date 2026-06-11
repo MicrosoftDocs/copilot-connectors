@@ -6,7 +6,7 @@ ms.author: lauragra
 manager: calvind
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 05/18/2026
+ms.date: 06/05/2026
 ---
 
 # Set up the Salesforce service for Salesforce CRM connector ingestion
@@ -15,7 +15,7 @@ The Salesforce CRM Microsoft 365 Copilot connector allows your organization to i
 
 This article provides information about the configuration steps that Salesforce admins need to complete in order for your organization to deploy the Salesforce CRM connector.
 
-For information about how to deploy the connector, see [Deploy the Salesforce CRM connector](salesforce-connector.md).
+For information about how to deploy the connector, see [Deploy the Salesforce CRM connector](salesforce-crm-deployment.md).
 
 ## Prerequisites
 
@@ -32,13 +32,13 @@ The following checklist lists the steps involved in configuring the environment 
 
 | Task | Role |
 |------|------|
-| Identify Salesforce instance URL | Salesforce CRM admin |
-| Enable API access | Salesforce CRM admin |
-| Create connected app | Salesforce CRM admin |
-| Configure refresh token policy | Salesforce CRM admin |
-| Define identity mapping | Salesforce CRM admin |
-| Determine data ingestion filters | Salesforce CRM admin |
-| Verify field-level security (FLS) settings | Salesforce CRM admin |
+| [Identify Salesforce instance URL](#identify-the-salesforce-instance-url) | Salesforce CRM admin |
+| [Enable API access](#enable-api-access) | Salesforce CRM admin |
+| [Create connected app](#create-a-connected-app) | Salesforce CRM admin |
+| [Configure refresh token policy](#configure-refresh-token-policy) | Salesforce CRM admin |
+| [Define identity mapping](#define-identity-mapping) | Salesforce CRM admin |
+| [Determine data ingestion filters](#determine-data-to-ingest) | Salesforce CRM admin |
+| [Verify field-level security (FLS) settings](#verify-field-level-security-fls-settings) | Salesforce CRM admin |
 
 ## Identify the Salesforce instance URL
 
@@ -81,6 +81,8 @@ Set up a connected app for OAuth 2.0 authentication:
 
 ### Get client ID and secret
 
+To get the client ID and secret:
+
 1. Go to **Setup > Apps > App Manager**.
 1. Select the connected app and select **Manage Consumer Details**.
 1. Copy the **Consumer Key** (client ID) and **Consumer Secret** (client secret).
@@ -113,9 +115,7 @@ If your Salesforce org uses field-level security to hide fields from specific pr
 - Confirm the Salesforce user account that signs in to the connector has permission to read FLS metadata. The **System Administrator** profile already includes this access. For custom profiles, ensure **View Setup and Configuration** and **View All Profiles** are enabled (see [Enable API access](#enable-api-access)).
 - Verify the FLS settings for the indexed objects and decide which FLS-restricted fields are safe to index in Microsoft 365 and which must stay excluded.
 
-For how to opt in to FLS-restricted fields in the Microsoft 365 admin center, see [Include FLS-restricted fields](salesforce-connector.md#include-fls-restricted-fields).
-
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Salesforce CRM connector](salesforce-connector.md)
+> [Deploy the Salesforce CRM connector](salesforce-crm-deployment.md)

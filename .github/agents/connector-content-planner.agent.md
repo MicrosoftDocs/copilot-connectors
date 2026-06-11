@@ -34,6 +34,18 @@ Determine which of the following files are needed based on the source material:
 | Troubleshooting (`{slug}-troubleshooting.md`) | Yes | Always |
 | Admin / service setup (`{slug}-admin-setup.md`) | No | The connector requires meaningful service-side configuration (for example, creating OAuth apps, configuring allow lists, granting permissions in the external system) that warrants a separate article |
 
+### Legacy connector file replacement and redirect
+
+Check whether a legacy single-file connector article already exists for this connector in `copilot-connectors/` (for example, `{slug}-connector.md`).
+
+If a legacy file exists:
+- Plan to delete the legacy file.
+- Plan to add a redirect entry in `.openpublishing.redirection.json` from the deleted file to the new connector topic set.
+- Use this redirect target priority:
+  1. `{slug}-deployment` (preferred)
+  2. `{slug}-overview` (only if deployment isn't created)
+- Plan any required TOC cleanup so no TOC item points to the deleted file.
+
 ### Overview content
 Extract and document:
 - One-paragraph description of the connector and what it enables
@@ -135,3 +147,5 @@ For each file to be created, provide a complete outline:
 | Create | `copilot-connectors/{slug}-troubleshooting.md` | `connectorname-troubleshooting-template.md` |
 | Create | `copilot-connectors/{slug}-admin-setup.md` | `connectorname-admin-setup.md` (if applicable) |
 | Update | `copilot-connectors/TOC.yml` | — |
+| Delete (if exists) | `copilot-connectors/{slug}-connector.md` | — |
+| Update (if deleted) | `.openpublishing.redirection.json` | — |
