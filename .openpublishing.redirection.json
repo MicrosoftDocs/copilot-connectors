@@ -44,6 +44,16 @@
       "source_path_from_root": "/copilot-connectors/datastax-connector.md",
       "redirect_url": "/microsoft-365/copilot/connectors/datastax-deployment",
       "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/salesforce-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/salesforce-crm-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/troubleshoot-salesforce-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/salesforce-crm-troubleshooting",
+      "redirect_document_id": true
     }
   ]
 }

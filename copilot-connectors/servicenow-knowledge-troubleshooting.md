@@ -1,5 +1,5 @@
 ---
-ms.date: 04/08/2026
+ms.date: 06/10/2026
 title: "Troubleshoot issues with the ServiceNow Knowledge connector"
 ms.author: lauragra
 author: lauragra
@@ -33,7 +33,10 @@ To troubleshoot this issue, try the following steps:
     :::image type="content" source="media/servicenow-knowledge-troubleshooting/error-tab.png" alt-text="Screenshot of the Error tab showing mapping problems with 2006 error code.":::
 
 
-1. Check whether an advanced script in any of the user criteria grants access to the article. Advanced scripts aren't currently supported. If you're using advanced scripts, be sure to select **Advanced flow** when you set up the connection and [Set up the REST API](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
+1. Check whether an advanced script in any of the user criteria affects access to the article. In **Simple** flow, advanced script-based user criteria aren't evaluated. If you're using advanced scripts, be sure to select **Advanced flow** when you set up the connection and [Set up the REST API](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
+
+
+    Pay particular attention to the **Cannot Read** (deny) path. In **Simple** flow, an advanced script-based user criterion under **Cannot Read** can't be evaluated, so the connector conservatively treats it as *deny all* and hides the article from all users. This is expected fail-safe behavior, not a bug. To evaluate these criteria correctly, switch to **Advanced flow**.
 
 1. Use the [User criteria diagnostics](https://docs.servicenow.com/bundle/washingtondc-servicenow-platform/page/product/knowledge-management/concept/diagnose-knowledge-user-criteria.html) tool in ServiceNow to see if the service account has access to the item in ServiceNow.
 
@@ -153,48 +156,6 @@ Sometimes content access is restricted because the service account can't read al
 
 :::image type="content" source="media/servicenow-knowledge-troubleshooting/user-criteria.png" alt-text="Screenshot of user criteria showing the use of gs.getUserId() function." lightbox="media/servicenow-knowledge-troubleshooting/user-criteria.png":::
 
-Also, if you're experiencing performance issues related to the use of the `getAllUserCriteria()` function or are concerned about using a deprecated API, consider using the following alternative script when you [Set up the REST API](/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup#set-up-rest-api).
-
-```javascript
-(function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
-   // Get query parameters from the request
-   var queryParams = request.queryParams;
-   // Extract the 'user' sys_id, ensure it's a string or null if not provided
-   var userSysId = queryParams.user ? String(queryParams.user) : null;
-   var result = []; // Initialize an empty array for the results
-   // Check if userSysId was provided
-   if (!userSysId) {
-       gs.warn("UserCriteriaLoader API: 'user' parameter was not provided in the request.");
-       response.setStatus(400);
-       return { "error": "User sys_id is required." };
-   }
-   try {
-       // Instantiate the UserCriteriaLoader
-       var userCriteriaLoader = new sn_uc.UserCriteriaLoader();
-       var userCriterias = [];
-       var userCriteriaGr = new GlideRecord('user_criteria');
-       userCriteriaGr.addQuery('active', true); // Select active records
-       userCriteriaGr.query();
-       while (userCriteriaGr.next()) {
-           userCriterias.push(userCriteriaGr.getUniqueValue());
-       }
-       // Call the recommended API to get only matching criteria sys_ids
-       var matchingCriteriaIds = sn_uc.UserCriteriaLoader.getMatchingCriteria(userSysId, userCriterias);
-       // Return the array of matching criteria objects
-       return matchingCriteriaIds;
-   } catch (e) {
-       // Log any errors that occur during the process
-       gs.error("UserCriteriaLoader API: Error processing user criteria for user " + userSysId + ". Error: " + e.message);
-       response.setStatus(500); // Internal Server Error
-       return {
-           error_message: "Error processing user criteria for user " + userSysId,
-           error_details: e.message
-       };
-   }
-})(request, response);
-```
-
-
 ## Unable to sign in due to single sign-on enabled ServiceNow instance
 
 If your organization uses single sign-on (SSO) to ServiceNow, you might have trouble signing in with the service account. You can bring up a username and password-based authentication by adding *login.do* to the ServiceNow instance URL. For example: `https://<your-organization-domain>.service-now.com./login.do`.
@@ -216,6 +177,8 @@ A forbidden or unauthorized response in connection status can occur for the foll
     | PROD | North America | 52.250.92.252/30, 52.224.250.216/30 |
     | PROD | Europe | 20.54.41.208/30, 51.105.159.88/30 |
     | PROD | Asia Pacific | 52.139.188.212/30, 20.43.146.44/30 |
+    | GCC | US Government | 52.235.252.161/30 |
+    | DoD | US Government | 52.182.52.25/30, 52.181.182.213/30 |
 
 ## Change the URL of the knowledge article
 

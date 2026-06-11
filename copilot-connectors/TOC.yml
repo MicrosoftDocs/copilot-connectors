@@ -465,12 +465,14 @@ items:
         href: postgresql-connector.md
     - name: Salesforce CRM
       items:
+      - name: Overview
+        href: salesforce-crm-overview.md
       - name: Set up the Salesforce service
         href: salesforce-crm-admin-setup.md
       - name: Deployment guide
-        href: salesforce-connector.md
+        href: salesforce-crm-deployment.md
       - name: Troubleshooting
-        href: troubleshoot-salesforce-connector.md
+        href: salesforce-crm-troubleshooting.md
     - name: Salesforce Knowledge
       items:
       - name: Setup

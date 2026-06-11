@@ -62,7 +62,7 @@ The connector supports the following authentication types:
 
 - **OAuth (Recommended)**: To use OAuth authentication:
 
-    - Install the [GitHub Issues GitHub app](https://github.com/apps/m365-connector-github-issues) in the GitHub organization.
+    - Install the [GitHub Knowledge GitHub app](https://github.com/apps/m365-connector-github-knowledge) in the GitHub organization.
     - Choose a display name that helps users recognize the connection.
     - Enter your organization name.
     - Choose **Authorize** to sign in and grant access.

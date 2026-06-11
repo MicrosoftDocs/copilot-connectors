@@ -136,6 +136,19 @@ After creating all content files, update `copilot-connectors/TOC.yml`:
 3. Include only the files that were created (do not add entries for files that don't exist).
 4. Use the exact YAML structure from the content plan's "TOC entry" section.
 
+## Legacy connector file removal and redirect
+
+Before finishing, check whether a legacy single-file connector article exists for the same connector in `copilot-connectors/` (for example, `{slug}-connector.md`).
+
+If it exists:
+1. Delete the legacy file.
+2. Update `.openpublishing.redirection.json` by adding a redirection entry:
+  - `source_path_from_root`: `/copilot-connectors/{legacy-file-name}.md`
+  - `redirect_url`: `/microsoft-365/copilot/connectors/{slug}-deployment`
+  - `redirect_document_id`: `true`
+3. If `{slug}-deployment.md` was not created, redirect to `/microsoft-365/copilot/connectors/{slug}-overview` instead.
+4. Remove any TOC references to the deleted legacy file.
+
 ## Quality checks before finishing
 
 Before reporting completion, verify each file:
@@ -147,5 +160,6 @@ Before reporting completion, verify each file:
 - No double blank lines.
 - The properties table (in the deployment file) uses the correct column headers.
 - The TOC entry is correctly placed and formatted.
+- Any replaced legacy connector file is deleted and has a redirection entry in `.openpublishing.redirection.json`.
 
 If you find issues, fix them before marking the file complete.

@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
-ms.date: 05/20/2026
+ms.date: 06/10/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the PagerDuty Incidents Microsoft 365 Copilot connector."
 ---
@@ -30,6 +30,7 @@ You might encounter the following errors when you deploy the PagerDuty Incidents
 | Connection settings | Your security credentials have expired for this session. Please go back and sign in again with your Client ID and Client Secret. | The OAuth credentials expired. | Create a new app in the PagerDuty app registration settings. Copy the latest Client ID and Client Secret from the settings tab to authenticate. For more information, see [Register an App](https://developer.pagerduty.com/docs/register-an-app). |
 | Connection settings | Invalid credentials detected. Please check the credential info and check the permission scopes of the PagerDuty App. | The Client ID or Client Secret is incorrect, or the app doesn't have the required permission scopes. | Go to the PagerDuty app registration settings and verify that the Client ID and Client Secret are correct. Ensure the app has the following scopes enabled: Audit Records (Read), Schedules (Read), Teams (Read), Users (Read), Incidents (Read), and Incident Types (Read). |
 | Crawl | Items aren't indexed or the item count is lower than expected. | The **Since (Month)** content filter might be set to a short time range, or the PagerDuty account has restricted access to certain incidents. | Adjust the **Since (Month)** parameter in the content filter settings to include a wider date range. Verify that the authenticated PagerDuty account has access to the incidents you expect to be indexed. |
+| Crawl | Can't update the data, beacuse the data source is throttling the connector. | Each PagerDuty App is allowed 960 requests per minute against each PagerDuty Account it's authorized to access. For more information, see [REST API Rate Limits](https://developer.pagerduty.com/docs/rest-api-rate-limits).  |Copilot connector automatically resumes the crawl after the rate limit time window expires. No other action is needed. |
 
 ### Redirect URL mismatch
 

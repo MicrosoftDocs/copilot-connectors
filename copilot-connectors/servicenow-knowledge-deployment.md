@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 05/15/2026
+ms.date: 06/10/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Knowledge Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -59,6 +59,9 @@ For more information, see [Enhance Copilot discovery of connector content](enhan
 The ServiceNow Knowledge connector supports two flows for user criteria permissions: **Simple** (default) and **Advanced**. Both flows evaluate knowledge base (parent)-level and article (child)-level user criteria.
 
 The default is **Simple**. In this flow, advanced script-based user criteria aren't evaluated.
+
+> [!IMPORTANT]
+> If an advanced script-based user criterion exists on the **Cannot Read** (deny) path of a knowledge base or article, the **Simple** flow can't evaluate the script to determine which users it denies. To avoid oversharing restricted content, the connector conservatively treats the criterion as *deny all*, so the affected knowledge base or article content is blocked for **all** users in Copilot and search results. This is expected fail-safe behavior—not a bug or misconfiguration. To evaluate these criteria correctly and surface the articles to the right users, use the **Advanced** flow and [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api).
 
 If your ServiceNow instance uses **Advanced Scripts** in your knowledge base or article-level user criteria, use the **Advanced** flow. This flow evaluates script-based user criteria by calling the Scripted REST API in ServiceNow, which ensures accurate permissions handling when content is ingested into Microsoft Graph. For the **Advanced** option to work properly, you need to [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api).
 
@@ -425,8 +428,7 @@ Configure the sync schedule to keep indexed content up to date:
 
 > [!IMPORTANT]
 > - Identities (group memberships created between users and user criteria) are only updated during full crawls. Incremental crawls don't update identities or group memberships.
-> - During the first full crawl, identity sync (such as reading users, user criteria, and mapping of users to user criteria such as group memberships) runs first, followed by content sync. This ensures that the right permissions are mapped to the ingested items.
-> - During subsequent periodic full crawls, content and identity sync happens in parallel. The periodic full crawl is complete when both content and identity sync is finished.
+> - During a full crawl, including the first full crawl, content sync and identity sync (such as reading users, user criteria, and mapping of users to user criteria such as group memberships) run in parallel. The full crawl is complete when both content sync and identity sync are finished.
 > -  The periodic full crawls are faster than the first full crawls because the first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Periodic full crawls recrawl all content and recompute permissions, but ingestion is faster because items already exist in the index. Identity sync uses differential updates, only pushing membership changes to Microsoft Graph. 
 
 For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
