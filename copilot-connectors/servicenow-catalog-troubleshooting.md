@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
-ms.date: 02/23/2026
+ms.date: 06/10/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the ServiceNow Catalog Copilot connector."
 ---
@@ -88,47 +88,6 @@ Sometimes content access might be restricted because the service account doesn't
 
 :::image type="content" source="media/servicenow-catalog-troubleshooting/script.png" alt-text="Screenshot of a script with instructions for implementing a specific user criteria evaluation, including guidelines to avoid certain functions and use a specific variable.":::
 
-If you're experiencing performance issues related to the use of the `getAllUserCriteria()` function or are concerned about using a deprecated API, consider using the following alternative script when you [Set up the REST API](servicenow-catalog-admin-setup.md#set-up-rest-api).
-
-```javascript
-(function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
-   // Get query parameters from the request
-   var queryParams = request.queryParams;
-   // Extract the 'user' sys_id, ensure it's a string or null if not provided
-   var userSysId = queryParams.user ? String(queryParams.user) : null;
-   var result = []; // Initialize an empty array for the results
-   // Check if userSysId was provided
-   if (!userSysId) {
-       gs.warn("UserCriteriaLoader API: 'user' parameter was not provided in the request.");
-       response.setStatus(400);
-       return { "error": "User sys_id is required." };
-   }
-   try {
-       // Instantiate the UserCriteriaLoader
-       var userCriteriaLoader = new sn_uc.UserCriteriaLoader();
-       var userCriterias = [];
-       var userCriteriaGr = new GlideRecord('user_criteria');
-       userCriteriaGr.addQuery('active', true); // Select active records
-       userCriteriaGr.query();
-       while (userCriteriaGr.next()) {
-           userCriterias.push(userCriteriaGr.getUniqueValue());
-       }
-       // Call the recommended API to get only matching criteria sys_ids
-       var matchingCriteriaIds = sn_uc.UserCriteriaLoader.getMatchingCriteria(userSysId, userCriterias);
-       // Return the array of matching criteria objects
-       return matchingCriteriaIds;
-   } catch (e) {
-       // Log any errors that occur during the process
-       gs.error("UserCriteriaLoader API: Error processing user criteria for user " + userSysId + ". Error: " + e.message);
-       response.setStatus(500); // Internal Server Error
-       return {
-           error_message: "Error processing user criteria for user " + userSysId,
-           error_details: e.message
-       };
-   }
-})(request, response);
-```
-
 ## Unable to sign in due to SSO enabled ServiceNow instance
 
 If your organization enabled single sign-on (SSO) for ServiceNow, you might encounter authentication issues with the service account. To bypass SSO and use username/password authentication, append `/login.do` to your ServiceNow instance URL, as shown in the following example.
@@ -154,6 +113,8 @@ If your ServiceNow instance is behind a firewall, the connector might not reach 
 | PROD | North America | 52.250.92.252/30, 52.224.250.216/30| 
 | PROD        | Europe         | 20.54.41.208/30, 51.105.159.88/30   |
 | PROD        | Asia Pacific   | 52.139.188.212/30, 20.43.146.44/30  |
+| GCC       | US Government  | 52.235.252.161/30                   |
+| DoD         | US Government  | 52.182.52.25/30, 52.181.182.213/30  |
 
 ### Access permissions not working as expected
 

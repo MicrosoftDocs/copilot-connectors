@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 04/08/2026
+ms.date: 06/10/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Knowledge Copilot connector."
 ---
@@ -128,6 +128,8 @@ To connect to ServiceNow and allow the ServiceNow Knowledge connector to update 
 |  | cmn_location** | Read location information |
 |  | cmn_department** | Read department information |
 |  | core_company** | Read company attributes |
+|   Index knowledge blocks | kb_knowledge_block | Read knowledge block records, including their content, user criteria, and metadata |
+|  | m2m_kb_knowledge_to_block | Read the many-to-many mapping that links knowledge articles to their embedded blocks |
 
 \** Access to these tables is only required when you choose the simple flow. If you choose advanced flow for reading user criteria, you don't need access to these tables.
 
@@ -243,13 +245,42 @@ Add a resource to the API:
 
     ```js
     (function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
-        var queryParams = request.queryParams;
-        var user = new String(queryParams.user);
-        return (new sn_uc.UserCriteriaLoader()).getAllUserCriteria(user);
+       // Get query parameters from the request
+       var queryParams = request.queryParams;
+       // Extract the 'user' sys_id, ensure it's a string or null if not provided
+       var userSysId = queryParams.user ? String(queryParams.user) : null;
+       var result = []; // Initialize an empty array for the results
+       // Check if userSysId was provided
+       if (!userSysId) {
+           gs.warn("UserCriteriaLoader API: 'user' parameter was not provided in the request.");
+           response.setStatus(400);
+           return { "error": "User sys_id is required." };
+       }
+       try {
+           // Instantiate the UserCriteriaLoader
+           var userCriteriaLoader = new sn_uc.UserCriteriaLoader();
+           var userCriterias = [];
+           var userCriteriaGr = new GlideRecord('user_criteria');
+           userCriteriaGr.addQuery('active', true); // Select active records. You can also add any connection scope filter if required
+           userCriteriaGr.query();
+           while (userCriteriaGr.next()) {
+               userCriterias.push(userCriteriaGr.getUniqueValue());
+           }
+           // Call the recommended API to get only matching criteria sys_ids
+           var matchingCriteriaIds = sn_uc.UserCriteriaLoader.getMatchingCriteria(userSysId, userCriterias);
+           // Return the array of matching criteria objects
+           return matchingCriteriaIds;
+       } catch (e) {
+           // Log any errors that occur during the process
+           gs.error("UserCriteriaLoader API: Error processing user criteria for user " + userSysId + ". Error: " + e.message);
+           response.setStatus(500); // Internal Server Error
+           return {
+               error_message: "Error processing user criteria for user " + userSysId,
+               error_details: e.message
+           };
+       }
     })(request, response);
     ```
-> [!NOTE]
-> The `getAllUserCriteria()` function is deprecated due to potential performance problems. For an alternative script that you can use, see [Issue reading all user criteria from ServiceNow](/microsoft-365/copilot/connectors/servicenow-knowledge-troubleshooting#issue-reading-all-user-criteria-from-servicenow). 
 
 1. Make sure both of the following options are checked:
    - **Requires authentication**

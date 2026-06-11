@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 03/10/2026 
+ms.date: 06/10/2026 
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Catalog Copilot connector."
 ---
@@ -219,14 +219,43 @@ Add a resource to the API:
     **Script**: Paste the following code: 
 
     ```javascript
-     (function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {   
-         var queryParams = request.queryParams;   
-         var user = new String(queryParams.user);   
-         return (new sn_uc.UserCriteriaLoader()).getAllUserCriteria(user);   
-     })(request, response);  
-    ```   
-> [!NOTE]
-> The `getAllUserCriteria()` function is deprecated due to potential performance issues. For an alternative script that you can use, see [Issue reading all user criteria from ServiceNow](/microsoft-365/copilot/connectors/servicenow-catalog-troubleshooting#issue-reading-all-user-criteria-from-servicenow). 
+    (function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+       // Get query parameters from the request
+       var queryParams = request.queryParams;
+       // Extract the 'user' sys_id, ensure it's a string or null if not provided
+       var userSysId = queryParams.user ? String(queryParams.user) : null;
+       var result = []; // Initialize an empty array for the results
+       // Check if userSysId was provided
+       if (!userSysId) {
+           gs.warn("UserCriteriaLoader API: 'user' parameter was not provided in the request.");
+           response.setStatus(400);
+           return { "error": "User sys_id is required." };
+       }
+       try {
+           // Instantiate the UserCriteriaLoader
+           var userCriteriaLoader = new sn_uc.UserCriteriaLoader();
+           var userCriterias = [];
+           var userCriteriaGr = new GlideRecord('user_criteria');
+           userCriteriaGr.addQuery('active', true); // Select active records. You can also add any connection scope filter if required
+           userCriteriaGr.query();
+           while (userCriteriaGr.next()) {
+               userCriterias.push(userCriteriaGr.getUniqueValue());
+           }
+           // Call the recommended API to get only matching criteria sys_ids
+           var matchingCriteriaIds = sn_uc.UserCriteriaLoader.getMatchingCriteria(userSysId, userCriterias);
+           // Return the array of matching criteria objects
+           return matchingCriteriaIds;
+       } catch (e) {
+           // Log any errors that occur during the process
+           gs.error("UserCriteriaLoader API: Error processing user criteria for user " + userSysId + ". Error: " + e.message);
+           response.setStatus(500); // Internal Server Error
+           return {
+               error_message: "Error processing user criteria for user " + userSysId,
+               error_details: e.message
+           };
+       }
+    })(request, response);
+    ```
 
 1.  Make sure both of the following are checked: 
 
