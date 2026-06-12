@@ -651,23 +651,23 @@ items:
   - name: Build custom synced connectors
     items:
     - name: Build with Agents Toolkit
-      href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=/microsoft-365/copilot/connectors/context
+      href: /microsoft-365-copilot/extensibility/build-your-first-connector?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
     - name: Build with SDK
-      href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365/copilot/connectors/context 
+      href: /graph/custom-connector-sdk-sample-overview?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
     - name: Use the Copilot connectors API
       items:
       - name: Overview
-        href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365/copilot/connectors/context
+        href: /graph/connecting-external-content-connectors-api-overview?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
       - name: Manage connections
-        href: /graph/connecting-external-content-manage-connections?context=/microsoft-365/copilot/connectors/context
+        href: /graph/connecting-external-content-manage-connections?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
       - name: Manage schema
-        href: /graph/connecting-external-content-manage-schema?context=/microsoft-365/copilot/connectors/context
+        href: /graph/connecting-external-content-manage-schema?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
       - name: Manage items
-        href: /graph/connecting-external-content-manage-items?context=/microsoft-365/copilot/connectors/context
+        href: /graph/connecting-external-content-manage-items?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
       - name: Use external groups
-        href: /graph/connecting-external-content-external-groups?context=/microsoft-365/copilot/connectors/context
+        href: /graph/connecting-external-content-external-groups?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
     - name: Delegate connector administration
-      href: /microsoft-365/copilot/extensibility/connector-admin-delegation?context=/microsoft-365/copilot/connectors/context
+      href: /microsoft-365/copilot/extensibility/connector-admin-delegation?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
 - name: Set up federated connectors
   items:
   - name: Overview
@@ -678,6 +678,8 @@ items:
     href: set-up-custom-federated-connectors.md
   - name: Submit a federated connector
     href: submit-federated-connector.md
+  - name: Terms and conditions
+    href: /legal/m365-copilot-fcc-connectors/federated-connectors-terms?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
 - name: Configure Microsoft 365 Copilot extension
   href: copilot-extension.md
 - name: Manage connections
