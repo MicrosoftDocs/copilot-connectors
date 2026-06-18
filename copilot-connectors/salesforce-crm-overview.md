@@ -1,91 +1,116 @@
 ---
+ms.date: 6/18/2026
 title: "Salesforce CRM connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
-ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 06/05/2026
-ms.localizationpriority: Medium
-description: "Learn about the capabilities, limitations, and use cases for the Salesforce CRM Microsoft 365 Copilot connector."
+ms.localizationpriority: medium
+description: "Learn about the capabilities, limitations, and use cases for the Salesforce CRM Copilot connector."
 ---
 
 # Salesforce CRM connector overview
 
-The Salesforce CRM Microsoft 365 Copilot connector enables your organization to index Salesforce records, such as accounts, contacts, leads, opportunities, and cases, so users can discover that content in Microsoft 365 Copilot and Microsoft Search experiences.
+The Salesforce CRM Microsoft 365 Copilot connector integrates Salesforce data into Microsoft 365. This integration enables Copilot, Copilot Search, and Microsoft Search to surface CRM records directly within apps like Teams, Outlook, and SharePoint.
+
+When you configure the Salesforce CRM connector for your organization and index data from Salesforce, users can search for contacts, opportunities, leads, cases, and accounts in Microsoft Search, Microsoft 365 Copilot, and Copilot Search. The connector bridges the gap between CRM data and daily productivity tools, delivering faster pipeline reviews, improved customer context, and streamlined cross-team collaboration.
 
 ## Why use the Salesforce CRM connector to index your data?
 
-Organizations use the Salesforce CRM connector to bring customer and pipeline data into daily Microsoft 365 workflows.
+Organizations that rely on Salesforce CRM for customer relationship management often face knowledge silos: sales reps search in Salesforce while the rest of the company works in Microsoft 365. The Salesforce CRM Copilot connector addresses this gap by surfacing CRM records in the tools employees already use. Copilot can then answer questions about accounts, deals, and cases without users switching context.
 
-Common use cases include:
+The Salesforce CRM Copilot connector provides the following benefits:
 
-- Help sellers and account teams quickly find customer records and deal context in Copilot.
-- Surface case and account details to support and operations teams without switching apps.
-- Improve cross-team visibility by making CRM records searchable in Microsoft 365.
-- Support scenario-based prompting and agent experiences that rely on Salesforce business data.
+- **Accelerates deal velocity** - Sales teams pull opportunity details, contact history, and account context into Teams conversations and Outlook emails without leaving their flow of work.
+- **Improves customer service** - Support agents retrieve open cases, account relationships, and historical resolutions through Copilot, reducing time-to-resolution.
+- **Enables data-driven decisions** - Managers and executives get immediate answers about pipeline, case backlog, and lead status grounded in live Salesforce data.
+- **Strengthens cross-team collaboration** - Marketing, finance, and operations teams discover relevant CRM records when building campaigns, forecasts, or account plans.
+- **Reduces context switching** - Employees access Salesforce data directly within Microsoft 365 apps, eliminating the need to open and search Salesforce separately.
+- **Preserves security and compliance** - The connector respects Salesforce record-level access controls, ensuring that users only see CRM data they have permission to access in Copilot and Search results.
 
 ## Build agents with the Salesforce CRM connector
 
-Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
+Developers can use this connector as a knowledge source in declarative agents they build with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
 ### Example prompts
 
-The following examples show prompts that users can use to retrieve information from Salesforce CRM.
+The following examples show prompts that agent builders can use to help their users retrieve information from Salesforce CRM.
 
-- Summarize open opportunities for Contoso and list next steps.
-- Show active support cases for Fabrikam and include owners and priorities.
-- Find leads created in the last 30 days that are assigned to my team.
-- List accounts with opportunities closing this quarter and show deal stage.
-- Retrieve the latest activity for the top five opportunities by amount.
+**Account and contact lookups**
 
-## Salesforce CRM connector capabilities and limitations
+- Pull up the account for Pinnacle Health Systems.
+- Find the contact Sarah Mitchell.
+- What industry is Grand Hotels & Resorts Ltd in?
+- Give me the name, title, and email for all contacts at United Oil.
 
-The Salesforce CRM connector enables users to:
+**Opportunity tracking**
 
-- Search Salesforce accounts, contacts, leads, opportunities, and cases from Copilot and Microsoft Search.
-- Apply data inclusion filters to control which Salesforce records are indexed.
-- Preserve source permissions through access-control and identity mapping options.
-- Configure crawl intervals for incremental and full refreshes.
-- Use connector content in Copilot-based agents and workflow experiences.
+- What stage is the Dickenson Mobile Generators opportunity in?
+- Show me opportunities for Express Logistics and Transport with their stage and amount.
+- Which opportunities are in the Negotiation/Review stage?
+
+**Case management**
+
+- Tell me about case 00001005 for Pinnacle Health Systems.
+- Show me cases with status Escalated for Pinnacle Health Systems.
+- Show me Mechanical type cases for Pinnacle Health Systems.
+
+**Lead tracking**
+
+- Find the lead Karen Foster.
+- Which leads have a status of Working - Contacted?
+- Show me leads from the Agriculture industry with a Hot rating.
+
+**Custom fields (requires custom field configuration)**
+
+- What is the product on case 00001001?
+- Show me all cases on the GC1060 product.
+- Which cases have both SLA violation and potential liability flagged?
+
+## Connector capabilities and limitations
+
+The Salesforce CRM connector has the following key capabilities:
+
+- **Indexes core CRM objects** - Crawls standard Salesforce objects including Account, Contact, Opportunity, Lead, and Case. For the full list, see [Data types indexed from Salesforce CRM](#data-types-indexed-from-salesforce-crm).
+- **Supports custom fields** - Admins can select custom fields (fields ending in `__c`) and standard fields not included in the default schema. For configuration steps, see [Add properties](salesforce-crm-deployment.md#add-properties).
+- **Respects Salesforce permissions** - The connector honors Salesforce record-level sharing rules and object permissions. Users only see records they have access to in Salesforce.
 
 The Salesforce CRM connector has the following limitations:
 
-- It doesn't honor visibility permissions applied through managed permission sets or permission set groups.
-- It doesn't support Apex-based sharing, territory-based sharing, or personal-group sharing.
-- A known Salesforce API issue can affect private org-wide defaults for leads.
-- Field-level security (FLS) restricted fields aren't indexed by default unless an admin explicitly opts in.
-
-## Custom data filters
-
-The Salesforce CRM connector includes the following custom data filters for Copilot Search:
-
-- Modified time period to index records created or changed within a rolling time window.
-- A Salesforce Object Query Language (SOQL) `WHERE` clause to include only matching records.
+- **Field-level security (FLS) not honored when opted in** - FLS-restricted fields are excluded from indexing by default. If you opt in to index FLS-restricted fields, the connector doesn't enforce Salesforce FLS when showing results, so review carefully before enabling. For configuration steps, see [Include FLS-restricted fields](salesforce-crm-deployment.md#include-fls-restricted-fields).
+- **Limited object coverage** - The connector currently indexes Account, Contact, Opportunity, Lead, and Case objects. Support for additional standard objects is on the roadmap. If you need a specific object included, contact Microsoft support. This documentation will be updated when new object support is released.
+- **Comments and attachments not indexed by default** - Comments and attachments on records are in private preview. Because this content can introduce noise that affects core use cases, it is not included by default. Admins can selectively enable comments and attachments in the **Manage properties** section.
+- **API usage during crawls** - Full crawls consume Salesforce API quota. Consider scheduling full crawls during off-peak hours or weekends, especially for orgs with large record volumes, to avoid impacting daily operations or exhausting API limits.
 
 ## Data types indexed from Salesforce CRM
 
-By default, the connector indexes these Salesforce object types:
+The Salesforce CRM connector indexes the following Salesforce objects so they can be used in Copilot, Copilot Search, and Microsoft Search.
 
-- Accounts
-- Contacts
-- Leads
-- Opportunities
-- Cases
-
-Indexed content appears in Microsoft 365 Copilot and Microsoft Search for users who have access to the source records.
+| Salesforce object | Description |
+| ----------------- | ----------- |
+| **Account** | Company or organization records, including industry, revenue, address, and ownership details. |
+| **Contact** | People associated with accounts, including name, title, email, phone, and mailing address. |
+| **Opportunity** | Sales deals, including stage, amount, close date, probability, and associated account. |
+| **Lead** | Prospective customers not yet converted to contacts or opportunities, including source, status, and company. |
+| **Case** | Support tickets, including subject, description, priority, status, and associated account or contact. |
 
 ## Permissions model and access control
 
-The Salesforce CRM connector supports permission-aware results through configurable access settings:
+You can configure the Salesforce CRM connector to enforce that only users who have access to a Salesforce record can see it in Copilot responses and search results. The system uses the Salesforce access control list (ACL) based on record-level sharing rules.
 
-- **Visible to everyone** shows indexed content to all users in the tenant.
-- **Only people with access to this data source** uses Salesforce ACLs and identity mapping.
+The connector supports the following access configurations:
 
-Admins can map Microsoft Entra identities and non-Microsoft Entra identities to align Salesforce permissions with Microsoft 365 access control.
+- **Only people with access to this data source** (default) - The connector enforces Salesforce record ownership, sharing rules, and role hierarchy. Users only see records they can access in Salesforce. Identity mapping (Microsoft Entra ID or non-Entra ID) determines which Microsoft 365 user corresponds to each Salesforce user.
+
+- **Everyone** - All indexed Salesforce data is searchable by any user in the tenant. Use this option for non-confidential CRM data that should be broadly accessible.
+
+For identity mapping configuration, see [Set up the Salesforce service for connector ingestion](salesforce-crm-admin-setup.md#define-identity-mapping).
+
+> [!NOTE]
+> Updates to groups governing access permissions sync in full crawls only. Incremental crawls don't support processing of updates to permissions.
 
 ## Next step
 
