@@ -6,7 +6,7 @@ ms.service: copilot-connectors
 author: lauragra
 ms.author: lauragra
 manager: calvind
-ms.date: 12/02/2025
+ms.date: 6/18/2026
 ms.localizationpriority: Medium
 ---
 
@@ -65,8 +65,11 @@ The connector supports the following authentication types:
     > [!NOTE]
     > This authentication method is currently in preview.
 
-- **Customized GitHub app (on behalf of user)**: Enter your client ID and client secret from the GitHub app and authorize access.
 - **Customized GitHub app (installation)**: Use a private key generated from your GitHub app. Enter the client ID and organization name, and upload the private key.
+- **Customized GitHub app (on behalf of user) (deprecated)**: Enter your client ID and client secret from the GitHub app and authorize access.
+
+    > [!WARNING]
+    > This authentication method is deprecated and isn't recommended for new connections. Use OAuth or the Customized GitHub app (installation) method instead.
 
 For information about how to create a GitHub app, see [Use a custom GitHub app for authentication](github-cloud-pull-requests-admin-setup.md#use-a-custom-github-app-for-authentication-optional).
 
