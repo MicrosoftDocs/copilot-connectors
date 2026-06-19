@@ -6,7 +6,7 @@ ms.author: lauragra
 manager: calvind
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 06/05/2026
+ms.date: 6/18/2026
 ---
 
 # Set up the Salesforce service for Salesforce CRM connector ingestion
@@ -23,7 +23,7 @@ Before you configure the service, make sure you have:
 
 - A Salesforce account with **System Administrator** privileges.
 - API access enabled for the account.
-- Permissions to create and manage connected apps in Salesforce.
+- Permissions to create and manage External Client Apps in Salesforce.
 - Access to the Microsoft 365 admin center.
 
 ## Setup checklist
@@ -34,7 +34,7 @@ The following checklist lists the steps involved in configuring the environment 
 |------|------|
 | [Identify Salesforce instance URL](#identify-the-salesforce-instance-url) | Salesforce CRM admin |
 | [Enable API access](#enable-api-access) | Salesforce CRM admin |
-| [Create connected app](#create-a-connected-app) | Salesforce CRM admin |
+| [Create an External Client App](#create-an-external-client-app) | Salesforce CRM admin |
 | [Configure refresh token policy](#configure-refresh-token-policy) | Salesforce CRM admin |
 | [Define identity mapping](#define-identity-mapping) | Salesforce CRM admin |
 | [Determine data ingestion filters](#determine-data-to-ingest) | Salesforce CRM admin |
@@ -44,7 +44,7 @@ The following checklist lists the steps involved in configuring the environment 
 
 To connect to your Salesforce instance, you need your organization's Salesforce instance URL.
 
-- In Salesforce, go to **Settings** > **Company Settings** > **My Domain** > **My Domain URL**. 
+- In Salesforce, go to **Settings** > **Company Settings** > **My Domain** > **My Domain URL**.
 - The URL format is: `https://<your-organization>.my.salesforce.com`. For example: `https://contoso.my.salesforce.com`
 
 ## Enable API access
@@ -61,39 +61,56 @@ Make sure that the connector account has API access:
     - **Standard object permissions**:
        - Read and View All for Accounts, Cases, Contacts, Leads, and Opportunities.
 
-## Create a connected app
+## Create an External Client App
 
-Set up a connected app for OAuth 2.0 authentication:
+Set up an External Client App for OAuth 2.0 authentication. External Client Apps are Salesforce's current framework for registering OAuth integrations (replacing the deprecated Connected App model).
 
-1. Sign in to Salesforce and go to **Setup > Apps > App Manager**.
-1. Select **New Connected App**.
-1. In the API section:
-    - Enable **OAuth settings**.
-    - Set the **Callback URL**:
-       - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
-       - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
-    - Select required OAuth scopes:
-       - Access and manage your data (API)
-       - Perform requests on your behalf at any time (refresh_token, offline_access)
-    - Uncheck **Require PKCE Extension**.
-    - Check **Require secret for web server flow**.
-1. Save the app.
+1. Sign in to Salesforce and go to **Setup**.
+1. Go to **Apps** > **External Client Apps** > **External Client App Manager**.
+1. Select **New External Client App** (top-right).
+1. Fill in the required fields:
+    - **External Client App Name**: Enter a descriptive name (for example, `M365CopilotConnector`).
+    - **Contact Email**: Enter the email address of the Salesforce admin managing this integration.
+1. Select **Create**.
+
+### Configure OAuth settings
+
+1. On the External Client App detail page, select the **Settings** tab.
+1. Select **Edit** (top-right of the Settings panel).
+1. Expand the **OAuth Settings** section.
+1. Check **Enable OAuth Settings**. Additional fields appear.
+1. Set the **Callback URL**:
+    - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
+    - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+1. Move the following scopes from **Available OAuth Scopes** to **Selected OAuth Scopes**:
+    - Manage user data via APIs (api)
+    - Perform requests at any time (refresh_token, offline_access)
+1. Under **OAuth flows**, check **Enable Authorization Code and Credentials Flow**.
+1. Under the security section:
+    - Leave **Require Secret for Web Server Flow** checked (default).
+    - Clear **Require Proof Key for Code Exchange (PKCE)**.
+1. Select **Save**.
 
 ### Get client ID and secret
 
-To get the client ID and secret:
-
-1. Go to **Setup > Apps > App Manager**.
-1. Select the connected app and select **Manage Consumer Details**.
+1. On the External Client App detail page, in the OAuth Settings section, select **Consumer Key and Secret**.
+1. Complete the email verification if prompted (one-time per session).
 1. Copy the **Consumer Key** (client ID) and **Consumer Secret** (client secret).
+
+> [!NOTE]
+> The **Consumer Key and Secret** page requires email verification the first time you access it in a session. Salesforce sends a verification code to the contact email address configured for the app.
 
 ## Configure refresh token policy
 
 To prevent token expiration:
 
-1. Go to **Apps > App Manager**.
-1. Select your app, and select **Manage** > **Edit Policies**.
-1. Set **Refresh token policy** to **Refresh token is valid until revoked**.
+1. On the External Client App detail page, select the **Policies** tab.
+1. In the **OAuth Policies** section, locate **Refresh Token Policy**.
+1. Set the value to **Refresh token is valid until revoked**.
+1. Select **Save**.
+
+> [!IMPORTANT]
+> Without this setting, the refresh token expires (default 24 hours), which causes the connection to go stale and require manual re-authorization.
 
 ## Define identity mapping
 
@@ -114,6 +131,8 @@ If your Salesforce org uses field-level security to hide fields from specific pr
 
 - Confirm the Salesforce user account that signs in to the connector has permission to read FLS metadata. The **System Administrator** profile already includes this access. For custom profiles, ensure **View Setup and Configuration** and **View All Profiles** are enabled (see [Enable API access](#enable-api-access)).
 - Verify the FLS settings for the indexed objects and decide which FLS-restricted fields are safe to index in Microsoft 365 and which must stay excluded.
+
+For information about how to opt in to FLS-restricted fields in the Microsoft 365 admin center, see [Include FLS-restricted fields](salesforce-crm-deployment.md#include-fls-restricted-fields).
 
 ## Next step
 
