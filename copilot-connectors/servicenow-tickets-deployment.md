@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 05/15/2026
+ms.date: 06/10/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Tickets Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -423,8 +423,7 @@ You can change the default values for crawl frequency:
 Note the following points:
 
 - Identities (users and groups) or access permissions are only updated with full crawls. Incremental crawls don't update access permissions or group memberships. 
-- During the first full crawl, identity sync (reading users and permissions) runs first, followed by content sync, so the right permissions are mapped to the ingested items.  
-- During subsequent periodic full crawls, content and identity sync happens in parallel. The full crawl is complete when both content and identity sync are completed.  
+- During a full crawl, including the first full crawl, content sync and identity sync (reading users and permissions) run in parallel. The full crawl is complete when both content and identity sync are completed.  
 - The periodic full crawls are faster than the first full crawl because the first crawl includes first-time discovery and ingestion of users, permissions, and content items. Periodic full crawls only ingest the newly discovered items, users, and user criteria. 
 
 For more information about full and incremental crawls, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).

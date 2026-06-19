@@ -1,0 +1,5 @@
+### YamlMime: ContextObject
+
+# Maintains connectors docset TOC and breadcrumb context for cross-docset links.
+breadcrumb_path: ../breadcrumb/toc.yml
+toc_rel: ../toc.yml

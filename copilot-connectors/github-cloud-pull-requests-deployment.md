@@ -6,7 +6,7 @@ ms.service: copilot-connectors
 author: lauragra
 ms.author: lauragra
 manager: calvind
-ms.date: 12/02/2025
+ms.date: 6/18/2026
 ms.localizationpriority: Medium
 ---
 
@@ -57,7 +57,7 @@ The connector supports the following authentication types:
 
 - **OAuth (Recommended)**: To use OAuth authentication:
 
-    - Install the [GitHub Issues GitHub app](https://github.com/apps/m365-connector-github-issues) in the GitHub organization.
+    - Install the [GitHub Pull Requests GitHub app](https://github.com/apps/m365-connector-github-prs) in the GitHub organization.
     - Choose a display name that helps users recognize the connection.
     - Enter your organization name.
     - Choose **Authorize** to sign in and grant access.
@@ -65,10 +65,13 @@ The connector supports the following authentication types:
     > [!NOTE]
     > This authentication method is currently in preview.
 
-- **Customized GitHub app (on behalf of user)**: Enter your client ID and client secret from the GitHub app and authorize access.
 - **Customized GitHub app (installation)**: Use a private key generated from your GitHub app. Enter the client ID and organization name, and upload the private key.
+- **Customized GitHub app (on behalf of user) (deprecated)**: Enter your client ID and client secret from the GitHub app and authorize access.
 
-For information about how to create a GitHub app, see [Use a custom GitHub app for authentication](github-cloud-knowledge-admin-setup.md#use-a-custom-github-app-for-authentication-optional).
+    > [!WARNING]
+    > This authentication method is deprecated and isn't recommended for new connections. Use OAuth or the Customized GitHub app (installation) method instead.
+
+For information about how to create a GitHub app, see [Use a custom GitHub app for authentication](github-cloud-pull-requests-admin-setup.md#use-a-custom-github-app-for-authentication-optional).
 
 
 ### Roll out

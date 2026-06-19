@@ -80,6 +80,8 @@ To configure OAuth authentication:
 1. Paste the **Client ID** and **Client Secret** (provided by the Airtable admin) into the corresponding fields on the connector setup page.
 1. Choose **Authorize** and complete the OAuth flow with an Airtable account that has access to the bases you want to index.
 
+During the OAuth authorization flow, Airtable prompts you to select which bases and workspaces to grant access to. You can select **Add all resources**, **Add a base**, or **Add the organization** to define the scope of data that the connector can index.
+
 > [!NOTE]
 > You authorize access to the Airtable integration in a popup window. Make sure that your browser permits popup windows, or grants access if the popup is blocked.
 
@@ -147,18 +149,18 @@ You can add or remove available properties from your Airtable records, assign a 
 
 The following table lists the properties that the connector indexes by default.
 
-| Default property | Label | Description |
-|---|---|---|
-| baseId | `NA` | ID of the base that contains the record. |
-| baseName | `NA` | Name of the base that contains the record. |
-| content | `Content` | Concatenated content of the record's fields, used for full-text search. |
-| createdDateTime | `createdDateTime` | Date and time that the record was created. |
-| iconUrl | `IconUrl` | URL of the icon shown for the record in Copilot and search results. |
-| recordId | `NA` | ID of the record. |
-| recordUrl | `url` | Deep link to the record in Airtable. |
-| tableId | `NA` | ID of the table that contains the record. |
-| tableName | `NA` | Name of the table that contains the record. |
-| title | `Title` | Primary field of the record, used as the result title. |
+| Default property | Label | Description | Searchable | Queryable | Retrievable | Refinable |
+|---|---|---|---|---|---|---|
+| baseId | `NA` | ID of the base that contains the record. | No | Yes | Yes | Yes |
+| baseName | `NA` | Name of the base that contains the record. | Yes | Yes | Yes | Yes |
+| content | `Content` | Concatenated content of the record's fields, used for full-text search. | Yes | No | No | No |
+| createdDateTime | `createdDateTime` | Date and time that the record was created. | No | Yes | Yes | No |
+| iconUrl | `IconUrl` | URL of the icon shown for the record in Copilot and search results. | No | No | Yes | No |
+| recordId | `NA` | ID of the record. | Yes | Yes | Yes | No |
+| recordUrl | `url` | Deep link to the record in Airtable. | No | No | Yes | No |
+| tableId | `NA` | ID of the table that contains the record. | No | Yes | Yes | Yes |
+| tableName | `NA` | Name of the table that contains the record. | Yes | Yes | Yes | Yes |
+| title | `Title` | Primary field of the record, used as the result title. | Yes | Yes | Yes | No |
 
 ### Customize sync intervals
 

@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 06/03/2026
+ms.date: 06/12/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the PagerDuty Incidents Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -129,31 +129,31 @@ To view available properties, assign a schema to the property (define whether a 
 
 | Property | Semantic Label | Description | Schema Attributes |
 |---|---|---|---|
-| AcknowledgedBy | Not applicable | The users who acknowledged the incident. |  |
-| AssignedTo | Not applicable | The users assigned to the incident. |  |
-| ConferenceNumber | Not applicable | The conference number for the incident. |  |
-| ConferenceUrl | Not applicable | The conference URL for the incident. |  |
-| Content | `CONTENT` | The content of the incident. |  |
-| CreatedDateTime | `createdDateTime` | The time at which the incident was created. |  |
-| EscalationPolicyName | Not applicable | The name of the escalation policy associated with the incident. |  |
-| HtmlUrl | `url` | URL of the incident in PagerDuty. |  |
-| IconUrl | `IconUrl` |  |  |
-| Id | Not applicable | Unique ID of the incident. |  |
-| IncidentKey | Not applicable | The incident key. |  |
-| IncidentNumber | Not applicable | The incident number. |  |
-| IncidentType | Not applicable | The type of the incident. |  |
-| LastModifiedDateTime | `lastModifiedDateTime` | The time at which the incident was last modified. |  |
-| LastStatusChangeAt | Not applicable | The time at which the incident status was last changed. |  |
-| LastStatusChangeBy | Not applicable | The user who last changed the incident status. |  |
-| Priority | Not applicable | The priority of the incident. |  |
-| ResolveReason | Not applicable | The reason the incident was resolved. |  |
-| ResolvedAt | Not applicable | The time at which the incident was resolved. |  |
-| ServiceName | Not applicable | The name of the service associated with the incident. |  |
-| Status | Not applicable | The status of the incident. |  |
-| Summary | Not applicable | A short-form, server-generated string by PagerDuty that provides succinct, important information about the incident. |  |
-| Teams | Not applicable | The teams associated with the incident. |  |
-| Title | `title` | The title of the incident. |  |
-| Urgency | Not applicable | The urgency of the incident. |  |
+| AcknowledgedBy | Not applicable | The users who acknowledged the incident. | Query, Search, Retrieve |
+| AssignedTo | `assignedToPeople` | The users assigned to the incident. | Query, Search, Retrieve |
+| ConferenceNumber | Not applicable | The conference number for the incident. | Retrieve |
+| ConferenceUrl | Not applicable | The conference URL for the incident. | Retrieve |
+| Content | `CONTENT` | The content of the incident. | Search |
+| CreatedDateTime | `createdDateTime` | The time at which the incident was created. | Query, Retrieve |
+| EscalationPolicyName | Not applicable | The name of the escalation policy associated with the incident. | Search, Retrieve |
+| HtmlUrl | `url` | URL of the incident in PagerDuty. | Retrieve |
+| IconUrl | `iconUrl` | URL of the icon associated with the incident. | Retrieve |
+| Id | `secondaryId` | Unique ID of the incident. | Query, Search, Retrieve |
+| IncidentKey | Not applicable | The incident key. | Query, Retrieve |
+| IncidentNumber | Not applicable | The incident number. | Query, Retrieve |
+| IncidentType | `itemType` | The type of the incident. | Query, Retrieve |
+| LastModifiedDateTime | `lastModifiedDateTime` | The time at which the incident was last modified. | Query, Retrieve, Refine |
+| LastStatusChangeAt | Not applicable | The time at which the incident status was last changed. | Query, Retrieve |
+| LastStatusChangeBy | Not applicable | The user who last changed the incident status. | Search, Retrieve |
+| Priority | `priority` | The priority of the incident. | Query, Retrieve, Refine |
+| ResolveReason | Not applicable | The reason the incident was resolved. | Search, Retrieve |
+| ResolvedAt | `closedDate` | The time at which the incident was resolved. | Query, Retrieve |
+| ServiceName | Not applicable | The name of the service associated with the incident. | Search, Retrieve |
+| Status | `state` | The status of the incident. | Query, Retrieve, Refine |
+| Summary | Not applicable | A short-form, server-generated string by PagerDuty that provides succinct, important information about the incident. | Retrieve |
+| Teams | Not applicable | The teams associated with the incident. | Search, Retrieve |
+| Title | `title` | The title of the incident. | Search, Retrieve |
+| Urgency | `severity` | The urgency of the incident. | Query, Retrieve, Refine |
 
 ### Customize sync intervals
 

@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 02/23/2026
+ms.date: 06/10/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Knowledge Copilot connector."
 ---
@@ -62,11 +62,12 @@ The ServiceNow Knowledge connector has the following capabilities:
 - Supports customization of the ServiceNow URL in Copilot responses as needed for your organization.
 - Considers both knowledge base-level and article-level permissions (user criteria) when evaluating article permissions.
 - Supports evaluating permissions based on user criteria or role-based permissions. 
+- Indexes knowledge blocks—the reusable, modular content components embedded within knowledge articles—and evaluates their user criteria. Indexing knowledge blocks requires additional table permissions. For more information, see [Create service account and set up permissions to index items](servicenow-knowledge-admin-setup.md#create-service-account-and-set-up-permissions-to-index-items).
+- Indexes content contained in accordions within knowledge articles.
 
 The ServiceNow Knowledge connector has the following limitations:
 
 - The incremental crawl only updates the changed content or any addition or removal of user criteria to any article, not the changes in identity, such as changes in users or user criteria attributes. The identity sync happens only with a full crawl.
-- The connector doesn't support indexing of knowledge blocks and evaluation of their user criteria.
 
 ## Data types indexed from ServiceNow Knowledge
 

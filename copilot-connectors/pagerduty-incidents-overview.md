@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 05/20/2026
+ms.date: 06/18/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the PagerDuty Incidents Microsoft 365 Copilot connector."
 ---
@@ -84,6 +84,7 @@ The PagerDuty Incidents connector enables users to:
 
 The PagerDuty Incidents connector has the following limitations:
 
+- **Incident crawl cap** — The connector crawls only the 10,000 most recent incidents, sorted in descending order by their creation date and time.
 - **Focused on incidents** — The connector indexes PagerDuty incident data only. It doesn't index other PagerDuty objects such as services, on-call schedules, maintenance windows, or analytics reports.
 - **Regional API support** — The connector supports PagerDuty US and EU service regions. Ensure you use the correct REST API URL for your account's region.
 - **Permission updates latency** — Changes to user access in PagerDuty aren't reflected immediately in the Copilot index. Permission changes are picked up during the next full crawl cycle.

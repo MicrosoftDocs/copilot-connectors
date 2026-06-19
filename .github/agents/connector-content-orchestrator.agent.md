@@ -39,7 +39,9 @@ Run the `connector-content-writer` agent as a subagent. Pass it:
 
 When the writer finishes, summarize:
 - Files created
+- Files deleted (if any legacy connector Markdown file was replaced)
 - TOC update made
+- Redirection update made in `.openpublishing.redirection.json` (if legacy file was replaced)
 - Any `{TODO: ...}` placeholders left in the output that need manual review
 
 ### Phase 3: Review and revision cycle
@@ -68,7 +70,9 @@ Run the `connector-content-reviewer` agent as a subagent. Pass it:
 After all phases are complete, present a final summary:
 
 - **Files created**: List all new files with their paths.
+- **Files deleted**: List removed files (for example, replaced legacy connector Markdown files).
 - **Files modified**: List modified files (typically `TOC.yml`).
+- **Redirections updated**: List any redirect entries added to `.openpublishing.redirection.json` for removed legacy files.
 - **Review result**: Final assessment and any remaining Info-level items.
 - **Placeholders**: List any `{TODO: ...}` markers that need manual resolution, with a description of what information is needed.
 - **Suggested next steps**: For example, fill in placeholder content, verify screenshots, submit a pull request.

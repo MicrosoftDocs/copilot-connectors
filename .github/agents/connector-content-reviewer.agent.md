@@ -26,6 +26,8 @@ Perform each of the following passes in order. For every issue found, record the
 - Verify every file listed in the content plan's **file manifest** exists in `copilot-connectors/`.
 - Verify the TOC entry was inserted into `copilot-connectors/TOC.yml` at the correct alphabetical position.
 - Verify the TOC entry contains exactly the files that were created (no extra or missing entries).
+- If the content plan indicates a legacy single-file connector article was replaced, verify the legacy file was removed.
+- If a legacy file was removed, verify `.openpublishing.redirection.json` contains a redirect from that removed path to the new connector article path.
 - Verify no `{TODO: ...}` placeholders remain unless they represent genuine content gaps flagged in the content plan.
 - Verify no template placeholder text remains (for example, text like `{connector name}`, `{Provide...}`, or `{Optional section}`).
 
@@ -88,6 +90,7 @@ For each file, verify:
 - Links to shared articles (`deployment-overview.md`, `staged-rollout.md`, `enhance-copilot-discovery.md`) use the correct relative path from within `copilot-connectors/`.
 - The TOC entry `href` values point to files that exist.
 - The nextstepaction link is correct.
+- For replaced legacy connector files, verify the redirect URL target in `.openpublishing.redirection.json` points to the expected new page (`{slug}-deployment` by default, `{slug}-overview` only when deployment wasn't created).
 
 ---
 

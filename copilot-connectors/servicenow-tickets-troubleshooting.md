@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
-ms.date: 01/08/2026
+ms.date: 06/10/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the ServiceNow Tickets Microsoft 365 Copilot connector."
 ---
@@ -100,6 +100,8 @@ If your ServiceNow instance is behind a firewall, the connector might not reach 
 | PROD             | North America  | 52.250.92.252/30, 52.224.250.216/30  |
 | PROD             | Europe         | 20.54.41.208/30, 51.105.159.88/30    |
 | PROD             | Asia Pacific   | 52.139.188.212/30, 20.43.146.44/30   |
+| GCC            | US Government  | 52.235.252.161/30                    |
+| DoD              | US Government  | 52.182.52.25/30, 52.181.182.213/30   |
 
 ## Access permissions not working as expected
 
