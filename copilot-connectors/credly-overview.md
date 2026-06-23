@@ -7,14 +7,14 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 04/09/2026
+ms.date: 06/22/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Credly Microsoft 365 Copilot connector."
 ---
 
 # Credly connector overview (preview)
 
-The Credly Microsoft 365 Copilot connector integrates digital credential data from your organization's Credly account into Microsoft 365. This integration enables Copilot and profile cards to surface verified badges, awards, and certifications directly within apps like Teams, Outlook, and SharePoint.
+The Credly Microsoft 365 Copilot connector integrates digital credential data from your organization's Credly account into Microsoft 365. This integration enables Copilot and profile cards to surface verified badges, awards, and certifications directly within apps like Outlook and Copilot.
 
 When you configure the Credly connector for your organization and index data from Credly, employees' verified credentials are enriched in their Microsoft 365 user profiles. The Credly connector content can bring improved visibility into employee qualifications, faster identification of subject-matter experts, and enhanced collaboration across your organization.
 

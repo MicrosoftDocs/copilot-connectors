@@ -7,7 +7,7 @@ ms.author: lauragra
 manager: calvind
 ms.reviewer: mansipakhale
 ms.service: copilot-connectors
-ms.date: 06/03/2026
+ms.date: 06/22/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ms.audience: Admin
@@ -47,14 +47,20 @@ Microsoft provides a set of federated connectors in the Connectors Gallery. Thes
 Currently, Microsoft-published federated connectors are available for the following data sources:
  
 - Canva
+- CB Insights
+- Daloopa
+- FactSet (coming soon)
 - Google Calendar
 - Google Contacts
 - HubSpot
 - Intercom
 - Linear
 - LSEG
+- Morningstar
 - Moody's
 - Notion
+- PitchBook
+- S&P Global
  
 Partners who want to make a federated connector available in the gallery can submit their remote MCP server to Microsoft for review. For more information, see [Submit a federated connector](submit-federated-connector.md). For any questions related to submitting your remote MCP server, [send us an email](mailto:submit-fcc@microsoft.com).
 
@@ -106,6 +112,24 @@ When an admin enables a federated connector:
 The following image shows how the user accesses federated connector data sources in Researcher.
  
 :::image type="content" source="media/federated-connectors/researcher-data-source.png" alt-text="Screenshot of federated connector data sources in Researcher." lightbox="media/federated-connectors/researcher-data-source.png":::
+
+## Dynamic tooling through MCP
+
+Dynamic tooling enables Microsoft 365 Copilot to retrieve information from connected systems at runtime based on a user's request.
+
+The MCP server associated with the federated connector determines tool availability. When appropriate, Microsoft 365 Copilot dynamically selects relevant tools to gather the information needed to answer a request.
+
+The authenticated user's identity and permissions in the source system govern tool access. Users can only access information they're authorized to view.
+
+Examples of dynamic tooling include:
+
+- Searching knowledge repositories
+- Looking up records in line-of-business applications
+- Retrieving project or operational status information
+- Querying customer, product, or support information
+- Accessing specialized search capabilities exposed by a source system
+
+Like all federated connector interactions, Microsoft 365 Copilot fetches information through dynamic tooling in real time and doesn't index it into Microsoft 365.
  
 ## Security and compliance
  
