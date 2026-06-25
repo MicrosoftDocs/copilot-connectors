@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 03/05/2026
+ms.date: 06/22/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Veeva PromoMats Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -30,7 +30,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 ### Register an application and configure OAuth
 
-Use the following steps to configure Microsoft Entra ID OAuth 2.0/OpenID Connect for the Veeva QualityDocs connector.
+Use the following steps to configure Microsoft Entra ID OAuth 2.0/OpenID Connect for the Veeva PromoMats connector.
 
 1. Register an application in Microsoft Entra ID.
    - Go to **Microsoft Entra admin center** > **App registrations** > **New registration**.
@@ -39,8 +39,12 @@ Use the following steps to configure Microsoft Entra ID OAuth 2.0/OpenID Connect
      - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
      - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
    - Generate a client secret under **Certificates & Secrets** and store it securely.
+   - Configure API permissions for the application. Go to **API permissions** > **Add a permission** > **Microsoft Graph** > **Delegated permissions**, and add the following scopes:
+     - `offline_access` – Required to obtain refresh tokens for persistent access.
+     - `{client_id}/.default` – Required to link the Microsoft Entra user with the Veeva user. Replace `{client_id}` with the application (client) ID of your registered Entra application.
+   - Select **Grant admin consent** to consent on behalf of your organization.
 
-2. Configure OAuth in Veeva QualityDocs.
+2. Configure OAuth in Veeva PromoMats.
    - Go to **Admin > Settings > OAuth 2.0/OpenID Connect Profiles**.
    - Create a new profile, set the **Status** to active, and select **Azure AD** as the provider.
    - Choose **Upload AS metadata** > **Provide Authorization Server Metadata URL**, and paste the following link. Replace {tenant-id} with your tenant ID.
@@ -79,16 +83,16 @@ Enter the URL of your Veeva PromoMats instance. For example: `https://<your-vaul
 
 ### Choose authentication type
 
-To authenticate the Veeva QualityDocs connector, for the **Authentication type**, choose **Microsoft Entra ID OIDC**, and provide the following information:
+To authenticate the Veeva PromoMats connector, select **Microsoft Entra ID OIDC** for the **Authentication type**. Enter the following information:
 
-- **Vault session ID URL**: In Veeva QualityDocs, go to **Admin panel** > **Settings** > **OAuth 2.0/ OpenID Connect Profiles**, and choose the profile you created for this connection. Copy the Vault Session ID URL.
-- **Client ID**: The application ID for the Entra application you registered for Veeva QualityDocs.
+- **Vault session ID URL**: In Veeva PromoMats, go to **Admin panel** > **Settings** > **OAuth 2.0/ OpenID Connect Profiles**, and select the profile you created for this connection. Copy the Vault Session ID URL.
+- **Client ID**: The application ID for the Microsoft Entra application you registered for Veeva PromoMats.
 - **Client secret**: The client secret associated with the Entra application.
 
-Select **Authorize** to sign in with your Entra ID account, and select **Consent on behalf of your organization**, and the on the permission request screen, choose **Accept**.
+Select **Authorize** to sign in with your Microsoft Entra ID account. Select **Consent on behalf of your organization**, and on the permission request screen, choose **Accept**.
 
 > [!IMPORTANT]
-> Configure both Microsoft Entra ID and Veeva QualityDocs admin settings to enable Microsoft Entra ID authentication.
+> To enable Microsoft Entra ID authentication, configure both Microsoft Entra ID and Veeva PromoMats admin settings. Ensure the API permissions (`offline_access` and `{client_id}/.default`) are granted admin consent before authorizing the connector.
 
 ### Roll out
 
@@ -122,7 +126,7 @@ The connector adheres to the access control lists (ACLs) defined in Veeva PromoM
 
 The connector requires that PromoMats user identities map to the organization's Microsoft Entra ID identities. If the identities don't automatically match, admins can configure custom user mappings so that access rights are enforced. For example, you can map identities based on email addresses or other unique identifiers.
 
-If you want to enforce the security settings of your Veeva QualityDocs instance, choose **Non-ME-ID** as the identity type for your content source.
+To enforce the security settings of your Veeva PromoMats instance, select **Non-ME-ID** as the identity type for your content source.
 
 Enter the required information for identity mapping. For example, if you want to map identities based on email addresses:
 

@@ -7,7 +7,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 04/09/2026
+ms.date: 06/18/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Credly Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -79,6 +79,10 @@ After you create your connection, you can review the status in the **Connectors*
 ## Customize settings (optional)
 
 You can customize the default values for the Credly connector settings. To customize settings, on the connector page in the admin center, select **Custom setup**.
+
+### Roll out to a limited audience
+
+By default, the Credly connector ingests data for everyone in your organization. To limit the connector to specific users, on the **Set up** tab, turn on the **Roll out to limited audience** toggle. A search box opens where you can type and search for specific users to select. The connector ingests data only for the users you select.
 
 ### Customize user settings
 
