@@ -58,7 +58,8 @@ To search for indexed content, enter the unique identifier of the item in the in
 |Custom connector|Item ID|Admin configured details.|
 |SAP|user ID|Admin configured details.|
 |BambooHR|Employee ID (EeId) |Go to the user profile in BambooHR. The Employee ID (EeId) is found in the URL. For example, in this URL: `https://contoso.bamboohr.com/employees/employee.php?id=4&page=2078`), the Employee ID (EeId) is `4`.|
-
+|Trello|Card ID|1. **Open the card**: Click the card you need the ID for.<br>2. **Get the URL**: Copy the URL from your browser's address bar.<br>3. **Add `.json`**: Add `.json` to the end of the URL and press Enter.<br>4. **Find the ID**: Look for the `"id"` value near the top of the response.|
+ 
 ## Examples
 ### Item status is partially indexed
 

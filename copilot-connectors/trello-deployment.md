@@ -22,9 +22,27 @@ The Trello Microsoft 365 Copilot connector enables your organization to index Tr
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
 - You're a Microsoft 365 administrator.
+- Your organization has the Trello Enterprise plan.
 - You have a Trello developer account.
-- You registered an application in the Trello developer portal.
-- You have an API key and private secret from your Trello app registration.
+
+## Configure Trello app
+To configure a Trello app:
+
+- Go to [https://trello.com/power-ups/admin](https://trello.com/power-ups/admin).
+
+- Select **New** to add a new app.
+  ![Screenshot that shows how to create an app in the Trello admin portal.](media/trello/trello-create-app.png)
+
+- Fill in the required fields to create a new app.
+  ![Screenshot that shows how to fill in the fields of the app in the Trello admin portal.](media/trello/trello-fill-app.png)
+
+## Get the API key and secret
+- Select **Generate a new API key**.
+   ![Screenshot that shows how to generate app keys in Trello admin portal.](copilot-connectors/media/trello/trello-generate-api-keys-1.png)
+
+- Copy the API key and secret from the app for authentication in Microsoft 365 admin center.
+   ![Screenshot that shows how to find app keys and secret in Trello admin portal.](copilot-connectors/media/trello/trello-copy-api-keys.png)
+  
 
 ## Deploy the connector
 
