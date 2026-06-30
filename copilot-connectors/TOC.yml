@@ -666,8 +666,6 @@ items:
         href: /graph/connecting-external-content-manage-items?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
       - name: Use external groups
         href: /graph/connecting-external-content-external-groups?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
-    - name: Salesforce custom CRM sample
-      href: salesforce-custom-connector-sample.md
     - name: Delegate connector administration
       href: /microsoft-365/copilot/extensibility/connector-admin-delegation?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
 - name: Set up federated connectors

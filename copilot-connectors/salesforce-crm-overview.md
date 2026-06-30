@@ -1,5 +1,5 @@
 ---
-ms.date: 06/24/2026
+ms.date: 6/18/2026
 title: "Salesforce CRM connector overview"
 ms.author: lauragra
 author: lauragra
@@ -84,8 +84,6 @@ The Salesforce CRM connector has the following limitations:
 - **Limited object coverage** - The connector currently indexes Account, Contact, Opportunity, Lead, and Case objects. Support for additional standard objects is on the roadmap. If you need a specific object included, contact Microsoft support. This documentation will be updated when new object support is released.
 - **Comments and attachments not indexed by default** - Comments and attachments on records are in private preview. Because this content can introduce noise that affects core use cases, it is not included by default. Admins can selectively enable comments and attachments in the **Manage properties** section.
 - **API usage during crawls** - Full crawls consume Salesforce API quota. Consider scheduling full crawls during off-peak hours or weekends, especially for orgs with large record volumes, to avoid impacting daily operations or exhausting API limits.
-
-If your scenario needs objects or fields not covered by the connector's default behavior, you can build a custom synced connector using the [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview). A reference implementation for Salesforce CRM is available at the [Salesforce custom Copilot connector](https://github.com/microsoft/Salesforce-Custom-Copilot-Connector) repo on GitHub. For an overview of the sample and customization guidance, see [Build a custom Salesforce CRM connector](salesforce-custom-connector-sample.md).
 
 ## Data types indexed from Salesforce CRM
 
