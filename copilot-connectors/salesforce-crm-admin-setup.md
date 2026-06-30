@@ -4,8 +4,12 @@ description: Get the steps that the Salesforce CRM admin needs to complete for y
 author: lauragra
 ms.author: lauragra
 manager: calvind
+ms.reviewer:
+audience: Admin
+ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
+ms.localizationpriority: Medium
 ms.date: 06/18/2026
 ---
 
@@ -13,7 +17,7 @@ ms.date: 06/18/2026
 
 The Salesforce CRM Microsoft 365 Copilot connector allows your organization to index contacts, opportunities, leads, cases, and accounts objects in your Salesforce instance. After you configure the connector and index content from Salesforce, users can search for those items from any Microsoft Search and Microsoft 365 Copilot client.
 
-This article provides information about the configuration steps that Salesforce admins need to complete in order for your organization to deploy the Salesforce CRM connector.
+This article provides information about the configuration steps that Salesforce admins need to complete in order for your organization to deploy the [Salesforce CRM connector](salesforce-crm-overview.md).
 
 For information about how to deploy the connector, see [Deploy the Salesforce CRM connector](salesforce-crm-deployment.md).
 
@@ -37,7 +41,7 @@ The following checklist lists the steps involved in configuring the environment 
 | [Create an External Client App](#create-an-external-client-app) | Salesforce CRM admin |
 | [Configure refresh token policy](#configure-refresh-token-policy) | Salesforce CRM admin |
 | [Define identity mapping](#define-identity-mapping) | Salesforce CRM admin |
-| [Determine data ingestion filters](#determine-data-to-ingest) | Salesforce CRM admin |
+| [Determine data to ingest](#determine-data-to-ingest) | Salesforce CRM admin |
 | [Verify field-level security (FLS) settings](#verify-field-level-security-fls-settings) | Salesforce CRM admin |
 
 ## Identify the Salesforce instance URL

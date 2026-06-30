@@ -4,11 +4,12 @@ title: "Salesforce CRM connector overview"
 ms.author: lauragra
 author: lauragra
 manager: calvind
+ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.localizationpriority: medium
+ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Salesforce CRM Copilot connector."
 ---
 
@@ -33,7 +34,7 @@ The Salesforce CRM Copilot connector provides the following benefits:
 
 ## Build agents with the Salesforce CRM connector
 
-Developers can use this connector as a knowledge source in declarative agents they build with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
+Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
 ### Example prompts
 
@@ -70,7 +71,7 @@ The following examples show prompts that agent builders can use to help their us
 - Show me all cases on the GC1060 product.
 - Which cases have both SLA violation and potential liability flagged?
 
-## Connector capabilities and limitations
+## Salesforce CRM connector capabilities and limitations
 
 The Salesforce CRM connector has the following key capabilities:
 
@@ -84,6 +85,8 @@ The Salesforce CRM connector has the following limitations:
 - **Limited object coverage** - The connector currently indexes Account, Contact, Opportunity, Lead, and Case objects. Support for additional standard objects is on the roadmap. If you need a specific object included, contact Microsoft support. This documentation will be updated when new object support is released.
 - **Comments and attachments not indexed by default** - Comments and attachments on records are in private preview. Because this content can introduce noise that affects core use cases, it is not included by default. Admins can selectively enable comments and attachments in the **Manage properties** section.
 - **API usage during crawls** - Full crawls consume Salesforce API quota. Consider scheduling full crawls during off-peak hours or weekends, especially for orgs with large record volumes, to avoid impacting daily operations or exhausting API limits.
+
+If your scenario needs objects or fields not covered by the connector's default behavior, you can build a custom synced connector using the [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview). A reference implementation for Salesforce CRM is available at the [Salesforce custom Copilot connector](https://github.com/microsoft/Salesforce-Custom-Copilot-Connector) repo on GitHub.
 
 ## Data types indexed from Salesforce CRM
 

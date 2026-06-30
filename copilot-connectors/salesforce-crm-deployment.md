@@ -108,7 +108,7 @@ Use a Salesforce Object Query Language (SOQL) `WHERE` clause to limit indexed da
 
 You can add or remove source properties and assign schema attributes to each property. The following table lists the default properties indexed by the connector. The **Attributes** column indicates whether a property is searchable (S), queryable (Q), retrievable (R), or refinable (Ref).
 
-| Property | Label | Description | Attributes |
+| Property | Semantic label | Description | Schema attributes |
 |---|---|---|---|
 | Id | `-` | Unique Salesforce record identifier (18-char). Maps to the external item ID in the Graph connection. | S, Q, R |
 | Url | `url` | Direct URL to open the record in Salesforce. | R |
