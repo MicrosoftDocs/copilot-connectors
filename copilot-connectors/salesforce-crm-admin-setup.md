@@ -10,7 +10,7 @@ ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
 ms.localizationpriority: Medium
-ms.date: 6/18/2026
+ms.date: 06/18/2026
 ---
 
 # Set up the Salesforce service for Salesforce CRM connector ingestion

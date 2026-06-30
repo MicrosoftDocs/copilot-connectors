@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
-ms.date: 6/18/2026
+ms.date: 06/18/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Salesforce CRM Microsoft 365 Copilot connector."
 ---
@@ -81,8 +81,6 @@ If custom fields you selected in the **Add Properties** panel aren't appearing i
 - Verify that the custom field still exists in the Salesforce org. Deleted or renamed fields are auto-deselected on the next crawl.
 - Check that the connection completed at least one full crawl after you added the custom fields.
 - If you promoted the field to a schema property, verify that the property or queryable limit wasn't exceeded. Open the **Add Properties** panel and check the budget counters.
-
-If your scenario needs objects or fields not covered by the connector's default behavior, see [Build a custom Salesforce CRM connector](salesforce-custom-connector-sample.md) for a reference implementation built with the [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview) (source code: [microsoft/Salesforce-Custom-Copilot-Connector](https://github.com/microsoft/Salesforce-Custom-Copilot-Connector)).
 
 ## Related content
 

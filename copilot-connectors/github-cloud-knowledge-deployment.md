@@ -7,7 +7,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 6/18/2026
+ms.date: 06/18/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the GitHub Cloud Knowledge Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---

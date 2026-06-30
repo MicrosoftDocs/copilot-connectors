@@ -5,7 +5,7 @@ author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
 manager: calvind
-ms.date: 6/18/2026
+ms.date: 06/18/2026
 ms.service: copilot-connectors
 ms.topic: concept-article
 ---
