@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
-ms.date: 6/18/2026
+ms.date: 06/18/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Salesforce CRM Microsoft 365 Copilot connector."
 ---
