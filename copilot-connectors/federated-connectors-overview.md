@@ -101,10 +101,21 @@ The following image shows the connector pane for the HubSpot federated connector
  
 When an admin enables a federated connector:
  
-- Users can discover the data source in the **Sources** menu in the Researcher agent or in the deep research mode in Microsoft 365 Copilot chat.
+- Users can discover the data source in the **Sources** menu in the Researcher agent, in deep research mode in Microsoft 365 Copilot chat, and in Copilot Chat where available.
 - Users authenticate by using their own credentials when prompted to connect to the data sources.
 - Copilot only accesses data the user already has permission to see.
-- Users can disable the data source in Researcher at any time by turning off the toggle for the source in Researcher.
+- Users can disable the data source at any time by turning off the source in Researcher or by managing the source in Copilot Chat settings.
+
+### Connect to federated connectors in Copilot Chat
+
+Where Copilot Chat is available for users, they can connect federated data sources directly from chat settings:
+
+1. Open Microsoft 365 Copilot Chat.
+1. Select the ellipsis (**...**) menu, and then select **Settings**.
+    :::image type="content" source="media/federated-connectors/copilot-chat-settings.png" alt-text="Screenshot of the settings option in Copilot Chat." lightbox="media/federated-connectors/copilot-chat-settings.png":::
+1. In the settings dialog, select **Sources** in the left pane.
+1. Find the external data source you want to use, select **Connect**, and complete authentication.
+1. Enter your prompt directly in Copilot Chat.
  
 > [!NOTE]
 > No data is indexed into Microsoft 365. Responses are fetched dynamically from the data source via MCP.
