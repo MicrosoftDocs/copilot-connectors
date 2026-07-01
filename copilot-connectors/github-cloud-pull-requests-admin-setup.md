@@ -7,7 +7,7 @@ ms.author: lauragra
 author: lauragra
 manager: calvind
 ms.reviewer: dannyyao
-ms.date: 6/18/2026
+ms.date: 06/18/2026
 ---
 
 # Set up the GitHub service for GitHub Cloud Pull Request connector ingestion

@@ -6,7 +6,7 @@ ms.service: copilot-connectors
 author: lauragra
 ms.author: lauragra
 manager: calvind
-ms.date: 6/18/2026
+ms.date: 06/18/2026
 ms.localizationpriority: Medium
 ---
 
