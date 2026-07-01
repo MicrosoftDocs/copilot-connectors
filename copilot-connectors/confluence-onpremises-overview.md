@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 04/13/2026
+ms.date: 06/29/2026
 ms.localizationpriority: Medium
 ---
 
@@ -59,6 +59,7 @@ The Confluence On-premises connector enables users to:
 - Index Confluence spaces and pages with metadata.
 - Index comments and attachments on the pages.
 - Filter content by space key and page creation or modification dates.
+- Filter content by CQL.
 - Map Confluence identities to Microsoft Entra ID for secure access.
 - Configure incremental and full crawls for synchronization.
 
@@ -66,7 +67,6 @@ The Confluence On-premises connector has the following limitations:
 
 - Blogs aren't indexed.
 - Archived pages are excluded.
-- CQL (Confluence Query Language) isn't supported.
 - Permission updates are only processed during full crawls.
 
 ## Data types indexed from Confluence On-premises
