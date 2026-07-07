@@ -207,6 +207,9 @@ If you need advanced capabilities such as filtering, sorting, or structured quer
 > [!NOTE]
 > When you select an annotation for a field, the field is promoted to a schema property and counts against the property limit per connection. If you select **Queryable**, it also counts against the queryable property limit. The side panel displays counters so you can monitor usage against these limits.
 
+> [!IMPORTANT]
+> Not all schema annotations are valid for every field type. For example, the **Searchable** annotation is only supported on String-type fields. If you select an unsupported annotation, an error occurs when you save the schema. For the full list of supported annotations per data type, see [Define the schema](/graph/connecting-external-content-manage-schema#property-attributes).
+
 ### Customize sync intervals
 
 You can customize both full crawl and incremental crawl intervals. The default values are a daily full crawl and a 15-minute incremental crawl.

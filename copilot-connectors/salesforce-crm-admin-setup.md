@@ -53,17 +53,46 @@ To connect to your Salesforce instance, you need your organization's Salesforce 
 
 ## Enable API access
 
-Make sure that the connector account has API access:
+Make sure that the connector account has API access. You can either assign the **System Administrator** profile (which includes all required permissions), or configure a custom profile with the specific permissions listed below.
 
-- Assign the **System Administrator** profile, or verify the following permissions for custom profiles:
-    - **Administrative permissions**:
-       - API Enabled
-       - View Setup and Configuration
-       - View Roles and Role Hierarchy
-       - View All Profiles
-       - View All Users
-    - **Standard object permissions**:
-       - Read and View All for Accounts, Cases, Contacts, Leads, and Opportunities.
+### Required permissions
+
+The connector account requires the following permissions:
+
+- **Administrative permissions**:
+   - API Enabled
+   - View Setup and Configuration
+   - View Roles and Role Hierarchy
+   - View All Profiles
+   - View All Users
+- **Standard object permissions**:
+   - Read and View All for Accounts, Cases, Contacts, Leads, and Opportunities.
+
+### Configure permissions on a custom profile
+
+If you use a custom profile instead of System Administrator, follow these steps to assign the required permissions:
+
+1. In Salesforce, select the gear icon and go to **Setup**.
+1. In the left navigation, go to **Administration** > **Users** > **Profiles**.
+1. Select the profile name to edit. If you need to modify a standard profile, select **Clone** to create an editable copy first.
+1. On the profile page, select **Edit**.
+1. In the **Administrative Permissions** section, select the following checkboxes:
+    - **API Enabled**
+    - **View Setup and Configuration**
+    - **View Roles and Role Hierarchy**
+    - **View All Profiles**
+    - **View All Users**
+1. Select **Save**.
+1. Return to the profile page and scroll to the **Standard Object Permissions** section (or select **Object Settings** in the Enhanced Profile User Interface).
+1. For each object you plan to index with the connector, enable **Read** and **View All** permissions. The connector currently supports the following objects:
+    - Accounts
+    - Cases
+    - Contacts
+    - Leads
+    - Opportunities
+1. Select **Save**.
+
+For more information about Salesforce profile permissions, see [User Permissions](https://help.salesforce.com/s/articleView?id=sf.users_profiles_permissions.htm&type=5) in the Salesforce documentation.
 
 ## Create an External Client App
 
