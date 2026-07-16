@@ -53,7 +53,7 @@ When you use the recommended configuration, the connector agent instance can han
 
 * Windows 10, Windows Server 2016 R2, and higher versions
 * [.NET Framework 4.7.2](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472)
-* [.NET Core Desktop Runtime 8.0 (x64)](https://dotnet.microsoft.com/download/dotnet/8.0)
+* [.NET Core Desktop Runtime 10.0 (x64)](https://dotnet.microsoft.com/download/dotnet/10.0)
 * 8 cores, 3 GHz
 * 16-GB RAM
 * 40-GB Disk space for 5M items and 9GB/Million items after 5M items
