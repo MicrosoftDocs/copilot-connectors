@@ -97,10 +97,12 @@ items:
         href: asana-troubleshooting.md
     - name: Azure Data Lake Storage Gen2
       items:
-      - name: Setup
-        href: azure-data-lake-connector.md
+      - name: Overview
+        href: azure-data-lake-storage-gen2-overview.md
+      - name: Deployment guide
+        href: azure-data-lake-storage-gen2-deployment.md
       - name: Troubleshooting
-        href: troubleshoot-azure-data-lake-connector.md
+        href: azure-data-lake-storage-gen2-troubleshooting.md
     - name: Azure DevOps Work Items
       items:
       - name: Overview
