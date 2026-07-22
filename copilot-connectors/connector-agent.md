@@ -63,12 +63,11 @@ If your organization's proxy servers or firewalls block communication to unknown
 
 | **Microsoft 365 Enterprise** | **Microsoft 365 GCC** | **Microsoft365 GCCH** |
 | ------------- | -------------| -------------|
-| 1. `*.servicebus.windows.net` | 1. `*.servicebus.usgovcloudapi.net` | 1. `*.servicebus.usgovcloudapi.net`
-| 2. `*.events.data.microsoft.com` | 2. `*.events.data.microsoft.com` | 2. `*.events.data.microsoft.com`
-| 3. `*.office.com` | 3. `*.office.com` | 3. `*.office.com`, `*.office365.us`
-| 4. `https://login.microsoftonline.com` | 4. `https://login.microsoftonline.com` | 4. `https://login.microsoftonline.com`, `https://login.microsoftonline.us`
-| 5. `https://gcs.office.com/` | 5. `https://gcsgcc.office.com` | 5. `https://gcs.office365.us/`
-| 6. `https://graph.microsoft.com/` | 6. `https://graph.microsoft.com` | 6. `https://graph.microsoft.com/`, `https://graph.microsoft.us/`
+| 1. `*.events.data.microsoft.com` | 1. `*.events.data.microsoft.com` | 1. `*.events.data.microsoft.com`
+| 2. `*.office.com` | 2. `*.office.com` | 3. `*.office.com`, `*.office365.us`
+| 3. `https://login.microsoftonline.com` | 3. `https://login.microsoftonline.com` | 3. `https://login.microsoftonline.com`, `https://login.microsoftonline.us`
+| 4. `https://gcs.office.com/` | 4. `https://gcsgcc.office.com` | 4. `https://gcs.office365.us/`
+| 5. `https://graph.microsoft.com/` | 5. `https://graph.microsoft.com` | 5. `https://graph.microsoft.com/`, `https://graph.microsoft.us/`
 
 > [!NOTE]
 > - Proxy authentication isn't supported. If your environment has a proxy that requires authentication, allow the connector agent to bypass the proxy.
