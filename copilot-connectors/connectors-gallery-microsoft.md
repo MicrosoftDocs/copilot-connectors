@@ -5,7 +5,7 @@ author: danielabom
 manager: calvind
 ms.audience: Admin
 ms.topic: landing-page
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Find a list of Microsoft 365 Copilot connectors built and supported by Microsoft, organized by categories, including a description and link to each connector website."
 ms.date: 05/29/2026
