@@ -6,7 +6,7 @@ manager: zezhangzhao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 05/26/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the PagerDuty admin needs to complete for your organization to configure the PagerDuty Schedules Microsoft 365 Copilot connector."
