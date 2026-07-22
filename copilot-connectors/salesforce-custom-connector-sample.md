@@ -8,7 +8,7 @@ ms.reviewer:
 ms.topic: how-to
 audience: Admin
 ms.audience: Admin
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: Medium
 description: "Reference implementation of a custom Microsoft 365 Copilot connector for Salesforce CRM."
 ---
