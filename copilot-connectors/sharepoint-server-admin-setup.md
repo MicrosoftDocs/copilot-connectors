@@ -7,7 +7,7 @@ ms.reviewer: zezhangzhao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 04/22/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the SharePoint Server admin needs to complete for your organization to configure the SharePoint Server Microsoft 365 Copilot connector."
