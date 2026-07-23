@@ -20,10 +20,22 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 
 To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
 
+## Version 4.0.0.0 (*July 20, 2026*)
+
+* Added support for .NET 10. (Ensure at least .NET 10 version to avoid unexpected behavior).
+* Added support for GCA statistics.
+* Improved Confluence user information processing performance.
+* Improved reliability of delete detection during connector processing.
+* Improved performance for the Intranet connector.
+* Fixed parsing of docx files containing embedded Visio (.vsdx) diagrams.
+* Surface actionable access-denied error(E1037) during file connector crawls.
+* Included security improvements, bug fixes, and reliability improvements.
+
+
 ## Version 3.1.23.0 (*June 16, 2026*)
 
 * Updated bundled Git library to version 2.50.0 to improve reliability of git-based connector crawls.
-* Added support for multi-instance add/delete url in fileshare and intranet (this is the minimum version to support this feature).
+* Added support for multi-instance add and delete URL in fileshare and intranet (this version is the minimum version to support this feature).
 * Added parser output size limit for the SharePoint on-premises connector to improve crawl reliability on large documents.
 * Improved reliability and efficiency of recovery crawls.
 * Bug fixes and reliability improvements.
