@@ -8,7 +8,7 @@ ms.reviewer: mayanksethi
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 06/10/2026
+ms.date: 07/23/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Catalog Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -153,11 +153,13 @@ Under **OAuth OIDC Provider Configuration**, determine whether a Microsoft Entra
 | OIDC Provider Configuration Name | Microsoft Entra ID |
 | OIDC Metadata URL | `https://login.microsoftonline.com/<tenantId>/v2.0/.well-known/openid-configuration` (replace `<tenantId>` with your Microsoft Entra tenant ID) |
 | OIDC Configuration Cache Lifespan | 120 |
-| User Claim | sub or oid |
+| User Claim | `sub` or `oid` |
 | User Field | User ID |
 | Enable JTI Verification | Disabled |
 
-Under **Auth Scope**, select **useraccount**, and enable **Allow access only to APIs in selected scope**.
+For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject should match the ServiceNow user, or `oid` when the object ID should match the ServiceNow user. This field has no default, so you must set it. If sign-in fails to resolve the user, switch the value.
+
+Set **Scope Restriction** (labeled **Auth Scope** in some releases) to **Useraccount scoped** (`useraccount`).
 
 #### Step 3: Create the ServiceNow integration user
 
@@ -242,7 +244,7 @@ To use Microsoft Entra ID OpenID Connect:
 1. In your ServiceNow instance, register the ServiceNow application. For details, see [Create an OAuth OIDC provider](https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/add-OIDC-entity.html). Use the values listed in the following table in the registration form; leave the default values for the other fields. 
 
     | Field | Description | Value |
-    |-------|-------------|-------|
+    |:-------|:-------------|:-------|
     | Name | A unique name for the OAuth OIDC entity. | Microsoft Entra ID |
     | Client ID | From Microsoft Entra ID registration | Application (client) ID |
     | Client secret | From Microsoft Entra ID registration | Client secret |
@@ -253,15 +255,18 @@ To use Microsoft Entra ID OpenID Connect:
 1. In the **OAuth OIDC Provider Configuration** field, select the search icon, and then select **New**. Fill out OIDC provider configuration form as follows.
 
     | Field | Value |
-    |-------|-------|
+    |:-------|:-------|
     |OIDC Provider | Microsoft Entra ID |
-    |OIDC Metadata URL | `https://login.microsoftonline.com/<tenantId>/.well-known/openid-configuration` |
+    |OIDC Metadata URL | `https://login.microsoftonline.com/<tenantId>/v2.0/.well-known/openid-configuration` |
     |OIDC OIDC Configuration Cache Life Span Application | Global |
-    |User Claim | sub |
+    |User Claim | `sub` or `oid` |
     |User Field | User ID |
     |Enable JTI claim verification | Disabled |
 
-    Set **Auth Scope** to the user account.
+For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject should match the ServiceNow user, or `oid` when the object ID should match the ServiceNow user. This field has no default, so you must set it. If sign-in fails to resolve the user, switch the value.
+
+    Set **Scope Restriction** (labeled **Auth Scope** in some releases) to **Useraccount scoped** (`useraccount`).
+
 
 1. Choose **Submit** to save the configuration. 
 
@@ -423,7 +428,8 @@ You can define the frequency of incremental and full crawls:
 - **Incremental crawl** – Syncs only changed content, not permissions updates. The default frequency is every 15 minutes.
 
 > [!NOTE]
-> - Identities (users and groups) and access permissions are only updated during full crawls.
+> - Identities (users and groups) and access permissions are only updated during full crawls.
+
 > - Incremental crawls don't update access permissions or group memberships.
 > - During a full crawl, including the first full crawl, content sync and identity sync (reading users, user criteria, and mapping of users to user criteria such as group memberships) run in parallel. The full crawl is complete when both content and identity sync are completed. 
 > - Subsequent full crawls are faster than the first full crawl. The first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Subsequent full crawls only ingest the newly discovered items, users, and user criteria. 

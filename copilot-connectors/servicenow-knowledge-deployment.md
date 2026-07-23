@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 06/10/2026
+ms.date: 07/23/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Knowledge Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -154,11 +154,13 @@ Under **OAuth OIDC Provider Configuration**, determine whether a Microsoft Entra
 | OIDC Provider Configuration Name | Microsoft Entra ID |
 | OIDC Metadata URL | `https://login.microsoftonline.com/<tenantId>/v2.0/.well-known/openid-configuration` (replace `<tenantId>` with your Microsoft Entra tenant ID) |
 | OIDC Configuration Cache Lifespan | 120 |
-| User Claim | sub or oid |
+| User Claim | `sub` or `oid` |
 | User Field | User ID |
 | Enable JTI Verification | Disabled |
 
-Under **Auth Scope**, select **useraccount**, and enable **Allow access only to APIs in selected scope**.
+For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject should match the ServiceNow user, or `oid` when the object ID should match the ServiceNow user. This field has no default, so you must set it. If sign-in fails to resolve the user, switch the value.
+
+Set **Scope Restriction** (labeled **Auth Scope** in some releases) to **Useraccount scoped** (`useraccount`).
 
 #### Step 3: Create the ServiceNow integration user
 
@@ -261,12 +263,14 @@ To use Microsoft Entra ID OpenID Connect:
     | Field | Value |
     | --- | --- |
     |  OIDC Provider |  Microsoft Entra ID |
-    |  OIDC Metadata URL | Use the following URL: `https://login.microsoftonline.com/<tenantId>/.well-known/openid-configuration `.<br/><br/>Replace `<tenantId>` with the Directory (tenant) ID. |
+    |  OIDC Metadata URL | Use the following URL: `https://login.microsoftonline.com/<tenantId>/v2.0/.well-known/openid-configuration`.<br/><br/>Replace `<tenantId>` with the Directory (tenant) ID. |
     |  OIDC Configuration Cache Life Span |  120 |
     |  Application | Global |
-    |  User Claim | sub |
+    |  User Claim | `sub` or `oid` |
     |  User Field | User ID |
     |  Enable JTI claim verification | Disabled |
+
+For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject should match the ServiceNow user, or `oid` when the object ID should match the ServiceNow user. This field has no default, so you must set it. If sign-in fails to resolve the user, switch the value.
 
    Set **Auth Scope** to the user account.
 
