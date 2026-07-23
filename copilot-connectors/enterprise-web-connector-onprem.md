@@ -7,7 +7,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the Enterprise Websites on-premises Microsoft 365 Copilot connector."
 ---

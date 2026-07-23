@@ -6,7 +6,7 @@ manager: helgesol
 audience: Admin
 ms.audience: Admin
 ms.topic: article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: Medium
 description: "Set up the BambooHR Microsoft 365 Copilot connector."
 ms.date: 11/14/2025

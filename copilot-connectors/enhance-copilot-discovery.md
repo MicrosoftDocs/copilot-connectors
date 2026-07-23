@@ -7,7 +7,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Enhance the discoverability of Microsoft 365 Copilot connectors' content within Microsoft 365 Copilot."
 ---

@@ -7,7 +7,7 @@ ms.reviewer: lauragra
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 06/12/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the PagerDuty Incidents Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
@@ -39,6 +39,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
   - Users – Read Access
   - Incidents – Read Access
   - Incident Types – Read Access
+  - Custom Fields – Read Access
 - You copied the **Client ID** and **Client Secret** from your completed PagerDuty app registration.
 
 ## Deploy the connector
@@ -154,6 +155,10 @@ To view available properties, assign a schema to the property (define whether a 
 | Teams | Not applicable | The teams associated with the incident. | Search, Retrieve |
 | Title | `title` | The title of the incident. | Search, Retrieve |
 | Urgency | `severity` | The urgency of the incident. | Query, Retrieve, Refine |
+
+#### Add custom properties
+
+In addition to the default properties, the connector automatically discovers custom fields from your PagerDuty instance. During setup, the connector retrieves all available custom fields by incident type and presents them as additional properties under **Manage properties**. You can select and add these custom fields individually to the connector schema.
 
 ### Customize sync intervals
 

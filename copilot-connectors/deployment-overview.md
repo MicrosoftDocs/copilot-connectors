@@ -7,7 +7,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 ms.date: 04/07/2026
 ---
@@ -34,13 +34,20 @@ Before you begin, make sure you have the following prerequisites:
 Use the following steps to deploy a connector:
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
-1. In the left pane, choose **Copilot** > **Connectors**.
-1. On the **Connectors** tab, in the left pane, choose **Gallery**, and select the data source you want to connect (for example, ServiceNow Knowledge or Salesforce).
-1. Enter a name to help users recognize the source in Copilot and search results. You can customize the default name.
-1. Provide the URL of your data source. For example: `https://your-organization-name.service-now.com`.
-1. Choose an authentication method to access the data source.
-1. Deploy the connector to a subset of users for validation before a broader rollout.
-1. Choose **Create** to deploy the connection. The connector begins indexing content using default settings.
+1. In the left pane, choose **Copilot** > **Connectors**.
+
+1. On the **Connectors** tab, in the left pane, choose **Gallery**, and select the data source you want to connect (for example, ServiceNow Knowledge or Salesforce).
+
+1. Enter a name to help users recognize the source in Copilot and search results. You can customize the default name.
+
+1. Provide the URL of your data source. For example: `https://your-organization-name.service-now.com`.
+
+1. Choose an authentication method to access the data source.
+
+1. Deploy the connector to a subset of users for validation before a broader rollout.
+
+1. Choose **Create** to deploy the connection. The connector begins indexing content using default settings.
+
 
 :::image type="content" alt-text="Screenshot that shows Connection creation screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/aha-setup.png" lightbox="media/deployment-overview/aha-setup.png":::
 
@@ -58,7 +65,8 @@ For guidance, see [Enhance Copilot discovery of connector content](enhance-copil
 
 ## Customize connector settings (optional)
 
-You can customize the default values for connector settings. On the connector page in the admin center, select **Custom setup**. This option includes three tabs:
+You can customize the default values for connector settings. On the connector page in the admin center, select **Custom setup**. This option includes three tabs:
+
 
 - **Users**
 - **Content**
@@ -73,7 +81,8 @@ On the **Users** tab, under **Access Permissions**, choose whether indexed data 
 - Only users with access to the content
 - Everyone in the organization
 
-By default, the system maps users by matching their email to `UserPrincipalName` or `Mail` in Microsoft Entra ID. In the **Map Identities** section, you can provide a custom mapping formula.
+By default, the system maps users by matching their email to `UserPrincipalName` or `Mail` in Microsoft Entra ID. In the **Map Identities** section, you can provide a custom mapping formula.
+
 
 
 ### Content tab
@@ -90,7 +99,8 @@ On the **Content** tab, under **Manage properties**, you can:
 
 Select a **Content property** from the dropdown or use the default. This property supports full-text indexing, snippet generation, language detection, and relevance ranking.
 
-Use the system-generated **ResultSnippet** property in your result type to display dynamic snippets.
+Use the system-generated **ResultSnippet** property in your result type to display dynamic snippets.
+
 
 #### Aliases
 
@@ -112,13 +122,15 @@ Assign semantic labels to source properties to integrate connector data into Mic
 | **File name** | Name of the file |
 | **File extension** | File type (PDF, DOC, etc.) |
 
-Assign a property to the **title** label.
+Assign a property to the **title** label.
+
 
 Incorrect mapping labels can affect search experiences. Not all labels need to have a property assigned.
 
 #### Search schema attributes
 
-Set the search schema attributes to control the search functionality of each source property. A search schema helps determine what results are displayed on the search results page and what information end users can view and access.
+Set the search schema attributes to control the search functionality of each source property. A search schema helps determine what results are displayed on the search results page and what information end users can view and access.
+
 
 Search schema attributes include options to **Query**, **Search**, **Retrieve**, and **Refine**. The following table lists the supported attributes.
 
@@ -156,7 +168,8 @@ Configure crawl frequency and timing:
 - **Start time**: When the crawl begins
 - **Reset**: Revert to default schedule
 
-If you leave fields blank, the system sets the optimal crawl times by default.
+If you leave fields blank, the system sets the optimal crawl times by default.
+
 
 ### IP firewall rules
 
@@ -182,7 +195,8 @@ Add aliases to properties by using the **Alias** column. Aliases are friendly na
 
 ### Semantic labels for source properties
 
-You can assign semantic labels to source properties. Microsoft provides semantic labels that add meaning to your data and enable integration across Microsoft 365 experiences, including Copilot, enhanced search, people cards, intelligent discovery, and more.
+You can assign semantic labels to source properties. Microsoft provides semantic labels that add meaning to your data and enable integration across Microsoft 365 experiences, including Copilot, enhanced search, people cards, intelligent discovery, and more.
+
 
 The following table lists the supported semantic labels and their descriptions.
 
@@ -200,14 +214,16 @@ The following table lists the supported semantic labels and their descriptions.
 
 The properties on this page are preselected based on your data source, but you can change the selection if a different property is better suited for a specific label.
 
-The **title** label is the most important semantic label. Map a property to this label so that your connection can participate in the [result cluster experience](/microsoftsearch/result-cluster).
+The **title** label is the most important semantic label. Map a property to this label so that your connection can participate in the [result cluster experience](/microsoftsearch/result-cluster).
+
 
 Incorrect label mappings can degrade the search experience. Not all labels require a property assignment.
 
 ### Search schema attributes
 
 > [!NOTE]
-> You can't refine properties with the **int** data type, even if they're marked as refinable.
+> You can't refine properties with the **int** data type, even if they're marked as refinable.
+
 
 Search schema attributes control how each source property behaves in search. The search schema determines which results appear on the search results page and what information users can view and access.
 
@@ -226,14 +242,18 @@ For all connectors except the File share Copilot connector, you must manually co
 
 ### Restrictions and recommendations for search schema settings
 
-- The **content** property supports **search** only. You can't mark it as **retrieve** or **query**.
-- Rendering search results by using the **content** property can cause performance problems. For example, using the **Text** field for a [ServiceNow](https://www.servicenow.com) knowledge base article can significantly affect performance.
+- The **content** property supports **search** only. You can't mark it as **retrieve** or **query**.
+
+- Rendering search results by using the **content** property can cause performance problems. For example, using the **Text** field for a [ServiceNow](https://www.servicenow.com) knowledge base article can significantly affect performance.
+
 - Only properties marked as **retrievable** can appear in search results and be used to create modern result types (MRTs).
 - Only string properties can be marked as **searchable**.
 - All properties mapped to semantic labels must be **retrievable**.
-- You can't refine properties with the **int** data type.
+- You can't refine properties with the **int** data type.
+
 - A refinable property should also be **queryable** and **retrievable**.
-- You can't remove the **retrievable** attribute from a property.
+- You can't remove the **retrievable** attribute from a property.
+
 - You can't add or remove the **refinable** attribute from a property after setup.
 
 > [!NOTE]
@@ -241,21 +261,21 @@ For all connectors except the File share Copilot connector, you must manually co
 
 ### Customize values for certain schema properties
 
-Some connectors, such as ServiceNow, allow you to customize the values of specific schema properties, such as **AccessURL**, to meet organizational requirements. For example, if your organization uses a custom URL for ServiceNow knowledge articles instead of the default ServiceNow URL, you can configure the **AccessURL** property to point to the correct location. This customized URL is then used in Microsoft Search and Copilot responses.
+Some connectors, such as ServiceNow, allow you to customize the values of specific schema properties, such as **AccessURL**, to meet organizational requirements. For example, if your organization uses a custom URL for ServiceNow knowledge articles instead of the default ServiceNow URL, you can configure the **AccessURL** property to point to the correct location. Microsoft Search and Copilot responses use this customized URL.
 
 > [!NOTE]
-> To customize schema property values, you must create a new Copilot connector connection. Editing an existing connection to change schema property values isn’t currently supported.
+> To customize schema property values, you must create a new Copilot connector connection. Editing an existing connection to change schema property values isn't currently supported.
 
 To customize the value of a schema property:
 
 1. During connection setup, select **Custom setup** and authenticate your credentials.
-2. Before publishing the connection, open the **Content** tab and go to **Manage properties**.
-3. In the **Properties** table, select the property you want to customize (for example, **URL**).
-4. In the side panel, locate the **Default expression** section.
-5. Enter the expression in the **New default expression** box.
+1. Before publishing the connection, open the **Content** tab and go to **Manage properties**.
+1. In the **Properties** table, select the property you want to customize (for example, **URL**).
+1. In the side panel, locate the **Default expression** section.
+1. Enter the expression in the **New default expression** box.
    - Reference variable components by using the exact property name enclosed in `${}`.
-6. Select **Save changes** at the bottom of the side panel.
-7. Select **Preview data** at the top of the **Content** tab and scroll to the customized property to validate the expression.
+1. Select **Save changes** at the bottom of the side panel.
+1. Select **Preview data** at the top of the **Content** tab and scroll to the customized property to validate the expression.
 
 **Example**
 
@@ -289,14 +309,14 @@ For some connectors, you can override the default expression for specific items 
 To add rules:
 
 1. Complete steps 1–4 in [Customize values for certain schema properties](#customize-values-for-certain-schema-properties).
-2. In the **Set additional rules to configure expressions** section, select **Add new rule**.
-3. In the side panel:
+1. In the **Set additional rules to configure expressions** section, select **Add new rule**.
+1. In the side panel:
    - Select the **Filter property** (for example, **KbKnowledgeBase** or **Category**).
    - Enter the **Value** using the exact case from your schema. Separate multiple values with commas.
    - Define the **Expression** to apply.
-4. Select **Save changes**.
-5. Save changes again at the bottom of the side panel.
-6. Use **Preview data** on the **Content** tab to validate the customized expression.
+1. Select **Save changes**.
+1. Save changes again at the bottom of the side panel.
+1. Use **Preview data** on the **Content** tab to validate the customized expression.
 
 > [!NOTE]
 > - If an item matches multiple rules, the first rule in the list is applied.
@@ -310,9 +330,9 @@ To apply a different URL expression for ServiceNow knowledge articles in the **I
 
 ### Guidelines for crawl settings
 
-The refresh interval controls how often data is synchronized between the source system and Microsoft Search. Optimal schedules vary by data source and depend on how frequently content and metadata change.
+The refresh interval controls how often Microsoft Search synchronizes data between the source system and Microsoft Search. Optimal schedules vary by data source and depend on how frequently content and metadata change.
 
-Two refresh types are supported: **Full refresh** and **Incremental refresh**. Incremental refresh isn’t available for all data sources.
+Microsoft Search supports two refresh types: **Full refresh** and **Incremental refresh**. Incremental refresh isn't available for all data sources.
 
 A full refresh processes and indexes all changed items, regardless of previous crawls. Use a full refresh in scenarios such as:
 
@@ -322,16 +342,16 @@ A full refresh processes and indexes all changed items, regardless of previous c
 - Modifying crawl rules.
 - Updating the connection schema.
 
-An incremental refresh processes only items that were created or modified since the last successful crawl. This approach is faster and is best suited for frequent content or metadata updates.
+An incremental refresh processes only items that you created or modified since the last successful crawl. This approach is faster and is best suited for frequent content or metadata updates.
 
 > [!NOTE]
-> Incremental crawls don’t currently process updates to **permissions**.
+> Incremental crawls don't currently process updates to **permissions**.
 
-Even when using incremental refreshes, you should run full refreshes periodically to ensure data consistency between the source system and the search index.
+Even when you use incremental refreshes, run full refreshes periodically to ensure data consistency between the source system and the search index.
 
 ### Crawl scheduling
 
-You can configure full and incremental crawls by using the advanced scheduling options on the **Refresh settings** page. Some connectors don’t support incremental crawls. For others, incremental crawling is optional and enabled by default.
+You can configure full and incremental crawls by using the advanced scheduling options on the **Refresh settings** page. Some connectors don't support incremental crawls. For others, incremental crawling is optional and enabled by default.
 
 A default crawl schedule is selected based on the connector type, but you can change it during connection creation or by editing the connection after publishing.
 
@@ -348,9 +368,9 @@ Available options include:
 
 Also consider the following:
 
-- If fields are left blank, Copilot connectors automatically select an optimal start time.
+- If you leave fields blank, Copilot connectors automatically select an optimal start time.
 - System load can delay crawl start times by up to an hour.
-- If a crawl overlaps with the next scheduled crawl, the next crawl runs only if it’s a different type (full or incremental).
+- If a crawl overlaps with the next scheduled crawl, the next crawl runs only if it's a different type (full or incremental).
 
 ### IP firewall rules
 

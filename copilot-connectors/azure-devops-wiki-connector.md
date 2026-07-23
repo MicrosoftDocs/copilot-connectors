@@ -6,7 +6,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: copilot-connectors 
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: Medium 
 description: "Set up the Azure DevOps Wiki Microsoft 365 Copilot connector"
 ms.date: 03/09/2026

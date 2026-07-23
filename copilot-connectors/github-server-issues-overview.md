@@ -137,6 +137,8 @@ You can configure the GitHub Server Issues connector so that only users who have
 
 - **Repository and team permissions** – If a repository is private or restricted to specific teams or users, only those authorized users can see issues from that repository. If a repository is visible to a wider group in your organization, its issues are discoverable to that audience in Copilot and Microsoft Search. To avoid accidental data exposure, the connector doesn't show content that can't be mapped to a valid permission context.
 
+- **Secret teams not supported** – The connector doesn't support access granted exclusively through GitHub [secret teams](https://docs.github.com/en/organizations/organizing-members-into-teams/setting-team-visibility). Users who have repository access only through a secret team might not see that repository's issues in Copilot and Microsoft Search. If your organization uses secret teams to manage repository access, ensure those users also have access through a visible team or are explicitly added as collaborators.
+
 - **User identity mapping** – The connector maps GitHub user accounts to Microsoft Entra ID identities to accurately evaluate permissions. If GitHub user emails match their Microsoft Entra ID UPNs, the connector automatically maps them. If they differ, admins can configure identity mapping rules using email, sign-in (login), or name. Optional regex rules can transform identity attributes for consistent matching.
 
 > [!IMPORTANT]

@@ -7,7 +7,7 @@ manager: srramam
 audience: Admin
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: copilot-connectors 
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium 
 description: "Use staged rollout to gradually introduce a Microsoft 365 Copilot connector to users in your organization. Staged rollout allows you to test, monitor, and adjust settings before deploying a connector to your organization." 
 ---

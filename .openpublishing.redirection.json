@@ -54,6 +54,16 @@
       "source_path_from_root": "/copilot-connectors/troubleshoot-salesforce-connector.md",
       "redirect_url": "/microsoft-365/copilot/connectors/salesforce-crm-troubleshooting",
       "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/azure-data-lake-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/azure-data-lake-storage-gen2-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/troubleshoot-azure-data-lake-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/azure-data-lake-storage-gen2-troubleshooting",
+      "redirect_document_id": true
     }
   ]
 }

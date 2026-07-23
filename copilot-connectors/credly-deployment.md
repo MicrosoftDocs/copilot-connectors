@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Deploy the Credly connector (preview) in the Microsoft 365 admin center"
 ms.author: vivekdatir
 author: vivekdatir
@@ -6,7 +6,7 @@ manager: rampo
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 06/18/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Credly Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."

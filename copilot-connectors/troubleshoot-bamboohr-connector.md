@@ -7,7 +7,7 @@ manager: laugra
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Find troubleshooting information for the BambooHR Microsoft 365 Copilot connector."
 ---

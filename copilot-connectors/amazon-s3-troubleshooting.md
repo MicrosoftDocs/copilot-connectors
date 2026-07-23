@@ -6,7 +6,7 @@ manager: zezhangzhao
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 10/22/2025
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Amazon S3 Copilot connector."

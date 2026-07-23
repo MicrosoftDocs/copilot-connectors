@@ -5,7 +5,7 @@ author: monaray97
 manager: jameslau 
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: copilot-connectors 
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium 
 description: "Find information about how to map users to Microsoft Entra IDs when you customize Microsoft 365 Copilot connectors in the admin center." 
 ms.date: 02/13/2026
