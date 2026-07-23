@@ -7,7 +7,7 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 06/03/2026
 ms.localizationpriority: Medium
 ---
@@ -22,13 +22,6 @@ This article explains submission prerequisites, requirements, required artifacts
 
 > [!NOTE]
 > Microsoft enables only tools that perform search and fetch operations. Each tool must include the `readOnlyHint` annotation to be enabled in the connectors gallery in the Microsoft 365 admin center.
-
-## Prerequisites
-
-Before you submit your connector, make sure that you meet the following prerequisites:
-
-- You have an active engagement with a Microsoft business development representative.
-- Your organization has signed a legal agreement that permits Microsoft to use your MCP server and its tools within Microsoft 365 Copilot.
 
 ## Gallery requirements
 
