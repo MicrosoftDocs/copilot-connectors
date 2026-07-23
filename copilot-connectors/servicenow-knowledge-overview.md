@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 06/10/2026
+ms.date: 07/23/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Knowledge Copilot connector."
 ---
@@ -57,7 +57,16 @@ The ServiceNow Knowledge connector has the following capabilities:
 - Enables Copilot and search experiences in Microsoft 365 to respond to user questions related to your IT/HR workflows in Copilot.
 - Uses [semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 - Supports evaluation of [advanced script-based user criteria permissions](https://docs.servicenow.com/bundle/xanadu-servicenow-platform/page/product/knowledge-management/task/create-user-criteria-record-in-knowledge-management.html).
-- Indexes comments and attachments on KB articles.
+- Indexes comments on knowledge articles.
+- Indexes attachments on knowledge articles, including documents that are hyperlinked or embedded within the article body.
+  - Supported attachment formats include:
+    - Microsoft Office files (Word, Excel, PowerPoint, OneNote)
+    - OpenDocument files
+    - PDFs
+    - Text and markup files (TXT, Markdown, HTML, XML, XPS)
+    - Web page archives (MHT, MHTML)
+    - Email messages (EML, MSG)
+    - ZIP archives
 - Supports indexing content from custom or default knowledge article templates, such as FAQs, How-to, What Is, or KCS article templates.
 - Supports customization of the ServiceNow URL in Copilot responses as needed for your organization.
 - Considers both knowledge base-level and article-level permissions (user criteria) when evaluating article permissions.
@@ -68,6 +77,8 @@ The ServiceNow Knowledge connector has the following capabilities:
 The ServiceNow Knowledge connector has the following limitations:
 
 - The incremental crawl only updates the changed content or any addition or removal of user criteria to any article, not the changes in identity, such as changes in users or user criteria attributes. The identity sync happens only with a full crawl.
+- Image files aren't indexed as attachments. Formats such as .png, .jpg, .jpeg, .gif, .bmp, and .svg are skipped; only text-based document formats are indexed.
+- Each knowledge article indexes a maximum of 100 attachments, up to a combined size of 20 MB. Attachments beyond these limits aren't indexed.
 
 ## Data types indexed from ServiceNow Knowledge
 
