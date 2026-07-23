@@ -34,16 +34,12 @@ To configure a Trello app:
 - Select **New** to add a new app.
   ![Screenshot that shows how to create an app in the Trello admin portal.](media/trello/trello-create-app.png)
 
-
 - Fill in the required fields to create a new app.
   ![Screenshot that shows how to fill in the fields of the app in the Trello admin portal.](media/trello/trello-fill-app.png)
 
-   ![Screenshot that shows how to generate app keys in Trello admin portal.](media/trello/trello-generate-api-keys-1.png)
-
 ## Get the API key and secret
 - Select **Generate a new API key**.
-   ![Screenshot that shows how to find app keys and secret in Trello admin portal.](media/trello/trello-copy-api-keys.png)
-
+   ![Screenshot that shows how to generate app keys in Trello admin portal.](media/trello/trello-generate-api-keys-1.png)
 
 - Copy the API key and secret from the app for authentication in Microsoft 365 admin center.
    ![Screenshot that shows how to find app keys and secret in Trello admin portal.](copilot-connectors/media/trello/trello-copy-api-keys.png)
@@ -69,11 +65,11 @@ The Trello connector supports the following authentication option:
 
 - **Trello OAuth**: Enter the consumer key and private secret from your Trello app registration.
 
-### Roll out
+### Rollout
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
+To roll out to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
 
-Choose **Create** to deploy the connection. The Copilot connector starts indexing content right away.
+Select **Create** to deploy the connection. The Copilot connector starts indexing content right away.
 
 The following table lists the default values that are set.
 
@@ -83,19 +79,19 @@ The following table lists the default values that are set.
 | Content | Manage properties are set to default schema values |
 | Sync | Incremental crawl every 15 minutes; full crawl every day |
 
-To customize these values, choose **Custom setup**.
+To customize these values, select **Custom setup**.
 
 After you create your connection, you can review the status in the **Connectors** section of the Microsoft 365 admin center.
 
 ## Customize settings (optional)
 
-You can customize the default values for the connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**.
+You can customize the default values for the connector settings. To customize settings, on the connector page in the admin center, select **Custom setup**.
 
 ### Customize user settings
 
 #### Access permissions
 
-The Trello connector supports search permissions visible to **Everyone** or **Only people with access to this data source**.
+The Trello connector supports search permissions that are visible to **Everyone** or **Only people with access to this data source**.
 
 #### Map identities
 
