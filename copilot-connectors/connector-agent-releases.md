@@ -43,7 +43,7 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 ## Version 3.1.23.0 (*June 16, 2026*)
 
 * Updated bundled Git library to version 2.50.0 to improve reliability of git-based connector crawls.
-* Added support for multi-instance add/delete url in fileshare and intranet (this is the minimum version to support this feature).
+* Added support for multi-instance add and delete URL in fileshare and intranet (this version is the minimum version to support this feature).
 * Added parser output size limit for the SharePoint on-premises connector to improve crawl reliability on large documents.
 * Improved reliability and efficiency of recovery crawls.
 * Bug fixes and reliability improvements.
