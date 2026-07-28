@@ -61,13 +61,13 @@ When you use the recommended configuration, the connector agent instance can han
 
 If your organization's proxy servers or firewalls block communication to unknown domains, add the following rules to the allow list.
 
-| **Microsoft 365 Enterprise** | **Microsoft 365 GCC** | **Microsoft365 GCCH** |
-| ------------- | -------------| -------------|
-| 1. `*.events.data.microsoft.com` | 1. `*.events.data.microsoft.com` | 1. `*.events.data.microsoft.com`
-| 2. `*.office.com` | 2. `*.office.com` | 3. `*.office.com`, `*.office365.us`
-| 3. `https://login.microsoftonline.com` | 3. `https://login.microsoftonline.com` | 3. `https://login.microsoftonline.com`, `https://login.microsoftonline.us`
-| 4. `https://gcs.office.com/` | 4. `https://gcsgcc.office.com` | 4. `https://gcs.office365.us/`
-| 5. `https://graph.microsoft.com/` | 5. `https://graph.microsoft.com` | 5. `https://graph.microsoft.com/`, `https://graph.microsoft.us/`
+| **Microsoft 365 Enterprise** | **Microsoft 365 GCC** | **Microsoft365 GCCH** | **Microsoft365 DoD** |
+| ------------- | -------------| -------------| -------------|
+| 1. `*.events.data.microsoft.com` | 1. `*.events.data.microsoft.com` | 1. `*.events.data.microsoft.com` | 1. `*.events.data.microsoft.com`
+| 2. `*.office.com` | 2. `*.office.com` | 2. `*.office.com`, `*.office365.us` | 2. `*.office.com`, `*.office365.us`
+| 3. `https://login.microsoftonline.com` | 3. `https://login.microsoftonline.com` | 3. `https://login.microsoftonline.com`, `https://login.microsoftonline.us` | 3. `https://login.microsoftonline.com`, `https://login.microsoftonline.us`
+| 4. `https://gcs.office.com/` | 4. `https://gcsgcc.office.com` | 4. `https://gcs.office365.us/` | 4. `https://gcs-dod.office365.us/`
+| 5. `https://graph.microsoft.com/` | 5. `https://graph.microsoft.com` | 5. `https://graph.microsoft.com/`, `https://graph.microsoft.us/` | 5. `https://graph.microsoft.com/`, `https://dod-graph.microsoft.us/`
 
 > [!NOTE]
 > - Proxy authentication isn't supported. If your environment has a proxy that requires authentication, allow the connector agent to bypass the proxy.
@@ -95,7 +95,7 @@ If you're upgrading the agent from version 1.x to version 2.x:
 
 1. [Download](https://aka.ms/gca) the installer.
 
-1. The installer prompts you to install .NET 8 Desktop runtime, if it isn't already installed.
+1. The installer prompts you to install .NET 10 Desktop runtime, if it isn't already installed.
 
 1. Allow communication to the endpoint *.office.com.
 
