@@ -44,23 +44,24 @@ Microsoft 365 Copilot currently supports federated Copilot connectors in the fol
  
 Microsoft provides a set of federated connectors in the Connectors Gallery. These connectors can be Microsoft-published or submitted by partners and approved by Microsoft.
 
-Currently, Microsoft-published federated connectors are available for the following data sources:
- 
-- Canva
-- CB Insights
-- Daloopa
-- FactSet (coming soon)
-- Google Calendar
-- Google Contacts
-- HubSpot
-- Intercom
-- Linear
-- LSEG
-- Morningstar
-- Moody's
-- Notion
-- PitchBook
-- S&P Global
+Currently, federated connectors are available for the following data sources, organized by category:
+
+| Category | Data sources |
+|---|---|
+| Productivity | Autodesk, Excalidraw, Fellow.ai, Google Calendar, Google Contacts, Grain, Granola, Mem, Notion |
+| Sales and marketing | Clarify, Customer.io, HG Insights, HubSpot, Intercom, MailerLite, Polar Analytics, Sprouts Data Intelligence |
+| Design | Canva, Cloudinary |
+| Development tools | Context7, GoDaddy, GraphOS MCP Tools, Hugging Face, Jam, Linear, pg-aiguide |
+| Financial Services | Aiwyn Tax, Blockscout, CB Insights, Clarity AI, Daloopa, FactSet, Fitch Solutions, LSEG, Moody's, Morningstar, PitchBook, S&P Global |
+| Data & Analytics | Forrester, Sight Machine, Wolfram |
+| Human Resources & Recruiting | Dice, ZipRecruiter |
+| Supply Chain & Logistics | Enosix, Infor Nexus Digital Assistant |
+| Legal | BoardWise, Harvey, Legal Data Hunter |
+| Nonprofit | Kindora Funder Discovery |
+| Security & IT | Malwarebytes |
+| Commerce & Shopping | Pulse by Passby, Taskrabbit Booking Assistance |
+| Education | Article Galaxy, Microsoft Learn |
+| Health & Life Sciences | NyquistAI, OpenTargets |
  
 Partners who want to make a federated connector available in the gallery can submit their remote MCP server to Microsoft for review. For more information, see [Submit a federated connector](submit-federated-connector.md). For any questions related to submitting your remote MCP server, [send us an email](mailto:submit-fcc@microsoft.com).
 
