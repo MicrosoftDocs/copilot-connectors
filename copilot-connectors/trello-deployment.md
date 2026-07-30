@@ -7,7 +7,7 @@ ms.reviewer: anggao
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-copilot-connectors
+ms.service: copilot-connectors
 ms.date: 04/09/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Trello Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
@@ -38,15 +38,15 @@ To configure a Trello app:
 - Fill in the required fields to create a new app.
   ![Screenshot that shows how to fill in the fields of the app in the Trello admin portal.](media/trello/trello-fill-app.png)
 
-
+   ![Screenshot that shows how to generate app keys in Trello admin portal.](media/trello/trello-generate-api-keys-1.png)
 
 ## Get the API key and secret
 - Select **Generate a new API key**.
-  ![Screenshot that shows how to generate app keys in Trello admin portal.](media/trello/trello-generate-api-keys-1.png)
-  
+   ![Screenshot that shows how to find app keys and secret in Trello admin portal.](media/trello/trello-copy-api-keys.png)
+
 
 - Copy the API key and secret from the app for authentication in Microsoft 365 admin center.
-  ![Screenshot that shows how to find app keys and secret in Trello admin portal.](media/trello/trello-copy-api-keys.png)
+   ![Screenshot that shows how to find app keys and secret in Trello admin portal.](copilot-connectors/media/trello/trello-copy-api-keys.png)
   
 
 ## Deploy the connector
@@ -59,7 +59,7 @@ To add the connector for your organization:
 
 ### Set display name
 
-The display name identifies references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.[...]
+The display name identifies references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
 
 You can accept the default display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -68,12 +68,6 @@ You can accept the default display name, or customize the value to use a display
 The Trello connector supports the following authentication option:
 
 - **Trello OAuth**: Enter the consumer key and private secret from your Trello app registration.
-
-### Consumer key
-The `API key` you copied in the [Get the API key and secret](#get-the-api-key-and-secret) step.
-
-### Private secret
-The `Secret` you copied in the [Get the API key and secret](#get-the-api-key-and-secret) step.
 
 ### Roll out
 
@@ -84,7 +78,7 @@ Select **Create** to deploy the connection. The Copilot connector starts indexin
 The following table lists the default values that are set.
 
 | Category | Default value |
-| --- | --- |
+|----------|----------------|
 | Users | Default access permission is set to be visible to everyone |
 | Content | Manage properties are set to default schema values |
 | Sync | Incremental crawl every 15 minutes; full crawl every day |
@@ -105,7 +99,7 @@ The Trello connector supports search permissions that are visible to **Everyone*
 
 #### Map identities
 
-The default method for mapping your data source identities with Microsoft Entra ID checks whether the email address of Trello users matches the user principal name (UPN) or email of users in Microsoft Entra ID.
+The default method for mapping your data source identities with Microsoft Entra ID checks whether the email address of Trello users matches the user principal name (UPN) or email of users in Microsoft Entra ID. If the default mapping doesn't work for your organization, provide a custom mapping formula.
 
 ### Customize content settings
 
@@ -114,23 +108,15 @@ The default method for mapping your data source identities with Microsoft Entra 
 The following table lists the properties that are selected by default.
 
 | Property | Semantic Label | Description | Schema Attributes |
-| --- | --- | --- | --- |
-| BoardName |  | The name of the board | Search |
-| BoardUrl |  | The URL of the board |  |
-| Closed |  | A Trello card status indicating that the task is completed. | Query, Retrieve |
-| CreatedBy | Created by | Creator of the Trello card | Query, Retrieve, Search |
-| DateLastActivity | Last modified date time | The last modified time of the card | Query, Retrieve |
+|-----------|------------------|----------------|---------------------|
+| Id |  | Unique identifier of the Trello card | Query, Retrieve |
 | Description |  | Description content of the Trello card | Search |
-| Due | DueDate | Due date of the task on the card | Query, Retrieve |
-| DueComplete |  | A Trello card task status indicating that the task was completed before the due date. | Query, Retrieve |
-| Id | SecondaryId | Unique identifier of the Trello card | Query, Retrieve, Search |
-| ItemType |  | The type of indexed item | Query, Retrieve, Search |
-| LabelName |  | Tags or labels associated with the card | Query, Retrieve, Search |
-| Members |  | People assigned to the card | Query, Retrieve, Search |
-| Name | Title | The title of the card | Query, Retrieve, Search |
-| ShortLink |  | A shortened URL that links directly to the Trello card |  |
-| Start | Created date time | Start date of the task on the card | Query, Retrieve |
-| Url | url | The target URL of the item in the data source | Query, Retrieve, Search |
+| Due | DueDate | Due date of the item | Query, Retrieve |
+| LabelName | tags | Tags or labels associated with the item | Search, Query, Retrieve |
+| Name | title | The title of the item | Search, Query, Retrieve |
+| Start | createdDateTime | Start date of the card | Query, Retrieve |
+| Url | url | The target URL of the item in the data source | Search, Query, Retrieve |
+| Members | assignedToPeople | People assigned to the item | Search, Query, Retrieve |
 
 ### Customize sync intervals
 

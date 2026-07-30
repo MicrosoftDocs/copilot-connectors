@@ -20,6 +20,16 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 
 To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
 
+## Version 4.0.2.0 (*July 29, 2026*)
+
+* Fixed a Microsoft Graph connector agent connection issue.
+* Included security improvements, bug fixes, and reliability improvements.
+
+## Version 4.0.1.0 (*July 22, 2026*)
+
+* Improved crawl reliability for Jira Data Center connector.
+* Included security improvements, bug fixes, and reliability improvements.
+
 ## Version 4.0.0.0 (*July 20, 2026*)
 
 * Added support for .NET 10. (Ensure at least .NET 10 version to avoid unexpected behavior).
@@ -30,7 +40,6 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 * Fixed parsing of docx files containing embedded Visio (.vsdx) diagrams.
 * Surface actionable access-denied error(E1037) during file connector crawls.
 * Included security improvements, bug fixes, and reliability improvements.
-
 
 ## Version 3.1.23.0 (*June 16, 2026*)
 
