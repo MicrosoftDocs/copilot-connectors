@@ -13,7 +13,6 @@ ms.localizationpriority: Medium
 description: "Find information about how to deploy the Trello Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
-<!-- markdownlint-disable-next-line MD025 -->
 # Deploy the Trello connector
 
 The Trello Microsoft 365 Copilot connector enables your organization to index Trello cards so users can discover, access, and use Trello content directly within Microsoft 365 experiences. This article describes the steps to deploy and customize the Trello connector.
