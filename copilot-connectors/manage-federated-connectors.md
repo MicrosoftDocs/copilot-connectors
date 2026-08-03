@@ -6,7 +6,8 @@ author: Lauragra
 ms.author: lauragra
 manager: calvind
 ms.reviewer: mansipakhale
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
+
 ms.date: 04/28/2026
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -33,7 +34,7 @@ The federated connector management capability provides a tenant-wide toggle that
 
 The federated connector management capability requires the following prerequisites:
 
-- **Administrator role**: Global Administrator or AI Administrator permissions
+- **Administrator role**: Global Administrator or Search Administrator permissions
 - **PowerShell access**: Ability to run PowerShell as an administrator
 - **Connector.Cmd module**: Version 2.1 or later (installed in the following steps)
 
@@ -62,7 +63,7 @@ Use the `Set-FederatedConnectorToggle` cmdlet to enable or disable federated con
     Set-FederatedConnectorToggle
     ```
 
-1. When prompted, authenticate with your Global Administrator or AI Administrator credentials.
+1. When prompted, authenticate with your Global Administrator or Search Administrator credentials.
 
 1. Approve the requested permissions.
 

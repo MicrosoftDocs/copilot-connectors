@@ -1,8 +1,8 @@
 ---
 title: "Submit a federated connector"
 description: "Learn how to submit a remote MCP server as a federated Microsoft 365 Copilot connector, including requirements, metadata, and review expectations."
-ms.author: lauragra
-author: lauragra
+ms.author: danielabo
+author: danipocket
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -68,7 +68,7 @@ Microsoft accepts submissions on a rolling basis. Review time varies based on su
 After you submit a federated connector:
 
 - Microsoft validates the submitted metadata, assets, and technical requirements.
-- Microsoft integrates the connector and coordinates validation through your Microsoft business development representative.
+- Microsoft integrates the connector and coordinates validation via mail.
 - Microsoft proceeds with release discussions and ring-based rollout planning.
 - After Microsoft approves the connector and publishes it in the gallery, each customer organization's admin must approve the partner federated connector before it's enabled for that organization.
 
