@@ -55,11 +55,11 @@ Verify that Jira Cloud REST APIs are enabled by default and that no API restrict
 
 If your organization uses network-level restrictions, add the Microsoft Graph connector IPs to the allowlist.
 
-## Create a service account and grant permissions
+## Create an account and grant permissions
 
 Create a dedicated Jira Cloud account for the connector instead of using a personal account.
 
-To create the service account:
+To create the account:
 
 - Sign in to the [Atlassian Admin Console](https://admin.atlassian.com/) as an organization or site admin.
 - Go to **Directory** > **Users**.
@@ -67,7 +67,7 @@ To create the service account:
 - Under **Products**, select **Jira Software**.
 - Don't assign admin or project admin roles unless they're required for your indexing or security trimming scenario.
 
-Grant the service account the permissions required for the connector.
+Grant the account the permissions required for the connector.
 
 | Permission | Type | Required when |
 | :--- | :--- | :--- |
