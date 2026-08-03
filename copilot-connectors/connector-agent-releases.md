@@ -12,6 +12,7 @@ description: "Release history of Microsoft Graph connector agent, which is used 
 ms.date: 05/21/2026
 --- 
 
+<!-- markdownlint-disable-next-line MD025 -->
 # Release history for Microsoft Graph connector agent
 
 Indexing on-premises data sources requires installing the Microsoft Graph connector agent. The agent securely transfers data between on-premises data and the Microsoft 365 Copilot connector APIs.
@@ -101,15 +102,15 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 ## Version 3.1.15.0 (*December 20, 2025*)
 
 * Bug fixes and reliability improvements.
-  
+
 ## Version 3.1.14.0 (*November 21, 2025*)
- 
+
 * Improved OAuth handling for Confluence on-premises to prevent token refresh issues.
 * Added support for anonymous access in Confluence connectors.
 * Bug fixes and reliability improvements.
- 
+
 ## Version 3.1.12.0 (*September 1, 2025*)
- 
+
 * Improved robustness for Github connector.
 * Bug fixes and reliability improvements.
 
@@ -325,10 +326,10 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 
 ## Version 1.5.0.0 (*not supported*) (*February 16, 2022*)
 
-* Ability to update client-secret & certificate used for authentication 
-* OAuth 2.0 support for Intranet On-premises connector 
-* Support for parsing of OneNote (.one) file 
-* Fixed issues in parsing word files (.doc*) & last modified date for PowerPoint files (.ppt*) 
+* Ability to update client secret and certificate used for authentication.
+* OAuth 2.0 support for Intranet On-premises connector.
+* Support for parsing of OneNote (.one) file.
+* Fixed issues in parsing Word files (.doc*) and last modified date for PowerPoint files (.ppt*).
 
 ## Version 1.4.0.0 (*not supported*) (*January 13, 2022*)
 
