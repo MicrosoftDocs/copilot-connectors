@@ -19,24 +19,24 @@ Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and M
 
 The following types of Copilot connectors are available:
 
-- **Synced connectors:** Index data into Microsoft Graph for Copilot and search.
+- **Synced connectors:** Index data into Microsoft Graph for Copilot and search. Microsoft offers two configuration options for synced connectors - Tenant configuration which admins configure and Personal configuration which users configure.
 - **Federated connectors:** Use a Model Context Protocol (MCP) model to fetch data in real time, without indexing content into Microsoft 365. For more information, see [Federated connectors overview](federated-connectors-overview.md).
 
 The following table summarizes the key differences between synced connectors and federated connectors.
 
-| Feature                | Synced connectors         | Federated connectors          |
-|------------------------|--------------------------|--------------------------|
-| Data                   | Indexed into Microsoft 365 | Fetched live |
-| Access model           | Organization-level       | User-level   |
-| Setup                  | Admin configures         | Admin enables; users authenticate |
-| Use cases              | Broad indexing           | Sensitive, dynamic, or live data sources         |
-| Default connectors     | Yes                      | Yes                      |
-| Custom connectors      | Yes                      | No                      |
+| Feature                | Synced connectors - Tenant configuration         | Synced connectors - Personal configuration         | Federated connectors          |
+|------------------------|--------------------------|--------------------------|--------------------------|
+| Data                   | Indexed into Microsoft 365 | Indexed into Microsoft 365 | Fetched live |
+| Access model           | Organization-level       | User-level   | User-level   |
+| Setup                  | Admin configures         | Admin enables; users authenticate | Admin enables; users authenticate |
+| Use cases              | Broad indexing           | Index personally relevant content           | Sensitive, dynamic, or live data sources         |
+| Default connectors     | Yes                      | Yes (limited)                      | Yes                      |
+| Custom connectors      | Yes                      | No                      | No                      |
 
 
-### Synced connectors
+### Synced connectors - Tenant configuration
 
-Synced connectors crawl and index content from external sources into Microsoft Graph. This indexed data is discoverable in Copilot and Microsoft Search experiences. Synced connectors support organization-level use, with admins configuring and managing connections in the Microsoft 365 admin center.
+Synced connectors crawl and index content from external sources into Microsoft Graph. This indexed data is discoverable in Copilot and Microsoft Search experiences. Synced connectors support organization-level use, with admins configuring and managing connections in the Microsoft 365 admin center. 
 
 Synced connectors have the following key features:
 
@@ -51,6 +51,20 @@ The following video provides an overview of the synced connector setup process.
 > [!VIDEO 4f4668c6-445a-4895-8627-92880eafad68]
 
 For more information, see [Set up synced connectors in the admin center](deployment-overview.md).
+
+### Synced connectors - Personal configuration
+
+Synced connectors support Personal configuration, with admins enabling the connector and user authenticating to it. Personal sync connectors crawl limited recent data per user to enable users to index content of choice easily.
+
+Personal sync connectors have the following key features:
+
+- Index external data so it appears in Copilot and Microsoft Search results.
+- Synchronize a user’s external content into Microsoft Graph, scoped to that individual user.
+- Connect using the user’s own identity, credentials, and consent — not admin credentials.
+- Enforce the source system’s permissions, so a user only sees content they already have access to.
+- When a user disconnects or an admin disables the connector, the indexed content is removed and synchronization stops.
+
+For more information, see [Personal sync connectors overview](personal-sync-connectors-overview.md).
 
 ### Federated connectors
 
@@ -167,3 +181,5 @@ For example, a Sales agent might use a Salesforce connector for data and a Power
 - [Connectors gallery](connectors-gallery.md)
 - [Deploy connectors in the admin center](deployment-overview.md)
 - [Set up Microsoft-built synced connectors](prebuilt-connectors-overview.md)
+- [Personal sync connectors overview](personal-sync-connectors-overview.md)
+
