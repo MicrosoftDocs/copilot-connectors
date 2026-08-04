@@ -648,6 +648,12 @@ items:
     href: map-non-entra-id.md
   - name: Enhance Copilot discovery of connector content
     href: enhance-copilot-discovery.md
+  - name: Personal sync connectors
+    items:
+    - name: Overview
+      href: personal-sync-connectors-overview.md
+    - name: Manage personal sync connectors
+      href: manage-personal-sync-connectors.md
   - name: FAQs
     href: frequently-asked-questions.yml
   - name: Build custom synced connectors
