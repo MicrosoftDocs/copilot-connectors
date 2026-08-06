@@ -106,6 +106,9 @@ The Jira Data Center connector calls the following Jira REST APIs during crawlin
 | GET | `/rest/api/2/issue/{issueId}` | Retrieve issue attachments metadata |
 | GET | `{attachment content URL}` | Download attachment content |
 
+> [!IMPORTANT]
+> Comments and attachments ingestion for Jira Data Center is currently available through on-demand enablement. To enable this capability, submit a request to Microsoft Support.
+
 ### Permission and access control
 
 | HTTP Method | Endpoint | Used For |
