@@ -1,12 +1,12 @@
 ---
 title: Set up the Jira Cloud service for Jira Cloud connector ingestion
 description: Get the steps that the Jira Cloud admin needs to complete for your organization to configure the Jira Cloud Microsoft 365 Copilot connector.
-author: lauragra
-ms.author: lauragra
+author: danipocket
+ms.author: danielabo
 manager: calvind
 ms.reviewer: jecui
 ms.topic: concept-article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 05/15/2026
 ---
 
@@ -33,7 +33,7 @@ Before you begin, make sure that you meet the following prerequisites:
 |------|------|
 | [Identify the Jira Cloud instance URL](#identify-the-jira-cloud-instance-url) | Jira admin |
 | [Enable API access](#enable-api-access) | Jira admin |
-| [Create a service account and grant permissions](#create-a-service-account-and-grant-permissions) | Jira admin |
+| [Create an account and grant permissions](#create-an-account-and-grant-permissions) | Jira admin |
 | [Choose an authentication method](#choose-an-authentication-method) | Jira admin |
 | [Review profile visibility for identity mapping](#review-profile-visibility-for-identity-mapping) | Jira admin |
 | [Estimate content scope](#estimate-content-scope) | Jira admin |
@@ -126,6 +126,8 @@ To use **Customized Atlassian Jira OAuth 2.0** for authentication:
 1.  On the left navigation pane, go to **Authorization** to add the callback URL:
     - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
     - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+    - For Microsoft 365 GCC High (Government Community Cloud High): `https://gcs.office365.us/v1.0/admin/oauth/callback`
+    - For Microsoft 365 DoD (Department of Defense): `https://gcs-dod.office365.us/v1.0/admin/oauth/callback`
 1.  Select **Save**.
 1.  In the left pane, go to **Settings** to get the client ID and secret. Complete the connection settings step by using the Client ID and Secret.
 

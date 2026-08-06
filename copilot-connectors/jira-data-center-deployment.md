@@ -1,13 +1,13 @@
 ---
 title: "Deploy the Jira Data Center connector"
-ms.author: lauragra
-author: lauragra
+ms.author: danielabo
+author: danipocket
 manager: calvind
 ms.reviewer: neocheng
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 06/02/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Jira Data Center Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
@@ -83,8 +83,10 @@ To configure OAuth in Jira:
 
 1. Complete the **Configure an incoming link** form:
    - **Redirect URL:**  
-     - Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`  
-     - Government Community Cloud High (GCC High): `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+     - Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
+     - Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+     - Microsoft 365 GCC High (Government Community Cloud High): `https://gcs.office365.us/v1.0/admin/oauth/callback`
+     - Microsoft 365 DoD (Department of Defense): `https://gcs-dod.office365.us/v1.0/admin/oauth/callback`
    - **Scope:** Admin
 
     :::image type="content" alt-text="Screenshot of Configure an incoming link form." source="media/jira-data-center/jira-step5-config-form.png" lightbox="media/jira-data-center/jira-step5-config-form.png":::
