@@ -10,12 +10,12 @@ ms.audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
-ms.date: 04/02/2026
+ms.date: 08/08/2026
 ---
 
 # Set up ServiceNow Knowledge connector prerequisites by using background scripts
 
-You can run background scripts that automate the configuration steps for the [ServiceNow Knowledge Microsoft 365 Copilot connector](servicenow-knowledge-overview.md). These scripts perform the same configuration as the manual steps described in [Set up the ServiceNow service](servicenow-knowledge-admin-setup.md) and [Grant table access](granting-table-access-servicenow-knowledge.md). They don't introduce any extra permissions, plugins, or external connections.
+You can run background scripts that automate the configuration steps for the [ServiceNow Knowledge Microsoft 365 Copilot connector](servicenow-knowledge-overview.md). These scripts perform the same configuration as the manual steps described in [Set up the ServiceNow service](servicenow-knowledge-admin-setup.md), [Grant table access](granting-table-access-servicenow-knowledge.md), and [Federated Auth](servicenow-knowledge-deployment.md#federated-auth-federated-identity-credentials). They don't introduce any extra permissions, plugins, or external connections.
 
 The scripts are hosted in the [ServiceNow Knowledge connector setup scripts GitHub repo](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts).
 
@@ -32,6 +32,7 @@ The following table lists and describes the scripts.
 
 | Script | What it does | Equivalent manual steps |
 |--------|-------------|------------------------|
+| [federated_auth_setup.js](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts/blob/main/federated_auth_setup.js) | Configures Federated Auth (OIDC): the provider configuration, Application Registry entity, `useraccount` auth scope, and machine integration user. For Federated Auth deployments only. | [Federated Auth](servicenow-knowledge-deployment.md#federated-auth-federated-identity-credentials) |
 | [row_level_acl_setup.js](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts/blob/main/row_level_acl_setup.js) | Creates service account, custom role, and row-level READ ACLs for all required tables | [Create service account and set up permissions](servicenow-knowledge-admin-setup.md#create-service-account-and-set-up-permissions-to-index-items) and [Grant table access](granting-table-access-servicenow-knowledge.md) |
 | [field_level_acl_setup.js](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts/blob/main/field_level_acl_setup.js) | Creates field-level READ ACLs (`table.*`) for tables where field values are restricted | [Grant field-level access](granting-table-access-servicenow-knowledge.md#grant-field-level-access) |
 | [scripted_rest_api_setup.js](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts/blob/main/scripted_rest_api_setup.js) | Creates the Scripted REST API endpoint for the Advanced connector flow | [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api) |
@@ -41,6 +42,22 @@ All scripts are:
 - **Idempotent** — Safe to run multiple times. The scripts reuse existing records and don't create duplicates.
 - **Non-destructive** — The scripts don't modify, delete, or overwrite any existing records.
 - **Self-contained** — No external dependencies or network calls outside your ServiceNow instance.
+
+## Set up federated authentication
+
+If you deploy the connector by using the **Federated Auth (Federated Identity Credentials)** authentication option, run the `federated_auth_setup.js` script first. It configures the OpenID Connect (OIDC) provider, the Application Registry entity, the `useraccount` auth scope, and the machine integration user that the connector authenticates as. For other authentication methods, such as Basic auth or OAuth 2.0, skip this section.
+
+1. Elevate your role to `security_admin` in ServiceNow.
+1. Go to **All** > **System Definition** > **Scripts - Background**.
+1. Copy the script from [federated_auth_setup.js](https://github.com/microsoft/copilot-servicenow-connector-setup-scripts/blob/main/federated_auth_setup.js) and paste it into the script editor.
+
+    > [!TIP]
+    > Set the `SP_OBJECT_ID` (service principal object ID) and `TENANT_ID` (Microsoft Entra tenant ID) variables in the **CONFIGURATION** section before you run the script. To find these values, see [Federated Auth](servicenow-knowledge-deployment.md#federated-auth-federated-identity-credentials).
+
+1. Select **Run script**.
+1. Review the output summary to confirm all steps completed successfully.
+
+When you run the `row_level_acl_setup.js` script in the next step, set its `USER_ID` to the same service principal object ID so that the read role and ACLs are assigned to the integration user that the connector maps to.
 
 ## Step 1: Create service account and grant row-level access
 

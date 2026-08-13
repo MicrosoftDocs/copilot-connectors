@@ -24,7 +24,8 @@ The File Share Microsoft 365 Copilot connector enables users in your organizatio
 ## Limitations
 
 - The maximum supported file size is 100 MB. Files that exceed 100 MB aren't indexed. The maximum post-processed size limit is 4 MB. Processing stops when a file's size reaches 4 MB. Therefore, some phrases present in the file might not work for search. 
-- You can index up to twenty different file shares in a single connection. Enter one file share per line in the file shares text box area. 
+- You can index up to twenty different file shares in a single connection. Enter one file share per line in the file shares text box area.
+- The File Share connector doesn't support indexing symlinks, NTFS junctions, or volume mount points.
 
 ## Prerequisites
 

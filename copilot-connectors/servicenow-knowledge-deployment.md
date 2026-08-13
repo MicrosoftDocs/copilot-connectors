@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 07/23/2026
+ms.date: 08/08/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Knowledge Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -82,6 +82,9 @@ Choose the authentication method that aligns with your organization's security p
 - **Microsoft Entra ID OpenID Connect** - For details, see [Microsoft Entra ID OpenID Connect](#microsoft-entra-id-openid-connect).
 
 #### Federated Auth (Federated Identity Credentials)
+
+> [!TIP]
+> You can automate the in-ServiceNow steps for Federated Auth by using a background script instead of the manual steps in this section. For more information, see [Set up Federated Auth](servicenow-knowledge-setup-scripts.md#set-up-federated-auth).
 
 Federated Auth uses a Microsoft application with OpenID Connect (OIDC) so that the connector authenticates to your ServiceNow instance without storing or rotating a client secret. Before you begin, make sure you have:
 
