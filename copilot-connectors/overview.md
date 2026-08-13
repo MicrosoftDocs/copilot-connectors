@@ -36,7 +36,7 @@ The following table summarizes the key differences between synced connectors and
 
 ### Synced connectors - Tenant configuration
 
-Synced connectors crawl and index content from external sources into Microsoft Graph. This indexed data is discoverable in Copilot and Microsoft Search experiences. Synced connectors support organization-level use, with admins configuring and managing connections in the Microsoft 365 admin center. 
+Synced connectors crawl and index content from external sources into Microsoft Graph. You can discover this indexed data in Copilot and Microsoft Search experiences. Synced connectors support organization-level use, with admins configuring and managing connections in the Microsoft 365 admin center. 
 
 Synced connectors have the following key features:
 
