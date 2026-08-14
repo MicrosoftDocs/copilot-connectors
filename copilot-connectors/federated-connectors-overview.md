@@ -14,6 +14,8 @@ ms.audience: Admin
 ---
  
 # Federated connectors overview
+
+[!INCLUDE [wiqd-beta-disclaimer](includes/wiqd-beta-disclaimer.md)]
  
 Microsoft 365 Copilot supports federated Copilot connectors to enable organizations to connect their data to Copilot by using Model Context Protocol (MCP). Federated connectors use MCP to access data in real time, so Copilot can retrieve up-to-date information directly from external systems. This approach makes it easy to integrate live, dynamic data sources while keeping the data in its original location.
 
