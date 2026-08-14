@@ -16,12 +16,14 @@ ms.audience: Admin
 
 # Manage federated connector availability
 
+[!INCLUDE [wiqd-beta-disclaimer](includes/wiqd-beta-disclaimer.md)]
+
 Federated connectors for Microsoft 365 Copilot enable users to access information from external data sources directly within their Copilot experience. Microsoft provides default federated connectors that use the Model Context Protocol (MCP) to integrate with popular services and tools. While these connectors enhance Copilot's capabilities by extending its knowledge base, organizations might need to control their availability for security, compliance, or governance reasons.
 
 As an administrator, you can use PowerShell to manage the availability of all default federated connectors across your tenant. This centralized management approach allows you to quickly disable or enable connectors organization-wide while maintaining visibility and control over individual connector settings.
 
 > [!IMPORTANT]
-> Microsoft is retiring the command-line (CLI) toggle for setFederatedConnectors by **August 20, 2026**. The CLI is being deprecated so that connector and agent settings are honored from the same global tenant settings, giving you one consistent place to govern both. Going forward, you can manage the same intent through the 'Allowed agent types' setting in Agent 365. For more information, see [Allowed agent types](https://learn.microsoft.com/microsoft-365/admin/manage/agent-settings?view=o365-worldwide#allowed-agent-types).
+> Microsoft is retiring the command-line (CLI) toggle for setFederatedConnectors by **August 20, 2026**. The CLI is being deprecated so that connector and agent settings are honored from the same global tenant settings, giving you one consistent place to govern both. Going forward, you can manage the same intent through the **Allowed agent types** setting in Agent 365. For more information, see [Allowed agent types](https://learn.microsoft.com/microsoft-365/admin/manage/agent-settings?view=o365-worldwide#allowed-agent-types).
 
 ## Manage federated connector availability for your organization
 

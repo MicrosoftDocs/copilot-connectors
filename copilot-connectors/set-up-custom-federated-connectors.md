@@ -6,13 +6,14 @@ ms.author: lauragra
 ms.manager: calvind
 ms.reviewer: mansipakhale
 ms.topic: how-to
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: Medium
 ms.date: 05/01/2026
 ---
 
 # Set up custom federated connectors
 
+[!INCLUDE [wiqd-beta-disclaimer](includes/wiqd-beta-disclaimer.md)]
 
 Many organizations have proprietary systems, internal databases, and line-of-business applications that hold critical operational data. By using custom federated connectors, you can bring this data into Microsoft 365 Copilot by using Model Context Protocol (MCP), unlocking real-time access and natural language interaction for your organization's unique workflows. After you connect your data source, users can interact with the data in real time by using natural language - just as they do with Microsoft 365 data.
 
