@@ -28,17 +28,23 @@ Before you begin, make sure you have the following items:
   - Global Administrator or AI Administrator role in the [Microsoft 365 admin center](https://admin.microsoft.com/).
   - An appropriate Microsoft Entra admin role for single sign-on (SSO) authentication.
   - Access to the [Teams Developer Portal](https://dev.teams.microsoft.com/).
+- **Developer and legal information**
+  - Developer name: The developer or company name.
+  - Website URL: Link to documentation for the MCP server.
+  - Privacy policy URL: Link to the MCP server privacy policy.
+  - Terms of use URL: Link to the MCP server terms of use.
 - **Authentication setup**
   - If your data source requires authentication, [set up authentication](#set-up-authentication) before you create the connector.
 
 ## Set up authentication
 
-Custom federated connectors support two authentication methods. Choose the method that matches your data source.
+Custom federated connectors support three authentication methods. Choose the method that matches your data source.
 
 | Method | Use case | Setup required |
 |---|---|---|
 | **Microsoft Entra SSO** | Users authenticate with their Microsoft 365 credentials. | Microsoft Entra app registration and Teams Developer Portal registration. |
 | **OAuth 2.0** | Users authenticate with a third-party identity provider. | OAuth app in the source system and Teams Developer Portal registration. |
+| **No Auth** | Users don't need to authenticate. | None |
 
 ### Microsoft Entra SSO
 
