@@ -74,6 +74,16 @@
       "source_path_from_root": "/copilot-connectors/troubleshoot-mssql-connector.md",
       "redirect_url": "/microsoft-365/copilot/connectors/mssql-troubleshooting",
       "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/bamboohr-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/bamboohr-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/troubleshoot-bamboohr-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/bamboohr-troubleshooting",
+      "redirect_document_id": true
     }
   ]
 }

@@ -139,10 +139,14 @@ items:
         href: mssql-troubleshooting.md
     - name: BambooHR
       items:
-      - name: Setup
-        href: bamboohr-connector.md
+      - name: Overview
+        href: bamboohr-overview.md
+      - name: Set up the BambooHR service
+        href: bamboohr-admin-setup.md
+      - name: Deployment guide
+        href: bamboohr-deployment.md
       - name: Troubleshooting
-        href: troubleshoot-bamboohr-connector.md
+        href: bamboohr-troubleshooting.md
     - name: Bitbucket Knowledge
       items:
       - name: Overview
