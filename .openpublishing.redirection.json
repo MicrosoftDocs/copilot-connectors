@@ -64,6 +64,16 @@
       "source_path_from_root": "/copilot-connectors/troubleshoot-azure-data-lake-connector.md",
       "redirect_url": "/microsoft-365/copilot/connectors/azure-data-lake-storage-gen2-troubleshooting",
       "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/MSSQL-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/mssql-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/troubleshoot-mssql-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/mssql-troubleshooting",
+      "redirect_document_id": true
     }
   ]
 }

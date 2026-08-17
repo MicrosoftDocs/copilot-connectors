@@ -1,7 +1,7 @@
 ---
 title: "Microsoft-built connectors gallery"
 ms.author: danielabo
-author: danielabom
+author: danipocket
 manager: calvind
 ms.audience: Admin
 ms.topic: landing-page
@@ -90,10 +90,10 @@ The following table lists the database connectors that are available.
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
 | Airtable (preview) | Microsoft | Integrates Airtable bases, tables, and records into Microsoft 365. | [Airtable connector](airtable-overview.md) |
-| Azure SQL | Microsoft | Enables your organization to search for data from your Azure SQL. | [Azure SQL connector](mssql-connector.md) |
+| Azure SQL | Microsoft | Enables your organization to search for data from your Azure SQL. | [Azure SQL connector](mssql-overview.md) |
 | CSV | Microsoft | Enables your organization to search for content stored in CSV files. | [CSV connector](csv-connector.md) |
 | DataStax (preview) | Microsoft | Enables integration with DataStax for real-time data access. | [DataStax connector](datastax-overview.md) |
-| Microsoft SQL Server | Microsoft | Allows your organization to search on-premises Microsoft SQL Server databases. | [Microsoft SQL Server connector](mssql-connector.md) |
+| Microsoft SQL Server | Microsoft | Allows your organization to search on-premises Microsoft SQL Server databases. | [Microsoft SQL Server connector](mssql-overview.md) |
 | Oracle SQL | Microsoft | Enables your organization to discover and index data from an on-premises database. Indexes specified content into Microsoft Search and supports periodic crawls. You can also restrict access to search results for certain users. | [Oracle SQL connector](oraclesql-connector.md) |
 | PostgreSQL (preview) | Microsoft | Enables your organization to discover and index data from PostgreSQL databases. | [PostgreSQL connector](postgresql-connector.md) |
 

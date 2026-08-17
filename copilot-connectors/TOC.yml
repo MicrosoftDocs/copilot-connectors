@@ -129,10 +129,14 @@ items:
         href: azure-file-share-troubleshooting.md
     - name: Azure SQL and Microsoft SQL Server
       items:
-      - name: Setup
-        href: MSSQL-connector.md
+      - name: Overview
+        href: mssql-overview.md
+      - name: Set up the Azure SQL and Microsoft SQL Server service
+        href: mssql-admin-setup.md
+      - name: Deployment guide
+        href: mssql-deployment.md
       - name: Troubleshooting
-        href: troubleshoot-mssql-connector.md
+        href: mssql-troubleshooting.md
     - name: BambooHR
       items:
       - name: Setup
