@@ -136,6 +136,10 @@ Identify connections that contain items you no longer want to index. To update t
 
 You can permanently delete one or more connections as needed.
 
+## Connection bulk export
+
+Admins can export configuration details for the connections currently displayed on **Connectors** > **Your Connections**. From the **More actions** menu, select **Export configuration** to download a CSV file containing the configuration details for all connections currently displayed in the list.
+
 ## Related content
 
 - [Deploy Microsoft 365 Copilot connectors](deployment-overview.md)
