@@ -84,6 +84,16 @@
       "source_path_from_root": "/copilot-connectors/troubleshoot-bamboohr-connector.md",
       "redirect_url": "/microsoft-365/copilot/connectors/bamboohr-troubleshooting",
       "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/azure-devops-wiki-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/azure-devops-wiki-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/copilot-connectors/troubleshoot-azure-devops-wiki-connector.md",
+      "redirect_url": "/microsoft-365/copilot/connectors/azure-devops-wiki-troubleshooting",
+      "redirect_document_id": true
     }
   ]
 }
