@@ -405,6 +405,8 @@ items:
         href: jira-cloud-deployment.md
       - name: Troubleshooting
         href: jira-cloud-troubleshooting.md
+      - name: Result layout
+        href: jira-result-layout.md
     - name: Jira Data Center
       items:
       - name: Overview

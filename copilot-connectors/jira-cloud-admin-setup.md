@@ -5,9 +5,12 @@ author: danipocket
 ms.author: danielabo
 manager: calvind
 ms.reviewer: jecui
+audience: Admin
+ms.audience: Admin
 ms.topic: concept-article
 ms.service: microsoft-365-copilot-connectors
 ms.date: 05/15/2026
+ms.localizationpriority: medium
 ---
 
 # Set up the Jira Cloud service for Jira Cloud Copilot connector ingestion

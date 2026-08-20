@@ -1,12 +1,12 @@
 ---
 title: "Deploy the Jira Cloud connector"
-ms.author: lauragra
-author: lauragra
+ms.author: danielabo
+author: danipocket
 manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 05/15/2026
 ms.localizationpriority: medium
 description: "Find information about how to deploy the Jira Cloud Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
@@ -65,23 +65,13 @@ To roll out to a limited audience, choose the toggle next to **Rollout to limite
 
 Choose **Create** to deploy the connection. The Jira Cloud Copilot connector starts indexing content right away.
 
-The following are the default values for the connector:
+The following table lists the default values that the connector applies.
 
-**Users**
-
-- **Access permissions**: Only people with access to content in Data source.
-- **Map identities**: Data source identities mapped using Microsoft Entra IDs.
-
-**Content**
-
-- **Site projects**: All projects are indexed.
-- **Filter data**: All issues are indexed. No time filter or JQL criteria is applied.
-- **Manage Properties**: To check default properties and their schema, see Customize content settings
-
-**Sync**
-
-- **Incremental crawl**: Frequency: Every 15 mins
-- **Full crawl**: Frequency: Every day
+| Category | Default value |
+|----------|----------------|
+| **Users** | Access permissions: Only people with access to content in data source; identities mapped using Microsoft Entra IDs. |
+| **Content** | All projects indexed; all issues indexed (no time filter or JQL criteria applied); default property schema applied. |
+| **Sync** | Incremental crawl every 15 mins; full crawl daily. |
 
 After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
@@ -145,10 +135,51 @@ You can add or remove available properties from your Jira data source, assign a 
 | Title | Title | The title of the item that you want shown in Copilot and other search experiences | Search, Query, Retrieve |
 | Updated | Last modified date time | Date and time the item was last modified in the data source | Query, Retrieve |
 
+The Jira Cloud Copilot connector also supports the following custom fields.
+
+| Custom field | Attributes (recommended) |
+| :--- | :--- |
+| Sprint | Query, Retrieve, Refine (optional) |
+| Fix Version | Query, Retrieve |
+| Customer Name/s | Query, Retrieve |
+| Support Owner | Query, Retrieve |
+| Affects Version/s | Query, Retrieve |
+| SLA | Query, Retrieve |
+| Time to resolution | Query, Retrieve |
+| Region | Query, Retrieve |
+| First Response | Query, Retrieve |
+| Request Type | Query, Retrieve |
+| Approver | Query, Retrieve |
+| Resolution | Query, Retrieve |
+
 > [!NOTE]
 > *   The Jira Cloud Copilot connector can index both default issue fields and custom-created issue fields.
-> *   If a selected custom-created field isn't present in some Jira issue type, the field is ingested as NULL (blank).
+> *   If a selected custom-created field isn't present in some Jira issue type, the field is ingested as `NULL` (blank).
 > *   The list of properties that you select affects how users can filter, search, and view results in Copilot.
+
+#### Add custom properties
+
+To add custom properties to the Jira Cloud Copilot connector:
+
+1. Select the **Content** tab to open the content and property settings.
+
+   [![Screenshot of the Content tab in the Jira Cloud Copilot connector configuration.](media/jira-cloud/addcustomproperty1.png)](media/jira-cloud/addcustomproperty1.png#lightbox)
+
+2. In the properties section, select **Add property**.
+
+   [![Screenshot of the Add property option in the properties section.](media/jira-cloud/addcustomproperty2.png)](media/jira-cloud/addcustomproperty2.png#lightbox)
+
+3. From the list of available fields, select the field that you want to add.
+
+   [![Screenshot of the available Jira fields for adding a custom property.](media/jira-cloud/addcustomproperty3.png)](media/jira-cloud/addcustomproperty3.png#lightbox)
+
+4. Select the appropriate schema options for the field. These options determine whether the field is searchable, queryable, retrievable, or refinable.
+
+   [![Screenshot of the schema options for a Jira custom property.](media/jira-cloud/addcustomproperty4.png)](media/jira-cloud/addcustomproperty4.png#lightbox)
+
+5. Review the property configuration, and then select **Save**.
+
+   [![Screenshot of the Save option for a configured Jira custom property.](media/jira-cloud/addcustomproperty5.png)](media/jira-cloud/addcustomproperty5.png#lightbox)
 
 #### Manage customized properties
 
