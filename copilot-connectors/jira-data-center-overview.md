@@ -1,13 +1,13 @@
 ---
 title: "Jira Data Center connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: danielabo
+author: danipocket
 manager: calvind
 ms.reviewer: neocheng
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 06/02/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Jira Data Center Microsoft 365 Copilot connector."

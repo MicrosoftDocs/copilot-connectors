@@ -1,12 +1,14 @@
 ---
 title: "Jira Cloud connector overview"
 description: "Learn about the Jira Cloud Microsoft 365 Copilot connector, its capabilities, limitations, data indexed, permissions model, and how to build agents."
-ms.author: lauragra
-author: lauragra
+ms.author: danielabo
+author: danipocket
+audience: Admin
+ms.audience: Admin
 manager: calvind
-ms.topic: overview
-ms.service: copilot-connectors
-ms.date: 12/15/2025
+ms.topic: concept-article
+ms.service: microsoft-365-copilot-connectors
+ms.date: 08/20/2026
 ms.localizationpriority: medium
 ---
 # Jira Cloud connector overview
@@ -58,7 +60,7 @@ The following examples show prompts that users can use to retrieve information f
   - Find Jira issues that mention "mobile app performance" and share with the team.
   - Show unresolved issues in the customer support project.
 
-## Capabilities
+## Jira Cloud connector capabilities and limitations
 
 The Jira Cloud connector provides the following capabilities:
 
@@ -66,8 +68,6 @@ The Jira Cloud connector provides the following capabilities:
 - Enable natural language queries in Copilot for project and task-related information.
 - Support incremental and full crawls for data freshness.
 - Provide customizable schema for properties like title, description, status, and assignee.
-
-## Limitations
 
 The Jira Cloud connector has the following limitations:
 

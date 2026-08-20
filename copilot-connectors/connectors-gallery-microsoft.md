@@ -27,7 +27,7 @@ The following table lists the collaboration and communication connectors that ar
 | Connector name | Publisher | Description | Learn more |
 | -------------- | --------- | ----------- | ---------- |
 | Aha! | Microsoft | Empowers your organization to index and search Aha! features and ideas across your enterprise. The connector automatically crawls Aha! features and ideas, making them easily discoverable through Microsoft 365 Copilot and any Microsoft Search client. | [Aha! connector](aha-overview.md) |
-| Azure DevOps Wiki | Microsoft | Allows your organization to index wiki pages from Azure DevOps. | [Azure DevOps Wiki connector](azure-devops-wiki-connector.md) |
+| Azure DevOps Wiki | Microsoft | Allows your organization to index wiki pages from Azure DevOps. | [Azure DevOps Wiki connector](azure-devops-wiki-overview.md) |
 | Azure DevOps Work Items | Microsoft | Allows your organization to search for work items in your Azure DevOps instance. | [Azure DevOps Work Items connector](azure-devops-work-items-overview.md) |
 | Egnyte | Microsoft | Allows organizations to integrate with Egnyte for seamless workflow automation. | [Egnyte connector](egnyte-overview.md) |
 | Jira Cloud | Microsoft | Allows your organization to index Jira issues and tickets. | [Jira Cloud connector](jira-cloud-overview.md) |

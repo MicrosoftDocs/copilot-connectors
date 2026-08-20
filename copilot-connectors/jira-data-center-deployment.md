@@ -97,7 +97,7 @@ To configure OAuth in Jira:
 
 ### Roll out
 
-To validate the connection before a full rollout, select **Rollout to limited audience** and specify the users or groups for the staged deployment. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
+To validate the connection before a full rollout, select **Rollout to limited audience** and specify the users or groups for the staged deployment. For more information, see [Staged rollout for Copilot connectors](staged-rollout.md).
 
 Choose **Create** to deploy the connector. The Jira Data Center connector starts indexing content right away.
 
@@ -173,7 +173,7 @@ When configuring a JQL filter for the connector, follow these rules:
 
 Select the Jira fields (schema properties) you want to index. Include built-in Jira fields or add custom fields. For more information, see [Manage search schema](/microsoftsearch/manage-search-schema). The following properties are indexed by default.
 
-|Source property       | Semantic Label          | Schema  |               
+|Source property       | Semantic Label          | Schema  |
 |:---------------------|:---------------------- |:---------------------- |
 | AssigneeEmailId       |                         | Query, Retrieve, Search |
 | AssigneeName          |                         | Query, Retrieve, Search |
@@ -188,14 +188,74 @@ Select the Jira fields (schema properties) you want to index. Include built-in J
 | IssuePriority         |                         | Query, Retrieve, Search |
 | IssueStatus           |                         | Query, Retrieve  |
 | IssueSummary          |                         | Search |
-| IssueType             |                         | Query, Retrieve | 
-| Labels                |                         | Query, Retrieve | 
+| IssueType             |                         | Query, Retrieve |
+| Labels                |                         | Query, Retrieve |
 | ProjectName           |                         | Query, Retrieve  |
 | ReporterEmailId       | Created by              | Query, Retrieve, Search  |
-| ReporterName          |                         | Query, Retrieve, Search | 
+| ReporterName          |                         | Query, Retrieve, Search |
 | Title                 | Title                   | Query, Retrieve, Search  |
-| Updated               | Last modified date time | Query, Retrieve | 
+| Updated               | Last modified date time | Query, Retrieve |
 
+The Jira Data Center Copilot connector also supports the following custom fields.
+
+| Custom field | Attributes (recommended) | Earliest supported GCA version |
+| :--- | :--- | :--- |
+| Sprint | Query, Retrieve, Refine (optional) | 3.1.23.0 |
+| Fix Version | Query, Retrieve | 3.1.23.0 |
+| Customer Name/s | Query, Retrieve | 4.0.0.0 |
+| Support Owner | Query, Retrieve | 4.0.0.0 |
+| Affects Version/s | Query, Retrieve | 4.0.0.0 |
+| SLA | Query, Retrieve | 4.0.0.0 |
+| Time to resolution | Query, Retrieve | 4.0.0.0 |
+| Region | Query, Retrieve | 4.0.0.0 |
+| First Response | Query, Retrieve | 4.0.0.0 |
+| Request Type | Query, Retrieve | 4.0.0.0 |
+| Approver | Query, Retrieve | 4.0.0.0 |
+| Resolution | Query, Retrieve | 4.0.3.0 |
+
+> [!NOTE]
+> *   The Jira Data Center Copilot connector can index both default issue fields and custom-created issue fields.
+> *   If a selected custom-created field isn't present in some Jira issue types, the connector ingests the field as NULL (blank).
+> *   The list of properties that you select affects how users can filter, search, and view results in Copilot.
+
+#### Add custom properties
+
+To add custom properties to the Jira Data Center Copilot connector:
+
+1. Select the **Content** tab to open the content and property settings.
+
+   [![Screenshot of the Content tab in the Jira Data Center Copilot connector configuration.](media/jira-cloud/addcustomproperty1.png)](media/jira-cloud/addcustomproperty1.png#lightbox)
+
+2. In the properties section, select **Add property**.
+
+   [![Screenshot of the Add property option in the properties section.](media/jira-cloud/addcustomproperty2.png)](media/jira-cloud/addcustomproperty2.png#lightbox)
+
+3. From the list of available fields, select the field that you want to add.
+
+   [![Screenshot of the available Jira fields for adding a custom property.](media/jira-cloud/addcustomproperty3.png)](media/jira-cloud/addcustomproperty3.png#lightbox)
+
+4. Select the schema options for the field. These options determine whether the field is searchable, queryable, retrievable, or refinable.
+
+   [![Screenshot of the schema options for a Jira custom property.](media/jira-cloud/addcustomproperty4.png)](media/jira-cloud/addcustomproperty4.png#lightbox)
+
+5. Review the property configuration, and then select **Save**.
+
+   [![Screenshot of the Save option for a configured Jira custom property.](media/jira-cloud/addcustomproperty5.png)](media/jira-cloud/addcustomproperty5.png#lightbox)
+
+#### Manage customized properties
+
+To manage customized properties, ensure the following conditions are met:
+
+1.  **Name** isn't empty and isn't composed only of whitespace.
+2.  **Key** isn't empty and contains an underscore ("_").
+3.  **Data type** is supported:
+    - **Non-array types**: string, date, datetime, number, option
+    - **Array types**: string, option, user
+4.  **Name** doesn't start with "label_" or "Refinable" (reserved system prefixes).
+5.  **Name** length is 26 characters or fewer.
+6.  **Name** contains only letters and numbers (no special characters).
+
+Users can access `https://jira.<your-domain>.com/rest/api/2/field` and review the returned data.
 
 ### Customize sync intervals
 
@@ -204,10 +264,11 @@ You can adjust the crawl frequency to fit your data refresh needs. The following
 - **Full crawl:** Every day  
 - **Incremental crawl:** Every 15 minutes
 
-For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
+For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 
 - [Jira Data Center connector overview](jira-data-center-overview.md)
 - [Troubleshoot issues with the Jira Data Center connector](jira-data-center-troubleshooting.md)
+- [Jira result layout](jira-result-layout.md)
 - [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)

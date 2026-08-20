@@ -115,10 +115,14 @@ items:
         href: azure-devops-work-items-troubleshooting.md
     - name: Azure DevOps Wiki
       items:
-      - name: Setup
-        href: azure-devops-wiki-connector.md
+      - name: Overview
+        href: azure-devops-wiki-overview.md
+      - name: Set up the Azure DevOps service
+        href: azure-devops-wiki-admin-setup.md
+      - name: Deployment guide
+        href: azure-devops-wiki-deployment.md
       - name: Troubleshooting
-        href: troubleshoot-azure-devops-wiki-connector.md
+        href: azure-devops-wiki-troubleshooting.md
     - name: Azure File Share
       items:
       - name: Overview
@@ -405,6 +409,8 @@ items:
         href: jira-cloud-deployment.md
       - name: Troubleshooting
         href: jira-cloud-troubleshooting.md
+      - name: Result layout
+        href: jira-result-layout.md
     - name: Jira Data Center
       items:
       - name: Overview
