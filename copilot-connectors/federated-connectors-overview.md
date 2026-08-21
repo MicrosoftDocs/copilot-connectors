@@ -41,6 +41,7 @@ Microsoft 365 Copilot currently supports federated Copilot connectors in the fol
 - Microsoft 365 Copilot Chat
 - Copilot in Excel
 - Researcher agent
+- Cowork
  
 ## Federated connectors in the Connectors Gallery
  
@@ -63,36 +64,28 @@ Currently, federated connectors are available for the following data sources, or
 | Education | Article Galaxy, Microsoft Learn |
 | Health & Life Sciences | NyquistAI, OpenTargets |
  
-Partners who want to make a federated connector available in the gallery can submit their remote MCP server to Microsoft for review. For more information, see [Submit a federated connector](submit-federated-connector.md). For any questions related to submitting your remote MCP server, [send us an email](mailto:submit-fcc@microsoft.com).
+ISVs use a single connector manifest and single publishing pipeline for all connector types. For more information, see [ISV success guidance](https://learn.microsoft.com/en-us/partner-center/membership/isv-success).
 
 The following image shows federated connectors in the **Your connections** list in the Microsoft 365 admin center.
  
 :::image type="content" source="media/federated-connectors/your-connections-tab.png" alt-text="Screenshot of the Your connections tab in the admin center with federated connectors appearing in the list." lightbox="media/federated-connectors/your-connections-tab.png":::
 
 > [!IMPORTANT]
-> Admins can enable and disable all default federated connectors in their organization by using a tenant-wide toggle. When admins set the toggle to **disable**, federated connectors aren't enabled by default in the tenant. The admin must enable each connector individually. For more information, see [Manage federated connectors](manage-federated-connectors.md).
+> Admins control whether default federated connectors are available to their organization from the **Settings** tab in Agent 365, by using the [Allowed agent types](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-settings?view=o365-worldwide#allowed-agent-types). When the Microsoft-published and third-party-published options are deselected, federated connectors aren't enabled by default in the tenant, including connectors released in the future, and the admin enables each connector individually. This setting replaces the tenant-wide PowerShell toggle. Tenants that previously used the cmdlet receive a Message Center post asking them to reapply the choice in the UX within a limited window, after which the cmdlet state is no longer honored. For more information, see [Manage federated connectors](manage-federated-connectors.md).
 
 ## Admin experience and controls
  
 Microsoft-published federated connectors are enabled by default for a tenant unless admins disable them. Admins must approve partner federated connectors before enabling them for the organization. Admins can manage federated Copilot connectors in the Microsoft 365 admin center by choosing **Copilot connectors** > **Your connections**.
+
+Administrators can manage Microsoft 365 Copilot connectors, synchronized connectors, federated connectors, and supported Cowork plugins from a single location: Copilot connectors > Your connections.
  
 Admins can:
  
-- View federated connectors that are available in the tenant on the **Your Connections** tab, including Microsoft-published connectors and partner connectors that Microsoft approved and the admin enabled.
+- View federated connectors that are available in the tenant on the **Your connections** tab, including Microsoft-published connectors and partner connectors that Microsoft approved and the admin enabled.
 - Enable or disable connectors at the tenant level.
 - Limit availability to specific Microsoft Entra ID groups by choosing **Add staging** in the **Staged Rollout** column.
-- Bulk disable all federated connectors by using PowerShell cmdlets, and selectively enable specific federated connectors in the Microsoft 365 admin center based on organizational policies and readiness. For more information, see [Manage federated connectors](manage-federated-connectors.md).
- 
-> [!NOTE]
-> **Admin review window**
->
-> When a Microsoft-published federated connector first appears in the admin center, it's available **only to admins for seven calendar days** before it's available to users. During this window, admins can:
->
-> 1. Review the connector.
-> 1. Disable it if it doesn't meet organizational requirements.
-> 1. Configure staged rollout.
->
-> If a connector is disabled during this window, it isn't made available to users.
+- Bulk disable all federated connectors by using [Allowed Agent Type](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-settings?view=o365-worldwide#allowed-agent-types), and selectively enable specific federated connectors in the Microsoft 365 admin center based on organizational policies and readiness. For more information, see [Manage federated connectors](manage-federated-connectors.md).
+- Manage federated connectors from the Agent tab in the Microsoft 365 admin center portal apart from the **Copilot connectors** > **Your connections** section.
  
 The following image shows the connector pane for the HubSpot federated connector.
  
@@ -163,9 +156,15 @@ Synced connectors are supported at an organization level; federated connectors a
  
 Both federated and synced connectors can coexist in your tenant and appear together in your connector list.
 
-### Do I need to rerun the CLI cmdlet when Microsoft releases new federated connectors?
 
-The CLI setting automatically applies to future federated connectors. If you disable the toggle, new connectors appear in a disabled state. If you enable the toggle, new connectors follow the default rollout behavior.
+### Does the **Allowed plugins type** setting apply to federated connectors released in the future?
+Yes. The setting applies to connectors released after you configure it. If you deselect the **Microsoft-published** and **third-party-published** options, users can't access new connectors until an admin enables them. If you select those options, new connectors follow the default rollout behavior.
+
+
+### How do ISVs publish connectors?
+
+ISVs use a single connector manifest and single publishing pipeline for all connector types.
+
  
 ## Related content
  
