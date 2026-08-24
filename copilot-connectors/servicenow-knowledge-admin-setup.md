@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: microsoft-365-copilot-connectors
-ms.date: 06/10/2026
+ms.date: 08/23/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Knowledge Copilot connector."
 ---
@@ -41,6 +41,7 @@ The following checklists list the steps involved in configuring the environment 
 | [Identify item count for ingestion](#identify-item-count-for-ingestion) | ServiceNow admin |
 | [Set up REST API](#set-up-rest-api) | ServiceNow admin |
 | [Set up REST API to evaluate only user criteria applied to articles](#set-up-rest-api-to-evaluate-only-user-criteria-applied-to-articles) | ServiceNow admin |
+| [Set up REST API for incremental identity sync](#set-up-rest-api-for-incremental-identity-sync) | ServiceNow admin |
 | [Set up hierarchical permissions](#set-up-hierarchical-permissions) | ServiceNow admin |
 | [Add Microsoft 365 IP address to allowlist](#add-microsoft-365-ip-address-to-the-allowlist) | ServiceNow admin/Network admin |
 | [Resolve issues with SSO configuration](#resolve-connector-setup-issues-with-servicenow-sso-configuration) | ServiceNow admin |
@@ -131,6 +132,8 @@ To connect to ServiceNow and allow the ServiceNow Knowledge connector to update 
 |  | core_company** | Read company attributes |
 |   Index knowledge blocks | kb_knowledge_block | Read knowledge block records, including their content, user criteria, and metadata |
 |  | m2m_kb_knowledge_to_block | Read the many-to-many mapping that links knowledge articles to their embedded blocks |
+|   Support incremental identity sync (Advanced flow) | sys_audit | Detect identity-relevant changes to users and user criteria since the last crawl |
+|  | sys_audit_delete | Detect deleted users, removed role and group memberships, and deleted user criteria |
 
 \** Access to these tables is only required when you choose the simple flow. If you choose advanced flow for reading user criteria, you don't need access to these tables.
 
@@ -303,9 +306,6 @@ The Microsoft 365 admin enters the **API Namespace** when they [deploy the Servi
 
 ### Set up REST API to evaluate only user criteria applied to articles
 
-> [!NOTE]
-> This capability is in preview and is enabled only for certain customers.
-
 The [Set up REST API](#set-up-rest-api) step creates the `GetAllUserCriteria` resource, which evaluates each user against **all** active user criteria in your ServiceNow instance. On instances that define many user criteria, this approach increases the number of API calls and the time required to complete the first full identity crawl.
 
 To reduce this overhead, create the `GetAllUserCriteriaV2` resource on the **Microsoft Copilot** scripted REST API. This resource evaluates each user against **only the user criteria applied to knowledge articles**—the set that the connector sends in the request—and lets the connector evaluate **multiple users in a single request**. Together, these changes reduce the number of calls and the time required for the first full identity crawl.
@@ -435,6 +435,370 @@ The connector sends a POST request whose body specifies the users to evaluate (`
     "user_criteria": ["<user_criteria_sys_id_1>", "<user_criteria_sys_id_2>"]
 }
 ```
+
+### Set up REST API for incremental identity sync
+
+Incremental identity sync keeps identity changes—new or removed users, role assignments, group memberships, and user criteria definitions—up to date between full crawls. It applies only to **Advanced flow** connections and requires ServiceNow auditing so that the connector can detect changes.
+
+Add a second resource named `user_changes` to the same **Microsoft Copilot** scripted REST API that you created in [Set up REST API](#set-up-rest-api). You don't create a new scripted REST API or a new API namespace—the connector uses the same API namespace that you already configured for the Advanced flow.
+
+Add the resource to the API:
+
+1. Go to **All > System Web Services > Scripted Web Services > Scripted REST APIs**, and then open **Microsoft Copilot**.
+1. On the **Resources** tab, choose **New**.
+1. Enter the following information:
+
+   - **Name**: `user_changes`
+   - **HTTP method**: `GET`
+   - **Relative Path**: `/user_changes`
+   - **Script**: Paste the following code:
+
+    ```js
+    /**
+     * ServiceNow Scripted REST API Resource: user_changes
+     *
+     * Detects identity-relevant changes on a ServiceNow instance since a given
+     * timestamp. Used by the Microsoft Graph Connector for ServiceNow to perform
+     * incremental identity synchronization.
+     *
+     * Prerequisites:
+     *   - The Audit plugin (com.glide.audit) must be active.
+     *   - Auditing must be enabled on the following sys_user fields:
+     *       department, company, location, active
+     *   - Auditing must be enabled on the 'user' field of:
+     *       sys_user_has_role, sys_user_grmember
+     *   - Auditing must be enabled on user_criteria fields:
+     *       role, group, company, department, location, script, active, match_all
+     *   - Delete auditing must be enabled on tables:
+     *       sys_user, sys_user_has_role, sys_user_grmember, user_criteria
+     *
+     * Deployment:
+     *   1. Create a Scripted REST API (e.g. "Graph Connector Identity Sync")
+     *   2. Add this as a resource with:
+     *        Name: user_changes
+     *        HTTP Method: GET
+     *        Relative path: /user_changes
+     *
+     * Query Parameters:
+     *   since      (required) - ISO 8601 or ServiceNow datetime. Lower-bound timestamp.
+     *   checkpoint (optional) - Which detection source to query. Values:
+     *       all                        - Run all detection methods (default)
+     *       sys_user_fields            - Identity field changes via sys_audit
+     *       sys_user_has_role          - Role assignment additions/modifications
+     *       sys_user_has_role_deleted  - Deleted role assignments (via sys_audit_delete)
+     *       sys_user_grmember          - Group membership additions/modifications
+     *       sys_user_grmember_deleted  - Deleted group memberships (via sys_audit_delete)
+     *       sys_user_deactivated       - Deactivated users (treated as deleted)
+     *       sys_audit_delete_user      - Hard-deleted users
+     *       user_criteria              - Changes to user_criteria definitions
+     *
+     * Response:
+     *   {
+     *     "changes": [
+     *       { "id": "<sys_id>", "type": "user"|"user_criteria", "action": "added"|"modified"|"deleted", "timestamp": "..." }
+     *     ],
+     *     "totalCount": N,
+     *     "checkpoint": "<checkpoint_value_used>",
+     *     "since": "<since_value_used>"
+     *   }
+     */
+    (function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+        var since = String(request.queryParams.since).trim();
+        var checkpoint = request.queryParams.checkpoint
+            ? String(request.queryParams.checkpoint)
+            : 'all';
+
+        // Validate required parameter
+        if (!since || since === 'undefined' || since === 'null') {
+            response.setStatus(400);
+            response.setBody({ error: 'Missing required query parameter: since' });
+            return;
+        }
+
+        // Map<key, {id, type, action, timestamp}>  key = type + ':' + id for dedup
+        var changesMap = {};
+
+        function addChange(id, type, action, timestamp) {
+            if (!id) {
+                return;
+            }
+            var key = type + ':' + id;
+            if (!changesMap[key]) {
+                changesMap[key] = { id: id, type: type, action: action, timestamp: timestamp };
+            } else {
+                // Priority: deleted > added > modified
+                var existing = changesMap[key];
+                if (action === 'deleted') {
+                    existing.action = 'deleted';
+                } else if (action === 'added' && existing.action !== 'deleted') {
+                    existing.action = 'added';
+                }
+                // Keep latest timestamp
+                if (timestamp > existing.timestamp) {
+                    existing.timestamp = timestamp;
+                }
+            }
+        }
+
+        // =======================================================================
+        // Checkpoint: sys_user_fields
+        // Queries sys_audit for identity-relevant field changes on sys_user.
+        // Requires auditing enabled on: department, company, location, active
+        // =======================================================================
+        if (checkpoint === 'all' || checkpoint === 'sys_user_fields') {
+            var identityFields = 'active,department,company,location';
+
+            var auditGr = new GlideRecord('sys_audit');
+            auditGr.addQuery('tablename', 'sys_user');
+            auditGr.addQuery('sys_created_on', '>=', since);
+            auditGr.addQuery('fieldname', 'IN', identityFields);
+            auditGr.orderBy('sys_created_on');
+            auditGr.query();
+
+            while (auditGr.next()) {
+                var docId = auditGr.getValue('documentkey');
+                var auditTs = auditGr.getValue('sys_created_on');
+                var auditType = auditGr.getValue('type');
+                var action = (auditType === 'INSERT') ? 'added' : 'modified';
+                addChange(docId, 'user', action, auditTs);
+            }
+        }
+
+        // =======================================================================
+        // Checkpoint: sys_user_has_role
+        // Direct table query for role assignment additions/modifications.
+        // =======================================================================
+        if (checkpoint === 'all' || checkpoint === 'sys_user_has_role') {
+            var roleGr = new GlideRecord('sys_user_has_role');
+            roleGr.addQuery('sys_updated_on', '>=', since);
+            roleGr.query();
+
+            while (roleGr.next()) {
+                var roleUserId = roleGr.getValue('user');
+                var roleTs = roleGr.getValue('sys_updated_on');
+                addChange(roleUserId, 'user', 'modified', roleTs);
+            }
+        }
+
+        // =======================================================================
+        // Checkpoint: sys_user_has_role_deleted
+        // Detects deleted role assignments via sys_audit_delete, then resolves
+        // the affected user by looking up the sys_audit INSERT record for the
+        // deleted M2M record's 'user' field.
+        // =======================================================================
+        if (checkpoint === 'all' || checkpoint === 'sys_user_has_role_deleted') {
+            var deletedRoleKeys = [];
+            var deletedRoleTimestamps = {};
+
+            var delRoleGr = new GlideRecord('sys_audit_delete');
+            delRoleGr.addQuery('tablename', 'sys_user_has_role');
+            delRoleGr.addQuery('sys_created_on', '>=', since);
+            delRoleGr.query();
+
+            while (delRoleGr.next()) {
+                var delRoleDocKey = delRoleGr.getValue('documentkey');
+                var delRoleTs = delRoleGr.getValue('sys_created_on');
+                deletedRoleKeys.push(delRoleDocKey);
+                deletedRoleTimestamps[delRoleDocKey] = delRoleTs;
+            }
+
+            // Resolve which user each deleted role assignment belonged to
+            if (deletedRoleKeys.length > 0) {
+                var roleAuditGr = new GlideRecord('sys_audit');
+                roleAuditGr.addQuery('tablename', 'sys_user_has_role');
+                roleAuditGr.addQuery('documentkey', 'IN', deletedRoleKeys.join(','));
+                roleAuditGr.addQuery('fieldname', 'user');
+                roleAuditGr.addQuery('type', 'INSERT');
+                roleAuditGr.query();
+
+                while (roleAuditGr.next()) {
+                    var roleDocKey = roleAuditGr.getValue('documentkey');
+                    var roleUserVal = roleAuditGr.getValue('newvalue');
+                    if (roleUserVal && deletedRoleTimestamps[roleDocKey]) {
+                        addChange(roleUserVal, 'user', 'modified', deletedRoleTimestamps[roleDocKey]);
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // Checkpoint: sys_user_grmember
+        // Direct table query for group membership additions/modifications.
+        // =======================================================================
+        if (checkpoint === 'all' || checkpoint === 'sys_user_grmember') {
+            var groupGr = new GlideRecord('sys_user_grmember');
+            groupGr.addQuery('sys_updated_on', '>=', since);
+            groupGr.query();
+
+            while (groupGr.next()) {
+                var groupUserId = groupGr.getValue('user');
+                var groupTs = groupGr.getValue('sys_updated_on');
+                addChange(groupUserId, 'user', 'modified', groupTs);
+            }
+        }
+
+        // =======================================================================
+        // Checkpoint: sys_user_grmember_deleted
+        // Detects deleted group memberships via sys_audit_delete, then resolves
+        // the affected user by looking up the sys_audit INSERT record for the
+        // deleted M2M record's 'user' field.
+        // =======================================================================
+        if (checkpoint === 'all' || checkpoint === 'sys_user_grmember_deleted') {
+            var deletedGrpKeys = [];
+            var deletedGrpTimestamps = {};
+
+            var delGrpGr = new GlideRecord('sys_audit_delete');
+            delGrpGr.addQuery('tablename', 'sys_user_grmember');
+            delGrpGr.addQuery('sys_created_on', '>=', since);
+            delGrpGr.query();
+
+            while (delGrpGr.next()) {
+                var delGrpDocKey = delGrpGr.getValue('documentkey');
+                var delGrpTs = delGrpGr.getValue('sys_created_on');
+                deletedGrpKeys.push(delGrpDocKey);
+                deletedGrpTimestamps[delGrpDocKey] = delGrpTs;
+            }
+
+            // Resolve which user each deleted group membership belonged to
+            if (deletedGrpKeys.length > 0) {
+                var grpAuditGr = new GlideRecord('sys_audit');
+                grpAuditGr.addQuery('tablename', 'sys_user_grmember');
+                grpAuditGr.addQuery('documentkey', 'IN', deletedGrpKeys.join(','));
+                grpAuditGr.addQuery('fieldname', 'user');
+                grpAuditGr.addQuery('type', 'INSERT');
+                grpAuditGr.query();
+
+                while (grpAuditGr.next()) {
+                    var grpDocKey = grpAuditGr.getValue('documentkey');
+                    var grpUserVal = grpAuditGr.getValue('newvalue');
+                    if (grpUserVal && deletedGrpTimestamps[grpDocKey]) {
+                        addChange(grpUserVal, 'user', 'modified', deletedGrpTimestamps[grpDocKey]);
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // Checkpoint: sys_user_deactivated
+        // Detects recently deactivated users. Treated as deleted since the user
+        // should be removed from the identity set.
+        // =======================================================================
+        if (checkpoint === 'all' || checkpoint === 'sys_user_deactivated') {
+            var deactivatedGr = new GlideRecord('sys_user');
+            deactivatedGr.addQuery('active', false);
+            deactivatedGr.addQuery('sys_updated_on', '>=', since);
+            deactivatedGr.query();
+
+            while (deactivatedGr.next()) {
+                var deactivatedId = deactivatedGr.getUniqueValue();
+                var deactivateTs = deactivatedGr.getValue('sys_updated_on');
+                addChange(deactivatedId, 'user', 'deleted', deactivateTs);
+            }
+        }
+
+        // =======================================================================
+        // Checkpoint: sys_audit_delete_user
+        // Detects hard-deleted users via sys_audit_delete.
+        // =======================================================================
+        if (checkpoint === 'all' || checkpoint === 'sys_audit_delete_user') {
+            var deleteGr = new GlideRecord('sys_audit_delete');
+            deleteGr.addQuery('tablename', 'sys_user');
+            deleteGr.addQuery('sys_created_on', '>=', since);
+            deleteGr.query();
+
+            while (deleteGr.next()) {
+                var deletedDocId = deleteGr.getValue('documentkey');
+                var deleteTimestamp = deleteGr.getValue('sys_created_on');
+                addChange(deletedDocId, 'user', 'deleted', deleteTimestamp);
+            }
+        }
+
+        // =======================================================================
+        // Checkpoint: user_criteria
+        // Detects changes to user_criteria definitions via sys_audit.
+        // When a user_criteria changes, all users evaluated against that criteria
+        // may have different access - the connector must re-evaluate.
+        //
+        // Monitored fields: role, group, company, department, location,
+        //                   script, active, match_all
+        // =======================================================================
+        if (checkpoint === 'all' || checkpoint === 'user_criteria') {
+            var ucFields = 'role,group,company,department,location,script,active,match_all';
+
+            var ucAuditGr = new GlideRecord('sys_audit');
+            ucAuditGr.addQuery('tablename', 'user_criteria');
+            ucAuditGr.addQuery('sys_created_on', '>=', since);
+            ucAuditGr.addQuery('fieldname', 'IN', ucFields);
+            ucAuditGr.orderBy('sys_created_on');
+            ucAuditGr.query();
+
+            while (ucAuditGr.next()) {
+                var ucDocId = ucAuditGr.getValue('documentkey');
+                var ucTs = ucAuditGr.getValue('sys_created_on');
+                var ucType = ucAuditGr.getValue('type');
+                var ucAction = (ucType === 'INSERT') ? 'added' : 'modified';
+                addChange(ucDocId, 'user_criteria', ucAction, ucTs);
+            }
+
+            // Also detect deleted user_criteria via sys_audit_delete
+            var ucDeleteGr = new GlideRecord('sys_audit_delete');
+            ucDeleteGr.addQuery('tablename', 'user_criteria');
+            ucDeleteGr.addQuery('sys_created_on', '>=', since);
+            ucDeleteGr.query();
+
+            while (ucDeleteGr.next()) {
+                var ucDeletedId = ucDeleteGr.getValue('documentkey');
+                var ucDeleteTs = ucDeleteGr.getValue('sys_created_on');
+                addChange(ucDeletedId, 'user_criteria', 'deleted', ucDeleteTs);
+            }
+        }
+
+        // =======================================================================
+        // Build and return response
+        // =======================================================================
+        var keys = Object.keys(changesMap);
+        var changes = [];
+
+        for (var i = 0; i < keys.length; i++) {
+            changes.push(changesMap[keys[i]]);
+        }
+
+        response.setBody({
+            changes: changes,
+            totalCount: changes.length,
+            checkpoint: checkpoint,
+            since: since
+        });
+
+    })(request, response);
+    ```
+
+1. Make sure both of the following options are checked:
+
+   - **Requires authentication**
+   - **Requires ACL authorization**
+1. Make sure that **ACLs** is set to **Microsoft Copilot**. To avoid any problems with authorization, also add the **Scripted REST External Default** ACL.
+1. Choose **Submit**.
+
+To verify the setup, confirm that the **Resource Path** is `/api/<API Namespace>/microsoft_copilot/user_changes`. The connector calls this resource with a required `since` parameter (an ISO 8601 timestamp) and an optional `checkpoint` parameter that selects a single change source. In the following example, the API namespace is `abcdef`:
+
+`GET /api/abcdef/microsoft_copilot/user_changes?since=<ISO8601>&checkpoint=all`
+
+Enable auditing so that the connector can detect changes:
+
+1. Confirm that the **Audit** plugin (`com.glide.audit`) is active.
+1. Grant the service account **read** access to `sys_audit` and `sys_audit_delete`. Confirm that it also has read access to `sys_user`, `sys_user_has_role`, `sys_user_grmember`, and `user_criteria`, which the script queries directly.
+1. Enable auditing—including delete auditing—on the tables and fields listed in the following table.
+
+| Table | Audited fields |
+| ----- | -------------- |
+| `sys_user` | `department`, `company`, `location`, `active` |
+| `sys_user_has_role` | `user` |
+| `sys_user_grmember` | `user` |
+| `user_criteria` | `role`, `group`, `company`, `department`, `location`, `script`, `active`, `match_all` |
+
+After you enable auditing, validate the setup: make a test change (and a test deletion) to an audited record, confirm that entries appear in `sys_audit` and `sys_audit_delete`, and then call the resource as the service account and confirm an HTTP 200 response.
 
 ### Set up hierarchical permissions
 

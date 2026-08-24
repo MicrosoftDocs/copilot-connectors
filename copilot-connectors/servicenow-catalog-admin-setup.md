@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 06/10/2026 
+ms.date: 08/23/2026 
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Catalog Copilot connector."
 ---
@@ -39,6 +39,7 @@ The following checklists list the steps involved in configuring the environment 
 | [Create service account and set up permissions](#create-service-account-and-set-up-permissions-to-index-items) | ServiceNow admin |
 | [Identify item count for ingestion](#identify-item-count-for-ingestion) | ServiceNow admin |
 | [Set up REST API](#set-up-rest-api) | ServiceNow admin |
+| [Set up REST API to evaluate only user criteria applied to catalog items](#set-up-rest-api-to-evaluate-only-user-criteria-applied-to-catalog-items) | ServiceNow admin |
 | [Set up hierarchical permissions](#set-up-hierarchical-permissions) | ServiceNow admin |
 | [Add Microsoft 365 IP address to allowlist](#add-microsoft-365-ip-address-to-the-allowlist) | ServiceNow admin/Network admin |
 | [Resolve issues with SSO configuration](#resolve-connector-setup-issues-with-servicenow-sso-configuration) | ServiceNow admin |
@@ -181,6 +182,9 @@ When the connector is set up and item sync is completed, you can check the index
 
 To allow the connector to fetch advanced user criteria, create a scripted REST API in your ServiceNow instance. 
 
+> [!NOTE]
+> The `GetAllUserCriteria` resource described in this section evaluates each user against **all** active user criteria in your ServiceNow instance. If you want the connector to evaluate only the user criteria that are applied to catalog items—which reduces the number of calls and the time required for the first full identity crawl—set up the [`GetAllUserCriteriaV2` resource](#set-up-rest-api-to-evaluate-only-user-criteria-applied-to-catalog-items) instead. `GetAllUserCriteria` is scheduled for deprecation.
+
 Elevate your role in ServiceNow to `security_admin`. 
 
 To set up access control: 
@@ -273,6 +277,138 @@ To verify the setup:
 The Microsoft 365 admin enters the **API Namespace** when they [deploy the ServiceNow Catalog connector](servicenow-catalog-deployment.md). In the following example, the API namespace is abcdef. 
 
 `/api/abcdef/microsoft_copilot/user_criteria`
+
+### Set up REST API to evaluate only user criteria applied to catalog items
+
+The [Set up REST API](#set-up-rest-api) step creates the `GetAllUserCriteria` resource, which evaluates each user against **all** active user criteria in your ServiceNow instance. On instances that define many user criteria, this approach increases the number of API calls and the time required to complete the first full identity crawl.
+
+To reduce this overhead, create the `GetAllUserCriteriaV2` resource on the **Microsoft Copilot** scripted REST API. This resource evaluates each user against **only the user criteria applied to catalog items**—the set that the connector sends in the request—and lets the connector evaluate **multiple users in a single request**. Together, these changes reduce the number of calls and the time required for the first full identity crawl.
+
+> [!NOTE]
+> - This resource coexists with `GetAllUserCriteria`; it doesn't replace it. You can set up either resource or both. If both resources are present, the connector uses `GetAllUserCriteriaV2` first. `GetAllUserCriteriaV2` will become the recommended default and, after `GetAllUserCriteria` is deprecated, the only option.
+> - `GetAllUserCriteriaV2` uses the same **Microsoft Copilot** scripted REST API and API namespace as `GetAllUserCriteria`—it isn't a separate API. If you already completed [Set up REST API](#set-up-rest-api), the access control and scripted REST API already exist, so skip ahead to **Add the resource to the API**.
+
+- Elevate your role in ServiceNow to `security_admin`.
+
+Create access control:
+
+1. In ServiceNow, go to **All** > **System Security** > **Access Control (ACL)**.
+1. Choose **New** to create a new ACL.
+1. Set the following values:
+
+   - **Type**: `REST_Endpoint`
+   - **Operation**: `Execute`
+   - **Name**: `Microsoft Copilot`
+   - **Role**: `admin` *(or the same role assigned to the crawling account)*
+1. Choose **Submit**.
+
+Create the scripted REST API:
+
+1. Go to **All** > **System Web Services** > **Scripted Web Services** > **Scripted REST APIs**.
+1. Choose **New**.
+1. Enter the following information:
+
+   - **Name**: `Microsoft Copilot`
+   - **API ID**: `microsoft_copilot`
+1. Choose **Submit**.
+1. From the **Scripted REST API** list page, choose **Microsoft Copilot**.
+1. Set **Default ACLs** to **Microsoft Copilot**. To avoid any problems with authorization, also add the **Scripted REST External Default** ACL.
+
+Add the resource to the API:
+
+1. Go to **All** > **System Web Services** > **Scripted Web Services** > **Scripted REST APIs**, and then open **Microsoft Copilot**.
+1. On the **Resources** tab, choose **New**.
+1. Enter the following information:
+
+   - **Name**: `GetAllUserCriteriaV2`
+   - **HTTP method**: `POST`
+   - **Relative Path**: `/user_criteria_v2`
+   - **Script**: Paste the following code:
+
+    ```js
+    (function execute(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+        try {
+            var requestBody = request.body.data;
+            var users = requestBody.users || [];
+            var userCriterias = requestBody.user_criteria || [];
+
+            if (users.length === 0) {
+                response.setStatus(400);
+                return {
+                    error: "At least one user sys_id is required."
+                };
+            }
+
+            if (userCriterias.length === 0) {
+                response.setStatus(400);
+                return {
+                    error: "At least one user_criteria sys_id is required."
+                };
+            }
+            var result = [];
+            for (var i = 0; i < users.length; i++) {
+                var userSysId = String(users[i]);
+                try {
+                    var matchingCriteriaIds =
+                        sn_uc.UserCriteriaLoader.getMatchingCriteria(
+                            userSysId,
+                            userCriterias
+                        );
+                    result.push({
+                        user: userSysId,
+                        user_criteria: matchingCriteriaIds
+                    });
+                } catch (userError) {
+                    result.push({
+                        user: userSysId,
+                        error: userError.message
+                    });
+                    gs.error(
+                        "Error evaluating user criteria for user " +
+                        userSysId + ": " +
+                        userError.message
+                    );
+                }
+            }
+            return result;
+        } catch (e) {
+            gs.error(
+                "UserCriteriaLoader API Error: " +
+                e.message
+            );
+            response.setStatus(500);
+            return {
+                error_message: "Error processing request",
+                error_details: e.message
+            };
+        }
+
+    })(request, response);
+    ```
+
+1. Make sure both of the following options are checked:
+
+   - **Requires authentication**
+   - **Requires ACL authorization**
+1. Make sure that **ACLs** is set to **Microsoft Copilot**. To avoid any problems with authorization, also add the **Scripted REST External Default** ACL.
+1. Choose **Submit**.
+
+To verify the setup:
+
+1. Confirm that the **Resource Path** is: `/api/<API Namespace>/microsoft_copilot/user_criteria_v2`.
+
+The Microsoft 365 admin enters the **API Namespace** when they [deploy the ServiceNow Catalog connector](servicenow-catalog-deployment.md). In the following example, the API namespace is `abcdef`:
+
+`POST /api/abcdef/microsoft_copilot/user_criteria_v2`
+
+The connector sends a POST request whose body specifies the users to evaluate (`users`) and the user criteria applied to the catalog items being indexed (`user_criteria`), both as arrays of sys_ids:
+
+```json
+{
+    "users": ["<user_sys_id_1>", "<user_sys_id_2>"],
+    "user_criteria": ["<user_criteria_sys_id_1>", "<user_criteria_sys_id_2>"]
+}
+```
 
 ### Set up hierarchical permissions
 

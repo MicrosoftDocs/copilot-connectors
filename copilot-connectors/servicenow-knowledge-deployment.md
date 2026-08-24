@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 08/08/2026
+ms.date: 08/23/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Knowledge Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -61,7 +61,10 @@ The ServiceNow Knowledge connector supports two flows for user criteria permissi
 The default is **Simple**. In this flow, advanced script-based user criteria aren't evaluated.
 
 > [!IMPORTANT]
-> If an advanced script-based user criterion exists on the **Cannot Read** (deny) path of a knowledge base or article, the **Simple** flow can't evaluate the script to determine which users it denies. To avoid oversharing restricted content, the connector conservatively treats the criterion as *deny all*, so the affected knowledge base or article content is blocked for **all** users in Copilot and search results. This is expected fail-safe behavior—not a bug or misconfiguration. To evaluate these criteria correctly and surface the articles to the right users, use the **Advanced** flow and [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api).
+> - If an advanced script-based user criterion exists on the **Cannot Read** (deny) path of a knowledge base or article, the **Simple** flow can't evaluate the script to determine which users it denies. To avoid oversharing restricted content, the connector conservatively treats the criterion as *deny all*, so the affected knowledge base or article content is blocked for **all** users in Copilot and search results.
+> - If an advanced script-based user criterion exists on the **Can Read** (allow) path of a knowledge base or article, the **Simple** flow can't evaluate the script to determine which users are allowed, so it skips that user criterion, which might result in oversharing.
+>
+> This is expected fail-safe behavior—not a bug or misconfiguration. To evaluate advanced script-based user criteria correctly, use the **Advanced** flow and [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api).
 
 If your ServiceNow instance uses **Advanced Scripts** in your knowledge base or article-level user criteria, use the **Advanced** flow. This flow evaluates script-based user criteria by calling the Scripted REST API in ServiceNow, which ensures accurate permissions handling when content is ingested into Microsoft Graph. For the **Advanced** option to work properly, you need to [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api).
 
@@ -84,7 +87,7 @@ Choose the authentication method that aligns with your organization's security p
 #### Federated Auth (Federated Identity Credentials)
 
 > [!TIP]
-> You can automate the in-ServiceNow steps for Federated Auth by using a background script instead of the manual steps in this section. For more information, see [Set up Federated Auth](servicenow-knowledge-setup-scripts.md#set-up-federated-auth).
+> You can automate the in-ServiceNow steps for Federated Auth by using a background script instead of the manual steps in this section. For more information, see [Set up Federated Auth](servicenow-knowledge-setup-scripts.md).
 
 Federated Auth uses a Microsoft application with OpenID Connect (OIDC) so that the connector authenticates to your ServiceNow instance without storing or rotating a client secret. Before you begin, make sure you have:
 
@@ -310,6 +313,7 @@ The following table lists the default values that are set. To customize these va
 | Content | Query string | `active=true^workflow_state=published` |
 | Content | Manage properties | To see default properties and schemas, see [Manage properties](#manage-properties). |
 | Sync | Incremental crawl | Frequency: Every 15 minutes |
+| Sync | Incremental identity sync crawl | Frequency: Every 30 minutes. Advanced flow only; not configurable in the admin center. To change it, contact [MicrosoftGraphConnectorsFeedback@service.microsoft.com](mailto:MicrosoftGraphConnectorsFeedback@service.microsoft.com). |
 | Sync | Full crawl | Frequency: Every day |
 
 After you create your connection, you can review the status (including count of indexed users & articles) in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/). When the connection status is **Ready**, you can validate the connection by providing the `sys_id` of any knowledge article and verifying its user permissions. For more information, see [Search and validate indexed content](indexed-content.md).
@@ -410,7 +414,7 @@ To define a custom expression for the **AccessURL** property:
 5. To preview the result, select **Preview data** and scroll to the customized property.
 
 > [!NOTE]
-> - You must create a new ServiceNow Knowledge connection to customize the **AccessURL** property. Editing an existing connection to customize the schema property isn't currently supported.   
+> - You can customize the **AccessURL** property for both new and existing ServiceNow Knowledge connections. You don't need to create a new connection.   
 
 You can override the default expression for specific knowledge articles by using rules based on property filters. To add a rule: 
 1. Under **Set additional rules to configure expressions**, select **Add new rule**.
@@ -432,9 +436,10 @@ Configure the sync schedule to keep indexed content up to date:
 
 - **Full crawl** – Reindexes all content, removes deleted content, and updates all permissions. The default frequency is daily.
 - **Incremental crawl** – Syncs changed content and recomputes permissions for those changed articles and article-level permission changes. Doesn't update user-to-criteria mappings (identity sync) or permissions for articles where knowledge base (parent) level permissions changed. The default frequency is every 15 minutes.
+- **Incremental identity sync crawl** – A new type of incremental crawl that checks for identity changes, such as new or removed users, role assignments, group memberships, and user criteria attributes, and updates permissions between full crawls. It's available for Advanced flow connections that set up the `user_changes` resource (see [Set up REST API for incremental identity sync](servicenow-knowledge-admin-setup.md#set-up-rest-api-for-incremental-identity-sync)). The default frequency is every 30 minutes. Unlike the full crawl and incremental crawl, you can't change this frequency in the admin center. To change it, contact [MicrosoftGraphConnectorsFeedback@service.microsoft.com](mailto:MicrosoftGraphConnectorsFeedback@service.microsoft.com).
 
 > [!IMPORTANT]
-> - Identities (group memberships created between users and user criteria) are only updated during full crawls. Incremental crawls don't update identities or group memberships.
+> - The standard incremental crawl doesn't update identities or group memberships. For Advanced flow connections with incremental identity sync set up, the incremental identity sync crawl updates identity changes between full crawls. Otherwise, identities are updated only during full crawls.
 > - During a full crawl, including the first full crawl, content sync and identity sync (such as reading users, user criteria, and mapping of users to user criteria such as group memberships) run in parallel. The full crawl is complete when both content sync and identity sync are finished.
 > -  The periodic full crawls are faster than the first full crawls because the first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Periodic full crawls recrawl all content and recompute permissions, but ingestion is faster because items already exist in the index. Identity sync uses differential updates, only pushing membership changes to Microsoft Graph. 
 
