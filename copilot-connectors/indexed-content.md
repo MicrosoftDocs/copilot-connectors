@@ -1,5 +1,5 @@
 ---
-ms.date: 02/09/2026
+ms.date: 08/23/2026
 title: "Search and validate indexed connector content"
 ms.author: danielabo
 author: danielabom
@@ -39,7 +39,7 @@ To search for indexed content, enter the unique identifier of the item in the in
 |:---|:---|:---|
 |ADO WI|ID|Use the work item ID.|	
 |ADO Wiki|Organization name, page ID|Found in the URL. For example, in this URL: `https://dev.azure.com/IdentityDivision/DevEx/_wiki/wikis/DevEx.wiki/74398/Passkey-FAQ`, the organization name is `IdentityDivision`, and the page ID is 74398.|
-|ServiceNow KB|Sys_Id of the knowledge article<br><br>Article number<br><br>Sys ID of the knowledge base| For the Sys_id of the article, go to the record, right-click the header bar, and select **Copy sys_id**. You can also select the **menu (three-line)** button > **Copy sys_id**.<br><br>For article number, copy the KB number of the article; for example, `KB0123456`.<br><br>For the sys_id of the knowledge base, go to the knowledge base that contains the article, right-click the header bar, and select **Copy sys_id**. You can also select the **menu (three-line)** button > **Copy sys_id**.<br><br>For more information, see [ServiceNow documentation](https://docs.servicenow.com/csh?topicname=c_UniqueRecordIdentifier.html&version=latest).|
+|ServiceNow KB|Article number<br><br>Sys ID of the knowledge base| For article number, copy the KB number of the article; for example, `KB0123456`.<br><br>For the sys_id of the knowledge base, go to the knowledge base that contains the article, right-click the header bar, and select **Copy sys_id**. You can also select the **menu (three-line)** button > **Copy sys_id**.<br><br>For more information, see [ServiceNow documentation](https://docs.servicenow.com/csh?topicname=c_UniqueRecordIdentifier.html&version=latest).|
 |ServiceNow Catalog|Sys_Id.value|Go to the record, right-click the header bar, and select Copy sys_id. You can also select the **menu (three-line)** button > **Copy sys_id**. For more information, see [ServiceNow documentation](https://docs.servicenow.com/csh?topicname=c_UniqueRecordIdentifier.html&version=latest).|
 |ServiceNow Tickets|Sys_Id.value|Go to the record, right-click the header bar, and select **Copy sys_id**. You can also select the **menu (three-line)** button > **Copy sys_id**. For more information, see [ServiceNow documentation](https://docs.servicenow.com/csh?topicname=c_UniqueRecordIdentifier.html&version=latest).|
 |Salesforce|ID|Found in the URL.|

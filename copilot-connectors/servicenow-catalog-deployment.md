@@ -8,7 +8,7 @@ ms.reviewer: mayanksethi
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 07/23/2026
+ms.date: 08/23/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Catalog Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -265,7 +265,7 @@ To use Microsoft Entra ID OpenID Connect:
 
 For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject should match the ServiceNow user, or `oid` when the object ID should match the ServiceNow user. This field has no default, so you must set it. If sign-in fails to resolve the user, switch the value.
 
-    Set **Scope Restriction** (labeled **Auth Scope** in some releases) to **Useraccount scoped** (`useraccount`).
+   Set **Scope Restriction** (labeled **Auth Scope** in some releases) to **Useraccount scoped**.
 
 
 1. Choose **Submit** to save the configuration. 
@@ -401,7 +401,7 @@ To define a custom expression for the **AccessURL** property:
 1. To preview the result, select **Preview data** and scroll to the customized property.
 
 > [!NOTE]
-> To customize the **AccessURL** schema property, you need to create a new ServiceNow Catalog connection for your connector. Editing the **AccessURL** property for an existing connection isn't currently supported.
+> You can customize the **AccessURL** property for both new and existing ServiceNow Catalog connections. You don't need to create a new connection.
 
 #### Add rules for conditional expressions
 

@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
 ms.service: copilot-connectors
-ms.date: 06/10/2026
+ms.date: 08/23/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the ServiceNow Tickets Microsoft 365 Copilot connector."
 ---
@@ -101,6 +101,9 @@ If your ServiceNow instance is behind a firewall, the connector might not reach 
 | PROD             | Europe         | 20.54.41.208/30, 51.105.159.88/30    |
 | PROD             | Asia Pacific   | 52.139.188.212/30, 20.43.146.44/30   |
 | GCC            | US Government  | 52.235.252.161/30                    |
+| GCC High         | USGov Arizona  | 52.235.133.220/30                    |
+| GCC High         | USGov Texas    | 20.141.122.232/30                    |
+| GCC High         | USGov Virginia | 20.141.144.232/30                    |
 | DoD              | US Government  | 52.182.52.25/30, 52.181.182.213/30   |
 
 ## Access permissions not working as expected
@@ -109,7 +112,7 @@ If search results show incorrect access permissions, verify that the user is par
 
 ## Change the URL of the ticket item
 
-The ServiceNow Tickets connector allows you to customize the URL of the Ticket items based on the needs of your organization. Currently, you can't edit the **AccessURL** property for an existing connection. If you have an existing connection and you want to customize the URL, you have to create a new connection and customize the URL during setup. 
+The ServiceNow Tickets connector allows you to customize the URL of the Ticket items based on the needs of your organization. You can customize the URL for both new and existing connections. You don't need to create a new connection. 
 
 For more information, see [Set a default expression for AccessURL](/microsoft-365/copilot/connectors/servicenow-tickets-deployment#set-a-default-expression-for-accessurl).
 

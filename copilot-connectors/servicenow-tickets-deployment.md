@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 07/23/2026
+ms.date: 08/23/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Tickets Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -313,7 +313,7 @@ On the **Users** tab, the ServiceNow Tickets connector supports search permissio
 - Choose **Save** for each table.
 
 > [!NOTE]
-> The Preview section displays sample tickets without enforcing ServiceNow ACLs or user permissions. After deployment, the connector applies all ServiceNow access controls when returning results.
+> The Preview section displays sample tickets without enforcing the selected access permissions. Those permissions are enforced after deployment when the connector returns results.
 
 #### Mapping identities
 
@@ -396,7 +396,7 @@ To define a custom expression for the **AccessURL** property:
 1. To preview the result, select **Preview data** and scroll to the customized property. 
 
 > [!NOTE]
-> To customize the **AccessURL** property, you must create a new ServiceNow Tickets connection. Making changes to schema properties for existing connections isn't currently supported.
+> You can customize the **AccessURL** property for both new and existing ServiceNow Tickets connections. You don't need to create a new connection.
 
 #### Add rules for conditional expressions
 

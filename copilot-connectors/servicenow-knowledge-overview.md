@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
 ms.service: copilot-connectors
-ms.date: 07/23/2026
+ms.date: 08/23/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Knowledge Copilot connector."
 ---
@@ -67,18 +67,19 @@ The ServiceNow Knowledge connector has the following capabilities:
     - Web page archives (MHT, MHTML)
     - Email messages (EML, MSG)
     - ZIP archives
+- Indexes only attachments that are visible to users in your ServiceNow instance.
 - Supports indexing content from custom or default knowledge article templates, such as FAQs, How-to, What Is, or KCS article templates.
 - Supports customization of the ServiceNow URL in Copilot responses as needed for your organization.
 - Considers both knowledge base-level and article-level permissions (user criteria) when evaluating article permissions.
 - Supports evaluating permissions based on user criteria or role-based permissions. 
+- For Advanced flow connections, supports incremental identity sync to keep identity changes - such as users, role assignments, group memberships, and user criteria attributes - up to date between full crawls.
 - Indexes knowledge blocks—the reusable, modular content components embedded within knowledge articles—and evaluates their user criteria. Indexing knowledge blocks requires additional table permissions. For more information, see [Create service account and set up permissions to index items](servicenow-knowledge-admin-setup.md#create-service-account-and-set-up-permissions-to-index-items).
 - Indexes content contained in accordions within knowledge articles.
 
 The ServiceNow Knowledge connector has the following limitations:
 
-- The incremental crawl only updates the changed content or any addition or removal of user criteria to any article, not the changes in identity, such as changes in users or user criteria attributes. The identity sync happens only with a full crawl.
 - Image files aren't indexed as attachments. Formats such as .png, .jpg, .jpeg, .gif, .bmp, and .svg are skipped; only text-based document formats are indexed.
-- Each knowledge article indexes a maximum of 100 attachments, up to a combined size of 20 MB. Attachments beyond these limits aren't indexed.
+- Each knowledge article indexes a maximum of 100 attachments, up to a combined size of 64 MB. Attachments beyond these limits aren't indexed.
 
 ## Data types indexed from ServiceNow Knowledge
 
