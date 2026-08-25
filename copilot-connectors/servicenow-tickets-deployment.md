@@ -313,7 +313,7 @@ On the **Users** tab, the ServiceNow Tickets connector supports search permissio
 - Choose **Save** for each table.
 
 > [!NOTE]
-> The Preview section displays sample tickets without enforcing ServiceNow ACLs or user permissions. After deployment, the connector applies all ServiceNow access controls when returning results.
+> The Preview section displays sample tickets without enforcing the selected access permissions. Those permissions are enforced after deployment when the connector returns results.
 
 #### Mapping identities
 
