@@ -8,7 +8,7 @@ audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.service: copilot-connectors
-ms.date: 12/15/2025
+ms.date: 08/27/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Azure File Share Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -104,7 +104,7 @@ You can create custom properties that enhance metadata available for search. Use
 
 ### Customize sync intervals
 
-You can adjust how often the connector runs full or incremental crawls. By default, the connector runs a full crawl daily. Choose sync intervals that match your content update patterns and performance expectations.
+You can adjust how often the connector runs full crawls. The Azure File Share connector supports full crawls only; it doesn't currently support incremental crawls. By default, the connector runs a full crawl daily. Choose a sync interval that matches your content update patterns and performance expectations.
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
