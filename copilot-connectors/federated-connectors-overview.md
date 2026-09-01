@@ -2,12 +2,12 @@
 title: Federated connectors overview
 description: Get an overview of MCP-based Microsoft 365 Copilot federated connectors.
 #customer intent: As an admin, I want to learn about federated connectors and whether and how to enable them in the Microsoft 365 admin center.
-author: Lauragra
-ms.author: lauragra
+author: danipocket
+ms.author: danielabo
 manager: calvind
 ms.reviewer: mansipakhale
 ms.service: microsoft-365-copilot-connectors
-ms.date: 06/22/2026
+ms.date: 08/27/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ms.audience: Admin
@@ -50,28 +50,34 @@ Microsoft provides a set of federated connectors in the Connectors Gallery. Thes
 Currently, federated connectors are available for the following data sources, organized by category:
 
 | Category | Data sources |
-|---|---|
-| Productivity | Autodesk, Excalidraw, Fellow.ai, Google Calendar, Google Contacts, Grain, Granola, Mem, Notion, Taskrabbit Booking Assistance |
-| Sales and marketing | Clarify, Customer.io, HG Insights, HubSpot, Intercom, MailerLite, Polar Analytics, Sprouts Data Intelligence |
-| Design | Canva, Cloudinary |
-| Development tools | Context7, Enosix, GoDaddy, GraphOS MCP Tools, Hugging Face, Jam, Linear, pg-aiguide |
-| Financial Services | Aiwyn Tax, Blockscout, CB Insights, Clarity AI, Daloopa, FactSet, Fitch Solutions, LSEG, Moody's, Morningstar, PitchBook, S&P Global |
-| Data & Analytics | Forrester, Infor Nexus Digital Assistant, Pulse by Passby, Sight Machine, Wolfram |
-| Human Resources & Recruiting | Dice, ZipRecruiter |
-| Legal | BoardWise, Harvey, Legal Data Hunter |
+| --- | --- |
+| Accounting and finance | Aiwyn Tax, Blockscout, CB Insights, Clarity AI, Daloopa, FactSet, Fitch Solutions, Klardaten DATEV-Connector, LSEG, Mercury, Money Forward, Moody's, Morningstar, PitchBook, S&P Global, Xero, Zacks |
+| Collaboration and communication | TeamsMaestro |
+| Content management systems | Templafy |
+| Customer relationship management | Clarify, HubSpot, Intercom |
+| Data visualization | Forrester, IDC, Infor Nexus Digital Assistant, Polar Analytics, Pulse by PassBy, S&P Global Energy, Sight Machine, Statista, Wolfram |
+| Design | Canva, Cloudinary, Excalidraw |
+| Developer tools | Context7, Enosix, GoDaddy, GraphOS MCP Tools, Hugging Face, Jam, pg-aiguide |
+| Education | Article Galaxy, Autodesk Product Help, Microsoft Learn |
+| Files and documents | Box |
+| Health and life sciences | bioRxiv, ClinicalTrials.gov Explorer (by BLEN), CMS Coverage, Consensus, MedlinePlus, NPI Registry, NyquistAI, OpenTargets, PopHIVE, PubMed, RxNorm |
+| Human resources and recruiting | Dice, Gusto, ZipRecruiter |
+| IT service management tools | Azure DevOps, Cloudflare, Malwarebytes |
+| Legal | BoardWise, Descrybe Legal Engine, Everlaw, Harvey, Harvey AU, Harvey EU, iManage Work, Legal Data Hunter |
 | Nonprofit | Kindora Funder Discovery |
-| Security & IT | Malwarebytes |
-| Education | Article Galaxy, Microsoft Learn |
-| Health & Life Sciences | NyquistAI, OpenTargets |
- 
-ISVs use a single connector manifest and single publishing pipeline for all connector types. For more information, see [ISV success guidance](https://learn.microsoft.com/en-us/partner-center/membership/isv-success).
+| Others | Granted, Tavily |
+| Productivity | Autodesk, DeepL MCP, Fellow.ai, Google Calendar, Google Contacts, Granola, Mem, Notion, Taskrabbit Booking Assistance |
+| Project management | Dotted, Flow Studio Cowork, Linear, Quire |
+| Sales | Adobe Journey Optimizer, Ahrefs, Crossbeam, Customer.io, Grain, HG Insights, MailerLite, Sprouts Data Intelligence |
+
+ISVs use a single connector manifest and single publishing pipeline for all connector types. For more information, see [ISV success guidance](/partner-center/membership/isv-success).
 
 The following image shows federated connectors in the **Your connections** list in the Microsoft 365 admin center.
  
 :::image type="content" source="media/federated-connectors/your-connections-tab.png" alt-text="Screenshot of the Your connections tab in the admin center with federated connectors appearing in the list." lightbox="media/federated-connectors/your-connections-tab.png":::
 
 > [!IMPORTANT]
-> Admins control whether default federated connectors are available to their organization from the **Settings** tab in Agent 365, by using the [Allowed agent types](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-settings?view=o365-worldwide#allowed-agent-types). When the Microsoft-published and third-party-published options are deselected, federated connectors aren't enabled by default in the tenant, including connectors released in the future, and the admin enables each connector individually. This setting replaces the tenant-wide PowerShell toggle. Tenants that previously used the cmdlet receive a Message Center post asking them to reapply the choice in the UX within a limited window, after which the cmdlet state is no longer honored. For more information, see [Manage federated connectors](manage-federated-connectors.md).
+> Admins control whether default federated connectors are available to their organization from the **Settings** tab in Agent 365, by using the [Allowed agent types](/microsoft-365/admin/manage/agent-settings#allowed-agent-types). When the Microsoft-published and third-party-published options are deselected, federated connectors aren't enabled by default in the tenant, including connectors released in the future, and the admin enables each connector individually. This setting replaces the tenant-wide PowerShell toggle. Tenants that previously used the cmdlet receive a Message Center post asking them to reapply the choice in the UX within a limited window, after which the cmdlet state is no longer honored. For more information, see [Manage federated connectors](manage-federated-connectors.md).
 
 ## Admin experience and controls
  
@@ -84,7 +90,7 @@ Admins can:
 - View federated connectors that are available in the tenant on the **Your connections** tab, including Microsoft-published connectors and partner connectors that Microsoft approved and the admin enabled.
 - Enable or disable connectors at the tenant level.
 - Limit availability to specific Microsoft Entra ID groups by choosing **Add staging** in the **Staged Rollout** column.
-- Bulk disable all federated connectors by using [Allowed Agent Type](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-settings?view=o365-worldwide#allowed-agent-types), and selectively enable specific federated connectors in the Microsoft 365 admin center based on organizational policies and readiness. For more information, see [Manage federated connectors](manage-federated-connectors.md).
+- Bulk disable all federated connectors by using [Allowed Agent Type](/microsoft-365/admin/manage/agent-settings#allowed-agent-types), and selectively enable specific federated connectors in the Microsoft 365 admin center based on organizational policies and readiness. For more information, see [Manage federated connectors](manage-federated-connectors.md).
 - Manage federated connectors from the Agent tab in the Microsoft 365 admin center portal apart from the **Copilot connectors** > **Your connections** section.
  
 The following image shows the connector pane for the HubSpot federated connector.
