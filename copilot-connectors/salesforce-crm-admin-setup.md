@@ -1,21 +1,21 @@
 ---
 title: Set up the Salesforce service for Salesforce CRM connector ingestion
 description: Get the steps that the Salesforce CRM admin needs to complete for your organization to configure the Salesforce CRM Microsoft 365 Copilot connector.
-author: lauragra
-ms.author: lauragra
-manager: calvind
+author: depang
+ms.author: depang
+manager: jecui
 ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: Medium
-ms.date: 06/18/2026
+ms.date: 08/26/2026
 ---
 
 # Set up the Salesforce service for Salesforce CRM connector ingestion
 
-The Salesforce CRM Microsoft 365 Copilot connector allows your organization to index contacts, opportunities, leads, cases, and accounts objects in your Salesforce instance. After you configure the connector and index content from Salesforce, users can search for those items from any Microsoft Search and Microsoft 365 Copilot client.
+The Salesforce CRM Microsoft 365 Copilot connector enables your organization to index Salesforce CRM data, including Accounts, Contacts, Leads, Opportunities, Cases, Events, Tasks, and Campaigns. It can also index comments and attachments associated with supported objects, such as Accounts. After you configure the connector and complete the indexing process, users can discover and access this content through Microsoft 365 Copilot, Microsoft Search, and other supported Microsoft 365 experiences.
 
 This article provides information about the configuration steps that Salesforce admins need to complete in order for your organization to deploy the [Salesforce CRM connector](salesforce-crm-overview.md).
 
@@ -111,17 +111,17 @@ Set up an External Client App for OAuth 2.0 authentication. External Client Apps
 1. On the External Client App detail page, select the **Settings** tab.
 1. Select **Edit** (top-right of the Settings panel).
 1. Expand the **OAuth Settings** section.
-1. Check **Enable OAuth Settings**. Additional fields appear.
 1. Set the **Callback URL**:
     - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
     - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
 1. Move the following scopes from **Available OAuth Scopes** to **Selected OAuth Scopes**:
     - Manage user data via APIs (api)
     - Perform requests at any time (refresh_token, offline_access)
-1. Under **OAuth flows**, check **Enable Authorization Code and Credentials Flow**.
+1. Under **Flows Enablement**, check the following options:
+    - **Enable Client Credentials Flow**
+    - **Enable Authorization Code and Credentials Flow**.
 1. Under the security section:
     - Leave **Require Secret for Web Server Flow** checked (default).
-    - Clear **Require Proof Key for Code Exchange (PKCE)**.
 1. Select **Save**.
 
 ### Get client ID and secret
@@ -134,6 +134,9 @@ Set up an External Client App for OAuth 2.0 authentication. External Client Apps
 > The **Consumer Key and Secret** page requires email verification the first time you access it in a session. Salesforce sends a verification code to the contact email address configured for the app.
 
 ## Configure refresh token policy
+
+> [!NOTE]
+> Salesforce organizations that have **Refresh Token Rotation** enabled allow each refresh token to be used only once. Reusing the same OAuth authorization across multiple Salesforce CRM connector connections can invalidate existing tokens and cause authentication failures. To avoid disruptions, create a separate authorization for each connector connection.
 
 To prevent token expiration:
 
