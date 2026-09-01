@@ -1,14 +1,14 @@
 ---
 title: "Troubleshoot issues with the Salesforce CRM connector"
-ms.author: lauragra
-author: lauragra
-manager: calvind
+ms.author: depang
+author: depang
+manager: jecui
 ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
-ms.date: 06/18/2026
+ms.service: microsoft-365-copilot-connectors
+ms.date: 08/26/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Salesforce CRM Microsoft 365 Copilot connector."
 ---
@@ -20,20 +20,6 @@ The Salesforce CRM Microsoft 365 Copilot connector enables your organization to 
 This article provides troubleshooting information for common errors that you might encounter when you deploy the Salesforce CRM connector.
 
 To verify Salesforce configuration information to help troubleshoot errors, see [Set up the Salesforce service for connector ingestion](salesforce-crm-admin-setup.md).
-
-## Bad state error while signing in to create a connection
-
-![Salesforce bad state error message](media/salesforce-connector/sf-bad-state-troubleshoot.png)
-
-The PKCE option is checked in the External Client App, causing the issue. To fix it:
-
-1. In Salesforce, go to **Setup** > **Apps** > **External Client Apps** > **External Client App Manager**.
-1. Select the app used for the connector.
-1. On the **Settings** tab, select **Edit**.
-1. In the **OAuth Settings** section, clear **Require Proof Key for Code Exchange (PKCE)**.
-1. Select **Save**.
-
-![Salesforce PKCE checkbox](media/salesforce-connector/sf-pkce-troubleshoot.png)
 
 ## OAuth app scope names changed
 
@@ -83,6 +69,14 @@ If custom fields you selected in the **Add Properties** panel aren't appearing i
 - If you promoted the field to a schema property, verify that the property or queryable limit wasn't exceeded. Open the **Add Properties** panel and check the budget counters.
 
 If your scenario needs objects or fields not covered by the connector's default behavior, see [Build a custom Salesforce CRM connector](salesforce-custom-connector-sample.md) for a reference implementation built with the [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview) (source code: [microsoft/Salesforce-Custom-Copilot-Connector](https://github.com/microsoft/Salesforce-Custom-Copilot-Connector)).
+
+## Attachment files don't appear in Copilot responses
+
+The connector extracts text from Salesforce CRM attachments and indexes the extracted text. Copilot can use this text to generate responses, but it doesn't retrieve or return the original attachment file in a response.
+
+## Attachment ingestion limit
+
+The connector can ingest up to 20 MB of attachment content for each Salesforce record (for example, an Account record). The connector ingests attachments in ascending order of file size. When the cumulative size of ingested attachments for a record reaches 20 MB, the connector stops ingesting attachment content for the remaining files and indexes only their file names.
 
 ## Related content
 
