@@ -97,12 +97,10 @@ items:
         href: asana-troubleshooting.md
     - name: Azure Data Lake Storage Gen2
       items:
-      - name: Overview
-        href: azure-data-lake-storage-gen2-overview.md
-      - name: Deployment guide
-        href: azure-data-lake-storage-gen2-deployment.md
+      - name: Setup
+        href: azure-data-lake-connector.md
       - name: Troubleshooting
-        href: azure-data-lake-storage-gen2-troubleshooting.md
+        href: troubleshoot-azure-data-lake-connector.md
     - name: Azure DevOps Work Items
       items:
       - name: Overview
@@ -133,24 +131,16 @@ items:
         href: azure-file-share-troubleshooting.md
     - name: Azure SQL and Microsoft SQL Server
       items:
-      - name: Overview
-        href: mssql-overview.md
-      - name: Set up the Azure SQL and Microsoft SQL Server service
-        href: mssql-admin-setup.md
-      - name: Deployment guide
-        href: mssql-deployment.md
+      - name: Setup
+        href: MSSQL-connector.md
       - name: Troubleshooting
-        href: mssql-troubleshooting.md
+        href: troubleshoot-mssql-connector.md
     - name: BambooHR
       items:
-      - name: Overview
-        href: bamboohr-overview.md
-      - name: Set up the BambooHR service
-        href: bamboohr-admin-setup.md
-      - name: Deployment guide
-        href: bamboohr-deployment.md
+      - name: Setup
+        href: bamboohr-connector.md
       - name: Troubleshooting
-        href: bamboohr-troubleshooting.md
+        href: troubleshoot-bamboohr-connector.md
     - name: Bitbucket Knowledge
       items:
       - name: Overview
@@ -584,14 +574,16 @@ items:
       items:
       - name: Setup
         href: unily-intranet-connector.md
-    - name: Veeva Vault RIM
-      items: 
+    - name: Veeva On-Premises
+      items:
       - name: Overview
-        href: veeva-rim-overview.md
+        href: veeva-onpremise-overview.md
+      - name: Set up the Veeva Vault service
+        href: veeva-onpremise-admin-setup.md
       - name: Deployment guide
-        href: veeva-rim-deployment.md
+        href: veeva-onpremise-deployment.md
       - name: Troubleshooting
-        href: veeva-rim-troubleshooting.md
+        href: veeva-onpremise-troubleshooting.md
     - name: Veeva PromoMats
       items:
       - name: Overview
@@ -607,7 +599,15 @@ items:
       - name: Deployment guide
         href: veeva-qualitydocs-deployment.md
       - name: Troubleshooting
-        href: veeva-qualitydocs-troubleshooting.md         
+        href: veeva-qualitydocs-troubleshooting.md
+    - name: Veeva Vault RIM
+      items:
+      - name: Overview
+        href: veeva-rim-overview.md
+      - name: Deployment guide
+        href: veeva-rim-deployment.md
+      - name: Troubleshooting
+        href: veeva-rim-troubleshooting.md
     - name: WordPress
       items:
       - name: WordPress.org (on-prem)
@@ -662,12 +662,6 @@ items:
     href: map-non-entra-id.md
   - name: Enhance Copilot discovery of connector content
     href: enhance-copilot-discovery.md
-  - name: Self-serve sync connectors (preview)
-    items:
-    - name: Overview
-      href: personal-sync-connectors-overview.md
-    - name: Manage self-serve sync connectors
-      href: manage-personal-sync-connectors.md
   - name: FAQs
     href: frequently-asked-questions.yml
   - name: Build custom synced connectors
@@ -688,8 +682,6 @@ items:
         href: /graph/connecting-external-content-manage-items?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
       - name: Use external groups
         href: /graph/connecting-external-content-external-groups?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
-    - name: Salesforce custom CRM sample
-      href: salesforce-custom-connector-sample.md
     - name: Delegate connector administration
       href: /microsoft-365/copilot/extensibility/connector-admin-delegation?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
 - name: Set up federated connectors
