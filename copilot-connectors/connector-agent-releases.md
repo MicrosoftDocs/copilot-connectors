@@ -20,6 +20,19 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 
 To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
 
+## Version 4.0.4.0 (*September 13, 2026*)
+
+* Improved Confluence On-Prem connector crawl reliability and content navigation handling.
+* Added actionable error messages and troubleshooting guidance for Confluence connector authentication and crawl issues.
+* Improved Confluence On-Prem user information processing and email resolution.
+* Enhanced user identity cache handling and identity resolution reliability.
+* Improved Graph connector agent statistics reporting and real-time visibility into indexing operations.
+* Improved Azure SQL connector diagnostics with actionable error messages.
+* Improved credential validation diagnostics and troubleshooting experience for connector admins.
+* Improved reliability of file and content ingestion processing.
+* Improved GitHub connector error reporting and troubleshooting experience.
+* Security improvements, bug fixes, and reliability improvements.
+
 ## Version 4.0.3.0 (*August 18, 2026*)
 
 * Updated Confluence On-Premises plugin support to version 2.0.3 to improve performance for large user groups.
