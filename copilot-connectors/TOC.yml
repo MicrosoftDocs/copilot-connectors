@@ -251,6 +251,18 @@ items:
         href: freshservice-deployment.md
       - name: Troubleshooting
         href: freshservice-troubleshooting.md
+    - name: Galileo by The Josh Bersin Company
+      items:
+      - name: Overview
+        href: galileo-overview.md
+      - name: Set up the Galileo service
+        href: galileo-admin-setup.md
+      - name: Deployment guide
+        href: galileo-deployment.md
+      - name: Build declarative agents
+        href: galileo-declarative-agents.md
+      - name: Troubleshooting
+        href: galileo-troubleshooting.md
     - name: GitHub
       items:         
       - name: GitHub Cloud Issues
