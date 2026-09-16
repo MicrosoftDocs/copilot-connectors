@@ -23,7 +23,7 @@ For information about deploying the connector after setup is complete, see [Depl
 Before you begin, make sure that you meet the following prerequisites:
 
 - **Josh Bersin account**: You need a valid Josh Bersin license to access content. Contact The Josh Bersin Company to request the credentials required for access.
-- **Service account**: You must be an admin for your organization's Microsoft 365 tenant.
+- **Microsoft 365 administrator**: You must be an admin for your organization's Microsoft 365 tenant.
 - Each user who accesses Galileo content through Copilot needs a Microsoft 365 Copilot license.
 
 ## Identify the Galileo instance URL
