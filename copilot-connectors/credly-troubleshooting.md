@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Troubleshoot issues with the Credly connector (preview)"
 ms.author: vivekdatir
 author: vivekdatir
@@ -6,7 +6,7 @@ manager: rampo
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 04/09/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Credly Microsoft 365 Copilot connector."

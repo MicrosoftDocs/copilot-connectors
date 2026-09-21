@@ -7,7 +7,7 @@ manager: james.lau
 audience: Admin
 ms.audience: Admin
 ms.topic: article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Find information about item delete notifications for Microsoft 365 Copilot connectors."
 ---

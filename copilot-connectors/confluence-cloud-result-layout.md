@@ -7,7 +7,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: copilot-connectors 
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium 
 description: "Get a JSON example of a Microsoft Search result layout for the Confluence Cloud Microsoft 365 Copilot connector." 
 ms.date: 03/08/2023

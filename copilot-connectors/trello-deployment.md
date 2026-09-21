@@ -1,13 +1,13 @@
 ---
 title: "Deploy the Trello connector"
-ms.author: lauragra
-author: lauragra
+ms.author: danielabo
+author: danipocket
 manager: calvind
 ms.reviewer: anggao
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 04/09/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Trello Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
@@ -23,29 +23,30 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 - You're a Microsoft 365 administrator.
 - Your organization has the Trello Enterprise plan.
-
 - You have a Trello developer account.
 
 ## Configure Trello app
+
 To configure a Trello app:
 
 - Go to [https://trello.com/power-ups/admin](https://trello.com/power-ups/admin).
-
 - Select **New** to add a new app.
+
   ![Screenshot that shows how to create an app in the Trello admin portal.](media/trello/trello-create-app.png)
 
-
 - Fill in the required fields to create a new app.
+
   ![Screenshot that shows how to fill in the fields of the app in the Trello admin portal.](media/trello/trello-fill-app.png)
 
-   ![Screenshot that shows how to generate app keys in Trello admin portal.](media/trello/trello-generate-api-keys-1.png)
 ## Get the API key and secret
+
 - Select **Generate a new API key**.
-   ![Screenshot that shows how to find app keys and secret in Trello admin portal.](media/trello/trello-copy-api-keys.png)
+
+  ![Screenshot that shows how to generate app keys in Trello admin portal.](media/trello/trello-generate-api-keys-1.png)
 
 - Copy the API key and secret from the app for authentication in Microsoft 365 admin center.
-   ![Screenshot that shows how to find app keys and secret in Trello admin portal.](copilot-connectors/media/trello/trello-copy-api-keys.png)
-  
+
+  ![Screenshot that shows how to find app keys and secret in Trello admin portal.](media/trello/trello-copy-api-keys.png)
 
 ## Deploy the connector
 
@@ -69,31 +70,31 @@ The Trello connector supports the following authentication option:
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
+To roll out to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to.
 
-Choose **Create** to deploy the connection. The Copilot connector starts indexing content right away.
+Select **Create** to deploy the connection. The Copilot connector starts indexing content right away.
 
 The following table lists the default values that are set.
 
 | Category | Default value |
-|----------|----------------|
+| --- | --- |
 | Users | Default access permission is set to be visible to everyone |
 | Content | Manage properties are set to default schema values |
 | Sync | Incremental crawl every 15 minutes; full crawl every day |
 
-To customize these values, choose **Custom setup**.
+To customize these values, select **Custom setup**.
 
 After you create your connection, you can review the status in the **Connectors** section of the Microsoft 365 admin center.
 
 ## Customize settings (optional)
 
-You can customize the default values for the connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**.
+You can customize the default values for the connector settings. To customize settings, on the connector page in the admin center, select **Custom setup**.
 
 ### Customize user settings
 
 #### Access permissions
 
-The Trello connector supports search permissions visible to **Everyone** or **Only people with access to this data source**.
+The Trello connector supports search permissions that are visible to **Everyone** or **Only people with access to this data source**.
 
 #### Map identities
 
@@ -106,9 +107,9 @@ The default method for mapping your data source identities with Microsoft Entra 
 The following table lists the properties that are selected by default.
 
 | Property | Semantic Label | Description | Schema Attributes |
-|-----------|------------------|----------------|---------------------|
-| Id |  | Unique identifier of the Trello card | Query, Retrieve |
-| Description |  | Description content of the Trello card | Search |
+| --- | --- | --- | --- |
+| Id | | Unique identifier of the Trello card | Query, Retrieve |
+| Description | | Description content of the Trello card | Search |
 | Due | DueDate | Due date of the item | Query, Retrieve |
 | LabelName | tags | Tags or labels associated with the item | Search, Query, Retrieve |
 | Name | title | The title of the item | Search, Query, Retrieve |

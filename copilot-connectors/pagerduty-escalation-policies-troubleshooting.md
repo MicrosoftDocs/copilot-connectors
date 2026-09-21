@@ -6,7 +6,7 @@ manager: zezhangzhao
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 05/26/2025
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the PagerDuty Escalation Policies Copilot connector."

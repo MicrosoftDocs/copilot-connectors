@@ -7,7 +7,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the Enterprise Websites cloud Microsoft 365 Copilot connector."
 ---
@@ -80,13 +80,13 @@ These are the supported MIME types.
 | text/x-server-parsed-html | Server-parsed HTML documents, often used for Server Side Includes (SSI). |
 
 ## Limitations
-- Doesn't support authentication mechanisms like SAML, JWT token, Forms-based authentication, etc.
+- Doesn't support authentication mechanisms like SAML, JWT token, Forms-based authentication, and similar methods.
 - Doesn't support crawling of dynamic content in webpages.
 
 ## Prerequisites
 - You must be the **AI administrator** for your organization's Microsoft 365 tenant.
 - **Website URLs**: To connect to your website content, you need the URL to the website. You can index multiple websites (up to 50) in a single connection. 
-- **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it is advisable to have a dedicated account to authenticate and crawl the content.
+- **Service Account (optional)**: You need a service account only when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, use a dedicated account to authenticate and crawl the content.
 
 ## Get Started
 
@@ -98,40 +98,40 @@ A display name identifies each citation in Copilot, so users can easily recogniz
 ### Add website URLs to index
 Specify the root of the website that you want to crawl. The Enterprise Websites cloud Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection.
 
-The connector only crawls webpages in the domain of root URLs and doesn't support crawling of out-of-domain URLs. Redirection is only supported within the same domain. If there are redirections in the webpages to be crawled, you may add the redirected URL directly in the list of URLs to be crawled.
+The connector only crawls webpages in the domain of root URLs and doesn't support crawling of out-of-domain URLs. Redirection is only supported within the same domain. If there are redirections in the webpages to be crawled, you can add the redirected URL directly in the list of URLs to crawl.
 
 **Use sitemap for crawling**
 
 When selected, the connector only crawls the URLs listed in the sitemap. This option also allows you to configure incremental crawling during a later step. If not selected or no sitemap is found, the connector does a deep crawl of all the links found on the root URL of the site.
 
-When this option is selected, the crawler performs the following steps:
+When you select this option, the crawler performs the following steps:
 
-a. The crawler looks for the robots.txt file in the root location. For example - if your provided URL is `https://www.contoso.com`, then the crawler looks for the robots.txt file at `https://www.contoso.com/robots.txt`.
+1. The crawler looks for the `robots.txt` file in the root location. For example, if your provided URL is `https://www.contoso.com`, the crawler looks for the `robots.txt` file at `https://www.contoso.com/robots.txt`.
 
-b. Upon locating the robots.txt file, the crawler finds the sitemap links in the robots.txt file.
+1. Upon locating the `robots.txt` file, the crawler finds the sitemap links in the `robots.txt` file.
 
-c. The crawler then crawls all webpages as listed in the sitemap files.
+1. The crawler then crawls all webpages as listed in the sitemap files.
 
-d. If there's failure in any of the above steps, the crawler performs a deep crawl of the website, without throwing any error.
+1. If there's failure in any of the preceding steps, the crawler performs a deep crawl of the website, without throwing any error.
 
 **Index only pages under the specified subdirectory**
 
-The Website connector offers an option to index only webpages that are under the specified subdirectory specified. 
+The Website connector offers an option to index only webpages that are under the specified subdirectory. 
 
-- When this option is **not checked**, the connector always starts crawling from the root of the URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com`.
-- When this option is **checked**, the connector starts crawling from the exact input URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com/electronics`.
+- When you **don't check** this option, the connector always starts crawling from the root of the URL. For example, if your provided URL is `https://www.contoso.com/electronics`, the connector starts crawl from `https://www.contoso.com`.
+- When you **check** this option, the connector starts crawling from the exact input URL. For example, if your provided URL is `https://www.contoso.com/electronics`, the connector starts crawl from `https://www.contoso.com/electronics`.
 
 ### Provide authentication type
-The authentication method you choose applies for all websites you provided to index in a connection. To authenticate and sync content from websites, choose **one of the five** supported methods:<br>
+The authentication method you choose applies to all websites you provide to index in a connection. To authenticate and sync content from websites, choose **one of the five** supported methods:<br>
 
 a. **None** <br>
 Select this option if your websites are publicly accessible without any authentication requirements. <br>
 
 b. **Basic authentication** <br>
-To authenticate using basic authentication, enter your account's username and password. <br>
+To authenticate by using basic authentication, enter your account's username and password. <br>
 
 > [!TIP]
-> Try out multiple permutations of the username for authentication. Examples -
+> Try multiple permutations of the username for authentication. Examples include:
 > * username
 > * username@domain.com
 > * domain/username
@@ -142,14 +142,14 @@ SiteMinder authentication requires a properly formatted URL, `https://custom_sit
 d. **Microsoft Entra OAuth 2.0 Client credentials** <br>
 OAuth 2.0 with [Microsoft Entra ID](/azure/active-directory/) requires a resource ID, client ID, and a client secret.
 
-The resource ID, client ID, and client secret values depend on how you did the setup for Microsoft Entra ID-based authentication for your website. One of the two specified options might be suitable for your website:
+The resource ID, client ID, and client secret values depend on how you set up Microsoft Entra ID-based authentication for your website. One of the two specified options might be suitable for your website:
 
 1. If you're using a Microsoft Entra application both as an identity provider and the client app to access the website, the client ID and the resource ID are the application ID of this single application, and the client secret is the secret that you generated in this application.
     
     > [!NOTE]
-    > For detailed steps to configure a client application as an Identity provider, see [Quickstart: Register an application with the Microsoft identity platform and Configure your App Service or Azure Functions app to use Microsoft Entra login](/azure/app-service/configure-authentication-provider-aad).
+    > For detailed steps to configure a client application as an identity provider, see [Quickstart: Register an application with the Microsoft identity platform and Configure your App Service or Azure Functions app to use Microsoft Entra login](/azure/app-service/configure-authentication-provider-aad).
 
-    After the client app is configured, make sure you create a new client secret by going to the **Certificates & Secrets** section of the app. Copy the client secret value shown in the page because it isn't displayed again.
+    After you configure the client app, make sure you create a new client secret by going to the **Certificates & Secrets** section of the app. Copy the client secret value shown in the page because it isn't displayed again.
 
     In the following screenshots, you can see the steps to obtain the client ID, and client secret, and set up the app if you're creating the app on your own.
     
@@ -181,7 +181,7 @@ The resource ID, client ID, and client secret values depend on how you did the s
     > [!NOTE]
     > For steps to configure a client application as an identity provider see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) and [Configure your App Service or Azure Functions app to use Microsoft Entra login](/azure/app-service/configure-authentication-provider-aad).
 
-    You don't need to configure a client secret in this application, but you need to add an app role in the **App roles** section, which is later assigned to your client application. Refer to the images to see how to add an app role.
+You don't need to configure a client secret in this application, but you need to add an app role in the **App roles** section, which you later assign to your client application. Refer to the images to see how to add an app role.
 
     * Creating a new app role:
     
@@ -193,7 +193,7 @@ The resource ID, client ID, and client secret values depend on how you did the s
       > [!div class="mx-imgBorder"]
       > [ ![Image showing the section to edit an app role.](media/enterprise-web-connector/connectors-enterpriseweb-new-app-role2.png) ](media/enterprise-web-connector/connectors-enterpriseweb-new-app-role2.png#lightbox)
     
-      After configuring the resource app, create the client app and give it permission to access the resource app by adding the app role configured above in the API permissions of the client app. 
+      After configuring the resource app, create the client app and give it permission to access the resource app by adding the app role you configured in the API permissions of the client app. 
     
       > [!NOTE]
       > To see how to grant permissions to the client app, see [Quickstart: Configure a client application to access a web API](/azure/active-directory/develop/quickstart-configure-app-access-web-apis).
@@ -215,52 +215,52 @@ The resource ID, client ID, and client secret values depend on how you did the s
       > [!div class="mx-imgBorder"]
       > [ ![Image showing the selected permissions.](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions3.png) ](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions3.png#lightbox)
     
-    Once the permissions are assigned, you need to create a new client secret for this application by going to the Certificates & secrets section.
+    Once you assign the permissions, create a new client secret for this application by going to the **Certificates & secrets** section.
     Copy the client secret value shown on the page as it isn't displayed again. Use the application ID from this app as the client ID, the secret from this app as the client secret, and the application ID of the first app as the resource ID.
 
 e. **OIDC Client Credentials (Any identity provider)** <br>
-The OIDC client credentials flow is designed for machine-to-machine authentication using any identity provider. To configure OIDC client credentials authentication, you need to register an application with the authorization server (for example, Okta, Auth0, Keycloak, Ping Identity, etc.).
+The OIDC client credentials flow is designed for machine-to-machine authentication using any identity provider. To configure OIDC client credentials authentication, register an application with the authorization server (for example, Okta, Auth0, Keycloak, Ping Identity, and others).
 
-Inputs Required for Configuration:
+Inputs required for configuration:
 - Client ID: The identifier assigned to the application during registration.
 - Client Secret: The secret key assigned to the application during registration.
-- Scopes: The list of permissions the application requires. These scopes are predefined on the authorization server. (for example, `read:data write:data admin:operations`)
+- Scopes: The list of permissions the application requires. These scopes are predefined on the authorization server. (For example, `read:data write:data admin:operations`)
 - Token Endpoint URL: The specific endpoint on the authorization server where tokens are requested.
 
 **Example: Okta OIDC client credentials authentication**
 
-To illustrate an example, let us look at configuring OIDC client credentials authentication with Okta as the identity provider. The following steps are illustrative and may vary as per your implementation. Refer the [documentation](https://help.okta.com/en-us/content/topics/apps/apps_app_integration_wizard_oidc.htm) by Okta to learn to configure OIDC authentication.
+To illustrate an example, let's look at configuring OIDC client credentials authentication with Okta as the identity provider. The following steps are illustrative and might vary as per your implementation. Refer to the [documentation](https://help.okta.com/en-us/content/topics/apps/apps_app_integration_wizard_oidc.htm) by Okta to learn how to configure OIDC authentication.
 
 1. Create an OIDC App Integration in Okta
-    - Navigate to _Applications > Applications_ in the Okta Admin Console.
-    - Click _Create App Integration_ and select _OIDC - OpenID Connect_.
+    - Go to _Applications > Applications_ in the Okta Admin Console.
+    - Select _Create App Integration_ and choose _OIDC - OpenID Connect_.
     - Choose Service or Web as the application type.
-2. Configure Application Settings:
+1. Configure application settings:
     - Application Name: Give your application a descriptive name (for example, "My Client Credentials App").
     - Logo (Optional): Upload a logo if desired.
     - Grant Type: Select Client Credentials. Disable other grant types unless required for other flows.
     - Sign-in redirect URIs: Since you're using client credentials, you don't need to configure any redirect URIs.
     - Logout redirect URIs (Optional): Not usually needed for client credentials.
-    - Click Done.
+- Select **Done**.
 3. Set Client Authentication Method
-    - Select _Client secret_ in the _Client Authentication_ dropdown.
-    - Click Save to generate a client secret (visible only once).
+    - Select **Client secret** in the **Client Authentication** dropdown.
+    - Select **Save** to generate a client secret (you see it only once).
 4. Configure Scopes
-    - Under Scopes, assign OAuth 2.0 scopes (for example, `read:data`, `write:data`). These are just names; you define what they mean in your application.
+    - Under **Scopes**, assign OAuth 2.0 scopes, such as `read:data` and `write:data`. These names are just labels - you define what they mean in your application.
     - Ensure scopes align with the API permissions required.
-5. Assign the App to Users/Groups
-    - In the Assignments tab, assign the app to the relevant users or groups.
+5. Assign the App to Users or Groups
+    - In the **Assignments** tab, assign the app to the relevant users or groups.
     - Even for service apps, assignments ensure policies apply correctly.
 6. Token Endpoint Configuration
     - The token URL is typically `https://{yourOrg}.okta.com/oauth2/v1/token`.
     - Use this endpoint to request access tokens.
 
 ### 4. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To learn more about limited rollout, see [staged rollout](staged-rollout.md).
 
-At this point, you're ready to create the connection for your cloud websites. You can click **Create** to publish your connection and index webpages from your websites.
+At this point, you're ready to create the connection for your cloud websites. Select **Create** to publish your connection and index webpages from your websites.
 
-For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Schema**, **Crawl frequency**, etc., we have defaults based on what works best with websites. You can see the default values below:
+For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Schema**, **Crawl frequency**, and more, the portal provides defaults based on what works best with websites. You can see the default values in the following table:
 
 | Users | Description |
 |----|---|
@@ -276,11 +276,11 @@ For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Sch
 | Incremental Crawl | _Frequency: Every 15 mins (only supported with sitemap crawling)_ |
 | Full Crawl | _Frequency: Every Day_ |
 
-If you want to edit any of these values, you need to choose the "Custom Setup" option.
+If you want to change any of these values, select **Custom Setup**.
 
 ## Custom Setup
 
-In custom setup, you can edit any of the default values for users, content, and sync.
+In custom setup, you can change any of the default values for users, content, and sync.
 
 ### Users
 
@@ -296,13 +296,13 @@ The Enterprise Websites cloud Copilot connector supports search permissions visi
 
 **Add URLs to exclude (Optional crawl restrictions)**
 
-There are two ways to prevent pages from being crawled: disallow them in your robots.txt file or add them to the Exclusion list.
+To prevent pages from being crawled, use either of these methods: disallow them in your robots.txt file or add them to the Exclusion list.
 
 1. Support for robots.txt
 
     The connector checks to see if there's a robots.txt file for your root site. If one exists, it follows and respects the directions found within that file. If you don't want the connector to crawl certain pages or directories on your site, include the pages or directories in the "Disallow" declarations in your robots.txt file.
 
-2. Add URLs to exclude
+1. Add URLs to exclude
 
     You can optionally create an **Exclusion list** to exclude some URLs from getting crawled if that content is sensitive or not worth crawling. To create an exclusion list, browse through the root URL. You can add the excluded URLs to the list during the configuration process.
 

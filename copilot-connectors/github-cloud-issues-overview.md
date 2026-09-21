@@ -8,7 +8,7 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.date: 06/02/2026
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.topic: concept-article
 ms.localizationpriority: Medium
 ---
@@ -139,6 +139,8 @@ The following table describes the data types that the connector indexes and how 
 You can configure the GitHub Cloud Issues connector so that only users who have access to a GitHub repository can see its issues in Copilot responses and search results. The connector enforces the GitHub permission model as follows:
 
 - **Repository and team permissions** – If a repository is private or restricted to specific teams or users, only those authorized users can see issues from that repository. If a repository is visible to a wider group in your organization, its issues are discoverable to that audience in Copilot and Microsoft Search. Content that can't be mapped to a valid permission context is hidden to prevent accidental exposure.
+
+- **Secret teams not supported** – The connector doesn't support access granted exclusively through GitHub [secret teams](https://docs.github.com/en/organizations/organizing-members-into-teams/setting-team-visibility). Users who have repository access only through a secret team might not see that repository's issues in Copilot and Microsoft Search. If your organization uses secret teams to manage repository access, ensure those users also have access through a visible team or are explicitly added as collaborators.
 
 - **User identity mapping** – The connector maps GitHub user accounts to Microsoft Entra ID identities to enforce permissions. If GitHub user emails match their Microsoft Entra ID UPNs, the mapping is automatic. If they differ, admins can provide a mapping rule using email, sign-in (login), or name. If direct mapping fails, you can use regular expressions (regex) to transform identity data.
 

@@ -113,10 +113,14 @@ items:
         href: azure-devops-work-items-troubleshooting.md
     - name: Azure DevOps Wiki
       items:
-      - name: Setup
-        href: azure-devops-wiki-connector.md
+      - name: Overview
+        href: azure-devops-wiki-overview.md
+      - name: Set up the Azure DevOps service
+        href: azure-devops-wiki-admin-setup.md
+      - name: Deployment guide
+        href: azure-devops-wiki-deployment.md
       - name: Troubleshooting
-        href: troubleshoot-azure-devops-wiki-connector.md
+        href: azure-devops-wiki-troubleshooting.md
     - name: Azure File Share
       items:
       - name: Overview
@@ -395,6 +399,8 @@ items:
         href: jira-cloud-deployment.md
       - name: Troubleshooting
         href: jira-cloud-troubleshooting.md
+      - name: Result layout
+        href: jira-result-layout.md
     - name: Jira Data Center
       items:
       - name: Overview
@@ -568,14 +574,16 @@ items:
       items:
       - name: Setup
         href: unily-intranet-connector.md
-    - name: Veeva Vault RIM
-      items: 
+    - name: Veeva On-Premises
+      items:
       - name: Overview
-        href: veeva-rim-overview.md
+        href: veeva-onpremise-overview.md
+      - name: Set up the Veeva Vault service
+        href: veeva-onpremise-admin-setup.md
       - name: Deployment guide
-        href: veeva-rim-deployment.md
+        href: veeva-onpremise-deployment.md
       - name: Troubleshooting
-        href: veeva-rim-troubleshooting.md
+        href: veeva-onpremise-troubleshooting.md
     - name: Veeva PromoMats
       items:
       - name: Overview
@@ -591,7 +599,15 @@ items:
       - name: Deployment guide
         href: veeva-qualitydocs-deployment.md
       - name: Troubleshooting
-        href: veeva-qualitydocs-troubleshooting.md         
+        href: veeva-qualitydocs-troubleshooting.md
+    - name: Veeva Vault RIM
+      items:
+      - name: Overview
+        href: veeva-rim-overview.md
+      - name: Deployment guide
+        href: veeva-rim-deployment.md
+      - name: Troubleshooting
+        href: veeva-rim-troubleshooting.md
     - name: WordPress
       items:
       - name: WordPress.org (on-prem)

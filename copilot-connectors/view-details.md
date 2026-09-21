@@ -5,7 +5,7 @@ ms.author: danielabo
 author: danielabom
 manager: calvind
 ms.topic: article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Access and manage your Microsoft 365 Copilot connectors as an AI administrator for your tenant."
 ---

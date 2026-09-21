@@ -5,7 +5,7 @@ author: monaray97
 manager: jameslau 
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: copilot-connectors 
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium 
 description: "Find information about how to map non-Entra ID identities when you set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center." 
 ms.date: 02/13/2026
