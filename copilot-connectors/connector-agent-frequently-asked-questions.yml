@@ -43,6 +43,10 @@ sections:
 
             This behavior helps prevent duplicate processing while keeping indexed content up to date with minimal administrator intervention. If the issue persists, check the connection status and crawl history in the Microsoft 365 admin center.
 
+      - question: "How do I configure the Microsoft Graph connector agent for GCC, GCC High, or DoD?"
+        answer: |
+         For Government Cloud deployments, configure Authority.CloudInstanceUrl, Scopes, and GcsBaseUrl using values from the same environment. Refer to the Government cloud configuration note of the Microsoft Graph connector agent documentation for the latest values.
+
 additionalContent: |
 
   ## Related content
