@@ -6,7 +6,7 @@ manager: zezhangzhao
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 12/05/2025
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Amazon S3 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."

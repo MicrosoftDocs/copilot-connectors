@@ -143,6 +143,8 @@ The connector enforces GitHub's permission model so that users only see pull req
 
 - **Repository and team permissions** – Private repository PRs appear only for users with explicit repository access. The connector honors organization-level and team-based access restrictions. It hides content that can't be mapped to a valid identity to prevent exposure.
 
+- **Secret teams not supported** – The connector doesn't support access granted exclusively through GitHub [secret teams](https://docs.github.com/en/organizations/organizing-members-into-teams/setting-team-visibility). Users who have repository access only through a secret team might not see that repository's pull requests in Copilot and search results. If your organization uses secret teams to manage repository access, ensure those users also have access through a visible team or are explicitly added as collaborators.
+
 - **User identity mapping** – The connector maps GitHub user accounts to Microsoft Entra ID identities to enforce permissions. If GitHub user emails match their Microsoft Entra ID UPNs, the mapping is automatic. If they differ, admins can configure a mapping rule using email, sign-in (login), or name. Optional regex rules can transform identity attributes for consistent matching, and a manual fallback mapping is available when automatic mapping fails.
 
 - **Bring Your Own Key (BYOK) vs. Enterprise Managed Users (EMU)** – For enterprises that use BYOK rather than EMU, each user must enable the permission to share the required identity field in their GitHub account settings so the connector can map them to Microsoft Entra ID.

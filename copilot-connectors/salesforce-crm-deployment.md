@@ -1,21 +1,21 @@
 ---
 title: "Deploy the Salesforce CRM connector"
-ms.author: lauragra
-author: lauragra
-manager: calvind
+ms.author: depang
+author: depang
+manager: jecui
 ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
-ms.date: 6/18/2026
+ms.service: microsoft-365-copilot-connectors
+ms.date: 08/26/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Salesforce CRM Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
 
 # Deploy the Salesforce CRM connector
 
-The Salesforce CRM Microsoft 365 Copilot connector enables your organization to index Salesforce records, such as accounts, contacts, leads, opportunities, and cases, so users can discover that content in Copilot and Microsoft Search.
+The Salesforce CRM Microsoft 365 Copilot connector enables your organization to index Salesforce records, including Accounts, Contacts, Leads, Opportunities, Cases, Events, Tasks, Campaigns, Comments, and Attachments, making this content discoverable through Microsoft 365 Copilot and Microsoft Search.
 
 This article describes the steps to deploy and customize the Salesforce CRM connector.
 
@@ -206,6 +206,9 @@ If you need advanced capabilities such as filtering, sorting, or structured quer
 
 > [!NOTE]
 > When you select an annotation for a field, the field is promoted to a schema property and counts against the property limit per connection. If you select **Queryable**, it also counts against the queryable property limit. The side panel displays counters so you can monitor usage against these limits.
+
+> [!IMPORTANT]
+> Not all schema annotations are valid for every field type. For example, the **Searchable** annotation is only supported on String-type fields. If you select an unsupported annotation, an error occurs when you save the schema. For the full list of supported annotations per data type, see [Define the schema](/graph/connecting-external-content-manage-schema#property-attributes).
 
 ### Customize sync intervals
 

@@ -7,7 +7,7 @@ manager: harshkum
 audience: Admin
 ms.audience: Admin 
 ms.topic: how-to
-ms.service: copilot-connectors 
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium 
 description: "Result layout JSON for the Jira Microsoft 365 Copilot." 
 ms.date: 05/28/2022

@@ -7,7 +7,7 @@ ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 05/27/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the Airtable admin needs to complete for your organization to configure the Airtable Microsoft 365 Copilot connector."

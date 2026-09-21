@@ -10,12 +10,12 @@ ms.topic: concept-article
 ms.service: copilot-connectors
 ms.date: 01/07/2026
 ms.localizationpriority: Medium
-description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Tickets Microsoft 365 Copilot connector."
+description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Tickets Microsoft 365 Copilot connector, which can index incident, change_request, problem, sc_req_item, sc_task, change_task, and sc_request records."
 ---
 
 # ServiceNow Tickets connector overview
 
-The ServiceNow Tickets Microsoft 365 Copilot connector allows organizations to index ticket records from ServiceNow and makes them searchable across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search. After you deploy the connector, users can retrieve ticket information by using natural language queries in Copilot. This capability enhances visibility into IT service management workflows and improves operational efficiency.
+The ServiceNow Tickets Microsoft 365 Copilot connector allows organizations to index ticket records from ServiceNow, including incidents, change requests, problems, service catalog requests and request items, and catalog and change tasks. It makes them searchable across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search. After you deploy the connector, users can retrieve ticket information by using natural language queries in Copilot. This capability enhances visibility into IT service management workflows and improves operational efficiency.
 
 ## Why use the ServiceNow Tickets connector to index your data?
 
@@ -45,7 +45,7 @@ The following examples show prompts that agent builders can use to help their us
 The ServiceNow Tickets connector enables users to:
 
 - Perform natural language queries to retrieve ticket details.
-- Search across incident, problem, and change request records.
+- Search across incident, change request, problem, service catalog request (`sc_request`), service catalog request item (`sc_req_item`), service catalog task (`sc_task`), and change task (`change_task`) records.
 - Filter results by ticket status, priority, assignment group, and other indexed properties.
 - View ticket metadata such as creation date, assigned user, and resolution notes.
 - Customize URL formats for ticket links to match organizational portal configurations.
@@ -59,7 +59,21 @@ The ServiceNow Tickets connector has the following limitations:
 
 ## Data types indexed from ServiceNow Tickets
 
-The connector indexes ticket records from the `task` table and its child tables, such as `incident`, `problem`, and `change_request`. It also indexes user-related data from tables including `sys_user`, `sys_user_group`, and `core_company`. Indexed properties include ticket number, status, priority, assignment group, opened by, closed by, and more.
+The connector indexes ticket records from the ServiceNow `task` table and its child tables. The following table lists the most commonly indexed ticket tables.
+
+| ServiceNow table | Record type |
+|------------------|-------------|
+| `incident` | Incidents |
+| `change_request` | Change requests |
+| `problem` | Problems |
+| `sc_req_item` | Service catalog request items (RITMs) |
+| `sc_task` | Service catalog tasks |
+| `change_task` | Change tasks |
+| `sc_request` | Service catalog requests |
+
+You can also index other `task` child tables in your instance.
+
+The connector also indexes user-related data from tables including `sys_user`, `sys_user_group`, and `core_company`. Indexed properties include ticket number, status, priority, assignment group, opened by, closed by, and more.
 
 These indexed properties power search and Copilot experiences, enabling users to retrieve relevant ticket information with contextual prompts.
 

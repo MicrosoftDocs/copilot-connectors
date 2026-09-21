@@ -1,5 +1,5 @@
 ---
-ms.date: 06/10/2026
+ms.date: 08/23/2026
 title: "Troubleshoot issues with the ServiceNow Knowledge connector"
 ms.author: lauragra
 author: lauragra
@@ -178,6 +178,9 @@ A forbidden or unauthorized response in connection status can occur for the foll
     | PROD | Europe | 20.54.41.208/30, 51.105.159.88/30 |
     | PROD | Asia Pacific | 52.139.188.212/30, 20.43.146.44/30 |
     | GCC | US Government | 52.235.252.161/30 |
+    | GCC High | USGov Arizona | 52.235.133.220/30 |
+    | GCC High | USGov Texas | 20.141.122.232/30 |
+    | GCC High | USGov Virginia | 20.141.144.232/30 |
     | DoD | US Government | 52.182.52.25/30, 52.181.182.213/30 |
 
 ## Change the URL of the knowledge article
@@ -185,7 +188,7 @@ A forbidden or unauthorized response in connection status can occur for the foll
 The ServiceNow Knowledge connector allows you to customize the URL of the knowledge articles as per the needs of your organization. For more information, see [Customize AccessURL property](/microsoft-365/copilot/connectors/servicenow-knowledge-deployment#customize-accessurl-property).
 
 > [!NOTE]
-> Currently, you can't edit the URL property for an existing connection. You can only customize the URL when you initially set up the connection. If you have an existing connection, create a new connection and follow the steps to customize the URL.
+> You can customize the URL for both new and existing connections. You don't need to create a new connection.
 
 ## Issues with Only people with access to this data source permission
 

@@ -5,7 +5,7 @@ ms.author: danielabo
 author: danielabom
 manager: SteveWilkins1123
 ms.topic: article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Learn how to identify and handle error responses in Microsoft 365 Copilot connectors."
 ---
@@ -14,26 +14,26 @@ description: "Learn how to identify and handle error responses in Microsoft 365 
 You can view a limited set of Microsoft 365 Copilot connector errors in the Microsoft 365 admin center UI. To view a comprehensive list of connection errors, use the following steps to run a PowerShell script.
 
 1. Open Windows PowerShell with administrator rights.
-2. Install the script from the PowerShell gallery by using the following cmdlet.
+1. Install the script from the PowerShell gallery by using the following cmdlet.
     ```powershell
         Install-Script -Name DownloadErrorScript
     ```
-    With this script, you can download the item errors from a Microsoft 365 Copilot connector connection. It generates an MSAL token using the tenant credentials associated with the connection. The installation of the script automatically includes the MSAL.PS module. If the module isn't installed, install the module manually by using the following cmdlet.
+    By using this script, you can download the item errors from a Microsoft 365 Copilot connector connection. It generates an MSAL token by using the tenant credentials associated with the connection. The installation of the script automatically includes the MSAL.PS module. If the module isn't installed, install the module manually by using the following cmdlet.
 
     ```powershell
         Install-Module -Name MSAL.PS
     ```
     For more information, see [Download error script](https://www.powershellgallery.com/packages/DownloadErrorScript/2.1).
 
-3. Run the script.
+1. Run the script.
 
     ```powershell
         DownloadErrorScript.ps1
     ```
-4. Provide the connection ID of the connection for which you want to download the error report.
-5. Specify the name for the output file without extension (the default extension is .csv).
-6. Define the batch size for downloading errors. Larger batches are best for thousands of errors to minimize data retrieval time, but might increase the likelihood of failures. The maximum batch size is 5,000 errors. After you sign in with your tenant account, the download process begins.
-7. Depending on batch size and error count, the download duration varies. The generated file is saved in the script's path with the specified name.
+1. Provide the connection ID of the connection for which you want to download the error report.
+1. Specify the name for the output file without extension (the default extension is .csv).
+1. Define the batch size for downloading errors. Larger batches are best for thousands of errors to minimize data retrieval time, but might increase the likelihood of failures. The maximum batch size is 5,000 errors. After you sign in by using your tenant account, the download process begins.
+1. Depending on batch size and error count, the download duration varies. The generated file is saved in the script's path with the specified name.
 
     :::image type="content" alt-text="Screenshot that shows a PowerShell script run to download the error report." source="media/errors/errorreport.png" lightbox="media/errors/errorreport.png":::
 

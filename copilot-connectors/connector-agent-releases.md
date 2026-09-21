@@ -1,16 +1,16 @@
---- 
-title: "Release history for Microsoft Graph connector agent" 
-ms.author: harshkum 
+---
+title: "Release history for Microsoft Graph connector agent"
+ms.author: harshkum
 author: harshkum
 manager: Siva
 audience: Admin
-ms.audience: Admin 
-ms.topic: article 
-ms.service: copilot-connectors 
-ms.localizationpriority: medium 
-description: "Release history of Microsoft Graph connector agent, which is used to index the on-premises data sources using Microsoft-built connectors" 
+ms.audience: Admin
+ms.topic: article
+ms.service: microsoft-365-copilot-connectors
+ms.localizationpriority: medium
+description: "Release history of Microsoft Graph connector agent, which is used to index the on-premises data sources using Microsoft-built connectors"
 ms.date: 05/21/2026
---- 
+---
 
 # Release history for Microsoft Graph connector agent
 
@@ -20,26 +20,55 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 
 To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
 
+## Version 4.0.4.0 (*September 13, 2026*)
+
+* Improved Confluence On-Prem connector crawl reliability and content navigation handling.
+* Added actionable error messages and troubleshooting guidance for Confluence connector authentication and crawl issues.
+* Improved Confluence On-Prem user information processing and email resolution.
+* Enhanced user identity cache handling and identity resolution reliability.
+* Improved Graph connector agent statistics reporting and real-time visibility into indexing operations.
+* Improved Azure SQL connector diagnostics with actionable error messages.
+* Improved credential validation diagnostics and troubleshooting experience for connector admins.
+* Improved reliability of file and content ingestion processing.
+* Improved GitHub connector error reporting and troubleshooting experience.
+* Security improvements, bug fixes, and reliability improvements.
+
+## Version 4.0.3.0 (*August 18, 2026*)
+
+* Updated Confluence On-Premises plugin support to version 2.0.3 to improve performance for large user groups.
+* Improved user information lookup efficiency for the Confluence On-Premises connector.
+* Improved SharePoint On-Premises connector crawl reliability during concurrent crawls.
+* Fixed Jira Data Center project discovery issues.
+* Added support for Jira custom resolution fields.
+* Improved File Share connector diagnostics and support for larger files.
+* Improved user identity resolution and credential failure troubleshooting.
+* Bug fixes and reliability improvements.
+
+## Version 4.0.2.0 (*July 29, 2026*)
+
+* Fixed a Microsoft Graph connector agent connection issue.
+* Included security improvements, bug fixes, and reliability improvements.
+
 ## Version 4.0.1.0 (*July 22, 2026*)
 
 * Improved crawl reliability for Jira Data Center connector.
-* Included security improvements, bug fixes and reliability improvements.
+* Included security improvements, bug fixes, and reliability improvements.
 
 ## Version 4.0.0.0 (*July 20, 2026*)
 
-* Added support for .NET 10. (ensure atleast .NET 10 version to avoid unexpected behavior).
+* Added support for .NET 10. (Ensure at least .NET 10 version to avoid unexpected behavior).
 * Added support for GCA statistics.
 * Improved Confluence user information processing performance.
 * Improved reliability of delete detection during connector processing.
 * Improved performance for the Intranet connector.
 * Fixed parsing of docx files containing embedded Visio (.vsdx) diagrams.
 * Surface actionable access-denied error(E1037) during file connector crawls.
-* Included security improvements, bug fixes and reliability improvements.
+* Included security improvements, bug fixes, and reliability improvements.
 
 ## Version 3.1.23.0 (*June 16, 2026*)
 
 * Updated bundled Git library to version 2.50.0 to improve reliability of git-based connector crawls.
-* Added support for multi-instance add/delete url in fileshare and intranet (this is the minimum version to support this feature).
+* Added support for multi-instance add and delete URL in fileshare and intranet (this version is the minimum version to support this feature).
 * Added parser output size limit for the SharePoint on-premises connector to improve crawl reliability on large documents.
 * Improved reliability and efficiency of recovery crawls.
 * Bug fixes and reliability improvements.
@@ -96,22 +125,22 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 ## Version 3.1.15.0 (*December 20, 2025*)
 
 * Bug fixes and reliability improvements.
-  
+
 ## Version 3.1.14.0 (*November 21, 2025*)
- 
+
 * Improved OAuth handling for Confluence on-premises to prevent token refresh issues.
 * Added support for anonymous access in Confluence connectors.
 * Bug fixes and reliability improvements.
- 
+
 ## Version 3.1.12.0 (*September 1, 2025*)
- 
-* Improved robustness for Github connector.
+
+* Improved robustness for GitHub connector.
 * Bug fixes and reliability improvements.
 
 ## Version 3.1.11.0 (*June 30, 2025*)
 
 * Support for Microsoft 365 Copilot Search.
-* Support for Github server connectors.
+* Support for GitHub server connectors.
 * Bug fixes and reliability improvements.
 
 ## Version 3.1.10.0 (*June 18, 2025*)
@@ -161,11 +190,11 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 
 ## Version 3.0.0.0 (*August 08, 2024*)
 
-* This update includes a critical security patch that enhances the secure communication between endpoints. We recommend that you upgrade to this version immediately as Microsoft will deprecate the previous versions by September 30, 2024. For more details, follow the communication from Microsoft in the Message Center.
+* This update includes a critical security patch that enhances the secure communication between endpoints. Upgrade to this version immediately as Microsoft deprecates the previous versions by September 30, 2024. For more details, follow the communication from Microsoft in the Message Center.
 
 ## Version 2.4.0.0 (*July 05, 2024*)
 
-* Support for .NET 8. The .NET 8 upgrade flow for the host machine will kick in after you hit the Upgrade button in the connection pane. Make sure to upgrade the machine's version to .NET 8 to avoid unexpected behavior. If there is a failure in the upgrade process, do a manual upgrade to the .NET version before upgrading the agent.
+* Support for .NET 8. The .NET 8 upgrade flow for the host machine starts after you select the **Upgrade** button in the connection pane. Make sure to upgrade the machine's version to .NET 8 to avoid unexpected behavior. If the upgrade process fails, manually upgrade to the .NET version before upgrading the agent.
 * Feature to show elaborate index statistics for a connection. This feature gives more information about the current state of items in the index. For more information, see [View details](view-details.md#view-connection-statistics).
 * Bug fixes and reliability improvements.
 
@@ -183,12 +212,12 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 
 ## Version 2.3.4.0 (*April 17, 2024*)
 
-* Fixed issue where item url was getting ingested with changed case.
+* Fixed an issue where the item URL was ingested with changed case.
 * Other bug fixes and reliability improvements.
 
 ## Version 2.3.3.0 (*April 1, 2024*)
 
-* Fixed upgrade failure issue
+* Fixed upgrade failure issue.
 * Other bug fixes and reliability improvements.
 
 ## Version 2.3.2.0 (*March 20, 2024*)
@@ -206,112 +235,112 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 
 ## Version 2.3.0.0 (*December 12, 2023*)
 
-* Configurable payload size for File Share Microsoft 365 Copilot connector to reduce ingestion failures
-* ID Sync framework improvements to resolve crawl errors
-* Bug fixes and reliability improvements
+* Configurable payload size for File Share Microsoft 365 Copilot connector to reduce ingestion failures.
+* ID Sync framework improvements to resolve crawl errors.
+* Bug fixes and reliability improvements.
 
 ## Version 2.2.8.0 (*November 18, 2023*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 2.2.7.0 (*October 17, 2023*)
 
-* Bug fixes and reliability improvements: Fixed an issue discovered in the last version due to which the crawls were failing for some connections.
+* Bug fixes and reliability improvements: Fixed an issue discovered in the last version that caused some connections to fail during crawls.
 
 ## Version 2.2.6.0 (*October 10, 2023*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 2.2.5.0 (*August 30, 2023*)
 
-* Added functionality to keep trying the multiple instances if they're unreachable in the first crawl. Before the update if the connectivity with one of the instances was interrupted, Graph connector agent did not retry the path in the subsequent crawl and threw a warning for the instance path.
-* Bug fixes and reliability improvements
+* Added functionality to keep trying multiple instances if they're unreachable in the first crawl. Before this update, if connectivity with one of the instances was interrupted, Graph connector agent didn't retry the path in the subsequent crawl and threw a warning for the instance path.
+* Bug fixes and reliability improvements.
 
 ## Version 2.2.4.0 (*August 28, 2023*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 2.2.3.0 (*July 21, 2023*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 2.2.2.0 (*June 21, 2023*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 2.2.1.0 (*June 07, 2023*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 2.2.0.0 (*May 31, 2023*)
 
-* Added surfacing of errors when the endpoint "graph.microsoft.com" is not allowed in the customer network. Refer to this [page](connector-agent.md) to learn more about the domains that need to be unblocked in the customer network.
-* Bug fixes and reliability improvements
+* Added surfacing of errors when the endpoint `graph.microsoft.com` isn't allowed in the customer network. To learn more about the domains that need to be unblocked in the customer network, see [this page](connector-agent.md).
+* Bug fixes and reliability improvements.
 
 ## Version 2.1.0.0 (*April 10, 2023*)
 
-* Fix for slow crawl by optimizing local file logging
-* Semantic search for Intranet connector - Parsing of HTML content to store annotations for each item to power future intelligent search capabilities
-* Bug fixes and reliability improvements
+* Fixed slow crawl by optimizing local file logging.
+* Semantic search for Intranet connector - parsing of HTML content to store annotations for each item to power future intelligent search capabilities.
+* Bug fixes and reliability improvements.
 
 ## Version 2.0.1.0 (*March 27, 2023*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 2.0.0.0 (*March 15, 2023*)
 
 * Microsoft Graph connectors SDK GA: Updated SDK test utility with more test cases. [Learn more about Graph Connectors SDK](/graph/custom-connector-sdk-overview).
-* Support for .NET 7. This version upgrade requires a manual installation of the Graph Connector Agent and the “Upgrade” feature will not be available until this new version is installed. If you're upgrading from Graph Connector Agent 1.x to 2.x, refer to this [page](connector-agent.md).
-* Improved troubleshooting of common Graph Connector Agent issues through "Health Check" feature in Registration details page. Now, you can click on the "Health check" button, as in the image, to check Graph Connector Agent health.
+* Support for .NET 7. This version upgrade requires a manual installation of the Graph Connector Agent and the **Upgrade** feature isn't available until this new version is installed. If you're upgrading from Graph Connector Agent 1.x to 2.x, see [this page](connector-agent.md).
+* Improved troubleshooting of common Graph Connector Agent issues through **Health Check** feature in Registration details page. Now, you can select the **Health check** button, as in the image, to check Graph Connector Agent health.
 
-* Bug fixes and performance improvements
+* Bug fixes and performance improvements.
 
 ## Version 1.8.9.0 (*February 9, 2023*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 1.8.8.0 (*January 19, 2023*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 1.8.7.0 (*January 11, 2023*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 1.8.6.0 (*December 16, 2022*)
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 1.8.5.0 (*December 06, 2022*)
 
-* Security Enhancements
-* Bug fixes and reliability improvements
+* Security enhancements.
+* Bug fixes and reliability improvements.
 
 ## Version 1.8.2.0 (*October 06, 2022*)
 
 * Upgrade Graph Connector Agent with just one click in the UI. For later builds, if there are any upgrades available for Graph Connector Agent, the one-click upgrade feature is available in the connection details pane. For builds older than this version, there's an option to download and install the GCA build.
 
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 1.8.1.0 (*not supported*) (*August 29, 2022*)
 
-* Security Enhancements
-* Bug fixes and reliability improvements
+* Security enhancements.
+* Bug fixes and reliability improvements.
 
 ## Version 1.8.0.0 (*not supported*) (*July 25, 2022*)
 
 * Support for incremental crawls and OAuth for Microsoft Graph connectors SDK
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 1.7.0.0 (*not supported*) (*June 16, 2022*)
 
 * Security enhancements
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 1.6.0.0 (*not supported*) (*May 09, 2022*)
 
 * Dashboard changes to enable monitoring of multiple instances of a connector
-* Bug fixes and reliability improvements
+* Bug fixes and reliability improvements.
 
 ## Version 1.5.1.0 (*not supported*) (*March 21, 2022*)
 
@@ -320,10 +349,10 @@ To download the latest version of the Microsoft Graph connector agent, see the [
 
 ## Version 1.5.0.0 (*not supported*) (*February 16, 2022*)
 
-* Ability to update client-secret & certificate used for authentication 
-* OAuth 2.0 support for Intranet On-premises connector 
-* Support for parsing of OneNote (.one) file 
-* Fixed issues in parsing word files (.doc*) & last modified date for PowerPoint files (.ppt*) 
+* Ability to update client secret and certificate used for authentication.
+* OAuth 2.0 support for Intranet On-premises connector.
+* Support for parsing of OneNote (.one) file.
+* Fixed issues in parsing Word files (.doc*) and last modified date for PowerPoint files (.ppt*)
 
 ## Version 1.4.0.0 (*not supported*) (*January 13, 2022*)
 

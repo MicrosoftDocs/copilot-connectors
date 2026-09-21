@@ -20,3 +20,6 @@ _repo.*/
 
 # Claude Code working directory
 .claude/
+
+# Local Git worktrees
+.worktrees/

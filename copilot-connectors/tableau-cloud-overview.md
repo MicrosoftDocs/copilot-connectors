@@ -7,7 +7,7 @@ ms.reviewer: lauragra
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
+ms.service: microsoft-365-copilot-connectors
 ms.date: 06/03/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Tableau Cloud Microsoft 365 Copilot connector."
