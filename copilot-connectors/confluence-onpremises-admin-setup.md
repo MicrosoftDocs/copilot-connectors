@@ -244,7 +244,7 @@ To connect to Confluence On-premises, deploy a virtual or physical machine for t
 **Required software**
 
 - .NET Framework 4.7.2
-- .NET Core Desktop Runtime 8.0 (x64)
+- .NET Core Desktop Runtime 10.0 (x64)
 
 **Hardware requirements**
 
