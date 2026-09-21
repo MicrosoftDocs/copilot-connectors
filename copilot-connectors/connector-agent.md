@@ -7,8 +7,8 @@ audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: microsoft-365-copilot-connectors
-ms.localizationpriority: medium
-description: "Find the steps to install the Microsoft Graph connector agent to allow you to index on-premises content via Microsoft 365 Copilot connectors."
+ms.localizationpriority: medium 
+description: "Find the steps to install the Microsoft Graph connector agent to allow you to index on-premises content via Microsoft 365 Copilot connectors." 
 ms.date: 06/02/2026
 ---
 
