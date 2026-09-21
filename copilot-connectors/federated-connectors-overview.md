@@ -24,7 +24,7 @@ Federated connectors can be Microsoft-published or submitted by partners to Micr
 By using federated connectors, organizations can extend Copilot to work seamlessly with their existing tools and data to unlock more relevant and timely insights across their workflows.
 
 > [!NOTE]
-> Support for write, update, and delete actions will begin rolling out in early October 2026. For availability by Copilot experience, see [Write, update, and delete actions](#write-update-and-delete-actions).
+> Support for write, update, and delete actions will begin rolling out in early October 2026. For availability by Copilot experience, see [Write, update, and delete actions](#write-update-and-delete-actions-coming-soon).
  
 ## What are federated connectors?
  
@@ -142,19 +142,19 @@ The MCP server associated with the federated connector determines tool availabil
 
 The authenticated user's identity and permissions in the source system govern tool access. Users can only access information they're authorized to view and change data they're authorized to modify.
 
-Tools that create, update, or delete data require user approval. For confirmation options and tool permissions, see [Write, update, and delete actions](#write-update-and-delete-actions).
+Tools that create, update, or delete data require user approval. For confirmation options and tool permissions, see [Write, update, and delete actions](#write-update-and-delete-actions-coming-soon).
 
 Examples of read operations through dynamic tooling include:
 
 - Searching knowledge repositories
 - Looking up records in line-of-business applications
-- Retrieving project or operational status information
+- Retrieving project or operational status
 - Querying customer, product, or support information
 - Accessing specialized search capabilities exposed by a source system
 
 Dynamic tooling doesn't index external data into Microsoft 365.
 
-## Write, update, and delete actions
+## Write, update, and delete actions (Coming Soon)
 
 Federated connectors aren't limited to retrieving information. When the MCP server behind a connector provides tools that create, update, or delete data, Microsoft 365 Copilot can use those tools to make changes in the connected third-party system on the user's behalf. Users can complete work without leaving Copilot. For example, a user can turn an escalation email into an issue in a project-tracking tool, update a record in a customer relationship management (CRM) system, or add a comment to a ticket directly from Copilot Chat.
 
