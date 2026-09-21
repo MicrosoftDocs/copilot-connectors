@@ -23,7 +23,7 @@ To verify Salesforce configuration information to help troubleshoot errors, see 
 
 ## OAuth app scope names changed
 
-The names of the selected OAuth scopes changed to the following names: 
+The names of the selected OAuth scopes changed to the following names:
 
 - **Access and manage your data (API)** is now **Manage user data via APIs (api)**
 - **Perform requests on your behalf at any time (refresh_token, offline_access)** is now **Perform requests at any time (refresh_token, offline_access)**

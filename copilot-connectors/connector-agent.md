@@ -1,10 +1,10 @@
 ---
-title: "Microsoft Graph connector agent overview" 
-ms.author: kam1 
-author: kam1 
-manager: jameslau 
+title: "Microsoft Graph connector agent overview"
+ms.author: kam1
+author: kam1
+manager: jameslau
 audience: Admin
-ms.audience: Admin 
+ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium 
@@ -91,7 +91,7 @@ To upgrade the agent to the latest version:
 
    :::image type="content" source="media/connector-agent/one-click-upgrade.png" alt-text="Upgrade button on the agent connection pane." lightbox="media/connector-agent/one-click-upgrade.png":::
 
-If you're upgrading the agent from version 1.x to version 2.x: 
+If you're upgrading the agent from version 1.x to version 2.x:
 
 1. [Download](https://aka.ms/gca) the installer.
 
@@ -116,7 +116,7 @@ If you're upgrading the agent from version 1.x to version 2.x:
 >[!NOTE]
 >If you uninstall and reinstall the Microsoft Graph connector agent, you must restart all existing connections. After you reinstall the agent, delete your connections and create new ones.
 
-## Create and configure an app for the agent  
+## Create and configure an app for the agent
 
 First, sign in and note that the minimum required privilege on the account is AI administrator. The agent asks you to provide authentication details.
 
@@ -150,7 +150,7 @@ To create an app and generate the required authentication details:
 
 ### Configure authentication
 
-You can provide authentication details using a client secret or a certificate. 
+You can provide authentication details using a client secret or a certificate.
 
 #### Configure the client secret for authentication
 
@@ -224,7 +224,7 @@ If you use the script to generate a certificate, the .pfx file is saved in the l
 
 ### Installation failure
 
-If an installation failure occurs, check the installation logs by running: `msiexec /i "< path to msi >\GcaInstaller.msi" /L*V "< destination path >\install.log"`. Make sure you don't get any security exceptions. Generally, these exceptions occur due to wrong policy settings. The execution policy needs to be remotely signed. 
+If an installation failure occurs, check the installation logs by running: `msiexec /i "< path to msi >\GcaInstaller.msi" /L*V "< destination path >\install.log"`. Make sure you don't get any security exceptions. Generally, these exceptions occur due to wrong policy settings. The execution policy needs to be remotely signed.
 
 If the errors aren't resolvable, contact Microsoft Support with the error logs.
 
@@ -238,10 +238,10 @@ When the service fails to start with the error **The service didn't start due to
 
 The agent is considered offline if it isn't able to contact the Copilot connector services. To troubleshoot:
 
-1. Check whether the agent is running. In the Task Manager, go to **Services**, and verify that the **GcaHostService** is in a running state. If not, select and hold (right-click) the service and start it. 
+1. Check whether the agent is running. In the Task Manager, go to **Services**, and verify that the **GcaHostService** is in a running state. If not, select and hold (right-click) the service and start it.
 
     :::image type="content" alt-text="Screenshot of the connector service in Task Manager." source="media/connector-agent/gcahostservice-gcaupdateservice.png" lightbox="media/connector-agent/gcahostservice-gcaupdateservice.png":::
-   
+
 2. Verify that the domain gcs.office.com is reachable. (For a GCC tenant, substitute gcsgcc.office.com, and for a GCCHigh tenant, substitute gcs.office365.us.)
 
 * From PowerShell, run the following command:
@@ -253,7 +253,7 @@ The agent is considered offline if it isn't able to contact the Copilot connecto
     The response should contain the output `TcpTestSucceeded: True`.
 
     :::image type="content" alt-text="Screenshot showing that Tcp test succeeded." source="media/connector-agent/tnc-gcs-1.png" lightbox="media/connector-agent/tnc-gcs-1.png":::
-   
+
     If it's false, verify that the domain is allowed in your proxy/firewall and that requests are going through the proxy.
 
    * For a more specific test, or if you can't run tnc because ICMP ping is blocked in your network, run the following command:
@@ -263,7 +263,7 @@ The agent is considered offline if it isn't able to contact the Copilot connecto
     ```
 
        The output should contain  `StatusCode: 200`.
- 
+
        If it isn't 200, verify that the domain is allowed in your proxy/firewall and that requests are going through the proxy.
 
 3. If the steps passed successfully and the agent is still offline, check the agent logs for any network proxy issues.
@@ -294,8 +294,8 @@ Use the service bus namespace provided in the error details to troubleshoot:
 
       The response should contain the output `TcpTestSucceeded: True:`
 
-    :::image type="content" alt-text="Screenshot of tnc 2." source="media/connector-agent/tnc-gcs-namespace.png" lightbox="media/connector-agent/tnc-gcs-namespace.png":::   
-   
+    :::image type="content" alt-text="Screenshot of tnc 2." source="media/connector-agent/tnc-gcs-namespace.png" lightbox="media/connector-agent/tnc-gcs-namespace.png":::
+
       If it's false, verify that the domain is allowed in your proxy/firewall and that requests are going through the proxy.
 
 1. If you can't run tnc because ICMP Ping is blocked in your network, run the following command in PowerShell:
@@ -306,8 +306,8 @@ Use the service bus namespace provided in the error details to troubleshoot:
 
       The output should contain `StatusCode: 200`:
 
-    :::image type="content" alt-text="Screenshot of wget 2." source="media/connector-agent/wget-gcs-namespace.png" lightbox="media/connector-agent/wget-gcs-namespace.png"::: 
-   
+    :::image type="content" alt-text="Screenshot of wget 2." source="media/connector-agent/wget-gcs-namespace.png" lightbox="media/connector-agent/wget-gcs-namespace.png":::
+
       If it's false, verify that the domain is allowed in your proxy/firewall and that requests are going through the proxy.
 
 1. If none of the steps fix your issue, contact Microsoft Support and provide the two latest log files.
@@ -316,7 +316,7 @@ Use the service bus namespace provided in the error details to troubleshoot:
 
 This error occurs when an update is already in progress and should resolve after a maximum of 30 minutes.
 
-:::image type="content" alt-text="Screenshot of connector agent update in progress." source="media/connector-agent/agentupgradingerror-adminux.png" lightbox="media/connector-agent/agentupgradingerror-adminux.png"::: 
+:::image type="content" alt-text="Screenshot of connector agent update in progress." source="media/connector-agent/agentupgradingerror-adminux.png" lightbox="media/connector-agent/agentupgradingerror-adminux.png":::
 
 If the error persists after 30 minutes, follow these steps:
 
