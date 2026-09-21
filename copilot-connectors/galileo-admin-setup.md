@@ -12,6 +12,8 @@ ms.localizationpriority: Medium
 description: "Prepare your Microsoft 365 environment, access group, and credentials before deploying the Galileo by The Josh Bersin Company Copilot connector."
 ---
 
+<!-- cSpell:ignore Bersin xupzhou -->
+
 # Set up Galileo by The Josh Bersin Company for connector ingestion
 
 This article describes the administrative and onboarding tasks to complete before you deploy the Galileo by The Josh Bersin Company Microsoft 365 Copilot connector.
@@ -20,7 +22,7 @@ For information about deploying the connector after setup is complete, see [Depl
 
 ## Prerequisites
 
-Before you begin, make sure that you meet the following prerequisites:
+Before you begin, ensure that you meet the following prerequisites:
 
 - **Josh Bersin account**: You need a valid Josh Bersin license to access content. Contact The Josh Bersin Company to request the credentials required for access.
 - **Microsoft 365 administrator**: You must be an admin for your organization's Microsoft 365 tenant.
@@ -32,7 +34,7 @@ The Galileo data API endpoint is prefilled when you configure the connector in t
 
 ## Enable API access
 
-Make sure that the connector account has API access and that no API restrictions or app allowlists prevent access.
+Ensure that the connector account has API access and that no API restrictions or app allow lists prevent access.
 
 ## Create OAuth application and rollout audience
 
@@ -42,7 +44,7 @@ Make sure that the connector account has API access and that no API restrictions
 1. Select your Galileo access group.
 
 > [!IMPORTANT]
-> The **Rollout to limited audience** setting is the master audience control for Galileo in your tenant. The audience you select is the maximum audience for every downstream experience, including agents.
+> The **Rollout to limited audience** setting is the primary audience control for Galileo in your tenant. The audience you select is the maximum audience for every downstream experience, including agents.
 
 1. Review Microsoft's data notice.
 1. Select the acknowledgment.

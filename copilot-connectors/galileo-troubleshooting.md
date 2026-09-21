@@ -12,6 +12,8 @@ ms.localizationpriority: Medium
 description: "Troubleshoot common setup, authentication, indexing, citation, and agent issues with the Galileo by The Josh Bersin Company Microsoft 365 Copilot connector."
 ---
 
+<!-- cSpell:ignore Bersin xupzhou -->
+
 # Troubleshoot issues with the Galileo by The Josh Bersin Company connector
 
 This article provides troubleshooting guidance for common issues with the Galileo by The Josh Bersin Company Microsoft 365 Copilot connector and its declarative agents.
@@ -22,8 +24,8 @@ Before troubleshooting, confirm that you completed [Set up Galileo by The Josh B
 
 | Symptom | Likely cause | Resolution |
 | --- | --- | --- |
-| Setup asks for credentials you don't have. | The onboarding package hasn't been delivered, or the secure secret link expired before retrieval. | Contact your Josh Bersin Company contact to issue or reissue the credentials. Credentials are never sent in plain email. |
-| Authentication fails when saving the connection. | The client ID was mistyped, or the client secret expired or was revoked. | Reenter both values from the onboarding package. If validation still fails, request a reissued secret. Don't reuse credentials from another integration. |
+| Setup asks for credentials you don't have. | The onboarding package wasn't delivered, or the secure secret link expired before retrieval. | Contact your Josh Bersin Company contact to issue or reissue the credentials. Credentials are never sent in plain email. |
+| Authentication fails when saving the connection. | You mistyped the client ID, or the client secret expired or was revoked. | Reenter both values from the onboarding package. If validation still fails, request a reissued secret. Don't reuse credentials from another integration. |
 | The Galileo connection isn't listed when adding knowledge to the agent. | The connector isn't activated for your tenant, or admin center changes are still propagating. | Verify the **Ready** state under **Your connections**, and allow up to 10 minutes after changes. |
 | Copilot answers don't cite Galileo. | The user doesn't have a Microsoft 365 Copilot license, is outside the rollout audience, or the initial index is still running. | Confirm the user's license and access-group membership, and then allow approximately two to three hours for the initial index to complete. |
 | Users see the agent but get no Galileo results. | The agent is shared more broadly than the connector's rollout audience. | Align both to the same Galileo access group. The connector audience is the superset. |

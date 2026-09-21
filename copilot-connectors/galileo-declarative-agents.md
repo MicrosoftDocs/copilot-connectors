@@ -12,6 +12,8 @@ ms.localizationpriority: Medium
 description: "Build and share dedicated and context-aware declarative agents that use the Galileo by The Josh Bersin Company connector."
 ---
 
+<!-- cSpell:ignore Bersin xupzhou Lightcast Visier Reejig -->
+
 # Build declarative agents for Galileo by The Josh Bersin Company
 
 After you deploy and validate the Galileo by The Josh Bersin Company Microsoft 365 Copilot connector, use Agent Builder in Microsoft 365 Copilot to create two declarative agents:
@@ -63,7 +65,7 @@ On the **Configure** tab, enter:
 - **Name**: `Galileo by Josh Bersin`
 - **Description**: `Research-backed HR answers from The Josh Bersin Company's Galileo library.`
 
-### Add the instructions
+### Add instructions to the agent
 
 Use the following starter instructions. Review them with your organization's AI governance, legal, and HR stakeholders before publication. Preserve the grounding and anti-fabrication requirements if you adapt the tone or output format.
 
@@ -113,7 +115,7 @@ Under **Capabilities**, enable **Create documents, charts, and code** if you wan
 | --- | --- |
 | Talent acquisition benchmarks | What benchmarks does Bersin research provide for talent acquisition performance? |
 | Build a skills strategy | Based on Bersin research, what are the key steps to building an enterprise skills strategy? |
-| Evaluate HR tech vendors | We are starting an HR technology vendor evaluation for talent acquisition. What does the research recommend we assess? |
+| Evaluate HR tech vendors | We're starting an HR technology vendor evaluation for talent acquisition. What does the research recommend we assess? |
 | Latest workforce trends | What are the most important workforce trends in the latest Bersin research? |
 | Redesign performance management | How should we redesign performance management according to Bersin research? |
 | Systemic HR maturity | What are the maturity levels for systemic HR, and where should we start? |
@@ -127,9 +129,9 @@ Run the builder flow again and configure:
 - **Name**: `Galileo Context Advisor`
 - **Description**: `Bersin research blended with your organization's own content.`
 
-### Add the instructions
+### Add instructions to the context advisor agent
 
-Use the following as a starting point, and adapt the organizational references and governance requirements to your environment.
+Use the following instructions as a starting point, and adapt the organizational references and governance requirements to your environment.
 
 ```text
 You are the Galileo Context Advisor, an HR advisory agent that combines The Josh Bersin Company research library with this organization's own content. Your expertise spans talent acquisition, learning and development, leadership, performance management, compensation, HR technology, skills, and workforce trends.
@@ -171,7 +173,7 @@ Share each agent with the same Galileo access group used for the connector's lim
 1. Test both agents by using an account that belongs to the group.
 
 > [!IMPORTANT]
-> The connector rollout audience is the superset for agent access. If an agent is shared with users outside the connector audience, they might see the agent but receive no grounded Galileo results. Keep one security group aligned across the connector and both agents.
+> The connector rollout audience is the superset for agent access. If you share an agent with users outside the connector audience, they might see the agent but receive no grounded Galileo results. Keep one security group aligned across the connector and both agents.
 
 ## Provide user guidance
 

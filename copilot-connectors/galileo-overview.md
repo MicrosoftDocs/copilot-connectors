@@ -12,6 +12,8 @@ ms.localizationpriority: Medium
 description: "Learn how the Galileo by The Josh Bersin Company Microsoft 365 Copilot connector brings research-backed HR guidance into Microsoft 365 Copilot."
 ---
 
+<!-- cSpell:ignore Bersin xupzhou -->
+
 # Galileo by The Josh Bersin Company connector overview
 
 The Galileo by The Josh Bersin Company Microsoft 365 Copilot connector brings The Josh Bersin Company research library into Microsoft 365. The connector indexes the research in Microsoft Graph so users can discover and use research-backed HR guidance in Microsoft 365 Copilot, Copilot Search, and Microsoft Search.
@@ -63,7 +65,6 @@ The Galileo by The Josh Bersin Company connector has the following limitations b
 - The `Content` property is searchable but isn't queryable, retrievable, or refinable.
 - The `CreatedTime`, `FileExtension`, `Id`, and `ModifiedTime` properties aren't searchable or refinable.
 
-
 ## Data types indexed from the Galileo by The Josh Bersin Company connector
 
 The connector indexes research items from the Galileo library with the following content and metadata:
@@ -79,7 +80,7 @@ Indexed Galileo content is surfaced in Microsoft 365 Copilot, Copilot Search, an
 
 ## Permissions model and access control
 
-Permissions to Galileo content in Copilot and search results are managed as follows:
+Access to Galileo content in Copilot and search results requires the following conditions:
 
 - Only users in the connector rollout audience can access indexed Galileo items.
 - The connector rollout audience is the maximum audience for all downstream experiences. A user outside this audience can see a shared agent but can't retrieve grounded Galileo results.

@@ -12,6 +12,8 @@ ms.localizationpriority: Medium
 description: "Deploy, validate, and monitor the Galileo by The Josh Bersin Company Microsoft 365 Copilot connector."
 ---
 
+<!-- cSpell:ignore Bersin xupzhou -->
+
 # Deploy the Galileo by The Josh Bersin Company connector
 
 The Galileo by The Josh Bersin Company Microsoft 365 Copilot connector indexes The Josh Bersin Company research library in Microsoft Graph. After deployment, authorized users can discover research in Microsoft 365 Copilot, Copilot Search, and Microsoft Search, and administrators can use the connection as a knowledge source for declarative agents.
@@ -20,7 +22,7 @@ This article describes how to configure, deploy, and validate the connector.
 
 ## Prerequisites
 
-Before you deploy the connector, make sure that you meet the following prerequisites:
+Before you deploy the connector, ensure that you meet the following prerequisites:
 
 - **Josh Bersin account**: You need a valid Josh Bersin license to access content. Contact The Josh Bersin Company to request the credentials required for access.
 - **Service account**: You must be an admin for your organization's Microsoft 365 tenant.
@@ -77,7 +79,7 @@ If validation fails, reenter the values exactly as provided. If the secure link 
 
 The connector starts syncing Galileo content into your tenant's index.
 
-The following table lists the default values that are set.
+The following table lists the default values.
 
 | Category | Default value |
 | --- | --- |
@@ -108,12 +110,12 @@ To add or remove available properties from the Galileo connector, assign a schem
 | FileExtension | File extension | File type extension of the source item. | Query, Retrieve |
 | FileName | File name | Name of the source file. | Query, Retrieve, Search |
 | IconLink | IconUrl | URL of the icon associated with the item. | Retrieve |
-| Id |  | Unique identifier of the item in the Galileo data source. | Query, Retrieve |
-| Industries |  | Industries associated with the item. | Query, Refine, Retrieve, Search |
+| Id | | Unique identifier of the item in the Galileo data source. | Query, Retrieve |
+| Industries | | Industries associated with the item. | Query, Refine, Retrieve, Search |
 | Link | url | URL that opens the item in the Galileo data source. | Retrieve |
 | ModifiedTime | Last modified date time | Date and time when the item was last modified. | Query, Retrieve |
 | Name | Title | Title of the item displayed in Copilot and search experiences. | Query, Retrieve, Search |
-| Size |  | Size of the source item in bytes. |  |
+| Size | | Size of the source item in bytes. | |
 | Topics | tags | HR topics covered by the document. | Query, Refine, Retrieve, Search |
 
 Select **Preview results** to verify sample values for the selected properties before you create the connection.
@@ -148,7 +150,7 @@ A small number of item errors can occur during normal synchronization. The Josh 
 
 ## Validate the deployment
 
-Wait for the initial index to finish, and then have a licensed pilot user who belongs to the Galileo access group complete the following tests.
+Wait for the initial indexing to finish, and then have a licensed pilot user who belongs to the Galileo access group complete the following tests.
 
 | Experience | Test | Expected result |
 | --- | --- | --- |
@@ -159,7 +161,7 @@ Wait for the initial index to finish, and then have a licensed pilot user who be
 If a test fails, verify:
 
 - The connection is in the **Ready** state.
-- The initial index is complete.
+- The initial indexing is complete.
 - The test user has a Microsoft 365 Copilot license.
 - The test user is a member of the Galileo access group.
 - The connector is configured with that group as its rollout audience.
@@ -167,7 +169,7 @@ If a test fails, verify:
 
 ## Monitor ongoing synchronization
 
-Galileo performs a daily full crawl to retrieve new and updated content. Administrators should periodically review:
+Galileo performs a daily full crawl to retrieve new and updated content. Periodically review:
 
 - Connection state.
 - Last successful sync.
