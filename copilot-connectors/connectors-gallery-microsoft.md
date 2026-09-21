@@ -12,7 +12,7 @@ ms.date: 08/27/2026
 ---
 # Microsoft-built connectors gallery
 
-Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using synced connectors or connect to data in real time by using federated connectors. 
+Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using synced connectors or connect to data in real time by using federated connectors.
 
 Microsoft builds and maintains a set of Microsoft 365 Copilot connectors that integrate with Microsoft services and popular external platforms. These connectors are supported by Microsoft and are available in the Connectors gallery in the Microsoft 365 admin center.
 
@@ -223,6 +223,7 @@ The following table lists the human resources and recruiting connectors that are
 | BambooHR | Microsoft | Populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. | [BambooHR connector](bamboohr-overview.md) |
 | Credly (preview) | Microsoft | Integrate digital credential data from your organization's Credly platform into Microsoft 365. | [Credly connector (preview)](credly-overview.md) |
 | Dice (preview) | Microsoft | Search tech job listings on Dice by keyword, location, and filters. | [Federated connectors overview](federated-connectors-overview.md) |
+| Galileo by The Josh Bersin Company | Microsoft | Allows your organization to index The Josh Bersin Company research library and use research-backed HR guidance in Microsoft 365 Copilot, Copilot Search, and Microsoft Search. | [Galileo by The Josh Bersin Company connector](galileo-overview.md) |
 | Gusto (preview) | Microsoft | Look up payroll runs, employee records, benefits enrollment, and tax filings. | [Federated connectors overview](federated-connectors-overview.md) |
 | SAP SuccessFactors | Microsoft | Integrate your organization with SAP SuccessFactors to securely synchronize organization data and organize HR functions through Microsoft 365 Organizational Data Service. | [Import organizational data from SAP SuccessFactors](/viva/import-org-data-success-factors) |
 | Workday | Microsoft | Allows organizations integrate with Workday to securely synchronize organization data and organize HR functions via Microsoft 365 Organizational Data Service. | [Import organizational data from Workday](/viva/import-org-data-workday) |
