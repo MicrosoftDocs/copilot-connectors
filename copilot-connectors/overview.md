@@ -62,6 +62,10 @@ Federated connectors have the following key features:
 - Connector fetches responses in real time through MCP APIs.
 - Secure by design; federated access respects source permissions and authentication (OAuth 2.0).
 - Default federated connectors are provided by Microsoft and appear as **Ready** in your connections list in the Microsoft 365 admin center.
+
+> [!NOTE]
+> Write actions will be available starting early October 2026.
+
 - Federated connectors are read-only; they can search and fetch content but can't write data back.
 
 ## Connector architecture
@@ -119,6 +123,9 @@ Connectors make Copilot Chat a more powerful assistant, capable of answering que
 - **Multiturn conversation** - Follow-up questions stay in context and can pull from multiple connectors.
 
 - **Content previews and links** - Users can open referenced items for more detail.
+
+> [!NOTE]
+> Write actions will be available starting early October 2026.
 
 - **Read-only by default** - Copilot Chat can't write back to external systems unless the experience is extended with action connectors or plugins.
 
