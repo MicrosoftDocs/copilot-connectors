@@ -16,7 +16,7 @@ ms.audience: Admin
 # Federated connectors overview
 
 [!INCLUDE [wiqd-beta-disclaimer](includes/wiqd-beta-disclaimer.md)]
-
+ 
 Microsoft 365 Copilot supports federated Copilot connectors to enable organizations to connect their data to Copilot by using Model Context Protocol (MCP). Federated connectors use MCP to access data in real time, so Copilot can retrieve up-to-date information directly from external systems. This approach makes it easy to integrate live, dynamic data sources while keeping the data in its original location.
 
 Federated connectors can be Microsoft-published or submitted by partners to Microsoft for approval and publication in the Connectors Gallery.
@@ -42,7 +42,7 @@ Microsoft 365 Copilot currently supports federated Copilot connectors in the fol
 - Copilot in Excel
 - Researcher agent
 - Cowork
-
+ 
 ## Federated connectors in the Connectors Gallery
 
 Microsoft provides a set of federated connectors in the Connectors Gallery. These connectors can be Microsoft-published or submitted by partners and approved by Microsoft.
@@ -84,15 +84,15 @@ The following image shows federated connectors in the **Your connections** list 
 Microsoft-published federated connectors are enabled by default for a tenant unless admins disable them. Admins must approve partner federated connectors before enabling them for the organization. Admins can manage federated Copilot connectors in the Microsoft 365 admin center by choosing **Copilot connectors** > **Your connections**.
 
 Administrators can manage Microsoft 365 Copilot connectors, synchronized connectors, federated connectors, and supported Cowork plugins from a single location: Copilot connectors > Your connections.
-
+ 
 Admins can:
-
+ 
 - View federated connectors that are available in the tenant on the **Your connections** tab, including Microsoft-published connectors and partner connectors that Microsoft approved and the admin enabled.
 - Enable or disable connectors at the tenant level.
 - Limit availability to specific Microsoft Entra ID groups by choosing **Add staging** in the **Staged Rollout** column.
 - Bulk disable all federated connectors by using [Allowed Agent Type](/microsoft-365/admin/manage/agent-settings#allowed-agent-types), and selectively enable specific federated connectors in the Microsoft 365 admin center based on organizational policies and readiness. For more information, see [Manage federated connectors](manage-federated-connectors.md).
 - Manage federated connectors from the Agent tab in the Microsoft 365 admin center portal apart from the **Copilot connectors** > **Your connections** section.
-
+ 
 The following image shows the connector pane for the HubSpot federated connector.
 
 :::image type="content" source="media/federated-connectors/hubspot-connector.png" alt-text="Screenshot of the HubSpot connector in the admin center with Staged rollout and Enable/disable data source highlighted." lightbox="media/federated-connectors/hubspot-connector.png":::
@@ -100,7 +100,7 @@ The following image shows the connector pane for the HubSpot federated connector
 ## How to connect and use federated Copilot connectors
 
 When an admin enables a federated connector:
-
+ 
 - Users can discover the data source in the **Sources** menu in the Researcher agent, in deep research mode in Microsoft 365 Copilot chat, and in Copilot Chat where available.
 - Users authenticate by using their own credentials when prompted to connect to the data sources.
 - Copilot only accesses data the user already has permission to see.
@@ -116,7 +116,7 @@ Where Copilot Chat is available for users, they can connect federated data sourc
 1. In the settings dialog, select **Sources** in the left pane.
 1. Find the external data source you want to use, select **Connect**, and complete authentication.
 1. Enter your prompt directly in Copilot Chat.
-
+ 
 > [!NOTE]
 > No data is indexed into Microsoft 365. Responses are fetched dynamically from the data source via MCP.
 
@@ -171,7 +171,7 @@ Yes. The setting applies to connectors released after you configure it. If you d
 
 ISVs use a single connector manifest and single publishing pipeline for all connector types.
 
-
+ 
 ## Related content
 
 - [Manage federated connectors](manage-federated-connectors.md)
