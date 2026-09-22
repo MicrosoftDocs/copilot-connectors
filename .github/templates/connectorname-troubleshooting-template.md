@@ -7,7 +7,6 @@ ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.date: 
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the {connector name} Microsoft 365 Copilot connector."

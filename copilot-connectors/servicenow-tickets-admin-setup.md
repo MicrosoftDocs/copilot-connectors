@@ -7,7 +7,6 @@ ms.reviewer: mayanksethi
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 02/23/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Tickets Copilot connector."

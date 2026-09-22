@@ -1,7 +1,8 @@
 ---
 name: connector-content-planner
 description: Create a content plan for a new Microsoft 365 Copilot connector documentation set
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 4.8
+user-invocable: false
 tools: [read, edit/createFile, edit/editFiles, search]
 ---
 

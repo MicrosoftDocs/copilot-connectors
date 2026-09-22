@@ -5,7 +5,6 @@ author: lauragra
 manager: calvind
 ms.audience: Admin
 ms.topic: overview
-ms.service: copilot-connectors
 ms.localizationpriority: medium
 ms.collection: essentials-overview
 ms.date: 07/15/2025

@@ -7,7 +7,6 @@ manager: zezhangzhao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Learn about the capabilities, limitations, and use cases for the DataStax Microsoft 365 Copilot connector."
 ---

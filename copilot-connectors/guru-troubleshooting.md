@@ -7,7 +7,6 @@ ms.reviewer: rantang
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.date: 11/24/2025
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Guru Microsoft 365 Copilot connector."

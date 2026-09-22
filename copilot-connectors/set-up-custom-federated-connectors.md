@@ -6,7 +6,6 @@ ms.author: lauragra
 ms.manager: calvind
 ms.reviewer: mansipakhale
 ms.topic: how-to
-ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: Medium
 ms.date: 05/01/2026
 ---

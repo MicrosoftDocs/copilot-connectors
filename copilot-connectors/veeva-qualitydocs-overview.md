@@ -7,7 +7,6 @@ ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: overview
-ms.service: copilot-connectors
 ms.localizationpriority: Medium
 description: "Learn about the Veeva QualityDocs Microsoft 365 Copilot connector, including capabilities, use cases, and benefits for quality, regulatory, manufacturing, and supply-chain teams."
 ms.date: 04/03/2026

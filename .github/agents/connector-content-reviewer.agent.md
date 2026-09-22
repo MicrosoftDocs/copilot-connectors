@@ -1,7 +1,8 @@
 ---
 name: connector-content-reviewer
 description: Review connector documentation for accuracy, completeness, and template conformance
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 4.8
+user-invocable: false
 tools: ['read', 'execute/getTerminalOutput', 'execute/runInTerminal', 'search']
 ---
 

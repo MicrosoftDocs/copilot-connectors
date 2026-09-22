@@ -7,7 +7,6 @@ ms.reviewer: vivg
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 03/09/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the Azure DevOps admin needs to complete for your organization to configure the Azure DevOps Work Items Microsoft 365 Copilot connector."

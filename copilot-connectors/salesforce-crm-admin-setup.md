@@ -8,7 +8,6 @@ ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: Medium
 ms.date: 08/26/2026
 ---

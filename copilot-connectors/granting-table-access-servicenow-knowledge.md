@@ -8,7 +8,6 @@ ms.reviewer: mayanksethi
 audience: Admin 
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Grant table access to a service account in ServiceNow that can be used to set up ServiceNow Knowledge Microsoft 365 Copilot connectors."
 ---

@@ -5,7 +5,6 @@ author: danipocket
 manager: calvind
 ms.audience: Admin
 ms.topic: overview
-ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Learn how your organization can use Microsoft 365 Copilot connectors to extend Microsoft Search and Microsoft 365 Copilot experiences. Get information about the types of Copilot connectors, requirements, and management and licensing information."
 ms.date: 05/14/2026

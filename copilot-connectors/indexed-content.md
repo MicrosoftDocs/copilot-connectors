@@ -6,7 +6,6 @@ author: danielabom
 manager: calvind
 audience: Admin
 ms.topic: article
-ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Learn how to search and validate whether Microsoft 365 Copilot connector content is indexed in Microsoft Search and Microsoft 365 Copilot."
 ---

@@ -7,7 +7,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 06/29/2026
 ms.localizationpriority: Medium
 ---

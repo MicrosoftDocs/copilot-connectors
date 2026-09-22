@@ -7,7 +7,6 @@ ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: microsoft-365-copilot-connectors
 ms.date: 09/22/2026
 ms.localizationpriority: Medium
 description: "Get the steps that GitHub admins need to complete to configure the GitHub Server Pull Requests Microsoft 365 Copilot connector."
