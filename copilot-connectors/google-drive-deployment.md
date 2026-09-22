@@ -2,7 +2,6 @@
 title: Deploy the Google Drive connector
 description: Learn how to deploy and configure the Google Drive Microsoft 365 Copilot connector in the Microsoft 365 admin center.
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.author: lauragra
 author: lauragra
 manager: calvind

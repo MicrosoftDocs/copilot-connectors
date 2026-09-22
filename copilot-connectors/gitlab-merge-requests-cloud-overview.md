@@ -7,7 +7,6 @@ ms.reviewer: raynezou
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 01/30/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitLab Merge Requests Cloud Microsoft 365 Copilot connector."

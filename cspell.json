@@ -5,5 +5,12 @@
     "localizationpriority",
     "nextstepaction",
     "refinable"
+  ],
+  "ignorePaths": [
+    ".openpublishing.publish.config.json",
+    "cspell.json",
+    "LICENSE",
+    "redirects/*.json",
+    ".gitignore"
   ]
 }

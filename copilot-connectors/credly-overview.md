@@ -6,7 +6,6 @@ manager: rampo
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: microsoft-365-copilot-connectors
 ms.date: 06/22/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Credly Microsoft 365 Copilot connector."

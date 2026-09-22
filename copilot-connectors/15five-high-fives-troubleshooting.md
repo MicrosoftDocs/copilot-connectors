@@ -7,7 +7,6 @@ ms.reviewer: wangchen
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.date: 04/06/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the 15Five High Fives Microsoft 365 Copilot connector."

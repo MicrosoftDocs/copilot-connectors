@@ -7,7 +7,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-copilot-connectors
 ms.date: 06/03/2026
 ms.localizationpriority: Medium
 ---

@@ -2,7 +2,6 @@
 title: Deploy the GitHub Cloud Pull Requests connector
 description: Find information about how to deploy the GitHub Cloud Pull Requests Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options.
 ms.topic: how-to
-ms.service: copilot-connectors
 author: lauragra
 ms.author: lauragra
 manager: calvind

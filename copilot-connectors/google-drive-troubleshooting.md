@@ -6,7 +6,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.date: 12/16/2025
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Google Drive Microsoft 365 Copilot connector."

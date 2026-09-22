@@ -7,7 +7,6 @@ ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: microsoft-365-copilot-connectors
 ms.date: 09/08/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities and limitations of the Veeva On-Premises Microsoft 365 Copilot connector."

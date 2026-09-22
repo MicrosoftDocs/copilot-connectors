@@ -6,7 +6,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 09/11/2026
 ms.localizationpriority: Medium
 description: "Learn how the Galileo by The Josh Bersin Company Microsoft 365 Copilot connector brings research-backed HR guidance into Microsoft 365 Copilot."

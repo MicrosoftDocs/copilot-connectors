@@ -7,7 +7,6 @@ manager: zezhangzhao
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Find troubleshooting information for the DataStax Microsoft 365 Copilot connector."
 ---

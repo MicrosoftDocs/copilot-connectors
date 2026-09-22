@@ -6,7 +6,6 @@ manager: ereza
 audience: Admin
 ms.audience: Admin 
 ms.topic: install-set-up-deploy
-ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Set up the Stack Overflow Microsoft 365 Copilot connector." 
 ms.date: 04/15/2026

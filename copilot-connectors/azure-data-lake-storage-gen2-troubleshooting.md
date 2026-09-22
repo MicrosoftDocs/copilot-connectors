@@ -7,7 +7,6 @@ ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: microsoft-365-copilot-connectors
 ms.date: 07/22/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector."

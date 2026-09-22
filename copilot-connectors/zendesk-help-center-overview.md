@@ -7,7 +7,6 @@ ms.reviewer: ang.gao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 11/24/2025
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Zendesk Help Center Copilot connector."

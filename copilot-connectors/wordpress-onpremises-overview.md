@@ -7,7 +7,6 @@ ms.reviewer: rantang
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 12/12/2025
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the WordPress.org Microsoft 365 Copilot connector."

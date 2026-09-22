@@ -7,7 +7,6 @@ ms.reviewer: rantang
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.date: 12/10/2025
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for common errors that you might encounter when you deploy the Adobe Experience Manager Sites Microsoft 365 Copilot connector."

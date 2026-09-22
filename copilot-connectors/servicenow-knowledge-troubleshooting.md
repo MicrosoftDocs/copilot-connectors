@@ -8,7 +8,6 @@ ms.reviewer: mayanksethi
 audience: Admin 
 ms.audience: Admin
 ms.topic: article
-ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Find troubleshooting information for the ServiceNow Knowledge Copilot connector."
 ---
