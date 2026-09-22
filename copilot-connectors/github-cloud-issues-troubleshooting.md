@@ -6,7 +6,6 @@ ms.author: lauragra
 ms.reviewer: lauragra
 manager: calvind
 ms.date: 11/20/2025
-ms.service: copilot-connectors
 ms.topic: concept-article
 ---
 

@@ -5,7 +5,6 @@ author: lauragra
 manager: calvind
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Learn about the licensing requirements for deploying Microsoft 365 Copilot connectors in your organization."
 ms.date: 06/01/2026

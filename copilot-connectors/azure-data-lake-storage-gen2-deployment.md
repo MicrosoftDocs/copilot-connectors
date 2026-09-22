@@ -7,7 +7,6 @@ ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-copilot-connectors
 ms.date: 07/22/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Azure Data Lake Storage Gen2 Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."

@@ -8,7 +8,6 @@ ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: microsoft-365-copilot-connectors
 ms.date: 08/17/2026
 ms.localizationpriority: Medium
 ---

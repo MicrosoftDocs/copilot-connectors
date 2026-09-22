@@ -6,7 +6,6 @@ manager: ereza
 audience: Admin
 ms.audience: Admin 
 ms.topic: install-set-up-deploy
-ms.service: copilot-connectors 
 ms.localizationpriority: medium 
 description: "Set up the Unily Microsoft 365 Copilot connector." 
 ms.date: 12/25/2025

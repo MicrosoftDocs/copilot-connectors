@@ -5,7 +5,6 @@ ms.author: danielabo
 author: danielabom
 manager: SteveWilkins1123
 ms.topic: article
-ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Learn how to identify and handle error responses in Microsoft 365 Copilot connectors."
 ---

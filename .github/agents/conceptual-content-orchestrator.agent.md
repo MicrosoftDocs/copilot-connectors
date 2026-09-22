@@ -1,8 +1,10 @@
 ---
 name: conceptual-content-orchestrator
 description: Orchestrate end-to-end generation or updates of conceptual documentation in this repository
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 4.8
 tools: ['read', 'agent']
+argument-hint: Scope, target files/folders, and source doc paths
+user-invocable: true
 agents: ['conceptual-content-planner', 'conceptual-content-writer', 'conceptual-content-reviewer']
 ---
 

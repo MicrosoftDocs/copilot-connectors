@@ -7,7 +7,6 @@ ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 06/02/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Server Pull Requests Microsoft 365 Copilot connector."

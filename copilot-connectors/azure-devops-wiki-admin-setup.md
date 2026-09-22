@@ -7,7 +7,6 @@ ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: microsoft-365-copilot-connectors
 ms.date: 08/20/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the Azure DevOps admin needs to complete for your organization to configure the Azure DevOps Wiki Microsoft 365 Copilot connector."

@@ -1,7 +1,8 @@
 ---
 name: conceptual-content-reviewer
 description: Review conceptual content changes for accuracy, completeness, structure, and markdown quality
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 4.8
+user-invocable: false
 tools: ['read', 'execute/getTerminalOutput', 'execute/runInTerminal', 'search']
 ---
 

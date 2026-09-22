@@ -4,7 +4,6 @@ ms.author: danielabo
 author: danipocket
 manager: calvind
 ms.topic: article
-ms.service: microsoft-365-copilot-connectors
 ms.audience: Admin
 ms.localizationpriority: medium
 ms.date: 02/13/2026

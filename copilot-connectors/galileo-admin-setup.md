@@ -6,7 +6,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 09/11/2026
 ms.localizationpriority: Medium
 description: "Prepare your Microsoft 365 environment, access group, and credentials before deploying the Galileo by The Josh Bersin Company Copilot connector."

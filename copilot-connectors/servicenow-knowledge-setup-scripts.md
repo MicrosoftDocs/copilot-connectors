@@ -8,7 +8,6 @@ ms.reviewer: lauragra
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 ms.date: 08/08/2026
 ---

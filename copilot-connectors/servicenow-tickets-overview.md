@@ -7,7 +7,6 @@ ms.reviewer: mayanksethi
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 01/07/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Tickets Microsoft 365 Copilot connector, which can index incident, change_request, problem, sc_req_item, sc_task, change_task, and sc_request records."

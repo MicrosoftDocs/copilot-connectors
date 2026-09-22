@@ -7,7 +7,6 @@ manager: SteveWilkins1123
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the File Share Microsoft 365 Copilot connector"
 ---
@@ -67,9 +66,6 @@ You also have the ability to create an exception to the limit rule. The priority
 
 :::image type="content" source="media/file-connector/exclusionrule.png" alt-text="Graphic showing a subset of files excluded from indexing with exceptions.":::
 
-## Preserve last access time 
-
-When the connector attempts to crawl a file, the "last access time" field in its metadata is updated. If you depend on that field for archiving and backup solutions and you don't want to update it when the connector accesses it, select this option. 
 
 ## Custom setup
 

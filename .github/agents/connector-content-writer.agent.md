@@ -1,7 +1,8 @@
 ---
 name: connector-content-writer
 description: Generate connector documentation files from a content plan
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 4.8
+user-invocable: false
 tools: ['read', 'edit/createFile', 'edit/editFiles', 'search']
 ---
 

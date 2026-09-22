@@ -6,7 +6,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.date: 09/11/2026
 ms.localizationpriority: Medium
 description: "Deploy, validate, and monitor the Galileo by The Josh Bersin Company Microsoft 365 Copilot connector."

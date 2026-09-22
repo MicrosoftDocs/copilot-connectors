@@ -7,7 +7,6 @@ ms.reviewer: huichunli
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.date: 01/13/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the monday.com Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and rollout guidance."
