@@ -1,14 +1,14 @@
 ---
 title: "Set up the GitHub service for GitHub Server Pull Requests connector ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
-ms.date: 03/09/2026
+ms.service: microsoft-365-copilot-connectors
+ms.date: 09/22/2026
 ms.localizationpriority: Medium
 description: "Get the steps that GitHub admins need to complete to configure the GitHub Server Pull Requests Microsoft 365 Copilot connector."
 ---
@@ -120,11 +120,11 @@ To create a GitHub app for use with the GitHub Server Pull Requests connector:
     - Contents - **Read-only**
     - Metadata - **Read-only**
     - Administration - **Read-only**
-    
+
     **Organization permissions**
     - Members - **Read-only**
     - Administration - **Read-only**
-    
+
     **Account permissions**
     - Email addresses - **Read-only**
 
@@ -136,7 +136,7 @@ Depending on the authentication method you plan to use, generate either a client
 
 - **For custom GitHub app (on behalf of user) authentication:** On the **General** page of the GitHub app, select **Generate a new client secret** to generate and copy the **client secret**.
 
-    :::image type="content" alt-text="Screenshot that shows the credentials of the app, including Client Id and Client secret." source="media/github-server-admin-setup/github-app-credentials.png" lightbox="media/github-server-admin-setup/github-app-credentials.png":::
+    :::image type="content" alt-text="Screenshot that shows the credentials of the app, including App ID and Client secret." source="media/github-server-admin-setup/github-app-credentials.png" lightbox="media/github-server-admin-setup/github-app-credentials.png":::
 
 - **For custom GitHub app (installation) authentication:** On the **General** page of the GitHub app, scroll down to the **Private keys** section and select **Generate a private key**. Save the downloaded `.pem` file securely.
 
@@ -144,7 +144,7 @@ Depending on the authentication method you plan to use, generate either a client
 
 ### Install the GitHub app
 
-1. On the **General** page of the GitHub app, select **Install App**. 
+1. On the **General** page of the GitHub app, select **Install App**.
 
     :::image type="content" alt-text="Screenshot that shows the app installation dialog." source="media/github-server-admin-setup/github-install.png" lightbox="media/github-server-admin-setup/github-install.png":::
 

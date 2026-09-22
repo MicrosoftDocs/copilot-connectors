@@ -1,14 +1,14 @@
 ---
 title: "Deploy the GitHub Server Pull Requests connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
-ms.date: 12/15/2025
+ms.service: microsoft-365-copilot-connectors
+ms.date: 09/22/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the GitHub Server Pull Requests Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -19,7 +19,7 @@ The GitHub Server Pull Requests Microsoft 365 Copilot connector integrates pull 
 
 This article describes the steps to deploy and customize the GitHub Server Pull Requests connector.
 
-For advanced GitHub service configuration information, see  
+For advanced GitHub service configuration information, see
 [Set up the GitHub service for GitHub Server Pull Requests connector ingestion](github-server-pull-requests-admin-setup.md).
 
 ## Prerequisites
@@ -34,11 +34,11 @@ Before you deploy the GitHub Server Pull Requests connector, make sure that the 
 
 Before you deploy the connector, make sure that you meet the following prerequisites:
 
-- You must be a Microsoft 365 admin.  
-- Your GitHub Enterprise Server instance must be accessible via API.  
-- The GitHub app must be fully configured and installed in the target organization.  
-- The Microsoft Graph Connector Agent must be installed on a device with access to your GitHub instance (version 3.1.11.0 or later).  
-- The user account used for authentication must have access to the repositories and pull requests to be indexed.  
+- You're a Microsoft 365 admin.
+- Your GitHub Enterprise Server instance must be accessible via API.
+- The GitHub app must be fully configured and installed in the target organization.
+- The Microsoft Graph Connector Agent must be installed on a device with access to your GitHub instance (version 3.1.11.0 or later).
+- The user account used for authentication must have access to the repositories and pull requests to be indexed.
 - Users accessing indexed PR data must have Microsoft Entra ID identities to enable permission mapping.
 
 ## Deploy the connector
@@ -67,21 +67,21 @@ The connector uses this URL to request PR metadata during ingestion.
 
 The GitHub Server Pull Requests connector supports the following authentication types:
 
-- **GitHub app (on behalf of user):**  
-  - Enter the **Client ID** and **Client secret** of your GitHub App.  
-  - Authorize access.  
+- **GitHub app (on behalf of user):**
+  - Enter the **App ID** and **Client secret** of your GitHub App.
+  - Authorize access.
   - Recommended when using separate user accounts for rate‑limit isolation.
 
-- **GitHub app (installation):**  
-  - Generate a private key from the GitHub app configuration page.  
-  - Enter the **Client ID**, organization name, and upload the private key.
-   
+- **GitHub app (installation):**
+  - Generate a private key from the GitHub app configuration page.
+  - Enter the **App ID**, organization name, and upload the private key.
+
   > [!NOTE]
   > This authentication type is currently in preview. To use this authentication type, contact Microsoft support.
 
 ### Roll out
 
-To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups who should have early access. For more information, see  
+To roll out the connector to a limited audience, select the toggle next to **Rollout to limited audience** and specify the users and groups who get early access. For more information, see  
 [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
 Choose **Create** to deploy the connection. The connector begins indexing content immediately.
@@ -144,14 +144,14 @@ The following table describes the properties the connector indexes by default.
 
 Two crawl types are available:
 
-- **Incremental crawl:** Runs every 15 minutes by default.  
+- **Incremental crawl:** Runs every 15 minutes by default.
 - **Full crawl:** Runs daily to refresh the PR index.
 
-You can customize these values according to the needs of your organization. For more information, see  
+You can customize these values according to the needs of your organization. For more information, see
 [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 ## Related content
 
-- [GitHub Server Pull Requests connector overview](github-server-pull-requests-overview.md)  
-- [Troubleshoot issues with the GitHub Server Pull Requests connector](github-server-pull-requests-troubleshooting.md)  
+- [GitHub Server Pull Requests connector overview](github-server-pull-requests-overview.md)
+- [Troubleshoot issues with the GitHub Server Pull Requests connector](github-server-pull-requests-troubleshooting.md)
 - [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)
