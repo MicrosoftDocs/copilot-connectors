@@ -7,7 +7,6 @@ ms.reviewer: huichunli
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.date: 01/13/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for common issues with the Monday.com Microsoft 365 Copilot connector."

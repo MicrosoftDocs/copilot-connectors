@@ -7,7 +7,6 @@ ms.reviewer: neocheng
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: microsoft-365-copilot-connectors
 ms.date: 06/02/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Jira Data Center Microsoft 365 Copilot connector."

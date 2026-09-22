@@ -6,7 +6,6 @@ author: danipocket
 ms.author: danielabo
 manager: calvind
 ms.reviewer: mansipakhale
-ms.service: microsoft-365-copilot-connectors
 
 ms.date: 04/28/2026
 ms.topic: how-to

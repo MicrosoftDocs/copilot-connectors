@@ -7,7 +7,6 @@ ms.reviewer: anggao
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-copilot-connectors
 ms.date: 04/09/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Trello Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."

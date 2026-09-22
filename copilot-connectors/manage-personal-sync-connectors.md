@@ -5,7 +5,6 @@ author: danipocket
 ms.author: danielabo
 manager: calvind
 ms.reviewer: vivg
-ms.service: microsoft-365-copilot-connectors
 ms.date: 06/22/2026
 ms.topic: how-to
 ms.localizationpriority: medium

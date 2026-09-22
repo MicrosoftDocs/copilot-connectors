@@ -6,7 +6,6 @@ author: jasonjoh
 manager: calvind
 ms.audience: Admin
 ms.topic: article
-ms.service: microsoft-365-copilot-connectors
 ms.localizationpriority: medium
 description: "Learn about the legal terms and conditions for Microsoft 365 Copilot connectors."
 ---

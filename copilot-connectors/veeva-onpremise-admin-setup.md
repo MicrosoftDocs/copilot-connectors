@@ -7,7 +7,6 @@ ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: microsoft-365-copilot-connectors
 ms.date: 09/08/2026
 ms.localizationpriority: Medium
 description: "Set up Veeva Vault and Microsoft Entra for the Veeva On-Premises Microsoft 365 Copilot connector."

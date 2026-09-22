@@ -1,7 +1,8 @@
 ---
 name: conceptual-content-planner
 description: Create a detailed execution plan for conceptual content creation and updates in this repository
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 4.8
+user-invocable: false
 tools: [read, edit/createFile, edit/editFiles, search]
 ---
 

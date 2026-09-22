@@ -1,8 +1,10 @@
 ---
 name: connector-content-orchestrator
 description: Orchestrate end-to-end documentation generation for a new Microsoft 365 Copilot connector
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 4.8
 tools: ['read', 'agent']
+argument-hint: Connector name and source doc paths
+user-invocable: true
 agents: ['connector-content-planner', 'connector-content-writer', 'connector-content-reviewer']
 ---
 

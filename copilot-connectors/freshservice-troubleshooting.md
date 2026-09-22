@@ -7,7 +7,6 @@ ms.reviewer: wangchen
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.date: 11/25/2025
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Freshservice Microsoft 365 Copilot connector."

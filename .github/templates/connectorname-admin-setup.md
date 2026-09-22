@@ -7,7 +7,6 @@ ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 
 ms.localizationpriority: Medium
 description: "Get the steps that the {connector service name} admin needs to complete for your organization to configure the {connector name} Microsoft 365 Copilot connector."

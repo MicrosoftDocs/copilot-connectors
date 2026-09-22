@@ -7,7 +7,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.localizationpriority: medium
 ROBOTS: NoIndex
 description: "Troubleshoot issues with the Oracle SQL Microsoft 365 Copilot connector."

@@ -7,7 +7,6 @@ ms.reviewer: neocheng
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 01/14/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Smartsheet Sheet Microsoft 365 Copilot connector."

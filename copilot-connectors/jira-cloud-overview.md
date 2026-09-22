@@ -7,7 +7,6 @@ audience: Admin
 ms.audience: Admin
 manager: calvind
 ms.topic: concept-article
-ms.service: microsoft-365-copilot-connectors
 ms.date: 08/20/2026
 ms.localizationpriority: medium
 ---

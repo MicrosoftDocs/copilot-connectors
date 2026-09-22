@@ -6,7 +6,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.date: 09/11/2026
 ms.localizationpriority: Medium
 description: "Build and share dedicated and context-aware declarative agents that use the Galileo by The Josh Bersin Company connector."

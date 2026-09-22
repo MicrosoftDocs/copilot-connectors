@@ -6,7 +6,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.date: 09/11/2026
 ms.localizationpriority: Medium
 description: "Troubleshoot common setup, authentication, indexing, citation, and agent issues with the Galileo by The Josh Bersin Company Microsoft 365 Copilot connector."

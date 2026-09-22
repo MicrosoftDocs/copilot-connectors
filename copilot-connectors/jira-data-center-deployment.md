@@ -7,7 +7,6 @@ ms.reviewer: neocheng
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-copilot-connectors
 ms.date: 06/02/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Jira Data Center Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."

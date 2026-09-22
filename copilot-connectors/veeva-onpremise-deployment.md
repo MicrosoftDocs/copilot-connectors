@@ -7,7 +7,6 @@ ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-copilot-connectors
 ms.date: 09/08/2026
 ms.localizationpriority: Medium
 description: "Deploy the Veeva On-Premises Microsoft 365 Copilot connector in the Microsoft 365 admin center."
