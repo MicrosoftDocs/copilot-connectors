@@ -1,13 +1,13 @@
 ---
 title: "Deploy the ServiceNow Catalog connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.reviewer: mayanksethi
 ms.audience: Admin
 ms.topic: how-to
-ms.date: 08/23/2026
+ms.date: 09/19/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Catalog Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -54,11 +54,11 @@ The display name identifies references in Copilot responses and helps users reco
 
 For more information, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
-### Choose flow based on user criteria 
+### Choose flow based on user criteria
 
-The ServiceNow Catalog connector supports two flows for user criteria permissions: **Simple** and **Advanced**. 
+The ServiceNow Catalog connector supports two flows for user criteria permissions: **Simple** and **Advanced**.
 
-The default is **Simple**. In this flow, advanced script-based user criteria aren't considered while evaluating catalog item permissions. 
+The default is **Simple**. In this flow, advanced script-based user criteria aren't considered while evaluating catalog item permissions.
 
 If your ServiceNow instance uses **Advanced Scripts** in your catalog category or catalog item user criteria, use the **Advanced** flow. This flow ensures accurate permissions handling when content is ingested into Microsoft Graph.  To use the **Advanced** option, you must [Set up the REST API](servicenow-catalog-admin-setup.md#set-up-rest-api).
 
@@ -127,7 +127,7 @@ You need the Service Principal Object ID of the first-party connector applicatio
 
     **For Yokohama and earlier versions**
     - Choose **Configure an OIDC provider to verify ID tokens**.
-    
+
     **For Zurich and later versions**
     - Select **New Inbound Integration Experience** > **New Integration**.
     - Choose **Third party ID token issued by OIDC supporting identity provider**.
@@ -186,8 +186,9 @@ Open the user record and, in the **Roles** related list, add these roles: `catal
 After completing all three steps:
 
 1. **OIDC provider** — Go to **System OAuth** > **Application Registry** and confirm the Microsoft Entra ID entry is **Active** with the correct Client ID and metadata URL.
-2. **Integration user** — Go to **User Administration** > **Users**, find the user by the service principal object ID, and confirm that the correct roles are assigned.
-3. **Connector setup** — When you configure the connector in the Microsoft 365 admin center, select **Federated Auth** as the authentication method and provide your ServiceNow instance URL. The connector authenticates using the OIDC token issued by Microsoft Entra ID.
+2. **OAuth scope and user claim** — On the OAuth OIDC entity, confirm that **Scope Restriction** (labeled **Auth Scope** in some releases) is set to **Useraccount scoped** (`useraccount`). On the OIDC Provider Configuration, confirm that **User Claim** is `sub` or `oid` and that it matches the value stored as the integration user's **User ID**.
+3. **Integration user** — Go to **User Administration** > **Users**, find the user by the service principal object ID, and confirm that the correct roles are assigned.
+4. **Connector setup** — When you configure the connector in the Microsoft 365 admin center, select **Federated Auth** as the authentication method and provide your ServiceNow instance URL. The connector authenticates using the OIDC token issued by Microsoft Entra ID.
 
 #### OAuth 2.0
 
@@ -221,8 +222,8 @@ To use Microsoft Entra ID OpenID Connect:
    - Note the Application (client) ID and Directory (tenant) ID.
 
 1. **Create a client secret** and save it securely. For more information, see [Creating a client secret](/entra/identity-platform/quickstart-register-app#add-a-client-secret).
-    - Go to **Manage** > **Certificates and secrets**. 
-    - Choose **new client secret**. 
+    - Go to **Manage** > **Certificates and secrets**.
+    - Choose **new client secret**.
     - Provide a name and choose **Save**.
 
 1. **Retrieve the Service Principal Object Identifier** by using PowerShell.
@@ -235,21 +236,21 @@ To use Microsoft Entra ID OpenID Connect:
 
     Replace "Application-ID" with the Application (client) ID of the application you registered in step 2. Note the value of the ID object from the PowerShell output; this value is the Service Principal Object ID.
 
-    Alternatively, you can retrieve the information from the Microsoft Entra admin center: 
-    a. On the app registration, go to **Overview**. 
-    b. Choose **managed application in local directory**. 
+    Alternatively, you can retrieve the information from the Microsoft Entra admin center:
+    a. On the app registration, go to **Overview**.
+    b. Choose **managed application in local directory**.
     c. Choose the URL and copy the **ObjectID**. This is the Service Principal Object ID.
 
-1. In your ServiceNow instance, register the ServiceNow application. For details, see [Create an OAuth OIDC provider](https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/add-OIDC-entity.html). Use the values listed in the following table in the registration form; leave the default values for the other fields. 
+1. In your ServiceNow instance, register the ServiceNow application. For details, see [Create an OAuth OIDC provider](https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/add-OIDC-entity.html). Use the values listed in the following table in the registration form; leave the default values for the other fields.
 
     | Field | Description | Value |
     |:-------|:-------------|:-------|
     | Name | A unique name for the OAuth OIDC entity. | Microsoft Entra ID |
     | Client ID | From Microsoft Entra ID registration | Application (client) ID |
-    | Client secret | From Microsoft Entra ID registration | Client secret |
+    | Client secret | Generated automatically by ServiceNow | Leave the generated value unchanged |
 
     > [!NOTE]
-    > After you create the OAuth OIDC entity, the client secret is generated automatically in ServiceNow. Replace this client secret with the client secret generated in the Microsoft Entra Admin center. 
+    > After you create the OAuth OIDC entity, the client secret is generated automatically in ServiceNow. You can leave this auto-generated client secret as is; you don't need to replace it with the client secret from the Microsoft Entra admin center.
 
 1. In the **OAuth OIDC Provider Configuration** field, select the search icon, and then select **New**. Fill out OIDC provider configuration form as follows.
 
@@ -267,7 +268,7 @@ For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject shou
    Set **Scope Restriction** (labeled **Auth Scope** in some releases) to **Useraccount scoped**.
 
 
-1. Choose **Submit** to save the configuration. 
+1. Select **Submit** to save the configuration. 
 
 1. Create a ServiceNow account. For details, see [Create a user in ServiceNow](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_CreateAUser.html). Use the following values; leave other fields as default.
 
@@ -276,14 +277,14 @@ For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject shou
     |User ID | Service Principal ID |
     |Web service access only | Checked |
 
-1. Assign the **Catalog** role to the ServiceNow account. For details, see Assign a role to a user. Use the **Application ID** as the Client ID and **Client secret** in the admin center configuration wizard to authenticate with Microsoft Entra ID OpenID Connect. 
+1. Assign the **Catalog** role to the ServiceNow account. For details, see [Assign a role to a user](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignRoleToUser.html). Use the **Application ID** as the Client ID and **Client secret** in the admin center configuration wizard to authenticate with Microsoft Entra ID OpenID Connect. 
 
 > [!NOTE]
-> `Assignment required` must not be enabled. For more information, see [Properties of an enterprise application](/entra/identity/enterprise-apps/application-properties#assignment-required). 
+> Don't enable `Assignment required`. For more information, see [Properties of an enterprise application](/entra/identity/enterprise-apps/application-properties#assignment-required).
 
 ### Add API namespace
 
-If you're using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For details, see [Set up REST API](servicenow-catalog-admin-setup.md#set-up-rest-api). 
+If you're using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For details, see [Set up REST API](servicenow-catalog-admin-setup.md#set-up-rest-api).
 
 ### Roll out
 
@@ -347,7 +348,7 @@ To customize the content, on the **Content** tab, you can:
 - Define rules to customize URLs based on catalog category.
 - Preview sample data to validate property values and filters.
 
-#### Query string 
+#### Query string
 
 ServiceNow uses the following default filter: `active=true^workflow_state=published`.
 
@@ -430,8 +431,8 @@ You can define the frequency of incremental and full crawls:
 > - Identities (users and groups) and access permissions are only updated during full crawls.
 
 > - Incremental crawls don't update access permissions or group memberships.
-> - During a full crawl, including the first full crawl, content sync and identity sync (reading users, user criteria, and mapping of users to user criteria such as group memberships) run in parallel. The full crawl is complete when both content and identity sync are completed. 
-> - Subsequent full crawls are faster than the first full crawl. The first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Subsequent full crawls only ingest the newly discovered items, users, and user criteria. 
+> - During a full crawl, including the first full crawl, content sync and identity sync (reading users, user criteria, and mapping of users to user criteria such as group memberships) run in parallel. The full crawl is complete when both content and identity sync are completed.
+> - Subsequent full crawls are faster than the first full crawl. The first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Subsequent full crawls only ingest the newly discovered items, users, and user criteria.
 
 For more information about full and incremental crawls, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
