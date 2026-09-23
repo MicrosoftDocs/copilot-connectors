@@ -1,11 +1,11 @@
 ---
-ms.date: 08/23/2026
+ms.date: 09/19/2026
 title: "Troubleshoot issues with the ServiceNow Knowledge connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: mayanksethi
-audience: Admin 
+audience: Admin
 ms.audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
@@ -85,7 +85,7 @@ Use the following steps to validate table permissions by using REST API Explorer
 1.  Review the response:
 
     - **If you receive a 403 Status Code** and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge) to provide table-level access.
-    
+
     - **If you receive a 200 Status Code** but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge#grant-field-level-access).
 
        :::image type="content" source="media/servicenow-knowledge-troubleshooting/response-body.png" alt-text="Screenshot of the response body showing empty results." lightbox="media/servicenow-knowledge-troubleshooting/response-body.png":::
@@ -121,7 +121,7 @@ To resolve this issue:
  1. After granting access, start a full crawl for the configured ServiceNow connection.
 
 
-> [!NOTE] 
+> [!NOTE]
 > This access applies to both Simple and Advanced flows.
 
 ## HR knowledge articles visible to unintended audience
@@ -234,6 +234,15 @@ To resolve this issue, disable the option in Microsoft Entra ID:
 
 1. Choose **Save**.
 
+
+## Table API requests return 403 after federated authentication succeeds
+
+If the connector acquires a Microsoft Entra ID token successfully but crawl requests to the ServiceNow Table API (`GET /api/now/table/{tableName}`) return **403 Forbidden**, the OAuth client might not have access to unscoped Table APIs. In the ServiceNow transaction logs, `AuthScopeChecker` records an error similar to *OAuth client does not have unrestricted access to unscoped APIs*.
+
+To resolve this issue, verify both of the following on your ServiceNow instance, and then retry the connection:
+
+- **OAuth scope** — On the OAuth OIDC entity, set **Scope Restriction** (labeled **Auth Scope** in some releases, or **User Account OAuth Scope** in ServiceNow support terminology) to **Useraccount scoped** (`useraccount`).
+- **User Claim** — On the OIDC Provider Configuration, set **User Claim** to `sub` (or `oid`), and make sure it matches the value stored as the ServiceNow integration user's **User ID**.
 
 ## Related content
 
