@@ -1,13 +1,13 @@
 ---
 title: "ServiceNow Catalog connector troubleshooting"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: mayanksethi
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.date: 08/23/2026
+ms.date: 09/19/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the ServiceNow Catalog Copilot connector."
 ---
@@ -42,7 +42,7 @@ Use the following steps to troubleshoot and resolve the issue:
 
 When the required access is provided in ServiceNow, start a full crawl for the configured ServiceNow Catalog connector connection.
 
-## Missing access to certain tables 
+## Missing access to certain tables
 
 Without the right access, the crawler might not index all content and might not grant permissions accurately. You must be a ServiceNow admin to troubleshoot this issue.
 
@@ -109,7 +109,7 @@ If your ServiceNow instance is behind a firewall, the connector might not reach 
 
 | Environment | Region | IP range |
 | ----------- | ------ | -------- |
-| PROD | North America | 52.250.92.252/30, 52.224.250.216/30| 
+| PROD | North America | 52.250.92.252/30, 52.224.250.216/30|
 | PROD        | Europe         | 20.54.41.208/30, 51.105.159.88/30   |
 | PROD        | Asia Pacific   | 52.139.188.212/30, 20.43.146.44/30  |
 | GCC       | US Government  | 52.235.252.161/30                   |
@@ -124,7 +124,7 @@ If search results show incorrect access permissions, verify the user criteria co
 
 ## Change the URL of the catalog item
 
-When you deploy the ServiceNow Catalog connector, you can customize the URL of the catalog items based on the needs of your organization. You can customize the URL for both new and existing connections. You don't need to create a new connection. 
+When you deploy the ServiceNow Catalog connector, you can customize the URL of the catalog items based on the needs of your organization. You can customize the URL for both new and existing connections. You don't need to create a new connection.
 
 For more information, see [Set a default expression for AccessURL](/microsoft-365/copilot/connectors/servicenow-catalog-deployment#set-a-default-expression-for-accessurl).
 
@@ -164,6 +164,15 @@ To resolve the issue, disable the [Assignment required](/entra/identity/enterpri
 
 1.  In the Microsoft Entra admin center, go to **Enterprise Apps** \> **All apps**.
 2.  Select the app registered for OIDC and choose **Properties** \> **Turn off Assignment required** \> **Save**.
+
+## Table API requests return 403 after federated authentication succeeds
+
+If the connector acquires a Microsoft Entra ID token successfully but crawl requests to the ServiceNow Table API (`GET /api/now/table/{tableName}`) return **403 Forbidden**, the OAuth client might not have access to unscoped Table APIs. In the ServiceNow transaction logs, `AuthScopeChecker` records an error similar to *OAuth client does not have unrestricted access to unscoped APIs*.
+
+To resolve this issue, verify both of the following on your ServiceNow instance, and then retry the connection:
+
+- **OAuth scope** — On the OAuth OIDC entity, set **Scope Restriction** (labeled **Auth Scope** in some releases, or **User Account OAuth Scope** in ServiceNow support terminology) to **Useraccount scoped** (`useraccount`).
+- **User Claim** — On the OIDC Provider Configuration, set **User Claim** to `sub` (or `oid`), and make sure it matches the value stored as the ServiceNow integration user's **User ID**.
 
 ## Related content
 

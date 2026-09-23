@@ -1,13 +1,13 @@
 ---
 title: "Deploy the ServiceNow Knowledge connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: mayanksethi
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.date: 08/23/2026
+ms.date: 09/19/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Knowledge Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -134,7 +134,7 @@ You need the Service Principal Object ID of the first-party connector applicatio
 
     **For Yokohama and earlier versions**
     - Choose **Configure an OIDC provider to verify ID tokens**.
-    
+
     **For Zurich and later versions**
     - Select **New Inbound Integration Experience** > **New Integration**.
     - Choose **Third party ID token issued by OIDC supporting identity provider**.
@@ -193,8 +193,9 @@ Open the user record and, in the **Roles** related list, add these roles: `knowl
 After completing all three steps:
 
 1. **OIDC provider** — Go to **System OAuth** > **Application Registry** and confirm the Microsoft Entra ID entry is **Active** with the correct Client ID and metadata URL.
-2. **Integration user** — Go to **User Administration** > **Users**, find the user by the service principal object ID, and confirm that the correct roles are assigned.
-3. **Connector setup** — When you configure the connector in the Microsoft 365 admin center, select **Federated Auth** as the authentication method and provide your ServiceNow instance URL. The connector authenticates using the OIDC token issued by Microsoft Entra ID.
+2. **OAuth scope and user claim** — On the OAuth OIDC entity, confirm that **Scope Restriction** (labeled **Auth Scope** in some releases) is set to **Useraccount scoped** (`useraccount`). On the OIDC Provider Configuration, confirm that **User Claim** is `sub` or `oid` and that it matches the value stored as the integration user's **User ID**.
+3. **Integration user** — Go to **User Administration** > **Users**, find the user by the service principal object ID, and confirm that the correct roles are assigned.
+4. **Connector setup** — When you configure the connector in the Microsoft 365 admin center, select **Federated Auth** as the authentication method and provide your ServiceNow instance URL. The connector authenticates using the OIDC token issued by Microsoft Entra ID.
 
 #### OAuth 2.0
 
@@ -221,29 +222,29 @@ Enter the client ID and client secret to connect to your instance. After you con
 
 To use Microsoft Entra ID OpenID Connect:
 
-1. Register a new app as a single tenant in Microsoft Entra ID. A redirect URI isn't required. For more information, see [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application). 
+1. Register a new app as a single tenant in Microsoft Entra ID. You don't need a redirect URI. For more information, see [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application). 
 1. Copy the **Application (client) ID** and **Directory (tenant) ID** for the app.
 1. Create a client secret for the app and save it securely.
     - Go to **Manage** > **Certificates and secrets**.
     - Choose **new client secret**.
     - Provide a name and choose **Save**.
 1. Use the following PowerShell cmdlets to retrieve the service principal object ID.
- 
+
     ```powershell
         Install-Module -Name Az -AllowClobber -Scope CurrentUser
     ```
-    
+
     ```powershell
         Connect-AzAccount
     ```
-    
+
     ```powershell
         Get-AzADServicePrincipal -ApplicationId "Application-ID"
     ```
 
     Replace "Application-ID" with the Application (client) ID of the application you registered in step 2. Note the value of the ID object from the PowerShell output; this value is the Service Principal Object ID.
 
-    Alternatively, you can retrieve the information from the Microsoft Entra admin center: 
+    Alternatively, you can retrieve the information from the Microsoft Entra admin center:
 
     a. On the app registration, go to **Overview**.
     b. Choose **managed application in local directory**.
@@ -256,10 +257,10 @@ To use Microsoft Entra ID OpenID Connect:
 | --- | --- | --- |
 | Name | A unique name for the OAuth OIDC entity. | Microsoft Entra ID |
 | Client ID | From Microsoft Entra ID registration | Application (client) ID |
-| Client Secret | From Microsoft Entra ID registration | Client secret |
+| Client Secret | Generated automatically by ServiceNow | Leave the generated value unchanged |
 
 > [!NOTE]
-> After you create the OAuth OIDC entity, the client secret is generated automatically in ServiceNow. Replace this client secret with the client secret generated in the Microsoft Entra Admin center. 
+> After you create the OAuth OIDC entity, the client secret is generated automatically in ServiceNow. You can leave this auto-generated client secret as is; you don't need to replace it with the client secret from the Microsoft Entra admin center.
 
 6. In the **OAuth OIDC Provider Configuration** field, select the search icon, and then select **New**.
 
@@ -285,7 +286,7 @@ For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject shou
 
 | Field | Recommended value |
 | --- | --- |
-| User ID | Service Principal ID | 
+| User ID | Service Principal ID |
 | Web service access only | Checked |
 
 10. Assign the **Knowledge** role to the ServiceNow account. For details, see [Assign a role to a user](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Use the **Application ID** as the Client ID and **Client secret** in the admin center configuration wizard to authenticate with Microsoft Entra ID OpenID Connect.
@@ -295,7 +296,7 @@ For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject shou
 
 ### Add API namespace
 
-If you're using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For details, see [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api). 
+If you're using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For details, see [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api).
 
 ### Roll out
 
@@ -329,8 +330,8 @@ The ServiceNow Knowledge Copilot connector supports the following user search pe
 
 - Everyone
 - Only people with access to this data source (default)
- 
-If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it. 
+
+If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it.
 
 > [!NOTE]
 > If a knowledge article and its knowledge base don't have any `Can Read` user criteria applied, the article appears in the results for everyone in the organization, provided that the `glide.knowman.block_access_with_no_user_criteria` property is set to `false` in your ServiceNow instance. If this property is `true`, or if the service account doesn't have access to the `sys_properties` table (in which case the connector defaults to `true`), articles without user criteria are blocked from appearing in search results. For more information, see [Set up hierarchical permissions](servicenow-knowledge-admin-setup.md#set-up-hierarchical-permissions).
@@ -360,7 +361,7 @@ You can manage properties in the following ways:
 The following table lists the properties that the ServiceNow Knowledge connector indexes by default.
 
 > [!NOTE]
-> You can view but you can't edit the schema attributes (Searchable, Queryable, Retrievable, Refinable), semantic labels, and aliases for these default properties. You can, however, add more custom properties and edit the property attributes when you create the connection. After you create the connection, you can't edit the property attributes. 
+> You can view but you can't edit the schema attributes (Searchable, Queryable, Retrievable, Refinable), semantic labels, and aliases for these default properties. You can, however, add more custom properties and edit the property attributes when you create the connection. After you create the connection, you can't edit the property attributes.
 
 |Property |Semantic Label |Description |Schema Attributes|
 |---|---|---|---|
@@ -404,7 +405,7 @@ The following table lists the properties that the ServiceNow Knowledge connector
 
 #### Customize AccessURL property
 
-To define a custom expression for the **AccessURL** property: 
+To define a custom expression for the **AccessURL** property:
 
 1. On the **Content** tab, go to **Manage properties**.
 2. In the **Properties** table, select the **AccessURL** property.
@@ -413,16 +414,16 @@ To define a custom expression for the **AccessURL** property:
 5. To preview the result, select **Preview data** and scroll to the customized property.
 
 > [!NOTE]
-> - You can customize the **AccessURL** property for both new and existing ServiceNow Knowledge connections. You don't need to create a new connection.   
+> - You can customize the **AccessURL** property for both new and existing ServiceNow Knowledge connections. You don't need to create a new connection.
 
-You can override the default expression for specific knowledge articles by using rules based on property filters. To add a rule: 
+You can override the default expression for specific knowledge articles by using rules based on property filters. To add a rule:
 1. Under **Set additional rules to configure expressions**, select **Add new rule**.
 2. In the rule panel:
    - Choose a filter property (for example, Category).
    - Enter one or more values (comma-separated, case-sensitive).
-   - Define the custom expression for those values. 
+   - Define the custom expression for those values.
 3. Select **Save changes**.
-4. To preview, select **Preview data** and scroll to the customized property. 
+4. To preview, select **Preview data** and scroll to the customized property.
 
 > [!NOTE]
 > If multiple rules apply to an item, the first rule in the list is used. Changes take effect after the next full crawl.
@@ -440,7 +441,7 @@ Configure the sync schedule to keep indexed content up to date:
 > [!IMPORTANT]
 > - The standard incremental crawl doesn't update identities or group memberships. For Advanced flow connections with incremental identity sync set up, the incremental identity sync crawl updates identity changes between full crawls. Otherwise, identities are updated only during full crawls.
 > - During a full crawl, including the first full crawl, content sync and identity sync (such as reading users, user criteria, and mapping of users to user criteria such as group memberships) run in parallel. The full crawl is complete when both content sync and identity sync are finished.
-> -  The periodic full crawls are faster than the first full crawls because the first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Periodic full crawls recrawl all content and recompute permissions, but ingestion is faster because items already exist in the index. Identity sync uses differential updates, only pushing membership changes to Microsoft Graph. 
+> -  The periodic full crawls are faster than the first full crawls because the first crawl includes first-time discovery and ingestion of users, user criteria, and their mapping and content items. Periodic full crawls recrawl all content and recompute permissions, but ingestion is faster because items already exist in the index. Identity sync uses differential updates, only pushing membership changes to Microsoft Graph.
 
 For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 
