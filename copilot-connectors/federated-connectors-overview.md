@@ -48,7 +48,7 @@ Microsoft 365 Copilot supports federated Copilot connectors in the following exp
 - Copilot in Word, Excel, PowerPoint, and Outlook
 - Researcher agent
 
-Support for write, update, and delete actions varies by experience. The Researcher agent remains read-only. For details, see [Supported experiences for write, update, and delete actions](#supported-experiences).
+The Researcher agent doesn't support write, update, or delete actions. Federated Copilot connectors remain read-only in this experience.
 
 ## Federated connectors in the Connectors Gallery
 
@@ -151,34 +151,18 @@ Dynamic tooling doesn't index external data into Microsoft 365.
 
 ## Write, update, and delete actions (Coming soon)
 
-Federated connectors aren't limited to retrieving information. When the MCP server behind a connector provides tools that create, update, or delete data, Microsoft 365 Copilot can use those tools to make changes in the connected third-party system on the user's behalf. Users can complete work without leaving Copilot. For example, a user can turn an escalation email into an issue in a project-tracking tool, update a record in a customer relationship management (CRM) system, or add a comment to a ticket directly from Copilot Chat.
+With federated connectors, users can do more than retrieve information. When a connector provides the appropriate tools, users can ask Microsoft 365 Copilot to create, update, or delete information in a connected third-party system on their behalf. Users can complete work without leaving Copilot. For example, a user can turn an escalation email into an issue in a project-tracking tool, update a record in a customer relationship management (CRM) system, or add a comment to a ticket directly from Copilot Chat.
 
 Write, update, and delete actions follow the same federated connector model as read tools:
 
-- Actions run in the third-party service on behalf of the signed-in user and are limited by that user's permissions. Copilot can change only what the user is already permitted to change in the source system.
+- Actions run in the third-party service on behalf of the user and are limited by that user's permissions. Copilot can change only what the user is already permitted to change in the source system.
 - No data is indexed into Microsoft 365. Copilot sends the connector the information it needs to complete the action and returns the outcome to the user.
 - Tools that create, update, or delete data initially require the user's explicit approval. Users can choose whether Copilot asks again for that tool, as described in [Confirm an action](#confirm-an-action). Actions that the user declines aren't performed.
 - The actions available through a connector depend on the tools exposed by the connector publisher. Publishers can add or change tools over time.
 
-### Supported experiences
-
-The following table summarizes support for read tools and for tools that create, update, or delete data.
-
-| Copilot experience | Read tools | Write, update, and delete tools |
-|---|---|---|
-| Microsoft 365 Copilot Chat | Yes | Yes |
-| Agents | Yes | Yes |
-| Cowork | Yes | Yes |
-| Copilot in Word, Excel, PowerPoint, and Outlook | Yes | Yes |
-| Researcher agent | Yes | No (read-only) |
-
-Federated connectors in the Researcher agent remain read-only. Researcher uses a connector's read tools and doesn't offer its write or delete tools.
-
 ### Confirm an action
 
-Users must authenticate to the third-party service before Copilot can use any authenticated capabilities that the connector provides, including tools that create, update, or delete data. Federated connectors support user-scoped access and authentication to external systems.
-
-Each tool that creates, updates, or deletes content initially requires user approval. Copilot shows a confirmation card that names the connector and the tool it wants to use. Users can expand the card to review the parameters that are sent to the third-party service.
+Users must be connected to the third-party service before Copilot can use any authenticated capabilities that the connector provides, including tools that create, update, or delete data.
 
 These actions export Customer Data to the connected system to create, update, delete, or otherwise modify data. While an action is awaiting confirmation, nothing is sent to the connected system until the user responds. Read tools don't require confirmation and continue to run as they do today.
 
@@ -205,7 +189,7 @@ The user chooses one of the following options:
 
 **Always allow** and **Allow for conversation** apply to the individual tool, not to the whole connector. Users can decide which tools to allow.
 
-### Manage tool permissions
+### Manage tool permissions for write, update, and delete
 
 Users can review or reset tool permissions in Copilot by going to **Settings** > **Sources** and selecting the connector. The **Tools** section groups the connector's **Write/Delete tools** separately from its **Read tools**.
 
@@ -231,20 +215,28 @@ Users can also change approval settings for an individual tool.
 
 :::image type="content" source="media/federated-connectors/write-tool-permission-options.png" alt-text="Screenshot of an individual tool's approval menu with Needs approval and Always allow options." lightbox="media/federated-connectors/write-tool-permission-options.png":::
 
-If a connector publisher adds a new write-capable tool or changes an existing one, the tool is set to **Needs approval**. Copilot asks for confirmation the next time it wants to use that tool.
+If a connector publisher adds a new write-capable tool or changes an existing one, the tool is set to **Needs approval** by default. Thus, Copilot will ask for confirmation the next time it wants to use that tool.
 
-### View a connector's tools in the admin center
+### View a connector's tools in the admin center (Coming soon)
 
-Write, update, and delete tools are part of the connector and aren't enabled separately. The availability controls in [Admin experience and controls](#admin-experience-and-controls) continue to apply. Admins can enable or disable a connector for the tenant and limit it to specific groups. Disabling a connector removes all of its tools. If an already-enabled connector includes tools that create, update, or delete data, those tools are available to Copilot.
+Write, update, and delete tools are part of the connector and aren't enabled separately. The availability controls in [Admin experience and controls](#admin-experience-and-controls) continue to apply. 
 
 Each federated connector's details page in the Microsoft 365 admin center includes a **Tools** section that lists the tools available to users in the organization, including tools that can modify or delete data. To view the tools:
 
 1. In the Microsoft 365 admin center, go to **Copilot connectors** > **Your connections** and select the federated connector.
+
+    :::image type="content" source="media/federated-connectors/admin-center-connector-details.png" alt-text="Screenshot of the Zava connector details pane in the Microsoft 365 admin center, showing the Tools section and Sign in button." lightbox="media/federated-connectors/admin-center-connector-details.png":::
+
 1. On the connector's details page, go to the **Tools** section and sign in to the third-party service.
+
+    :::image type="content" source="media/federated-connectors/admin-center-tools-signed-in.png" alt-text="Screenshot of the Tools section after signing in, showing Read/Search and Write/Delete tool counts and the View tools button." lightbox="media/federated-connectors/admin-center-tools-signed-in.png":::
+
 1. Review the list of tools and note which tools can create, update, or delete data.
 
+    :::image type="content" source="media/federated-connectors/admin-center-available-tools.png" alt-text="Screenshot of the Available tools list in the Microsoft 365 admin center, showing tools labeled Read, Write, or Delete." lightbox="media/federated-connectors/admin-center-available-tools.png":::
+
 > [!NOTE]
-> The tool list reflects the permissions of the account used to sign in. Sign in with an account that has a high level of access to the connector so you can see the complete list of tools.
+> The tool list reflects the permissions of the account used to sign in. Sign in by using an account that has a high level of access to the connector so you see the comprehensive list of tools.
 
 Before enabling or continuing to use a connector that exposes write, update, or delete tools, review the connector's capabilities, privacy terms, and third-party agreements against your organization's security, compliance, and acceptable-use requirements. Update user and help-desk guidance so users understand that actions are performed using their own permissions in the third-party service.
 
