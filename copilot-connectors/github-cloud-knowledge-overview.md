@@ -6,7 +6,7 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.date: 06/02/2026
+ms.date: 09/24/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Cloud Knowledge Microsoft 365 Copilot connector."
 ---
@@ -37,17 +37,17 @@ The following table lists common use cases for the GitHub Cloud Knowledge connec
 | Department/role | Use case | Business benefit |
 | --- | --- | --- |
 | All | Where can I find the README for the swift-chat repository? | Surface authoritative project documentation instantly, reducing time spent navigating GitHub. |
-| All | Summarize the README for the elysia repository under the KCL-Benediction organization. | Compress long onboarding docs into a quick summary so users can ramp up faster. |
-| Engineering/DevOps | How do I set up the environment for the elysia repository? | Provide step-by-step setup grounded in the repo's own documentation, reducing setup errors. |
-| Engineering/DevOps | What environment variables are required to run tests in the elysia repository? | Pull configuration details directly from repo guides so engineers don't have to dig through folders. |
-| Engineering/DevOps | Show me a code snippet for sending emails in the elysia repository under KCL-Benediction. | Surface concrete in-repo code examples to accelerate implementation. |
-| Engineering/DevOps | Which payload formats does the API support in the elysia repository? | Bring API reference content into Copilot answers so engineers stay in flow. |
+| All | Summarize the README for the Project8 repository under the KCL-Benediction organization. | Compress long onboarding docs into a quick summary so users can ramp up faster. |
+| Engineering/DevOps | How do I set up the environment for the Project8 repository? | Provide step-by-step setup grounded in the repo's own documentation, reducing setup errors. |
+| Engineering/DevOps | What environment variables are required to run tests in the Project8 repository? | Pull configuration details directly from repo guides so engineers don't have to dig through folders. |
+| Engineering/DevOps | Show me a code snippet for sending emails in the Project8 repository under KCL-Benediction. | Surface concrete in-repo code examples to accelerate implementation. |
+| Engineering/DevOps | Which payload formats does the API support in the Project8 repository? | Bring API reference content into Copilot answers so engineers stay in flow. |
 | New hires/contributors | How do I contribute to the swift-chat repository under the KCL-Benediction organization? | Surface CONTRIBUTING guides and contribution policies in one prompt, reducing onboarding friction. |
-| New hires/contributors | What are the help guidelines for the elysia repository? | Help newcomers find contribution requirements and support channels without searching the repo manually. |
+| New hires/contributors | What are the help guidelines for the Project8 repository? | Help newcomers find contribution requirements and support channels without searching the repo manually. |
 | Product/program management | Summarize all documents in the drawer repository. | Generate a high-level briefing on a repo's documentation footprint for status updates and reviews. |
 | Product/program management | How many documents are in each repository, and what are the first-step docs to start understanding them? | Provide an at-a-glance map of available knowledge across repos to support onboarding and audits. |
 | Support/help desk | Where can I find troubleshooting instructions for the API integration in repo X? | Help support engineers retrieve troubleshooting guides quickly during ticket resolution. |
-| Technical writing | Find the CHANGELOG.md authored by xrkffgg in the drawer repository. | Locate change history by author for release notes or audit purposes. |
+| Technical writing | Find the CHANGELOG.md authored by AmberR in the drawer repository. | Locate change history by author for release notes or audit purposes. |
 | Localization | Is there a Chinese README for the swift-chat repository? | Quickly identify localized documentation availability across repos. |
 | Security/compliance | Show me documentation accessible to amazon-auto and me in the drawer repository. | Confirm shared documentation scope between collaborators while respecting GitHub permissions. |
 
@@ -59,38 +59,38 @@ Developers can use this connector as a knowledge source in declarative agents th
 
 The following examples show prompts that agent builders can use to help users retrieve information from the GitHub Cloud Knowledge connector. The prompts reflect real patterns from customer usage.
 
-**Engineering/DevOps**
+#### Engineering/DevOps
 
-- How do I set up the environment for the elysia repository under the KCL-Benediction organization?
-- What environment variables are required while running tests in the elysia repository?
-- Where is the API reference for user and tree managers in the elysia repository?
-- Show me a JavaScript code example for validating email in the elysia repository.
+- How do I set up the environment for the Project8 repository under the KCL-Benediction organization?
+- What environment variables are required while running tests in the Project8 repository?
+- Where is the API reference for user and tree managers in the Project8 repository?
+- Show me a JavaScript code example for validating email in the Project8 repository.
 
-**New hires and contributors**
+#### New hires and contributors
 
 - How do I contribute to the swift-chat repository under the KCL-Benediction organization?
 - Where are the contribution rules for the swift-chat repository?
-- What's the requirement to join development in the elysia repository?
-- Summarize CONTRIBUTING.md written by dannyjameswilliams.
+- What's the requirement to join development in the Project8 repository?
+- Summarize CONTRIBUTING.md written by AmberR.
 
-**Product/program management**
+#### Product/program management
 
 - Summarize all documents in the drawer repository.
 - How many documents are in each repository, and what are the first-step docs to start understanding them?
 - Show me the latest created documents in our GitHub knowledge base.
-- Show me documents in the elysia repository modified on 2025-09-05.
+- Show me documents in the Project8 repository modified on 2025-09-05.
 
-**Support and operations**
+#### Support and operations
 
 - Where can I see the changelog of the drawer repo under the KCL-Benediction organization?
-- Find the CHANGELOG.md by xrkffgg in the drawer repository.
+- Find the CHANGELOG.md by AmberR in the drawer repository.
 - What changed recently in the drawer repository under KCL-Benediction?
 
-**Cross-team collaboration**
+#### Cross-team collaboration
 
-- Show me documentation accessible to xrkffgg and me in the drawer repository.
+- Show me documentation accessible to AmberR and me in the drawer repository.
 - Show me documents created between August 15 and August 18, 2025.
-- Find the intro for the elysia repository and create the summary as an email draft.
+- Find the intro for the Project8 repository and create the summary as an email draft.
 
 ## GitHub Cloud Knowledge connector capabilities and limitations
 
@@ -103,7 +103,9 @@ The GitHub Cloud Knowledge connector has the following key capabilities:
 
 The GitHub Cloud Knowledge connector has the following limitations:
 
-- **Documentation files only** – Only repository metadata, markdown, and text files are indexed. Issues, pull requests, comments, and other GitHub entities aren't indexed by this connector. To index those, use the corresponding [GitHub Cloud Issues](github-cloud-issues-overview.md) or [GitHub Cloud Pull Requests](github-cloud-pull-requests-overview.md) connectors.
+- **GitHub Cloud only** - On-premises or self-hosted GitHub instances aren't supported. Use the GitHub Server Knowledge connector for GitHub Enterprise Server.
+- **GitHub Enterprise Cloud with data residency not supported** - Organizations hosted on dedicated `*.ghe.com` domains aren't currently supported. If your organization requires support for this scenario, contact Microsoft support.
+- **Documentation files only** – Only repository metadata, markdown, and text files are indexed. Issues, pull requests, comments, and other GitHub entities aren't indexed by this connector. To index those entities, use the corresponding [GitHub Cloud Issues](github-cloud-issues-overview.md) or [GitHub Cloud Pull Requests](github-cloud-pull-requests-overview.md) connectors.
 - **30-MB file size limit** – Only markdown and text files up to 30 MB in size are supported. Larger files aren't indexed.
 - **All-public-repository organizations not supported** – For security reasons, the connector doesn't support indexing organizations where all repositories are public. To unblock this scenario, contact Microsoft support.
 - **Permission updates latency** – Changes to GitHub repository or team access aren't reflected immediately in the Copilot index. Permission updates are picked up during the next full crawl, not during incremental syncs.
@@ -128,16 +130,16 @@ You can configure the GitHub Cloud Knowledge connector so that only users who ha
 
 You can control permissions in the following ways:
 
-- **Repository and team permissions** – Private repositories appear only for users with explicit repository access. Organization-level and team-based access restrictions are honored. Content that can't be mapped to a valid permission context is hidden to prevent accidental exposure.
+- **Repository and team permissions** – Private repositories appear only for users with explicit repository access. The connector honors organization-level and team-based access restrictions. It hides content that can't be mapped to a valid permission context to prevent accidental exposure.
 
 - **Secret teams not supported** – The connector doesn't support access granted exclusively through GitHub [secret teams](https://docs.github.com/en/organizations/organizing-members-into-teams/setting-team-visibility). Users who have repository access only through a secret team might not see that repository's content in Copilot and search results. If your organization uses secret teams to manage repository access, ensure those users also have access through a visible team or are explicitly added as collaborators.
 
 - **User identity mapping** – The connector maps GitHub user accounts to Microsoft Entra ID identities. If GitHub user emails match their Microsoft Entra ID UPNs, the mapping is automatic. If they differ, admins can provide a mapping rule using email, sign-in (login), or name. If direct mapping fails, you can use regular expressions (regex) to transform identity data. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
 
-- **Visible to everyone option** – You can choose not to enforce per-user permissions (setting the connector to index content as **Visible to everyone**). In that case, all indexed GitHub documentation is searchable by any user in the tenant. This works for non-confidential, public-style knowledge bases. For most scenarios, use the restricted mode so that results mirror GitHub permissions.
+- **Visible to everyone option** – You can choose not to enforce per-user permissions (setting the connector to index content as **Visible to everyone**). In that case, all indexed GitHub documentation is searchable by any user in the tenant. This option works for non-confidential, public-style knowledge bases. For most scenarios, use the restricted mode so that results mirror GitHub permissions.
 
 > [!IMPORTANT]
-> When you authenticate by using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account - the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
+> When you authenticate by using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, ensure you're signed in to the **correct** GitHub account - the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
 
 ## Next step
 

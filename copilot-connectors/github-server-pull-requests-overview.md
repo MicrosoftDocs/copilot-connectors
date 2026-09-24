@@ -7,10 +7,12 @@ ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.date: 06/02/2026
+ms.date: 09/24/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Server Pull Requests Microsoft 365 Copilot connector."
 ---
+
+<!-- cSpell:ignore deepseek BYOU -->
 
 # GitHub Server Pull Requests connector overview
 
@@ -37,10 +39,10 @@ The following table lists common use cases for the GitHub Server Pull Requests c
 
 | Department/role | Use case | Business benefit |
 | --- | --- | --- |
-| Engineering | Find the PR about "Docker Compose setup for app". | Locate a specific change by topic instantly, even when the user doesn't remember the PR number. |
+| Engineering | Find the PR about "Docker Compose setup for app". | Locate a specific change by topic instantly, even if you don't remember the PR number. |
 | Engineering | Show PRs about "Release v0.2.5". | Group all PRs related to a release for review and changelog generation. |
-| Engineering | Explain PR #47 in swift-chat. | Get a quick summary of a specific PR—description, status, reviewers—without opening GitHub. |
-| Engineering | Find PRs created by EmilyyyLiu. | Spotlight contributions from specific engineers for reviews, recognition, or follow-up. |
+| Engineering | Explain PR #47 in swift-chat. | Get a quick summary of a specific PR - description, status, reviewers - without opening GitHub. |
+| Engineering | Find PRs created by EmilyLiu. | Spotlight contributions from specific engineers for reviews, recognition, or follow-up. |
 | Engineering | Find the latest created PRs. | See the freshest work-in-progress across the org at a glance. |
 | DevOps/SRE | List PRs targeting the release branch and summarize their readiness. | Build a single-prompt release readiness view for go/no-go calls. |
 | DevOps/SRE | Which PRs include infrastructure or configuration changes based on metadata or labels? | Surface infra-impacting changes for review before they land. |
@@ -58,7 +60,7 @@ The following table lists common use cases for the GitHub Server Pull Requests c
 
 Developers can use this connector as a knowledge source in declarative agents they build with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
-By incorporating GitHub pull request data into agents, developers allow users to:
+By incorporating GitHub pull request data into agents, developers enable users to:
 
 - Retrieve and summarize PRs waiting for review.
 - Identify PRs tied to feature work, milestones, or infrastructure changes.
@@ -66,45 +68,45 @@ By incorporating GitHub pull request data into agents, developers allow users to
 
 ### Example prompts
 
-The following examples show prompts that agent builders can use to help users retrieve information from GitHub Server Pull Requests. The prompts reflect real patterns from customer usage.
+The following examples show prompts that agent builders can use to help users retrieve information from GitHub Server pull requests. The prompts reflect real patterns from customer usage.
 
-**Engineering**
+#### Engineering
 
-- Find the PR about "Docker Compose setup for app".
-- What is the PR about "Update README.md include badges"?
-- Find PRs mentioning "Add Amazon Bedrock deepseek-r1 model support".
-- Explain PR #47 in swift-chat.
-- Find PRs created by EmilyyyLiu.
+- Find the pull request about "Docker Compose setup for app".
+- What is the pull request about "Update README.md include badges"?
+- Find pull requests mentioning "Add Amazon Bedrock deepseek-r1 model support".
+- Explain pull request #47 in swift-chat.
+- Find pull requests created by EmilyLiu.
 
-**DevOps/SRE**
+#### DevOps/SRE
 
-- List PRs targeting the release branch and summarize their readiness.
-- Which PRs include infrastructure or configuration changes based on metadata or labels?
-- What PRs are blocking the upcoming production deployment?
+- List pull requests targeting the release branch and summarize their readiness.
+- Which pull requests include infrastructure or configuration changes based on metadata or labels?
+- What pull requests are blocking the upcoming production deployment?
 
-**Quality assurance**
+#### Quality assurance
 
-- Find closed PRs with the label "dependencies" in swift-chat.
-- What are the open PRs with the "dependencies" label?
-- Find closed PRs with the label "javascript" in swift-chat.
+- Find closed pull requests with the label "dependencies" in swift-chat.
+- What are the open pull requests with the "dependencies" label?
+- Find closed pull requests with the label "javascript" in swift-chat.
 
-**Release management**
+#### Release management
 
-- What's the status of PRs with milestones being "swift-chat-2"?
-- Find swift-chat PRs due by September 2025.
-- Summarize open PRs due by 2025 with milestone swift-chat-9.
-- What are the latest merged PRs?
+- What's the status of pull requests with milestones being "swift-chat-2"?
+- Find swift-chat pull requests due by September 2025.
+- Summarize open pull requests due by 2025 with milestone swift-chat-9.
+- What are the latest merged pull requests?
 
-**Engineering leadership**
+#### Engineering leadership
 
-- Provide a summary of high-priority PRs across teams.
-- Which PRs are open the longest, and who owns them?
-- Look at these PRs and count PRs per assignee so we can make sure the workload is balanced.
+- Provide a summary of high-priority pull requests across teams.
+- Which pull requests are open the longest, and who owns them?
+- Look at these pull requests and count pull requests per assignee so we can ensure the workload is balanced.
 
-**Cross-entity workflows**
+#### Cross-entity workflows
 
-- Find PRs that fix issue #56 in swift-chat.
-- Summarize PR #319 in drawer and its related email threads.
+- Find pull requests that fix issue #56 in swift-chat.
+- Summarize pull request #319 in drawer and its related email threads.
 - Create a document about `https://github.com/<org>/<repo>/pull/319`.
 
 ## GitHub Server Pull Requests connector capabilities and limitations
@@ -118,6 +120,7 @@ The GitHub Server Pull Requests connector offers the following key capabilities:
 
 The GitHub Server Pull Requests connector has the following limitations:
 
+- **GitHub Enterprise Cloud with data residency not supported** - Organizations hosted on dedicated `*.ghe.com` domains aren't currently supported. If your organization requires support for this scenario, contact Microsoft support.
 - **GitHub Enterprise Server only** – This connector is for GitHub Enterprise Server (on-premises or self-hosted) instances that meet API accessibility requirements. For GitHub.com, use the [GitHub Cloud Pull Requests connector](github-cloud-pull-requests-overview.md).
 - **No code diffs or commit details** – Code diffs, file changes, inline review comments, and commit-level details aren't indexed.
 - **No CI/CD pipeline indexing** – CI/CD pipelines aren't indexed beyond basic status metadata that might appear on PRs.
@@ -140,16 +143,16 @@ The following data types **aren't** indexed: code diffs, file changes, inline co
 
 The connector enforces GitHub's permission model so that users only see pull request information they're authorized to view.
 
-- **Repository and team permissions** – Private repository PRs appear only for users with explicit repository access. Organization-level and team-based access restrictions are honored. The connector hides content that can't be mapped to a valid identity to prevent exposure.
+- **Repository and team permissions** – Private repository PRs appear only for users with explicit repository access. The connector honors organization-level and team-based access restrictions. It hides content that can't be mapped to a valid identity to prevent exposure.
 
 - **Secret teams not supported** – The connector doesn't support access granted exclusively through GitHub [secret teams](https://docs.github.com/en/organizations/organizing-members-into-teams/setting-team-visibility). Users who have repository access only through a secret team might not see that repository's pull requests in Copilot and search results. If your organization uses secret teams to manage repository access, ensure those users also have access through a visible team or are explicitly added as collaborators.
 
 - **User identity mapping** – The connector maps GitHub user accounts to Microsoft Entra ID identities. Automatic mapping occurs when GitHub email addresses match Microsoft Entra ID. Admins can also map by email, sign-in (login), or name. Optional regex rules can transform identity attributes for consistent matching, and a manual fallback mapping is available when automatic mapping fails.
 
-- **Bring Your Own User (BYOU) scenarios** – In scenarios such as Bring Your Own User, individual users may need to share the appropriate identity attributes in their GitHub account settings so the connector can map them to Microsoft Entra ID.
+- **Bring Your Own User (BYOU) scenarios** – In scenarios such as Bring Your Own User, individual users might need to share the appropriate identity attributes in their GitHub account settings so the connector can map them to Microsoft Entra ID.
 
 > [!IMPORTANT]
-> When you authenticate using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account—the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
+> When you authenticate by using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, ensure you're signed in to the **correct** GitHub account—the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
 
 ## Next step
 
