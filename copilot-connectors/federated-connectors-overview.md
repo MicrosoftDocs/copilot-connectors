@@ -7,7 +7,7 @@ ms.author: lauragra
 manager: calvind
 ms.reviewer: mansipakhale
 ms.service: copilot-connectors
-ms.date: 09/21/2026
+ms.date: 09/24/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ms.audience: Admin
@@ -91,6 +91,8 @@ Admins can:
 - Enable or disable connectors at the tenant level.
 - Limit availability to specific Microsoft Entra ID groups by choosing **Add staging** in the **Staged Rollout** column.
 - Bulk disable all federated connectors by using PowerShell cmdlets, and selectively enable specific federated connectors in the Microsoft 365 admin center based on organizational policies and readiness. For more information, see [Manage federated connectors](manage-federated-connectors.md).
+
+Write, update, and delete tools are part of the connector and aren't enabled separately. If an already-enabled connector includes tools that create, update, or delete data, those tools are available to Copilot. Disabling a connector removes all of its tools.
  
 > [!NOTE]
 > **Admin review window**
@@ -106,6 +108,22 @@ Admins can:
 The following image shows the connector pane for the HubSpot federated connector.
  
 :::image type="content" source="media/federated-connectors/hubspot-connector.png" alt-text="Screenshot of the HubSpot connector in the admin center with Staged rollout and Enable/disable data source highlighted." lightbox="media/federated-connectors/hubspot-connector.png":::
+
+### View a connector's tools in the admin center
+
+Each federated connector's details page in the Microsoft 365 admin center includes a **Tools** section that lists the tools available to users in the organization, including tools that can modify or delete data. To view the tools:
+
+1. In the Microsoft 365 admin center, go to **Copilot connectors** > **Your connections** and select the federated connector.
+1. On the connector's details page, go to the **Tools** section and sign in to the third-party service.
+
+    Signing in to view a connector's tools in the Microsoft 365 admin center also signs you in to that connector in Microsoft 365 Copilot.
+
+1. Review the list of tools and note which tools can create, update, or delete data.
+
+> [!NOTE]
+> The tool list reflects the permissions of the account used to sign in. We recommend signing in with an account that has a high level of access to the connector so you can see the complete list of tools.
+
+Before enabling or continuing to use a connector that exposes write, update, or delete tools, review the connector's capabilities, privacy terms, and third-party agreements against your organization's security, compliance, and acceptable-use requirements. Update user and help-desk guidance so users understand that actions are performed using their own permissions in the third-party service.
  
 ## How to connect and use federated Copilot connectors
  
@@ -238,21 +256,6 @@ Users can also change approval settings for an individual tool.
 
 If a connector publisher adds a new write-capable tool or changes an existing one, the tool is set to **Needs approval**. Copilot asks for confirmation the next time it wants to use that tool.
 
-### View a connector's tools in the admin center
-
-Write, update, and delete tools are part of the connector and aren't enabled separately. The availability controls in [Admin experience and controls](#admin-experience-and-controls) continue to apply. Admins can enable or disable a connector for the tenant and limit it to specific groups. Disabling a connector removes all of its tools. If an already-enabled connector includes tools that create, update, or delete data, those tools are available to Copilot.
-
-Each federated connector's details page in the Microsoft 365 admin center includes a **Tools** section that lists the tools available to users in the organization, including tools that can modify or delete data. To view the tools:
-
-1. In the Microsoft 365 admin center, go to **Copilot connectors** > **Your connections** and select the federated connector.
-1. On the connector's details page, go to the **Tools** section and sign in to the third-party service.
-1. Review the list of tools and note which tools can create, update, or delete data.
-
-> [!NOTE]
-> The tool list reflects the permissions of the account used to sign in. We recommend signing in with an account that has a high level of access to the connector so you can see the complete list of tools.
-
-Before enabling or continuing to use a connector that exposes write, update, or delete tools, review the connector's capabilities, privacy terms, and third-party agreements against your organization's security, compliance, and acceptable-use requirements. Update user and help-desk guidance so users understand that actions are performed using their own permissions in the third-party service.
- 
 ## Security and compliance
  
 The following security and compliance features apply to federated connectors:
