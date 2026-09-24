@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the Freshservice connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: wangchen
 audience: Admin

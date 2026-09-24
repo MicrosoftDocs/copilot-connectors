@@ -1,6 +1,6 @@
 ---
 title: "Deploy the Asana connector"
-ms.author: lauragra
+ms.author: jasonjoh
 author: Kai-Cloud
 manager: zezhangzhao
 audience: Admin
@@ -13,7 +13,7 @@ description: "Find information about how to deploy the Asana Microsoft 365 Copil
 
 # Deploy the Asana connector
 
-The Asana Microsoft 365 Copilot connector integrates Asana tasks into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant task information directly within apps like Microsoft Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the Asana connector. 
+The Asana Microsoft 365 Copilot connector integrates Asana tasks into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant task information directly within apps like Microsoft Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the Asana connector.
 
 ## Prerequisites
 
@@ -63,7 +63,7 @@ Use the information in the following table to complete the OAuth client creation
 |Redirect URL | A required callback URL that the authorization server redirects to. | For **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`</br></br>For **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`|
 |Permission scopes | Scopes define what your app can access and what kind of requests it can make. | Select `Full permissions`.|
 |Manage distribution | Choose workspaces to be distributed. | Add specific workspaces that the connector can access or select **Any workspace**.|
-   
+
 Copy the client ID and client secret from the OAuth tab in the Asana app and paste them in the **Client ID** and **Client secret** fields. Choose **Authorize**, and use the same Asana admin account credentials to authenticate permission to crawl.
 
 > [!NOTE]
@@ -102,7 +102,7 @@ The Asana connector supports the following user access permissions:
 - Everyone
 - Only people with access to this data source (default)
 
-If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it. 
+If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it.
 
 In Asana, security permissions are defined via project permission schemes that contain site-level groups and project roles. You can also define task-level security through task-level permission schemes.
 
@@ -117,7 +117,7 @@ To identify which option is best for your organization:
 
 ### Customize content settings
 
-To can add or remove available properties from your Asana, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. 
+To can add or remove available properties from your Asana, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property.
 
 The following table lists the properties that are indexed by default.
 

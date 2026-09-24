@@ -1,7 +1,7 @@
 ---
 title: "Build declarative agents for Galileo by The Josh Bersin Company"
 ms.author: xupzhou
-author: xupzhou
+author: PennyZhou-MSFT
 manager: calvind
 audience: Admin
 ms.audience: Admin

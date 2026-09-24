@@ -1,8 +1,8 @@
 ---
 title: Deploy the GitLab Knowledge Cloud connector
 description: Learn how to deploy and configure the GitLab Knowledge Cloud Microsoft 365 Copilot connector, including prerequisites, required permissions, and steps to connect your GitLab environment.
-author: Lauragra
-ms.author: lauragra
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -82,36 +82,36 @@ Choose one of the following options:
 - **Only people with access to this data source** (default)
 - **Everyone**
 
-If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them. If you choose **Everyone**, indexed data appears in the search results for all users. 
+If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them. If you choose **Everyone**, indexed data appears in the search results for all users.
 
 #### Map identities
 
-To ensure that permissions are applied correctly, map GitLab user identities to Microsoft Entra ID. Choose one of the following options for mapping: 
+To ensure that permissions are applied correctly, map GitLab user identities to Microsoft Entra ID. Choose one of the following options for mapping:
 
-- **Email:** Maps GitLab email to Microsoft Entra ID user properties. 
-- **Login:** Maps GitLab logins with Microsoft Entra ID user properties. 
-- **Name:** Maps GitLab name with Microsoft Entra ID user properties. 
+- **Email:** Maps GitLab email to Microsoft Entra ID user properties.
+- **Login:** Maps GitLab logins with Microsoft Entra ID user properties.
+- **Name:** Maps GitLab name with Microsoft Entra ID user properties.
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md). 
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md).
 
 ### Customize content settings
 
-On the **Data** tab, you can verify property mappings in the sample data for metadata such as content, labels, description, and timestamps. 
+On the **Data** tab, you can verify property mappings in the sample data for metadata such as content, labels, description, and timestamps.
 
 #### Content filter
 
-You can configure a time-range filter for the connector. The default setting is 365 days. 
+You can configure a time-range filter for the connector. The default setting is 365 days.
 
 #### Manage properties
 
-You can add or remove available properties from the data source, assign a schema to the property (searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. 
+You can add or remove available properties from the data source, assign a schema to the property (searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property.
 
 ### Customize sync intervals
 
 Configure sync intervals for full and incremental crawls:
 
-- **Incremental crawl:** Default is every 15 minutes.  
-- **Full crawl:** Default is daily.  
+- **Incremental crawl:** Default is every 15 minutes.
+- **Full crawl:** Default is daily.
 
 You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 

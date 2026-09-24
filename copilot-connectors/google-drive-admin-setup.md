@@ -2,8 +2,8 @@
 title: Set up the Google Workspace service for Google Drive connector ingestion
 description: Learn how to configure the Google Workspace environment and set up prerequisites for deploying the Google Drive connector in Microsoft 365.
 ms.topic: concept-article
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.date: 04/16/2026
 ---
@@ -61,7 +61,7 @@ Enable the following APIs in your Google Cloud project:
 - [Admin SDK API](https://console.developers.google.com/apis/api/admin.googleapis.com/overview?project=[PROJECT_ID])
 - [Drive API](https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=[PROJECT_ID])
 
-![Screenshot that shows how to check the API enablement.](media/google-drive-connector/step-4.png) 
+![Screenshot that shows how to check the API enablement.](media/google-drive-connector/step-4.png)
 
 ## Create a Google Cloud service account
 
@@ -74,7 +74,7 @@ To create a Google Cloud service account:
 1. Select your project.
 1. Select **Create Service Account**.
 
-    ![Screenshot that shows how to create a new service account step2.](media/google-drive-connector/step-6.png) 
+    ![Screenshot that shows how to create a new service account step2.](media/google-drive-connector/step-6.png)
 
 1. Enter a name, ID, and optional description.
 1. Select **Create and Continue**.
@@ -84,12 +84,12 @@ To create a Google Cloud service account:
 1. Skip **Permissions** and **Principals with access**, and then select **Done**.
 1. On the Service Accounts page, select the three-dot menu under **Actions** and select **Manage Keys**.
 
-    ![Screenshot that shows how to get the keys step1.](media/google-drive-connector/step-8.png)   
+    ![Screenshot that shows how to get the keys step1.](media/google-drive-connector/step-8.png)
 
 1. Select **Add Key** > **Create New Key**.
 1. Choose **JSON** as the key type and select **Create**.
 
-    ![Screenshot that shows how to get the keys step2.](media/google-drive-connector/step-9.png)  
+    ![Screenshot that shows how to get the keys step2.](media/google-drive-connector/step-9.png)
 
 1. A private JSON key is downloaded to your computer.
 
@@ -118,7 +118,7 @@ To add OAuth scopes to your service account:
     > [!NOTE]
     > Legacy incremental crawl is deprecated effective May 15, 2026. The new reports API–based incremental crawl (available starting September 2025) requires adding the OAuth scope `https://www.googleapis.com/auth/admin.reports.audit.readonly` to the service account. To ensure incremental crawls continue to run, update all connections created before October 2025 to include this scope.
 
-    ![Screenshot that shows how to add api scope.](media/google-drive-connector/step-13.png) 
+    ![Screenshot that shows how to add api scope.](media/google-drive-connector/step-13.png)
 
 ## Get the OAuth 2.0 client ID
 
@@ -132,9 +132,9 @@ To get the client ID:
 
 Provide the following information to the admin to authenticate the connector during the admin center setup process:
 
-- Google Workspace domain  
-- Admin email  
-- JSON private key  
+- Google Workspace domain
+- Admin email
+- JSON private key
 
 ## Next step
 

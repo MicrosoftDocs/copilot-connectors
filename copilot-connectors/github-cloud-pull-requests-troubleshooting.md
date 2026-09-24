@@ -2,8 +2,8 @@
 title: Troubleshoot issues with the GitHub Cloud Pull Requests connector
 description: Find troubleshooting information for the GitHub Cloud Pull Requests Microsoft 365 Copilot connector, including common errors and steps to resolve them.
 ms.topic: troubleshooting-general
-author: lauragra
-ms.author: lauragra
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.date: 11/20/2025
 ms.localizationpriority: Medium

@@ -1,19 +1,19 @@
 ---
-title: "Unily connector" 
-ms.author: lauragra
-author: lauragra
+title: "Unily connector"
+ms.author: jasonjoh
+author: jasonjoh
 manager: ereza
 audience: Admin
-ms.audience: Admin 
+ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.localizationpriority: medium 
-description: "Set up the Unily Microsoft 365 Copilot connector." 
+ms.localizationpriority: medium
+description: "Set up the Unily Microsoft 365 Copilot connector."
 ms.date: 12/25/2025
 ---
 
 # Unily connector
 
-The Unily Microsoft 365 Copilot connector allows your organization to index content from the Unily intranet. After you configure the connector, end users can search for this content in Microsoft 365 Copilot and from any Microsoft Search client. 
+The Unily Microsoft 365 Copilot connector allows your organization to index content from the Unily intranet. After you configure the connector, end users can search for this content in Microsoft 365 Copilot and from any Microsoft Search client.
 
 ## Capabilities
 - Index Unily content (the following document types are supported: App, Doc Brand Asset, Image Brand Asset, FAQ, Form, Quiz, Idea, Location, Mandatory Read Article, Mandatory Read Doc, Media Content, Story, Knowledge Article, SitePageModern).
@@ -34,7 +34,7 @@ The Unily Microsoft 365 Copilot connector allows your organization to index cont
 
 ## Get Started
 
-### 1. Display name 
+### 1. Display name
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated item. The display name also signifies trusted content. Display name is also used as a content source filter. A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. Unily URL
@@ -44,7 +44,7 @@ Use your organization’s Unily URL. This URL is the specific web address used t
 For the Unily Copilot connector, use OAuth 2.0 for authentication.
 
 To authenticate, enter the Client ID and Client Secret. The Client ID is a unique identifier assigned to your application for making requests to the Unily API. The Client Secret is a confidential key used alongside the Client ID to securely authenticate your application with the Unily API.
- 
+
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
@@ -102,7 +102,7 @@ The refresh interval determines how often your data is synced between the data s
 ### Copilot does not recognize branded Unily Intranet names
 To ensure optimal relevance and accuracy in Microsoft 365 Copilot responses, administrators should update the connector description to include the branded name of your organization’s Unily intranet. Many Unily customers rebrand their intranet, and Copilot prioritizes results more effectively when these branded names are explicitly listed in the connector description. To update this setting, go to **Admin Center → Copilot → Connectors**, select your Unily connection, choose **Edit description**, and add a clear reference to your Unily intranet’s branded name in the description. This helps Copilot recognize user queries that refer to the intranet by its custom name and improves the discoverability and ranking of Unily content.
 
-After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). 
+After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
 

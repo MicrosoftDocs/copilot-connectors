@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the Miro connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: anggao
 audience: Admin
@@ -34,5 +34,5 @@ The following table lists common errors and recommended troubleshooting steps.
 
 ## Related content
 
-- [Miro connector overview](miro-overview.md)  
+- [Miro connector overview](miro-overview.md)
 - [Deploy the Miro connector](miro-deployment.md)

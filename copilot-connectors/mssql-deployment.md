@@ -130,7 +130,7 @@ In a SQL record system, a soft delete is a technique where, instead of physicall
 
 #### Manage properties
 
-The SQL connector picks up all columns specified in the full crawl SQL query as source properties for ingestion. In this step, you define the search schema for your content by defining the search annotations - **Search**, **Retrieve**, **Query**, and **Refine** - for the selected source properties, and by assigning semantic labels and aliases to enhance search relevance. To learn more about search schema, see the documentation on [guidelines for manage properties](deployment-overview.md#guidelines-for-manage-properties).
+The SQL connector picks up all columns specified in the full crawl SQL query as source properties for ingestion. In this step, you define the search schema for your content by defining the search annotations - **Search**, **Retrieve**, **Query**, and **Refine** - for the selected source properties, and by assigning semantic labels and aliases to enhance search relevance. To learn more about search schema, see the documentation on [guidelines for manage properties](deployment-overview.md#search-schema-attributes).
 
 Because the connector indexes the columns returned by your full crawl query, there are no default properties to map. Review the generated source properties and set the appropriate **Search**, **Retrieve**, **Query**, and **Refine** annotations and semantic labels for your scenario.
 

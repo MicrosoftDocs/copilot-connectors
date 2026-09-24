@@ -1,7 +1,7 @@
 ---
 title: "GitHub Cloud Knowledge connector overview"
-ms.author: lauragra
-author: Lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin

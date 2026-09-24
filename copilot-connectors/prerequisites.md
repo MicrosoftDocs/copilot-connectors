@@ -1,7 +1,7 @@
 ---
 title: "Prerequisites for deploying connectors"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.audience: Admin
 ms.topic: concept-article
@@ -14,7 +14,7 @@ ms.date: 06/01/2026
 
 Microsoft 365 Copilot connectors bring external data into Microsoft 365 experiences such as Microsoft 365 Copilot and Microsoft Search. The following types of connectors are available:
 
-- **Synced connectors** index content from an external data source into the Microsoft 365 substrate on a recurring schedule. 
+- **Synced connectors** index content from an external data source into the Microsoft 365 substrate on a recurring schedule.
 - **Federated connectors** query the external data source at runtime without indexing.
 
 This article covers the prerequisites that apply to synced and federated connectors.
@@ -47,7 +47,7 @@ Indexing of synced connector data incurs no extra cost for tenants with Microsof
 Federated connectors require:
 
 - **A Microsoft 365 Copilot add-on license for every user** who queries the federated source. For an eligibility matrix, see [Licensing](#licensing).
-- **An OAuth-based identity configuration** between the external service and Microsoft Entra ID, so Copilot can query the source on behalf of the signed-in user. For custom federated connectors, see [Set up custom federated connectors](custom-federated-connectors.md).
+- **An OAuth-based identity configuration** between the external service and Microsoft Entra ID, so Copilot can query the source on behalf of the signed-in user. For custom federated connectors, see [Set up custom federated connectors](set-up-custom-federated-connectors.md).
 - **A compatible external data source** that supports the required authentication and query patterns. For details, see [Federated connectors overview](federated-connectors-overview.md).
 
 Unlike synced connectors, federated connectors don't require admin access to the data source for ingestion, and they don't index content. Content stays in the source system and is queried at runtime.

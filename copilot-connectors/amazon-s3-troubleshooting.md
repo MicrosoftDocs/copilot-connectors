@@ -1,6 +1,6 @@
 ---
 title: "Amazon S3 connector troubleshooting"
-author: lauragra
+author: jasonjoh
 ms.author: kailiang
 manager: zezhangzhao
 audience: Admin

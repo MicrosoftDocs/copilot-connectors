@@ -1,7 +1,7 @@
 ---
 title: "Azure DevOps Work Items connector troubleshooting"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: vivg
 audience: Admin
@@ -32,5 +32,5 @@ The following table lists common errors and recommended troubleshooting steps.
 
 ## Related content
 
-- [Azure DevOps Work Items connector overview](azure-devops-work-items-overview.md)  
+- [Azure DevOps Work Items connector overview](azure-devops-work-items-overview.md)
 - [Deploy the Azure DevOps Work Items connector](azure-devops-work-items-deployment.md)

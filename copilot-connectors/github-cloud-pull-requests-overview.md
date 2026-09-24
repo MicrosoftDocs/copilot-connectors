@@ -1,7 +1,7 @@
 ---
 title: "GitHub Cloud Pull Requests connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin

@@ -1,7 +1,7 @@
 ---
 title: "Adobe Experience Manager Sites connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin
@@ -62,7 +62,7 @@ The Adobe Experience Manager Sites connector has the following limitations:
 
 ## Data types indexed from Adobe Experience Manager Sites
 
-By default, the connector indexes published pages and their associated properties (for example, title, description, navigation title, tags, link, and timestamps). 
+By default, the connector indexes published pages and their associated properties (for example, title, description, navigation title, tags, link, and timestamps).
 
 The **Manage properties** settings expose default properties—such as **Title**, **Description**, **Navigation Title**, **Tags**, **Link**, **CreatedTime**, **ModifiedTime**, and **PublishedTime**—and allow admins to adjust schema flags (searchable, queryable, retrievable) to shape how content appears in results.
 

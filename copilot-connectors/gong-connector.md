@@ -1,13 +1,13 @@
---- 
-title: "Gong connector" 
-ms.author: lauragra
-author: lauragra
+---
+title: "Gong connector"
+ms.author: jasonjoh
+author: jasonjoh
 manager: harshkum
 audience: Admin
-ms.audience: Admin 
-ms.topic: article 
-ms.localizationpriority: medium 
-description: "Find information about how to deploy the Gong Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options." 
+ms.audience: Admin
+ms.topic: article
+ms.localizationpriority: medium
+description: "Find information about how to deploy the Gong Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ms.date: 12/25/2025
 ---
 

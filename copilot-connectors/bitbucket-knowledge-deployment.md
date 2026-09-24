@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Bitbucket Knowledge connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin
@@ -30,13 +30,13 @@ Before you deploy the Bitbucket Knowledge connector, make sure that you meet the
   2. Choose the gear icon on the top right and select **Workspace settings**.
   3. Under **Workflows**, select **OAuth consumers**.
   4. Choose **Add consumer**, and provide the redirect URL:
-     - Microsoft 365 Enterprise:  
+     - Microsoft 365 Enterprise:
        `https://gcs.office.com/v1.0/admin/oauth/callback`
-     - Microsoft 365 Government:  
+     - Microsoft 365 Government:
        `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
   5. Allow the key to have these permissions:
-     - Account  
-     - Repositories  
+     - Account
+     - Repositories
      - Pull requests (required by Bitbucket API to access repo metadata)
   6. Save the configuration and copy the key and secret values.
 
@@ -106,9 +106,9 @@ You can control which users can see indexed content:
 
 Map Bitbucket user identities to Microsoft Entra ID. You can configure:
 
-- Full name mapping  
-- Public name mapping  
-- Regex transformation (for example, `{0}@your-domain`)  
+- Full name mapping
+- Public name mapping
+- Regex transformation (for example, `{0}@your-domain`)
 
 ### Customize content settings
 

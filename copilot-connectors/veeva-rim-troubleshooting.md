@@ -1,7 +1,7 @@
 ---
 title: "Veeva Vault RIM connector troubleshooting"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: anggao
 audience: Admin
@@ -15,7 +15,7 @@ description: "Find troubleshooting information for the Veeva Vault RIM Microsoft
 # Troubleshoot issues with the Veeva Vault RIM connector
 
 The Veeva Vault RIM Microsoft 365 Copilot connector allows organizations to index regulatory submissions and compliance documents from Veeva Vault into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search.
- 
+
 This article provides troubleshooting information for common errors that you might encounter when you deploy the Veeva Vault RIM connector.
 
 ## Veeva Vault RIM connector troubleshooting

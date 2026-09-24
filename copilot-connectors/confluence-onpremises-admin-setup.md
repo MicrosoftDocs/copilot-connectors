@@ -1,8 +1,8 @@
 ---
 ms.date: 12/02/2025
 title: "Set up the Confluence On-premises Service for Connector Ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -67,7 +67,7 @@ Alternatively, to get the instance URL:
 - Open Confluence in your web browser.
 - Copy the address from your browser's address bar.
     - If you're viewing the dashboard, the site URL is part of the address that comes before `/index-action` or `/#` (for example, `/#popular`, `/#recently-worked`).
-    - If you're viewing a page or blog post, the site URL is the part of the address that comes before `/display` or `/pages`. 
+    - If you're viewing a page or blog post, the site URL is the part of the address that comes before `/display` or `/pages`.
 
 The following are examples of Confluence on-premises site URLs:
 
@@ -170,7 +170,7 @@ Grant read permissions on all applicable tables. For more information, see [Give
 
 > [!IMPORTANT]
 > Make the service account a Confluence Global Administrator. Confluence Global Administrators have full administrative permissions. To verify the permissions:
-> 
+>
 > - Go to **Administration** > **General Configuration** > **Global Permissions**.
 > - Look for the group **Confluence-administrators**. This group has all permissions enabled: Can Use, Personal Space, Create Space, Confluence Administrator, and System Administrator.
 >

@@ -3,7 +3,7 @@ title: "Troubleshoot issues with the PagerDuty Incidents connector"
 ms.author: wangchen
 author: wangchen
 manager: zezhangzhao
-ms.reviewer: lauragra
+ms.reviewer: jasonjoh
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general

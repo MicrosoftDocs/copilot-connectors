@@ -1,7 +1,7 @@
 ---
 title: "Adobe Experience Manager Assets connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin
@@ -24,7 +24,7 @@ Many organizations rely on AEM Assets as their central digital asset management 
 - **Brand consistency at scale:** Find approved logos, product images, templates, and campaign materials for use in Word, PowerPoint, Teams, and more.
 - **Enhanced productivity:** Use natural‑language across Copilot to search, reference, summarize, and preview assets without leaving Microsoft 365.
 
-The following table lists use cases for different audiences. 
+The following table lists use cases for different audiences.
 
 | Department/Role      | Use case | Business benefit |
 |----------------------|----------|------------------|

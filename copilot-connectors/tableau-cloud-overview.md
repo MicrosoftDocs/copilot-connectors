@@ -3,7 +3,7 @@ title: "Tableau Cloud connector overview"
 ms.author: danielabo
 author: danipocket
 manager: calvind
-ms.reviewer: lauragra
+ms.reviewer: jasonjoh
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
