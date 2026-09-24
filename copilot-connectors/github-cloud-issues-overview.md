@@ -7,10 +7,12 @@ ms.reviewer: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
-ms.date: 06/02/2026
+ms.date: 09/24/2026
 ms.topic: concept-article
 ms.localizationpriority: Medium
 ---
+
+<!-- cSpell:ignore thinc numpy -->
 
 # GitHub Cloud Issues connector overview
 
@@ -20,7 +22,7 @@ When you configure the GitHub Cloud Issues connector for your organization and i
 
 ## Why use the GitHub Cloud Issues connector to index your data?
 
-For many engineering teams, GitHub Issues is the primary system of record for feature requests, bugs, and operational work items. However, this information is often siloed in GitHub, which makes it harder for PMs, engineers, support, and stakeholders to understand what's happening without switching between tools. The GitHub Cloud Issues Copilot connector indexes issues from GitHub.com so that developers, PMs, support staff, and engineering leaders can discover and summarize relevant issues within Microsoft 365. Users can ask natural-language questions - such as "What are the open bugs in the elysia repo?" - and receive grounded, contextual responses with links back to the original issues in GitHub.
+For many engineering teams, GitHub Issues is the primary system of record for feature requests, bugs, and operational work items. However, this information is often siloed in GitHub, which makes it harder for PMs, engineers, support, and stakeholders to understand what's happening without switching between tools. The GitHub Cloud Issues Copilot connector indexes issues from GitHub.com so that developers, PMs, support staff, and engineering leaders can discover and summarize relevant issues within Microsoft 365. Users can ask natural-language questions - such as "What are the open bugs in the Project8 repo?" - and receive grounded, contextual responses with links back to the original issues in GitHub.
 
 The GitHub Cloud Issues connector provides the following benefits:
 
@@ -37,20 +39,20 @@ The following table lists common use cases for the GitHub Cloud Issues connector
 
 | Department/role | Use case | Business benefit |
 | --- | --- | --- |
-| Engineering | Find the issue about "Error analyzing large collection" in the elysia repo. | Locate the specific bug report instantly so engineers can investigate without searching GitHub manually. |
+| Engineering | Find the issue about "Error analyzing large collection" in the Project8 repo. | Locate the specific bug report instantly so engineers can investigate without searching GitHub manually. |
 | Engineering | Show issues about the Gemini API. | Group related bug reports across repos to identify systemic problems. |
 | Engineering | Summarize the issue about "Image cannot be displayed in chat". | Compress long issue threads into actionable summaries that engineers can use to scope work. |
-| Engineering | Find issues mentioning "no matching distribution found". | Surface install/dependency issues quickly so they can be reproduced and resolved. |
-| DevOps/SRE | Find issues with more than 16 comments. | Identify hot, contentious, or high-engagement issues that may need leadership attention. |
+| Engineering | Find issues mentioning "no matching distribution found". | Surface install and dependency issues quickly so they can be reproduced and resolved. |
+| DevOps/SRE | Find issues with more than 16 comments. | Identify hot, contentious, or high-engagement issues that might need leadership attention. |
 | IT support/Help desk | Find the GitHub issue about "Python Backend – Error with Gemini API". | Resolve user tickets faster by surfacing the matching existing issue and its discussion. |
-| IT support/Help desk | Find the GitHub closed issue about the example link. | Quickly confirm whether a reported problem has already been resolved. |
-| Product management | Find open issues in the elysia repository. | See the current backlog at a glance to prioritize the next milestone. |
+| IT support/Help desk | Find the GitHub closed issue about the example link. | Quickly confirm whether a reported problem is already resolved. |
+| Product management | Find open issues in the Project8 repository. | See the current backlog at a glance to prioritize the next milestone. |
 | Product management | Summarize issues in milestone swift-chat-4 sorted by creation time. | Prepare milestone reviews without manually exporting from GitHub. |
 | Product management | What are the issues with due date 2025-12-20? | Plan around deadlines and identify schedule risks early. |
 | Engineering leadership | Find issues closed by afc163 and sort by modification date. | Recognize contributor impact and review recent closures for retrospectives. |
 | Engineering leadership | Show issue #38 and all PRs related to it. | Trace work items end-to-end (issue → PR → release) for status reporting. |
 | Engineering leadership | Tell me about the issues closed in H1 2025. | Generate period summaries for QBRs and leadership updates. |
-| Security/compliance | Find issues that hellohejinyu commented "try Modal?" on. | Trace specific discussion threads for audit or follow-up. |
+| Security/compliance | Find issues that AmberR commented "try Modal?" on. | Trace specific discussion threads for audit or follow-up. |
 
 ## Build agents with the GitHub Cloud Issues connector
 
@@ -60,49 +62,49 @@ By connecting GitHub Issues to these agents, you can build experiences that:
 
 - Answer questions about current issue load and priorities.
 - Summarize related issues for a given feature or incident.
-- Help teams plan sprints and releases using live issue data.
+- Help teams plan sprints and releases by using live issue data.
 
 ### Example prompts
 
 The following examples show prompts that agent builders can use to help users retrieve information from GitHub Cloud Issues. The prompts reflect real patterns from customer usage.
 
-**Engineering**
+#### Engineering
 
 - Find the issue about "Error analyzing large collection".
 - Summarize the issue about "Image cannot be displayed in chat".
 - Find issues mentioning "Inconsistent Documentation".
 - Explain issue #56 in swift-chat.
 
-**DevOps/SRE**
+#### DevOps/SRE
 
 - Find issues with more than 16 comments.
 - Show issues with 8 to 9 comments.
-- Find issues mentioning "Error importing thinc/numpy dependencies when running `elysia start`".
+- Find issues mentioning "Error importing thinc/numpy dependencies when running `Project8 start`".
 
-**IT support/Help desk**
+#### IT support/Help desk
 
 - Find the GitHub issue about "Python Backend – Error with Gemini API".
 - Find the GitHub closed issue about the example link.
 - Find issue #31 in a repository with description "Python package".
 
-**Product management**
+#### Product management
 
-- Find open issues in the elysia repository.
+- Find open issues in the Project8 repository.
 - Summarize issues in milestone swift-chat-4 and sort by creation time.
 - What are the issues with due date 2025-12-20?
-- Find issues with the milestone "elysia-4".
+- Find issues with the milestone "Project8-4".
 
-**Engineering leadership**
+#### Engineering leadership
 
 - Find issues closed by afc163 and sort by modification date.
 - Show issue #38 and all PRs related to it.
 - Tell me about the issues closed in H1 2025.
 - Summarize and create a document about issues created on September 5, 2025.
 
-**Cross-entity workflows**
+#### Cross-entity workflows
 
-- List issues in milestone elysia-10 and their related PRs, and draft an email to summarize it.
-- Find all PRs related to issue #31 in the elysia repo and draft a document to summarize it.
+- List issues in milestone Project8-10 and their related PRs, and draft an email to summarize it.
+- Find all PRs related to issue #31 in the Project8 repo and draft a document to summarize it.
 - Find issues closed by afc163 and draft an email summarizing them.
 
 ## GitHub Cloud Issues connector capabilities and limitations
@@ -116,6 +118,7 @@ The GitHub Cloud Issues connector has the following key capabilities:
 
 The GitHub Cloud Issues connector has the following limitations:
 
+- **GitHub Enterprise Cloud with data residency not supported** - Organizations hosted on dedicated `*.ghe.com` domains aren't currently supported. If your organization requires support for this scenario, contact Microsoft support.
 - **GitHub Cloud only** – On-premises or self-hosted GitHub instances aren't supported. Use the [GitHub Server Issues connector](github-server-issues-overview.md) for GitHub Enterprise Server.
 - **No CI/CD pipeline indexing** – GitHub Actions and CI/CD pipelines aren't indexed beyond any basic status information that might appear in issue fields.
 - **Optimized for GitHub Enterprise** – The connector is designed for GitHub Enterprise. Functionality on Free or Team plans might be limited.
@@ -137,7 +140,7 @@ The following table describes the data types that the connector indexes and how 
 
 You can configure the GitHub Cloud Issues connector so that only users who have access to a GitHub repository can see its issues in Copilot responses and search results. The connector enforces the GitHub permission model as follows:
 
-- **Repository and team permissions** – If a repository is private or restricted to specific teams or users, only those authorized users can see issues from that repository. If a repository is visible to a wider group in your organization, its issues are discoverable to that audience in Copilot and Microsoft Search. Content that can't be mapped to a valid permission context is hidden to prevent accidental exposure.
+- **Repository and team permissions** – If a repository is private or restricted to specific teams or users, only those authorized users can see issues from that repository. If a repository is visible to a wider group in your organization, its issues are discoverable to that audience in Copilot and Microsoft Search. The connector hides content that it can't map to a valid permission context to prevent accidental exposure.
 
 - **Secret teams not supported** – The connector doesn't support access granted exclusively through GitHub [secret teams](https://docs.github.com/en/organizations/organizing-members-into-teams/setting-team-visibility). Users who have repository access only through a secret team might not see that repository's issues in Copilot and Microsoft Search. If your organization uses secret teams to manage repository access, ensure those users also have access through a visible team or are explicitly added as collaborators.
 
@@ -146,7 +149,7 @@ You can configure the GitHub Cloud Issues connector so that only users who have 
 - **Visible to everyone option** – You can choose not to enforce per-user permissions (setting the connector to index content as **Visible to everyone**). In that case, all indexed GitHub issues are searchable by any user in the tenant. For most scenarios, use the restricted mode so that results mirror GitHub permissions.
 
 > [!IMPORTANT]
-> When you authenticate by using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, make sure you're signed in to the **correct** GitHub account - the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
+> When you authenticate by using OAuth (the recommended authentication method), the connector authorizes whichever GitHub account is currently signed in to your browser session. Before you start the OAuth flow, ensure you're signed in to the **correct** GitHub account - the one that has access to the organizations and repositories you intend to index. If you have multiple GitHub accounts, sign out of the others first, or use a separate browser profile or an InPrivate/incognito window to avoid accidentally authorizing the wrong account.
 
 ## Next step
 

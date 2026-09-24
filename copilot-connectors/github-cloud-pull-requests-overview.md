@@ -7,10 +7,12 @@ ms.reviewer: dannyyao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.date: 06/02/2026
+ms.date: 09/24/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Cloud Pull Requests Microsoft 365 Copilot connector."
 ---
+
+<!-- cSpell:ignore deepseek BYOK -->
 
 # GitHub Cloud Pull Requests connector overview
 
@@ -37,10 +39,10 @@ The following table lists common use cases for the GitHub Cloud Pull Requests co
 
 | Department/role | Use case | Business benefit |
 | --- | --- | --- |
-| Engineering | Find the PR about "Docker Compose setup for app". | Locate a specific change by topic instantly, even when the user doesn't remember the PR number. |
+| Engineering | Find the PR about "Docker Compose setup for app". | Locate a specific change by topic instantly, even if you don't remember the PR number. |
 | Engineering | Show PRs about "Release v0.2.5". | Group all PRs related to a release for review and changelog generation. |
-| Engineering | Explain PR #47 in swift-chat. | Get a quick summary of a specific PR—description, status, reviewers—without opening GitHub. |
-| Engineering | Find PRs created by EmilyyyLiu. | Spotlight contributions from specific engineers for reviews, recognition, or follow-up. |
+| Engineering | Explain PR #47 in swift-chat. | Get a quick summary of a specific PR - description, status, reviewers - without opening GitHub. |
+| Engineering | Find PRs created by EmilyLiu. | Spotlight contributions from specific engineers for reviews, recognition, or follow-up. |
 | Engineering | Find the latest created PRs. | See the freshest work-in-progress across the org at a glance. |
 | Quality assurance | Find closed PRs with the label "dependencies" in swift-chat. | Identify dependency upgrades that need regression testing. |
 | Quality assurance | What are the open PRs with the "dependencies" label? | Surface dependency PRs that still need review and validation. |
@@ -48,7 +50,7 @@ The following table lists common use cases for the GitHub Cloud Pull Requests co
 | Release management | Find swift-chat PRs due by September 2025. | Identify PRs at risk of missing target dates so they can be expedited or descoped. |
 | Release management | What are the latest merged PRs? | Build release notes and changelogs from recent merges with one prompt. |
 | Compliance/audit | Show latest updated PRs and group them by assignees. | Generate workload distribution snapshots for audits or rebalancing. |
-| Compliance/audit | Find closed PRs with the tag "dependencies" in swift-chat and bucket by month. | Produce time-series views of dependency hygiene for compliance reporting. |
+| Compliance or audit | Find closed PRs with the tag "dependencies" in swift-chat and bucket by month. | Produce time-series views of dependency hygiene for compliance reporting. |
 | Engineering leadership | Summarize and prioritize a set of PR URLs across the swift-chat repository. | Triage a batch of in-flight changes for leadership reviews. |
 | Cross-team collaboration | What is the PR about "Support Dark Mode on Android, iOS and Mac" and related projects? | Connect PRs to broader initiatives and downstream impact for planning. |
 
@@ -56,7 +58,7 @@ The following table lists common use cases for the GitHub Cloud Pull Requests co
 
 Developers can use this connector as a knowledge source in declarative agents they build with [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/copilot-studio-agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
-By incorporating GitHub pull request data into agents, developers allow users to:
+By incorporating GitHub pull request data into agents, developers enable users to:
 
 - Retrieve and summarize PRs waiting for review.
 - Identify PRs tied to feature work, milestones, or infrastructure changes.
@@ -64,45 +66,45 @@ By incorporating GitHub pull request data into agents, developers allow users to
 
 ### Example prompts
 
-The following examples show prompts that agent builders can use to help users retrieve information from GitHub Cloud Pull Requests. The prompts reflect real patterns from customer usage.
+The following examples show prompts that agent builders can use to help users retrieve information from GitHub Cloud pull requests. The prompts reflect real patterns from customer usage.
 
-**Engineering**
+#### Engineering
 
-- Find the PR about "Docker Compose setup for app".
-- What is the PR about "Update README.md include badges"?
-- Find PRs mentioning "Add Amazon Bedrock deepseek-r1 model support".
-- Explain PR #47 in swift-chat.
-- Find PRs created by EmilyyyLiu.
+- Find the pull request about "Docker Compose setup for app".
+- What is the pull request about "Update README.md include badges"?
+- Find pull requests mentioning "Add Amazon Bedrock deepseek-r1 model support".
+- Explain pull request #47 in swift-chat.
+- Find pull requests created by EmilyLiu.
 
-**Quality assurance**
+#### Quality assurance
 
-- Find closed PRs with the label "dependencies" in swift-chat.
-- What are the open PRs with the "dependencies" label?
-- Find closed PRs with the label "javascript" in swift-chat.
+- Find closed pull requests with the label "dependencies" in swift-chat.
+- What are the open pull requests with the "dependencies" label?
+- Find closed pull requests with the label "javascript" in swift-chat.
 
-**Release management**
+#### Release management
 
-- What's the status of PRs with milestones being "swift-chat-2"?
-- Find swift-chat PRs due by September 2025.
-- Summarize open PRs due by 2025 with milestone swift-chat-9.
-- What are the latest merged PRs?
+- What's the status of pull requests with milestones being "swift-chat-2"?
+- Find swift-chat pull requests due by September 2025.
+- Summarize open pull requests due by 2025 with milestone swift-chat-9.
+- What are the latest merged pull requests?
 
-**Compliance/audit**
+#### Compliance/audit
 
-- Show the latest updated PRs and group them by assignees.
-- Find closed PRs with the tag "dependencies" in swift-chat and bucket them by month.
-- What are the completed PRs by thinkasany last year?
+- Show the latest updated pull requests and group them by assignees.
+- Find closed pull requests with the tag "dependencies" in swift-chat and bucket them by month.
+- What are the completed pull requests by AmberR last year?
 
-**Engineering leadership**
+#### Engineering leadership
 
-- Look at these PRs and count PRs per assignee so we can make sure the workload is balanced.
-- Summarize and prioritize these PRs: `https://github.com/<org>/<repo>/pull/14`;`https://github.com/<org>/<repo>/pull/13`.
-- Find latest created PRs and group them by creation time.
+- Look at these pull requests and count pull requests per assignee so we can ensure the workload is balanced.
+- Summarize and prioritize these pull requests: `https://github.com/<org>/<repo>/pull/14`;`https://github.com/<org>/<repo>/pull/13`.
+- Find latest created pull requests and group them by creation time.
 
-**Cross-entity workflows**
+#### Cross-entity workflows
 
-- Find PRs that fix issue #56 in swift-chat.
-- Summarize PR #319 in drawer and its related email threads.
+- Find pull requests that fix issue #56 in swift-chat.
+- Summarize pull request #319 in drawer and its related email threads.
 - Create a document about `https://github.com/<org>/<repo>/pull/319`.
 
 ## GitHub Cloud Pull Requests connector capabilities and limitations
@@ -117,6 +119,7 @@ The GitHub Cloud Pull Requests connector offers the following key capabilities:
 
 The GitHub Cloud Pull Requests connector has the following limitations:
 
+- **GitHub Enterprise Cloud with data residency not supported** - Organizations hosted on dedicated `*.ghe.com` domains aren't currently supported. If your organization requires support for this scenario, contact Microsoft support.
 - **GitHub Cloud only** – On-premises or self-hosted GitHub instances aren't supported. Use the [GitHub Server Pull Requests connector](github-server-pull-requests-overview.md) for GitHub Enterprise Server.
 - **No code diffs or commit details** – Code diffs, file changes, inline review comments, and commit-level details aren't indexed.
 - **No CI/CD pipeline indexing** – CI/CD pipelines aren't indexed beyond status information that might appear on PRs.
@@ -125,7 +128,7 @@ The GitHub Cloud Pull Requests connector has the following limitations:
 - **30-MB content size limit** – Only content up to 30 MB in size is supported. In most cases, PR content is well under this limit.
 - **All-public-repository organizations not supported** – For security reasons, the connector doesn't support indexing organizations where all repositories are public. To unblock this scenario, contact Microsoft support.
 
-## Data types indexed from GitHub Cloud Pull Requests
+## Data types indexed from GitHub Cloud pull requests
 
 The following table describes the data types that the connector indexes and how the content surfaces in Copilot and search results.
 
