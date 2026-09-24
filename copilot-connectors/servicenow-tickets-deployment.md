@@ -1,14 +1,13 @@
 ---
 title: "Deploy the ServiceNow Tickets connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvindrover
 ms.reviewer: mayanksethi
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
-ms.date: 06/10/2026
+ms.date: 09/19/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Tickets Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -119,7 +118,7 @@ You need the Service Principal Object ID of the first-party connector applicatio
 
     **For Yokohama and earlier versions**
     - Choose **Configure an OIDC provider to verify ID tokens**.
-    
+
     **For Zurich and later versions**
     - Select **New Inbound Integration Experience** > **New Integration**.
     - Choose **Third party ID token issued by OIDC supporting identity provider**.
@@ -144,11 +143,13 @@ Under **OAuth OIDC Provider Configuration**, determine whether a Microsoft Entra
 | OIDC Provider Configuration Name | Microsoft Entra ID |
 | OIDC Metadata URL | `https://login.microsoftonline.com/<tenantId>/v2.0/.well-known/openid-configuration` (replace `<tenantId>` with your Microsoft Entra tenant ID) |
 | OIDC Configuration Cache Lifespan | 120 |
-| User Claim | sub or oid |
+| User Claim | `sub` or `oid` |
 | User Field | User ID |
 | Enable JTI Verification | Disabled |
 
-Under **Auth Scope**, select **useraccount**, and enable **Allow access only to APIs in selected scope**.
+For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject should match the ServiceNow user, or `oid` when the object ID should match the ServiceNow user. This field has no default, so you must set it. If sign-in fails to resolve the user, switch the value.
+
+Set **Scope Restriction** (labeled **Auth Scope** in some releases) to **Useraccount scoped** (`useraccount`).
 
 #### Step 3: Create the ServiceNow integration user
 
@@ -176,8 +177,9 @@ Open the user record and, in the **Roles** related list, add these roles: `itil`
 After completing all three steps:
 
 1. **OIDC provider** — Go to **System OAuth** > **Application Registry** and confirm the Microsoft Entra ID entry is **Active** with the correct Client ID and metadata URL.
-2. **Integration user** — Go to **User Administration** > **Users**, find the user by the service principal object ID, and confirm that the correct roles are assigned.
-3. **Connector setup** — When you configure the connector in the Microsoft 365 admin center, select **Federated Auth** as the authentication method and provide your ServiceNow instance URL. The connector authenticates using the OIDC token issued by Microsoft Entra ID.
+2. **OAuth scope and user claim** — On the OAuth OIDC entity, confirm that **Scope Restriction** (labeled **Auth Scope** in some releases) is set to **Useraccount scoped** (`useraccount`). On the OIDC Provider Configuration, confirm that **User Claim** is `sub` or `oid` and that it matches the value stored as the integration user's **User ID**.
+3. **Integration user** — Go to **User Administration** > **Users**, find the user by the service principal object ID, and confirm that the correct roles are assigned.
+4. **Connector setup** — When you configure the connector in the Microsoft 365 admin center, select **Federated Auth** as the authentication method and provide your ServiceNow instance URL. The connector authenticates using the OIDC token issued by Microsoft Entra ID.
 
 #### OAuth 2.0
 
@@ -203,14 +205,14 @@ Enter the client ID and client secret to connect to your instance. After you con
 
 To use Microsoft Entra ID OpenID Connect:
 
-1. Register a new app as a single tenant in Microsoft Entra ID. A redirect URI isn't required. For more information, see [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application). 
+1. Register a new app as a single tenant in Microsoft Entra ID. You don't need a redirect URI. For more information, see [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application). 
 2. Copy the **Application (client) ID** and **Directory (tenant) ID** for the app.
 3. Create a client secret for the app and save it securely.
     - Go to **Manage** > **Certificates and secrets**.
-    - Choose **+ new client secret**. 
+    - Choose **+ new client secret**.
     - Provide a name and choose **Save**.
 4. Use the following PowerShell cmdlets to retrieve the service principal object ID.
- 
+
 ```powershell
     Install-Module -Name Az -AllowClobber -Scope CurrentUser
 ```
@@ -222,7 +224,7 @@ To use Microsoft Entra ID OpenID Connect:
 ```powershell
     Get-AzADServicePrincipal -ApplicationId "Application-ID"
 ```
-         
+
 Replace "Application-ID" with the Application (client) ID of the application you registered in step 2. Note the value of the ID object from the PowerShell output; this value is the Service Principal Object ID.<br>
 Alternatively, you can retrieve the information from the Microsoft Entra admin center: <br>
         a. On the app registration, go to **Overview**. <br>
@@ -235,10 +237,10 @@ Alternatively, you can retrieve the information from the Microsoft Entra admin c
 | --- | --- | --- |
 | Name | A unique name for the OAuth OIDC entity. | Microsoft Entra ID |
 | Client ID | From Microsoft Entra ID registration | Application (client) ID |
-| Client Secret | From Microsoft Entra ID registration | Client secret |
+| Client Secret | Generated automatically by ServiceNow | Leave the generated value unchanged |
 
 > [!NOTE]
-> After you create the OAuth OIDC entity, the client secret is generated automatically in ServiceNow. Replace this client secret with the client secret generated in the Microsoft Entra Admin center.
+> After you create the OAuth OIDC entity, the client secret is generated automatically in ServiceNow. You can leave this auto-generated client secret as is; you don't need to replace it with the client secret from the Microsoft Entra admin center.
 
 6. In the **OAuth OIDC Provider Configuration** field, select the search icon, and then select **New**.
 
@@ -247,14 +249,16 @@ Alternatively, you can retrieve the information from the Microsoft Entra admin c
 | Field | Value |
 | --- | --- |
 |  OIDC Provider |  Microsoft Entra ID |
-|  OIDC Metadata URL | Use the following URL: `https://login.microsoftonline.com/<tenantId>/.well-known/openid-configuration`.<br/><br/>Replace `<tenantId>` with the Directory (tenant) ID. |
+|  OIDC Metadata URL | Use the following URL: `https://login.microsoftonline.com/<tenantId>/v2.0/.well-known/openid-configuration`.<br/><br/>Replace `<tenantId>` with the Directory (tenant) ID. |
 |  OIDC Configuration Cache Life Span |  120 |
 |  Application | Global |
-|  User Claim | sub |
+|  User Claim | `sub` or `oid` |
 |  User Field | User ID |
 |  Enable JTI claim verification | Disabled |
 
-Set the **Auth Scope** to the user account.
+For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject should match the ServiceNow user, or `oid` when the object ID should match the ServiceNow user. This field has no default, so you must set it. If sign-in fails to resolve the user, switch the value.
+
+Set **Scope Restriction** (labeled **Auth Scope** in some releases) to **Useraccount scoped** (`useraccount`).
 
 8. Choose **Submit** to save the configuration.
 
@@ -262,7 +266,7 @@ Set the **Auth Scope** to the user account.
 
 | Field | Recommended value |
 | --- | --- |
-| User ID | Service Principal ID | 
+| User ID | Service Principal ID |
 | Web service access only | Checked |
 
 10. Assign the **itil** role read access to the `task` and `sys_user` tables to the ServiceNow account. For details, see [Assign a role to a user](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Use the **Application ID** as the Client ID and **Client secret** in the admin center configuration wizard to authenticate with Microsoft Entra ID OpenID Connect.
@@ -274,7 +278,7 @@ After you enter the authentication details, select **Authorize**.
 
 ## Customize settings
 
-Before you publish the connection, set up the **Content** and **Users** settings for the connector. You can also choose to configure the **Sync details** (optional) for the connector. 
+Before you publish the connection, set up the **Content** and **Users** settings for the connector. You can also choose to configure the **Sync details** (optional) for the connector.
 
 The following table lists the default values that are set.
 
@@ -288,28 +292,28 @@ The following table lists the default values that are set.
 
 #### Access permissions
 
-On the **Users** tab, the ServiceNow Tickets connector supports search permissions visible to **Only people with access to this data source**. Don't select **Everyone** - this option isn't supported.  
+On the **Users** tab, the ServiceNow Tickets connector supports search permissions visible to **Only people with access to this data source**. Don't select **Everyone** - this option isn't supported.
 
 - Under **Access permissions**, select **Only people with access to this data source**.
-- Provide at least one rule for all the tables selected for indexing. For each table in the side panel, select the down arrow to expand, and then select **Add rule**. 
+- Provide at least one rule for all the tables selected for indexing. For each table in the side panel, select the down arrow to expand, and then select **Add rule**.
 - For each table, allow read permissions for users by selecting the allowed user fields from the dropdown list. Indexed ticket items are visible only to users who have access to them via any of the user fields that you can select, such as Assigned to, Opened by, or Closed by.
-- You can also provide access to the tables based on roles. Make sure that you provide the exact name of the table as it is in ServiceNow. The following are examples of role names: 
+- You can also provide access to the tables based on roles. Ensure that you provide the exact name of the table as it appears in ServiceNow. The following are examples of role names: 
 
-    - itil  
-    - asset 
-    - admin or security_admin 
-    - snc_internal 
+    - itil
+    - asset
+    - admin or security_admin
+    - snc_internal
     - Table-specific roles such as sn_request_write, sn_request_approver_read, sn_request_read.
     - Any other custom roles like incident_read, change_manager, hr_admin.
 
     > [!NOTE]
-    > `itil` is the most common role for IT agents, technicians, and fulfillers. It provides Fulfiller/Agent Access (Read, Write, Create) to core IT Service Management (ITSM) tables like Incident (incident), Problem (problem), Change (change_request). 
+    > `itil` is the most common role for IT agents, technicians, and fulfillers. It provides Fulfiller/Agent Access (Read, Write, Create) to core IT Service Management (ITSM) tables like Incident (incident), Problem (problem), Change (change_request).
 
-- Users in either the added roles or the user fields get access to the table records. 
+- Users in either the added roles or the user fields get access to the table records.
 - Choose **Save** for each table.
 
 > [!NOTE]
-> The Preview section displays sample tickets without enforcing ServiceNow ACLs or user permissions. After deployment, the connector applies all ServiceNow access controls when returning results.
+> The Preview section displays sample tickets without enforcing the selected access permissions. Those permissions are enforced after deployment when the connector returns results.
 
 #### Mapping identities
 
@@ -331,16 +335,16 @@ You can:
 
 ServiceNow uses the following default filter: `sys_created_on>javascript:gs.beginningOfLast6Months()`.
 
-You can modify this filter to index only specific ticket items based on your organization's needs. Use the ServiceNow encoded query string builder to create custom filters. For more information, see [Generate an encoded query string through a filter](https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-lists/task/t_GenEncodQueryStringFilter.html). 
+Modify this filter to index only specific ticket items based on your organization's needs. Use the ServiceNow encoded query string builder to create custom filters. For more information, see [Generate an encoded query string through a filter](https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-lists/task/t_GenEncodQueryStringFilter.html). 
 
 #### Manage indexed properties
 
-The indexed properties affect how users can search, filter, and view catalog ticket items in Microsoft 365 Copilot. 
+The indexed properties affect how users can search, filter, and view catalog ticket items in Microsoft 365 Copilot.
 
-You can add or remove available tables from your ServiceNow data source. Microsoft 365 selects the `incident` table by default. You can choose to select more tables from the dropdown. 
+You can add or remove available tables from your ServiceNow data source. Microsoft 365 selects the `incident` table by default. You can choose to select more tables from the dropdown.
 
 > [!NOTE]
-> You can view but not edit the schema attributes (Searchable, Queryable, Retrievable, Refinable), semantic labels, and aliases for these default properties. You can, however, add more custom properties, and their attributes can be edited at the time of connection creation. For a published connection, none of the property attributes can be edited. 
+> You can view but not edit the schema attributes (Searchable, Queryable, Retrievable, Refinable), semantic labels, and aliases for these default properties. You can, however, add more custom properties, and you can edit their attributes when you create the connection. For a published connection, you can't edit any of the property attributes. 
 
 The following table lists the properties that the ServiceNow Tickets connector indexes by default.
 
@@ -359,7 +363,7 @@ The following table lists the properties that the ServiceNow Tickets connector i
 | ConfigurationItem | | A reference to the specific piece of item or service affected that the ticket relates to. | Query, Retrieve, Search |
 | Description `[Content]` | | Description for the item | Search |
 | DueDate | | The date by which the ticket should be resolved | Query, Retrieve |
-| EntityType | | Entity Type of the item such as incidents, change request, etc. | Query, Refine, Retrieve | 
+| EntityType | | Entity Type of the item such as incidents, change request, and so on. | Query, Refine, Retrieve | 
 | FollowUp | |  A field used to schedule a follow-up action or reminder for the ticket. | Query, Retrieve |
 | IconUrl   | `IconUrl` | Icon URL that represents the ticket's type. | Retrieve |
 | ItemCategoryPath | | The path of the item's category | Query, Refine, Retrieve |
@@ -383,35 +387,35 @@ The following table lists the properties that the ServiceNow Tickets connector i
 
 #### Set a default expression for AccessURL
 
-To define a custom expression for the **AccessURL** property: 
+To define a custom expression for the **AccessURL** property:
 
-1. On the **Content** tab, go to **Manage properties**. 
-1. In the **Properties** table, select the **AccessURL** property. 
-1. In the side panel, under **Default expression**, enter your custom expression in the **New default expression** field. Use `${PropertyName}` syntax for dynamic values. For example: `https://instancedomain.service-now.com/esc?id=ticket&table=${EntityType}&sys_id=${SysId}&view=sp`. 
-1. **Select Save changes**. 
-1. To preview the result, select **Preview data** and scroll to the customized property. 
+1. On the **Content** tab, go to **Manage properties**.
+1. In the **Properties** table, select the **AccessURL** property.
+1. In the side panel, under **Default expression**, enter your custom expression in the **New default expression** field. Use `${PropertyName}` syntax for dynamic values. For example: `https://instancedomain.service-now.com/esc?id=ticket&table=${EntityType}&sys_id=${SysId}&view=sp`.
+1. **Select Save changes**.
+1. To preview the result, select **Preview data** and scroll to the customized property.
 
 > [!NOTE]
-> To customize the **AccessURL** property, you must create a new ServiceNow Tickets connection. Making changes to schema properties for existing connections isn't currently supported.
+> You can customize the **AccessURL** property for both new and existing ServiceNow Tickets connections. You don't need to create a new connection.
 
 #### Add rules for conditional expressions
 
-You can override the default expression for specific ticket items using rules based on property filters. To add a rule: 
+You can override the default expression for specific ticket items by using rules based on property filters. To add a rule: 
 
-1. Under **Set additional rules to configure expressions**, select **Add new rule**. 
-1. In the rule panel: 
+1. Under **Set additional rules to configure expressions**, select **Add new rule**.
+1. In the rule panel:
 
-    1. Choose a filter property (for example, Entity Type). 
-    1. Enter one or more values (comma-separated, case-sensitive). 
-    1. Define the custom expression for those values. 
+    1. Choose a filter property (for example, Entity Type).
+    1. Enter one or more values (comma-separated, case-sensitive).
+    1. Define the custom expression for those values.
 
-1. Select **Save changes**. 
-1. To preview, select **Preview data** and scroll to the customized property. 
+1. Select **Save changes**.
+1. To preview, select **Preview data** and scroll to the customized property.
 
 > [!NOTE]
-> If multiple rules apply to an item, the first rule in the list is used. Changes take effect after the next full crawl. 
+> If multiple rules apply to an item, the first rule in the list is used. Changes take effect after the next full crawl.
 
-For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties). 
+For more information, see [Customize values for certain schema properties](deployment-overview.md#customize-values-for-certain-schema-properties).
 
 ### Customize sync intervals
 
@@ -422,9 +426,9 @@ You can change the default values for crawl frequency:
 
 Note the following points:
 
-- Identities (users and groups) or access permissions are only updated with full crawls. Incremental crawls don't update access permissions or group memberships. 
-- During a full crawl, including the first full crawl, content sync and identity sync (reading users and permissions) run in parallel. The full crawl is complete when both content and identity sync are completed.  
-- The periodic full crawls are faster than the first full crawl because the first crawl includes first-time discovery and ingestion of users, permissions, and content items. Periodic full crawls only ingest the newly discovered items, users, and user criteria. 
+- Identities (users and groups) or access permissions are only updated with full crawls. Incremental crawls don't update access permissions or group memberships.
+- During a full crawl, including the first full crawl, content sync and identity sync (reading users and permissions) run in parallel. The full crawl is complete when both content and identity sync are completed.
+- The periodic full crawls are faster than the first full crawl because the first crawl includes first-time discovery and ingestion of users, permissions, and content items. Periodic full crawls only ingest the newly discovered items, users, and user criteria.
 
 For more information about full and incremental crawls, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 

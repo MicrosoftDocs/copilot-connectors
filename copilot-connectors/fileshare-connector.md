@@ -7,7 +7,6 @@ manager: SteveWilkins1123
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Set up the File Share Microsoft 365 Copilot connector"
 ---
@@ -24,7 +23,8 @@ The File Share Microsoft 365 Copilot connector enables users in your organizatio
 ## Limitations
 
 - The maximum supported file size is 100 MB. Files that exceed 100 MB aren't indexed. The maximum post-processed size limit is 4 MB. Processing stops when a file's size reaches 4 MB. Therefore, some phrases present in the file might not work for search. 
-- You can index up to twenty different file shares in a single connection. Enter one file share per line in the file shares text box area. 
+- You can index up to twenty different file shares in a single connection. Enter one file share per line in the file shares text box area.
+- The File Share connector doesn't support indexing symlinks, NTFS junctions, or volume mount points.
 
 ## Prerequisites
 
@@ -66,9 +66,6 @@ You also have the ability to create an exception to the limit rule. The priority
 
 :::image type="content" source="media/file-connector/exclusionrule.png" alt-text="Graphic showing a subset of files excluded from indexing with exceptions.":::
 
-## Preserve last access time 
-
-When the connector attempts to crawl a file, the "last access time" field in its metadata is updated. If you depend on that field for archiving and backup solutions and you don't want to update it when the connector accesses it, select this option. 
 
 ## Custom setup
 

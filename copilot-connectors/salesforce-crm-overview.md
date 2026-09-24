@@ -1,14 +1,13 @@
 ---
-ms.date: 6/18/2026
+ms.date: 08/26/2026
 title: "Salesforce CRM connector overview"
-ms.author: lauragra
-author: lauragra
-manager: calvind
+ms.author: depang
+author: depang
+manager: jecui
 ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Salesforce CRM Copilot connector."
 ---
@@ -82,11 +81,11 @@ The Salesforce CRM connector has the following key capabilities:
 The Salesforce CRM connector has the following limitations:
 
 - **Field-level security (FLS) not honored when opted in** - FLS-restricted fields are excluded from indexing by default. If you opt in to index FLS-restricted fields, the connector doesn't enforce Salesforce FLS when showing results, so review carefully before enabling. For configuration steps, see [Include FLS-restricted fields](salesforce-crm-deployment.md#include-fls-restricted-fields).
-- **Limited object coverage** - The connector currently indexes Account, Contact, Opportunity, Lead, and Case objects. Support for additional standard objects is on the roadmap. If you need a specific object included, contact Microsoft support. This documentation will be updated when new object support is released.
+- **Limited object coverage** - The connector currently indexes Account, Contact, Opportunity, Lead, Case, Event, Task, and Campaign objects. Salesforce objects not listed in [Data types indexed from Salesforce CRM](#data-types-indexed-from-salesforce-crm) aren't supported.
 - **Comments and attachments not indexed by default** - Comments and attachments on records are in private preview. Because this content can introduce noise that affects core use cases, it is not included by default. Admins can selectively enable comments and attachments in the **Manage properties** section.
 - **API usage during crawls** - Full crawls consume Salesforce API quota. Consider scheduling full crawls during off-peak hours or weekends, especially for orgs with large record volumes, to avoid impacting daily operations or exhausting API limits.
 
-If your scenario needs objects or fields not covered by the connector's default behavior, you can build a custom synced connector using the [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview). A reference implementation for Salesforce CRM is available at the [Salesforce custom Copilot connector](https://github.com/microsoft/Salesforce-Custom-Copilot-Connector) repo on GitHub.
+If your scenario needs objects or fields not covered by the connector's default behavior, you can build a custom synced connector using the [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview). A reference implementation for Salesforce CRM is available at the [Salesforce custom Copilot connector](https://github.com/microsoft/Salesforce-Custom-Copilot-Connector) repo on GitHub. For an overview of the sample and customization guidance, see [Build a custom Salesforce CRM connector](salesforce-custom-connector-sample.md).
 
 ## Data types indexed from Salesforce CRM
 
@@ -99,6 +98,11 @@ The Salesforce CRM connector indexes the following Salesforce objects so they ca
 | **Opportunity** | Sales deals, including stage, amount, close date, probability, and associated account. |
 | **Lead** | Prospective customers not yet converted to contacts or opportunities, including source, status, and company. |
 | **Case** | Support tickets, including subject, description, priority, status, and associated account or contact. |
+| **Event** | Calendar activities such as meetings, calls, and appointments, including subject, start and end times, participants, and related records. |
+| **Task** | Action items and to-do activities, including subject, due date, status, priority, owner, and related records. |
+| **Campaign** | Marketing initiatives used to track engagement and outreach efforts, including campaign type, status, budget, dates, and performance metrics. |
+| **Comment** | User-generated comments associated with Salesforce records, capturing discussions, updates, and contextual information related to business activities. |
+| **Attachment** | Files and documents associated with Salesforce records, including file name, type, content metadata, and related record information. |
 
 ## Permissions model and access control
 

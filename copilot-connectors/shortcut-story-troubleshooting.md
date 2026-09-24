@@ -7,7 +7,6 @@ ms.reviewer: raynezou
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.date: 01/16/2026
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Shortcut Story Microsoft 365 Copilot connector."

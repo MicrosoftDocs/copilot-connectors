@@ -1,13 +1,12 @@
 ---
 title: "Deploy the Zendesk Help Center connector"
-ms.author: lauragra
-author: lauragra
+ms.author: danielabo
+author: danipocket
 manager: calvind
 ms.reviewer: ang.gao
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.date: 11/24/2025
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Zendesk Help Center Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
@@ -44,6 +43,10 @@ For more information about connector display names and descriptions, see [Enhanc
 ### Set instance URL
 
 To connect to your Zendesk Help Center data, you need your organization's Zendesk Help Center instance URL. The typical format is `https://<your-organization-domain>.zendesk.com`.
+> [!IMPORTANT]
+> A Zendesk account has a single account/core subdomain. When multiple brands are configured, each brand can have its own brand-specific subdomain.
+For multi-brand scenarios, each connection currently supports only one subdomain. If you need to support multiple brands, you will need to set up a separate connection for each brand/subdomain.
+
 
 ### Choose authentication type
 

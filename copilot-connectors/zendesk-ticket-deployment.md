@@ -1,13 +1,12 @@
 ---
 title: "Deploy the Zendesk Ticket connector"
-ms.author: lauragra
-author: lauragra
+ms.author: danielabo
+author: danipocket
 manager: calvind
 ms.reviewer: anggao
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.date: 01/14/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the Zendesk Ticket Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
@@ -47,6 +46,8 @@ For more information about connector display names and descriptions, see [Enhanc
 Provide your Zendesk instance URL in the format:  
 `https://<your-organization-domain>.zendesk.com`
 
+> A Zendesk account has a single account/core subdomain. When multiple brands are configured, each brand can have its own brand-specific subdomain.
+For multi-brand scenarios, each connection currently supports only one subdomain. If you need to support multiple brands, you will need to set up a separate connection for each brand/subdomain.
 ### Choose authentication type
 
 The connector uses OAuth 2.0 for secure access. A Zendesk administrator must create an OAuth client in the [Zendesk Admin Center](https://support.zendesk.com/hc/en-us/articles/4581766374554-Using-Zendesk-Admin-Center#topic_hfg_dyz_1hb). For details, see [Managing access to the Zendesk API](https://support.zendesk.com/hc/articles/4408889192858-Managing-access-to-the-Zendesk-API#topic_mmh_gm1_2yb).

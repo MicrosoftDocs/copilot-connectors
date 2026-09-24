@@ -1,14 +1,13 @@
 ---
-ms.date: 06/10/2026
+ms.date: 09/19/2026
 title: "Troubleshoot issues with the ServiceNow Knowledge connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: mayanksethi
-audience: Admin 
+audience: Admin
 ms.audience: Admin
 ms.topic: article
-ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Find troubleshooting information for the ServiceNow Knowledge Copilot connector."
 ---
@@ -86,7 +85,7 @@ Use the following steps to validate table permissions by using REST API Explorer
 1.  Review the response:
 
     - **If you receive a 403 Status Code** and an error message that states that you're not authorized to access the table, see [Grant table access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge) to provide table-level access.
-    
+
     - **If you receive a 200 Status Code** but the response body contains empty results (for example, no fields), row access exists but field-level access is missing. To grant field-level access, see [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge#grant-field-level-access).
 
        :::image type="content" source="media/servicenow-knowledge-troubleshooting/response-body.png" alt-text="Screenshot of the response body showing empty results." lightbox="media/servicenow-knowledge-troubleshooting/response-body.png":::
@@ -122,7 +121,7 @@ To resolve this issue:
  1. After granting access, start a full crawl for the configured ServiceNow connection.
 
 
-> [!NOTE] 
+> [!NOTE]
 > This access applies to both Simple and Advanced flows.
 
 ## HR knowledge articles visible to unintended audience
@@ -178,6 +177,9 @@ A forbidden or unauthorized response in connection status can occur for the foll
     | PROD | Europe | 20.54.41.208/30, 51.105.159.88/30 |
     | PROD | Asia Pacific | 52.139.188.212/30, 20.43.146.44/30 |
     | GCC | US Government | 52.235.252.161/30 |
+    | GCC High | USGov Arizona | 52.235.133.220/30 |
+    | GCC High | USGov Texas | 20.141.122.232/30 |
+    | GCC High | USGov Virginia | 20.141.144.232/30 |
     | DoD | US Government | 52.182.52.25/30, 52.181.182.213/30 |
 
 ## Change the URL of the knowledge article
@@ -185,7 +187,7 @@ A forbidden or unauthorized response in connection status can occur for the foll
 The ServiceNow Knowledge connector allows you to customize the URL of the knowledge articles as per the needs of your organization. For more information, see [Customize AccessURL property](/microsoft-365/copilot/connectors/servicenow-knowledge-deployment#customize-accessurl-property).
 
 > [!NOTE]
-> Currently, you can't edit the URL property for an existing connection. You can only customize the URL when you initially set up the connection. If you have an existing connection, create a new connection and follow the steps to customize the URL.
+> You can customize the URL for both new and existing connections. You don't need to create a new connection.
 
 ## Issues with Only people with access to this data source permission
 
@@ -232,6 +234,15 @@ To resolve this issue, disable the option in Microsoft Entra ID:
 
 1. Choose **Save**.
 
+
+## Table API requests return 403 after federated authentication succeeds
+
+If the connector acquires a Microsoft Entra ID token successfully but crawl requests to the ServiceNow Table API (`GET /api/now/table/{tableName}`) return **403 Forbidden**, the OAuth client might not have access to unscoped Table APIs. In the ServiceNow transaction logs, `AuthScopeChecker` records an error similar to *OAuth client does not have unrestricted access to unscoped APIs*.
+
+To resolve this issue, verify both of the following on your ServiceNow instance, and then retry the connection:
+
+- **OAuth scope** — On the OAuth OIDC entity, set **Scope Restriction** (labeled **Auth Scope** in some releases, or **User Account OAuth Scope** in ServiceNow support terminology) to **Useraccount scoped** (`useraccount`).
+- **User Claim** — On the OIDC Provider Configuration, set **User Claim** to `sub` (or `oid`), and make sure it matches the value stored as the ServiceNow integration user's **User ID**.
 
 ## Related content
 

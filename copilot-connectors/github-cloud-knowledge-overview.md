@@ -6,7 +6,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 06/02/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the GitHub Cloud Knowledge Microsoft 365 Copilot connector."
@@ -130,6 +129,8 @@ You can configure the GitHub Cloud Knowledge connector so that only users who ha
 You can control permissions in the following ways:
 
 - **Repository and team permissions** – Private repositories appear only for users with explicit repository access. Organization-level and team-based access restrictions are honored. Content that can't be mapped to a valid permission context is hidden to prevent accidental exposure.
+
+- **Secret teams not supported** – The connector doesn't support access granted exclusively through GitHub [secret teams](https://docs.github.com/en/organizations/organizing-members-into-teams/setting-team-visibility). Users who have repository access only through a secret team might not see that repository's content in Copilot and search results. If your organization uses secret teams to manage repository access, ensure those users also have access through a visible team or are explicitly added as collaborators.
 
 - **User identity mapping** – The connector maps GitHub user accounts to Microsoft Entra ID identities. If GitHub user emails match their Microsoft Entra ID UPNs, the mapping is automatic. If they differ, admins can provide a mapping rule using email, sign-in (login), or name. If direct mapping fails, you can use regular expressions (regex) to transform identity data. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
 

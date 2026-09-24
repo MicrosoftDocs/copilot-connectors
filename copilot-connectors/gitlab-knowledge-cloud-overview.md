@@ -9,7 +9,6 @@ ms.audience: Admin
 ms.reviewer: raynezou
 ms.date: 01/23/2026
 ms.localizationpriority: Medium
-ms.service: copilot-connectors
 ms.topic: concept-article
 ---
 

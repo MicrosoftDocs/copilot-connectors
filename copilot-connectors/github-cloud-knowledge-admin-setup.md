@@ -7,7 +7,6 @@ ms.reviewer: sasidharkasi
 manager: calvind
 ms.date: 06/18/2026
 ms.topic: concept-article
-ms.service: copilot-connectors
 ---
 
 # Set up the GitHub service for GitHub Cloud Knowledge connector ingestion

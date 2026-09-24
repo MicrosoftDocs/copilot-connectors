@@ -1,21 +1,20 @@
 ---
 title: Set up the Salesforce service for Salesforce CRM connector ingestion
 description: Get the steps that the Salesforce CRM admin needs to complete for your organization to configure the Salesforce CRM Microsoft 365 Copilot connector.
-author: lauragra
-ms.author: lauragra
-manager: calvind
+author: depang
+ms.author: depang
+manager: jecui
 ms.reviewer:
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.localizationpriority: Medium
-ms.date: 06/18/2026
+ms.date: 08/26/2026
 ---
 
 # Set up the Salesforce service for Salesforce CRM connector ingestion
 
-The Salesforce CRM Microsoft 365 Copilot connector allows your organization to index contacts, opportunities, leads, cases, and accounts objects in your Salesforce instance. After you configure the connector and index content from Salesforce, users can search for those items from any Microsoft Search and Microsoft 365 Copilot client.
+The Salesforce CRM Microsoft 365 Copilot connector enables your organization to index Salesforce CRM data, including Accounts, Contacts, Leads, Opportunities, Cases, Events, Tasks, and Campaigns. It can also index comments and attachments associated with supported objects, such as Accounts. After you configure the connector and complete the indexing process, users can discover and access this content through Microsoft 365 Copilot, Microsoft Search, and other supported Microsoft 365 experiences.
 
 This article provides information about the configuration steps that Salesforce admins need to complete in order for your organization to deploy the [Salesforce CRM connector](salesforce-crm-overview.md).
 
@@ -53,17 +52,46 @@ To connect to your Salesforce instance, you need your organization's Salesforce 
 
 ## Enable API access
 
-Make sure that the connector account has API access:
+Make sure that the connector account has API access. You can either assign the **System Administrator** profile (which includes all required permissions), or configure a custom profile with the specific permissions listed below.
 
-- Assign the **System Administrator** profile, or verify the following permissions for custom profiles:
-    - **Administrative permissions**:
-       - API Enabled
-       - View Setup and Configuration
-       - View Roles and Role Hierarchy
-       - View All Profiles
-       - View All Users
-    - **Standard object permissions**:
-       - Read and View All for Accounts, Cases, Contacts, Leads, and Opportunities.
+### Required permissions
+
+The connector account requires the following permissions:
+
+- **Administrative permissions**:
+   - API Enabled
+   - View Setup and Configuration
+   - View Roles and Role Hierarchy
+   - View All Profiles
+   - View All Users
+- **Standard object permissions**:
+   - Read and View All for Accounts, Cases, Contacts, Leads, and Opportunities.
+
+### Configure permissions on a custom profile
+
+If you use a custom profile instead of System Administrator, follow these steps to assign the required permissions:
+
+1. In Salesforce, select the gear icon and go to **Setup**.
+1. In the left navigation, go to **Administration** > **Users** > **Profiles**.
+1. Select the profile name to edit. If you need to modify a standard profile, select **Clone** to create an editable copy first.
+1. On the profile page, select **Edit**.
+1. In the **Administrative Permissions** section, select the following checkboxes:
+    - **API Enabled**
+    - **View Setup and Configuration**
+    - **View Roles and Role Hierarchy**
+    - **View All Profiles**
+    - **View All Users**
+1. Select **Save**.
+1. Return to the profile page and scroll to the **Standard Object Permissions** section (or select **Object Settings** in the Enhanced Profile User Interface).
+1. For each object you plan to index with the connector, enable **Read** and **View All** permissions. The connector currently supports the following objects:
+    - Accounts
+    - Cases
+    - Contacts
+    - Leads
+    - Opportunities
+1. Select **Save**.
+
+For more information about Salesforce profile permissions, see [User Permissions](https://help.salesforce.com/s/articleView?id=sf.users_profiles_permissions.htm&type=5) in the Salesforce documentation.
 
 ## Create an External Client App
 
@@ -82,17 +110,17 @@ Set up an External Client App for OAuth 2.0 authentication. External Client Apps
 1. On the External Client App detail page, select the **Settings** tab.
 1. Select **Edit** (top-right of the Settings panel).
 1. Expand the **OAuth Settings** section.
-1. Check **Enable OAuth Settings**. Additional fields appear.
 1. Set the **Callback URL**:
     - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
     - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
 1. Move the following scopes from **Available OAuth Scopes** to **Selected OAuth Scopes**:
     - Manage user data via APIs (api)
     - Perform requests at any time (refresh_token, offline_access)
-1. Under **OAuth flows**, check **Enable Authorization Code and Credentials Flow**.
+1. Under **Flows Enablement**, check the following options:
+    - **Enable Client Credentials Flow**
+    - **Enable Authorization Code and Credentials Flow**.
 1. Under the security section:
     - Leave **Require Secret for Web Server Flow** checked (default).
-    - Clear **Require Proof Key for Code Exchange (PKCE)**.
 1. Select **Save**.
 
 ### Get client ID and secret
@@ -105,6 +133,9 @@ Set up an External Client App for OAuth 2.0 authentication. External Client Apps
 > The **Consumer Key and Secret** page requires email verification the first time you access it in a session. Salesforce sends a verification code to the contact email address configured for the app.
 
 ## Configure refresh token policy
+
+> [!NOTE]
+> Salesforce organizations that have **Refresh Token Rotation** enabled allow each refresh token to be used only once. Reusing the same OAuth authorization across multiple Salesforce CRM connector connections can invalidate existing tokens and cause authentication failures. To avoid disruptions, create a separate authorization for each connector connection.
 
 To prevent token expiration:
 

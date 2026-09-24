@@ -7,7 +7,6 @@ ms.reviewer: ang.gao
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 11/21/2025
 ms.localizationpriority: Medium
 description: "Get the steps that the Dropbox admin needs to complete for your organization to configure the Dropbox Microsoft 365 Copilot connector."

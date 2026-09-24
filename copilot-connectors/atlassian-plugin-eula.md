@@ -6,7 +6,6 @@ author: vivg
 manager: harshkum
 ms.audience: Admin
 ms.topic: article
-ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "End user license agreement for Microsoft 365 Copilot connector plugin for Jira and Confluence on-premises"
 ---

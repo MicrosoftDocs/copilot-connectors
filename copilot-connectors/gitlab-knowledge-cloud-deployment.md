@@ -8,7 +8,6 @@ audience: Admin
 ms.audience: Admin
 ms.reviewer: raynezou
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.date: 01/23/2026
 ms.localizationpriority: Medium
 ---

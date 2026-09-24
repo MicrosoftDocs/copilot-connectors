@@ -7,7 +7,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.date: 05/26/2026
 ms.localizationpriority: Medium
 ---
@@ -80,7 +79,18 @@ For OAuth 2.0 setup:
 1. Go to **Administration** > **General configuration** > **Application links**.
 1. Select **Create link** > **External application** > **Incoming**.
 1. Set scope to **Admin**.
-1. Use the following redirect URL: `https://gcs.office.com/v1.0/admin/oauth/callback`.
+1. Use the redirect URL that matches your Microsoft 365 cloud environment:
+
+
+| Microsoft 365 cloud | Redirect URL |
+|---------------------|--------------|
+| Microsoft 365 Enterprise | `https://gcs.office.com/v1.0/admin/oauth/callback` |
+| Microsoft 365 Government (GCC) | `https://gcsgcc.office.com/v1.0/admin/oauth/callback` |
+| Microsoft 365 GCC High (Government Community Cloud High) | `https://gcs.office365.us/v1.0/admin/oauth/callback` |
+| Microsoft 365 DoD (Department of Defense) | `https://gcs-dod.office365.us/v1.0/admin/oauth/callback` |
+
+> [!IMPORTANT]
+> Select the redirect URL that matches your Microsoft 365 cloud environment. Using a callback URL from a different cloud can cause OAuth authentication and connector setup failures.
 
 ### Roll out
 

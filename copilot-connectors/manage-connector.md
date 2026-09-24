@@ -6,7 +6,6 @@ manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
-ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Manage your Microsoft 365 Copilot connector connection state and index quota utilization."
 ms.date: 03/19/2026
@@ -125,13 +124,20 @@ On-demand crawl helps you start a crawl outside of the crawl schedule. You can c
 > [!NOTE]
 > The Microsoft Graph connector agent versions 2.1.0.0 and later support on-demand crawl.
 
-Only one category of crawl—scheduled or on-can run on a connection at any time. If a connection is in a **Syncing** state, on-demand crawls are disabled. Scheduled crawls are triggered automatically.
+> [!IMPORTANT]
+> If connection failures prevent delete detection from running reliably, items that aren't rediscovered during crawls for 28 days are automatically removed from the Microsoft 365 index to maintain compliance.
+
+Only one category of crawl - scheduled or on-demand - can run on a connection at any time. If a connection is in a **Syncing** state, on-demand crawls are disabled. Scheduled crawls trigger automatically.
 
 If a scheduled or on-demand crawl continues beyond the time of the next scheduled full or incremental crawl, the ongoing crawl is stopped, and the next scheduled crawl is skipped and queued. After the ongoing crawl completes, the opposite type of crawl (full or incremental) is picked from the skipped queue and triggered. For example, if the previous crawl was a full crawl, only the incremental crawl, if present in the skipped queue, is triggered—and vice versa.
 
 Identify connections that contain items you no longer want to index. To update this connection, first delete the existing connection and create a new one with a data source exclusion filter that excludes the items you no longer want to index.
 
 You can permanently delete one or more connections as needed.
+
+## Connection bulk export
+
+Admins can export configuration details for the connections currently displayed on **Connectors** > **Your Connections**. From the **More actions** menu, select **Export configuration** to download a CSV file containing the configuration details for all connections currently displayed in the list.
 
 ## Related content
 

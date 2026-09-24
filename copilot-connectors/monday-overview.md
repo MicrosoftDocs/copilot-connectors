@@ -7,7 +7,6 @@ ms.reviewer: huichunli
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.date: 01/13/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the monday.com Microsoft 365 Copilot connector."

@@ -46,12 +46,13 @@
       "breadcrumb_path": "/microsoft-365/copilot/connectors/breadcrumb/toc.json",
       "feedback_system": "Standard",
       "permissioned-type": "public",
-      "contributors_to_exclude": [ 
-        "rjagiewich", 
+      "ms.service": "microsoft-365-copilot-connectors",
+      "contributors_to_exclude": [
+        "rjagiewich",
         "claydetels19",
         "jborsecnik",
         "garycentric",
-        "alexbuckgit", 
+        "alexbuckgit",
         "dstrome",
         "padmagit77",
         "aditisrivastava07",
@@ -59,35 +60,35 @@
       ]
     },
     "rules": {
-    "filename-incomplete": { 
-        "exclude": [ 
-          "**/*.md", 
-          "**/*.yml" 
-        ] 
-      }, 
-      "image-name-incomplete": { 
-        "exclude": [ 
-          "**/*.gif", 
-          "**/*.jpeg", 
-          "**/*.jpg", 
-          "**/*.png", 
-          "**/*.svg" 
-        ] 
-       }, 
-    "image-structure-incorrect": { 
-        "exclude": [ 
-          "**/*.gif", 
-          "**/*.jpeg", 
-          "**/*.jpg", 
-          "**/*.png", 
-          "**/*.svg" 
-        ] 
-       }, 
-      "include-structure-incorrect": { 
-        "exclude": [ 
-          "**/*.md", 
+    "filename-incomplete": {
+        "exclude": [
+          "**/*.md",
           "**/*.yml"
-       ] 
+        ]
+      },
+      "image-name-incomplete": {
+        "exclude": [
+          "**/*.gif",
+          "**/*.jpeg",
+          "**/*.jpg",
+          "**/*.png",
+          "**/*.svg"
+        ]
+       },
+    "image-structure-incorrect": {
+        "exclude": [
+          "**/*.gif",
+          "**/*.jpeg",
+          "**/*.jpg",
+          "**/*.png",
+          "**/*.svg"
+        ]
+       },
+      "include-structure-incorrect": {
+        "exclude": [
+          "**/*.md",
+          "**/*.yml"
+       ]
       }
     },
     "fileMetadata": {},

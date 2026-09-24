@@ -2,7 +2,6 @@
 title: Set up the Google Workspace service for Google Drive connector ingestion
 description: Learn how to configure the Google Workspace environment and set up prerequisites for deploying the Google Drive connector in Microsoft 365.
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.author: lauragra
 author: lauragra
 manager: calvind

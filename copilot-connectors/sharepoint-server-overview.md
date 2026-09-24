@@ -7,7 +7,6 @@ manager: srramam
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.service: copilot-connectors
 ms.localizationpriority: medium
 description: "Learn about the capabilities, limitations, and use cases for the SharePoint Server Microsoft 365 Copilot connector."
 ---

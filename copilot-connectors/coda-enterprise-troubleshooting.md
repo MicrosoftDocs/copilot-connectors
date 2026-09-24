@@ -7,7 +7,6 @@ ms.reviewer: irenehuang
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general
-ms.service: copilot-connectors
 ms.date: 12/16/2025
 ms.localizationpriority: Medium
 description: "Find troubleshooting information for the Coda Enterprise Microsoft 365 Copilot connector."
