@@ -12,6 +12,8 @@ ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Adobe Experience Manager Assets Microsoft 365 Copilot connector."
 ---
 
+<!-- cSpell:ignore rantang -->
+
 # Adobe Experience Manager Assets connector overview
 
 The Adobe Experience Manager (AEM) Assets Copilot connector indexes published assets from your AEM Assets instance so users can discover, preview, and reuse brand‑approved content directly in Microsoft 365 Copilot and Microsoft Search across Microsoft 365. This integration helps reduce app‑switching and ensures that teams work with authoritative, on‑brand materials.
@@ -58,12 +60,12 @@ The Adobe Experience Manager Assets connector allows users to:
 
 The Adobe Experience Manager Assets connector has the following limitations:
 
-- Doesn't crawl user identities or access permissions; all published assets indexed by this connector are visible to all Microsoft 365 users in the tenant (from Microsoft Search or Copilot).
-- Supports Adobe Experience Manager Assets (Cloud) only; other AEM solutions such as Sites require separate connectors.
+- It doesn't crawl user identities or access permissions. All published assets that this connector indexes are visible to all Microsoft 365 users in the tenant (from Microsoft Search or Copilot).
+- It supports only Adobe Experience Manager Assets (Cloud). Other AEM solutions such as Sites require separate connectors.
 
 ## Data types indexed from Adobe Experience Manager Assets
 
-By default, the connector indexes published assets across common formats (for example, PDF, PNG, JPG, and other supported file types) so they can be discovered in Copilot and Microsoft Search. This indexing ensures that every published digital asset in your AEM Assets instance is reusable within Microsoft 365 workflows.
+By default, the connector indexes metadata for published assets across all supported file types, including PDF, PNG, JPG, and others. For PDF files smaller than 100 MB, the connector also indexes the file content. For other file types, and for PDF files that exceed 100 MB, the connector indexes only metadata. This setup allows users to discover published assets in Copilot and Microsoft Search, while full content-based retrieval currently supports only PDF files under 100 MB.
 
 ## Permissions model and access control
 
