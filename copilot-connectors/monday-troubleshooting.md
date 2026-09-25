@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the Monday.com connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: huichunli
 audience: Admin

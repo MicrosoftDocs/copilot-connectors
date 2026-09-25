@@ -1,8 +1,8 @@
 ---
 title: "Set up the Azure SQL and Microsoft SQL Server services"
 description: "Learn about the configuration steps that database admins complete before you deploy the Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors."
-author: danipocket
-ms.author: danielabo
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.reviewer:
 audience: Admin

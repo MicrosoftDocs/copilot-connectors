@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the WordPress.com connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin
@@ -14,7 +14,7 @@ description: "Find troubleshooting information for the WordPress.com Microsoft 3
 
 # Troubleshoot issues with the WordPress.com connector
 
-The WordPress.com Microsoft 365 Copilot connector indexes published posts and pages from WordPress.com websites so users can discover and use that content in Microsoft 365 Copilot and Microsoft Search experiences. This article provides troubleshooting information for common errors that you might encounter when you deploy the WordPress.com connector or when the connector indexes data. 
+The WordPress.com Microsoft 365 Copilot connector indexes published posts and pages from WordPress.com websites so users can discover and use that content in Microsoft 365 Copilot and Microsoft Search experiences. This article provides troubleshooting information for common errors that you might encounter when you deploy the WordPress.com connector or when the connector indexes data.
 
 ## WordPress.com connector troubleshooting
 

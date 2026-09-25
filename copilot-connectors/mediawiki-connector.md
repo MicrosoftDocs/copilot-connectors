@@ -1,8 +1,8 @@
 ---
 ms.date: 10/08/2019
 title: "MediaWiki connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin

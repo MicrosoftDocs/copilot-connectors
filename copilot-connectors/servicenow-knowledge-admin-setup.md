@@ -1,7 +1,7 @@
 ---
 title: "Set up the ServiceNow service for ServiceNow Knowledge connector ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: mayanksethi
 audience: Admin
@@ -24,7 +24,7 @@ The following checklists list the steps involved in configuring the environment 
 
 ### Configure the environment
 
-| Task | Role | 
+| Task | Role |
 |------|------|
 | [Identify the instance URL](#identify-the-servicenow-instance-url) | ServiceNow admin |
 | [Identify the portal configuration](#identify-the-servicenow-portal-configuration) | ServiceNow admin |
@@ -33,7 +33,7 @@ The following checklists list the steps involved in configuring the environment 
 
 ### Set up prerequisites
 
-| Task | Role | 
+| Task | Role |
 |------|------|
 | [Create service account and set up permissions](#create-service-account-and-set-up-permissions-to-index-items) | ServiceNow admin |
 | [Verify service account permissions](#verify-service-account-permissions) | ServiceNow admin |
@@ -55,7 +55,7 @@ The ServiceNow instance URL generally has the following format:
 
 `https://<your-organization-name>.service-now.com`
 
-To verify the URL for your ServiceNow instance, check the ServiceNow admin dashboard or the sign in URL used by your organization. 
+To verify the URL for your ServiceNow instance, check the ServiceNow admin dashboard or the sign in URL used by your organization.
 
 If you have a custom URL:
 
@@ -73,18 +73,22 @@ If your organization uses a different URL, you can customize the URL when you de
 
 By default, Microsoft Entra ID maps identities from your data source by checking whether the email ID of ServiceNow users matches the user principal name (UPN) or **Mail** attribute in Microsoft Entra ID.
 
-If this default mapping doesn't meet your organization's needs, you can define a custom mapping formula. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
+If this default mapping doesn't meet your organization's needs, you can define a custom mapping formula. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
+
 
 ### Check for advanced scripts and hierarchical permissions in ServiceNow
 
 Determine whether knowledge articles in your ServiceNow environment have the following settings:
 
 - Advanced scripts enabled in **User Criteria**
-- Hierarchical permissions configured
+- Hierarchical permissions configured
 
-These settings can affect indexing behavior and access control when content surfaces in Microsoft 365 experiences like Copilot.
 
-To check whether any **User Criteria** has advanced scripts enabled, run the following API call:
+These settings can affect indexing behavior and access control when content surfaces in Microsoft 365 experiences like Copilot.
+
+
+To check whether any **User Criteria** has advanced scripts enabled, run the following API call:
+
 
 `<ServiceNowURL>/api/now/table/user_criteria?advanced=true&sysparm_limit=1`
 
@@ -92,9 +96,11 @@ If your instance uses advanced script-based user criteria, select **Advanced flo
 
 #### What are hierarchical permissions?
 
-ServiceNow Knowledge supports setting permissions at both the knowledge base (parent) level and the individual article (child) level. The system evaluates these permissions together to determine whether a user has access to an article. This model is referred to as hierarchical permissions.
+ServiceNow Knowledge supports setting permissions at both the knowledge base (parent) level and the individual article (child) level. The system evaluates these permissions together to determine whether a user has access to an article. This model is referred to as hierarchical permissions.
 
-The ServiceNow Knowledge connector supports hierarchical permissions. This feature isn't available in government or sovereign clouds or dedicated forests in multitenant environments. For more information, see [Set up hierarchical permissions](#set-up-hierarchical-permissions).
+
+The ServiceNow Knowledge connector supports hierarchical permissions. This feature isn't available in government or sovereign clouds or dedicated forests in multitenant environments. For more information, see [Set up hierarchical permissions](#set-up-hierarchical-permissions).
+
 
 ## Set up connector prerequisites
 
@@ -136,13 +142,13 @@ To connect to ServiceNow and allow the ServiceNow Knowledge connector to update 
 
 \** Access to these tables is only required when you choose the simple flow. If you choose advanced flow for reading user criteria, you don't need access to these tables.
 
-You can create and assign a role for the service account you use to connect with Microsoft Search. For more information, see [Assign a role to a user](https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). You can assign read access to the tables to the role you create. 
+You can create and assign a role for the service account you use to connect with Microsoft Search. For more information, see [Assign a role to a user](https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). You can assign read access to the tables to the role you create.
 
-You can also assign the following roles to the service account to ensure that knowledge articles get indexed without any blocking ACL issues. Assigning these roles is optional. 
+You can also assign the following roles to the service account to ensure that knowledge articles get indexed without any blocking ACL issues. Assigning these roles is optional.
 
 - `knowledge_admin`
 - `user_criteria_admin`
-- `user_admin` 
+- `user_admin`
 
 For information about how to create a user, assign a role, and grant read permissions on all the applicable table records, see [Grant table access to a user in ServiceNow](granting-table-access-servicenow-knowledge.md).
 
@@ -172,7 +178,8 @@ These roles are independent — `sn_hr_core.admin` doesn't contain `sn_hr_core.c
 
 ### Verify service account permissions
 
-Use the **Copilot Connector Checker Tool** to confirm that all required permissions for ServiceNow Knowledge are configured correctly:
+Use the **Copilot Connector Checker Tool** to confirm that all required permissions for ServiceNow Knowledge are configured correctly:
+
 
 1. Open the [Copilot Connector Checker Tool](https://testconnectivity.microsoft.com/tests/CopilotServiceNowGraphConnectors/input).
 1. Choose the authentication type in the **Authentication Type** field: Basic or OAuth (recommended).
@@ -183,7 +190,8 @@ If you have feedback about the tool, choose the **Feedback** link at the bottom 
 
 ### Identify item count for ingestion
 
-The indexing process applies the following default filter. To change this filter, edit the query string during connector setup. For more information, see [Customize query string](servicenow-knowledge-deployment.md#query-string).
+The indexing process applies the following default filter. To change this filter, edit the query string during connector setup. For more information, see [Customize query string](servicenow-knowledge-deployment.md#query-string).
+
 
 `active=true^workflow_state=published`
 
@@ -205,46 +213,56 @@ To verify the item count expected for ingestion:
 
 1. Note the item count.
 
-When you set up the connector and complete item sync, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](view-details.md#view-connection-statistics).
+When you set up the connector and complete item sync, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](view-details.md#view-connection-statistics).
+
 
 ### Set up REST API
 
 To enable the connector to fetch advanced user criteria, create a scripted REST API in your ServiceNow instance.
 
 > [!NOTE]
-> The `GetAllUserCriteria` resource described in this section evaluates each user against **all** active user criteria in your ServiceNow instance. If you want the connector to evaluate only the user criteria that are applied to knowledge articles—which reduces the number of calls and the time required for the first full identity crawl—set up the [`GetAllUserCriteriaV2` resource](#set-up-rest-api-to-evaluate-only-user-criteria-applied-to-articles) instead. `GetAllUserCriteria` is scheduled for deprecation.
+> The `GetAllUserCriteria` resource described in this section evaluates each user against **all** active user criteria in your ServiceNow instance. If you want the connector to evaluate only the user criteria that are applied to knowledge articles—which reduces the number of calls and the time required for the first full identity crawl—set up the [`GetAllUserCriteriaV2` resource](#set-up-rest-api-to-evaluate-only-user-criteria-applied-to-articles) instead. `GetAllUserCriteria` is scheduled for deprecation.
+
 
 > [!TIP]
-> You can automate this setup by using a background script. For more information, see [Set up REST API for advanced flow](servicenow-knowledge-setup-scripts.md#step-4-set-up-rest-api-for-advanced-flow). 
+> You can automate this setup by using a background script. For more information, see [Set up REST API for advanced flow](servicenow-knowledge-setup-scripts.md#step-4-set-up-rest-api-for-advanced-flow).
 
 - Elevate your role in ServiceNow to `security_admin`.
 
 Create access control:
 
 1. In ServiceNow, go to **All > System Security > Access Control (ACL)**.
-1. Choose **New** to create a new ACL.
-1. Set the following values:
+1. Choose **New** to create a new ACL.
+
+1. Set the following values:
+
    - **Type**: `REST_Endpoint`
    - **Operation**: `Execute`
    - **Name**: `Microsoft Copilot`
    - **Role**: `admin` *(or the same role assigned to the crawling account)*
-1. Choose **Submit**.
+1. Choose **Submit**.
+
 
 Create the scripted REST API:
 
 1. Go to **All > System Web Services > Scripted Web Services > Scripted REST APIs**.
-1. Choose **New**.
-1. Enter the following information:
+1. Choose **New**.
+
+1. Enter the following information:
+
    - **Name**: `Microsoft Copilot`
    - **API ID**: `microsoft_copilot`
 4. Choose **Submit**.
-1. From the **Scripted REST API** list page, choose **Microsoft Copilot**.
-1. Set **Default ACLs** to **Microsoft Copilot**. To avoid any problems with authorization, also add the **Scripted REST External Default** ACL.
+1. From the **Scripted REST API** list page, choose **Microsoft Copilot**.
+
+1. Set **Default ACLs** to **Microsoft Copilot**. To avoid any problems with authorization, also add the **Scripted REST External Default** ACL.
+
 
 Add a resource to the API:
 
 1. On the **Resources** tab, choose **New**.
-1. Fill in the details:
+1. Fill in the details:
+
    - **Name**: `GetAllUserCriteria`
    - **Relative Path**: `/user_criteria`
    - **Script**: Paste the following code:
@@ -288,16 +306,20 @@ Add a resource to the API:
     })(request, response);
     ```
 
-1. Make sure both of the following options are checked:
+1. Make sure both of the following options are checked:
+
    - **Requires authentication**
    - **Requires ACL authorization**
-1. Make sure that **ACLs** is set to **Microsoft Copilot**. To avoid any problems with authorization, also add the **Scripted REST External Default** ACL.
-1. Choose **Update**.
+1. Make sure that **ACLs** is set to **Microsoft Copilot**. To avoid any problems with authorization, also add the **Scripted REST External Default** ACL.
+
+1. Choose **Update**.
+
 
 To verify the setup:
 
 1. Confirm that the following is the **Resource Path**: `/api/<API Namespace>/microsoft_copilot/user_criteria`.
-1. Choose **Update** to save the configuration.
+1. Choose **Update** to save the configuration.
+
 
 The Microsoft 365 admin enters the **API Namespace** when they [deploy the ServiceNow Knowledge connector](servicenow-knowledge-deployment.md). In the following example, the API namespace is `abcdef`.
 
@@ -801,90 +823,99 @@ After you enable auditing, validate the setup: make a test change (and a test de
 
 ### Set up hierarchical permissions
 
-Hierarchical permissions allow the ServiceNow Knowledge connector to evaluate user permissions for any ServiceNow knowledge article. The connector evaluates the user criteria applied at the knowledge base (parent) and the knowledge article (child) level according to the rules that ServiceNow uses. For more information about how ServiceNow evaluates article permission, see [Managing access to knowledge bases and knowledge articles](https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/user-access-knowledge.html).  
+Hierarchical permissions allow the ServiceNow Knowledge connector to evaluate user permissions for any ServiceNow knowledge article. The connector evaluates the user criteria applied at the knowledge base (parent) and the knowledge article (child) level according to the rules that ServiceNow uses. For more information about how ServiceNow evaluates article permission, see [Managing access to knowledge bases and knowledge articles](https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/user-access-knowledge.html).
 
-To set up hierarchical permissions, provide read access to the `sys_properties` table to the service account used for connector setup. The connector reads two system properties - `glide.knowman.apply_article_read_criteria` and `glide.knowman.block_access_with_no_user_criteria` - to determine the permission evaluation flow. If the service account can't read these properties, the connector defaults to the most restrictive settings, which can cause articles without explicit user criteria to not appear in search results. For more information, see [Grant table access to a service account in ServiceNow](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge).
+To set up hierarchical permissions, provide read access to the `sys_properties` table to the service account used for connector setup. The connector reads two system properties - `glide.knowman.apply_article_read_criteria` and `glide.knowman.block_access_with_no_user_criteria` - to determine the permission evaluation flow. If the service account can't read these properties, the connector defaults to the most restrictive settings, which can cause articles without explicit user criteria to not appear in search results. For more information, see [Grant table access to a service account in ServiceNow](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge).
 
-If the user and role are already set up, follow the steps in the [Grant row-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge#grant-row-level-access) and [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge#grant-field-level-access) sections and add the same role that you assigned to the service account to these new ACLs you create for the `sys_properties` table access.
+
+If the user and role are already set up, follow the steps in the [Grant row-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge#grant-row-level-access) and [Grant field-level access](/microsoft-365/copilot/connectors/granting-table-access-servicenow-knowledge#grant-field-level-access) sections and add the same role that you assigned to the service account to these new ACLs you create for the `sys_properties` table access.
+
 
 - Use **\*** in the field name to apply access to all fields for the table.
 
- Internally, you need read only access to the name and value field for the following properties, which are critical for evaluating hierarchical ACL: 
+ Internally, you need read only access to the name and value field for the following properties, which are critical for evaluating hierarchical ACL:
 
-- **glide.knowman.apply_article_read_criteria** 
-- **glide.knowman.block_access_with_no_user_criteria** 
+- **glide.knowman.apply_article_read_criteria**
+- **glide.knowman.block_access_with_no_user_criteria**
 
-If you don't want to provide access to all the fields in the `sys_properties` table, to restrict the account to have access only to required fields: 
+If you don't want to provide access to all the fields in the `sys_properties` table, to restrict the account to have access only to required fields:
 
 1. Create a new ACL and grant access to row-level access to the `sys_properties` table only for the specific properties you want to read. Provide the following values:
 
-    1. Type: record 
-    1. Application: Global 
-    1. Active: checked 
-    1. Decision Type: Allow if 
-    1. Admin overrides: checked 
-    1. Operation: read 
-    1. Name: **System Property \[sys_properties\]**. Keep the adjacent field cell as **--None--**.  
-    1. Applies To:  
+    1. Type: record
+    1. Application: Global
+    1. Active: checked
+    1. Decision Type: Allow if
+    1. Admin overrides: checked
+    1. Operation: read
+    1. Name: **System Property \[sys_properties\]**. Keep the adjacent field cell as **--None--**.
+    1. Applies To:
         1. Select **Name**, operator **is**, and provide the field name: **glide.knowman.apply_article_read_criteria**.
         1. Select the **OR** operator.
-        1. In the second line, select **Name**, operator **is**, and provide the field name: **glide.knowman.block_access_with_no_user_criteria**. 
-    1. Under **Conditions > Requires Roles**, select the role for which you want to allow this ACL, and create the ACL. 
+        1. In the second line, select **Name**, operator **is**, and provide the field name: **glide.knowman.block_access_with_no_user_criteria**.
+    1. Under **Conditions > Requires Roles**, select the role for which you want to allow this ACL, and create the ACL.
 
 1. Create another new ACL and grant access to the **Name** field for the property. Provide the following values:
-    1. Type: record 
-    1. Application: Global 
-    1. Active: checked 
-    1. Decision Type: Allow if 
-    1. Admin overrides: checked 
+    1. Type: record
+    1. Application: Global
+    1. Active: checked
+    1. Decision Type: Allow if
+    1. Admin overrides: checked
     1. Operation: read
     1. Name: **System Property \[sys_properties\]**. In the adjacent field, select **Name**.
-    1. Applies To:  
+    1. Applies To:
         1. Select **Name**, operator **is**, and provide the field name: **glide.knowman.apply_article_read_criteria**.
         1. Select the **OR** operator.
-        1. In the second line, select **Name**, operator **is**, and provide the field name: **glide.knowman.block_access_with_no_user_criteria**. 
+        1. In the second line, select **Name**, operator **is**, and provide the field name: **glide.knowman.block_access_with_no_user_criteria**.
     1. Under **Conditions > Requires Roles**, select the role for which you want to allow this ACL, and create the ACL.
 
-1. Create another new ACL and grant access to the **Value** field for the property. Provide the following values:  
-    1. Type: record 
-    1. Application: Global 
-    1. Active: checked 
-    1. Decision Type: Allow if 
-    1. Admin overrides: checked 
+1. Create another new ACL and grant access to the **Value** field for the property. Provide the following values:
+    1. Type: record
+    1. Application: Global
+    1. Active: checked
+    1. Decision Type: Allow if
+    1. Admin overrides: checked
     1. Operation: read
     1. Name: **System Property \[sys_properties\]**. In the adjacent field, select **Value**.
-    1. Applies To:  
+    1. Applies To:
         1. Select **Name**, operator **is**, and provide the field name: **glide.knowman.apply_article_read_criteria**.
         1. Select the **OR** operator.
-        1. In the second line, select **Name**, operator **is**, and provide the field name: **glide.knowman.block_access_with_no_user_criteria**. 
+        1. In the second line, select **Name**, operator **is**, and provide the field name: **glide.knowman.block_access_with_no_user_criteria**.
     1. Under **Conditions > Requires Roles**, select the role for which you want to allow this ACL, and create the ACL.
 
-By creating the three ACLs, you can restrict the service account to only the necessary permissions. With this restriction, the service account can fetch the required details to determine the permission evaluation flow in your ServiceNow instance.
+By creating the three ACLs, you can restrict the service account to only the necessary permissions. With this restriction, the service account can fetch the required details to determine the permission evaluation flow in your ServiceNow instance.
+
 
 ### Add Microsoft 365 IP address to the allowlist
 
-If any network configurations, such as firewall or proxy settings, block access to ServiceNow, add the IP addresses listed in [IP firewall rules](deployment-overview.md#ip-firewall-rules) to the allowlist.
+If any network configurations, such as firewall or proxy settings, block access to ServiceNow, add the IP addresses listed in [IP firewall rules](deployment-overview.md#ip-firewall-rules) to the allowlist.
+
 
 For information about ServiceNow-specific controls, see [IP Address Access Control](https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/login/task/t_AccessControl.html).
 
 ### Resolve connector setup issues with ServiceNow SSO configuration
 
-If you configure your ServiceNow instance with single sign-on (SSO), you might encounter the following issues during connector setup:
+If you configure your ServiceNow instance with single sign-on (SSO), you might encounter the following issues during connector setup:
+
 
 - During the OAuth process, a **Logout successfully** window might appear without prompting for ServiceNow credentials.
 - Microsoft 365 admin credentials might be used to authorize the ServiceNow connection instead of the intended service account.
 
-By default, ServiceNow attempts to connect by using Microsoft 365 admin credentials through SSO from a browser sign in. This behavior can cause the connection to fail and result in the **Logout successfully** message.
+By default, ServiceNow attempts to connect by using Microsoft 365 admin credentials through SSO from a browser sign in. This behavior can cause the connection to fail and result in the **Logout successfully** message.
+
 
 To resolve these issues:
 
-1. Open a private browser window and sign in by using the ServiceNow service account credentials.
-1. In a new tab, sign in to the Microsoft 365 admin center by using Microsoft 365 admin credentials.
+1. Open a private browser window and sign in by using the ServiceNow service account credentials.
+
+1. In a new tab, sign in to the Microsoft 365 admin center by using Microsoft 365 admin credentials.
+
 
     > [!NOTE]
     > The initial sign in might default to ServiceNow SSO. If that happens, switch to the correct credentials.
 
-1. Retry the OAuth configuration. You should now see a window prompting you to authorize the connection by using the service account credentials.
+1. Retry the OAuth configuration. You should now see a window prompting you to authorize the connection by using the service account credentials.
+
 
 ## Next step
 

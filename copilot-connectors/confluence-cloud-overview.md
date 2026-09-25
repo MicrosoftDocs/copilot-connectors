@@ -1,8 +1,8 @@
 ---
 ms.date: 12/19/2025
 title: "Confluence Cloud Connector Overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -93,8 +93,8 @@ The following examples show prompts that agent builders can use to help their us
 The Confluence Cloud connector has the following key capabilities:
 
 - **Indexes core Confluence content** – Crawls Confluence Cloud wiki pages and blog posts (from all spaces by default).
-- **Integrates with Copilot** – Enables Copilot and Microsoft Search to find and use Confluence content. Users can ask questions in natural language and get answers that include information from Confluence pages or files, with reference links back to the source. 
-- **Respects Confluence permissions** – The connector only shows content to users who have access in Confluence. It honors Confluence’s space permissions and page restrictions, so responses and search results don't expose pages to unauthorized users. 
+- **Integrates with Copilot** – Enables Copilot and Microsoft Search to find and use Confluence content. Users can ask questions in natural language and get answers that include information from Confluence pages or files, with reference links back to the source.
+- **Respects Confluence permissions** – The connector only shows content to users who have access in Confluence. It honors Confluence’s space permissions and page restrictions, so responses and search results don't expose pages to unauthorized users.
 - **Configurable content scope** – Admins can control what Confluence data is indexed. For example, you can include or exclude specific spaces or filter by metadata using Confluence Query Language (CQL) queries.
 
 The Confluence Cloud connector has the following limitations:
@@ -102,15 +102,15 @@ The Confluence Cloud connector has the following limitations:
 - **Supports Confluence Cloud only** – This connector works with Atlassian Confluence Cloud. It doesn't support Confluence Server or Data Center deployments – those require a separate on-premises connector.
 - **Permission updates latency** – Changes to user or group access in Confluence are not reflected immediately in the Copilot index. Permission changes are picked up only during a full crawl (once every 24 hours by default), not during the 15-minute incremental syncs. This means there can be a delay (up to the next full reindex) before Copilot results fully reflect newly changed permissions.
 - **Identity mapping requirement** – The connector relies on matching Confluence user identities to Microsoft Entra ID accounts to enforce permissions. If your Confluence users’ email IDs do not exactly match their Entra ID user principal names (UPNs), an admin must configure a manual identity mapping so the system knows which Microsoft 365 user corresponds to each Confluence account. Without this mapping, some content might not appear for intended users because the service can't verify that they have access.
-- **Focused on wiki content** – The connector indexes Confluence pages and blog posts. It doesn't index certain Confluence metadata or app-specific content outside of pages. For example, it doesn’t pull in Confluence user profile information, page history versions, or content from third-party Confluence apps (like Questions, calendars, or other add-ons). It also only indexes published content – content that is archived, unpublished drafts, or in the recycle bin is not ingested. This ensures Copilot draws from the official current knowledge base, but it means historical or deleted content won’t surface in answers. 
+- **Focused on wiki content** – The connector indexes Confluence pages and blog posts. It doesn't index certain Confluence metadata or app-specific content outside of pages. For example, it doesn’t pull in Confluence user profile information, page history versions, or content from third-party Confluence apps (like Questions, calendars, or other add-ons). It also only indexes published content – content that is archived, unpublished drafts, or in the recycle bin is not ingested. This ensures Copilot draws from the official current knowledge base, but it means historical or deleted content won’t surface in answers.
 
 ## Data types indexed from Confluence Cloud
 
-The Confluence Cloud connector indexes key Confluence content types so they can be used in Copilot, Copilot Search, and Microsoft Search. By default, the connector crawls all Confluence pages and blog posts in your Confluence Cloud site. 
+The Confluence Cloud connector indexes key Confluence content types so they can be used in Copilot, Copilot Search, and Microsoft Search. By default, the connector crawls all Confluence pages and blog posts in your Confluence Cloud site.
 
 | Confluence content type | Indexed and surfaced in Copilot and search |
 | ----------------------- | ------------------------------------------ |
-| **Pages** | Main content pages in Confluence spaces. The connector indexes page titles and body text. These appear as search results or referenced content in Copilot responses.| 
+| **Pages** | Main content pages in Confluence spaces. The connector indexes page titles and body text. These appear as search results or referenced content in Copilot responses.|
 | **Blog posts** | Confluence blog entries (news or updates). Copilot can retrieve the content and show it in results by title. Users can query Copilot for information contained in blog posts. |
 | **Attachments** | Files attached to pages or blog posts. Attachments are indexed together with Confluence page contents into the content property of the data schema.|
 

@@ -1,7 +1,7 @@
 ---
 title: "Deploy the WordPress.com connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin
@@ -120,7 +120,7 @@ The connector indexes the properties listed in the following table by default. T
 
 ### Customize sync intervals
 
-You can configure full and incremental crawls to meet your data refresh needs. By default, incremental crawls run every 15 minutes, and full crawls run daily. 
+You can configure full and incremental crawls to meet your data refresh needs. By default, incremental crawls run every 15 minutes, and full crawls run daily.
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 

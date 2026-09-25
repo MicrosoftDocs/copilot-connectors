@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the WordPress.org connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin

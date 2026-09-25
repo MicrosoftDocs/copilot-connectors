@@ -1,9 +1,9 @@
 ---
 title: Set up the GitHub service for GitHub Cloud Issues connector ingestion
 description: "Get the steps that the GitHub admin needs to complete to configure the service for your organization so you can deploy the GitHub Cloud Issues Microsoft 365 Copilot connector."
-author: Lauragra
-ms.author: lauragra
-ms.reviewer: lauragra
+author: jasonjoh
+ms.author: jasonjoh
+ms.reviewer: jasonjoh
 manager: calvind
 ms.date: 6/18/2026
 ms.topic: concept-article
@@ -130,8 +130,8 @@ Depending on the authentication method you plan to use, generate either a client
 
 ### Install the GitHub App
 
-1.  On the **General** page of the GitHub app, select **Install App**.  
-    
+1.  On the **General** page of the GitHub app, select **Install App**.
+
     :::image type="content" source="./media/github-cloud-issues-admin-setup/install-app.png" alt-text="Screenshot of GitHub with Install App highlighted":::
 
 2.  Select the organization where you want to install the app.

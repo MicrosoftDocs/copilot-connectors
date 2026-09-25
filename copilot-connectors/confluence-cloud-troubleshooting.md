@@ -1,8 +1,8 @@
 ---
 ms.date: 09/05/2025
 title: "Troubleshoot issues with the Confluence Cloud connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin

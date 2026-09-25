@@ -1,6 +1,6 @@
 ---
 title: "15Five Priorities connector overview"
-ms.author: lauragra
+ms.author: jasonjoh
 author: wangchen
 manager: zezhangzhao
 ms.reviewer: wangchen
@@ -14,7 +14,7 @@ description: "Learn about the capabilities, limitations, and use cases for the 1
 
 # 15Five Priorities connector overview
 
-The 15Five Priorities Microsoft 365 Copilot connector enables your organization to index 15Five priority data so the data surfaces in Microsoft 365 Copilot and Microsoft Search experiences. 
+The 15Five Priorities Microsoft 365 Copilot connector enables your organization to index 15Five priority data so the data surfaces in Microsoft 365 Copilot and Microsoft Search experiences.
 
 ## Why use the 15Five Priorities connector
 

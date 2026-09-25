@@ -1,7 +1,7 @@
 ---
 title: "Partner-built connectors gallery"
-ms.author: danielabo
-author: danielabom
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.audience: Admin
 ms.topic: landing-page
@@ -108,7 +108,7 @@ The following table lists the content management systems connectors that are ava
 |ProLaw|BA Insight|Connects any portal to ProLaw, enabling information from ProLaw to be surfaced while respecting the user privileges within ProLaw. | [ProLaw Connector for Search](https://uplandsoftware.com/bainsight/connectors/prolaw/) |
 |S&P Global|S&P Global|Empowers clients by integrating S&P Global data directly into their Office 365 environment. This seamless integration allows users to access and surface critical S&P Global content within their familiar Microsoft tools like Copilot, SharePoint, Outlook, and Teams. The connector provides direct links to the wealth of information available on S&P Global platforms, enhancing productivity and decision-making by bringing data to your fingertips. | [S&P Global connector](https://www.marketplace.spglobal.com/en/solutions/microsoft-graph-connector-(6a8b56b9-4c0c-4ddc-85ed-21a4648ee569)) |
 | ServiceNow product documentation | ServiceNow | Retrieves topics from the ServiceNow product documentation and makes their content and metadata searchable in AI Search applications. | [ServiceNow® product documentation external content connector](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/ai-search/concept/servicenow-product-documentation-external-content-connector.html) |
-| SharePoint | ServiceNow | Retrieves pages from sites in your Microsoft SharePoint Online source system and makes their content and metadata searchable in AI Search applications. | [Microsoft SharePoint Online external content connector](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/ai-search/concept/microsoft-sharepoint-online-external-content-connector.html) | 
+| SharePoint | ServiceNow | Retrieves pages from sites in your Microsoft SharePoint Online source system and makes their content and metadata searchable in AI Search applications. | [Microsoft SharePoint Online external content connector](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/ai-search/concept/microsoft-sharepoint-online-external-content-connector.html) |
 |SharePoint 2010|BA Insight|Allows you to connect to SharePoint 2010, fetch data from any site, document library, or list; and index this content securely. | [SharePoint 2010 Connector for Search](https://uplandsoftware.com/bainsight/connectors/sharepoint-2010/) |
 |SharePoint 2016|BA Insight|Allows you to connect to SharePoint 2016, fetch data from any site, document library, or list; and index this content securely. | [SharePoint 2016 Connector for Search](https://uplandsoftware.com/bainsight/connectors/sharepoint-2016/) |
 |SharePoint 2016|Accenture|Crawls content from any SharePoint 2016 site collection URL. The connector supports lists, pages, and sites, and updates are identified either automatically or via the SharePoint change log. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|

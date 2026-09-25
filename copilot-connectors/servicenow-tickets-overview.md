@@ -1,7 +1,7 @@
 ---
 title: "ServiceNow Tickets connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvindrover
 ms.reviewer: mayanksethi
 audience: Admin
@@ -51,10 +51,10 @@ The ServiceNow Tickets connector enables users to:
 
 The ServiceNow Tickets connector has the following limitations:
 
-- The **Everyone** option on the **Users** tab doesn't process any permissions. Don't select this option unless you want to test the connection between selected team members in an isolated environment. 
-- The connector doesn't support reading ACL rules for any ticket items or any table. 
+- The **Everyone** option on the **Users** tab doesn't process any permissions. Don't select this option unless you want to test the connection between selected team members in an isolated environment.
+- The connector doesn't support reading ACL rules for any ticket items or any table.
 - Incremental crawls don't update permissions or ACLs—only full crawls do.
-- Attachments and comments aren't indexed. 
+- Attachments and comments aren't indexed.
 
 ## Data types indexed from ServiceNow Tickets
 

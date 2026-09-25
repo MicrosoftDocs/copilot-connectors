@@ -1,8 +1,8 @@
 ---
 ms.date: 10/08/2019
 title: "Oracle SQL connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -32,14 +32,14 @@ The Oracle SQL Microsoft 365 Copilot connector allows your organization to disco
 - **Service Account**: To connect to your SQL database and allow the Copilot connector to update records regularly, you need a service account with read permissions granted to the service account.
 
 >[!NOTE]
-> If you previously installed the GCA, ensure it's updated to version 3.1.3.0 or later.  
+> If you previously installed the GCA, ensure it's updated to version 3.1.3.0 or later.
 
 >[!NOTE]
 >If you use Windows authentication while configuring the Oracle SQL Copilot connector, the user with which you're trying to sign in needs to have interactive login rights to the machine where the connector agent is installed. For more information, see [login policy management](/windows/security/threat-protection/security-policy-settings/allow-log-on-locally#policy-management).
 
 ## Get Started with Setup
 
-### 1. Display name 
+### 1. Display name
 The display name identifies each citation in Copilot, so users can easily recognize the associated file or item. The display name also signifies trusted content and serves as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. SQL server
@@ -51,7 +51,7 @@ If the service name isn't available and you connect using System Identifier (SID
 
 ### 3. Graph Connector Agent
 
-The Oracle SQL Copilot connector agent acts as a bridge between your website instance and the connector APIs, enabling secure and efficient data transfer. In this step, select the agent configuration you want to use for your connector. 
+The Oracle SQL Copilot connector agent acts as a bridge between your website instance and the connector APIs, enabling secure and efficient data transfer. In this step, select the agent configuration you want to use for your connector.
 
 If you didn't install the [Microsoft Graph connector agent](https://www.microsoft.com/download/details.aspx?id=104045) already, you can [download the agent installer](https://www.microsoft.com/download/details.aspx?id=104045) and follow the installation instructions to set it up. Once installed, ensure that the agent is configured correctly to connect your on-premises websites with the connector.
 
@@ -85,7 +85,7 @@ In this step, you configure the SQL query that runs a full crawl of the database
 
 The example demonstrates a selection of five data columns that hold the data for the search: OrderId, OrderTitle, OrderDesc, CreatedDateTime, and IsDeleted. To set view permissions for each row of data, you can optionally select these ACL columns: AllowedUsers, AllowedGroups, DeniedUsers, and DeniedGroups. All these data columns also have the options to **Query**, **Search**, **Retrieve**, or **Refine**.
 
-Select data columns as shown in this example query: 
+Select data columns as shown in this example query:
  `SELECT orderId, orderTitle, orderDesc, allowedUsers, allowedGroups, deniedUsers, deniedGroups, createdDateTime, isDeleted`
 
 The Oracle SQL Copilot connector doesn't allow column names with nonalphanumeric characters in the SELECT clause. Remove any nonalphanumeric characters from column names using an alias. Example - SELECT *column_name* AS *columnName*
@@ -97,7 +97,7 @@ The use of each of the ACL columns in the above query is described below. The fo
 - **AllowedUsers**: This column specifies the list of user IDs who can access the search results. In the following example, a list of users: john@contoso.com, keith@contoso.com, and lisa@contoso.com would only have access to a record with OrderId = 12.
 - **AllowedGroups**: This column specifies the group of users who are able to access the search results. In the following example, group sales-team@contoso.com would only have access to the record with OrderId = 12.
 - **DeniedUsers**: This column specifies the list of users who do **not** have access to the search results. In the following example, users john@contoso.com and keith@contoso.com don't have access to the record with OrderId = 13, whereas everyone else has access to this record.
-- **DeniedGroups**: This column specifies the group of users who do **not** have access to the search results. In the following example, groups engg-team@contoso.com and pm-team@contoso.com don't have access to a record with OrderId = 15, whereas everyone else has access to this record.  
+- **DeniedGroups**: This column specifies the group of users who do **not** have access to the search results. In the following example, groups engg-team@contoso.com and pm-team@contoso.com don't have access to a record with OrderId = 15, whereas everyone else has access to this record.
 
 ![Sample data showing the OrderTable and AclTable with example properties.](media/mssql/mssql-acl1.png)
 

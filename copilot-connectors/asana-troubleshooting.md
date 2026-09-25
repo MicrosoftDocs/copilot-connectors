@@ -1,6 +1,6 @@
 ---
 title: "Asana connector troubleshooting"
-ms.author: lauragra
+ms.author: jasonjoh
 author: Kai-Cloud
 manager: zezhangzhao
 audience: Admin
@@ -13,7 +13,7 @@ description: "Find troubleshooting information for the Asana Copilot connector."
 
 # Troubleshoot issues with the Asana Copilot connector
 
-The Asana Microsoft 365 Copilot connector enables users to surface Asana tasks in Microsoft 365 apps such as Teams, Outlook, and SharePoint using Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the Asana connector. 
+The Asana Microsoft 365 Copilot connector enables users to surface Asana tasks in Microsoft 365 apps such as Teams, Outlook, and SharePoint using Copilot, Copilot Search, and Microsoft Search. This article provides troubleshooting information for common errors that you might encounter when you deploy the Asana connector.
 
 ## Asana connector troubleshooting
 

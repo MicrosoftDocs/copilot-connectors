@@ -1,7 +1,7 @@
 ---
 title: "Deploy the GitLab Merge Requests Cloud connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -103,7 +103,7 @@ If direct mapping fails, you can use regular expressions (regex) to transform va
 
 ### Customize content settings
 
-On the **Data** tab, you can verify property mappings in the sample data for metadata such as content, labels, description, and timestamps. 
+On the **Data** tab, you can verify property mappings in the sample data for metadata such as content, labels, description, and timestamps.
 
 #### Manage properties
 
@@ -116,7 +116,7 @@ Configure the full and incremental crawl sync intervals. The following are the d
 - **Incremental crawl:** Every 15 minutes.
 - **Full crawl:** Daily.
 
-Adjust these intervals to meet your organization’s needs. For more information, see  
+Adjust these intervals to meet your organization’s needs. For more information, see
 [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 
 The following table lists the rate limits for the GitLab Merge Requests Cloud connector content ingestion.

@@ -1,7 +1,7 @@
 ---
 title: "Amazon S3 connector (preview)"
 description: "Learn about the Amazon S3 connector for Microsoft 365 Copilot, including its benefits, use cases, capabilities, and limitations."
-ms.author: lauragra
+ms.author: jasonjoh
 author: Kai-Cloud
 manager: zezhangzhao
 ms.topic: overview

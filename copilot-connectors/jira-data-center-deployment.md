@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Jira Data Center connector"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: neocheng
 audience: Admin
@@ -22,7 +22,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 
 - You must be a Microsoft 365 admin.
 - Install the [Microsoft Graph connector agent](/microsoft-365/copilot/connectors/connector-agent) on a Windows computer within the same network as your Jira Data Center instance. If the agent is already installed, verify that you're running version **3.1.15.0 or later**.
-- Install the Jira Data Center plugin from the Microsoft 365 Copilot connector listing in the [Atlassian Marketplace](https://marketplace.atlassian.com/).  
+- Install the Jira Data Center plugin from the Microsoft 365 Copilot connector listing in the [Atlassian Marketplace](https://marketplace.atlassian.com/).
   > [!NOTE]
   > The plugin supports Jira Data Center versions **8.10.0 – 10.5.1**.
 - Configure a service account with the permissions listed in the following table.
@@ -81,7 +81,7 @@ To configure OAuth in Jira:
     :::image type="content" alt-text="Screenshot of Select External application and Incoming direction." source="media/jira-data-center/jira-step4-external-incoming.png" lightbox="media/jira-data-center/jira-step4-external-incoming.png":::
 
 1. Complete the **Configure an incoming link** form:
-   - **Redirect URL:**  
+   - **Redirect URL:**
      - Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`
      - Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
      - Microsoft 365 GCC High (Government Community Cloud High): `https://gcs.office365.us/v1.0/admin/oauth/callback`
@@ -260,7 +260,7 @@ Users can access `https://jira.<your-domain>.com/rest/api/2/field` and review th
 
 You can adjust the crawl frequency to fit your data refresh needs. The following are the default values:
 
-- **Full crawl:** Every day  
+- **Full crawl:** Every day
 - **Incremental crawl:** Every 15 minutes
 
 For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).

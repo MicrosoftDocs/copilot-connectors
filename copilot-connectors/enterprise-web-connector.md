@@ -11,6 +11,8 @@ ms.localizationpriority: medium
 description: "Set up the Enterprise Websites cloud Microsoft 365 Copilot connector."
 ---
 
+<!-- cSpell:ignore vivg harshkum -->
+
 # Enterprise Websites cloud connector
 
 By using the Enterprise Websites cloud Microsoft 365 Copilot connector, your organization can index webpages and **content from your company-owned websites** or public websites on the internet. After you configure the connector and index content from the website, end users can search for that content in Microsoft Search and Microsoft 365 Copilot.
@@ -19,6 +21,7 @@ By using the Enterprise Websites cloud Microsoft 365 Copilot connector, your org
 >To index websites hosted on-premises or on private clouds, use the [Enterprise Websites on-premises Copilot connector](enterprise-web-connector-onprem.md).
 
 ## Capabilities
+
 - Index webpages from cloud accessible websites.
 - Index up to 50 websites in a single connection.
 - Exclude webpages from crawl using exclusion rules.
@@ -26,7 +29,7 @@ By using the Enterprise Websites cloud Microsoft 365 Copilot connector, your org
 
 These are the supported file types.
 
-| File extension | File type | Description | 
+| File extension | File type | Description |
 | -------------- | --------- | ----------- |
 | .pdf | PDF | Portable Document Format |
 | .odt | OpenDocument Text | OpenDocument Text Document |
@@ -79,27 +82,31 @@ These are the supported MIME types.
 | text/x-server-parsed-html | Server-parsed HTML documents, often used for Server Side Includes (SSI). |
 
 ## Limitations
+
 - Doesn't support authentication mechanisms like SAML, JWT token, Forms-based authentication, and similar methods.
 - Doesn't support crawling of dynamic content in webpages.
 
 ## Prerequisites
+
 - You must be the **AI administrator** for your organization's Microsoft 365 tenant.
-- **Website URLs**: To connect to your website content, you need the URL to the website. You can index multiple websites (up to 50) in a single connection. 
+- **Website URLs**: To connect to your website content, you need the URL to the website. You can index multiple websites (up to 50) in a single connection.
 - **Service Account (optional)**: You need a service account only when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, use a dedicated account to authenticate and crawl the content.
 
 ## Get Started
 
 [![Screenshot that shows connection creation screen for Enterprise Websites cloud Copilot connector.](media/enterprise-web-connector/enterprise-website-cloud-create-page.png)](media/enterprise-web-connector/enterprise-website-cloud-create-page.png#lightbox)
 
-### Display name 
+### Display name
+
 A display name identifies each citation in Copilot, so users can easily recognize the associated file or item. The display name also signifies trusted content. Use the display name as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Add website URLs to index
+
 Specify the root of the website that you want to crawl. The Enterprise Websites cloud Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection.
 
 The connector only crawls webpages in the domain of root URLs and doesn't support crawling of out-of-domain URLs. Redirection is only supported within the same domain. If there are redirections in the webpages to be crawled, you can add the redirected URL directly in the list of URLs to crawl.
 
-**Use sitemap for crawling**
+#### Use sitemap for crawling
 
 When selected, the connector only crawls the URLs listed in the sitemap. This option also allows you to configure incremental crawling during a later step. If not selected or no sitemap is found, the connector does a deep crawl of all the links found on the root URL of the site.
 
@@ -113,14 +120,15 @@ When you select this option, the crawler performs the following steps:
 
 1. If there's failure in any of the preceding steps, the crawler performs a deep crawl of the website, without throwing any error.
 
-**Index only pages under the specified subdirectory**
+#### Index only pages under the specified subdirectory
 
-The Website connector offers an option to index only webpages that are under the specified subdirectory. 
+The Website connector offers an option to index only webpages that are under the specified subdirectory.
 
 - When you **don't check** this option, the connector always starts crawling from the root of the URL. For example, if your provided URL is `https://www.contoso.com/electronics`, the connector starts crawl from `https://www.contoso.com`.
 - When you **check** this option, the connector starts crawling from the exact input URL. For example, if your provided URL is `https://www.contoso.com/electronics`, the connector starts crawl from `https://www.contoso.com/electronics`.
 
 ### Provide authentication type
+
 The authentication method you choose applies to all websites you provide to index in a connection. To authenticate and sync content from websites, choose **one of the five** supported methods:<br>
 
 a. **None** <br>
@@ -131,9 +139,10 @@ To authenticate by using basic authentication, enter your account's username and
 
 > [!TIP]
 > Try multiple permutations of the username for authentication. Examples include:
-> * username
-> * username@domain.com
-> * domain/username
+>
+> - `username`
+> - `username@domain.com`
+> - `domain/username`
 
 c. **SiteMinder** <br>
 SiteMinder authentication requires a properly formatted URL, `https://custom_siteminder_hostname/smapi/rest/createsmsession`, a username, and a password.
@@ -144,76 +153,76 @@ OAuth 2.0 with [Microsoft Entra ID](/azure/active-directory/) requires a resourc
 The resource ID, client ID, and client secret values depend on how you set up Microsoft Entra ID-based authentication for your website. One of the two specified options might be suitable for your website:
 
 1. If you're using a Microsoft Entra application both as an identity provider and the client app to access the website, the client ID and the resource ID are the application ID of this single application, and the client secret is the secret that you generated in this application.
-    
+
     > [!NOTE]
     > For detailed steps to configure a client application as an identity provider, see [Quickstart: Register an application with the Microsoft identity platform and Configure your App Service or Azure Functions app to use Microsoft Entra login](/azure/app-service/configure-authentication-provider-aad).
 
     After you configure the client app, make sure you create a new client secret by going to the **Certificates & Secrets** section of the app. Copy the client secret value shown in the page because it isn't displayed again.
 
     In the following screenshots, you can see the steps to obtain the client ID, and client secret, and set up the app if you're creating the app on your own.
-    
-    * View of the settings in the branding section:
-    
+
+    - View of the settings in the branding section:
+
       > [!div class="mx-imgBorder"]
-      > [ ![Image showing the settings section on the branding page.](media/enterprise-web-connector/connectors-enterpriseweb-branding.png) ](media/enterprise-web-connector/connectors-enterpriseweb-branding.png#lightbox)
-    
-    * View of the settings in the authentication section:
-    
+      > [![Image showing the settings section on the branding page.](media/enterprise-web-connector/connectors-enterpriseweb-branding.png) ](media/enterprise-web-connector/connectors-enterpriseweb-branding.png#lightbox)
+
+    - View of the settings in the authentication section:
+
       > [!div class="mx-imgBorder"]
-      > [ ![Image showing the settings section on the authentication page.](media/enterprise-web-connector/connectors-enterpriseweb-authentication.png) ](media/enterprise-web-connector/connectors-enterpriseweb-authentication.png#lightbox)
-    
+      > [![Image showing the settings section on the authentication page.](media/enterprise-web-connector/connectors-enterpriseweb-authentication.png) ](media/enterprise-web-connector/connectors-enterpriseweb-authentication.png#lightbox)
+
       > [!NOTE]
       > It isn't required to have the above-specified route for the redirect URI on your website. Only if you use the user token sent by Azure in your website for authentication you need to have the route.
-    
-    * View of the client ID on the **Essentials** section:
-    
+
+    - View of the client ID on the **Essentials** section:
+
       > [!div class="mx-imgBorder"]
-      > [ ![Image showing the client ID on the essentials section.](media/enterprise-web-connector/connectors-enterpriseweb-clientapp-clientidresource-id.png) ](media/enterprise-web-connector/connectors-enterpriseweb-clientapp-clientidresource-id.png#lightbox)
-    
-    * View of the client secret on the **Certificates & secrets** section:
-    
+      > [![Image showing the client ID on the essentials section.](media/enterprise-web-connector/connectors-enterpriseweb-clientapp-clientidresource-id.png) ](media/enterprise-web-connector/connectors-enterpriseweb-clientapp-clientidresource-id.png#lightbox)
+
+    - View of the client secret on the **Certificates & secrets** section:
+
       > [!div class="mx-imgBorder"]
-      > [ ![Image showing the client secret.](media/enterprise-web-connector/connectors-enterpriseweb-client-secret.png) ](media/enterprise-web-connector/connectors-enterpriseweb-client-secret.png#lightbox)
-    
+      > [![Image showing the client secret.](media/enterprise-web-connector/connectors-enterpriseweb-client-secret.png) ](media/enterprise-web-connector/connectors-enterpriseweb-client-secret.png#lightbox)
+
 2. If you're using an application (first app) as an identity provider for your website as the resource, and a different application (second app) to access the website, the client ID is the application ID of your second app and the client secret is the secret configured in the second app. However, the resource ID is the ID of your first app.
 
     > [!NOTE]
     > For steps to configure a client application as an identity provider see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) and [Configure your App Service or Azure Functions app to use Microsoft Entra login](/azure/app-service/configure-authentication-provider-aad).
 
-You don't need to configure a client secret in this application, but you need to add an app role in the **App roles** section, which you later assign to your client application. Refer to the images to see how to add an app role.
+    You don't need to configure a client secret in this application, but you need to add an app role in the **App roles** section, which you later assign to your client application. Refer to the images to see how to add an app role.
 
-    * Creating a new app role:
-    
+    - Creating a new app role:
+
       > [!div class="mx-imgBorder"]
-      > [ ![Image showing the option to create an app role.](media/enterprise-web-connector/connectors-enterpriseweb-new-app-role.png) ](media/enterprise-web-connector/connectors-enterpriseweb-new-app-role.png#lightbox)
-    
-    * Editing the new app role:
-    
+      > [![Image showing the option to create an app role.](media/enterprise-web-connector/connectors-enterpriseweb-new-app-role.png) ](media/enterprise-web-connector/connectors-enterpriseweb-new-app-role.png#lightbox)
+
+    - Editing the new app role:
+
       > [!div class="mx-imgBorder"]
-      > [ ![Image showing the section to edit an app role.](media/enterprise-web-connector/connectors-enterpriseweb-new-app-role2.png) ](media/enterprise-web-connector/connectors-enterpriseweb-new-app-role2.png#lightbox)
-    
-      After configuring the resource app, create the client app and give it permission to access the resource app by adding the app role you configured in the API permissions of the client app. 
-    
+      > [![Image showing the section to edit an app role.](media/enterprise-web-connector/connectors-enterpriseweb-new-app-role2.png) ](media/enterprise-web-connector/connectors-enterpriseweb-new-app-role2.png#lightbox)
+
+      After configuring the resource app, create the client app and give it permission to access the resource app by adding the app role you configured in the API permissions of the client app.
+
       > [!NOTE]
       > To see how to grant permissions to the client app, see [Quickstart: Configure a client application to access a web API](/azure/active-directory/develop/quickstart-configure-app-access-web-apis).
-    
+
     The following screenshots show the section to grant permissions to the client app.
-    
-    * Adding a permission:
-    
+
+    - Adding a permission:
+
       > [!div class="mx-imgBorder"]
-      > [ ![Image showing the option to add a permission.](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions.png) ](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions.png#lightbox)
-    
-    * Selecting the permissions:
-    
+      > [![Image showing the option to add a permission.](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions.png) ](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions.png#lightbox)
+
+    - Selecting the permissions:
+
       > [!div class="mx-imgBorder"]
-      > [ ![Image showing the section to select an API.](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions2.png) ](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions2.png#lightbox)
-    
-    * Adding the permissions:
- 
+      > [![Image showing the section to select an API.](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions2.png) ](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions2.png#lightbox)
+
+    - Adding the permissions:
+
       > [!div class="mx-imgBorder"]
-      > [ ![Image showing the selected permissions.](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions3.png) ](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions3.png#lightbox)
-    
+      > [![Image showing the selected permissions.](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions3.png) ](media/enterprise-web-connector/connectors-enterpriseweb-adding-permissions3.png#lightbox)
+
     Once you assign the permissions, create a new client secret for this application by going to the **Certificates & secrets** section.
     Copy the client secret value shown on the page as it isn't displayed again. Use the application ID from this app as the client ID, the secret from this app as the client secret, and the application ID of the first app as the resource ID.
 
@@ -221,6 +230,7 @@ e. **OIDC Client Credentials (Any identity provider)** <br>
 The OIDC client credentials flow is designed for machine-to-machine authentication using any identity provider. To configure OIDC client credentials authentication, register an application with the authorization server (for example, Okta, Auth0, Keycloak, Ping Identity, and others).
 
 Inputs required for configuration:
+
 - Client ID: The identifier assigned to the application during registration.
 - Client Secret: The secret key assigned to the application during registration.
 - Scopes: The list of permissions the application requires. These scopes are predefined on the authorization server. (For example, `read:data write:data admin:operations`)
@@ -240,21 +250,22 @@ To illustrate an example, let's look at configuring OIDC client credentials auth
     - Grant Type: Select Client Credentials. Disable other grant types unless required for other flows.
     - Sign-in redirect URIs: Since you're using client credentials, you don't need to configure any redirect URIs.
     - Logout redirect URIs (Optional): Not usually needed for client credentials.
-- Select **Done**.
-3. Set Client Authentication Method
+    - Select **Done**.
+1. Set Client Authentication Method
     - Select **Client secret** in the **Client Authentication** dropdown.
     - Select **Save** to generate a client secret (you see it only once).
-4. Configure Scopes
+1. Configure Scopes
     - Under **Scopes**, assign OAuth 2.0 scopes, such as `read:data` and `write:data`. These names are just labels - you define what they mean in your application.
     - Ensure scopes align with the API permissions required.
-5. Assign the App to Users or Groups
+1. Assign the App to Users or Groups
     - In the **Assignments** tab, assign the app to the relevant users or groups.
     - Even for service apps, assignments ensure policies apply correctly.
-6. Token Endpoint Configuration
+1. Token Endpoint Configuration
     - The token URL is typically `https://{yourOrg}.okta.com/oauth2/v1/token`.
     - Use this endpoint to request access tokens.
 
 ### 4. Roll out to limited audience
+
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To learn more about limited rollout, see [staged rollout](staged-rollout.md).
 
 At this point, you're ready to create the connection for your cloud websites. Select **Create** to publish your connection and index webpages from your websites.
@@ -333,7 +344,7 @@ The Enterprise Website cloud Copilot connector supports two types of source prop
 
 1. Meta tag
 
-    The connector fetches any meta tags your root URLs may have and shows them. You can select which tags to include for crawling. A selected tag gets indexed for all provided URLs, if available. 
+    The connector fetches any meta tags your root URLs may have and shows them. You can select which tags to include for crawling. A selected tag gets indexed for all provided URLs, if available.
 
     [![Screenshot that shows Content tab with meta tags panel](media/enterprise-web-connector/enterprise-website-cloud-metatags.png)](media/enterprise-web-connector/enterprise-website-cloud-metatags.png#lightbox)
 
@@ -341,7 +352,7 @@ The Enterprise Website cloud Copilot connector supports two types of source prop
 
 2. Custom property settings
 
-    You can enrich your indexed data by creating custom properties for your selected meta tags or the connector's default properties. 
+    You can enrich your indexed data by creating custom properties for your selected meta tags or the connector's default properties.
 
     [![Screenshot that shows Content tab with custom property panel](media/enterprise-web-connector/enterprise-website-cloud-custom-property.png)](media/enterprise-web-connector/enterprise-website-cloud-custom-property.png#lightbox)
 
@@ -352,7 +363,7 @@ The Enterprise Website cloud Copilot connector supports two types of source prop
       3. If you selected a static value, enter the value you want to appear.
       4. If you selected a String/rRegex value:
           * In the **Add expressions** section, in the **Property** list, select a default property or meta tag from the list. For **Sample value**, enter a string to represent the type of values that could appear. This sample is used when you preview your rule. For **Expression**, enter a regex expression to define the portion of the property value that should appear in search results. You can add up to three expressions.
-          * In the **Create formula** section, enter a formula to combine the values extracted from the expressions. 
+          * In the **Create formula** section, enter a formula to combine the values extracted from the expressions.
 
 To learn more about regex expressions, see [.NET regular expressions](/dotnet/standard/base-types/regular-expressions) or search the web for a regex expression reference guide.
 
