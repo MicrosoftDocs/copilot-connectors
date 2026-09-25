@@ -1,8 +1,8 @@
 ---
 ms.date: 10/02/2019
 title: "Monitor connector errors "
-ms.author: danielabo
-author: danielabom
+ms.author: jasonjoh
+author: jasonjoh
 manager: SteveWilkins1123
 ms.topic: article
 ms.localizationpriority: medium

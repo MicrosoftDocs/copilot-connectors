@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the GitHub Cloud Knowledge connector"
-ms.author: lauragra
-author: Lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin

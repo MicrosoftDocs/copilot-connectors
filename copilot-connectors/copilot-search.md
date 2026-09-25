@@ -1,7 +1,7 @@
 ---
 title: "Connectors and Copilot Search"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.audience: Admin
 ms.topic: overview

@@ -1,13 +1,13 @@
---- 
-title: "Zoom Meetings connector" 
-ms.author: lauragra
+---
+title: "Zoom Meetings connector"
+ms.author: jasonjoh
 author: vivg
 manager: ereza
 audience: Admin
-ms.audience: Admin 
+ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.localizationpriority: medium 
-description: "Set up the Zoom Meetings Microsoft 365 Copilot connector." 
+ms.localizationpriority: medium
+description: "Set up the Zoom Meetings Microsoft 365 Copilot connector."
 ms.date: 04/17/2026
 ---
 
@@ -16,26 +16,26 @@ ms.date: 04/17/2026
 The Zoom Meetings Microsoft 365 Copilot connector enables your organization to index meeting-related artifacts, such as transcripts and metadata, so meeting owners can search for the information in Microsoft 365 Copilot and Microsoft Search clients.
 
 ## Capabilities
-- Index meeting-related data such as transcripts, meeting details, key points, and summary. 
-- Enable your users to ask questions related to their Zoom meetings in Copilot. 
+- Index meeting-related data such as transcripts, meeting details, key points, and summary.
+- Enable your users to ask questions related to their Zoom meetings in Copilot.
    - What are the action items from a specific meeting?
    - What are the outcomes of a specific meeting?
    - Summary of several meetings with a specific participant or on a specific subject.
 - Use [semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
-- The Microsoft 365 Copilot connector app in the Zoom Marketplace isn't currently available in the European Union (EU). 
+- The Microsoft 365 Copilot connector app in the Zoom Marketplace isn't currently available in the European Union (EU).
 - Zoom API rate limits can affect a full data refresh. For more information, see [Zoom rate limits](https://developers.zoom.us/docs/api/rate-limits/).
 
 ## Prerequisites
 
 - You must be an AI administrator for your organization's Microsoft 365 tenant.
-- To connect to your Zoom meetings data, you must have a paid Zoom plan (**Business** or **Enterprise**) with cloud recording enabled. 
+- To connect to your Zoom meetings data, you must have a paid Zoom plan (**Business** or **Enterprise**) with cloud recording enabled.
 - A Zoom account administrator must authenticate and provide consent to create the connection.
 
 ## Deploy the connector
 
-### Set display name 
+### Set display name
 A display name identifies each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). You can accept the **Zoom Meetings** name or customize it to a name that users in your organization recognize.
 
 ### Authentication
@@ -76,7 +76,7 @@ You can customize the default values for the {connector name} connector settings
 
 #### Access permissions
 
-The Zoom Meetings connector supports access permissions only for the original owner of a meeting in Zoom. 
+The Zoom Meetings connector supports access permissions only for the original owner of a meeting in Zoom.
 
 #### Mapping identities
 

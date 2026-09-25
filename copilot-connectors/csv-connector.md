@@ -1,13 +1,13 @@
---- 
-title: "CSV connector" 
-ms.author: lauragra 
-author: lauragra 
-manager: calvind 
+---
+title: "CSV connector"
+ms.author: jasonjoh
+author: jasonjoh
+manager: calvind
 audience: Admin
-ms.audience: Admin 
+ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.localizationpriority: medium 
-description: "Set up the CSV Microsoft 365 Copilot connector for SharePoint or Azure Data Lake Storage sources." 
+ms.localizationpriority: medium
+description: "Set up the CSV Microsoft 365 Copilot connector for SharePoint or Azure Data Lake Storage sources."
 ms.date: 03/08/2022
 ---
 
@@ -139,13 +139,13 @@ When you set up the CSV Microsoft 365 Copilot connector, you'll need to provide 
 [Add CSV Microsoft 365 Copilot connector](https://admin.microsoft.com/adminportal/home#/microsoft-365/copilot/connectors/Connectors/add?ms_search_referrer=microsoft-365/copilot/connectorsDocs_CSV&type=CSV)
 
 Follow the general [setup instructions](./deployment-overview.md).
-<!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 
+<!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup
 instructions.-->
 
 ## Step 2: Name the connection
 
 Follow the general [setup instructions](./deployment-overview.md).
-<!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 
+<!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup
 instructions.-->
 
 ## Step 3: Configure connection settings

@@ -1,7 +1,7 @@
 ---
 title: "GitLab Merge Requests Server connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -91,12 +91,12 @@ The GitLab Merge Requests Server connector has the following limitations:
 
 The connector indexes the following GitLab merge request content:
 
-- Merge request titles and descriptions  
-- Merge request status (open, closed, merged, draft)  
-- Labels and milestones  
-- Authors, assignees, and reviewers  
-- Timestamps (created, updated, merged)  
-- Associated project and group metadata  
+- Merge request titles and descriptions
+- Merge request status (open, closed, merged, draft)
+- Labels and milestones
+- Authors, assignees, and reviewers
+- Timestamps (created, updated, merged)
+- Associated project and group metadata
 
 Indexed content appears in Microsoft 365 Copilot and Microsoft Search results, allowing users to discover and summarize GitLab merge request information directly within Microsoft 365 apps.
 
@@ -111,9 +111,9 @@ You can choose one of the following access models:
 
 Supported identity mapping options include:
 
-- Email  
-- Username  
-- Name  
+- Email
+- Username
+- Name
 
 If direct mapping fails, administrators can use regular expressions (regex) to transform identity attributes. Email visibility settings and domain inconsistencies in GitLab can affect mapping accuracy.
 

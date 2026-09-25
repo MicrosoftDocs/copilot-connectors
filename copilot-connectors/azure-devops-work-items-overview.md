@@ -1,7 +1,7 @@
 ---
 title: "Azure DevOps Work Items connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: vivg
 audience: Admin

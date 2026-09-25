@@ -1,8 +1,8 @@
 ---
 title: Set up the Jira Cloud service for Jira Cloud connector ingestion
 description: Get the steps that the Jira Cloud admin needs to complete for your organization to configure the Jira Cloud Microsoft 365 Copilot connector.
-author: danipocket
-ms.author: danielabo
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.reviewer: jecui
 audience: Admin

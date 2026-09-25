@@ -1,7 +1,7 @@
 ---
 title: "Deploy the GitLab Issues Server connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -33,12 +33,12 @@ Before you deploy the connector, make sure that you meet the following prerequis
   - You have the Microsoft Graph connector agent version 3.1.8.0 or later installed on a server with access to GitLab.
   - The authentication account has administrative privileges for access control list (ACL) crawling.
 - For best performance, adjust [GitLab rate limits](https://docs.gitlab.co.jp/ee/user/admin_area/settings/user_and_ip_rate_limits.html#:%7E:text=On%20the%20left%20sidebar%2C%20select%20Settings%20%3E%20Network%2C,period%20per%20IP%20value.%20Defaults%20to%203600.%20Optional.) as recommended:
-    - User and IP rate limits: Uncheck **Enable authenticated API request rate limit** and **Enable authenticated web request rate limit**. 
-    - Files API rate limits: Uncheck **Enable authenticated API request rate limit**. 
-    - Deprecated API rate limits: Uncheck **Enable authenticated API request rate limit**. 
-    - Users API rate limits: Set **Max requests per 10 minutes per user** to a high value (for example, 100000). 
-    - Groups API and Projects API rate limits: Set all values to 0 to disable limits. 
-    - Members API rate limits: Set to 0. 
+    - User and IP rate limits: Uncheck **Enable authenticated API request rate limit** and **Enable authenticated web request rate limit**.
+    - Files API rate limits: Uncheck **Enable authenticated API request rate limit**.
+    - Deprecated API rate limits: Uncheck **Enable authenticated API request rate limit**.
+    - Users API rate limits: Set **Max requests per 10 minutes per user** to a high value (for example, 100000).
+    - Groups API and Projects API rate limits: Set all values to 0 to disable limits.
+    - Members API rate limits: Set to 0.
 
 ### Rate-limit recommendations
 
@@ -60,7 +60,7 @@ To add the GitLab Issues Server connector for your organization:
 
 ### Set display name
 
-The display name identifies references in Copilot responses and helps users recognize the associated content source.  
+The display name identifies references in Copilot responses and helps users recognize the associated content source.
 You can accept the default **GitLab Issues Server** display name or customize it.
 
 For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](enhance-copilot-discovery.md).
@@ -79,7 +79,7 @@ The GitLab Issues Server connector supports **OAuth 2.0**. Enter the GitLab **cl
 
 ### Roll out
 
-To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify users or groups.  
+To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify users or groups.
 
 Choose **Create** to deploy the connection. The GitLab Issues Server connector starts indexing content right away.
 
@@ -106,34 +106,34 @@ If you choose **Only people with access to this data source**, indexed data appe
 
 Map GitLab user identities to Microsoft Entra ID. Options include:
 
-- **Email**: Maps GitLab email to Microsoft Entra ID user properties. 
-- **Login**: Maps GitLab logins with Microsoft Entra ID user properties. 
-- **Name**: Maps GitLab name with Microsoft Entra ID user properties. 
+- **Email**: Maps GitLab email to Microsoft Entra ID user properties.
+- **Login**: Maps GitLab logins with Microsoft Entra ID user properties.
+- **Name**: Maps GitLab name with Microsoft Entra ID user properties.
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md). 
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md).
 
 ### Customize content settings
 
-On the **Data** tab, you can verify property mappings in the sample data for metadata such as content, labels, description, and timestamps. 
+On the **Data** tab, you can verify property mappings in the sample data for metadata such as content, labels, description, and timestamps.
 
 #### Content filter
 
-You can configure a time-range filter for the connector. The default setting is 365 days. 
+You can configure a time-range filter for the connector. The default setting is 365 days.
 
 #### Manage properties
 
-You can add or remove available properties from the data source, assign a schema to the property (searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. 
+You can add or remove available properties from the data source, assign a schema to the property (searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property.
 
 ### Customize sync intervals
 
 Configure the **full** and **incremental** crawl sync intervals. The following are the default values:
 
-- Incremental crawl: Every 15 minutes  
+- Incremental crawl: Every 15 minutes
 - Full crawl: Daily
 
 Adjust the intervals based on your organization's needs.
 
 ## Related content
 
-- [GitLab Issues Server connector overview](gitlab-issues-server-overview.md)  
-- [Troubleshoot issues with the GitLab Issues Server connector](gitlab-issues-server-troubleshooting.md) 
+- [GitLab Issues Server connector overview](gitlab-issues-server-overview.md)
+- [Troubleshoot issues with the GitLab Issues Server connector](gitlab-issues-server-troubleshooting.md)

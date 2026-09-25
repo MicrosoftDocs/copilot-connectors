@@ -4,7 +4,7 @@ description: Use background scripts to automate the ServiceNow configuration ste
 ms.author: mayanksethi
 author: mayanksethi
 manager: calvind
-ms.reviewer: lauragra
+ms.reviewer: jasonjoh
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to

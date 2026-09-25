@@ -1,7 +1,7 @@
 ---
 title: "Deploy the monday.com connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: huichunli
 audience: Admin
@@ -92,7 +92,7 @@ Use this option when your organization requires a custom OAuth app configuration
 
 1. Go to the **Redirect URLs** tab, enter the following redirect URLs, and choose **Save Scopes**.
 
-    - **For Microsoft 365 Enterprise:** `https://gcs.office.com/v1.0/admin/oauth/callback` 
+    - **For Microsoft 365 Enterprise:** `https://gcs.office.com/v1.0/admin/oauth/callback`
     - **For Microsoft 365 Government:** `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
 
     :::image type="content" source="media/monday-deployment/redirect-urls.png" alt-text="Screenshot of the Redirect URLs subtab with URL input fields." lightbox="media/monday-deployment/redirect-urls.png":::
@@ -157,12 +157,12 @@ To ensure correct permission enforcement, map monday.com user identities to Micr
 
 > [!IMPORTANT]
 > - If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users from monday.com directly to the **UPN** property from Microsoft Entra ID.
-> - If you chose **non-Entra ID** for the identity type, provide the mapping regular expression from email ID to UPN. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md). 
+> - If you chose **non-Entra ID** for the identity type, provide the mapping regular expression from email ID to UPN. For more information, see [Map your non-Entra ID identities](map-non-entra-id.md).
 > - Updates to users or groups that govern access permissions are synced in full crawls only. Incremental crawls don't currently support processing updates to permissions.
 
 ### Customize content settings
 
-#### Content ingestion filters 
+#### Content ingestion filters
 
 You can choose what data you want to index. Use the regex expression of WorkSpaces to select your data before it's indexed to control what data is searchable. The following examples show how to use regex expressions to select specific workspaces.
 
@@ -210,12 +210,12 @@ The **Content** field contains a JSON object that represents all the columns and
 :::image type="content" source="media/monday-deployment/content-field.png" alt-text="Screenshot of an example item showing the Content field structure with columns and values." lightbox="media/monday-deployment/content-field.png":::
 
 ```JSON
-{  
-"Assignee": "QC",  
-"Status": "Not Started",  
-"Date": "Apr 2",  
-"Priority": "Medium",  
-"Labels": "Benefits, Flexible"  
+{
+"Assignee": "QC",
+"Status": "Not Started",
+"Date": "Apr 2",
+"Priority": "Medium",
+"Labels": "Benefits, Flexible"
 }
 ```
 
@@ -226,7 +226,7 @@ The connector supports two crawl types:
 - **Incremental crawl**, which captures recent changes.
 - **Full crawl**, which refreshes all indexed content.
 
-By default, incremental crawls run every four hours and full crawls run daily. You can adjust these values, but consider monday.com daily API call limits if you configure more frequent sync schedules. 
+By default, incremental crawls run every four hours and full crawls run daily. You can adjust these values, but consider monday.com daily API call limits if you configure more frequent sync schedules.
 
 > [!IMPORTANT]
 > **monday.com daily API call limits**

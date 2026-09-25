@@ -1,8 +1,8 @@
 ---
 ms.date: 02/27/2025
 title: "Prebuilt connectors"
-ms.author: danielabo
-author: danielabom
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.topic: article
 ms.localizationpriority: medium

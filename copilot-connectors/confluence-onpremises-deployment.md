@@ -1,8 +1,8 @@
 ---
 title: "Deploy the Confluence On-premises connector"
 description: "Find information about how to deploy the Confluence On-premises Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -15,9 +15,9 @@ ms.localizationpriority: Medium
 
 The Confluence On-premises connector enables Microsoft 365 to index and retrieve content from self-hosted Confluence Data Center or Server instances. It brings enterprise wiki content into Microsoft Search and Copilot, enhancing visibility and usability within the Microsoft 365 ecosystem.
 
-This article describes the steps to deploy, customize, and troubleshoot the Confluence On-premises connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md). 
+This article describes the steps to deploy, customize, and troubleshoot the Confluence On-premises connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](deployment-overview.md).
 
-For advanced Confluence On-premises configuration information, see [Set up the Confluence On-premises service for connector ingestion](confluence-onpremises-admin-setup.md). 
+For advanced Confluence On-premises configuration information, see [Set up the Confluence On-premises service for connector ingestion](confluence-onpremises-admin-setup.md).
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ Before you deploy the Confluence On-premises connector, make sure that the Confl
 
 | Role | Task |
 | ---- | ---- |
-| Confluence admin | [Configure the environment](confluence-onpremises-admin-setup.md#configure-the-confluence-environment) | 
+| Confluence admin | [Configure the environment](confluence-onpremises-admin-setup.md#configure-the-confluence-environment) |
 | Confluence admin/Network admin  | [Set up prerequisites](confluence-onpremises-admin-setup.md#set-up-prerequisites) |
 | Microsoft 365 admin | [Deploy the connector in the Microsoft 365 admin center](#deploy-the-connector) |
 | Microsoft 365 admin | [Customize connector settings](#customize-settings) (optional) |

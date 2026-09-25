@@ -1,7 +1,7 @@
 ---
 title: "Deploy the BambooHR connector"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer:
 audience: Admin

@@ -1,7 +1,7 @@
 ---
 title: "Set up the Dropbox service for Dropbox connector ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: ang.gao
 audience: Admin
@@ -47,7 +47,7 @@ To configure a Dropbox app:
     - A unique app name
     - Scoped access
     - Full Dropbox access permissions
-    
+
  :::image type="content" source="media/dropbox/dropbox-prerequisites-2.png" alt-text="Screenshot of the app configuration fields." lightbox="media/dropbox/dropbox-prerequisites-2.png":::
 
 For more information, see [Getting started with Dropbox](https://www.dropbox.com/developers/reference/getting-started).
@@ -84,7 +84,7 @@ Go to the **Permissions** tab and add the following API scopes:
 - groups.read
 - events.read
 
-:::image type="content" source="media/dropbox/dropbox-api-scopes.png" alt-text="Screenshot of the permissions tab." lightbox="media/dropbox/dropbox-api-scopes.png"::: 
+:::image type="content" source="media/dropbox/dropbox-api-scopes.png" alt-text="Screenshot of the permissions tab." lightbox="media/dropbox/dropbox-api-scopes.png":::
 
 ## Get app key and app secret
 

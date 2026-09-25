@@ -1,7 +1,7 @@
 ---
 title: "Galileo by The Josh Bersin Company connector overview"
 ms.author: xupzhou
-author: xupzhou
+author: PennyZhou-MSFT
 manager: calvind
 audience: Admin
 ms.audience: Admin

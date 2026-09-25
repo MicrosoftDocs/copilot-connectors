@@ -1,7 +1,7 @@
 ---
 title: "ServiceNow Knowledge connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: mayanksethi
 audience: Admin
@@ -70,7 +70,7 @@ The ServiceNow Knowledge connector has the following capabilities:
 - Supports indexing content from custom or default knowledge article templates, such as FAQs, How-to, What Is, or KCS article templates.
 - Supports customization of the ServiceNow URL in Copilot responses as needed for your organization.
 - Considers both knowledge base-level and article-level permissions (user criteria) when evaluating article permissions.
-- Supports evaluating permissions based on user criteria or role-based permissions. 
+- Supports evaluating permissions based on user criteria or role-based permissions.
 - For Advanced flow connections, supports incremental identity sync to keep identity changes - such as users, role assignments, group memberships, and user criteria attributes - up to date between full crawls.
 - Indexes knowledge blocks—the reusable, modular content components embedded within knowledge articles—and evaluates their user criteria. Indexing knowledge blocks requires additional table permissions. For more information, see [Create service account and set up permissions to index items](servicenow-knowledge-admin-setup.md#create-service-account-and-set-up-permissions-to-index-items).
 - Indexes content contained in accordions within knowledge articles.

@@ -1,7 +1,7 @@
 ---
 title: "Set up the Egnyte service for Egnyte connector ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: anggao
 audience: Admin
@@ -16,7 +16,7 @@ description: "Get the steps that the Egnyte admin needs to complete for your org
 
 The Egnyte Microsoft 365 Copilot connector allows your organization to index files stored in Egnyte so users can retrieve them through Microsoft 365 Copilot and Microsoft Search. This article describes the Egnyte service configuration that Egnyte admins must complete before your organization can deploy the [Egnyte connector](egnyte-overview.md). These steps ensure that Microsoft 365 can authenticate with your Egnyte domain, access required APIs, and ingest content securely.
 
-For information about how to deploy the connector in Microsoft 365, see  
+For information about how to deploy the connector in Microsoft 365, see
 [Deploy the Egnyte connector](egnyte-deployment.md).
 
 ## Setup checklist
@@ -38,7 +38,7 @@ The following checklist lists the steps involved in configuring the environment 
 
 To create the API key and secret required for the connector, you need an Egnyte developer account. To register an Egnyte developer account:
 
-1. Go to the [Egnyte developer portal](https://developers.egnyte.com/member/register). 
+1. Go to the [Egnyte developer portal](https://developers.egnyte.com/member/register).
 2. Register with an admin email for your Egnyte domain.
 
 ## Create a new app for the Egnyte connector
@@ -46,7 +46,7 @@ To create the API key and secret required for the connector, you need an Egnyte 
 To register the connector app:
 
 1. Sign in to the developer portal with your Egnyte developer account, and from the account menu, open **Apps**.
-2. In **My Apps**, select **+ NEW APP**.  
+2. In **My Apps**, select **+ NEW APP**.
 3. Complete the required app registration fields:
 
     - **Egnyte Domain**: Enter only the domain prefix (for example, if your Egnyte URL is `https://<your-domain>.egnyte.com`, enter `your-domain`).
@@ -78,7 +78,7 @@ The connector syncs data from Egnyte to Microsoft Graph. Egnyte imposes API rate
 To avoid ingestion failures:
 
 - Sign in to your Egnyte developer account and check your current API rate limits.
-- Review the [Public API usage restrictions](https://helpdesk.egnyte.com/hc/articles/17683455594125-Public-API-Usage-Restrictions-by-Plan) for Egnyte.   
+- Review the [Public API usage restrictions](https://helpdesk.egnyte.com/hc/articles/17683455594125-Public-API-Usage-Restrictions-by-Plan) for Egnyte.
 - If you need higher limits, contact Egnyte support.
 
 ## Enable API access and confirm required settings

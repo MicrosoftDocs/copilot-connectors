@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Galileo by The Josh Bersin Company connector"
 ms.author: xupzhou
-author: xupzhou
+author: PennyZhou-MSFT
 manager: calvind
 audience: Admin
 ms.audience: Admin

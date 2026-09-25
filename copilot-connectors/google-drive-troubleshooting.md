@@ -1,7 +1,7 @@
 ---
 title: "Google Drive connector troubleshooting"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -21,20 +21,20 @@ To verify Google Drive service configuration and help troubleshoot errors, see [
 
 ### Invalid credentials detected
 
-**Error:**  
+**Error:**
 Invalid credentials detected. Check the credential info and check the permissions of the service account.
 
-**Resolution:**  
+**Resolution:**
 This error occurs when the service account lacks the necessary permissions for Google Drive access.
 - Check the credentials info of the account.
 - Ensure that credentials are correctly filled in on the setup page.
 
 ### Missing required permissions for users or files
 
-**Error:**  
+**Error:**
 Authentication error: one or more required OAuth scopes for your service account are missing.
 
-**Resolution:**  
+**Resolution:**
 Your service account must include all of the following API scopes:
 - `https://www.googleapis.com/auth/admin.directory.user.readonly`
 - `https://www.googleapis.com/auth/drive.readonly`
@@ -44,22 +44,22 @@ Your service account must include all of the following API scopes:
 
 ### Failed to capture file information
 
-**Error:**  
+**Error:**
 Failed to capture file information. Ensure the workspace isn't empty and has files accessible to the admin.
 
-**Resolution:**  
+**Resolution:**
 During the connector setup, you must have at least one file in your organization's workspace to test the connection successfully.
 
 
 ### Encrypted files might fail to be ingested
 
-**Error:**  
+**Error:**
 Encrypted files aren't decrypted on the Google Drive side, and the Google Drive API doesn't indicate whether a file is encrypted. As a result, encrypted files might not ingest properly, or ingestion might fail due to size limits.
 
-**Cause:**  
+**Cause:**
 The document parser can't extract encrypted content. The connector tries to ingest the full encrypted content, which can exceed size limits and fail ingestion.
 
-**Workaround:**  
+**Workaround:**
 Currently, there's no direct mitigation because encryption status isn't detectable via the API. To manage this issue:
 - Monitor ingestion logs for encrypted-file-related ingestion failures.
 - Consider excluding encrypted files from the sync scope if they consistently cause failures.

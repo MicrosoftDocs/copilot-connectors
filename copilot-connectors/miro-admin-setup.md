@@ -1,7 +1,7 @@
 ---
 title: "Set up the Miro service for Miro connector ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: anggao
 audience: Admin
@@ -45,15 +45,15 @@ For more information, see [Create a Developer team](https://developers.miro.com/
 
 2. Add the following permissions to the app:
 
-    - boards: read  
-    - identity: read  
-    - team: read  
-    - organizations: read  
-    - organizations:teams: read  
-    - projects: read  
+    - boards: read
+    - identity: read
+    - team: read
+    - organizations: read
+    - organizations:teams: read
+    - projects: read
 
     :::image type="content" source="media/miro-admin-setup/add-permissions.png" alt-text="Screenshot of the Miro app permissions settings." lightbox="media/miro-admin-setup/add-permissions.png":::
-    
+
     These scopes let the connector read boards, team membership, identities, and metadata required for indexing.
 
 3. Add the following values to the **Redirect URL for OAuth 2.0** field:
@@ -67,11 +67,11 @@ For more information, see [Create a Developer team](https://developers.miro.com/
 
 ## Grant your account the Content Admin role
 
-Your account must be a Miro company admin with **Content admin** privileges to configure and authorize ingestion.  
+Your account must be a Miro company admin with **Content admin** privileges to configure and authorize ingestion.
 In the Miro admin console:
 
-1. Select **Team Settings**.  
-2. Go to **Users** > **Admin roles** > **Content admin**.  
+1. Select **Team Settings**.
+2. Go to **Users** > **Admin roles** > **Content admin**.
 3. Assign the role to the appropriate account.
 
 :::image type="content" source="media/miro-admin-setup/admin-role.png" alt-text="Screenshot of the Miro admin roles assignment interface." lightbox="media/miro-admin-setup/admin-role.png":::
@@ -80,9 +80,9 @@ In the Miro admin console:
 
 To install the app at the company level:
 
-1. Open the Miro admin console.  
-2. Go to **Apps and integrations**.  
-3. Select **Add apps**, and then enter the client ID of the app you created.  
+1. Open the Miro admin console.
+2. Go to **Apps and integrations**.
+3. Select **Add apps**, and then enter the client ID of the app you created.
 4. Choose **All teams** and approve requested permissions.
 
 :::image type="content" source="media/miro-admin-setup/app-installation.png" alt-text="Screenshot of the Miro app installation page at company level." lightbox="media/miro-admin-setup/app-installation.png":::
