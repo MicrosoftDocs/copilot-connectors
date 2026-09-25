@@ -117,8 +117,6 @@ For connectors that support this feature, the details page in the Microsoft 365 
 
 1. On the connector's details page, go to the **Tools** section and sign in to the third-party service.
 
-    Signing in to view a connector's tools in the Microsoft 365 admin center also signs you in to that connector in Microsoft 365 Copilot.
-
     :::image type="content" source="media/federated-connectors/admin-center-tools-signed-in.png" alt-text="Screenshot of a successful sign-in to Zava HR, with Read/Search and Write/Delete tool counts and the All tools button." lightbox="media/federated-connectors/admin-center-tools-signed-in.png":::
 
 1. Select **All tools**, and then review the list to identify tools that can create, update, or delete data.
