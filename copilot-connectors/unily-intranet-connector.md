@@ -106,6 +106,23 @@ Add or remove available properties from your Unily data source. Assign a schema 
 | Url | url | The link that directs to the specific page in Unily where the content is located | Retrieve |
 | TargetAudience |  | The specific group of users that content is intended for | Query, Retrieve, Search |
 
+#### Scope Unily content in declarative agents
+
+To improve response relevance and reduce unnecessary grounding across the entire intranet, you can scope a declarative agent to specific Unily sites. Scoping limits the agent's knowledge to content from selected sites, helping the agent deliver more focused, contextual, and personalized responses.
+
+For example, an HR agent can be scoped to the HR site, while a sales enablement agent can be scoped to the sales site, ensuring that responses are grounded only in the most relevant content.
+
+To scope Unily content in your declarative agent:
+
+1. On the **Configure** tab, under **Choose other data sources**, select **Unily**.
+1. On the Unily connector card, add the connection that's relevant to your scenario.
+1. Select the arrow to return to the Knowledge section.
+1. Expand the Unily connector.
+1. Select **Site** as the scoping attribute.
+1. Search for or enter the Unily site name that you want the agent to use as a knowledge source.
+1. Select the site from the list to add it.
+1. Save and publish your agent.
+
 ### Sync
 
 The refresh interval determines how often your data syncs between the data source and the Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
