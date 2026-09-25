@@ -1,8 +1,8 @@
 ---
 ms.date: 02/23/2026
 title: "File Share connector"
-ms.author: danielabo
-author: danielabom
+ms.author: jasonjoh
+author: jasonjoh
 manager: SteveWilkins1123
 audience: Admin
 ms.audience: Admin
@@ -12,17 +12,17 @@ description: "Set up the File Share Microsoft 365 Copilot connector"
 ---
 # File Share connector
 
-The File Share Microsoft 365 Copilot connector enables users in your organization to search on-premises Windows file shares. After you configure the connector and index data from the file path, end users can search for that content in Microsoft Search and Microsoft 365 Copilot. 
- 
+The File Share Microsoft 365 Copilot connector enables users in your organization to search on-premises Windows file shares. After you configure the connector and index data from the file path, end users can search for that content in Microsoft Search and Microsoft 365 Copilot.
+
 ## Capabilities
 
-- Ask natural language questions about on-prem files content in Copilot, such as summarizing the document, with enhanced search capabilities. 
-- Perform natural language queries for accurate responses using Semantic Search support. 
-- Content of the following formats can be indexed and searched: DOC, DOCM, DOCX, DOT, DOTX, EML, GIF, HTML, JPEG, JPG, MHT, MHTML, MSG, NWS, OBD, OBT, ODP, ODS, ODT, ONE, PDF, PNG, POT, PPS, PPT, PPTM, PPTX, TXT, XLB, XLC, XLSB, XLS, XLSX, XLT, XLXM, XML, XPS, and ZIP. Only the textual content of these formats is indexed, and all multimedia content is ignored. For multimedia and other file types, only metadata is indexed. 
+- Ask natural language questions about on-prem files content in Copilot, such as summarizing the document, with enhanced search capabilities.
+- Perform natural language queries for accurate responses using Semantic Search support.
+- Content of the following formats can be indexed and searched: DOC, DOCM, DOCX, DOT, DOTX, EML, GIF, HTML, JPEG, JPG, MHT, MHTML, MSG, NWS, OBD, OBT, ODP, ODS, ODT, ONE, PDF, PNG, POT, PPS, PPT, PPTM, PPTX, TXT, XLB, XLC, XLSB, XLS, XLSX, XLT, XLXM, XML, XPS, and ZIP. Only the textual content of these formats is indexed, and all multimedia content is ignored. For multimedia and other file types, only metadata is indexed.
 
 ## Limitations
 
-- The maximum supported file size is 100 MB. Files that exceed 100 MB aren't indexed. The maximum post-processed size limit is 4 MB. Processing stops when a file's size reaches 4 MB. Therefore, some phrases present in the file might not work for search. 
+- The maximum supported file size is 100 MB. Files that exceed 100 MB aren't indexed. The maximum post-processed size limit is 4 MB. Processing stops when a file's size reaches 4 MB. Therefore, some phrases present in the file might not work for search.
 - You can index up to twenty different file shares in a single connection. Enter one file share per line in the file shares text box area.
 - The File Share connector doesn't support indexing symlinks, NTFS junctions, or volume mount points.
 
@@ -38,7 +38,7 @@ If you have some old file formats in your data source, such as .msg and .doc, yo
 
 ### Choose display name
 
-The display name helps users easily recognize the associated file or item in Copilot, signifying trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize. 
+The display name helps users easily recognize the associated file or item in Copilot, signifying trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### File Share on-premises URL
 
@@ -83,7 +83,7 @@ To add a custom property:
       * In the **Add expressions** section, in the **Property** list, select a default property from the list.
       * For **Sample value**, enter a string to represent the type of values that could appear. This sample is used when you preview your rule.
       * For **Expression**, enter a regex expression to define the portion of the property value that should appear in search results. You can add up to three expressions. To learn more about regex expressions, see [Regular expression language quick reference](/dotnet/standard/base-types/regular-expression-language-quick-reference) or search the web for a regex expression reference guide.
-      * In the **Create formula** section, enter a formula to combine the values extracted from the expressions. 
+      * In the **Create formula** section, enter a formula to combine the values extracted from the expressions.
 
 ## Property labels
 
@@ -107,7 +107,7 @@ You can choose to share ACLs only if the share path you provided follows UNC pat
 
 ## Synchronization
 
-The refresh interval determines how often your data is synchronized between the data source and the Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings). You can change the default values of the refresh interval from here if you want to. 
+The refresh interval determines how often your data is synchronized between the data source and the Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings). You can change the default values of the refresh interval from here if you want to.
 
 ## Review and test your connection
 

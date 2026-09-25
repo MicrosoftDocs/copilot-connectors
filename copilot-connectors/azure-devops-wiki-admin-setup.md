@@ -1,7 +1,7 @@
 ---
 title: "Set up the Azure DevOps service for Azure DevOps Wiki connector ingestion"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer:
 audience: Admin

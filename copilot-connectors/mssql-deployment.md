@@ -1,8 +1,8 @@
 ---
 title: "Deploy the Azure SQL and Microsoft SQL Server connectors"
 description: "Learn how to deploy and customize the Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors in the Microsoft 365 admin center."
-author: danipocket
-ms.author: danielabo
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.reviewer:
 audience: Admin
