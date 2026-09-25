@@ -2,8 +2,8 @@
 title: Federated connectors overview
 description: Learn how MCP-based Microsoft 365 Copilot federated connectors retrieve data and use write, update, and delete actions.
 #customer intent: As an admin, I want to learn about federated connectors, including read and write capabilities, and how to manage them in the Microsoft 365 admin center.
-author: danipocket
-ms.author: danielabo
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.reviewer: mansipakhale
 ms.date: 09/21/2026
@@ -219,7 +219,7 @@ If a connector publisher adds a new write-capable tool or changes an existing on
 
 ### View a connector's tools in the admin center (Coming soon)
 
-Write, update, and delete tools are part of the connector and aren't enabled separately. The availability controls in [Admin experience and controls](#admin-experience-and-controls) continue to apply. 
+Write, update, and delete tools are part of the connector and aren't enabled separately. The availability controls in [Admin experience and controls](#admin-experience-and-controls) continue to apply.
 
 Each federated connector's details page in the Microsoft 365 admin center includes a **Tools** section that lists the tools available to users in the organization, including tools that can modify or delete data. To view the tools:
 

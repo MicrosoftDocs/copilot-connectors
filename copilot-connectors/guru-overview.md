@@ -1,7 +1,7 @@
 ---
 title: "Guru connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin
@@ -51,12 +51,12 @@ Developers can use this connector as a knowledge source in declarative agents th
 
 The following examples show prompts that users can use to retrieve information from Guru:
 
-- **People/HR**: Summarize the onboarding process for new hires in the engineering team, including links to relevant Guru Cards.  
-- **IT Support/Help desk**: Find the runbook for resolving VPN connectivity issues and summarize the steps.  
-- **Engineering/DevOps**: Summarize the architecture of the new microservices deployment from the last retrospective.  
-- **Product management**: List all feature specs in the collection of 'vNext' and summarize their status.  
-- **Sales/marketing**: Summarize the messaging framework for the Contoso campaign and link to the case studies.  
-- **Executives/managers**: Summarize the latest project updates across all teams from Guru.  
+- **People/HR**: Summarize the onboarding process for new hires in the engineering team, including links to relevant Guru Cards.
+- **IT Support/Help desk**: Find the runbook for resolving VPN connectivity issues and summarize the steps.
+- **Engineering/DevOps**: Summarize the architecture of the new microservices deployment from the last retrospective.
+- **Product management**: List all feature specs in the collection of 'vNext' and summarize their status.
+- **Sales/marketing**: Summarize the messaging framework for the Contoso campaign and link to the case studies.
+- **Executives/managers**: Summarize the latest project updates across all teams from Guru.
 
 ## Connector capabilities and limitations
 

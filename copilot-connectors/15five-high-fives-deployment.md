@@ -1,6 +1,6 @@
 ---
 title: "Deploy the 15Five High Fives connector"
-ms.author: lauragra
+ms.author: jasonjoh
 author: wangchen
 manager: zezhangzhao
 ms.reviewer: wangchen

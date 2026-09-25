@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Veeva Vault RIM connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: anggao
 audience: Admin
@@ -66,7 +66,7 @@ To add the Veeva Vault RIM connector for your organization:
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.  
+The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter.
 
 You can accept the default **Veeva Vault RIM** display name, or customize the value to use a display name that users in your organization recognize.
 
@@ -74,7 +74,7 @@ For more information about connector display names and descriptions, see [Enhanc
 
 ### Set instance URL
 
-Enter the URL of your Veeva Vault RIM instance. For example:  
+Enter the URL of your Veeva Vault RIM instance. For example:
 `https://<your-vault-domain>.veevavault.com`
 
 ### Choose authentication type
@@ -92,7 +92,7 @@ Select **Authorize** to sign in with your Entra ID account, and select **Consent
 
 ### Roll out
 
-To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).  
+To roll out to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to roll the connector out to. For more information, see [Staged rollout for Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 Choose **Create** to deploy the connection. The Veeva Vault RIM Copilot connector starts indexing content right away.
 
 The following table lists the default values that are set.
@@ -103,7 +103,7 @@ The following table lists the default values that are set.
 | Content  | Indexes key metadata, such as document name, owner, and lifecycle stage. Enables metadata like title, created by, and last modified by. |
 | Sync     | Full crawl—daily. |
 
-To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).  
+To customize these values, choose **Custom setup**. For more information, see [Customize settings](#customize-settings-optional).
 After you create your connection, you can review the status in the **Connectors** section of the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
 ## Customize settings (optional)

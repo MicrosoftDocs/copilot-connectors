@@ -1,9 +1,9 @@
 ---
 title: Deploy the GitHub Cloud Issues connector
 description: "Find information about how to deploy the GitHub Cloud Issues Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
-author: Lauragra
-ms.author: lauragra
-ms.reviewer: lauragra
+author: jasonjoh
+ms.author: jasonjoh
+ms.reviewer: jasonjoh
 manager: calvind
 ms.date: 06/18/2026
 ms.topic: concept-article
@@ -57,7 +57,7 @@ The connector supports the following authentication types:
     - Choose a display name that helps users recognize the connection.
     - Enter your organization name.
     - Choose **Authorize** to sign in and grant access.
-    
+
     > [!NOTE]
     > This authentication method is currently in preview.
 

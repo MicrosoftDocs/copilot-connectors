@@ -1,7 +1,7 @@
 ---
 title: "Set up the Azure DevOps service for Azure DevOps Work Items connector ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: vivg
 audience: Admin
@@ -59,7 +59,7 @@ Grant the crawl account the necessary permissions in Azure DevOps:
 
 - Assign **Basic** access level.
 - Add the service principal (or user) to each project to be indexed.
-- Add the service principal (or user) to the **Project Administrators** group (recommended) to allow webhook configuration for faster incremental crawl. 
+- Add the service principal (or user) to the **Project Administrators** group (recommended) to allow webhook configuration for faster incremental crawl.
 - If that isn't feasible, add the user to the **Project Readers** group (minimum requirement).
 
 The following table lists the permissions that must be granted to the crawl service account.
@@ -76,5 +76,5 @@ Validate that the crawl account appears in the appropriate Azure DevOps security
 
 ## Next step
 
-> [!div class="nextstepaction"]  
+> [!div class="nextstepaction"]
 > [Deploy the Azure DevOps Work Items connector](azure-devops-work-items-deployment.md)

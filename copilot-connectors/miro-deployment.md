@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Miro connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: anggao
 audience: Admin
@@ -59,7 +59,7 @@ The following authentication values from your Miro app are required:
 - **Client ID**
 - **Client secret**
 
-Add these values and choose **Authorize**. 
+Add these values and choose **Authorize**.
 
 For more information, see [Get started with OAuth 2.0 and Miro](https://developers.miro.com/docs/getting-started-with-oauth).
 
@@ -136,6 +136,6 @@ For more information, see [Guidelines for crawl settings](/microsoft-365/copilot
 
 ## Related content
 
-- [Miro connector overview](miro-overview.md)  
-- [Troubleshoot issues with the Miro connector](miro-troubleshooting.md)  
+- [Miro connector overview](miro-overview.md)
+- [Troubleshoot issues with the Miro connector](miro-troubleshooting.md)
 - [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview)

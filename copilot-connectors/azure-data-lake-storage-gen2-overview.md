@@ -1,7 +1,7 @@
 ---
 title: "Azure Data Lake Storage Gen2 connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer:
 audience: Admin

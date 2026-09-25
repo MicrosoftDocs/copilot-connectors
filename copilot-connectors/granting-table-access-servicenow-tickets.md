@@ -1,11 +1,11 @@
 ---
 ms.date: 02/23/2026
 title: "Grant table access to a service account in ServiceNow Tickets"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: mayanksethi
-audience: Admin 
+audience: Admin
 ms.audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -20,7 +20,7 @@ This article explains how to grant table access to a service account in ServiceN
 
 - Admin access in ServiceNow.
 - Elevate to the `security_admin` role to make changes to access control lists (ACLs).
-  
+
 ## Create a user
 
 To create a user:
@@ -30,7 +30,7 @@ To create a user:
 1. Fill in the user details:
    - For the **User ID**: `microsoft.copilot`. The **User ID** is required for successful crawls.
    - For the **First Name** and **Last Name**: `Microsoft` and `Copilot`.
-   - Set **Identity Type** to `Machine`. For earlier versions of ServiceNow, check **Web service access only**. 
+   - Set **Identity Type** to `Machine`. For earlier versions of ServiceNow, check **Web service access only**.
 1. Select **Submit** to save the user.
 
 ##  Create a role
@@ -74,7 +74,7 @@ To grant access to rows within a specific table, follow these steps:
 ## Verification
 
 1. Impersonate the user (for example, `Microsoft Copilot`).
-1. Access the target table (for example, `sys_dictionary`) and confirm that rows are visible. 
+1. Access the target table (for example, `sys_dictionary`) and confirm that rows are visible.
 
 If the user can view the rows, but the field values aren't visible, you need to [grant field-level access](#grant-field-level-access).
 

@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot issues with the GitHub Cloud Issues connector
 description: "Learn about troubleshooting the GitHub Cloud Issues Microsoft 365 Copilot connector."
-author: Lauragra
-ms.author: lauragra
-ms.reviewer: lauragra
+author: jasonjoh
+ms.author: jasonjoh
+ms.reviewer: jasonjoh
 manager: calvind
 ms.date: 11/20/2025
 ms.topic: concept-article

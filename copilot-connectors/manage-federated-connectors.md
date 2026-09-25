@@ -2,8 +2,8 @@
 title: Manage federated connector availability
 description: Learn how to use PowerShell to control the availability of federated connectors for Microsoft 365 Copilot in your organization.
 #customer intent: As an admin, I want to learn how to manage federated connectors for Microsoft 365 Copilot using PowerShell.
-author: danipocket
-ms.author: danielabo
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.reviewer: mansipakhale
 
@@ -125,4 +125,4 @@ If the admin didn't use `Set-FederatedConnectorToggle` before August 25, they ca
 
 - [Federated Microsoft 365 Copilot connectors](federated-connectors-overview.md)
 - [Connector.Cmd in the PowerShell Gallery](https://www.powershellgallery.com/packages/Connector.Cmd/2.1)
- 
+

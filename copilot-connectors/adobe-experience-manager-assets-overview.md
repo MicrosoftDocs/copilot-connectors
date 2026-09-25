@@ -1,7 +1,7 @@
 ---
 title: "Adobe Experience Manager Assets connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin
@@ -11,6 +11,8 @@ ms.date: 12/09/2025
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the Adobe Experience Manager Assets Microsoft 365 Copilot connector."
 ---
+
+<!-- cSpell:ignore rantang -->
 
 # Adobe Experience Manager Assets connector overview
 
@@ -24,7 +26,7 @@ Many organizations rely on AEM Assets as their central digital asset management 
 - **Brand consistency at scale:** Find approved logos, product images, templates, and campaign materials for use in Word, PowerPoint, Teams, and more.
 - **Enhanced productivity:** Use natural‑language across Copilot to search, reference, summarize, and preview assets without leaving Microsoft 365.
 
-The following table lists use cases for different audiences. 
+The following table lists use cases for different audiences.
 
 | Department/Role      | Use case | Business benefit |
 |----------------------|----------|------------------|
@@ -58,12 +60,12 @@ The Adobe Experience Manager Assets connector allows users to:
 
 The Adobe Experience Manager Assets connector has the following limitations:
 
-- Doesn't crawl user identities or access permissions; all published assets indexed by this connector are visible to all Microsoft 365 users in the tenant (from Microsoft Search or Copilot).
-- Supports Adobe Experience Manager Assets (Cloud) only; other AEM solutions such as Sites require separate connectors.
+- It doesn't crawl user identities or access permissions. All published assets that this connector indexes are visible to all Microsoft 365 users in the tenant (from Microsoft Search or Copilot).
+- It supports only Adobe Experience Manager Assets (Cloud). Other AEM solutions such as Sites require separate connectors.
 
 ## Data types indexed from Adobe Experience Manager Assets
 
-By default, the connector indexes published assets across common formats (for example, PDF, PNG, JPG, and other supported file types) so they can be discovered in Copilot and Microsoft Search. This indexing ensures that every published digital asset in your AEM Assets instance is reusable within Microsoft 365 workflows.
+By default, the connector indexes metadata for published assets across all supported file types, including PDF, PNG, JPG, and others. For PDF files smaller than 100 MB, the connector also indexes the file content. For other file types, and for PDF files that exceed 100 MB, the connector indexes only metadata. This setup allows users to discover published assets in Copilot and Microsoft Search, while full content-based retrieval currently supports only PDF files under 100 MB.
 
 ## Permissions model and access control
 

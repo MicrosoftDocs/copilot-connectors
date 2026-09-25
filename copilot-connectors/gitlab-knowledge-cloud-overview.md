@@ -1,8 +1,8 @@
 ---
 title: GitLab Knowledge Cloud connector overview
 description: Learn about the capabilities, limitations, and use cases for the GitLab Knowledge Cloud Microsoft 365 Copilot connector.
-author: Lauragra
-ms.author: lauragra
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -61,10 +61,10 @@ The connector has the following limitations:
 
 The connector indexes Markdown‑based knowledge artifacts stored in GitLab projects, including:
 
-- Wiki pages  
-- README files  
-- Architecture and design documents  
-- Onboarding guides  
+- Wiki pages
+- README files
+- Architecture and design documents
+- Onboarding guides
 - Runbooks and operational documentation
 
 Indexed content is surfaced in Microsoft 365 Copilot responses and Microsoft Search results, enabling summarization, reasoning, and retrieval across all connected GitLab knowledge.
@@ -73,19 +73,19 @@ Indexed content is surfaced in Microsoft 365 Copilot responses and Microsoft Sea
 
 To ensure correct access control, GitLab user identities can be mapped to Microsoft Entra ID using:
 
-- Email  
-- Login 
-- Name  
+- Email
+- Login
+- Name
 - Regex transformations, when required
 
 Visibility options include:
 
-- **Only people with access to this data source** (default)  
+- **Only people with access to this data source** (default)
 - **Everyone**
 
 Mapped permissions ensure that only users with matching entitlement in GitLab can access the corresponding indexed knowledge in Copilot.
 
 ## Next step
 
-> [!div class="nextstepaction"]  
+> [!div class="nextstepaction"]
 > [Deploy the GitLab Knowledge Cloud connector](gitlab-knowledge-cloud-deployment.md)

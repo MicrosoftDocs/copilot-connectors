@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the GitLab Knowledge Cloud connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -21,9 +21,9 @@ The GitLab Knowledge Cloud Microsoft 365 Copilot connector indexes documentation
 If users can’t find GitLab documentation, wikis, or knowledge artifacts in Copilot or search results, review the following:
 
 - Confirm that the GitLab instance URL is correct.
-- Verify that the GitLab OAuth app has the required scopes:  
-  - `read_api`  
-  - `read_repository`  
+- Verify that the GitLab OAuth app has the required scopes:
+  - `read_api`
+  - `read_repository`
   - `read_user`
 - Check that the authenticated GitLab account has access to all indexed projects, wikis, and files.
 - Ensure that users have Microsoft Entra ID identities that correctly map to GitLab users.
@@ -52,7 +52,7 @@ If you encounter issues completing the OAuth flow:
 
 If indexing pauses or content appears incomplete:
 
-- Check whether your GitLab tenant is hitting rate limits.  
+- Check whether your GitLab tenant is hitting rate limits.
 - Review ingestion volume guidelines:
   - Up to 100,000 items: Typically completes within several hours.
   - 100,000 to 1,000,000 items: Ingestion might take multiple days.
@@ -89,7 +89,7 @@ If users receive **no access** errors:
 
 - Validate that GitLab REST API permissions allow the connector's service account to read the full scope of documents, wikis, and knowledge assets.
 - Check Microsoft 365 access settings:
-  - **Only people with access to this data source**  
+  - **Only people with access to this data source**
   - **Everyone**
 - Confirm that GitLab group or project‑level permissions aren't preventing the connector from retrieving content.
 
@@ -103,5 +103,5 @@ If the connector reports instance URL issues:
 
 ## Related content
 
-- [GitLab Knowledge Cloud connector overview](gitlab-knowledge-cloud-overview.md)  
+- [GitLab Knowledge Cloud connector overview](gitlab-knowledge-cloud-overview.md)
 - [Deploy the GitLab Knowledge Cloud connector](gitlab-knowledge-cloud-deployment.md)

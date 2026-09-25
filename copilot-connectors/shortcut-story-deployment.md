@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Shortcut Story connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin

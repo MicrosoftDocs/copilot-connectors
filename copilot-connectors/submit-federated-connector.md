@@ -1,8 +1,8 @@
 ---
 title: "Submit a federated Microsoft 365 Copilot connector"
 description: "Learn how to submit a remote Model Context Protocol (MCP) server as a federated Microsoft 365 Copilot connector, including publishing paths, required metadata, and review expectations."
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin

@@ -1,7 +1,7 @@
 ---
 title: "BambooHR connector overview"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer:
 audience: Admin

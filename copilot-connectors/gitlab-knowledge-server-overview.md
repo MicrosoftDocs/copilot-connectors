@@ -1,7 +1,7 @@
 ---
 title: "GitLab Knowledge Server connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -76,9 +76,9 @@ Administrators can configure access control for indexed GitLab data using Micros
 
 Identity mapping options include mapping by:
 
-- Email  
-- Login  
-- Name  
+- Email
+- Login
+- Name
 
 If direct mapping fails, administrators can apply regular expressions (regex) to transform identity attributes. Email visibility settings and domain inconsistencies in GitLab might affect mapping accuracy.
 

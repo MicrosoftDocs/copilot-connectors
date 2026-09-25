@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the GitHub Server Issues connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin
@@ -14,7 +14,7 @@ description: "Find troubleshooting information for the GitHub Server Issues Micr
 
 # Troubleshoot issues with the GitHub Server Issues connector
 
-The GitHub Server Issues Microsoft 365 Copilot connector integrates GitHub issue data into Microsoft 365. This article provides troubleshooting information for common errors that you might encounter when you deploy the GitHub Server Issues connector. 
+The GitHub Server Issues Microsoft 365 Copilot connector integrates GitHub issue data into Microsoft 365. This article provides troubleshooting information for common errors that you might encounter when you deploy the GitHub Server Issues connector.
 
 To verify GitHub configuration information to help troubleshoot errors, see [Set up the GitHub service for connector ingestion](github-server-issues-admin-setup.md).
 

@@ -1,8 +1,8 @@
 ---
 title: "Jira Cloud connector overview"
 description: "Learn about the Jira Cloud Microsoft 365 Copilot connector, its capabilities, limitations, data indexed, permissions model, and how to build agents."
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 audience: Admin
 ms.audience: Admin
 manager: calvind
