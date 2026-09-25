@@ -6,7 +6,7 @@ author: danipocket
 ms.author: danielabo
 manager: calvind
 ms.reviewer: mansipakhale
-ms.date: 09/24/2026
+ms.date: 09/25/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ms.audience: Admin
@@ -106,21 +106,24 @@ The following image shows the connector pane for the HubSpot federated connector
 
 ### View a connector's tools in the admin center (Coming soon)
 
-Each federated connector's details page in the Microsoft 365 admin center includes a **Tools** section that lists the tools available to users in the organization, including tools that can modify or delete data. To view the tools:
+> [!NOTE]
+> Viewing tools in the admin center isn't available for all connectors. If you encounter issues, sign in to Microsoft 365 Copilot with your user account, go to **Settings** > **Sources**, and select the connector. Then [expand **Write/Delete tools** to review individual tools and their approval settings](#review-individual-tool-permissions).
+
+For connectors that support this feature, the details page in the Microsoft 365 admin center includes a **Tools** section that lists the tools available to users in the organization, including tools that can modify or delete data. To view the tools:
 
 1. In the Microsoft 365 admin center, go to **Copilot connectors** > **Your connections** and select the federated connector.
 
-    :::image type="content" source="media/federated-connectors/admin-center-connector-details.png" alt-text="Screenshot of the Zava connector details pane in the Microsoft 365 admin center, showing the Tools section and Sign in button." lightbox="media/federated-connectors/admin-center-connector-details.png":::
+    :::image type="content" source="media/federated-connectors/admin-center-connector-details.png" alt-text="Screenshot of the Zava HR connector details pane in the Microsoft 365 admin center, showing the Tools section and Sign in button." lightbox="media/federated-connectors/admin-center-connector-details.png":::
 
 1. On the connector's details page, go to the **Tools** section and sign in to the third-party service.
 
     Signing in to view a connector's tools in the Microsoft 365 admin center also signs you in to that connector in Microsoft 365 Copilot.
 
-    :::image type="content" source="media/federated-connectors/admin-center-tools-signed-in.png" alt-text="Screenshot of the Tools section after signing in, showing Read/Search and Write/Delete tool counts and the View tools button." lightbox="media/federated-connectors/admin-center-tools-signed-in.png":::
+    :::image type="content" source="media/federated-connectors/admin-center-tools-signed-in.png" alt-text="Screenshot of a successful sign-in to Zava HR, with Read/Search and Write/Delete tool counts and the All tools button." lightbox="media/federated-connectors/admin-center-tools-signed-in.png":::
 
-1. Review the list of tools and note which tools can create, update, or delete data.
+1. Select **All tools**, and then review the list to identify tools that can create, update, or delete data.
 
-    :::image type="content" source="media/federated-connectors/admin-center-available-tools.png" alt-text="Screenshot of the Available tools list in the Microsoft 365 admin center, showing tools labeled Read, Write, or Delete." lightbox="media/federated-connectors/admin-center-available-tools.png":::
+    :::image type="content" source="media/federated-connectors/admin-center-available-tools.png" alt-text="Screenshot of the Zava HR Available tools list in the Microsoft 365 admin center, showing tools labeled Read, Write, or Delete." lightbox="media/federated-connectors/admin-center-available-tools.png":::
 
 > [!NOTE]
 > The tool list reflects the permissions of the account used to sign in. Sign in by using an account that has a high level of access to the connector so you see the comprehensive list of tools.
@@ -193,15 +196,15 @@ These actions export Customer Data to the connected system to create, update, de
 
 The following image shows a collapsed confirmation card for a write action.
 
-:::image type="content" source="media/federated-connectors/write-action-confirmation-collapsed.png" alt-text="Screenshot of a collapsed confirmation card in Copilot Chat showing a request to create an issue in Zava." lightbox="media/federated-connectors/write-action-confirmation-collapsed.png":::
+:::image type="content" source="media/federated-connectors/write-action-confirmation-collapsed.jpg" alt-text="Screenshot of a collapsed confirmation card in Copilot Chat showing a request to create an issue in Zava." lightbox="media/federated-connectors/write-action-confirmation-collapsed.jpg":::
 
 Users can expand the card to review the action parameters before approving it.
 
-:::image type="content" source="media/federated-connectors/write-action-confirmation-expanded.png" alt-text="Screenshot of an expanded confirmation card in Copilot Chat showing the parameters to be sent to Zava." lightbox="media/federated-connectors/write-action-confirmation-expanded.png":::
+:::image type="content" source="media/federated-connectors/write-action-confirmation-expanded.jpg" alt-text="Screenshot of an expanded confirmation card in Copilot Chat showing the parameters to be sent to Zava." lightbox="media/federated-connectors/write-action-confirmation-expanded.jpg":::
 
-Open the approval menu to choose how long to allow the tool.
+Open the menu next to **Allow once** to choose **Allow for conversation** or **Always allow**.
 
-:::image type="content" source="media/federated-connectors/write-action-approval-options.png" alt-text="Screenshot of the confirmation card with Allow once, Allow for conversation, Always allow, and Cancel options." lightbox="media/federated-connectors/write-action-approval-options.png":::
+:::image type="content" source="media/federated-connectors/write-action-approval-options.jpg" alt-text="Screenshot of the Zava confirmation card with Allow once and Cancel buttons and an open menu offering Allow for conversation and Always allow." lightbox="media/federated-connectors/write-action-approval-options.jpg":::
 
 The user chooses one of the following options:
 
@@ -227,6 +230,8 @@ Read tools are always allowed and don't require approval.
 Write, update, and delete tools default to **Needs approval**, which means Copilot asks for confirmation each time. A user who selected **Always allow** can switch back to **Needs approval** for the entire **Write/Delete tools** group.
 
 :::image type="content" source="media/federated-connectors/write-delete-group-permissions.png" alt-text="Screenshot of the approval settings menu for the entire Write/Delete tools group." lightbox="media/federated-connectors/write-delete-group-permissions.png":::
+
+#### Review individual tool permissions
 
 Expand **Write/Delete tools** to review individual tools and their approval settings.
 
