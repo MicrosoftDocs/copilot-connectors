@@ -113,17 +113,17 @@ For connectors that support this feature, the details page in the Microsoft 365 
 
 1. In the Microsoft 365 admin center, go to **Copilot connectors** > **Your connections** and select the federated connector.
 
-    :::image type="content" source="media/federated-connectors/admin-center-connector-details.png" alt-text="Screenshot of the Zava HR connector details pane in the Microsoft 365 admin center, showing the Tools section and Sign in button." lightbox="media/federated-connectors/admin-center-connector-details.png":::
+    :::image type="content" source="media/federated-connectors/admin-center-connector-details.png" alt-text="Screenshot of the Zava connector details pane in the Microsoft 365 admin center, showing the Tools section and Sign in button." lightbox="media/federated-connectors/admin-center-connector-details.png":::
 
 1. On the connector's details page, go to the **Tools** section and sign in to the third-party service.
 
     Signing in to view a connector's tools in the Microsoft 365 admin center may lead to you also being signed in to that connector in Microsoft 365 Copilot.
 
-    :::image type="content" source="media/federated-connectors/admin-center-tools-signed-in.png" alt-text="Screenshot of a successful sign-in to Zava HR, with Read/Search and Write/Delete tool counts and the All tools button." lightbox="media/federated-connectors/admin-center-tools-signed-in.png":::
+    :::image type="content" source="media/federated-connectors/admin-center-tools-signed-in.png" alt-text="Screenshot of a successful sign-in to Zava, with Read/Search and Write/Delete tool counts and the All tools button." lightbox="media/federated-connectors/admin-center-tools-signed-in.png":::
 
 1. Select **All tools**, and then review the list to identify tools that can create, update, or delete data.
 
-    :::image type="content" source="media/federated-connectors/admin-center-available-tools.png" alt-text="Screenshot of the Zava HR Available tools list in the Microsoft 365 admin center, showing tools labeled Read, Write, or Delete." lightbox="media/federated-connectors/admin-center-available-tools.png":::
+    :::image type="content" source="media/federated-connectors/admin-center-available-tools.png" alt-text="Screenshot of the Zava Available tools list in the Microsoft 365 admin center, showing tools labeled Read, Write, or Delete." lightbox="media/federated-connectors/admin-center-available-tools.png":::
 
 > [!NOTE]
 > The tool list reflects the permissions of the account used to sign in. Sign in by using an account that has a high level of access to the connector so you see the comprehensive list of tools.
