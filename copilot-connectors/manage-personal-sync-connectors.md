@@ -1,8 +1,8 @@
 ---
 title: Manage self-serve sync connector availability
 description: Learn how to control the availability of self-serve sync connectors for Microsoft 365 Copilot in your organization.
-author: danipocket
-ms.author: danielabo
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.reviewer: vivg
 ms.date: 06/22/2026

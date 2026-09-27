@@ -1,6 +1,6 @@
 ---
 title: "Deploy the 15Five Priorities connector"
-ms.author: lauragra
+ms.author: jasonjoh
 author: wangchen
 manager: zezhangzhao
 ms.reviewer: wangchen
@@ -86,7 +86,7 @@ You can add or remove available properties from your 15Five data source. Assign 
 
 The following properties are available for configuration.
 
-| Property | Semantic Label | Description | 
+| Property | Semantic Label | Description |
 |----------|----------------|-------------|
 | Text | Not applicable | Description of the priority. |
 | Status | Not applicable | Status of the priority. |

@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the GitLab Issues Server connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -14,7 +14,7 @@ description: "Find troubleshooting information for the GitLab Issues Server Micr
 
 # Troubleshoot issues with the GitLab Issues Server connector
 
-The GitLab Issues Server Microsoft 365 Copilot connector integrates GitLab issue data into Microsoft 365. This article provides troubleshooting information for common errors that you might encounter when you deploy the GitLab Issues Server connector.  
+The GitLab Issues Server Microsoft 365 Copilot connector integrates GitLab issue data into Microsoft 365. This article provides troubleshooting information for common errors that you might encounter when you deploy the GitLab Issues Server connector.
 
 ## GitLab Issues Server connector troubleshooting
 
@@ -31,5 +31,5 @@ The following table lists common errors, possible causes, and recommended action
 
 ## Related content
 
-- [GitLab Issues Server connector overview](gitlab-issues-server-overview.md)  
-- [Deploy the GitLab Issues Server connector](gitlab-issues-server-deployment.md)  
+- [GitLab Issues Server connector overview](gitlab-issues-server-overview.md)
+- [Deploy the GitLab Issues Server connector](gitlab-issues-server-deployment.md)

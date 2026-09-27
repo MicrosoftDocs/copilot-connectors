@@ -1,8 +1,8 @@
 ---
 title: Set up custom federated connectors
 description: Learn how to build, authenticate, and deploy a custom federated connector that brings your organization's proprietary data into Microsoft 365 Copilot through the Model Context Protocol (MCP).
-author: lauragra
-ms.author: lauragra
+author: jasonjoh
+ms.author: jasonjoh
 ms.manager: calvind
 ms.reviewer: mansipakhale
 ms.topic: how-to

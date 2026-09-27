@@ -1,7 +1,7 @@
 ---
 title: "Jira Data Center connector overview"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: neocheng
 audience: Admin

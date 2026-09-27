@@ -1,7 +1,7 @@
 ---
 title: "Set up the ServiceNow service for ServiceNow Tickets connector ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvindrover
 ms.reviewer: mayanksethi
 audience: Admin
@@ -85,7 +85,7 @@ Sync user tables | `sys_user` | Read user access details for tickets
 | | `sys_user_group` | Read user group segments
 | | `sys_group_has_role` | Read  group roles
 | | `sys_user_role` | Read user roles
-| | `sys_user_role_contains` | Reads role inheritance 
+| | `sys_user_role_contains` | Reads role inheritance
 | | `cmn_location` | Read location information
 | | `cmn_department` | Read department information
 | | `core_company` | Read company attributes
@@ -97,7 +97,7 @@ Optionally, if you want to index custom properties from [extended tables](https:
 Index custom fields from a specific table | `sys_dictionary` | Crawling custom fields from a specific table like incident, problem, or change_management
 Select a custom table from your organization| `sys_db_object` | Find the list of extended task tables, including custom tables
 
-You can [create and assign a role](https://docs.servicenow.com/bundle/washingtondc-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html) for the service account you use to connect with Microsoft Search and Microsoft 365 Copilot, and assign read access to the role. 
+You can [create and assign a role](https://docs.servicenow.com/bundle/washingtondc-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html) for the service account you use to connect with Microsoft Search and Microsoft 365 Copilot, and assign read access to the role.
 
 Also, you can assign the following roles to the service account so that ticket items get indexed without any blocking ACL issues. Assigning these roles is optional.
 
@@ -108,16 +108,16 @@ For information about how to set read access to table records, see [Securing Tab
 
 When you assign read access to `sys_db_object`, create two access control lists (ACLs): one for row access and one for field access.
 
-If the service account doesn’t have the required permissions—or if row or field-level permissions are restricted—specific items are excluded from indexing on the Microsoft side. 
+If the service account doesn’t have the required permissions—or if row or field-level permissions are restricted—specific items are excluded from indexing on the Microsoft side.
 
 > [!NOTE]
-> Don't explicitly apply snc_read_only to the service account. This role denies any write action to any table the user has access to. The account needs to write token and other authentication-related information into some tables. Because tokens are refreshed on a regular basis, this account can't be made read-only after initial authentication. The service account needs write access to the `oauth_credential` table for authentication. 
+> Don't explicitly apply snc_read_only to the service account. This role denies any write action to any table the user has access to. The account needs to write token and other authentication-related information into some tables. Because tokens are refreshed on a regular basis, this account can't be made read-only after initial authentication. The service account needs write access to the `oauth_credential` table for authentication.
 
 ### Identify item count for ingestion
 
-The following default filter is applied during indexing. If you need to make changes, edit the query string during connector setup. For more information, see Customize query string. 
+The following default filter is applied during indexing. If you need to make changes, edit the query string during connector setup. For more information, see Customize query string.
 
-`Active=true^sys_created_on>javascript:gs.beginningOfLast6Months()` 
+`Active=true^sys_created_on>javascript:gs.beginningOfLast6Months()`
 
 To verify the item count expected for ingestion:
 

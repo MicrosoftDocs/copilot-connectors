@@ -2,8 +2,8 @@
 title: Set up the GitHub service for GitHub Cloud Pull Request connector ingestion
 description: Learn how to configure your GitHub environment and prerequisites before you deploy the GitHub Cloud Pull Requests connector for Microsoft 365 Copilot.
 ms.topic: how-to
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 ms.date: 06/18/2026
@@ -13,9 +13,9 @@ ms.date: 06/18/2026
 
 The GitHub Cloud Pull Requests Microsoft 365 Copilot connector enables your organization to index pull requests stored in GitHub repositories into Microsoft 365 Copilot and Microsoft Search experiences.
 
-This article provides information about the configuration steps that GitHub admins need to complete in order for your organization to deploy the GitHub Cloud Pull Requests connector. 
+This article provides information about the configuration steps that GitHub admins need to complete in order for your organization to deploy the GitHub Cloud Pull Requests connector.
 
-For information about how to deploy the connector, see [GitHub Cloud Pull Requests deployment](github-cloud-pull-requests-deployment.md). 
+For information about how to deploy the connector, see [GitHub Cloud Pull Requests deployment](github-cloud-pull-requests-deployment.md).
 
 ## Setup checklist
 
@@ -131,7 +131,7 @@ Depending on the authentication method you plan to use, generate either a client
 
 ### Install the GitHub app
 
-1.  On the **General** page of the GitHub app, select **Install App**.  
+1.  On the **General** page of the GitHub app, select **Install App**.
 
     :::image type="content" source="./media/github-cloud-pull-requests-admin-setup/install-app.png" alt-text="Screenshot of GitHub with Install App highlighted.":::
 

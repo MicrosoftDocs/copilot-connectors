@@ -1,7 +1,7 @@
 ---
 title: "Deploy the GitHub Cloud Knowledge connector"
-ms.author: lauragra
-author: Lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -65,7 +65,7 @@ The connector supports the following authentication types:
     - Choose a display name that helps users recognize the connection.
     - Enter your organization name.
     - Choose **Authorize** to sign in and grant access.
-    
+
     > [!NOTE]
     > This authentication method is currently in preview.
 

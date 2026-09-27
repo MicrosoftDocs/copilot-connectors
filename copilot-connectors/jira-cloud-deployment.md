@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Jira Cloud connector"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin

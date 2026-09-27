@@ -1,7 +1,7 @@
 ---
 title: "GitLab Issues Cloud connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin

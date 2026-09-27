@@ -1,8 +1,8 @@
 ---
 title: "Azure SQL and Microsoft SQL Server connectors overview"
 description: "Learn how the Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors index database records for Microsoft 365 Copilot and Microsoft Search."
-author: danipocket
-ms.author: danielabo
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.reviewer:
 audience: Admin

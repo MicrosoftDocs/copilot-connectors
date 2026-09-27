@@ -1,7 +1,7 @@
 ---
 title: "Set up the GitHub service for GitHub Server Knowledge connector ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin
@@ -102,11 +102,11 @@ To create a GitHub app for use with the GitHub Server Knowledge connector:
     - Contents - **Read-only**
     - Metadata - **Read-only**
     - Administration - **Read-only**
-    
+
     **Organization permissions**
     - Members - **Read-only**
     - Administration - **Read-only**
-    
+
     **Account permissions**
     - Email addresses - **Read-only**
 
@@ -126,7 +126,7 @@ Depending on the authentication method you plan to use, generate either a client
 
 ### Install the GitHub app
 
-1. On the **General** page of the GitHub app, select **Install App**. 
+1. On the **General** page of the GitHub app, select **Install App**.
 
     :::image type="content" source="./media/github-cloud-knowledge-admin-setup/install-app.png" alt-text="Screenshot of GitHub App General page with Install App button.":::
 

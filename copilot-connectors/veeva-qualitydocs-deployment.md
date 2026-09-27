@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Veeva QualityDocs connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin
@@ -48,7 +48,7 @@ Use the following steps to configure Microsoft Entra ID OAuth 2.0/OpenID Connect
      `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`
    - Set **Identity is in another claim** to `upn`, and in **User ID Type**, select **Federated ID**. The UPN should be the same as the federated ID.
    - Choose **Client Applications** > **Add**, and use the client ID from your Microsoft Entra ID application for both **Application Client ID** and **Authorization Server Client ID**. Add an **Application Label**.
-       
+
     > [!NOTE]
     > To enable **Perform strict Audience Restriction validation**, add the client ID to the **Audience** field.
 

@@ -1,7 +1,7 @@
 ---
 title: "Deploy the WordPress.org connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin
@@ -35,7 +35,7 @@ To add the WordPress.org connector for your organization:
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated item. The display name also signifies trusted content and is used as a content source filter.  
+The display name is used to identify references in Copilot responses to help users recognize the associated item. The display name also signifies trusted content and is used as a content source filter.
 You can accept the default **WordPress.org** display name or customize the value to a name that users in your organization recognize. For more information, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
 ### Set instance URL

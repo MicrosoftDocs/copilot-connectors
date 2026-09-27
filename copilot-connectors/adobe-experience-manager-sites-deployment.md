@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Adobe Experience Manager Sites connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin
@@ -14,15 +14,15 @@ description: "Find information about how to deploy the Adobe Experience Manager 
 
 # Deploy the Adobe Experience Manager Sites connector
 
-By using the Adobe Experience Manager Sites Microsoft 365 Copilot connector, your organization can index published webpages from Adobe Experience Manager (AEM) Sites so people can discover and use them across Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Adobe Experience Manager Sites connector. 
+By using the Adobe Experience Manager Sites Microsoft 365 Copilot connector, your organization can index published webpages from Adobe Experience Manager (AEM) Sites so people can discover and use them across Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Adobe Experience Manager Sites connector.
 
 ## Prerequisites
 
 Before you deploy the connector, make sure that:
 
 - You're a Microsoft 365 AI administrator for your organization.
-- You have your Adobe Experience Cloud instance author environment URL and publish environment URL:  
-  - Author URL format: `https://author-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`  
+- You have your Adobe Experience Cloud instance author environment URL and publish environment URL:
+  - Author URL format: `https://author-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`
   - Publish URL format: `https://publish-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`
 - You have an Adobe Experience Manager Sites technical account with credentials to access published webpages and metadata. This secure, service-based account enables the connector to refresh content regularly. For more information, see [Generate access tokens for server-side APIs](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#generate-a-jwt-token-and-exchange-it-for-an-access-token).
 
@@ -70,7 +70,7 @@ After you create your connection, you can review its status in the **Connectors*
 
 ## Customize settings (optional)
 
-You can customize the default values for the Adobe Experience Manager Sites connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**. 
+You can customize the default values for the Adobe Experience Manager Sites connector settings. To customize settings, on the connector page in the admin center, choose **Custom setup**.
 
 ### Customize user settings
 
@@ -78,13 +78,13 @@ You can customize the default values for the Adobe Experience Manager Sites conn
 
 Currently, only published websites from your AEM Sites are indexed. All data indexed using the Adobe Experience Manager Sites connector is visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
 
-#### User identity mapping 
+#### User identity mapping
 
 The connector maps Adobe Experience Cloud user accounts to Microsoft 365 (Microsoft Entra ID) identities. If Adobe Experience Cloud users' emails match their Entra ID user principal names (UPNs), this mapping is automatic. If they differ, you can provide a mapping rule to map identities in Adobe Experience Cloud to identities in Microsoft 365. Mapping rules ensure that the system provides appropriate activity signal to Adobe Experience Cloud content in responses.
 
 ### Customize content settings 
 
-#### Content ingestion filters  
+#### Content ingestion filters 
 
 Content ingestion filters allow you to control which assets are indexed by defining inclusion and exclusion rules based on paths and metadata properties.
 
@@ -123,7 +123,8 @@ To check available standard properties from your Adobe Experience Manager Sites,
 
 ### Customize sync intervals 
 
-The refresh interval determines how often your data synchronizes between the data source and the Adobe Experience Manager Sites connector index. Copilot connectors use two types of refresh intervals: 
+The refresh interval determines how often your data synchronizes between the data source and the Adobe Experience Manager Sites connector index. Copilot connectors use two types of refresh intervals: 
+
 
 - Full crawl: The default value is every day.
 - Incremental crawl: The default value is every 15 minutes.

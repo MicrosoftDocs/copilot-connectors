@@ -1,7 +1,7 @@
 ---
 title: "Bitbucket Pull Request connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin

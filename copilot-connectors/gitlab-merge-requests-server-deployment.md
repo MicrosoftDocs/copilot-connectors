@@ -1,7 +1,7 @@
 ---
 title: "Deploy the GitLab Merge Requests Server connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -38,12 +38,12 @@ Before you deploy the GitLab Merge Requests Server connector, make sure that you
     - The Microsoft Graph connector agent version 3.1.8.0 or later is installed on a server that can connect to the GitLab instance.
     - The authentication account must have administrative privileges to enable access control list (ACL) crawling.
 - For best performance, adjust [GitLab rate limits](https://docs.gitlab.co.jp/ee/user/admin_area/settings/user_and_ip_rate_limits.html#:%7E:text=On%20the%20left%20sidebar%2C%20select%20Settings%20%3E%20Network%2C,period%20per%20IP%20value.%20Defaults%20to%203600.%20Optional.) as recommended:
-    - User and IP rate limits: Uncheck **Enable authenticated API request rate limit** and **Enable authenticated web request rate limit**. 
-    - Files API rate limits: Uncheck **Enable authenticated API request rate limit**. 
-    - Deprecated API rate limits: Uncheck **Enable authenticated API request rate limit**. 
-    - Users API rate limits: Set **Max requests per 10 minutes per user** to a high value (for example, 100000). 
-    - Groups API and Projects API rate limits: Set all values to 0 to disable limits. 
-    - Members API rate limits: Set to 0. 
+    - User and IP rate limits: Uncheck **Enable authenticated API request rate limit** and **Enable authenticated web request rate limit**.
+    - Files API rate limits: Uncheck **Enable authenticated API request rate limit**.
+    - Deprecated API rate limits: Uncheck **Enable authenticated API request rate limit**.
+    - Users API rate limits: Set **Max requests per 10 minutes per user** to a high value (for example, 100000).
+    - Groups API and Projects API rate limits: Set all values to 0 to disable limits.
+    - Members API rate limits: Set to 0.
 
 ### Rate-limit recommendations
 
@@ -108,21 +108,21 @@ Choose whether indexed data is visible to:
 - **Only people with access to this data source** (default)
 - **Everyone**
 
-If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them. If you choose **Everyone**, indexed data appears in the search results for all users. 
+If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them. If you choose **Everyone**, indexed data appears in the search results for all users.
 
 #### Map identities
 
 Map GitLab user identities to Microsoft Entra ID. Options include:
 
-- **Email**: Maps GitLab email to Microsoft Entra ID user properties. 
-- **Login**: Maps GitLab logins with Microsoft Entra ID user properties. 
-- **Name**: Maps GitLab name with Microsoft Entra ID user properties. 
+- **Email**: Maps GitLab email to Microsoft Entra ID user properties.
+- **Login**: Maps GitLab logins with Microsoft Entra ID user properties.
+- **Name**: Maps GitLab name with Microsoft Entra ID user properties.
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md). 
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md).
 
 ### Customize content settings
 
-On the **Data** tab, you can verify property mappings in the sample data for metadata such as content, labels, description, and timestamps. 
+On the **Data** tab, you can verify property mappings in the sample data for metadata such as content, labels, description, and timestamps.
 
 #### Query string
 
@@ -130,14 +130,14 @@ You can configure a time‑range filter for the connector. The default setting i
 
 #### Manage properties
 
-You can add or remove available properties from the data source, assign a schema to the property (searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. 
+You can add or remove available properties from the data source, assign a schema to the property (searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property.
 
 ### Customize sync intervals
 
 Configure full and incremental crawl intervals. The default values are:
 
-- **Incremental crawl:** Every 15 minutes  
-- **Full crawl:** Daily  
+- **Incremental crawl:** Every 15 minutes
+- **Full crawl:** Daily
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).
 

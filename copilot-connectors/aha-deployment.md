@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Aha! connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -106,7 +106,7 @@ Map Aha! identities to Microsoft Entra IDs for secure access control.
 
 #### Manage properties
 
-You can add or remove properties, assign semantic labels, and configure schema attributes. 
+You can add or remove properties, assign semantic labels, and configure schema attributes.
 
 The following properties are indexed by default for Aha! Features.
 

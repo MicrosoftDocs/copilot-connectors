@@ -1,7 +1,7 @@
 ---
 title: "Microsoft-built connectors gallery"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.audience: Admin
 ms.topic: landing-page

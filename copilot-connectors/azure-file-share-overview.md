@@ -1,7 +1,7 @@
 ---
 title: "Azure File Share connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin
@@ -94,7 +94,7 @@ The Azure File Share connector has the following limitations:
 - Files up to 100 MB are indexed, with up to 4 MB of text extracted.
 - Supported file formats include Microsoft Office files, PDFs, text files, and JSON files; nontext formats (such as images and videos) are excluded.
 - Files the connector agent account can't read aren't indexed or displayed.
-- Crawl performance can vary based on content type, file size, and network conditions. For more information, see [Understand and optimize Azure file share performance](/azure/storage/files/understand-performance). 
+- Crawl performance can vary based on content type, file size, and network conditions. For more information, see [Understand and optimize Azure file share performance](/azure/storage/files/understand-performance).
 
 ## Data types indexed from Azure File Share
 

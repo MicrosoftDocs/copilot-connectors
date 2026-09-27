@@ -1,9 +1,9 @@
 ---
 title: "Troubleshoot issues with the Tableau Cloud connector"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
-ms.reviewer: lauragra
+ms.reviewer: jasonjoh
 audience: Admin
 ms.audience: Admin
 ms.topic: troubleshooting-general

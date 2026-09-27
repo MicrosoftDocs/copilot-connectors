@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Azure Data Lake Storage Gen2 connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer:
 audience: Admin

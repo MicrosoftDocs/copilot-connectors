@@ -2,8 +2,8 @@
 title: Google Drive connector overview
 description: Learn about the Google Drive Microsoft 365 Copilot connector, including its capabilities, limitations, and how it works with Microsoft 365 Copilot and Microsoft Search.
 ms.topic: overview
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.date: 12/15/2025
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Zendesk Help Center connector"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: ang.gao
 audience: Admin
@@ -14,7 +14,7 @@ description: "Find information about how to deploy the Zendesk Help Center Copil
 
 # Deploy the Zendesk Help Center connector
 
-The Zendesk Help Center Microsoft 365 Copilot connector enables your organization to index published articles from Zendesk Help Center (also known as Zendesk Guide). After you configure the connector, users can search for these articles in Microsoft 365 Copilot and Microsoft Search clients. 
+The Zendesk Help Center Microsoft 365 Copilot connector enables your organization to index published articles from Zendesk Help Center (also known as Zendesk Guide). After you configure the connector, users can search for these articles in Microsoft 365 Copilot and Microsoft Search clients.
 
 This article describes the steps to deploy and customize the Zendesk Help Center connector. For general information about Copilot connector deployment, see [Set up Copilot connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview).
 
@@ -36,7 +36,7 @@ To add the Zendesk Help Center connector for your organization:
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter. You can accept the default **Zendesk Help Center** display name, or customize the value to use a display name that users in your organization recognize. 
+The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter. You can accept the default **Zendesk Help Center** display name, or customize the value to use a display name that users in your organization recognize.
 
 For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 

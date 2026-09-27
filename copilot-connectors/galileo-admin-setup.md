@@ -1,7 +1,7 @@
 ---
 title: "Set up Galileo by The Josh Bersin Company for connector ingestion"
 ms.author: xupzhou
-author: xupzhou
+author: PennyZhou-MSFT
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -11,7 +11,7 @@ ms.localizationpriority: Medium
 description: "Prepare your Microsoft 365 environment, access group, and credentials before deploying the Galileo by The Josh Bersin Company Copilot connector."
 ---
 
-<!-- cSpell:ignore Bersin xupzhou -->
+<!-- cSpell:ignore Bersin xupzhou  PennyZhou-MSFT-->
 
 # Set up Galileo by The Josh Bersin Company for connector ingestion
 

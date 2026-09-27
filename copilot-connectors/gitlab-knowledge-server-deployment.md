@@ -1,7 +1,7 @@
 ---
 title: "Deploy the GitLab Knowledge Server connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -31,13 +31,13 @@ Before you deploy the GitLab Knowledge Server connector, make sure that you meet
 - Your GitLab version is 17.7 or later.
 - Microsoft Graph connector agent version 3.1.8.0 or later is installed on a server with network access to the GitLab instance.
 - API rate limits are configured according to GitLab recommendations for connector performance:
-    - User and IP rate limits: Uncheck **Enable authenticated API request rate limit** and **Enable authenticated web request rate limit**. 
-    - Files API rate limits: Uncheck **Enable authenticated API request rate limit**. 
-    - Deprecated API rate limits: Uncheck **Enable authenticated API request rate limit**. 
-    - Users API rate limits: Set **Max requests per 10 minutes per user** to a high value (such as 100000). 
-    - Groups API rate limits: Set all values to 0 to disable limits. 
-    - Projects API rate limits: Set all values to 0 to disable limits. 
-    - Members API rate limits: Set to 0. 
+    - User and IP rate limits: Uncheck **Enable authenticated API request rate limit** and **Enable authenticated web request rate limit**.
+    - Files API rate limits: Uncheck **Enable authenticated API request rate limit**.
+    - Deprecated API rate limits: Uncheck **Enable authenticated API request rate limit**.
+    - Users API rate limits: Set **Max requests per 10 minutes per user** to a high value (such as 100000).
+    - Groups API rate limits: Set all values to 0 to disable limits.
+    - Projects API rate limits: Set all values to 0 to disable limits.
+    - Members API rate limits: Set to 0.
 
 ### Rate limit recommendations
 
@@ -69,7 +69,7 @@ Specify the base URL of your GitLab Server instance. This URL is the GitLab endp
 
 ### Choose Microsoft Graph connector agent
 
-Select the Microsoft Graph connector agent that manages how GitLab Knowledge data is ingested into Microsoft 365. 
+Select the Microsoft Graph connector agent that manages how GitLab Knowledge data is ingested into Microsoft 365.
 
 ### Choose authentication type
 
@@ -79,7 +79,7 @@ For GitLab application setup, make sure that the authentication account has suff
 
 ### Roll out
 
-To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to deploy the connection to. 
+To roll out the connector to a limited audience, choose the toggle next to **Rollout to limited audience** and specify the users and groups to deploy the connection to.
 
 Choose **Create** to deploy the connection. The GitLab Knowledge Server connector begins indexing content immediately.
 
@@ -118,15 +118,15 @@ To ensure that GitLab permissions are honored, map GitLab user identities to Mic
 - **Login**
 - **Name**
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md). 
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md).
 
 ### Customize content settings
 
-On the **Data** tab, you can verify property mappings in the sample data for metadata such as content, labels, description, and timestamps. 
+On the **Data** tab, you can verify property mappings in the sample data for metadata such as content, labels, description, and timestamps.
 
 #### Manage properties
 
-You can add or remove available properties from the data source, assign a schema to the property (searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. 
+You can add or remove available properties from the data source, assign a schema to the property (searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property.
 
 ### Customize sync intervals
 
@@ -135,7 +135,7 @@ The following sync intervals are available:
 - **Incremental crawl**: Default is every 15 minutes.
 - **Full crawl**: Default is daily.
 
-You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings). 
+You can adjust these intervals to meet your organization's needs. For more information, see [Guidelines for crawl settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Related content
 

@@ -36,8 +36,8 @@ Read each template before creating the corresponding file. Your output must matc
 Every file must include complete YAML front matter. Use the following rules:
 
 - `title`: Match the template title pattern exactly (for example, `"{Connector name} connector overview"`).
-- `ms.author`: Use `lauragra`.
-- `author`: Use `lauragra`.
+- `ms.author`: Use `jasonjoh`.
+- `author`: Use `jasonjoh`.
 - `manager`: Use `calvind`.
 - `ms.reviewer`: Leave blank unless the content plan specifies a reviewer.
 - `audience` and `ms.audience`: Always `Admin`.

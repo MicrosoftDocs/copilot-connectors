@@ -1,8 +1,8 @@
 ---
 title: "Troubleshoot issues with the Adobe Experience Manager Sites connector"
-ms.author: lauragra
-author: lauragra
-manager: lauragra
+ms.author: jasonjoh
+author: jasonjoh
+manager: jasonjoh
 ms.reviewer: rantang
 audience: Admin
 ms.audience: Admin

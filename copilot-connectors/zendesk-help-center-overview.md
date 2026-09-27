@@ -1,7 +1,7 @@
 ---
 title: "Zendesk Help Center connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: ang.gao
 audience: Admin

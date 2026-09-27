@@ -1,14 +1,14 @@
---- 
-title: "Result layout for the Azure DevOps Wiki connector" 
+---
+title: "Result layout for the Azure DevOps Wiki connector"
 
-ms.author: danielabo
-author: danipocket
-manager: harshkum 
+ms.author: jasonjoh
+author: jasonjoh
+manager: harshkum
 audience: Admin
-ms.audience: Admin 
+ms.audience: Admin
 ms.topic: how-to
-ms.localizationpriority: medium 
-description: "Result layout JSON for Azure DevOps Wiki Microsoft 365 Copilot connector" 
+ms.localizationpriority: medium
+description: "Result layout JSON for Azure DevOps Wiki Microsoft 365 Copilot connector"
 ms.date: 06/03/2022
 ---
 
@@ -27,7 +27,7 @@ This article provides a result layout JSON example to set up your result layout 
 You must have configured the Azure DevOps Wiki Copilot connector. To consume the sample result layout JSON, you must select the following properties for indexing.
 
 > [!NOTE]
-> The **Retrieve** search attribute is required for displaying a property in the search result template. A property can have other search attributes also.  
+> The **Retrieve** search attribute is required for displaying a property in the search result template. A property can have other search attributes also.
 
 | Property | Search schema attribute required |
 | -------- | -------- |
@@ -44,7 +44,7 @@ You must have configured the Azure DevOps Wiki Copilot connector. To consume the
 
 The following example shows what search results look like.
 
-:::image type="content" source="media/ado-wiki/azure-devops-wiki-connector-example-layout.png" alt-text="Example of a layout for Azure DevOps Wiki Copilot connector." lightbox="media/ado-wiki/azure-devops-wiki-connector-example-layout.png"::: 
+:::image type="content" source="media/ado-wiki/azure-devops-wiki-connector-example-layout.png" alt-text="Example of a layout for Azure DevOps Wiki Copilot connector." lightbox="media/ado-wiki/azure-devops-wiki-connector-example-layout.png":::
 
 The following is the associated JSON file.
 

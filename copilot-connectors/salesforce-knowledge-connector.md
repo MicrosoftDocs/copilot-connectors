@@ -1,19 +1,19 @@
---- 
-title: "Salesforce Knowledge connector for Microsoft Search and" 
-ms.author: lauragra
-author: lauragra
+---
+title: "Salesforce Knowledge connector for Microsoft Search and"
+ms.author: jasonjoh
+author: jasonjoh
 manager: ereza
 audience: Admin
-ms.audience: Admin 
+ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.localizationpriority: medium 
-description: "Set up the Salesforce Knowledge Microsoft 365 Copilot connector for Microsoft Search and Microsoft 365 Copilot" 
+ms.localizationpriority: medium
+description: "Set up the Salesforce Knowledge Microsoft 365 Copilot connector for Microsoft Search and Microsoft 365 Copilot"
 ms.date: 12/25/2025
 ---
 
 # Salesforce Knowledge Copilot connector
 
-The Salesforce Knowledge Copilot connector allows your organization to index articles from Salesforce Knowledge. After you configure the connector, end users can search for Knowledge articles from Salesforce in Microsoft 365 Copilot and from any Microsoft Search client. 
+The Salesforce Knowledge Copilot connector allows your organization to index articles from Salesforce Knowledge. After you configure the connector, end users can search for Knowledge articles from Salesforce in Microsoft 365 Copilot and from any Microsoft Search client.
 
 ## Capabilities
 - Index Salesforce Knowledge articles.
@@ -72,17 +72,17 @@ To connect to your Salesforce instance, you need your Salesforce instance URL, t
        > [![Screenshot that shows select the Refresh Token Policy named "Refresh token is valid until revoked ".](media/salesforce-connector/oauthpolicies.png)](media/salesforce-connector/oauthpolicies.png#lightbox)
 
 You can now use the [Microsoft 365 Admin Center](https://admin.microsoft.com/) to complete the rest of the setup process for your Salesforce Knowledge Copilot connector.
-     
+
 ## Get Started
 
-### 1. Display name 
+### 1. Display name
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a content source filter. A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. Salesforce Knowledge URL
 Use your organization’s Salesforce Knowledge Instance URL. This URL is the specific web address used to access and interact with Salesforce Knowledge's API services for data retrieval, which typically looks like `https://[COMPANY_NAME].my.salesforce.com`
 
 ### 3. Authentication Type
-For Salesforce Knowledge Copilot connector, use OAuth 2.0 for authentication. 
+For Salesforce Knowledge Copilot connector, use OAuth 2.0 for authentication.
 
 To authenticate, enter the Client ID and Client Secret. The Client ID is a unique identifier assigned to your application for making requests to the Salesforce Knowledge API. The Client Secret is a confidential key used alongside the Client ID to securely authenticate your application with the Salesforce Knowledge API.
 
@@ -93,7 +93,7 @@ The first time you've attempted to sign in with these settings, you'll get a pop
   > - If the pop-up doesn't appear, it might be getting blocked in your browser, so you must allow pop-ups and redirects.
   > - Ensure that the Salesforce account being used to log in for the Graph connector is the same as the user already logged into Salesforce.
   > - Ensure the user logging in has all the necessary object permissions for the organization.
- 
+
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
@@ -153,24 +153,24 @@ Here, you can add or remove available properties from your Salesforce Knowledge 
 
 **Source Property** | **Semantic Label** |**Description**| **Schema**
 --- | ---- | --- | ---
-ArticleId | | | Query, Retrieve 
-ArticleNumber | | The unique number automatically assigned to the article when it's created. | Query, Retrieve 
-ArticleType | | The type or category of the knowledge article (for example, FAQ, Support Article, How-To). | Retrieve 
-CondensedBody | | Includes the Full content or main body of the article | Retrieve, Search 
-CreatedById | | | Query, Retrieve, Search 
-CreatedByName | createdBy | The user who initially created the article. | Query, Retrieve, Search 
-CreatedDate | createdDateTime | Timestamp of when the article was initially created. | Query, Retrieve 
-IconUrl | iconUrl | | Retrieve 
-Language | | The language in which the article is written. | Retrieve 
-LastModifiedById | | | Query, Retrieve, Search 
-LastModifiedByName | lastModifiedBy | The user who last updated the article. | Query, Retrieve, Search 
-LastModifiedDate | lastModifiedDateTime | Timestamp of the most recent update to the article. | Query, Retrieve 
-LastPublishedDate | | The date when the article was last published. | Query, Retrieve 
-LastPublishedVersionId | | | Query, Retrieve 
-Summary | | A brief overview or abstract of the article's content. | Search 
-Title | title | The main headline or title of the article. | Query, Retrieve, Search 
-Url | url | Link to the article in Salesforce Knowledge. | Retrieve 
-UrlName | | A unique URL-friendly name generated for the article. | Query, Retrieve 
+ArticleId | | | Query, Retrieve
+ArticleNumber | | The unique number automatically assigned to the article when it's created. | Query, Retrieve
+ArticleType | | The type or category of the knowledge article (for example, FAQ, Support Article, How-To). | Retrieve
+CondensedBody | | Includes the Full content or main body of the article | Retrieve, Search
+CreatedById | | | Query, Retrieve, Search
+CreatedByName | createdBy | The user who initially created the article. | Query, Retrieve, Search
+CreatedDate | createdDateTime | Timestamp of when the article was initially created. | Query, Retrieve
+IconUrl | iconUrl | | Retrieve
+Language | | The language in which the article is written. | Retrieve
+LastModifiedById | | | Query, Retrieve, Search
+LastModifiedByName | lastModifiedBy | The user who last updated the article. | Query, Retrieve, Search
+LastModifiedDate | lastModifiedDateTime | Timestamp of the most recent update to the article. | Query, Retrieve
+LastPublishedDate | | The date when the article was last published. | Query, Retrieve
+LastPublishedVersionId | | | Query, Retrieve
+Summary | | A brief overview or abstract of the article's content. | Search
+Title | title | The main headline or title of the article. | Query, Retrieve, Search
+Url | url | Link to the article in Salesforce Knowledge. | Retrieve
+UrlName | | A unique URL-friendly name generated for the article. | Query, Retrieve
 
 ### Sync
 
@@ -178,7 +178,7 @@ The refresh interval determines how often your data is synced between the data s
 
 ## Troubleshooting
 
-After you publish your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). 
+After you publish your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 ### Finding items in Index Browser
 If you want to investigate a specific Knowledge Article in the Index Browser, you’ll first need its **KnowledgeArticleId** (the master ID that links all versions of the article). Here’s how to get it from Salesforce:
@@ -186,8 +186,8 @@ If you want to investigate a specific Knowledge Article in the Index Browser, yo
 2. Open the [Developer Console](https://help.salesforce.com/s/articleView?id=platform.code_dev_console_opening.htm&type=5)
 3. Run the SOQL Query: Go to the **Query Editor** tab and run the following query (replace with your ID).
      ```sql
-     SELECT Id, KnowledgeArticleId, Title 
-     FROM KnowledgeArticleVersion 
+     SELECT Id, KnowledgeArticleId, Title
+     FROM KnowledgeArticleVersion
      WHERE Id = '<<KNOWLEDGE_URL_ID>>'
 4. In the results, copy the `KnowledgeArticleId`
 5. Enter this `KnowledgeArticleId` in the Index Browser to view all related indexed data.

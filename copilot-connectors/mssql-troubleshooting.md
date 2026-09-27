@@ -1,8 +1,8 @@
 ---
 title: "Troubleshoot issues with the Azure SQL and Microsoft SQL Server connectors"
 description: "Find troubleshooting information for common errors with the Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors."
-author: danipocket
-ms.author: danielabo
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.reviewer:
 audience: Admin

@@ -1,7 +1,7 @@
 ---
 title: "ServiceNow Catalog connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: mayanksethi
 audience: Admin
@@ -61,13 +61,13 @@ The ServiceNow Catalog connector enables users to:
 - View associated catalog form fields (variables) and their choices for enhanced contextual search and responses in Copilot.
 
 The connector supports the following:
-- Evaluating permissions based on user criteria or role-based permissions. 
+- Evaluating permissions based on user criteria or role-based permissions.
 - Hierarchical permissions. This means that both catalog category-level user criteria and item-level user criteria are considered when permissions for catalog items are evaluated.
 
 Before you deploy the connector, consider the following limitations:
 
 - Attachments and custom widget-based forms aren't indexed.
-- The incremental crawl only updates the changes in content for the catalog item. Any addition or removal of user criteria to any catalog item or the changes in identity i.e. changes in users or user criteria attributes are only synced with the periodic full crawl. 
+- The incremental crawl only updates the changes in content for the catalog item. Any addition or removal of user criteria to any catalog item or the changes in identity i.e. changes in users or user criteria attributes are only synced with the periodic full crawl.
 
 
 ## Data types indexed from ServiceNow Catalog
@@ -76,7 +76,7 @@ The connector indexes the following data types:
 
 - **Catalog items** (`sc_cat_item`)
 
-Indexed properties include title, description, category, price, delivery time, owner, and more. 
+Indexed properties include title, description, category, price, delivery time, owner, and more.
 
 ## Permissions model and access control
 

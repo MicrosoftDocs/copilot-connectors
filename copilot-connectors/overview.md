@@ -1,7 +1,7 @@
 ---
 title: "Copilot connectors overview"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.audience: Admin
 ms.topic: overview
@@ -123,7 +123,7 @@ Custom connectors offer flexibility but require maintenance. Use prebuilt connec
 
 ### Copilot connectors for people data
 
-Copilot connectors for people data integrate people data into Microsoft 365 applications to enhance and unify individual profiles. They provide a synchronized view of people data while keeping the original data authoritative in its source system. These connectors improve identity cohesion, Copilot response relevance, and data discoverability within Microsoft 365, including updated profile cards and search capabilities. For more information, see [Copilot connectors for people data](/graph/peopleconnectors). 
+Copilot connectors for people data integrate people data into Microsoft 365 applications to enhance and unify individual profiles. They provide a synchronized view of people data while keeping the original data authoritative in its source system. These connectors improve identity cohesion, Copilot response relevance, and data discoverability within Microsoft 365, including updated profile cards and search capabilities. For more information, see [Copilot connectors for people data](/graph/peopleconnectors).
 
 ## Microsoft 365 Copilot and connectors
 

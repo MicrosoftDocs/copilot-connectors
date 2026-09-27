@@ -1,7 +1,7 @@
 ---
 title: "Set up the GitHub service for GitHub Server Issues connector ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin
@@ -14,7 +14,7 @@ description: "Get the steps that the GitHub admin needs to complete for your org
 
 # Set up the GitHub service for GitHub Server Issues connector ingestion
 
-The GitHub Server Issues Microsoft 365 Copilot connector integrates GitHub issue data into Microsoft 365. 
+The GitHub Server Issues Microsoft 365 Copilot connector integrates GitHub issue data into Microsoft 365.
 
 This article provides information about the configuration steps that GitHub admins need to complete so your organization can deploy the [GitHub Server Issues connector](github-server-issues-overview.md). For information about how to deploy the connector, see [Deploy the GitHub Server Issues connector](github-server-issues-deployment.md).
 
@@ -135,8 +135,8 @@ Depending on the authentication method you plan to use, generate either a client
 
 ### Install the GitHub app
 
-1.  On the **General** page of the GitHub app, select **Install App**.  
-    
+1.  On the **General** page of the GitHub app, select **Install App**.
+
     :::image type="content" source="./media/github-cloud-issues-admin-setup/install-app.png" alt-text="Screenshot of GitHub with Install App highlighted":::
 
 2.  Select the organization where you want to install the app.

@@ -1,8 +1,8 @@
 ---
 ms.date: 05/26/2026
 title: "Deploy the Confluence Cloud connector in the Microsoft 365 Admin Center"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -132,7 +132,7 @@ The Confluence Cloud connector supports the following user search permissions:
 
 - Everyone
 - Only people with access to this data source (default)
- 
+
 If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, search results respect the same permission setup as the data source.
 
 If you choose **Only people with access to this data source**, you also need to choose whether your Confluence site has Microsoft Entra ID provisioned users or non-Entra ID users:

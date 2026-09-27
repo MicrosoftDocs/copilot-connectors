@@ -1,7 +1,7 @@
 ---
 title: "Veeva PromoMats connector overview"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin
@@ -14,7 +14,7 @@ description: "Learn about the capabilities, limitations, and use cases for the V
 
 # Veeva PromoMats connector overview
 
-The Veeva PromoMats Microsoft 365 Copilot connector enables organizations to index and surface approved promotional marketing materials and related compliant content from Veeva Vault PromoMats into the Microsoft 365 ecosystem. After the connector is configured, content stored in PromoMats is accessible in apps such as Microsoft Teams, Outlook, and SharePoint via Microsoft 365 Copilot and Microsoft Search experiences. This integration supports faster content creation, reuse, review, and distribution by making compliant marketing content, localization-ready assets, and regulatory-reviewed documents available directly within Microsoft 365 workflows. 
+The Veeva PromoMats Microsoft 365 Copilot connector enables organizations to index and surface approved promotional marketing materials and related compliant content from Veeva Vault PromoMats into the Microsoft 365 ecosystem. After the connector is configured, content stored in PromoMats is accessible in apps such as Microsoft Teams, Outlook, and SharePoint via Microsoft 365 Copilot and Microsoft Search experiences. This integration supports faster content creation, reuse, review, and distribution by making compliant marketing content, localization-ready assets, and regulatory-reviewed documents available directly within Microsoft 365 workflows.
 
 The connector integrates the Vault PromoMats built-in permission model to ensure that users only access authorized content. It supports content analysis and preparation to help maintain brand consistency and improve efficiency throughout the content lifecycle.
 
@@ -71,7 +71,7 @@ The Veeva PromoMats connector has the following limitations:
 - Each document can include up to 4 MB of parsed (extracted) text for ingestion and indexing. In most .docx, .pptx, and .pdf files, the extracted text represents roughly 10% of the original file size, which allows many documents of 30–40 MB to be fully indexed. For other file types, this ratio might differ. If the extracted text exceeds the 4 MB limit, only the first portion is indexed, which might result in partial coverage and incomplete answers in Copilot and Search.
 - The connector works when content is in PromoMats in the cloud (Vault) and might require more setup steps for customized or nonstandard vaults.
 - Updates to user or group permissions in PromoMats might not be reflected immediately in the index (depending on crawl cadence)—there might be a delay before new access restrictions are honored.
-- The indexing speed is constrained by the API rate limits imposed by the Veeva platform. If you have a high volume of documents, you might experience longer completion times. 
+- The indexing speed is constrained by the API rate limits imposed by the Veeva platform. If you have a high volume of documents, you might experience longer completion times.
 - Document fields set to be hidden on the Veeva platform aren't indexed.
 - Your Veeva Vault (PromoMats) instance must not hide the following fields. Hiding these fields blocks connector creation and crawling: `id`, `global_id__sys`, `document_number__v`, `filename__v`, `status__v`, `version_id`, `major_version_number__v`, `minor_version_number__v`, `size__v`.
 

@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Azure File Share connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin

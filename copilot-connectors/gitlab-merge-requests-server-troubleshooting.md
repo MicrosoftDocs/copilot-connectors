@@ -1,7 +1,7 @@
 ---
 title: "GitLab Merge Requests Server connector troubleshooting"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -33,5 +33,5 @@ The table lists common errors and troubleshooting steps.
 
 ## Related content
 
-- [GitLab Merge Requests Server connector overview](gitlab-merge-requests-server-overview.md)  
+- [GitLab Merge Requests Server connector overview](gitlab-merge-requests-server-overview.md)
 - [Deploy the GitLab Merge Requests Server connector](gitlab-merge-requests-server-deployment.md)

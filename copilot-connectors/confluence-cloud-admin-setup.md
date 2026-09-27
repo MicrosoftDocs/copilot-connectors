@@ -1,8 +1,8 @@
 ---
 ms.date: 11/20/2025
 title: "Set up the Confluence Cloud Service for Connector Ingestion"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -60,7 +60,7 @@ To identify the instance URL for Confluence Cloud:
 1. Sign in to your [Confluence](https://admin.atlassian.com) account.
 1. Choose **Product URLs**.
 1. Under **Default URLs**, locate your site name and product.
- 
+
 You can also view the URL in your browser when you're using Confluence Cloud.
 
 ### Review the Confluence spaces and pages configuration
@@ -143,7 +143,7 @@ If the Microsoft 365 admin isn't also a Confluence Cloud admin, the connection a
 
      > [!Note]
      > If pasting is disabled, type `allow pasting` in the console first, then paste the command again.
-   
+
 1. A success message appears in the connection creation screen, and the **Create** button becomes active.
 1. You can now close the pop-up window.
 

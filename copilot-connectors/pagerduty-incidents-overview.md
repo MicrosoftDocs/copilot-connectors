@@ -3,7 +3,7 @@ title: "PagerDuty Incidents connector overview"
 ms.author: wangchen
 author: wangchen
 manager: zezhangzhao
-ms.reviewer: lauragra
+ms.reviewer: jasonjoh
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article

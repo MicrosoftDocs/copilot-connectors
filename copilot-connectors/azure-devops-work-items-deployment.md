@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Azure DevOps Work Items connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: vivg
 audience: Admin
@@ -42,7 +42,7 @@ The display name is used to identify references in Copilot responses to help use
 
 Provide your Azure DevOps organization name. The Azure DevOps organization name is the segment after `https://dev.azure.com/`. For example:
 
-- URL: `https://dev.azure.com/contoso`  
+- URL: `https://dev.azure.com/contoso`
 - Organization: `contoso`
 
 Only the organization name is required—don't provide the full URL.
@@ -107,11 +107,11 @@ The connector can only index work items from an Azure DevOps organization that�
 1. In the app registration, select **API permissions**.
 2. Choose **Add a permission** > **Azure DevOps** > **Delegated permissions**.
 3. Add the following permissions (all under **vso**):
-   - **vso.analytics** – Analytics (read)  
-   - **vso.graph** – Graph (read)  
-   - **vso.identity** – Identity (read)  
-   - **vso.project** – Project and team (read)  
-   - **vso.variablegroups_read** – Variable Groups (read)  
+   - **vso.analytics** – Analytics (read)
+   - **vso.graph** – Graph (read)
+   - **vso.identity** – Identity (read)
+   - **vso.project** – Project and team (read)
+   - **vso.variablegroups_read** – Variable Groups (read)
    - **vso.work** – Work items (read)
 4. Select **Grant admin consent for \<TenantName\>** and confirm.
 5. Verify that all permissions show the status **Granted**.
@@ -167,7 +167,7 @@ You can customize the default settings for the Azure DevOps Work Items connector
 
 The Azure DevOps Work Items connector supports the following search permissions:
 
-- **Visible to everyone** 
+- **Visible to everyone**
 - **Only people with access to this data source**
 
 If you choose **Visible to everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it.
@@ -198,7 +198,7 @@ You can add or remove properties from your Azure DevOps data source, assign a sc
 | IconUrl | IconUrl | | Retrieve |
 | Id | | Work item ID | Query, Retrieve, Search |
 | Priority | | Priority of work item | Query, Retrieve |
-| ReproSteps | | Steps to reproduce a condition described in work item | | 
+| ReproSteps | | Steps to reproduce a condition described in work item | |
 | State | | Current state of the work item | Query, Retrieve, Search |
 | Tags | | | Query, Retrieve, Search |
 | TeamProject | | | Retrieve |

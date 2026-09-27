@@ -1,19 +1,19 @@
---- 
-title: "Stack Overflow connector" 
-ms.author: lauragra
-author: lauragra
+---
+title: "Stack Overflow connector"
+ms.author: jasonjoh
+author: jasonjoh
 manager: ereza
 audience: Admin
-ms.audience: Admin 
+ms.audience: Admin
 ms.topic: install-set-up-deploy
-ms.localizationpriority: medium 
-description: "Set up the Stack Overflow Microsoft 365 Copilot connector." 
+ms.localizationpriority: medium
+description: "Set up the Stack Overflow Microsoft 365 Copilot connector."
 ms.date: 04/15/2026
 ---
 
 # Stack Overflow connector
 
-The Stack Overflow Copilot connector allows your organization to index questions and answers from Stack Overflow. After you configure the connector, end users can search for these posts from Stack Overflow in Microsoft 365 Copilot and from any Microsoft Search client. 
+The Stack Overflow Copilot connector allows your organization to index questions and answers from Stack Overflow. After you configure the connector, end users can search for these posts from Stack Overflow in Microsoft 365 Copilot and from any Microsoft Search client.
 
 
 ## Capabilities
@@ -31,14 +31,14 @@ The Stack Overflow Copilot connector allows your organization to index questions
 ## Prerequisites
 - You must be an AI administrator for your organization's Microsoft 365 tenant.
 - To create a new connection, use your organization's Stack Overflow Instance URL.
-   - For Stack Internal **Enterprise**, the instance URL is the home page URL, typically `https://<company_name>.stackenterprise.co`. 
+   - For Stack Internal **Enterprise**, the instance URL is the home page URL, typically `https://<company_name>.stackenterprise.co`.
    - For Stack Internal **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
 - For Stack Internal **Enterprise**, when registering a new API application, set `office.com` as the approved domain (refer to the following image for a visual example).
 [![Screenshot that shows how set up an API application in Stack Overflow.](media/stackoverflow-connector/stack-overflow-app.png)](media/stackoverflow-connector/stack-overflow-app.png#lightbox)
-     
+
 ## Get Started
 
-### 1. Display name 
+### 1. Display name
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a content source filter. A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. Stack Overflow URL
@@ -48,7 +48,7 @@ Use your organization's Stack Overflow Instance URL. For Stack Internal **Enterp
 To authenticate and sync content from Stack Overflow, choose one of the two supported methods:<br>
    - If you use Stack Internal **Enterprise**, select OAuth. To learn more about authentication and authorization in Stack Internal **Enterprise**, see [Stack Internal Enterprise API v3 authentication and authorization](https://internal.stackoverflow.help/en/articles/8043418-stack-overflow-internal-api-v3#authentication-and-authorization).<br>
    - If you use Stack Internal **Business**, select Basic authentication. To learn more about authentication and authorization in Stack Internal **Business**, see [Stack Internal Business API v3 authentication and authorization](https://internal.stackoverflow.help/en/articles/7913768-stack-overflow-internal-api-v3#authentication-and-authorization).
- 
+
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout.md).
 
@@ -63,7 +63,7 @@ Custom setup is for admins who want to edit the default values for settings. Onc
 **Access Permissions**
 
 Currently, questions and answers from your organization’s Stack Overflow instance are indexed. All the data indexed using the Stack Overflow Copilot connector is visible to all Microsoft 365 users in your tenant, accessible through Microsoft Search or Copilot.
- 
+
 ### Content
 
 **Manage properties**
@@ -92,6 +92,6 @@ Title | Title | Post title | Query, Retrieve, Search
 The refresh interval determines how often your data is synced between the data source and the Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](deployment-overview.md#guidelines-for-crawl-settings).
 
 ## Troubleshooting
-After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). 
+After publishing your connection, you can review the status in the **Connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

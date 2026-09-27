@@ -2,8 +2,8 @@
 title: Federated connectors overview
 description: Learn how MCP-based Microsoft 365 Copilot federated connectors retrieve data and use write, update, and delete actions.
 #customer intent: As an admin, I want to learn about federated connectors, including read and write capabilities, and how to manage them in the Microsoft 365 admin center.
-author: danipocket
-ms.author: danielabo
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.reviewer: mansipakhale
 ms.date: 09/25/2026

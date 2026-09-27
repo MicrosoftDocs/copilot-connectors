@@ -1,8 +1,8 @@
 ---
 title: Self-serve sync connectors overview
 description: Get an overview of Self-serve sync Microsoft 365 Copilot connectors.
-author: danipocket
-ms.author: danielabo
+author: jasonjoh
+ms.author: jasonjoh
 manager: calvind
 ms.reviewer: vivg
 ms.date: 06/22/2026

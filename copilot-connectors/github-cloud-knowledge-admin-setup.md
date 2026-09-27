@@ -1,8 +1,8 @@
 ---
 title: Set up the GitHub service for GitHub Cloud Knowledge connector ingestion
 description: "Get the steps that the GitHub admin needs to complete to configure the service for your organization so you can deploy the GitHub Cloud Knowledge Microsoft 365 Copilot connector."
-author: Lauragra
-ms.author: lauragra
+author: jasonjoh
+ms.author: jasonjoh
 ms.reviewer: sasidharkasi
 manager: calvind
 ms.date: 06/18/2026
@@ -103,12 +103,12 @@ To create a GitHub app for use with the GitHub Cloud Knowledge connector:
     - Metadata - **Read-only**
     - Administration - **Read-only**
     - Webhooks - **Read and Write**
-    
+
     **Organization permissions**
     - Members - **Read-only**
     - Administration - **Read-only**
     - Webhooks - **Read and Write**
-    
+
     **Account permissions**
     - Email addresses - **Read-only**
 
@@ -133,7 +133,7 @@ Depending on the authentication method you plan to use, generate either a client
 
 ### Install the GitHub app
 
-1. On the **General** page of the GitHub app, select **Install App**. 
+1. On the **General** page of the GitHub app, select **Install App**.
 
     :::image type="content" source="./media/github-cloud-knowledge-admin-setup/install-app.png" alt-text="Screenshot of GitHub App General page with Install App button.":::
 

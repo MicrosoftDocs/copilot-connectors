@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Guru connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin
@@ -14,7 +14,7 @@ description: "Find information about how to deploy the Guru Copilot connector in
 
 # Deploy the Guru connector
 
-The Guru Microsoft 365 Copilot connector integrates Guru content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant Guru Cards directly within apps like Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the Guru connector. 
+The Guru Microsoft 365 Copilot connector integrates Guru content into Microsoft 365, enabling Copilot, Copilot Search, and Microsoft Search to surface relevant Guru Cards directly within apps like Teams, Outlook, and SharePoint. This article describes the steps to deploy and customize the Guru connector.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ To add the Guru connector for your organization:
 
 ### Set display name
 
-The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter. You can accept the default **Guru** display name or customize the value to use a display name that users in your organization recognize. 
+The display name is used to identify references in Copilot responses to help users recognize the associated file or item. The display name also signifies trusted content and is used as a content source filter. You can accept the default **Guru** display name or customize the value to use a display name that users in your organization recognize.
 
 For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
@@ -94,7 +94,7 @@ You can customize what data is included and excluded and customize the default c
 
 #### Content ingestion filters
 
-You can choose what data you want to index. Use the Guru Query Language (GQL) to filter your data before it's indexed, allowing you to control what data is searchable. For example, you might use the GQL filter to index content modified after a certain time by using `lastModified > 2016-01-01T00:00:00.000-00:00`. 
+You can choose what data you want to index. Use the Guru Query Language (GQL) to filter your data before it's indexed, allowing you to control what data is searchable. For example, you might use the GQL filter to index content modified after a certain time by using `lastModified > 2016-01-01T00:00:00.000-00:00`.
 
 For more information, see [Guru Query Language](https://developer.getguru.com/docs/guru-query-language).
 
@@ -124,7 +124,8 @@ You can check the available properties from your Guru instance. Assign a schema 
 
 ### Customize sync intervals
 
-The refresh interval determines how often your data synchronizes between the data source and the Guru connector index. Copilot connectors use two types of refresh intervals:
+The refresh interval determines how often your data synchronizes between the data source and the Guru connector index. Copilot connectors use two types of refresh intervals:
+
 
 - **Full crawl**: The default is every day.
 - **Incremental crawl**: The default is every 15 minutes.

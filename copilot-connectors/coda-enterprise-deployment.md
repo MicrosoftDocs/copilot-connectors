@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Coda Enterprise connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: irenehuang
 audience: Admin
@@ -146,7 +146,7 @@ You can view and modify the available Coda properties. You can assign schema att
 
 The refresh interval determines how often your data is synced between the data source and the Coda Enterprise connector index. You can configure the following sync intervals:
 
-- **Full crawl** - The default value is every day. 
+- **Full crawl** - The default value is every day.
 - **Incremental crawl** - The default value is every 15 minutes.
 
 For more information, see [Guidelines for crawl settings](/microsoft-365/copilot/connectors/deployment-overview#guidelines-for-crawl-settings).

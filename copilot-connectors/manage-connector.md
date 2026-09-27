@@ -1,7 +1,7 @@
 ---
 title: "Manage connectors"
-ms.author: danielabo
-author: danielabom
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 audience: Admin
 ms.audience: Admin
@@ -15,7 +15,7 @@ ms.date: 03/19/2026
 
 Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. This article describes how to manage your connections after you [deploy them in the admin center](deployment-overview.md).
 
-To access and manage your Microsoft 365 Copilot connectors, you must be an AI administrator for your organization. 
+To access and manage your Microsoft 365 Copilot connectors, you must be an AI administrator for your organization.
 
 ## Supported connection operations
 
@@ -37,9 +37,9 @@ You can view the connection state for your deployed connectors on the **Your Con
 - Syncing - The connector crawls the data from the source to index the existing items and make any updates.
 - Ready - The connection is ready, and there's no active crawl running against it. **Last sync time** indicates when the last successful crawl happened. The connection is as fresh as the last sync time.
 - Paused - The crawls are paused by the admin via the **Pause** button on the connector page. The next crawl runs  when it's manually resumed. However, the data from this connection continues to be searchable.
-- Failed - The connection had a critical failure. This error requires manual intervention. The admin needs to take appropriate action based on the error message shown. Data that was indexed until the error occurred is searchable. 
+- Failed - The connection had a critical failure. This error requires manual intervention. The admin needs to take appropriate action based on the error message shown. Data that was indexed until the error occurred is searchable.
 - Delete failed - The deletion of the connection failed. Based on the failure reason, the data might still be indexed, item quota might still be consumed, and crawls might still run for the connection. We recommend that you try deleting the connection again when this state occurs.
-  
+
 ## Manage visibility of partner data sources in Copilot
 
 Admins can control the visibility of partner connectors in Copilot and Copilot Search via a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it can still crawl the data source, but the data isn't used for search results.
@@ -97,7 +97,7 @@ Admins can select the notification to view the notification details.
 
 :::image type="content" alt-text="Screenshot that shows sample notification" source="media/manage-connector/sample-notification.png" lightbox="media/manage-connector/sample-notification.png":::
 
-The notification remains active in the service health dashboard for six days. After this period, it's automatically moved to **Issue history** where it's retained for up to 30 days. If the connection resumes crawling, the notification is also moved to the **Issue history**. 
+The notification remains active in the service health dashboard for six days. After this period, it's automatically moved to **Issue history** where it's retained for up to 30 days. If the connection resumes crawling, the notification is also moved to the **Issue history**.
 No new notification is issued for the same connection until crawling restarts. If the crawls restart and fail again, a new notification is generated. For multiple connections with crawl failures, each connection has a separate notification bar on both the admin center home page and the service health dashboard landing page.
 
 ### Email notifications subscription

@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Egnyte connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: anggao
 audience: Admin
@@ -16,7 +16,7 @@ description: "Find information about how to deploy the Egnyte Microsoft 365 Copi
 
 The Egnyte Microsoft 365 Copilot connector enables your organization to index files stored in Egnyte so users can retrieve them through Microsoft 365 Copilot and Microsoft Search. This article describes the steps to deploy and customize the Egnyte Microsoft 365 Copilot connector.
 
-For advanced Egnyte configuration information, see  
+For advanced Egnyte configuration information, see
 [Set up the Egnyte service for connector ingestion](egnyte-admin-setup.md).
 
 ## Prerequisites
@@ -39,7 +39,7 @@ To add the Egnyte connector for your organization:
 
 ### Set display name
 
-The display name appears in Copilot responses and helps users recognize content coming from Egnyte.  
+The display name appears in Copilot responses and helps users recognize content coming from Egnyte.
 You can accept the default **Egnyte** display name or customize it to something more recognizable for your organization.
 
 For more information about display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
@@ -90,7 +90,7 @@ You can customize user, content, or sync settings for the Egnyte connector.
 
 Choose how Egnyte data should appear in Microsoft 365:
 
-- **Only people with access to this data source** (recommended)  
+- **Only people with access to this data source** (recommended)
 - **Everyone**
 
 If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, you need to choose whether your users are Microsoft Entra ID provisioned users or non-Microsoft Entra ID users. For more information, see [Mapping identities](#mapping-identities).

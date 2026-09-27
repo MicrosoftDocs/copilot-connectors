@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Adobe Experience Manager Assets connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: rantang
 audience: Admin
@@ -82,7 +82,7 @@ The connector maps Adobe Experience Cloud user accounts to Microsoft 365 (Micros
 
 ### Customize content settings 
 
-#### Content ingestion filters  
+#### Content ingestion filters 
 
 Content ingestion filters allow you to control which assets are indexed by defining inclusion and exclusion rules based on paths and metadata properties.
 
@@ -106,25 +106,25 @@ To find and verify the property path, see [Query builder API](https://experience
 2. Input the following query.
 
     ```plaintext
-    p.limit=10  
-    p.guessTotal=true  
-    p.hits=full  
-    type=dam:Asset  
-    p.nodedepth=2  
-    property=jcr:content/cq:lastReplicationAction  
+    p.limit=10
+    p.guessTotal=true
+    p.hits=full
+    type=dam:Asset
+    p.nodedepth=2
+    property=jcr:content/cq:lastReplicationAction
     property.value=Activate
     ```
 
 3. Choose **search**.
 4. After the results are returned, choose **JSON query builder link** to see the JSON content with all properties.
 
-    :::image type="content" source="media/aem-assets-deployment/aem-assets-query-builder-debugger.png" alt-text="Screenshot that shows the Adobe Experience Manager Assets Query Builder Debugger." lightbox="media/aem-assets-deployment/aem-assets-query-builder-debugger.png"::: 
+    :::image type="content" source="media/aem-assets-deployment/aem-assets-query-builder-debugger.png" alt-text="Screenshot that shows the Adobe Experience Manager Assets Query Builder Debugger." lightbox="media/aem-assets-deployment/aem-assets-query-builder-debugger.png":::
 
 5. Find the property and JSON path of the property. For example, the JSON path of the property `dc:format` is `hits.jcr:content.metadata.dc:format`.
 
     :::image type="content" source="media/aem-assets-deployment/aem-assets-jcrpath-sample.png" alt-text="Screenshot of a JCR path with some properties highlighted." lightbox="media/aem-assets-deployment/aem-assets-jcrpath-sample.png":::
 
-**Operators**  
+**Operators**
 The operator defines the type of comparison applied to a property during content filtering. The supported operators are:
 
 - `=`: Equals
@@ -132,7 +132,7 @@ The operator defines the type of comparison applied to a property during content
 - `In`: Matches any value in a list
 - `Not In`: Excludes any value in a list
 
-**Target values**  
+**Target values**
 Target values specify what the property should match.
 
 | **Source property** | **Semantic label** | **Description** |
@@ -147,7 +147,7 @@ Target values specify what the property should match.
 | PublishedTime | None | Date and time the item was published in the data source |
 | title | None | The title of the items |
 | Width | None | Width |
-| Tags | None | Tags defined in Adobe Experience Manager Assets metadata. In Adobe Experience Manager, tags are organized hierarchically. |    
+| Tags | None | Tags defined in Adobe Experience Manager Assets metadata. In Adobe Experience Manager, tags are organized hierarchically. |
 
 
 #### Manage properties
@@ -179,7 +179,7 @@ To check available standard properties from your Adobe Experience Manager Assets
 To add more custom properties:
 
 1.	Select **Add property**.
-2.	Fill in the following fields: 
+2.	Fill in the following fields:
     a.	Property name
     b.	Type
     c.	JSON path
@@ -189,7 +189,8 @@ To add more custom properties:
 
 ### Customize sync intervals 
 
-The refresh interval determines how often your data synchronizes between the data source and the Adobe Experience Manager Assets connector index. Copilot connectors use two types of refresh intervals: 
+The refresh interval determines how often your data synchronizes between the data source and the Adobe Experience Manager Assets connector index. Copilot connectors use two types of refresh intervals: 
+
 
 - Full crawl: The default value is every day.
 - Incremental crawl: The default value is every 15 minutes.

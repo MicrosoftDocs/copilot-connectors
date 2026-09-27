@@ -1,9 +1,9 @@
 ---
 title: "Deploy the Tableau Cloud connector"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
-ms.reviewer: lauragra
+ms.reviewer: jasonjoh
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
@@ -25,7 +25,7 @@ Before you deploy the connector, make sure that you meet the following prerequis
 - You must have Tableau Cloud site admin access.
 - Your Tableau Cloud environment must be configured with a connected app that uses direct trust.
 - You must have the required Tableau connected app values: client ID, app secret ID, and secret key.
-  
+
 ### Considerations for Tableau Bridge and on-premises databases
 
 If you use Tableau Bridge for live connections to local databases, evaluate your infrastructure capacity before you proceed. The connector’s periodic full crawls can generate a high volume of concurrent queries, which might overload the CPU and memory resources of your on-premises database. To mitigate this risk:

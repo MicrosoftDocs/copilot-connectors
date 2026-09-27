@@ -1,7 +1,7 @@
 ---
 title: "Egnyte connector troubleshooting"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: anggao
 audience: Admin
@@ -16,7 +16,7 @@ description: "Find troubleshooting information for the Egnyte Microsoft 365 Copi
 
 The Egnyte Microsoft 365 Copilot connector integrates your Egnyte content into Microsoft 365 so that Copilot and Microsoft Search can surface files and insights directly within experiences such as Teams, Outlook, and SharePoint. This article provides troubleshooting guidance for common issues you might encounter when you deploy or use the Egnyte connector.
 
-To verify Egnyte configuration settings during troubleshooting, see  
+To verify Egnyte configuration settings during troubleshooting, see
 [Set up the Egnyte service for Egnyte connector ingestion](egnyte-admin-setup.md).
 
 ## Egnyte connector troubleshooting
@@ -34,5 +34,5 @@ The following table lists common errors and recommended troubleshooting steps.
 
 ## Related content
 
-- [Egnyte connector overview](egnyte-overview.md)  
+- [Egnyte connector overview](egnyte-overview.md)
 - [Deploy the Egnyte connector](egnyte-deployment.md)

@@ -1,7 +1,7 @@
 ---
 title: "Set up the Veeva Vault service for Veeva On-Premises Microsoft 365 Copilot connector ingestion"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin

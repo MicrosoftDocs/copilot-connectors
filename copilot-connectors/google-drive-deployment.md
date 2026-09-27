@@ -2,8 +2,8 @@
 title: Deploy the Google Drive connector
 description: Learn how to deploy and configure the Google Drive Microsoft 365 Copilot connector in the Microsoft 365 admin center.
 ms.topic: how-to
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.date: 11/18/2025
 ---
@@ -16,7 +16,7 @@ For service configuration information, see [Set up the Google Workspace service 
 
 ## Prerequisites
 
-Before you deploy the Google Drive connector, make sure that the Google Workspace environment is configured in your organization. The following table summarizes the steps to configure the environment and deploy the connector. 
+Before you deploy the Google Drive connector, make sure that the Google Workspace environment is configured in your organization. The following table summarizes the steps to configure the environment and deploy the connector.
 
 | Task | Role |
 | ---- | ---- |
@@ -63,7 +63,7 @@ Enter the email address of a Google Workspace administrator account, in the form
 
 Paste the entire contents of the JSON key file you generated when you created the Google Cloud service account. For information about how to generate the service account key, see [Create a Google Cloud project](/microsoft-365/copilot/connectors/google-drive-admin-setup#create-a-google-cloud-project).
 
-### Roll out 
+### Roll out
 
 Deploy the connector to a limited audience if you want to validate it in Copilot and other search surfaces before you deploy it to your organization. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](/microsoft-365/copilot/connectors/staged-rollout).
 
@@ -110,19 +110,19 @@ If you choose **Everyone**, indexed data appears in the search results for all
 Use exclusion and inclusion rules to control what data Microsoft crawls from Google Drive. Exclusion rules allow Microsoft to crawl all content except the specified items, while inclusion rules limit crawling to only the specified items. If both rules are applied to the same content, that content isn't indexed because exclusion rules take priority.
 
 
-#### Supported exclusion rules 
+#### Supported exclusion rules
 
 |	Exclusion type	|	Description	|
 |	---	|	---	|
-|	Shared Drive ID	|	Exclude content from being crawled by specifying shared drive IDs.	|	
+|	Shared Drive ID	|	Exclude content from being crawled by specifying shared drive IDs.	|
 |	Google Group	|	Files from group members’ personal drives and shared drives accessible to all group members are excluded from crawling.	|
 |	Folder ID	|	Files within the specified folders (by folder ID) are excluded from crawling.	|
 
 
-#### Supported inclusion rules 
+#### Supported inclusion rules
 |	Inclusion type	|	Description	|
 |	---	|	---	|
-|	Crawl shared drives only	|	Toggle on to crawl files from shared drives only.	|	
+|	Crawl shared drives only	|	Toggle on to crawl files from shared drives only.	|
 |	Google group	|	Only files from group members’ personal drives and shared drives accessible to all group members are crawled.	|
 |	Shared Drive ID	|	Only allow Microsoft to crawl certain shared drives and underlying folders. No private drives are crawled unless a Google Group is specified in the inclusion rules.	|
 |	Date range	|	Only files last modified within the selected time range are crawled. If the end date is left blank, Microsoft crawls the files created/modified after the start date. If the start date is left blank, Microsoft crawls the files created from the earliest time.	|

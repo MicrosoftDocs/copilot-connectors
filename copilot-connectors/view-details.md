@@ -1,8 +1,8 @@
 ---
 ms.date: 02/10/2026
 title: "View connection details"
-ms.author: danielabo
-author: danielabom
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.topic: article
 ms.localizationpriority: medium
@@ -12,25 +12,25 @@ description: "Access and manage your Microsoft 365 Copilot connectors as an AI a
 
 # View connection details
 
-To access and manage your Microsoft 365 Copilot connectors, you must be an AI administrator for your tenant. 
+To access and manage your Microsoft 365 Copilot connectors, you must be an AI administrator for your tenant.
 
 To see your connections in the [Microsoft 365 admin center](https://admin.microsoft.com), go to the [Your Connections tab](https://admin.microsoft.com/#/copilot/connectors).
 
-Select a connection to view the connection details and errors.  
+Select a connection to view the connection details and errors.
 
 :::image type="content" source="media/view-details/data-sources-tab-1.png" alt-text="Screenshot that shows the connectors list with a connector selected and details pane showing information about this connector." lightbox="media/view-details/data-sources-tab-1.png":::
 
-## View connection statistics 
+## View connection statistics
 
 Connection statistics help you get overall information about what is happening to the data after the first full crawl is completed successfully.
 
-This section includes the data about the total number of items discovered, successfully indexed, or failed across all crawls. The data updates after every crawl and provides a cumulative perspective on the sync between the data source and the Microsoft 365 Copilot connector index. With this information, you can identify discrepancies and ensure that the connection is up to date. 
+This section includes the data about the total number of items discovered, successfully indexed, or failed across all crawls. The data updates after every crawl and provides a cumulative perspective on the sync between the data source and the Microsoft 365 Copilot connector index. With this information, you can identify discrepancies and ensure that the connection is up to date.
 
-The sync between the data source and the index is cumulative and not just the last crawl. 
+The sync between the data source and the index is cumulative and not just the last crawl.
 
 An item is indexed with the following information - content, properties (default + custom), and access.
-- An item as fully indexed when all three parts of the item - content, properties (default + custom), and access - are indexed successfully. 
-- An item is partially indexed when some of the data is indexed, but a part is missing. The item is still searchable with the remaining properties, but all properties might not be indexed. 
+- An item as fully indexed when all three parts of the item - content, properties (default + custom), and access - are indexed successfully.
+- An item is partially indexed when some of the data is indexed, but a part is missing. The item is still searchable with the remaining properties, but all properties might not be indexed.
 
 The following table explains the data in the connection statistics.
 
@@ -49,15 +49,15 @@ During the initial setup, the index status displays real-time progress, includin
 
 The following values are available in the index for each connection.
 
-|Value|Description| 
+|Value|Description|
 |:--- |:---|
 | Updated at| Date and time when the data was last updated.|
-| Items| Number of items that have been successfully ingested.| 
+| Items| Number of items that have been successfully ingested.|
 | Users| Number of users successfully mapped.|
-| Groups| Number of groups interpreted from the datasource.|  
-| Group memberships| Number of users to group mapping instances.|  
-| Item Errors| Number of items that produced an error and failed to ingest.| 
-| User & group Errors| Number of user and group mapping failures.| 
+| Groups| Number of groups interpreted from the datasource.|
+| Group memberships| Number of users to group mapping instances.|
+| Item Errors| Number of items that produced an error and failed to ingest.|
+| User & group Errors| Number of user and group mapping failures.|
 
 ## Related content
 

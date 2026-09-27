@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Smartsheet Sheet connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: neocheng
 audience: Admin

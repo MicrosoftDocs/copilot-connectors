@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the GitHub Server Knowledge connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin

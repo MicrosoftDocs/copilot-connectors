@@ -1,6 +1,6 @@
 ---
 title: "Deploy the Amazon S3 connector"
-author: lauragra
+author: jasonjoh
 ms.author: kailiang
 manager: zezhangzhao
 audience: Admin
@@ -42,7 +42,7 @@ You can accept the default **Amazon S3** display name, or customize the value to
 For more information about connector display names and descriptions, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
 ### Choose authentication type
-                                                
+
 The Amazon S3 connector supports the following authentication type:
 
 - **Amazon Signature V4**
@@ -92,7 +92,7 @@ The Amazon S3 connector only supports the **Everyone** user access permission. A
 ### Customize content settings
 
 #### Preview data
-Choose **Preview data** to verify the data retrieved by the connection. 
+Choose **Preview data** to verify the data retrieved by the connection.
 
 #### Content filter
 The connector provides a content filter to scope what content gets indexed. In the **Bucket name** field, select the specific buckets to include.

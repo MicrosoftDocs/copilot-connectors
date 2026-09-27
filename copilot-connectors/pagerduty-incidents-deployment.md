@@ -3,7 +3,7 @@ title: "Deploy the PagerDuty Incidents connector"
 ms.author: wangchen
 author: wangchen
 manager: zezhangzhao
-ms.reviewer: lauragra
+ms.reviewer: jasonjoh
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
@@ -104,7 +104,7 @@ The PagerDuty Incidents connector supports the following user search permissions
 
 - Only people with access to this data source (default)
 - Everyone
- 
+
 If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, search results respect the same permissions that are set for the data source.
 
 If you choose **Only people with access to this data source**, you also need to choose whether your PagerDuty instance has Microsoft Entra ID-provisioned users or non-Entra ID users:

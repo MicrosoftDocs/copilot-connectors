@@ -1,8 +1,8 @@
 ---
 title: "Confluence On-premises connector troubleshooting"
 description: "Find troubleshooting information for the Confluence On-premises Microsoft 365 Copilot connector."
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: harshkum
 audience: Admin
 ms.audience: Admin
@@ -27,7 +27,7 @@ The following table lists common errors that can occur with the Confluence On-pr
 | :---- | :---------- | :--------- |
 | **OAuth failed due to `Invalid connection credentials`** | Occurs when the Microsoft 365 admin isn't the Confluence admin. | Use InPrivate browsing. Share the OAuth popup link with the Confluence admin for approval. After approval, paste `window.opener.postMessage({type: 'oauthFinish', isSuccess: true}, '*')` in the console.|
 | **Plugin not installed or disabled** | The required Confluence On-prem plugin is missing or disabled. | Go to **Administration** > **Manage apps**. If the plugin isn't installed, download it from the [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1234846?tab=overview&hosting=datacenter). If it's disabled, enable it. |
-| **Mobile Web Plugin missing** | The Confluence Mobile Web Plugin is required for indexing. | Verify that the plugin is installed and enabled under **System apps**. If it's missing, download it from the [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1218250/mobile-plugin-for-confluence-data-center?hosting=server&tab=overview). 
+| **Mobile Web Plugin missing** | The Confluence Mobile Web Plugin is required for indexing. | Verify that the plugin is installed and enabled under **System apps**. If it's missing, download it from the [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1218250/mobile-plugin-for-confluence-data-center?hosting=server&tab=overview).
 | **Indexing issues** | Users can't access indexed content due to identity mismatch. | Make sure that email IDs in Confluence match UPNs in Microsoft Entra ID. For non-Microsoft Entra ID users, configure regex mapping. |
 | **No content indexed** | Connector shows zero indexed items. | Check space and page permissions. Validate that the service account has read access. Confirm that spaces aren't archived. |
 | **Incremental crawl not syncing permission updates** | Changes to permissions aren't reflected in search results. | Use full crawl to sync permission updates. Incremental crawl doesn't support permission changes. |
@@ -40,7 +40,7 @@ The following table lists common errors that can occur with the Confluence On-pr
 If a user can't find Confluence Data Center pages in Microsoft 365 Copilot or Microsoft Search and the account should have access, use the following steps to troubleshoot.
 
 #### Confirm that the user has permission to the Confluence Data Center page
-   
+
 - Make sure that the user has view permissions for the specific Confluence Data Center page. For more information, see [Check who can view a page](https://confluence.atlassian.com/doc/check-who-can-view-a-page-992678937.html).
 - Validate that the page, space, and any parent pages grant the appropriate access.
 
@@ -50,8 +50,8 @@ Incorrect user identity mapping prevents Copilot and Search from resolving permi
 - Review the mapping configuration based on your environment. For more information, see [Map non-Entra ID identities](/microsoft-365/copilot/connectors/map-non-entra-id) and [Map Microsoft Entra identities](/microsoft-365/copilot/connectors/map-entra-id).
 - Check the user mapping formula and update as needed. On the **Error** tab for the connector, mapping problems typically appear as a `2006 error`.
 
-:::image type="content" source="media/confluence-onprem/user-mapping.png" alt-text="Screenshot of the Error list for the Confluence On-premises connector with the 2006 error highlighted." lightbox="media/confluence-onprem/user-mapping.png"::: 
-  
+:::image type="content" source="media/confluence-onprem/user-mapping.png" alt-text="Screenshot of the Error list for the Confluence On-premises connector with the 2006 error highlighted." lightbox="media/confluence-onprem/user-mapping.png":::
+
 #### Check for invalid characters in Confluence user or group names
 
 Confluence Data Center has a known limitation for user and group names. When a user or group name contains a slash `/` or backslash `\\` character, the Confluence Data Center fails when managing permissions with an "An unexpected error has occurred" error message. Atlassian has documented this behavior for Bamboo; the same limitation applies to Confluence Data Center environments. For more information, see [If there is a slash character in the group or username in Bamboo, permission assignment fails](https://confluence.atlassian.com/bamkb/if-there-is-a-slash-or-character-in-the-group-or-username-in-bamboo-permission-assignment-fails-1116295484.html).

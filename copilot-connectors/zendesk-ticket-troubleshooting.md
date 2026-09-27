@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues with the Zendesk Ticket connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: anggao
 audience: Admin

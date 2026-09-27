@@ -1,7 +1,7 @@
 ---
 title: "Connectors gallery"
-ms.author: danielabo
-author: danielabom
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.audience: Admin
 ms.topic: landing-page
@@ -12,9 +12,9 @@ ms.date: 03/12/2026
 
 # Connectors gallery
 
-Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using synced connectors or connect to data in real time by using federated connectors. 
+Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using synced connectors or connect to data in real time by using federated connectors.
 
-Developers can use the [Connectors API](/graph/connecting-external-content-connectors-api-overview) to create custom connectors. In addition, Microsoft and partner organizations provide more than 100 prebuilt connectors that connect to popular Microsoft and non-Microsoft services, including Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more. 
+Developers can use the [Connectors API](/graph/connecting-external-content-connectors-api-overview) to create custom connectors. In addition, Microsoft and partner organizations provide more than 100 prebuilt connectors that connect to popular Microsoft and non-Microsoft services, including Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more.
 
 ## Browse connectors by publisher
 

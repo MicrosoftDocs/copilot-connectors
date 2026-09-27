@@ -1,7 +1,7 @@
 ---
 title: "Deploy the GitLab Issues Cloud connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: raynezou
 audience: Admin
@@ -42,7 +42,7 @@ To add the GitLab Issues Cloud connector for your organization:
 
 ### Set display name
 
-The display name identifies references in Copilot responses and helps users recognize the associated content source. You can accept the default **GitLab Issues Cloud** display name, or customize it to meet the needs of your organization.  
+The display name identifies references in Copilot responses and helps users recognize the associated content source. You can accept the default **GitLab Issues Cloud** display name, or customize it to meet the needs of your organization.
 
 For more information, see [Enhance Copilot discovery of connector content](/microsoft-365/copilot/connectors/enhance-copilot-discovery).
 
@@ -98,11 +98,11 @@ Choose whether indexed data is visible to:
 
 To ensure permissions are applied correctly, map GitLab user identities to Microsoft Entra ID using:
 
-- **Email:** Maps GitLab email to Microsoft Entra ID user properties. 
-- **Login:** Maps GitLab logins with Microsoft Entra ID user properties. 
-- **Name:** Maps GitLab name with Microsoft Entra ID user properties. 
+- **Email:** Maps GitLab email to Microsoft Entra ID user properties.
+- **Login:** Maps GitLab logins with Microsoft Entra ID user properties.
+- **Name:** Maps GitLab name with Microsoft Entra ID user properties.
 
-If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md). 
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: `[a-zA-Z0-9]+`. For more information, see [Map Microsoft Entra identities](map-entra-id.md).
 
 ### Customize content settings
 

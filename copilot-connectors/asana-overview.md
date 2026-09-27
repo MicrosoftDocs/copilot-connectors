@@ -1,6 +1,6 @@
 ---
 title: "Asana connector overview"
-ms.author: lauragra
+ms.author: jasonjoh
 author: Kai-Cloud
 manager: zezhangzhao
 audience: Admin

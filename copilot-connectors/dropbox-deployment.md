@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Dropbox connector"
-ms.author: lauragra
-author: lauragra
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: ang.gao
 audience: Admin
@@ -88,7 +88,7 @@ If Dropbox email IDs match Microsoft Entra ID user principal names (UPNs), selec
 
 ### Customize content settings
 
-#### Content filter 
+#### Content filter
 
 You can specify what content is crawled:
 

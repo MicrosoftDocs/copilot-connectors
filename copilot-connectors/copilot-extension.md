@@ -1,7 +1,7 @@
 ---
 title: Copilot extension for connectors
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.topic: article
 ms.audience: Admin

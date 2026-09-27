@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Veeva On-Premises Microsoft 365 Copilot connector"
-ms.author: danielabo
-author: danipocket
+ms.author: jasonjoh
+author: jasonjoh
 manager: calvind
 ms.reviewer: dannyyao
 audience: Admin

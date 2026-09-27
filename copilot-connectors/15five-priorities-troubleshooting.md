@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot issues with the 15Five Priorities connector"
-ms.author: lauragra
+ms.author: jasonjoh
 author: wangchen
 manager: zezhangzhao
 ms.reviewer: wangchen
