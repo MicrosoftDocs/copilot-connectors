@@ -106,9 +106,6 @@ The following image shows the connector pane for the HubSpot federated connector
 
 ### View a connector's tools in the admin center (Coming soon)
 
-> [!NOTE]
-> Viewing tools in the admin center isn't available for all connectors. If you encounter issues, sign in to Microsoft 365 Copilot with your user account, go to **Settings** > **Sources**, and select the connector. Then [expand **Write/Delete tools** to review individual tools and their approval settings](#review-individual-tool-permissions).
-
 For connectors that support this feature, the details page in the Microsoft 365 admin center includes a **Tools** section that lists the tools available to users in the organization, including tools that can modify or delete data. To view the tools:
 
 1. In the Microsoft 365 admin center, go to **Copilot connectors** > **Your connections** and select the federated connector.
@@ -127,6 +124,8 @@ For connectors that support this feature, the details page in the Microsoft 365 
 
 > [!NOTE]
 > The tool list reflects the permissions of the account used to sign in. Sign in by using an account that has a high level of access to the connector so you see the comprehensive list of tools.
+>
+> Viewing tools in the admin center isn't available for all connectors. If you encounter issues, sign in to Microsoft 365 Copilot with your user account, go to **Settings** &gt; **Sources**, and select the connector. Then expand **Write/Delete tools**. For details, see [Review individual tool permissions](#review-individual-tool-permissions).
 
 Before enabling or continuing to use a connector that exposes write, update, or delete tools, review the connector's capabilities, privacy terms, and third-party agreements against your organization's security, compliance, and acceptable-use requirements. Update user and help-desk guidance so users understand that actions are performed using their own permissions in the third-party service.
 
