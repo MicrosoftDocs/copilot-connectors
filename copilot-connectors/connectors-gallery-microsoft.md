@@ -7,7 +7,7 @@ ms.audience: Admin
 ms.topic: landing-page
 ms.localizationpriority: medium
 description: "Find a list of Microsoft 365 Copilot connectors built and supported by Microsoft, organized by categories, including a description and link to each connector website."
-ms.date: 09/15/2026
+ms.date: 09/30/2026
 ---
 # Microsoft-built connectors gallery
 
@@ -25,26 +25,32 @@ The following table lists the accounting and finance connectors that are availab
 
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
-| Aiwyn Tax (preview) | Microsoft | Calculate taxes and look up tax jurisdictions and rates. | [Federated connectors overview](federated-connectors-overview.md) |
-| CB Insights (preview) | Microsoft | Track private-company funding, M&A activity, competitors, and market maps. | [Federated connectors overview](federated-connectors-overview.md) |
-| Clarity AI (preview) | Microsoft | Assess fund sustainability, ESG scores, and SFDR compliance. | [Federated connectors overview](federated-connectors-overview.md) |
-| DiligenceSquared (preview) | Microsoft | Search and read your transcripts, Expert Q&A, and reports. | [Federated connectors overview](federated-connectors-overview.md) |
-| FactSet (preview) | Microsoft | Get company fundamentals, estimates, ownership, and market data. | [Federated connectors overview](federated-connectors-overview.md) |
-| FinancialReports (preview) | Microsoft | Search company filings across global markets. | [Federated connectors overview](federated-connectors-overview.md) |
-| Fiscal.ai (preview) | Microsoft | Pull stock financials, valuation multiples, and earnings estimates. | [Federated connectors overview](federated-connectors-overview.md) |
-| Klardaten DATEV-Connector (preview) | Microsoft | Access DATEV data through Klardaten in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| LSEG (preview) | Microsoft | Get real-time market data, fundamentals, estimates, and pricing. | [Federated connectors overview](federated-connectors-overview.md) |
-| Mercury (preview) | Microsoft | Check balances, transactions, and statements in your bank account. | [Federated connectors overview](federated-connectors-overview.md) |
-| Money Forward (preview) | Microsoft | Access Money Forward data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Moody's (preview) | Microsoft | Get credit ratings, rating actions, outlooks, and risk research. | [Federated connectors overview](federated-connectors-overview.md) |
-| Morningstar (preview) | Microsoft | Look up fund and ETF ratings, stock research, and market data. | [Federated connectors overview](federated-connectors-overview.md) |
-| MT Newswires (preview) | Microsoft | Read real-time global financial news from original sources. | [Federated connectors overview](federated-connectors-overview.md) |
-| PrivCo (preview) | Microsoft | Look up private-company profiles, financials, funding rounds, and M&A deals. | [Federated connectors overview](federated-connectors-overview.md) |
-| Quartr (preview) | Microsoft | Research earnings calls, transcripts, SEC filings, and investor presentations. | [Federated connectors overview](federated-connectors-overview.md) |
-| Syrto (preview) | Microsoft | Look up Italian company profiles, financials, and market intelligence. | [Federated connectors overview](federated-connectors-overview.md) |
-| Xero (preview) | Microsoft | Access Xero accounting data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Zacks (preview) | Microsoft | Access Zacks financial data for income statements, balance sheets, and cash flow. | [Federated connectors overview](federated-connectors-overview.md) |
-| Zoho Books (preview) | Microsoft | Access Zoho Books data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Aiwyn Tax | Microsoft | Calculate taxes and look up tax jurisdictions and rates. | [Federated connectors overview](federated-connectors-overview.md) |
+| CB Insights | CB Insights | Track private-company funding, M&A activity, competitors, and market maps. | [Federated connectors overview](federated-connectors-overview.md) |
+| Clarity AI | Microsoft | Assess fund sustainability, ESG scores, and SFDR compliance. | [Federated connectors overview](federated-connectors-overview.md) |
+| D&B Finance Analytics | Dun & Bradstreet | Access D&B Finance Analytics data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| D&B Risk Analytics | Dun & Bradstreet | Access D&B Risk Analytics data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| DiligenceSquared | Microsoft | Search and read your transcripts, Expert Q&A, and reports. | [Federated connectors overview](federated-connectors-overview.md) |
+| FactSet | FactSet | Get company fundamentals, estimates, ownership, and market data. | [Federated connectors overview](federated-connectors-overview.md) |
+| FinancialReports | Microsoft | Search company filings across global markets. | [Federated connectors overview](federated-connectors-overview.md) |
+| Fiscal.ai | Microsoft | Pull stock financials, valuation multiples, and earnings estimates. | [Federated connectors overview](federated-connectors-overview.md) |
+| Fitch Solutions | Microsoft | Get Fitch credit ratings, rating history, rating drivers, and CreditSights research. | [Federated connectors overview](federated-connectors-overview.md) |
+| Klardaten DATEV-Connector | Klardaten | Access DATEV data through Klardaten in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| LSEG | LSEG | Get real-time market data, fundamentals, estimates, and pricing. | [Federated connectors overview](federated-connectors-overview.md) |
+| Mercury | Microsoft | Check balances, transactions, and statements in your bank account. | [Federated connectors overview](federated-connectors-overview.md) |
+| Money Forward | Money Forward | Access Money Forward data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Moody's | Moody's | Get credit ratings, rating actions, outlooks, and risk research. | [Federated connectors overview](federated-connectors-overview.md) |
+| Morningstar | Morningstar | Look up fund and ETF ratings, stock research, and market data. | [Federated connectors overview](federated-connectors-overview.md) |
+| Morningstar Credit Analytics | Morningstar | Access Morningstar Credit Analytics data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| MT Newswires | MT Newswires | Read real-time global financial news from original sources. | [Federated connectors overview](federated-connectors-overview.md) |
+| PrivCo | Microsoft | Look up private-company profiles, financials, funding rounds, and M&A deals. | [Federated connectors overview](federated-connectors-overview.md) |
+| Quartr | Quartr | Research earnings calls, transcripts, SEC filings, and investor presentations. | [Federated connectors overview](federated-connectors-overview.md) |
+| S&P Kensho | S&P Global | Access S&P Kensho data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Square | Microsoft | Explore Square workflows and connected business data. | [Federated connectors overview](federated-connectors-overview.md) |
+| Syrto | Microsoft | Look up Italian company profiles, financials, and market intelligence. | [Federated connectors overview](federated-connectors-overview.md) |
+| Xero | Xero | Access Xero accounting data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Zacks | Zacks | Access Zacks financial data for income statements, balance sheets, and cash flow. | [Federated connectors overview](federated-connectors-overview.md) |
+| Zoho Books | Zoho | Access Zoho Books data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Collaboration
 
@@ -56,16 +62,16 @@ The following table lists the collaboration and communication connectors that ar
 | Azure DevOps Wiki | Microsoft | Allows your organization to index wiki pages from Azure DevOps. | [Azure DevOps Wiki connector](azure-devops-wiki-overview.md) |
 | Azure DevOps Work Items | Microsoft | Allows your organization to search for work items in your Azure DevOps instance. | [Azure DevOps Work Items connector](azure-devops-work-items-overview.md) |
 | Egnyte | Microsoft | Allows organizations to integrate with Egnyte for seamless workflow automation. | [Egnyte connector](egnyte-overview.md) |
-| Gmail (preview) | Microsoft | Search and read your Gmail messages, threads, and labels. | [Federated connectors overview](federated-connectors-overview.md) |
+| Gmail | Microsoft | Search and read your Gmail messages, threads, and labels. | [Federated connectors overview](federated-connectors-overview.md) |
 | Jira Cloud | Microsoft | Allows your organization to index Jira issues and tickets. | [Jira Cloud connector](jira-cloud-overview.md) |
 | Jira Data Center | Microsoft | Enables seamless project management and issue tracking with Jira. | [Jira Data Center connector](jira-data-center-overview.md) |
-| Linear (preview) | Microsoft | Streamline issues, projects, and product roadmaps. | [Federated connectors overview](federated-connectors-overview.md) |
+| Linear | Microsoft | Streamline issues, projects, and product roadmaps. | [Federated connectors overview](federated-connectors-overview.md) |
 | Miro | Microsoft | Allows an organization to integrate with Miro's collaborative whiteboarding platform. | [Miro connector](miro-overview.md) |
-| Miro (preview) | Microsoft | Search boards, diagrams, sticky notes, and mind maps in Miro. | [Federated connectors overview](federated-connectors-overview.md) |
+| Miro | Miro | Search boards, diagrams, sticky notes, and mind maps in Miro. | [Federated connectors overview](federated-connectors-overview.md) |
 | Shortcut Story | Microsoft | Enables teams to manage agile software development projects with Shortcut. | [Shortcut Story connector](shortcut-story-overview.md) |
-| TeamsMaestro (preview) | Microsoft | Access your meeting transcripts, summaries, and action items. | [Federated connectors overview](federated-connectors-overview.md) |
+| TeamsMaestro | MailMaestro | Access your meeting transcripts, summaries, and action items. | [Federated connectors overview](federated-connectors-overview.md) |
 | Trello | Microsoft | Allows organizations to enhance their project management by connecting with Trello's visual project management tools. | [Trello connector](trello-overview.md) |
-| Trello (preview) | Microsoft | Search your Trello boards, lists, cards, and workspaces. | [Federated connectors overview](federated-connectors-overview.md) |
+| Trello | Microsoft | Search your Trello boards, lists, cards, and workspaces. | [Federated connectors overview](federated-connectors-overview.md) |
 | Zoom Meetings | Microsoft | Enables your organization to index meeting-related artifacts, such as transcripts and metadata. | [Zoom connector](zoom-connector.md) |
 
 ## Content management
@@ -83,13 +89,13 @@ The following table lists the content management systems connectors that are ava
 | Enterprise Websites On-premises | Microsoft | Allows your organization to search any non-SharePoint enterprise website. | [Enterprise Websites On-premises connector](enterprise-web-connector-onprem.md) |
 | Guru | Microsoft | Allows integration with Guru's knowledge management platform to capture, store, and share organizational knowledge. | [Guru connector](guru-overview.md) |
 | MediaWiki | Microsoft | Enables your organization to search knowledge-based articles on sites it creates with MediaWiki. | [MediaWiki connector](mediawiki-connector.md) |
-| PandaDoc (preview) | Microsoft | Create, send, sign, and track documents. | [Federated connectors overview](federated-connectors-overview.md) |
+| PandaDoc | Microsoft | Create, send, sign, and track documents. | [Federated connectors overview](federated-connectors-overview.md) |
 | Salesforce Knowledge | Microsoft | Allows your organization to index Salesforce Knowledge articles. | [Salesforce Knowledge connector](salesforce-knowledge-connector.md) |
 | ServiceNow Knowledge | Microsoft | Allows your organization to index knowledge base (KB) articles from ServiceNow instances. | [ServiceNow Knowledge connector](servicenow-knowledge-overview.md) |
 | SharePoint Server | Microsoft | Lets organizations connect to on-premises SharePoint sites for collaborating on and managing documents. | [SharePoint Server connector](sharepoint-server-overview.md) |
 | Stack Overflow | Microsoft | Enables your organization to seamlessly index and search Stack Overflow questions and answers within Microsoft 365 Copilot and Microsoft Search, enhancing productivity and knowledge sharing. Unlock the potential of technical expertise by integrating Stack Overflow content directly into your workflow. | [Stack Overflow connector](stack-overflow-connector.md) |
-| Templafy (preview) | Microsoft | Access Templafy content in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| TextMine (preview) | Microsoft | Access TextMine data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Templafy | Templafy | Access Templafy content in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| TextMine | TextMine | Access TextMine data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 | Unily | Microsoft | Allows Copilot integration with Unily's digital workplace platform for enhanced communication and employee experience. | [Unily connector](unily-intranet-connector.md) |
 | Veeva QualityDocs | Microsoft | Enables integration with Veeva Vault for quality content management. | [Veeva QualityDocs connector](veeva-qualitydocs-overview.md) |
 | Veeva Vault PromoMats | Microsoft | Empowers life sciences organizations to seamlessly integrate their compliant promotional content and regulatory content from Veeva Vault PromoMats into Microsoft 365 Copilot. This connector was developed by Microsoft with Veeva best practices and support. It provides robust indexing of documents, metadata, approval statuses, and version histories. This ensures comprehensive access for use with Microsoft 365 Copilot. | [Veeva Vault PromoMats connector](veeva-promomats-overview.md) |
@@ -103,8 +109,9 @@ The following table lists the customer relationship management connectors that a
 
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
-| Clarify (preview) | Microsoft | Query your pipeline, manage CRM records, source leads, and automate GTM. | [Federated connectors overview](federated-connectors-overview.md) |
-| HubSpot (preview) | Microsoft | Manage customer data and sales pipelines. | [Federated connectors overview](federated-connectors-overview.md) |
+| Clarify | Microsoft | Query your pipeline, manage CRM records, source leads, and automate GTM. | [Federated connectors overview](federated-connectors-overview.md) |
+| HubSpot | Microsoft | Manage customer data and sales pipelines. | [Federated connectors overview](federated-connectors-overview.md) |
+| Intercom | Microsoft | Search customer conversations, support tickets, and contact records. | [Federated connectors overview](federated-connectors-overview.md) |
 | Salesforce CRM | Microsoft | Search your Salesforce instance for contacts, opportunities, leads, and accounts objects. | [Salesforce CRM connector](salesforce-crm-overview.md) |
 
 ## Data analytics
@@ -114,28 +121,35 @@ The following table lists the available data analytics connectors.
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
 | Airtable (preview) | Microsoft | Integrates Airtable bases, tables, and records into Microsoft 365. | [Airtable connector](airtable-overview.md) |
-| ARC Advisory AI (preview) | Microsoft | Access ARC Advisory industrial market revenue, share, and forecast data. | [Federated connectors overview](federated-connectors-overview.md) |
-| Ask Rystad (preview) | Microsoft | Search Rystad Energy analytics reports and asset documents. | [Federated connectors overview](federated-connectors-overview.md) |
-| AskPolly (preview) | Microsoft | Access AskPolly data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Amass | Amass | Access Amass data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| ARC Advisory AI | Microsoft | Access ARC Advisory industrial market revenue, share, and forecast data. | [Federated connectors overview](federated-connectors-overview.md) |
+| Ask Rystad | Microsoft | Search Rystad Energy analytics reports and asset documents. | [Federated connectors overview](federated-connectors-overview.md) |
+| AskPolly | AskPolly | Access AskPolly data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 | Azure SQL | Microsoft | Enables your organization to search for data from your Azure SQL. | [Azure SQL connector](mssql-overview.md) |
-| Contentsquare (preview) | Microsoft | Analyze user behavior, customer journeys, conversions, and digital experiences. | [Federated connectors overview](federated-connectors-overview.md) |
+| Contentsquare | Microsoft | Analyze user behavior, customer journeys, conversions, and digital experiences. | [Federated connectors overview](federated-connectors-overview.md) |
 | CSV | Microsoft | Enables your organization to search for content stored in CSV files. | [CSV connector](csv-connector.md) |
 | DataStax (preview) | Microsoft | Enables integration with DataStax for real-time data access. | [DataStax connector](datastax-overview.md) |
-| DecisionPoint (preview) | Microsoft | Access DecisionPoint data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| EIU (preview) | Microsoft | Access cited EIU analysis, methodology, and market intelligence. | [Federated connectors overview](federated-connectors-overview.md) |
-| IDC (preview) | Microsoft | Access IDC market research, datasets, forecasts, trackers, and documents. | [Federated connectors overview](federated-connectors-overview.md) |
+| DecisionPoint | DecisionPoint | Access DecisionPoint data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Dovetail | Dovetail | Access Dovetail data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| EIU | Microsoft | Access cited EIU analysis, methodology, and market intelligence. | [Federated connectors overview](federated-connectors-overview.md) |
+| IBISWorld | Microsoft | Research industry, company, risk, forecast, and benchmark data. | [Federated connectors overview](federated-connectors-overview.md) |
+| IDC | Microsoft | Access IDC market research, datasets, forecasts, trackers, and documents. | [Federated connectors overview](federated-connectors-overview.md) |
 | Microsoft SQL Server | Microsoft | Allows your organization to search on-premises Microsoft SQL Server databases. | [Microsoft SQL Server connector](mssql-overview.md) |
-| Mixpanel (preview) | Microsoft | Analyze, query, and manage your Mixpanel data. | [Federated connectors overview](federated-connectors-overview.md) |
-| MoSPI (preview) | Microsoft | Explore MoSPI datasets, indicators, metadata, and official statistics. | [Federated connectors overview](federated-connectors-overview.md) |
+| Mixpanel | Microsoft | Analyze, query, and manage your Mixpanel data. | [Federated connectors overview](federated-connectors-overview.md) |
+| MoSPI | Microsoft | Explore MoSPI datasets, indicators, metadata, and official statistics. | [Federated connectors overview](federated-connectors-overview.md) |
+| Optiq Bridge US | NielsenIQ | Query NielsenIQ retail sales measurement and consumer panel data. | [Federated connectors overview](federated-connectors-overview.md) |
 | Oracle SQL | Microsoft | Enables your organization to discover and index data from an on-premises database. Indexes specified content into Microsoft Search and supports periodic crawls. You can also restrict access to search results for certain users. | [Oracle SQL connector](oraclesql-connector.md) |
-| Polar Analytics (preview) | Microsoft | Bring all your data into one place and connect it to Copilot. | [Federated connectors overview](federated-connectors-overview.md) |
+| Polar Analytics | Microsoft | Bring all your data into one place and connect it to Copilot. | [Federated connectors overview](federated-connectors-overview.md) |
 | PostgreSQL (preview) | Microsoft | Enables your organization to discover and index data from PostgreSQL databases. | [PostgreSQL connector](postgresql-connector.md) |
-| Pulse by PassBy (preview) | Microsoft | Access real-world retail intelligence for physical stores. | [Federated connectors overview](federated-connectors-overview.md) |
-| Resilinc (preview) | Microsoft | Monitor supply chain risk, compliance, and resilience. | [Federated connectors overview](federated-connectors-overview.md) |
-| S&P Global Energy (preview) | Microsoft | Access S&P Global Energy data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Statista (preview) | Microsoft | Access Statista data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Pulse by PassBy | Microsoft | Access real-world retail intelligence for physical stores. | [Federated connectors overview](federated-connectors-overview.md) |
+| Resilinc | Microsoft | Monitor supply chain risk, compliance, and resilience. | [Federated connectors overview](federated-connectors-overview.md) |
+| S&P Global Energy | S&P Global | Access S&P Global Energy data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Statista | Statista | Access Statista data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Synapse.org | Sage Bionetworks | Search scientific datasets, research studies, and biomedical data. | [Federated connectors overview](federated-connectors-overview.md) |
 | Tableau Cloud (preview) | Microsoft | Connect to Tableau Cloud for advanced data visualization and business intelligence functionality. | [Tableau Cloud connector](tableau-cloud-overview.md) |
-| Wolfram (preview) | Microsoft | Compute answers, run calculations, and query Wolfram knowledge. | [Federated connectors overview](federated-connectors-overview.md) |
+| Tastewise | Microsoft | Discover food and beverage trends, consumer needs, and market insights. | [Federated connectors overview](federated-connectors-overview.md) |
+| Trellis | Trellis | Access Trellis data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Wolfram | Microsoft | Compute answers, run calculations, and query Wolfram knowledge. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Site design
 
@@ -143,11 +157,12 @@ The following table lists the available design connectors.
 
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
-| Canva (preview) | Microsoft | Find your designs, presentations, whiteboards, and brand assets. | [Federated connectors overview](federated-connectors-overview.md) |
-| Cloudinary (preview) | Microsoft | Upload, organize, transform, and optimize images and videos. | [Federated connectors overview](federated-connectors-overview.md) |
-| Excalidraw (preview) | Microsoft | Create and view Excalidraw whiteboard diagrams. | [Federated connectors overview](federated-connectors-overview.md) |
-| Mobbin (preview) | Microsoft | Search real product screens and flows for design references. | [Federated connectors overview](federated-connectors-overview.md) |
-| Webflow (preview) | Microsoft | Manage your Webflow sites, pages, CMS content, and publishing. | [Federated connectors overview](federated-connectors-overview.md) |
+| Canva | Canva | Find your designs, presentations, whiteboards, and brand assets. | [Federated connectors overview](federated-connectors-overview.md) |
+| Cloudinary | Microsoft | Upload, organize, transform, and optimize images and videos. | [Federated connectors overview](federated-connectors-overview.md) |
+| Excalidraw | Microsoft | Create and view Excalidraw whiteboard diagrams. | [Federated connectors overview](federated-connectors-overview.md) |
+| Mobbin | Mobbin | Search real product screens and flows for design references. | [Federated connectors overview](federated-connectors-overview.md) |
+| Trimble SketchUp | Microsoft | Access Trimble SketchUp data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Webflow | Microsoft | Manage your Webflow sites, pages, CMS content, and publishing. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## IT management tools
 
@@ -155,12 +170,12 @@ The following table lists the available IT management tool connectors.
 
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
-| Apify (preview) | Microsoft | Scrape websites and extract structured web data. | [Federated connectors overview](federated-connectors-overview.md) |
+| Apify | Microsoft | Scrape websites and extract structured web data. | [Federated connectors overview](federated-connectors-overview.md) |
 | Bitbucket Knowledge | Microsoft | Enables integration with Bitbucket for Git repository management and collaboration. | [Bitbucket Knowledge connector](bitbucket-knowledge-overview.md) |
 | Bitbucket Pull Requests | Microsoft | Allows organizations to integrate with Bitbucket's pull request functionality for code review and collaboration. | [Bitbucket Pull Request connector](bitbucket-pull-request-overview.md) |
-| Clerk (preview) | Microsoft | Add authentication and user management to your applications. | [Federated connectors overview](federated-connectors-overview.md) |
-| Context7 (preview) | Microsoft | Get up-to-date documentation, API references, and code examples. | [Federated connectors overview](federated-connectors-overview.md) |
-| Enosix (preview) | Microsoft | Search SAP sales orders, deliveries, invoices, and stock availability. | [Federated connectors overview](federated-connectors-overview.md) |
+| Clerk | Microsoft | Add authentication and user management to your applications. | [Federated connectors overview](federated-connectors-overview.md) |
+| Context7 | Microsoft | Get up-to-date documentation, API references, and code examples. | [Federated connectors overview](federated-connectors-overview.md) |
+| Enosix | Enosix | Search SAP sales orders, deliveries, invoices, and stock availability. | [Federated connectors overview](federated-connectors-overview.md) |
 | GitHub Cloud Issues | Microsoft | Allows organizations to connect to GitHub Issues for streamlined project planning and issue tracking. | [GitHub Cloud Issues connector](github-cloud-issues-overview.md) |
 | GitHub Cloud Knowledge | Microsoft | Allows organizations to index documentation and knowledge from GitHub repositories. | [GitHub Cloud Knowledge connector](github-cloud-knowledge-overview.md) |
 | GitHub Cloud Pull Requests | Microsoft | Enables developers to collaborate on code reviews and GitHub pull requests. | [GitHub Cloud Pull Requests connector](github-cloud-pull-requests-overview.md) |
@@ -173,11 +188,11 @@ The following table lists the available IT management tool connectors.
 | GitLab Knowledge Server | Microsoft | Provides access to internal documentation from GitLab server. | [GitLab Knowledge Server connector](gitlab-knowledge-server-overview.md) |
 | GitLab Merge Requests Cloud | Microsoft | Allows organizations to index merge requests from GitLab projects hosted on GitLab.com. | [GitLab Merge Requests Cloud connector](gitlab-merge-requests-cloud-overview.md) |
 | GitLab Merge Requests Server | Microsoft | Lets developers review and merge code with GitLab Server pull requests. | [GitLab Merge Requests Server connector](gitlab-merge-requests-server-overview.md) |
-| GoDaddy (preview) | Microsoft | Check domain availability and get name suggestions. | [Federated connectors overview](federated-connectors-overview.md) |
-| GraphOS MCP Tools (preview) | Microsoft | Search Apollo GraphOS docs and connector specifications. | [Federated connectors overview](federated-connectors-overview.md) |
-| Hugging Face (preview) | Microsoft | Search models, datasets, Spaces, and papers on Hugging Face. | [Federated connectors overview](federated-connectors-overview.md) |
-| Jam (preview) | Microsoft | Get bug reports with recordings, console logs, and repro steps. | [Federated connectors overview](federated-connectors-overview.md) |
-| pg-aiguide (preview) | Microsoft | Get PostgreSQL, TimescaleDB, and PostGIS guidance and recommended practices. | [Federated connectors overview](federated-connectors-overview.md) |
+| GoDaddy | Microsoft | Check domain availability and get name suggestions. | [Federated connectors overview](federated-connectors-overview.md) |
+| GraphOS MCP Tools | Microsoft | Search Apollo GraphOS docs and connector specifications. | [Federated connectors overview](federated-connectors-overview.md) |
+| Hugging Face | Microsoft | Search models, datasets, Spaces, and papers on Hugging Face. | [Federated connectors overview](federated-connectors-overview.md) |
+| Jam | Microsoft | Get bug reports with recordings, console logs, and repro steps. | [Federated connectors overview](federated-connectors-overview.md) |
+| pg-aiguide | Microsoft | Get PostgreSQL, TimescaleDB, and PostGIS guidance and recommended practices. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Training and tutorial
 
@@ -185,14 +200,16 @@ The following table lists the available training and tutorial connectors.
 
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
-| Article Galaxy (preview) | Microsoft | Search scientific articles, check reuse rights, and track orders. | [Federated connectors overview](federated-connectors-overview.md) |
-| Articulate (preview) | Microsoft | Access Articulate data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Articulate EU (preview) | Microsoft | Access Articulate EU data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Autodesk Product Help (preview) | Microsoft | Connect Autodesk product documentation through a secure, read-only interface. | [Federated connectors overview](federated-connectors-overview.md) |
-| Microsoft Learn (preview) | Microsoft | Search official Microsoft docs and code samples. | [Federated connectors overview](federated-connectors-overview.md) |
-| Padlet (preview) | Microsoft | Search your Padlet boards and canvases and review their content. | [Federated connectors overview](federated-connectors-overview.md) |
-| Scite (preview) | Microsoft | Search and analyze scientific literature with Smart Citations. | [Federated connectors overview](federated-connectors-overview.md) |
-| Siemens (preview) | Microsoft | Search Siemens product and developer documentation. | [Federated connectors overview](federated-connectors-overview.md) |
+| Article Galaxy | Microsoft | Search scientific articles, check reuse rights, and track orders. | [Federated connectors overview](federated-connectors-overview.md) |
+| Articulate | Articulate | Access Articulate data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Articulate EU | Articulate | Access Articulate EU data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Autodesk Product Help | Microsoft | Connect Autodesk product documentation through a secure, read-only interface. | [Federated connectors overview](federated-connectors-overview.md) |
+| Learn365 | Zensai | Access Learn365 data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Microsoft Learn | Microsoft | Search official Microsoft docs and code samples. | [Federated connectors overview](federated-connectors-overview.md) |
+| Padlet | Microsoft | Search your Padlet boards and canvases and review their content. | [Federated connectors overview](federated-connectors-overview.md) |
+| QuizFlight | QuizFlight | Access QuizFlight data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Scite | Microsoft | Search and analyze scientific literature with Smart Citations. | [Federated connectors overview](federated-connectors-overview.md) |
+| Siemens | Microsoft | Search Siemens product and developer documentation. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Files and documents
 
@@ -203,8 +220,9 @@ The following table lists the files and documents connectors that are available.
 | Amazon S3 | Microsoft | Index objects stored in your Amazon S3 buckets. After you configure the connector and index content from S3, users can search for those items in Microsoft 365 Copilot. | [Amazon S3 connector](amazon-s3-overview.md) |
 | Azure Data Lake Storage Gen2 | Microsoft | Search for content stored in Azure Blob containers. Indexes hierarchy-enabled folders in specified Azure Data Lake Storage Gen2 accounts. | [Azure Data Lake Storage Gen2 connector](azure-data-lake-storage-gen2-overview.md) |
 | Azure File Share | Microsoft | Allows your organization to index and search content stored in Azure File Share. | [Azure File Share connector](azure-file-share-overview.md) |
-| Box (preview) | Microsoft | Search and read your files, folders, and documents in Box. | [Federated connectors overview](federated-connectors-overview.md) |
+| Box | Box | Search and read your files, folders, and documents in Box. | [Federated connectors overview](federated-connectors-overview.md) |
 | Dropbox | Microsoft | Lets your organization connect to Dropbox for file storage, sharing, and collaboration. | [Dropbox connector](dropbox-overview.md) |
+| Egnyte | Egnyte | Access Egnyte data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 | File Share | Microsoft | Allows your organization to search on-premises Windows file shares. | [File Share connector](fileshare-connector.md) |
 | Google Drive | Microsoft | Enables integration with Google Drive for file synchronization and storage. | [Google Drive connector](google-drive-overview.md) |
 
@@ -214,13 +232,20 @@ The following table lists the available health and life sciences connectors.
 
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
-| BioRender (preview) | Microsoft | Find scientific templates, icons, and illustrations for figures. | [Federated connectors overview](federated-connectors-overview.md) |
-| Consensus (preview) | Microsoft | Access Consensus research content in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Cortellis Regulatory Intelligence (preview) | Microsoft | Search health authority guidance, requirements, and regulatory documents. | [Federated connectors overview](federated-connectors-overview.md) |
-| NyquistAI (preview) | Microsoft | Search FDA medical-device data, recalls, and warning letters. | [Federated connectors overview](federated-connectors-overview.md) |
-| PopHIVE (preview) | Microsoft | Look up US population and public health data, including disease trends and current status. | [Federated connectors overview](federated-connectors-overview.md) |
-| SciLeads (preview) | Microsoft | Access SciLeads data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Smarts.bio (preview) | Microsoft | Run AI-powered bioinformatics queries, tools, and pipelines. | [Federated connectors overview](federated-connectors-overview.md) |
+| BioRender | BioRender | Find scientific templates, icons, and illustrations for figures. | [Federated connectors overview](federated-connectors-overview.md) |
+| CAS Connections | Microsoft | Search the CAS Content Collection and look up chemical substances. | [Federated connectors overview](federated-connectors-overview.md) |
+| ClinicalTrials.gov | Microsoft | Find and review public clinical study records. | [Federated connectors overview](federated-connectors-overview.md) |
+| CMS Coverage | Microsoft | Search Medicare coverage documents, contractors, and drug exclusion updates. | [Federated connectors overview](federated-connectors-overview.md) |
+| CMS Drug Data | Microsoft | Look up Medicaid drug acquisition pricing (NADAC) from CMS by drug name or NDC. | [Federated connectors overview](federated-connectors-overview.md) |
+| CMS NPI Registry | Microsoft | Look up and search US healthcare providers in the public NPPES registry. | [Federated connectors overview](federated-connectors-overview.md) |
+| Consensus | Microsoft | Access Consensus research content in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Cortellis Regulatory Intelligence | Microsoft | Search health authority guidance, requirements, and regulatory documents. | [Federated connectors overview](federated-connectors-overview.md) |
+| FDA Safety (openFDA) | Microsoft | Search FDA drug and device safety data from the openFDA public API. | [Federated connectors overview](federated-connectors-overview.md) |
+| NyquistAI | Microsoft | Search FDA medical-device data, recalls, and warning letters. | [Federated connectors overview](federated-connectors-overview.md) |
+| Open Targets | Microsoft | Look up target-disease associations, drug mechanisms, and genetic evidence. | [Federated connectors overview](federated-connectors-overview.md) |
+| PopHIVE | Microsoft | Look up US population and public health data, including disease trends and current status. | [Federated connectors overview](federated-connectors-overview.md) |
+| SciLeads | SciLeads | Access SciLeads data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Smarts.bio | Microsoft | Run AI-powered bioinformatics queries, tools, and pipelines. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Legal + HR and recruiting
 
@@ -231,25 +256,31 @@ The following table lists the available legal, HR, and recruiting connectors. Fo
 | 15Five High Fives | Microsoft | Connect your organization with the High Five feature from 15Five to enhance collaboration and team recognition. | [15Five High Fives connector](15five-high-fives-overview.md) |
 | 15Five High Fives Priorities | Microsoft | Index 15Five priority data in your organization by using Microsoft 365 Copilot and Microsoft Search. | [15Five Priorities connector](15five-priorities-overview.md) |
 | BambooHR | Microsoft | Populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. | [BambooHR connector](bamboohr-overview.md) |
-| BoardWise (preview) | Microsoft | Search BoardWise board guidance and response letter guidance. | [Federated connectors overview](federated-connectors-overview.md) |
-| Courtroom5 (preview) | Microsoft | Get case assessments, legal deadlines, and next-step guidance. | [Federated connectors overview](federated-connectors-overview.md) |
+| BoardWise | Microsoft | Search BoardWise board guidance and response letter guidance. | [Federated connectors overview](federated-connectors-overview.md) |
+| Courtroom5 | Microsoft | Get case assessments, legal deadlines, and next-step guidance. | [Federated connectors overview](federated-connectors-overview.md) |
 | Credly (preview) | Microsoft | Integrate digital credential data from your organization's Credly platform into Microsoft 365. | [Credly connector (preview)](credly-overview.md) |
-| Descrybe Legal Engine (preview) | Microsoft | Search and analyze legal questions, concepts, and cases. | [Federated connectors overview](federated-connectors-overview.md) |
-| Dice (preview) | Microsoft | Search tech job listings on Dice by keyword, location, and filters. | [Federated connectors overview](federated-connectors-overview.md) |
-| DirectCase Legal Search (preview) | Microsoft | Search legislation and case law with linked citations. | [Federated connectors overview](federated-connectors-overview.md) |
-| Everlaw (preview) | Microsoft | Search and analyze documents, cases, and projects in Everlaw for litigation. | [Federated connectors overview](federated-connectors-overview.md) |
+| Descrybe Legal Engine | Microsoft | Search and analyze legal questions, concepts, and cases. | [Federated connectors overview](federated-connectors-overview.md) |
+| Dice | Microsoft | Search tech job listings on Dice by keyword, location, and filters. | [Federated connectors overview](federated-connectors-overview.md) |
+| DirectCase Legal Search | Microsoft | Search legislation and case law with linked citations. | [Federated connectors overview](federated-connectors-overview.md) |
+| Everlaw | Microsoft | Search and analyze documents, cases, and projects in Everlaw for litigation. | [Federated connectors overview](federated-connectors-overview.md) |
 | Galileo by The Josh Bersin Company | Microsoft | Allows your organization to index The Josh Bersin Company research library and use research-backed HR guidance in Microsoft 365 Copilot, Copilot Search, and Microsoft Search. | [Galileo by The Josh Bersin Company connector](galileo-overview.md) |
-| Gusto (preview) | Microsoft | Look up payroll runs, employee records, benefits enrollment, and tax filings. | [Federated connectors overview](federated-connectors-overview.md) |
-| Harvey (preview) | Microsoft | AI for legal research, document analysis, and professional services. | [Federated connectors overview](federated-connectors-overview.md) |
-| Harvey AU (preview) | Microsoft | Access Harvey legal data hosted in Australia in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Harvey EU (preview) | Microsoft | Access Harvey legal data hosted in the European Union in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| iManage Work (preview) | Microsoft | Search your documents, matters, folders, and recent activity. | [Federated connectors overview](federated-connectors-overview.md) |
-| Lawstronaut (preview) | Microsoft | Search legislation, case law, and regulations across 168+ jurisdictions. | [Federated connectors overview](federated-connectors-overview.md) |
-| Legal Data Hunter (preview) | Microsoft | Search 23M+ legal documents in 160+ jurisdictions. | [Federated connectors overview](federated-connectors-overview.md) |
-| Relativity (preview) | Microsoft | Manage RelativityOne clients, matters, workspaces, users, and groups. | [Federated connectors overview](federated-connectors-overview.md) |
+| Gusto | Microsoft | Look up payroll runs, employee records, benefits enrollment, and tax filings. | [Federated connectors overview](federated-connectors-overview.md) |
+| Harvey | Harvey | AI for legal research, document analysis, and professional services. | [Federated connectors overview](federated-connectors-overview.md) |
+| Harvey AU | Harvey | Access Harvey legal data hosted in Australia in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Harvey EU | Harvey | Access Harvey legal data hosted in the European Union in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| iManage Work | iManage | Search your documents, matters, folders, and recent activity. | [Federated connectors overview](federated-connectors-overview.md) |
+| Lawstronaut | Microsoft | Search legislation, case law, and regulations across 168+ jurisdictions. | [Federated connectors overview](federated-connectors-overview.md) |
+| Legal Data Hunter | Microsoft | Search 23M+ legal documents in 160+ jurisdictions. | [Federated connectors overview](federated-connectors-overview.md) |
+| LegalZoom | LegalZoom | Search LegalZoom legal articles, products, and business structure guidance. | [Federated connectors overview](federated-connectors-overview.md) |
+| Litera | Litera | Access Litera data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Midpage Legal Research | Microsoft | Search case law, citations, statutes, and legal precedents. | [Federated connectors overview](federated-connectors-overview.md) |
+| NetDocuments US | NetDocuments | Search your contracts, agreements, and matter documents. | [Federated connectors overview](federated-connectors-overview.md) |
+| Relativity | Relativity | Manage RelativityOne clients, matters, workspaces, users, and groups. | [Federated connectors overview](federated-connectors-overview.md) |
 | SAP SuccessFactors | Microsoft | Integrate your organization with SAP SuccessFactors to securely synchronize organization data and organize HR functions through Microsoft 365 Organizational Data Service. | [Import organizational data from SAP SuccessFactors](/viva/import-org-data-success-factors) |
+| SeekOut | SeekOut | Access SeekOut data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Teamtailor | Microsoft | Access Teamtailor data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 | Workday | Microsoft | Allows organizations integrate with Workday to securely synchronize organization data and organize HR functions via Microsoft 365 Organizational Data Service. | [Import organizational data from Workday](/viva/import-org-data-workday) |
-| ZipRecruiter (preview) | Microsoft | Search job listings across ZipRecruiter. | [Federated connectors overview](federated-connectors-overview.md) |
+| ZipRecruiter | Microsoft | Search job listings across ZipRecruiter. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## IT service management tools
 
@@ -257,9 +288,9 @@ The following table lists the available IT service management tool connectors.
 
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
-| Cloudflare (preview) | Microsoft | Build and manage Cloudflare Workers, storage, databases, and AI. | [Federated connectors overview](federated-connectors-overview.md) |
+| Cloudflare | Microsoft | Build and manage Cloudflare Workers, storage, databases, and AI. | [Federated connectors overview](federated-connectors-overview.md) |
 | Freshservice | Microsoft | Allows organizations to connect to Freshservice to enhance team collaboration. | [Freshservice connector](freshservice-overview.md) |
-| Malwarebytes (preview) | Microsoft | Check URLs, email addresses, and phone numbers for scams and phishing. | [Federated connectors overview](federated-connectors-overview.md) |
+| Malwarebytes | Microsoft | Check URLs, email addresses, and phone numbers for scams and phishing. | [Federated connectors overview](federated-connectors-overview.md) |
 | PagerDuty Escalation Policies | Microsoft | Enables organizations to index and search PagerDuty escalation policies. | [PagerDuty Escalation Policies connector](pagerduty-escalation-policies-overview.md) |
 | PagerDuty Incidents | Microsoft | Enables organizations to index and search PagerDuty incidents. | [PagerDuty Incidents connector](pagerduty-incidents-overview.md) |
 | PagerDuty Schedules | Microsoft | Index and search PagerDuty schedules. | [PagerDuty Schedules connector](pagerduty-schedules-overview.md) |
@@ -272,13 +303,24 @@ The following table lists the available reference connectors.
 
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
-| AllTrails (preview) | Microsoft | Find hiking trails, trail details, and trail weather. | [Federated connectors overview](federated-connectors-overview.md) |
-| Fibre2Fashion (preview) | Microsoft | Access Fibre2Fashion data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Granted (preview) | Microsoft | Access Granted data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Kindora Funder Discovery (preview) | Microsoft | Find grant funders, foundation profiles, and open grants. | [Federated connectors overview](federated-connectors-overview.md) |
-| Melon (preview) | Microsoft | Browse music charts, playlists, artists, and song details. | [Federated connectors overview](federated-connectors-overview.md) |
-| SiteTrax.io (preview) | Microsoft | Access SiteTrax.io data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Tavily (preview) | Microsoft | Access Tavily search results in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| AllTrails | Microsoft | Find hiking trails, trail details, and trail weather. | [Federated connectors overview](federated-connectors-overview.md) |
+| bioRxiv | Microsoft | Track new biology and medicine preprints. | [Federated connectors overview](federated-connectors-overview.md) |
+| Blackbaud | Blackbaud | Access Blackbaud data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| ChEMBL | Microsoft | Search ChEMBL compounds, targets, bioactivities, and mechanisms of action. | [Federated connectors overview](federated-connectors-overview.md) |
+| DrugBank | DrugBank | Look up drug profiles, interactions, and pharmacology data. | [Federated connectors overview](federated-connectors-overview.md) |
+| eSIM Copilot | Mindszi Technologies | Access eSIM Copilot data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Fibre2Fashion | Microsoft | Access Fibre2Fashion data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Granted | Microsoft | Access Granted data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| ICD-10 Diagnosis Codes | Microsoft | Search, browse, and validate ICD-10 diagnosis codes. | [Federated connectors overview](federated-connectors-overview.md) |
+| Kindora Funder Discovery | Microsoft | Find grant funders, foundation profiles, and open grants. | [Federated connectors overview](federated-connectors-overview.md) |
+| MedlinePlus | Microsoft | Get patient-friendly health information from a medical code. | [Federated connectors overview](federated-connectors-overview.md) |
+| Melon | Microsoft | Browse music charts, playlists, artists, and song details. | [Federated connectors overview](federated-connectors-overview.md) |
+| PubMed | Microsoft | Search biomedical and life sciences research literature. | [Federated connectors overview](federated-connectors-overview.md) |
+| RxNorm & Drug Classes (NLM) | Microsoft | Normalize drug names and look up therapeutic drug classes. | [Federated connectors overview](federated-connectors-overview.md) |
+| SiteTrax.io | Microsoft | Access SiteTrax.io data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Stable Baseline | Stable Baseline | Access Stable Baseline data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Tavily | Tavily | Access Tavily search results in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Viator | Microsoft | Search Viator tours and activities and retrieve detailed experience information. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Productivity
 
@@ -286,17 +328,21 @@ The following table lists the available productivity connectors.
 
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
-| DeepL MCP (preview) | Microsoft | Translate and improve text in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Fellow.ai (preview) | Microsoft | Look up meeting agendas, notes, action items, and 1:1 talking points. | [Federated connectors overview](federated-connectors-overview.md) |
-| Fireflies (preview) | Microsoft | Get meeting transcripts, summaries, and action items from calls. | [Federated connectors overview](federated-connectors-overview.md) |
-| Goodnotes (preview) | Microsoft | Draw SVG images, generate Mermaid diagrams, and create Markdown documents. | [Federated connectors overview](federated-connectors-overview.md) |
-| Google Calendar (preview) | Microsoft | Check your events, meetings, invites, times, and attendees. | [Federated connectors overview](federated-connectors-overview.md) |
-| Google Contacts (preview) | Microsoft | Look up names, emails, phone numbers, job titles, and companies. | [Federated connectors overview](federated-connectors-overview.md) |
-| Granola (preview) | Microsoft | Query your Granola meeting notes, transcripts, and insights in Copilot. | [Federated connectors overview](federated-connectors-overview.md) |
-| Mem (preview) | Microsoft | Search, create, and organize your notes and knowledge. | [Federated connectors overview](federated-connectors-overview.md) |
-| Memoket (preview) | Microsoft | Turn spoken conversations into notes, summaries, and action items. | [Federated connectors overview](federated-connectors-overview.md) |
-| Notion (preview) | Microsoft | Search your docs, wikis, notes, tasks, and databases. | [Federated connectors overview](federated-connectors-overview.md) |
-| Taskrabbit Booking Assistance (preview) | Microsoft | Check Tasker availability and book local services. | [Federated connectors overview](federated-connectors-overview.md) |
+| Airtable | Microsoft | Query and manage your Airtable bases. | [Federated connectors overview](federated-connectors-overview.md) |
+| DeepL MCP | DeepL | Translate and improve text in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Fellow.ai | Microsoft | Look up meeting agendas, notes, action items, and 1:1 talking points. | [Federated connectors overview](federated-connectors-overview.md) |
+| Fireflies | Microsoft | Get meeting transcripts, summaries, and action items from calls. | [Federated connectors overview](federated-connectors-overview.md) |
+| Gamma | Microsoft | Access Gamma data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| GoLinks | GoLinks | Access GoLinks data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Goodnotes | Microsoft | Draw SVG images, generate Mermaid diagrams, and create Markdown documents. | [Federated connectors overview](federated-connectors-overview.md) |
+| Google Calendar | Microsoft | Check your events, meetings, invites, times, and attendees. | [Federated connectors overview](federated-connectors-overview.md) |
+| Google Contacts | Microsoft | Look up names, emails, phone numbers, job titles, and companies. | [Federated connectors overview](federated-connectors-overview.md) |
+| Granola | Microsoft | Query your Granola meeting notes, transcripts, and insights in Copilot. | [Federated connectors overview](federated-connectors-overview.md) |
+| Mem | Microsoft | Search, create, and organize your notes and knowledge. | [Federated connectors overview](federated-connectors-overview.md) |
+| Memoket | Microsoft | Turn spoken conversations into notes, summaries, and action items. | [Federated connectors overview](federated-connectors-overview.md) |
+| Notion | Microsoft | Search your docs, wikis, notes, tasks, and databases. | [Federated connectors overview](federated-connectors-overview.md) |
+| SlidesGPT | Microsoft | Access SlidesGPT data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Taskrabbit Booking Assistance | Microsoft | Check Tasker availability and book local services. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Project management
 
@@ -305,15 +351,19 @@ The following table lists the project management connectors that are available.
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
 | Asana | Microsoft | Allows your organization to integrate with Asana's project management platform. | [Asana connector](asana-overview.md) |
-| Asana (preview) | Microsoft | Access Asana data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| awork (preview) | Microsoft | Access awork data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Dotted (preview) | Microsoft | Access Dotted project updates in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Flow Studio Cowork (preview) | Microsoft | Access and manage Power Automate workflows in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
-| Make (preview) | Microsoft | Run Make scenarios and manage your Make account. | [Federated connectors overview](federated-connectors-overview.md) |
+| Asana | Asana | Access Asana data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| awork | awork | Access awork data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Dotted | Dotted | Access Dotted project updates in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Flow Studio Cowork | Flow Studio Solutions | Access and manage Power Automate workflows in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Make | Microsoft | Run Make scenarios and manage your Make account. | [Federated connectors overview](federated-connectors-overview.md) |
 | monday.com | Microsoft | Allows organizations to integrate with monday.com for project and workflow management. | [monday.com connector](monday-overview.md) |
-| monday.com (preview) | Microsoft | Search your boards, items, tasks, updates, and docs. | [Federated connectors overview](federated-connectors-overview.md) |
-| Quire (preview) | Microsoft | Access Quire project data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| monday.com | monday.com | Search your boards, items, tasks, updates, and docs. | [Federated connectors overview](federated-connectors-overview.md) |
+| Nozbe | Nozbe | Access Nozbe data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Onplana | Onplana | Access Onplana data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Quire | Quire | Access Quire project data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Smartsheet | Smartsheet | Search and inspect Smartsheet sheets, reports, dashboards, and folders. | [Federated connectors overview](federated-connectors-overview.md) |
 | Smartsheet Sheet | Microsoft | Enables organizations to index and search Smartsheet data. | [Smartsheet Sheet connector](smartsheet-sheet-overview.md) |
+| Strety | Strety | Access Strety data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Sales and marketing
 
@@ -321,15 +371,18 @@ The following table lists the available sales and marketing connectors.
 
 | Connector name | Publisher | Description | Learn more |
 | --- | --- | --- | --- |
-| Adobe Journey Optimizer (preview) | Microsoft | Work with Adobe Journey Optimizer journeys, campaigns, audiences, and offers. | [Federated connectors overview](federated-connectors-overview.md) |
-| Ahrefs (preview) | Microsoft | Check backlinks, keywords, rankings, and SEO traffic. | [Federated connectors overview](federated-connectors-overview.md) |
-| Crossbeam (preview) | Microsoft | Find partner overlaps, shared customers, and co-selling opportunities. | [Federated connectors overview](federated-connectors-overview.md) |
-| Customer.io (preview) | Microsoft | Analyze email, SMS, and push campaigns, journeys, and segments. | [Federated connectors overview](federated-connectors-overview.md) |
+| Adobe Journey Optimizer | Adobe | Work with Adobe Journey Optimizer journeys, campaigns, audiences, and offers. | [Federated connectors overview](federated-connectors-overview.md) |
+| Ahrefs | Microsoft | Check backlinks, keywords, rankings, and SEO traffic. | [Federated connectors overview](federated-connectors-overview.md) |
+| Bigmind | Microsoft | Access Bigmind data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Crossbeam | Microsoft | Find partner overlaps, shared customers, and co-selling opportunities. | [Federated connectors overview](federated-connectors-overview.md) |
+| Customer.io | Microsoft | Analyze email, SMS, and push campaigns, journeys, and segments. | [Federated connectors overview](federated-connectors-overview.md) |
 | Gong | Microsoft | Lets organizations integrate with Gong sales call transcripts to better uncover actionable insights. | [Gong connector](gong-connector.md) |
-| Grain (preview) | Microsoft | Search sales call recordings, highlights, and conversation analytics. | [Federated connectors overview](federated-connectors-overview.md) |
-| HG Insights (preview) | Microsoft | Access real-time company, technology, buyer intent, and market intelligence. | [Federated connectors overview](federated-connectors-overview.md) |
-| Local Falcon (preview) | Microsoft | Track your local and AI search visibility and map rankings. | [Federated connectors overview](federated-connectors-overview.md) |
-| MailerLite (preview) | Microsoft | Manage email campaigns, subscribers, and automation workflows. | [Federated connectors overview](federated-connectors-overview.md) |
+| Grain | Microsoft | Search sales call recordings, highlights, and conversation analytics. | [Federated connectors overview](federated-connectors-overview.md) |
+| HG Insights | Microsoft | Access real-time company, technology, buyer intent, and market intelligence. | [Federated connectors overview](federated-connectors-overview.md) |
+| Highspot | Microsoft | Access Highspot data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Local Falcon | Microsoft | Track your local and AI search visibility and map rankings. | [Federated connectors overview](federated-connectors-overview.md) |
+| MailerLite | Microsoft | Manage email campaigns, subscribers, and automation workflows. | [Federated connectors overview](federated-connectors-overview.md) |
+| Sprouts.ai | Microsoft | Enrich account data and check your Sprouts credit balance. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Support
 

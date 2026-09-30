@@ -70,8 +70,6 @@ The Jira Cloud connector provides the following capabilities:
 
 The Jira Cloud connector has the following limitations:
 
-- The connector doesn't support Jira Server or Jira Data Center.
-- Attachments aren't indexed.
 - The connector doesn't support the **Any user logged in** application role for granting issue access.
 
 ## Data types indexed from Jira Cloud
