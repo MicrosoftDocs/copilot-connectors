@@ -6,7 +6,7 @@ author: jasonjoh
 ms.author: jasonjoh
 manager: calvind
 ms.reviewer: mansipakhale
-ms.date: 09/25/2026
+ms.date: 09/30/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ms.audience: Admin
@@ -58,22 +58,22 @@ Currently, federated connectors are available for the following data sources, or
 
 | Category | Data sources |
 | --- | --- |
-| Accounting and finance | Aiwyn Tax, CB Insights, Clarity AI, DiligenceSquared, FactSet, FinancialReports, Fiscal.ai, Klardaten DATEV-Connector, LSEG, Mercury, Money Forward, Moody's, Morningstar, MT Newswires, PrivCo, Quartr, Syrto, Xero, Zacks, Zoho Books |
+| Accounting and finance | Aiwyn Tax, CB Insights, Clarity AI, D&B Finance Analytics, D&B Risk Analytics, DiligenceSquared, FactSet, FinancialReports, Fiscal.ai, Fitch Solutions, Klardaten DATEV-Connector, LSEG, Mercury, Money Forward, Moody's, Morningstar, Morningstar Credit Analytics, MT Newswires, PrivCo, Quartr, S&P Kensho, Square, Syrto, Xero, Zacks, Zoho Books |
 | Collaboration | Gmail, Linear, Miro, TeamsMaestro, Trello |
 | Content management | PandaDoc, Templafy, TextMine |
-| CRM | Clarify, HubSpot |
-| Data analytics | ARC Advisory AI, Ask Rystad, AskPolly, Contentsquare, DecisionPoint, EIU, IDC, Mixpanel, MoSPI, Polar Analytics, Pulse by PassBy, Resilinc, S&P Global Energy, Statista, Wolfram |
-| Site design | Canva, Cloudinary, Excalidraw, Mobbin, Webflow |
+| CRM | Clarify, HubSpot, Intercom |
+| Data analytics | Amass, ARC Advisory AI, Ask Rystad, AskPolly, Contentsquare, DecisionPoint, Dovetail, EIU, IBISWorld, IDC, Mixpanel, MoSPI, Optiq Bridge US, Polar Analytics, Pulse by PassBy, Resilinc, S&P Global Energy, Statista, Synapse.org, Tastewise, Trellis, Wolfram |
+| Site design | Canva, Cloudinary, Excalidraw, Mobbin, Trimble SketchUp, Webflow |
 | IT management tools | Apify, Clerk, Context7, Enosix, GoDaddy, GraphOS MCP Tools, Hugging Face, Jam, pg-aiguide |
-| Training and tutorial | Article Galaxy, Articulate, Articulate EU, Autodesk Product Help, Microsoft Learn, Padlet, Scite, Siemens |
-| Files and documents | Box |
-| Health and life sciences | BioRender, Consensus, Cortellis Regulatory Intelligence, NyquistAI, PopHIVE, SciLeads, Smarts.bio |
-| Legal + HR and recruiting | BoardWise, Courtroom5, Descrybe Legal Engine, Dice, DirectCase Legal Search, Everlaw, Gusto, Harvey, Harvey AU, Harvey EU, iManage Work, Lawstronaut, Legal Data Hunter, Relativity, ZipRecruiter |
+| Training and tutorial | Article Galaxy, Articulate, Articulate EU, Autodesk Product Help, Learn365, Microsoft Learn, Padlet, QuizFlight, Scite, Siemens |
+| Files and documents | Box, Egnyte |
+| Health and life sciences | BioRender, CAS Connections, ClinicalTrials.gov, CMS Coverage, CMS Drug Data, CMS NPI Registry, Consensus, Cortellis Regulatory Intelligence, FDA Safety (openFDA), NyquistAI, Open Targets, PopHIVE, SciLeads, Smarts.bio |
+| Legal + HR and recruiting | BoardWise, Courtroom5, Descrybe Legal Engine, Dice, DirectCase Legal Search, Everlaw, Gusto, Harvey, Harvey AU, Harvey EU, iManage Work, Lawstronaut, Legal Data Hunter, LegalZoom, Litera, Midpage Legal Research, NetDocuments US, Relativity, SeekOut, Teamtailor, ZipRecruiter |
 | IT service management tools | Cloudflare, Malwarebytes |
-| Reference | AllTrails, Fibre2Fashion, Granted, Kindora Funder Discovery, Melon, SiteTrax.io, Tavily |
-| Productivity | DeepL MCP, Fellow.ai, Fireflies, Goodnotes, Google Calendar, Google Contacts, Granola, Mem, Memoket, Notion, Taskrabbit Booking Assistance |
-| Project management | Asana, awork, Dotted, Flow Studio Cowork, Make, monday.com, Quire |
-| Sales and marketing | Adobe Journey Optimizer, Ahrefs, Crossbeam, Customer.io, Grain, HG Insights, Local Falcon, MailerLite |
+| Reference | AllTrails, bioRxiv, Blackbaud, ChEMBL, DrugBank, eSIM Copilot, Fibre2Fashion, Granted, ICD-10 Diagnosis Codes, Kindora Funder Discovery, MedlinePlus, Melon, PubMed, RxNorm & Drug Classes (NLM), SiteTrax.io, Stable Baseline, Tavily, Viator |
+| Productivity | Airtable, DeepL MCP, Fellow.ai, Fireflies, Gamma, GoLinks, Goodnotes, Google Calendar, Google Contacts, Granola, Mem, Memoket, Notion, SlidesGPT, Taskrabbit Booking Assistance |
+| Project management | Asana, awork, Dotted, Flow Studio Cowork, Make, monday.com, Nozbe, Onplana, Quire, Smartsheet, Strety |
+| Sales and marketing | Adobe Journey Optimizer, Ahrefs, Bigmind, Crossbeam, Customer.io, Grain, HG Insights, Highspot, Local Falcon, MailerLite, Sprouts.ai |
 
 ISVs use a single connector manifest and single publishing pipeline for all connector types. For more information, see [ISV success guidance](/partner-center/membership/isv-success).
 
