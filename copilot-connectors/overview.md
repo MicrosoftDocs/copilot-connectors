@@ -6,13 +6,13 @@ manager: calvind
 ms.audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-description: "Learn how your organization can use Microsoft 365 Copilot connectors to extend Microsoft Search and Microsoft 365 Copilot experiences. Get information about the types of Copilot connectors, requirements, and management and licensing information."
-ms.date: 05/14/2026
+description: "Learn how your organization can use Microsoft 365 Copilot connectors to extend Microsoft Search and Microsoft Copilot experiences. Get information about the types of Copilot connectors, requirements, and management and licensing information."
+ms.date: 10/06/2026
 ---
 
 # Copilot connectors overview
 
-Microsoft 365 Copilot connectors extend the reach of Microsoft 365 Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using **synced connectors** or connect to data in real time by using **federated connectors**. This flexibility ensures that users can securely search and interact with both enterprise and external data sources within Microsoft 365 apps and Copilot experiences.
+Microsoft 365 Copilot connectors extend the reach of Microsoft Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using **synced connectors** or connect to data in real time by using **federated connectors**. This flexibility ensures that users can securely search and interact with both enterprise and external data sources within Microsoft 365 apps and Copilot experiences.
 
 ## Types of Copilot connectors
 
@@ -58,9 +58,9 @@ Synced connectors support self-serve configuration, with admins enabling the con
 Self-serve sync connectors have the following key features:
 
 - Index external data so it appears in Copilot and Microsoft Search results.
-- Synchronize a user’s external content into Microsoft Graph, scoped to that individual user.
-- Connect using the user’s own identity, credentials, and consent — not admin credentials.
-- Enforce the source system’s permissions, so a user only sees content they already have access to.
+- Synchronize a user's external content into Microsoft Graph, scoped to that individual user.
+- Connect using the user's own identity, credentials, and consent — not admin credentials.
+- Enforce the source system's permissions, so a user only sees content they already have access to.
 - When a user disconnects or an admin disables the connector, the indexed content is removed and synchronization stops.
 
 For more information, see [Self-serve sync connectors overview](personal-sync-connectors-overview.md).
@@ -97,7 +97,7 @@ A Copilot connector defines a connection to an external data source and syncs co
 
 After the content is ingested:
 
-- **Unified index** - The item becomes part of your organization’s cloud search index. It's full-text searchable and processed by semantic indexing AI for relevance.
+- **Unified index** - The item becomes part of your organization's cloud search index. It's full-text searchable and processed by semantic indexing AI for relevance.
 
 - **Permission-based filtering** - Search and Copilot only show items to users who have access in the source system.
 
@@ -125,9 +125,9 @@ Custom connectors offer flexibility but require maintenance. Use prebuilt connec
 
 Copilot connectors for people data integrate people data into Microsoft 365 applications to enhance and unify individual profiles. They provide a synchronized view of people data while keeping the original data authoritative in its source system. These connectors improve identity cohesion, Copilot response relevance, and data discoverability within Microsoft 365, including updated profile cards and search capabilities. For more information, see [Copilot connectors for people data](/graph/peopleconnectors).
 
-## Microsoft 365 Copilot and connectors
+## Microsoft Copilot and connectors
 
-The conversational Copilot Chat experience in Microsoft 365 Copilot, Teams, Outlook, and other Microsoft 365 apps use connector content to respond to user queries. When users ask questions or request help, Copilot retrieves data from internal and external sources.
+The conversational Copilot Chat experience in Microsoft Copilot, Teams, Outlook, and other Microsoft 365 apps use connector content to respond to user queries. When users ask questions or request help, Copilot retrieves data from internal and external sources.
 
 For example, the user query "Give me a summary of the Contoso deal" might return details from a Salesforce record if that system is connected. Copilot cites the source and provides a quick summary without requiring the user to open Salesforce.
 
@@ -146,7 +146,7 @@ Connectors make Copilot Chat a more powerful assistant, capable of answering que
 
 ## Copilot Search and connectors
 
-[Microsoft 365 Copilot Search](/copilot/microsoft-365/microsoft-365-copilot-search) is an AI-powered enterprise search experience that helps users quickly find relevant information across Microsoft 365 and beyond. Copilot Search acts as a universal search layer that integrates seamlessly into the Microsoft 365 Copilot app across desktop, web, and mobile platforms. It automatically includes indexed connector content when generating responses—no extra setup required.
+[Microsoft Copilot Search](/copilot/microsoft-365/microsoft-365-copilot-search) is an AI-powered enterprise search experience that helps users quickly find relevant information across Microsoft 365 and beyond. Copilot Search acts as a universal search layer that integrates seamlessly into the Microsoft Copilot app across desktop, web, and mobile platforms. It automatically includes indexed connector content when generating responses—no extra setup required.
 
 For example, if a user asks, "How do I file an expense report?", Copilot Search looks across Microsoft 365 and connected systems. If a relevant page is found in an internal finance wiki (via a connector), Copilot uses it to generate a concise answer with a citation.
 
