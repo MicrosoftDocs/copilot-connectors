@@ -7,7 +7,7 @@ ms.reviewer: mayanksethi
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.date: 02/23/2026
+ms.date: 10/07/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Catalog Microsoft 365 Copilot connector."
 ---
@@ -67,6 +67,7 @@ The connector supports the following:
 Before you deploy the connector, consider the following limitations:
 
 - Attachments and custom widget-based forms aren't indexed.
+- Catalog items must be associated with an active category that has a title. The service account must also be able to read the category and its category hierarchy. The connector doesn't index items that don't meet these requirements, even if the service account can read the item in the `sc_cat_item` table.
 - The incremental crawl only updates the changes in content for the catalog item. Any addition or removal of user criteria to any catalog item or the changes in identity i.e. changes in users or user criteria attributes are only synced with the periodic full crawl.
 
 

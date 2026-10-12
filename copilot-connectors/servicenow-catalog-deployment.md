@@ -7,7 +7,7 @@ audience: Admin
 ms.reviewer: mayanksethi
 ms.audience: Admin
 ms.topic: how-to
-ms.date: 09/19/2026
+ms.date: 10/07/2026
 ms.localizationpriority: Medium
 description: "Find information about how to deploy the ServiceNow Catalog Microsoft 365 Copilot connector in the Microsoft 365 admin center, including prerequisites, configuration steps, and customization options."
 ---
@@ -284,7 +284,7 @@ For **User Claim**, enter `sub` when the Microsoft Entra ID token's subject shou
 
 ### Add API namespace
 
-If you're using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For details, see [Set up REST API](servicenow-catalog-admin-setup.md#set-up-rest-api).
+If you're using the **Advanced** flow, enter the API namespace for the **Microsoft Copilot** scripted REST API that contains the `GetAllUserCriteriaV2` resource (`POST /user_criteria_v2`). For details, see [Set up REST API](servicenow-catalog-admin-setup.md#set-up-rest-api).
 
 ### Roll out
 

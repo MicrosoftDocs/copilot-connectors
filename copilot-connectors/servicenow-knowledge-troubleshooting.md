@@ -1,5 +1,5 @@
 ---
-ms.date: 09/19/2026
+ms.date: 10/07/2026
 title: "Troubleshoot issues with the ServiceNow Knowledge connector"
 ms.author: jasonjoh
 author: jasonjoh
@@ -154,6 +154,12 @@ To resolve the issue:
 Sometimes content access is restricted because the service account can't read all user criteria. This issue can happen if you use the `gs.getUserId()` or the `gs.getUser()` function within any user criteria. If you use these functions, update the user criteria to remove them. ServiceNow recommends using the `user_id`.
 
 :::image type="content" source="media/servicenow-knowledge-troubleshooting/user-criteria.png" alt-text="Screenshot of user criteria showing the use of gs.getUserId() function." lightbox="media/servicenow-knowledge-troubleshooting/user-criteria.png":::
+
+## Advanced flow uses the deprecated user criteria resource
+
+If an existing Advanced flow deployment uses the `GetAllUserCriteria` resource at `/user_criteria`, migrate it to `GetAllUserCriteriaV2`. The deprecated resource evaluates each user against all active user criteria and doesn't support evaluating multiple users in one request.
+
+Follow [Set up REST API](servicenow-knowledge-admin-setup.md#set-up-rest-api) to create the `GetAllUserCriteriaV2` resource with the `POST` method and `/user_criteria_v2` relative path. Keep the same **Microsoft Copilot** scripted REST API and API namespace, and then verify the resource path before the next full crawl.
 
 ## Unable to sign in due to single sign-on enabled ServiceNow instance
 

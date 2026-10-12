@@ -19,6 +19,17 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 
 To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
 
+## Version 4.0.5.0 (*October 13, 2026*)
+
+* Improved identity synchronization reliability and scale with enhanced incremental group and membership processing, improved handling of identity changes, and better recovery from failed writes.
+* Added incremental membership identity crawling for Jira Data Center, enabling more efficient processing of membership changes during identity crawls.
+* Improved crawl resiliency and recovery to prevent content and identity items from being omitted during crawl retries or restarts, while preserving crawl statistics during recovery.
+* Improved Confluence On-Premises connector setup and troubleshooting with earlier validation of unsupported configurations and better actionable error messages for connection and crawl failures.
+* Improved Confluence On-Premises connector performance and reliability by optimizing user identity lookups and improving item processing and pagination behavior.
+* Added support for the Customer Request Type custom field in Jira, allowing this field to be processed by the connector.
+* Improved on-premises schema handling to correctly process Microsoft Graph labels when reading connector schemas.
+* Security improvements, bug fixes, and reliability improvements.
+
 ## Version 4.0.4.0 (*September 13, 2026*)
 
 * Improved Confluence On-Prem connector crawl reliability and content navigation handling.
