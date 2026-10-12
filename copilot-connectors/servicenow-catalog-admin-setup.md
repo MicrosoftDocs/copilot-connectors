@@ -7,7 +7,7 @@ ms.reviewer: mayanksethi
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.date: 08/23/2026
+ms.date: 10/07/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Catalog Copilot connector."
 ---
@@ -38,7 +38,6 @@ The following checklists list the steps involved in configuring the environment 
 | [Create service account and set up permissions](#create-service-account-and-set-up-permissions-to-index-items) | ServiceNow admin |
 | [Identify item count for ingestion](#identify-item-count-for-ingestion) | ServiceNow admin |
 | [Set up REST API](#set-up-rest-api) | ServiceNow admin |
-| [Set up REST API to evaluate only user criteria applied to catalog items](#set-up-rest-api-to-evaluate-only-user-criteria-applied-to-catalog-items) | ServiceNow admin |
 | [Set up hierarchical permissions](#set-up-hierarchical-permissions) | ServiceNow admin |
 | [Add Microsoft 365 IP address to allowlist](#add-microsoft-365-ip-address-to-the-allowlist) | ServiceNow admin/Network admin |
 | [Resolve issues with SSO configuration](#resolve-connector-setup-issues-with-servicenow-sso-configuration) | ServiceNow admin |
@@ -157,7 +156,9 @@ The following default filter is applied during indexing. If you need to make cha
 
 `type!=bundle^sys_class_name!=sc_cat_item_guide^type!=package^active=true`
 
-To verify the item count expected for ingestion:
+The connector discovers catalog items through their categories. To be eligible for indexing, a catalog item must be associated with an active category that has a title. The service account must be able to read the category and the active parent and child categories in its hierarchy. An item isn't indexed if its category is missing, its category title is empty, its category is inactive, or the service account can't read the category.
+
+To identify the catalog items that match the item-level query filter:
 
 1. Go to the following URL: `https://<instance-name>.service-now.com/api/now/table/sc_cat_item? sysparm_fields=sys_id&sysparm_query=type!=bundle^sys_class_name!=sc_cat_item_guide^type!=package^active=true`. This link opens a list of `sys_ids`.
 
@@ -175,117 +176,14 @@ To verify the item count expected for ingestion:
 
 1. Note the item count.
 
-When the connector is set up and item sync is completed, you can check the indexed item count against this expected count to verify that all articles are indexed. For more information, see [View connection statistics](view-details.md#view-connection-statistics).
+This count represents candidate catalog items and doesn't apply the category eligibility requirements. Therefore, it can be higher than the final indexed item count. When the connector is set up and item sync is completed, compare the counts and investigate category eligibility for any difference. For more information, see [View connection statistics](view-details.md#view-connection-statistics) and [Catalog item count is higher than the indexed item count](servicenow-catalog-troubleshooting.md#catalog-item-count-is-higher-than-the-indexed-item-count).
 
 ### Set up REST API
 
-To allow the connector to fetch advanced user criteria, create a scripted REST API in your ServiceNow instance.
+To enable the connector to fetch advanced user criteria, create the `GetAllUserCriteriaV2` resource on the **Microsoft Copilot** scripted REST API. This resource evaluates each user against only the user criteria applied to catalog items—the set that the connector sends in the request—and lets the connector evaluate multiple users in a single request.
 
 > [!NOTE]
-> The `GetAllUserCriteria` resource described in this section evaluates each user against **all** active user criteria in your ServiceNow instance. If you want the connector to evaluate only the user criteria that are applied to catalog items—which reduces the number of calls and the time required for the first full identity crawl—set up the [`GetAllUserCriteriaV2` resource](#set-up-rest-api-to-evaluate-only-user-criteria-applied-to-catalog-items) instead. `GetAllUserCriteria` is scheduled for deprecation.
-
-Elevate your role in ServiceNow to `security_admin`.
-
-To set up access control:
-
-1.  In ServiceNow, go to **All** > **System Security** > **Access Control (ACL)**.
-1.  Choose **New** to create a new ACL.
-1.  Set the following values:
-
-    **Type**: REST_Endpoint 
-    **Operation**: Execute 
-    **Name**: Microsoft Copilot 
-    **Role**: admin *(or the same role assigned to the crawling account)*
-
-1.  Choose **Submit**.
-
-Create the scripted REST API:
-
-1.  Go to **All** > **System Web Services** > **Scripted Web Services** > **Scripted REST APIs**.
-1.  Choose **New**.
-1.  Enter the following information:
-
-    **Name**: Microsoft Copilot 
-    **API ID**: microsoft_copilot 
-
-1.  Choose **Submit**.
-1.  From the **Scripted REST API** list page, choose **Microsoft Copilot**.
-1.  Set **Default ACLs** to **Microsoft Copilot**. To avoid any issues with authorization, also add the **Scripted REST External Default** ACL. 
-
-Add a resource to the API:
-
-1.  On the **Resources** tab, choose **New**.
-1.  Provide the following details:
-
-    **Name**: GetAllUserCriteria 
-    **Relative Path**: /user_criteria 
-    **Script**: Paste the following code: 
-
-    ```javascript
-    (function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
-       // Get query parameters from the request
-       var queryParams = request.queryParams;
-       // Extract the 'user' sys_id, ensure it's a string or null if not provided
-       var userSysId = queryParams.user ? String(queryParams.user) : null;
-       var result = []; // Initialize an empty array for the results
-       // Check if userSysId was provided
-       if (!userSysId) {
-           gs.warn("UserCriteriaLoader API: 'user' parameter was not provided in the request.");
-           response.setStatus(400);
-           return { "error": "User sys_id is required." };
-       }
-       try {
-           // Instantiate the UserCriteriaLoader
-           var userCriteriaLoader = new sn_uc.UserCriteriaLoader();
-           var userCriterias = [];
-           var userCriteriaGr = new GlideRecord('user_criteria');
-           userCriteriaGr.addQuery('active', true); // Select active records. You can also add any connection scope filter if required
-           userCriteriaGr.query();
-           while (userCriteriaGr.next()) {
-               userCriterias.push(userCriteriaGr.getUniqueValue());
-           }
-           // Call the recommended API to get only matching criteria sys_ids
-           var matchingCriteriaIds = sn_uc.UserCriteriaLoader.getMatchingCriteria(userSysId, userCriterias);
-           // Return the array of matching criteria objects
-           return matchingCriteriaIds;
-       } catch (e) {
-           // Log any errors that occur during the process
-           gs.error("UserCriteriaLoader API: Error processing user criteria for user " + userSysId + ". Error: " + e.message);
-           response.setStatus(500); // Internal Server Error
-           return {
-               error_message: "Error processing user criteria for user " + userSysId,
-               error_details: e.message
-           };
-       }
-    })(request, response);
-    ```
-
-1.  Make sure both of the following are checked: 
-
-    **Requires authentication** 
-    **Requires ACL authorization** 
-
-1.  Make sure that **ACLs** is set to **Microsoft Copilot**. To avoid any issues with authorization, also add the **Scripted REST External Default** ACL.
-1.  Choose **Update**.
-
-To verify the setup:
-
-1.  Confirm that the following is the **Resource Path**: `/api/<API Namespace>/microsoft_copilot/user_criteria`.
-1.  Choose **Update** to save the configuration.
-
-The Microsoft 365 admin enters the **API Namespace** when they [deploy the ServiceNow Catalog connector](servicenow-catalog-deployment.md). In the following example, the API namespace is abcdef. 
-
-`/api/abcdef/microsoft_copilot/user_criteria`
-
-### Set up REST API to evaluate only user criteria applied to catalog items
-
-The [Set up REST API](#set-up-rest-api) step creates the `GetAllUserCriteria` resource, which evaluates each user against **all** active user criteria in your ServiceNow instance. On instances that define many user criteria, this approach increases the number of API calls and the time required to complete the first full identity crawl.
-
-To reduce this overhead, create the `GetAllUserCriteriaV2` resource on the **Microsoft Copilot** scripted REST API. This resource evaluates each user against **only the user criteria applied to catalog items**—the set that the connector sends in the request—and lets the connector evaluate **multiple users in a single request**. Together, these changes reduce the number of calls and the time required for the first full identity crawl.
-
-> [!NOTE]
-> - This resource coexists with `GetAllUserCriteria`; it doesn't replace it. You can set up either resource or both. If both resources are present, the connector uses `GetAllUserCriteriaV2` first. `GetAllUserCriteriaV2` will become the recommended default and, after `GetAllUserCriteria` is deprecated, the only option.
-> - `GetAllUserCriteriaV2` uses the same **Microsoft Copilot** scripted REST API and API namespace as `GetAllUserCriteria`—it isn't a separate API. If you already completed [Set up REST API](#set-up-rest-api), the access control and scripted REST API already exist, so skip ahead to **Add the resource to the API**.
+> The older `GetAllUserCriteria` resource and its script are deprecated. Use the `GetAllUserCriteriaV2` resource and the new script in this section. The new version evaluates only the user criteria sent by the connector instead of all active user criteria, and it supports multiple users in one request. These changes reduce unnecessary processing and improve identity sync efficiency.
 
 - Elevate your role in ServiceNow to `security_admin`.
 

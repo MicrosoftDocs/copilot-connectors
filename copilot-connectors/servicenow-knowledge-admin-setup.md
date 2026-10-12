@@ -7,7 +7,7 @@ ms.reviewer: mayanksethi
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.date: 08/23/2026
+ms.date: 10/09/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Knowledge Copilot connector."
 ---
@@ -39,7 +39,6 @@ The following checklists list the steps involved in configuring the environment 
 | [Verify service account permissions](#verify-service-account-permissions) | ServiceNow admin |
 | [Identify item count for ingestion](#identify-item-count-for-ingestion) | ServiceNow admin |
 | [Set up REST API](#set-up-rest-api) | ServiceNow admin |
-| [Set up REST API to evaluate only user criteria applied to articles](#set-up-rest-api-to-evaluate-only-user-criteria-applied-to-articles) | ServiceNow admin |
 | [Set up REST API for incremental identity sync](#set-up-rest-api-for-incremental-identity-sync) | ServiceNow admin |
 | [Set up hierarchical permissions](#set-up-hierarchical-permissions) | ServiceNow admin |
 | [Add Microsoft 365 IP address to allowlist](#add-microsoft-365-ip-address-to-the-allowlist) | ServiceNow admin/Network admin |
@@ -218,122 +217,13 @@ When you set up the connector and complete item sync, you can check the indexed 
 
 ### Set up REST API
 
-To enable the connector to fetch advanced user criteria, create a scripted REST API in your ServiceNow instance.
+To enable the connector to fetch advanced user criteria, create the `GetAllUserCriteriaV2` resource on the **Microsoft Copilot** scripted REST API. This resource evaluates each user against only the user criteria applied to knowledge articles—the set that the connector sends in the request—and lets the connector evaluate multiple users in a single request.
 
 > [!NOTE]
-> The `GetAllUserCriteria` resource described in this section evaluates each user against **all** active user criteria in your ServiceNow instance. If you want the connector to evaluate only the user criteria that are applied to knowledge articles—which reduces the number of calls and the time required for the first full identity crawl—set up the [`GetAllUserCriteriaV2` resource](#set-up-rest-api-to-evaluate-only-user-criteria-applied-to-articles) instead. `GetAllUserCriteria` is scheduled for deprecation.
-
+> The older `GetAllUserCriteria` resource and its script are deprecated. Use the `GetAllUserCriteriaV2` resource and the new script in this section. The new version evaluates only the user criteria sent by the connector instead of all active user criteria, and it supports multiple users in one request. These changes reduce unnecessary processing and improve identity sync efficiency.
 
 > [!TIP]
 > You can automate this setup by using a background script. For more information, see [Set up REST API for advanced flow](servicenow-knowledge-setup-scripts.md#step-4-set-up-rest-api-for-advanced-flow).
-
-- Elevate your role in ServiceNow to `security_admin`.
-
-Create access control:
-
-1. In ServiceNow, go to **All > System Security > Access Control (ACL)**.
-1. Choose **New** to create a new ACL.
-
-1. Set the following values:
-
-   - **Type**: `REST_Endpoint`
-   - **Operation**: `Execute`
-   - **Name**: `Microsoft Copilot`
-   - **Role**: `admin` *(or the same role assigned to the crawling account)*
-1. Choose **Submit**.
-
-
-Create the scripted REST API:
-
-1. Go to **All > System Web Services > Scripted Web Services > Scripted REST APIs**.
-1. Choose **New**.
-
-1. Enter the following information:
-
-   - **Name**: `Microsoft Copilot`
-   - **API ID**: `microsoft_copilot`
-4. Choose **Submit**.
-1. From the **Scripted REST API** list page, choose **Microsoft Copilot**.
-
-1. Set **Default ACLs** to **Microsoft Copilot**. To avoid any problems with authorization, also add the **Scripted REST External Default** ACL.
-
-
-Add a resource to the API:
-
-1. On the **Resources** tab, choose **New**.
-1. Fill in the details:
-
-   - **Name**: `GetAllUserCriteria`
-   - **Relative Path**: `/user_criteria`
-   - **Script**: Paste the following code:
-
-    ```js
-    (function execute (/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
-       // Get query parameters from the request
-       var queryParams = request.queryParams;
-       // Extract the 'user' sys_id, ensure it's a string or null if not provided
-       var userSysId = queryParams.user ? String(queryParams.user) : null;
-       var result = []; // Initialize an empty array for the results
-       // Check if userSysId was provided
-       if (!userSysId) {
-           gs.warn("UserCriteriaLoader API: 'user' parameter was not provided in the request.");
-           response.setStatus(400);
-           return { "error": "User sys_id is required." };
-       }
-       try {
-           // Instantiate the UserCriteriaLoader
-           var userCriteriaLoader = new sn_uc.UserCriteriaLoader();
-           var userCriterias = [];
-           var userCriteriaGr = new GlideRecord('user_criteria');
-           userCriteriaGr.addQuery('active', true); // Select active records. You can also add any connection scope filter if required
-           userCriteriaGr.query();
-           while (userCriteriaGr.next()) {
-               userCriterias.push(userCriteriaGr.getUniqueValue());
-           }
-           // Call the recommended API to get only matching criteria sys_ids
-           var matchingCriteriaIds = sn_uc.UserCriteriaLoader.getMatchingCriteria(userSysId, userCriterias);
-           // Return the array of matching criteria objects
-           return matchingCriteriaIds;
-       } catch (e) {
-           // Log any errors that occur during the process
-           gs.error("UserCriteriaLoader API: Error processing user criteria for user " + userSysId + ". Error: " + e.message);
-           response.setStatus(500); // Internal Server Error
-           return {
-               error_message: "Error processing user criteria for user " + userSysId,
-               error_details: e.message
-           };
-       }
-    })(request, response);
-    ```
-
-1. Make sure both of the following options are checked:
-
-   - **Requires authentication**
-   - **Requires ACL authorization**
-1. Make sure that **ACLs** is set to **Microsoft Copilot**. To avoid any problems with authorization, also add the **Scripted REST External Default** ACL.
-
-1. Choose **Update**.
-
-
-To verify the setup:
-
-1. Confirm that the following is the **Resource Path**: `/api/<API Namespace>/microsoft_copilot/user_criteria`.
-1. Choose **Update** to save the configuration.
-
-
-The Microsoft 365 admin enters the **API Namespace** when they [deploy the ServiceNow Knowledge connector](servicenow-knowledge-deployment.md). In the following example, the API namespace is `abcdef`.
-
-`/api/abcdef/microsoft_copilot/user_criteria`
-
-### Set up REST API to evaluate only user criteria applied to articles
-
-The [Set up REST API](#set-up-rest-api) step creates the `GetAllUserCriteria` resource, which evaluates each user against **all** active user criteria in your ServiceNow instance. On instances that define many user criteria, this approach increases the number of API calls and the time required to complete the first full identity crawl.
-
-To reduce this overhead, create the `GetAllUserCriteriaV2` resource on the **Microsoft Copilot** scripted REST API. This resource evaluates each user against **only the user criteria applied to knowledge articles**—the set that the connector sends in the request—and lets the connector evaluate **multiple users in a single request**. Together, these changes reduce the number of calls and the time required for the first full identity crawl.
-
-> [!NOTE]
-> - This resource coexists with `GetAllUserCriteria`; it doesn't replace it. You can set up either resource or both. If both resources are present, the connector uses `GetAllUserCriteriaV2` first. `GetAllUserCriteriaV2` will become the recommended default and, after `GetAllUserCriteria` is deprecated, the only option.
-> - `GetAllUserCriteriaV2` uses the same **Microsoft Copilot** scripted REST API and API namespace as `GetAllUserCriteria`—it isn't a separate API. If you already completed [Set up REST API](#set-up-rest-api), the access control and scripted REST API already exist, so skip ahead to **Add the resource to the API**.
 
 - Elevate your role in ServiceNow to `security_admin`.
 
@@ -513,14 +403,22 @@ Add the resource to the API:
      *       sys_audit_delete_user      - Hard-deleted users
      *       user_criteria              - Changes to user_criteria definitions
      *
-     * Response:
+     * Response (on the wire):
+     *   ServiceNow wraps whatever is passed to response.setBody() in a "result" envelope.
+     *   The connector requires that envelope to be a JSON array and deserializes result[0]
+     *   into its ChangesResponse model, so the body is set to a single-element array:
+     *
      *   {
-     *     "changes": [
-     *       { "id": "<sys_id>", "type": "user"|"user_criteria", "action": "added"|"modified"|"deleted", "timestamp": "..." }
-     *     ],
-     *     "totalCount": N,
-     *     "checkpoint": "<checkpoint_value_used>",
-     *     "since": "<since_value_used>"
+     *     "result": [
+     *       {
+     *         "changes": [
+     *           { "id": "<sys_id>", "type": "user"|"user_criteria", "action": "added"|"modified"|"deleted", "timestamp": "..." }
+     *         ],
+     *         "totalCount": N,
+     *         "checkpoint": "<checkpoint_value_used>",
+     *         "since": "<since_value_used>"
+     *       }
+     *     ]
      *   }
      */
     (function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
@@ -785,12 +683,12 @@ Add the resource to the API:
             changes.push(changesMap[keys[i]]);
         }
 
-        response.setBody({
+        response.setBody([{
             changes: changes,
             totalCount: changes.length,
             checkpoint: checkpoint,
             since: since
-        });
+        }]);
 
     })(request, response);
     ```
@@ -810,9 +708,9 @@ Enable auditing so that the connector can detect changes:
 
 1. Confirm that the **Audit** plugin (`com.glide.audit`) is active.
 1. Grant the service account **read** access to `sys_audit` and `sys_audit_delete`. Confirm that it also has read access to `sys_user`, `sys_user_has_role`, `sys_user_grmember`, and `user_criteria`, which the script queries directly.
-1. Enable auditing—including delete auditing—on the tables and fields listed in the following table.
+1. Enable auditing on each table listed in the following table. Enable auditing at the **table level**—turn on the **Audit** attribute on the table's dictionary record. ServiceNow records field changes in `sys_audit` only when the table itself is audited; setting the audit flag on individual fields alone doesn't capture field changes. Table-level auditing also records deletions in `sys_audit_delete`. The **Monitored fields** column lists the fields the connector evaluates for identity changes.
 
-| Table | Audited fields |
+| Table | Monitored fields |
 | ----- | -------------- |
 | `sys_user` | `department`, `company`, `location`, `active` |
 | `sys_user_has_role` | `user` |

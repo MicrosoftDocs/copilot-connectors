@@ -7,7 +7,7 @@ ms.reviewer: mayanksethi
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.date: 02/23/2026
+ms.date: 10/07/2026
 ms.localizationpriority: Medium
 description: "Get the steps that the ServiceNow admin needs to complete for your organization to configure the ServiceNow Tickets Copilot connector."
 ---
@@ -79,6 +79,8 @@ Create a ServiceNow service account with the **itil role** assigned and read acc
 **Feature** | **Read access required tables** | **Description**
 --- | :---: | ---
 Index base [Task table fields](https://docs.servicenow.com/bundle/sandiego-platform-administration/page/administer/task-table/reference/r_ImportantTaskTableFields.html#r_ImportantTaskTableFields) | `task` | Read default fields from task tables
+Index ticket attachments | `sys_attachment` | Read attachment metadata
+| | `sys_attachment_doc` | Read attachment content
 Sync user tables | `sys_user` | Read user access details for tickets
 | | `sys_user_has_role` | Read role information of users
 | | `sys_user_grmember` | Read group membership of users
