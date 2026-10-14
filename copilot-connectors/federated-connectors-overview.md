@@ -156,6 +156,14 @@ The following image shows how the user accesses federated connector data sources
 
 :::image type="content" source="media/federated-connectors/researcher-data-source.png" alt-text="Screenshot of federated connector data sources in Researcher." lightbox="media/federated-connectors/researcher-data-source.png":::
 
+## User experience and controls
+
+To connect and use a federated connector in Microsoft 365 Copilot Chat, follow this path: **Microsoft 365 Copilot Chat** > **...** > **Settings** > **Sources** > select a data source > **Connect**.
+
+An admin must enable the connector and make it available to users. Sign in to the data source with your own credentials, return to Copilot Chat, and enter a prompt that describes what you want to retrieve or do. Include the data source name and relevant details, such as a project or record name. For example, ask "Find the open issues for Project Alpha in my connected project-tracking tool and summarize their status." For illustrated connection steps, see [Connect to federated connectors in Copilot Chat](#connect-to-federated-connectors-in-copilot-chat).
+
+After connecting a data source, users can ask questions in a supported Copilot experience. Copilot selects relevant connector tools at runtime and uses the live results returned by the source to respond in the conversation. The source system remains the system of record, and users can access only the data their account is permitted to access.
+
 ## Dynamic tooling through MCP
 
 Dynamic tooling enables Microsoft 365 Copilot to retrieve information from connected systems and take actions in them at runtime based on a user's request.
@@ -266,15 +274,13 @@ Synced connectors are supported at an organization level; federated connectors a
 
 Both federated and synced connectors can coexist in your tenant and appear together in your connector list.
 
-
 ### Does the **Allowed plugins type** setting apply to federated connectors released in the future?
-Yes. The setting applies to connectors released after you configure it. If you deselect the **Microsoft-published** and **third-party-published** options, users can't access new connectors until an admin enables them. If you select those options, new connectors follow the default rollout behavior.
 
+Yes. The setting applies to connectors released after you configure it. If you deselect the **Microsoft-published** and **third-party-published** options, users can't access new connectors until an admin enables them. If you select those options, new connectors follow the default rollout behavior.
 
 ### How do ISVs publish connectors?
 
 ISVs use a single connector manifest and single publishing pipeline for all connector types.
-
 
 ## Related content
 
