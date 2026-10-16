@@ -63,8 +63,9 @@ The Google Drive connector provides the following capabilities:
 
 The Google Drive connector has the following limitations:
 
-- Comments and replies in Google Drive files aren't indexed.
 - Folder-level metadata isn't indexed.
+- You can index and search the content of the following formats: DOC, DOCM, DOCX, DOT, DOTX, EML, GIF, HTML, JPEG, JPG, MHT, MHTML, MSG, NWS, OBD, OBT, ODP, ODS, ODT, ONE, PDF, PNG, POT, PPS, PPT, PPTM, PPTX, TXT, XLB, XLC, XLSB, XLS, XLSX, XLT, XLXM, XML, XPS, and ZIP. Only the textual content of these formats is indexed; all multimedia content is ignored. For multimedia and other file types, only metadata is indexed.
+- If the file size is over 20 MB, the content of this file isn't indexed and can't be searched.
 
 ## Data types indexed from the Google Drive connector
 

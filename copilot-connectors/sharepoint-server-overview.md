@@ -1,5 +1,5 @@
 ---
-ms.date: 04/22/2026
+ms.date: 10/05/2026
 title: "SharePoint Server connector overview"
 ms.author: venk
 author: venk
@@ -10,6 +10,8 @@ ms.topic: concept-article
 ms.localizationpriority: medium
 description: "Learn about the capabilities, limitations, and use cases for the SharePoint Server Microsoft 365 Copilot connector."
 ---
+
+<!-- cSpell:ignore venk srramam SPSE FMLA FINRA -->
 
 # SharePoint Server connector overview
 
@@ -44,42 +46,42 @@ The following table lists common use cases for the SharePoint Server connector.
 
 The following sample prompts show the type of queries users can issue against the SharePoint Server content in Copilot Chat.
 
-**HR**
+### HR
 
 - What are the steps for an employee to submit a Family and Medical Leave Act (FMLA) request?
 - Which HR policy documents covering compensation and benefits were revised in Q1 2026?
 - Draft a manager briefing on the rules for scheduling weekend shifts for unionized hourly employees at the Chicago plant, drawing from the collective bargaining agreement and overtime policy documents.
 
-**Legal & compliance**
+### Legal & compliance
 
 - How does our SOX compliance policy define segregation of duties for financial system access?
 - Which regulatory examination response documents relate to the Q3 2025 FINRA audit?
 - Summarize the commitments made to the regulator in the 2025 FINRA examination and identify what evidence of completion is documented in the corrective action plan.
 
-**IT operations**
+### IT operations
 
 - What are the steps to restore service after a database failover on the customer-facing API?
 - List all security hardening procedures updated after the February 2026 security audit.
 - Analyze the post-implementation review reports from last quarter and summarize recurring issues by change category, highlighting any that should be escalated to the CAB.
 
-**Operations & quality**
+### Operations and quality
 
 - How does the standard operating procedure define the line changeover process on the packaging line?
 - Which quality procedure documents were revised following the ISO 9001 surveillance audit in Q4 2025?
 - Analyze the internal audit findings against the process control plan and generate a summary of non-conforming production steps with their associated corrective procedures.
 
-**Engineering & R&D**
+### Engineering and R&D
 
 - What are the operating temperature limits specified in the design specification for the thermal management module?
 - List all design verification test reports and validation protocols revised since the design freeze in February 2026.
 - Analyze the design history file and verification test reports in SharePoint to identify open verification gaps and draft a remediation status summary by requirement.
 
-**Finance**
+### Finance
 
 - What approval thresholds does our capital expenditure policy require for business unit sign-off?
 - Summarize which business units are tracking behind plan based on the quarterly business reviews and budget variance reports in SharePoint, and list any approved cost-reduction commitments.
 
-**Executive & leadership**
+### Executive and leadership
 
 - What does the board-approved risk appetite statement say about our tolerance for cybersecurity incidents?
 - List all capital investment proposals reviewed by the steering committee in H1 2026.
@@ -87,7 +89,19 @@ The following sample prompts show the type of queries users can issue against th
 
 ## Build agents with the SharePoint Server connector
 
-Apart from Copilot Chat, organizations can use this connector as a knowledge source in declarative agents. While there are multiple ways to build declarative agents in Microsoft 365, SharePoint Server is currently only supported through the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit) in Visual Studio Code. The toolkit lets you set up the agent in a few easy steps by authoring a [declarative agent manifest](/microsoft-365/copilot/extensibility/declarative-agent-manifest-1.6).
+Developers can use the connector as a knowledge source in declarative agents built with [Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder) or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit) in Visual Studio Code. By using Agents Toolkit, developers configure the knowledge source in the [declarative agent manifest](/microsoft-365/copilot/extensibility/declarative-agent-manifest-1.6). SharePoint Server connector content isn't yet supported as a knowledge source in Microsoft Copilot Studio.
+
+### Configure SharePoint Server content for a declarative agent
+
+Before you begin, ensure your organization has configured the SharePoint Server connector and that the on-premises content is indexed and available in Microsoft 365 Copilot.
+
+1. Open the declarative agent in Microsoft 365 Agent Builder, and then select **Configure**.
+1. Under **Add knowledge**, locate **Web search**, and then select **Add** (+).
+1. Enter the URL of the indexed SharePoint Server site that contains the content.
+1. After Agent Builder resolves the URL and adds the site under **Cloud files** > **SharePoint**, turn on **Cloud files** so the agent can use content from the configured SharePoint source.
+1. Configure other knowledge sources as needed, and then preview and test the agent before you create or publish it.
+
+The agent can ground its responses in indexed content from the specified site. Source permissions continue to apply, so users receive only information they're authorized to access.
 
 ## Connector capabilities and limitations
 
@@ -103,7 +117,6 @@ The SharePoint Server connector has the following limitations:
 - **Supports documents and site pages only** – The connector only supports indexing documents and site pages.
 - **Site-level exclusions only** – Exclusion rules exclude only the specified sites. They can't be used to exclude certain lists, libraries, or content types inside a site.
 - **No staged rollout** – [Staged rollout](staged-rollout.md) is not supported in SharePoint Server connections.
-- **Declarative agent limitations** – SharePoint Server is currently only supported as a knowledge source in declarative agents through the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit) in Visual Studio Code.
 - **No custom engine agent support** – Creating custom engine agents in Microsoft Copilot Studio using the SharePoint Server connector content is not supported.
 
 ## Item types indexed from SharePoint Server

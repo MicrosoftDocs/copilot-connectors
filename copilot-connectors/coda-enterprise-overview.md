@@ -1,5 +1,5 @@
 ---
-title: "Coda Enterprise connector overview"
+title: "Superhuman Docs Enterprise connector overview"
 ms.author: jasonjoh
 author: jasonjoh
 manager: calvind
@@ -7,24 +7,26 @@ ms.reviewer: irenehuang
 audience: Admin
 ms.audience: Admin
 ms.topic: concept-article
-ms.date: 12/16/2025
+ms.date: 10/08/2026
 ms.localizationpriority: Medium
-description: "Learn about the capabilities, limitations, and use cases for the Coda Enterprise Microsoft 365 Copilot connector."
+description: "Learn about the capabilities, limitations, and use cases for the Superhuman Docs Enterprise Microsoft 365 Copilot connector."
 ---
 
-# Coda Enterprise connector overview
+<!-- cSpell:ignore irenehuang -->
 
-The Coda Enterprise Microsoft 365 Copilot connector enables your organization to index documents and pages from your Coda Enterprise environment. After you configure the connector, users can search and retrieve Coda content directly from Microsoft 365 Copilot and Microsoft Search. The connector maintains Coda access controls to ensure that users can only see content they have permission to view.
+# Superhuman Docs Enterprise connector overview
 
-## Why use the Coda Enterprise connector to index your data?
+The Superhuman Docs Enterprise Microsoft 365 Copilot connector enables your organization to index documents and pages from your Superhuman Docs Enterprise environment. After you configure the connector, users can search and retrieve Superhuman Docs content directly from Microsoft 365 Copilot and Microsoft Search. The connector maintains Superhuman Docs access controls to ensure that users can only see content they have permission to view.
 
-Use the Coda Enterprise connector to make Coda content discoverable across Microsoft 365 experiences. Common use cases include:
+## Why use the Superhuman Docs Enterprise connector to index your data?
 
-- Help users quickly find information stored in Coda documents and pages through natural language queries in Copilot.
-- Support enterprise knowledge discovery by indexing project documentation, policies, procedures, and team workspaces stored in Coda.
-- Provide unified search across Microsoft 365 and Coda so users don't need to switch between apps to locate content.
-- Apply content filters to selectively index Coda content based on your organization’s requirements, such as time-based filtering.
-- Use semantic search enhancements to help users identify the most relevant Coda documents.
+Use the Superhuman Docs Enterprise connector to make Superhuman Docs content discoverable across Microsoft 365 experiences. Common use cases include:
+
+- Help users quickly find information stored in documents and pages in Superhuman Docs through natural language queries in Copilot.
+- Support enterprise knowledge discovery by indexing project documentation, policies, procedures, and team workspaces stored in Superhuman Docs.
+- Provide unified search across Microsoft 365 and Superhuman Docs so users don't need to switch between apps to locate content.
+- Apply content filters to selectively index Superhuman Docs content based on your organization’s requirements, such as time-based filtering.
+- Use semantic search enhancements to help users identify the most relevant documents in Superhuman Docs.
 
 ### Use cases
 
@@ -37,54 +39,54 @@ The following table lists potential use cases for the connector.
 | Project Management | Query release plans, status reports, and team wikis. | Better alignment, faster planning cycles. |
 | Sales/Marketing | Discover case studies, messaging docs, and campaign plans. | Improved collaboration, reduced duplicated work. |
 
-## Build agents with the Coda Enterprise connector
+## Build agents with the Superhuman Docs Enterprise connector
 
 Developers can use this connector as a knowledge source in declarative agents they build with [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [Agent Builder in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/agent-builder), or the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit).
 
 ### Example prompts
 
-The following examples show prompts that agent builders can use to help their users retrieve information from Coda Enterprise:
+The following examples show prompts that agent builders can use to help their users retrieve information from Superhuman Docs Enterprise:
 
-- Find the most recently updated Coda documents related to our Q4 planning.
-- Show me the Coda pages authored by our design team in the past month.
-- Summarize the content of the Customer feedback Coda workspace.
-- List all documents in the Coda workspace owned by me.
-- Retrieve the URL for the Coda document titled Engineering Roadmap.
+- Find the most recently updated documents in Superhuman Docs related to our Q4 planning.
+- Show me the Superhuman Docs pages authored by our design team in the past month.
+- Summarize the content of the Customer feedback workspace in Superhuman Docs.
+- List all documents in the Superhuman Docs workspace that I own.
+- Retrieve the URL for the document titled Engineering Roadmap in Superhuman Docs.
 
-## Coda Enterprise connector capabilities and limitations
+## Superhuman Docs Enterprise connector capabilities and limitations
 
-The Coda Enterprise connector enables users to:
+The Superhuman Docs Enterprise connector enables users to:
 
-- Index documents and pages from a Coda Enterprise environment while maintaining access control.
-- Use content filters to index only selected Coda content.
+- Index documents and pages from a Superhuman Docs Enterprise environment while maintaining access control.
+- Use content filters to index only selected Superhuman Docs content.
 - Apply semantic search in Copilot to improve content relevance.
-- Retrieve Coda content through Microsoft 365 Copilot and Microsoft Search.
+- Retrieve Superhuman Docs content through Microsoft 365 Copilot and Microsoft Search.
 
-The Coda Enterprise connector has the following limitations:
+The Superhuman Docs Enterprise connector has the following limitations:
 
-- Only the Coda Enterprise edition is supported. Coda Free, Pro, and Team editions aren't supported due to API restrictions.
-- Documents larger than 125 MB can't be exported via the Coda API.
-- Coda API request limits might affect large-scale indexing unless filters or multiple connections are configured.
+- Only the Superhuman Docs Enterprise edition is supported. Free, Pro, and Team editions aren't supported due to API restrictions.
+- You can't export documents larger than 125 MB through the Superhuman Docs API.
+- Superhuman Docs API request limits might affect large-scale indexing unless you configure filters or multiple connections.
 
-## Data types indexed from Coda Enterprise
+## Data types indexed from Superhuman Docs Enterprise
 
-The connector indexes documents and pages from your Coda Enterprise organization. Indexed content includes:
+The connector indexes documents and pages from your Superhuman Docs Enterprise organization. Indexed content includes:
 
 - Document metadata such as title, authors, owner, timestamps, and workspace information.
-- Document content from the main body of each Coda document for search indexing.
+- Document content from the main body of each document in Superhuman Docs for search indexing.
 - Container information, such as folder or workspace names and URLs.
 
 The connector uses semantic enrichment where supported, enabling enhanced retrieval in Copilot.
 
 ## Permissions model and access control
 
-Permissions for Coda Enterprise content follow the access control model defined in Coda:
+Permissions for Superhuman Docs Enterprise content follow the access control model defined in Superhuman Docs:
 
-- Content is visible only to users who have access to it in Coda.
+- Content is visible only to users who have access to it in Superhuman Docs.
 - Access permissions can be configured for **Everyone** or **Only people with access to this data source**.
 - Identity mapping uses Microsoft Entra ID by default. If email identifiers differ, admins can configure custom mapping rules.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy the Coda Enterprise connector](coda-enterprise-deployment.md)
+> [Deploy the Superhuman Docs Enterprise connector](coda-enterprise-deployment.md)

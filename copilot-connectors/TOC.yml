@@ -586,7 +586,7 @@ items:
       items:
       - name: Setup
         href: unily-intranet-connector.md
-    - name: Veeva On-Premises
+    - name: Veeva On-Premises (preview)
       items:
       - name: Overview
         href: veeva-onpremise-overview.md

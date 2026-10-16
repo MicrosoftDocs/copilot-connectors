@@ -2,7 +2,7 @@
 title: "ServiceNow Tickets connector overview"
 ms.author: jasonjoh
 author: jasonjoh
-manager: calvindrover
+manager: calvind
 ms.reviewer: mayanksethi
 audience: Admin
 ms.audience: Admin
@@ -11,6 +11,8 @@ ms.date: 10/07/2026
 ms.localizationpriority: Medium
 description: "Learn about the capabilities, limitations, and use cases for the ServiceNow Tickets Microsoft 365 Copilot connector, which can index incident, change_request, problem, sc_req_item, sc_task, change_task, and sc_request records."
 ---
+
+<!-- cSpell:ignore mayanksethi itil -->
 
 # ServiceNow Tickets connector overview
 
@@ -43,7 +45,7 @@ The following examples show prompts that agent builders can use to help their us
 
 The ServiceNow Tickets connector enables users to:
 
-- Perform natural language queries to retrieve ticket details.
+- Perform natural language queries to retrieve ticket details, including attachments and comments.
 - Search across incident, change request, problem, service catalog request (`sc_request`), service catalog request item (`sc_req_item`), service catalog task (`sc_task`), and change task (`change_task`) records.
 - Filter results by ticket status, priority, assignment group, and other indexed properties.
 - View ticket metadata such as creation date, assigned user, and resolution notes.
@@ -55,7 +57,6 @@ The ServiceNow Tickets connector has the following limitations:
 - The **Everyone** option on the **Users** tab doesn't process any permissions. Don't select this option unless you want to test the connection between selected team members in an isolated environment.
 - The connector doesn't support reading ACL rules for any ticket items or any table.
 - Incremental crawls don't update permissions or ACLs—only full crawls do.
-- Comments aren't indexed.
 
 ## Data types indexed from ServiceNow Tickets
 

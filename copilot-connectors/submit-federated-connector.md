@@ -11,9 +11,9 @@ ms.date: 06/03/2026
 ms.localizationpriority: Medium
 ---
 
-# Submit a federated Microsoft 365 Copilot connector
+<!-- cSpell:ignore Cowork sideload sideloading Intune -->
 
-[!INCLUDE [wiqd-beta-disclaimer](includes/wiqd-beta-disclaimer.md)]
+# Submit a federated Microsoft 365 Copilot connector
 
 The federated Microsoft 365 Copilot connector program allows partners to submit a remote Model Context Protocol (MCP) server to Microsoft for inclusion in the Connectors Gallery for Microsoft 365 Copilot tenants. After Microsoft approves your MCP server and adds it to the gallery, tenant admins review and approve the connector for their organization. After an admin approves it, Microsoft 365 Copilot connects to your remote MCP server through a public HTTPS endpoint and surfaces your content in Copilot experiences. This article explains what a connector delivers, which publishing route applies to you, how to test before you publish, and what to expect during review.
 
@@ -82,11 +82,12 @@ If you come from declarative agent development, these distinctions are worth rea
 | The declarative agent plugin manifest and the agent connector manifest are the same file. | They aren't interchangeable. A declarative agent plugin and an agent connector are different artifacts, and each has its own manifest and its own submission path. |
 | Plugins only work in Cowork. | A published connector answers across Chat, Excel, Cowork, and Researcher, with Word and PowerPoint coming soon. You don't publish separately for each surface. |
 | Publishing to the Microsoft Store replaces the admin center path. | It doesn't. The Microsoft 365 admin center experience is generally available and isn't being withdrawn. Store submission is an additional route. |
+| My connector is published, but a customer's users can't see it. | Availability is controlled by the customer's admin settings: **Agent and plugin access**, **User access**, and staged rollout. Gallery availability can also differ by cloud (for example, GCC). See [Manage federated connectors](manage-federated-connectors.md). |
 | There's no way to try an app before publishing it. | Sideload a signed package onto pilot devices first. See [Test by sideloading](/windows/application-management/sideload-apps-in-windows). |
 
 ## For line-of-business apps: publish through the Microsoft 365 admin center
 
-If you're building for your own organization, publish through the Microsoft 365 admin center. It's the guided path from a working connector to an approved app inside one tenant: an admin uploads the app, reviews what it can reach, and approves it for the organization or for a pilot group, without leaving the console they already use to administer Copilot. This experience is generally available.
+If you're building for your own organization, publish through the Microsoft 365 admin center. It's the guided path from a working connector to an approved app inside one tenant: an admin uploads the app, reviews what it can reach, and approves it for the organization or for a pilot group, without leaving the console they already use to administer Copilot. This experience is generally available. Line-of-business connectors fall under **Allow agents and plugins built by your organization** and are also limited by **User access**.
 
 Microsoft Store submission is now available to line-of-business teams as well. It's an addition, not a replacement: the admin center path stays as it is. Choose store submission when you want store-managed distribution, signing, and updates instead of maintaining your own hosting and certificate rotation. Choose the admin center when the app serves one tenant and you want approval and scoping to stay with your Copilot admins.
 
@@ -130,6 +131,8 @@ Provide the following artifacts with your submission. Incomplete artifacts can s
 Microsoft accepts submissions on a rolling basis. Review time varies with submission volume and how complete your artifacts are. After you submit, Microsoft validates the metadata, assets, and technical requirements, integrates the connector, coordinates validation by mail, then moves to release discussions and ring-based rollout planning.
 
 After Microsoft approves the connector and publishes it in the gallery, each customer organization's admin must approve it before it is enabled for that organization. Microsoft doesn't provide notifications for every intermediate status change. For status questions, contact your Microsoft representative.
+
+Partner connectors fall under **Allow agents and plugins built by external publishers** in **Agents** > **Settings** > **Agent and plugin access**. In organizations that clear this option, your connector isn't available to users until an admin turns it on individually. Availability is also limited by the organization's **User access** setting and the connector's staged rollout.
 
 When you submit, you agree to maintain connector functionality and security over time, respond promptly to security issues, provide accurate metadata, assets, and documentation, and support Microsoft validation and ring-based rollout activities.
 
