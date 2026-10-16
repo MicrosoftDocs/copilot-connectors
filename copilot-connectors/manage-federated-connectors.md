@@ -1,128 +1,107 @@
 ---
 title: Manage federated connector availability
-description: Learn how to use PowerShell to control the availability of federated connectors for Microsoft 365 Copilot in your organization.
-#customer intent: As an admin, I want to learn how to manage federated connectors for Microsoft 365 Copilot using PowerShell.
+description: Learn how to control the availability of federated connectors for Microsoft 365 Copilot by using Agent and plugin access, User access, and connector-level settings in the Microsoft 365 admin center.
+#customer intent: As an admin, I want to manage federated connector availability in the Microsoft 365 admin center.
 author: jasonjoh
 ms.author: jasonjoh
 manager: calvind
 ms.reviewer: mansipakhale
-
-ms.date: 04/28/2026
+ms.date: 10/15/2026
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.audience: Admin
 ---
 
-# Manage federated connector availability
+<!-- cSpell:ignore mansipakhale -->
 
-[!INCLUDE [wiqd-beta-disclaimer](includes/wiqd-beta-disclaimer.md)]
+# Manage federated connector availability
 
 Federated connectors for Microsoft 365 Copilot enable users to access information from external data sources directly within their Copilot experience. Microsoft provides default federated connectors that use the Model Context Protocol (MCP) to integrate with popular services and tools. While these connectors enhance Copilot's capabilities by extending its knowledge base, organizations might need to control their availability for security, compliance, or governance reasons.
 
-As an administrator, you can use PowerShell to manage the availability of all default federated connectors across your tenant. This centralized management approach allows you to quickly disable or enable connectors organization-wide while maintaining visibility and control over individual connector settings.
-
-> [!IMPORTANT]
-> Microsoft is retiring the command-line (CLI) toggle for setFederatedConnectors by **August 25, 2026**. The CLI is being deprecated so that connector and agent settings are honored from the same global tenant settings, giving you one consistent place to govern both. Going forward, you can manage the same intent through the **Allowed agent types** setting in Agent 365. For more information, see [Allowed agent types](/microsoft-365/admin/manage/agent-settings#allowed-agent-types).
+As an administrator, you manage federated connector availability in the Microsoft 365 admin center. Use Agent and plugin access to allow or block connectors in bulk by publisher type, User access to set which users can use connectors, and connector-level settings to enable, disable, or stage individual connectors.
 
 ## Manage federated connector availability for your organization
 
-The federated connector management capability provides a tenant-wide toggle that allows you to:
+Agent and plugin access lets you:
 
-- **Disable all default federated connectors** in a single operation.
-- **Automatically apply the setting to future default connectors** that Microsoft releases.
-- **Selectively enable specific connectors** while keeping the global disable setting active.
-- **Reenable all connectors** to restore default behavior when needed.
+- Turn off all connectors of a publisher type (Microsoft, your organization, or external publishers) in a single step.
+- Apply that choice automatically to future connectors of that type.
+- Selectively turn on specific connectors while the bulk setting stays off.
+- Re-select the option to restore default behavior.
 
 ## Prerequisites
 
-The federated connector management capability requires the following prerequisites:
+To manage federated connectors, you need one of the following administrator roles:
 
-- **Administrator role**: Global Administrator or Search Administrator permissions
-- **PowerShell access**: Ability to run PowerShell as an administrator (CLI will be deprecated by August 25, 2026)
-- **Connector.Cmd module**: Version 2.1 or later (installed in the following steps) (CLI will be deprecated by August 25, 2026)
+- **Global Administrator**
+- **Search Administrator**
 
-## Disable the agent type used by Copilot connectors
+## Control connector availability with Agent and plugin access
 
-The [Allowed agent types](/microsoft-365/admin/manage/agent-settings#allowed-agent-types) setting provides a tenant-wide control for governing Microsoft 365 Copilot agents and connectors from a single location in the Microsoft 365 admin center. When an administrator disables the agent type used by Copilot connectors, Microsoft 365 Copilot connectors are no longer available to end users. Existing connectors remain visible to administrators for management and governance purposes, but their allowed-user scope is automatically set to **No users**, preventing end-user access.
+Agent and plugin access controls which types of agents and plugins, including connectors and MCP servers, are available in your organization.
 
-To disable the agent type used by Copilot connectors:
+1. In the Microsoft 365 admin center, go to **Agents** > **Settings** > **Agent and plugin access**.
+1. Clear the publisher types you want to block:
+   - **Allow agents and plugins built by Microsoft**
+   - **Allow agents and plugins built by your organization** (custom connectors)
+   - **Allow agents and plugins built by external publishers** (partner connectors)
+1. Select **Save**.
 
-1. In the Microsoft 365 admin center, go to [Allowed agent types](/microsoft-365/admin/manage/agent-settings#allowed-agent-types).
-1. Disable the agent type used by Microsoft 365 Copilot connectors.
-1. Save your changes.
+When you clear an option, existing connectors of that type remain visible to admins in **Copilot connectors** > **Your connections**, but their staged rollout is set to **No users**. Connectors of that type released later aren't available to users. To make a specific connector available, open it in **Your connections** and set its staged rollout to the users or groups you want.
 
-To make a specific connector available, an administrator can open that connector's settings and update its allowed-user scope to the desired users or groups. This change enables selective connector access while maintaining centralized tenant-wide governance.
+## Limit who can use connectors with User access
 
-## Install the PowerShell module (CLI will be deprecated by August 25, 2026)
+**User access** in **Agents** > **Settings** applies to all agents and plugins, including federated connectors delivered as Microsoft 365 app packages.
 
-1. Open PowerShell as an administrator.
+| Option | Effect on connectors |
+|---|---|
+| **All users** (default) | Connector-level staging decides who gets each connector. New connectors are available to all users. |
+| **Specific users or groups** | Only these users can use any connector. Connector staging can narrow but not widen this population. |
+| **No users** | No user can use connectors, regardless of connector-level settings. |
 
-1. Install the Connector.Cmd module from the PowerShell Gallery:
+**User access** doesn't turn connectors on or off; it sets the maximum population. A connector whose details pane shows **Everyone** is still unavailable to users excluded by **User access**.
 
-    ```powershell
-    Install-Module Connector.Cmd
-    ```
+## How settings combine
 
-    > [!NOTE]
-    > These steps require Connector.Cmd version 2.1 or later.
+| Control | Location | What it does for connectors |
+|---|---|---|
+| **Agent and plugin access** | **Agents** > **Settings** > **Agent and plugin access** | Allows or blocks connectors in bulk by publisher type, including future connectors. Clearing a type sets that type's connectors' staged rollout to **No users**. |
+| **User access** | **Agents** > **Settings** > **User access** | Tenant-wide ceiling on who can use any agent or plugin, including MOS connector packages. Options: **All users** (default), **Specific users or groups**, **No users**. |
+| **Enable / Disable** | **Copilot** > **Connectors** > **Your connections** | Turns an individual connector on or pauses it without removing configuration. |
+| **Staged rollout** | **Copilot** > **Connectors** > **Your connections** > **Staged rollout** | Which users or groups get an individual connector, within the **User access** population. |
+| **Tools block / unblock** | **Agents** > **Tools** | Tool-level and connector-level blocking. |
+| **Delete** | **Copilot** > **Connectors** > **Your connections** | Permanently removes a custom connector and its configuration. |
 
-1. If prompted, confirm that you want to install from the PowerShell Gallery by entering **Y**.
-
-## Configure the federated connector toggle (CLI will be deprecated by August 25, 2026)
-
-Use the `Set-FederatedConnectorToggle` cmdlet to enable or disable federated connectors across your tenant.
-
-1. In PowerShell, run the following command:
-
-    ```powershell
-    Set-FederatedConnectorToggle
-    ```
-
-1. When prompted, authenticate with your Global Administrator or Search Administrator credentials.
-
-1. Approve the requested permissions.
-
-1. The cmdlet displays the current state of the federated connector toggle and prompts you to choose an action:
-   - Select **Disable** to turn off all federated connectors.
-   - Select **Enable** to turn on all federated connectors.
-
-> [!NOTE]
-> The tenant toggle automatically applies to future federated connectors. If you disable the toggle, new connectors appear in a disabled state. If you enable the toggle, new connectors follow the default rollout behavior.
+A setting you make on an individual connector takes precedence over the bulk **Agent and plugin access** setting. **User access** always applies.
 
 ## Verify the changes
 
-After you configure the toggle, changes propagate across your organization:
-
-- Changes can take **up to 10 minutes** to take effect across all Microsoft 365 experiences.
-- You might need to refresh the Microsoft 365 admin center to see updated connector states.
-- Users might experience a brief delay before connector availability changes are reflected in their Copilot experience.
-
-To verify the current state, run `Set-FederatedConnectorToggle` again to display the current configuration before prompting for changes.
+Changes can take up to 10 minutes to take effect across Microsoft 365 experiences. Refresh the Microsoft 365 admin center to see updated connector states, including staged rollout. To confirm what users get, check **Agents** > **Settings** > **Agent and plugin access**, **Agents** > **Settings** > **User access**, and the connector's **Staged rollout** in **Your connections**, then sign in as a test user and check **Settings** > **Sources** in Copilot Chat.
 
 ## Next steps
 
-After you manage the federated connector toggle, you can:
+After you manage federated connector availability, you can:
 
 - Monitor connector usage in the Microsoft 365 admin center.
-- Selectively enable or disable individual connectors even when the global toggle is set to disable.
+- Turn on, turn off, or stage individual connectors to specific users or groups, even when a publisher type is cleared in Agent and plugin access.
 - Review user feedback to determine which connectors provide the most value to your organization.
 
 ## Frequently asked questions
 
-### If an admin previously disabled federated Copilot connectors by using the Set-FederatedConnectorToggle CLI, will they remain disabled after this rollout?
+### Does Agent and plugin access apply to federated connectors released in the future?
 
-Yes. If an admin previously disabled federated Copilot connectors by using the `Set-FederatedConnectorToggle` CLI, the setting is honored until October 20, 2026. Admins must update the **Allowed agent types** settings by then to continue this behavior after October 20, 2026.
+Yes. If you clear an option, new connectors of that type aren't available until an admin turns them on individually.
 
-### Will the Allowed agent types setting follow the same behavior as Set-FederatedConnectorToggle?
+### Can I turn on a specific connector when its publisher type is cleared?
 
-Yes. It applies to future connectors while allowing admins to selectively enable or disable individual connectors.
+Yes. Open the connector in **Copilot connectors** > **Your connections** and stage it to the users or groups you want. Availability is still limited by **User access**.
 
-### Between August 25 and October 20, if admins need to disable all federated connectors, should they manually disable each connector under Microsoft 365 admin center > Copilot > Connectors?
+### Is there a PowerShell or API option for Agent and plugin access?
 
-If the admin didn't use `Set-FederatedConnectorToggle` before August 25, they can disable all federated connectors directly by using **Allowed agent types**.
+Not currently. Use the Microsoft 365 admin center.
+
+For more questions about availability, visibility, and troubleshooting, see [Set up custom federated connectors – Frequently asked questions](/microsoft-365/copilot/connectors/frequently-asked-questions).
 
 ## Related content
 
 - [Federated Microsoft 365 Copilot connectors](federated-connectors-overview.md)
-- [Connector.Cmd in the PowerShell Gallery](https://www.powershellgallery.com/packages/Connector.Cmd/2.1)
-
