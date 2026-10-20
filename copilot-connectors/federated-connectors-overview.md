@@ -24,9 +24,6 @@ Federated connectors can be Microsoft-published or submitted by partners to Micr
 
 By using federated connectors, organizations can extend Copilot to work seamlessly with their existing tools and data to unlock more relevant and timely insights across their workflows.
 
-> [!NOTE]
-> Support for write, update, and delete actions begins rolling out in early October 2026. For availability by Copilot experience, see [Write, update, and delete actions](#write-update-and-delete-actions-coming-soon).
-
 ## What are federated connectors?
 
 Federated Copilot connectors:
@@ -199,7 +196,7 @@ The MCP server associated with the federated connector determines tool availabil
 
 The authenticated user's identity and permissions in the source system govern tool access. Users can only access information they're authorized to view and change data they're authorized to modify.
 
-Tools that create, update, or delete data require user approval. For confirmation options and tool permissions, see [Write, update, and delete actions](#write-update-and-delete-actions-coming-soon).
+Tools that create, update, or delete data require user approval. For confirmation options and tool permissions, see [Write, update, and delete actions](#write-update-and-delete-actions).
 
 Examples of read operations through dynamic tooling include:
 
@@ -211,7 +208,7 @@ Examples of read operations through dynamic tooling include:
 
 Dynamic tooling doesn't index external data into Microsoft 365.
 
-## Write, update, and delete actions (Coming soon)
+## Write, update, and delete actions
 
 With federated connectors, users can do more than retrieve information. When a connector provides the appropriate tools, users can ask Microsoft 365 Copilot to create, update, or delete information in a connected third-party system on their behalf. Users can complete work without leaving Copilot. For example, a user can turn an escalation email into an issue in a project-tracking tool, update a record in a customer relationship management (CRM) system, or add a comment to a ticket directly from Copilot Chat.
 
