@@ -23,6 +23,8 @@
     "resource": [
       {
         "files": [
+          "media/federated-connectors/static-egress-ip-addresses.json",
+          "media/federated-connectors/static-egress-ip-addresses-eu.json",
           "**/*.png",
           "**/*.jpg",
           "**/*.jpeg",
