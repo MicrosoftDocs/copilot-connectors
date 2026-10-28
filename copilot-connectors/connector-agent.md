@@ -38,7 +38,7 @@ Before you install the agent, ensure that you have the required role-based acces
 
 |Step|RBAC role|
 |:---|:---|
-|Install agent on-premises| AI administrator, Copilot admin.|
+|Install agent on-premises| Search administrator, Copilot admin.|
 |Register the app in Entra ID| Azure App admin, Azure admin.|
 |Create the service account on the target servers|See the deployment guide for the connector.|
 
