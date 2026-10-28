@@ -7,7 +7,7 @@ ms.manager: calvind
 ms.reviewer: mansipakhale
 ms.topic: how-to
 ms.localizationpriority: Medium
-ms.date: 05/01/2026
+ms.date: 10/19/2026
 ---
 
 <!-- cSpell:ignore mansipakhale PKCE -->
@@ -23,6 +23,8 @@ A custom federated connector starts with a Model Context Protocol (MCP) server t
 Before you begin, make sure you have the following items:
 
 - An **MCP server** URL with the tools you want to make available in Copilot exposed (for example, `search`, `fetch`, `query`, or tools that create, update, or delete data).
+- **Network access**
+  - If your MCP server restricts incoming traffic by source IP address, allow the [static egress IP addresses used by Microsoft 365 Copilot](federated-connectors-network-requirements.md). Static egress is enabled by default; no manifest flag is required.
 - **Admin permissions**
   - Global Administrator or AI Administrator role in the [Microsoft 365 admin center](https://admin.microsoft.com/).
   - An appropriate Microsoft Entra admin role for single sign-on (SSO) authentication.

@@ -702,6 +702,8 @@ items:
   items:
   - name: Overview
     href: federated-connectors-overview.md
+  - name: Static IP for MCP & FCC - Using APIM
+    href: federated-connectors-network-requirements.md
   - name: Manage federated connectors
     href: manage-federated-connectors.md
   - name: Admin-published federated connectors
