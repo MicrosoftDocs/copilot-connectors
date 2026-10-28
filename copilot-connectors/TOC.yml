@@ -710,6 +710,8 @@ items:
     href: admin-published-federated-connectors.md
   - name: Set up custom federated connectors
     href: set-up-custom-federated-connectors.md
+  - name: Generate a federated connector description
+    href: generate-custom-connector-description.md
   - name: Submit a federated connector
     href: submit-federated-connector.md
   - name: Terms and conditions
