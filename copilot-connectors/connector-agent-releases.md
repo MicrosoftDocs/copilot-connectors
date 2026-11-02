@@ -19,6 +19,12 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 
 To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
 
+## Version 4.0.6.0 (*November 2, 2026*)
+
+* Updated the Chromium browser version to Chromium 156 (Enterprise websites connector uses to crawl dynamic sites).
+* If your organization restricts outbound traffic, allow HTTPS access to `storage.googleapis.com`. The agent downloads the Chromium browser from this location the first time it crawls a dynamic site.
+* Security improvements, bug fixes, and reliability improvements.
+
 ## Version 4.0.5.0 (*October 13, 2026*)
 
 * Improved identity synchronization reliability and scale with enhanced incremental group and membership processing, improved handling of identity changes, and better recovery from failed writes.
