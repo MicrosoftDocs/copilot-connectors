@@ -1,14 +1,14 @@
 ---
 title: "Zoom Meetings connector"
 ms.author: jasonjoh
-author: vivg
+author: schirag
 manager: ereza
 audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.localizationpriority: medium
 description: "Set up the Zoom Meetings Microsoft 365 Copilot connector."
-ms.date: 10/05/2026
+ms.date: 11/04/2026
 ---
 
 <!-- cSpell:ignore vivg ereza -->
@@ -16,6 +16,9 @@ ms.date: 10/05/2026
 # Zoom Meetings connector
 
 The Zoom Meetings Microsoft 365 Copilot connector enables your organization to index meeting-related artifacts, such as transcripts and metadata, so meeting owners can search for the information in Microsoft 365 Copilot, agents, and Microsoft Search clients.
+
+>[!NOTE]
+>The connector indexes Zoom Meetings only. Zoom Webinar content, including webinar transcripts and webinar recordings, isn't currently supported and isn't indexed by the Zoom Meetings connector.
 
 ## Getting started
 
@@ -28,15 +31,34 @@ The Zoom Meetings Microsoft 365 Copilot connector enables your organization to i
   - Summary of several meetings with a specific participant or on a specific subject.
 - Use [semantic search in Copilot](/microsoftsearch/semantic-index-for-copilot) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
+### Supported content
+
+| Content type | Supported |
+|---|---|
+| Zoom meetings | Yes |
+| Meeting transcripts | Yes |
+| Meeting metadata | Yes |
+| Recording links | Yes |
+| Cloud recordings | Yes |
+| Zoom webinars | No |
+| Webinar transcripts | No |
+| Meeting chat | No |
+| Webinar chat | No |
+| Local recordings | No |
+
+
 ### Limitations
 
+- **Zoom Webinars aren't supported.** The connector doesn't index webinar content, including webinar transcripts, webinar recordings, and webinar chat.
+- The connector doesn't index meeting chat.
+- The connector doesn't support local recordings. Only meetings recorded to the Zoom cloud can be indexed.
 - The Microsoft 365 Copilot connector app in the Zoom Marketplace isn't currently available in the European Union (EU).
 - Zoom API rate limits can affect a full data refresh. For more information, see [Zoom rate limits](https://developers.zoom.us/docs/api/rate-limits/).
 - **Only the meeting owner can access meeting content.** The connector supports access permissions only for the original owner of a meeting in Zoom. Other participants and invitees don't see the meeting's content in Copilot or search results, even if they attended the meeting.
 
 ### Prerequisites
-
 - You must be an AI administrator for your organization's Microsoft 365 tenant.
+- To make meeting transcripts available in Copilot, turn on cloud recording and audio transcripts in Zoom. Zoom Webinars aren't supported.
 - To connect to your Zoom meetings data, you must have a paid Zoom plan (**Business** or **Enterprise**) with cloud recording enabled.
 - A Zoom account administrator must authenticate and provide consent to create the connection.
 
@@ -129,6 +151,23 @@ Adjust the default values to meet the needs of your organization. For more infor
 
 ## Troubleshooting
 
+### Frequently asked questions
+
+#### Why can't I find my webinar transcript in Copilot?
+
+Zoom Webinars aren't currently supported. The Zoom Meetings connector doesn't index webinar content, including webinar transcripts and webinar recordings. Only Zoom meetings are indexed. For more information, see [Supported content](#supported-content).
+
+#### Why isn't my Zoom meeting appearing in Copilot?
+
+Check the following conditions:
+
+- **Cloud recording is enabled.** The meeting was recorded to the Zoom cloud, not to a local computer.
+- **The transcript was generated.** Audio transcripts are turned on in Zoom, and Zoom finished processing the transcript.
+- **It's a supported meeting type.** The content is from a Zoom meeting, not a Zoom webinar.
+- **You're the meeting owner.** Only the original meeting owner (host) can see the meeting's content.
+- **Your identity is mapped.** Your Zoom email matches your Microsoft Entra ID UPN or email. For more information, see [Mapping identities](#mapping-identities).
+- **A crawl has run.** Wait for the next crawl, or start a crawl from the admin center.
+
 ### Common issues
 
 | Issue | Cause | Resolution |
@@ -136,6 +175,7 @@ Adjust the default values to meet the needs of your organization. For more infor
 | **"Invalid connection credentials"** when you select **Authorize** | The Zoom account isn't on a paid plan, or the account that signed in isn't a Zoom administrator. | Sign in with a Zoom administrator account on a Business or Enterprise plan, and then select **Authorize** again. |
 | **"Zoom meetings list is empty for the given credentials"** or **"Failed to get Zoom meetings list"** | The Zoom account doesn't have any meetings yet. | Make sure the account has at least one meeting, and then authorize again. |
 | **"This app is not currently available to EU users"** on the Zoom authorization page | The Microsoft 365 Copilot connector app in the Zoom Marketplace isn't currently available in the EU. | See [Limitations](#limitations). |
+| A webinar or webinar transcript doesn't appear in Copilot | Zoom Webinars aren't supported. | None. See [Supported content](#supported-content). |
 | A meeting doesn't appear in Copilot for a user | Only the original meeting owner can access a meeting's content. Participants don't see it. | Confirm the user is the meeting owner (host) in Zoom, and that the meeting has a cloud recording and transcript. |
 | A meeting doesn't appear in Copilot for the meeting owner | The owner's Zoom email doesn't match their Microsoft Entra ID UPN or email, or the meeting hasn't been crawled yet. | Check [Map identities](#mapping-identities). Wait for the next crawl, or start a crawl from the admin center. |
 | A full crawl takes longer than expected | Zoom API rate limits can affect a full data refresh. | Use the default incremental crawl schedule. |
