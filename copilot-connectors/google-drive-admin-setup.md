@@ -54,12 +54,22 @@ You can use an existing project you own, or create a new project. To create a pr
 
 1. Select **Create**.
 
+    After the project is created, you can also find the **Project ID** on the project settings page. On the [Manage resources](https://console.cloud.google.com/cloud-resource-manager) page, select the three-dot menu under **Actions** for your project, and then select **Settings** to view the project information.
+
+    ![Screenshot that shows the Actions menu and Settings option for a project on the Google Cloud Manage resources page.](media/google-drive-connector/project-settings.png)
+
 ## Enable required APIs
 
 Enable the following APIs in your Google Cloud project:
 
 - [Admin SDK API](https://console.developers.google.com/apis/api/admin.googleapis.com/overview?project=[PROJECT_ID])
 - [Drive API](https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=[PROJECT_ID])
+
+For each API, open the link, and then use the project selector in the upper-left corner of the Google Cloud console to select the project you created.
+
+![Screenshot that shows how to select a Google Cloud project before enabling an API.](media/google-drive-connector/select-project-for-api.png)
+
+After selecting the correct project, select **Enable** on the API page. Repeat these steps for both APIs.
 
 ![Screenshot that shows how to check the API enablement.](media/google-drive-connector/step-4.png)
 
@@ -68,10 +78,10 @@ Enable the following APIs in your Google Cloud project:
 To create a Google Cloud service account:
 
 1. Go to the [Service Accounts](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?inv=1&invt=Absc-w&supportedpurview=project) page.
-
-    ![Screenshot that shows how to create a new service account step1.](media/google-drive-connector/step-5.png)
-
 1. Select your project.
+
+    ![Screenshot that highlights the Select a project button on the Service Accounts page.](media/google-drive-connector/step-5.png)
+
 1. Select **Create Service Account**.
 
     ![Screenshot that shows how to create a new service account step2.](media/google-drive-connector/step-6.png)
@@ -82,18 +92,19 @@ To create a Google Cloud service account:
     ![Screenshot that shows how to create a new service account step3.](media/google-drive-connector/step-7.png)
 
 1. Skip **Permissions** and **Principals with access**, and then select **Done**.
-1. On the Service Accounts page, select the three-dot menu under **Actions** and select **Manage Keys**.
+1. On the Service Accounts page, note the **OAuth 2 Client ID** for use in [Add OAuth scopes to your service account](#add-oauth-scopes-to-your-service-account). Then select the three-dot menu under **Actions** and select **Manage Keys**.
 
-    ![Screenshot that shows how to get the keys step1.](media/google-drive-connector/step-8.png)
+    ![Screenshot that highlights the OAuth 2 Client ID and Manage keys option for a service account.](media/google-drive-connector/step-8.png)
 
 1. Select **Add Key** > **Create New Key**.
-1. Choose **JSON** as the key type and select **Create**.
 
     ![Screenshot that shows how to get the keys step2.](media/google-drive-connector/step-9.png)
 
-1. A private JSON key is downloaded to your computer.
+1. Choose **JSON** as the key type and select **Create**.
 
     ![Screenshot that shows how to download service account keys.](media/google-drive-connector/step-10.png)
+    
+1. A private JSON key is downloaded to your computer.
 
 ## Add OAuth scopes to your service account
 
@@ -108,7 +119,7 @@ To add OAuth scopes to your service account:
 
     ![Screenshot that shows how to add api scope step2.](media/google-drive-connector/step-12.png)
 
-1. Select **Add new** and enter the following OAuth scopes:
+1. Select **Add new**. In the **Client ID** field, enter the **OAuth 2 Client ID** you noted earlier, or follow the steps in [Get the OAuth 2.0 client ID](#get-the-oauth-20-client-id) to find it. Then enter the following OAuth scopes:
 
     - `https://www.googleapis.com/auth/admin.directory.user.readonly`
     - `https://www.googleapis.com/auth/admin.directory.group.readonly`
@@ -124,9 +135,14 @@ To add OAuth scopes to your service account:
 
 To get the client ID:
 
-1. Sign in to the [Google Cloud Platform](https://console.cloud.google.com/iam-admin/serviceaccounts?inv=1&invt=AbtJpg&project=sample-project-454709).
-1. Select your service account.
-1. Copy the **OAuth 2.0 Client ID**.
+1. Go to the [Service Accounts](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?inv=1&invt=Absc-w&supportedpurview=project) page.
+1. Select the project that contains your service account.
+
+    ![Screenshot that shows how to select a project on the Service Accounts page.](media/google-drive-connector/step-5.png)
+
+1. Find your service account in the list and copy the value in the **OAuth 2 Client ID** column.
+
+    ![Screenshot that shows the selected project and the OAuth 2 Client ID column on the Service accounts page.](media/google-drive-connector/oauth-client-id.png)
 
 ## Authentication in Microsoft 365
 
