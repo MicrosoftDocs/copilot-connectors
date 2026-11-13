@@ -8,7 +8,9 @@ audience: Admin
 ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.localizationpriority: medium
-ms.date: 04/07/2026
+ms.date: 10/26/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Deploy connectors in the Microsoft 365 admin center
@@ -263,12 +265,12 @@ For all connectors except the File share Copilot connector, you must manually co
 Some connectors, such as ServiceNow, allow you to customize the values of specific schema properties, such as **AccessURL**, to meet organizational requirements. For example, if your organization uses a custom URL for ServiceNow knowledge articles instead of the default ServiceNow URL, you can configure the **AccessURL** property to point to the correct location. Microsoft Search and Copilot responses use this customized URL.
 
 > [!NOTE]
-> To customize schema property values, you must create a new Copilot connector connection. Editing an existing connection to change schema property values isn't currently supported.
+> Support for customizing schema property values on an existing connection varies by connector. Some connectors require a new connection. Check your connector's deployment guide to confirm whether you can edit an existing connection or need to create a new one.
 
 To customize the value of a schema property:
 
-1. During connection setup, select **Custom setup** and authenticate your credentials.
-1. Before publishing the connection, open the **Content** tab and go to **Manage properties**.
+1. During connection setup, select **Custom setup** and authenticate your credentials. If the connector supports customizing property values for existing connections, you can edit the existing connection instead.
+1. Open the **Content** tab and go to **Manage properties**.
 1. In the **Properties** table, select the property you want to customize (for example, **URL**).
 1. In the side panel, locate the **Default expression** section.
 1. Enter the expression in the **New default expression** box.
