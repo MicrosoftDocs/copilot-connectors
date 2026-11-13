@@ -1,5 +1,5 @@
 ---
-ms.date: 02/17/2026
+ms.date: 11/09/2026
 title: "Manage access permissions for connectors"
 ms.author: jasonjoh
 author: jasonjoh
@@ -39,3 +39,4 @@ If the access permissions configured for the connector don't match your intended
 
 - [Deploy Microsoft 365 Copilot connectors](deployment-overview.md)
 - [Microsoft-built synced connectors](prebuilt-connectors-overview.md)
+- [Plugin access, consent, and capability-specific controls](/microsoft-365/copilot/extensibility/govern-plugins#when-a-capability-has-its-own-controls)

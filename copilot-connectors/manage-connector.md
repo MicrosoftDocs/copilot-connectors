@@ -8,7 +8,7 @@ ms.audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
 description: "Manage your Microsoft 365 Copilot connector connection state and index quota utilization."
-ms.date: 03/19/2026
+ms.date: 11/09/2026
 ---
 
 # Manage connector connections
@@ -142,3 +142,4 @@ Admins can export configuration details for the connections currently displayed 
 ## Related content
 
 - [Deploy Microsoft 365 Copilot connectors](deployment-overview.md)
+- [Review plugin dependencies before cleanup](/microsoft-365/copilot/extensibility/retire-plugin#clean-up-resources)
