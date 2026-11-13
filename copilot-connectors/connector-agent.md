@@ -8,7 +8,9 @@ ms.audience: Admin
 ms.topic: install-set-up-deploy
 ms.localizationpriority: medium
 description: "Find the steps to install the Microsoft Graph connector agent to allow you to index on-premises content via Microsoft 365 Copilot connectors."
-ms.date: 09/21/2026
+ms.date: 10/26/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Microsoft Graph connector agent
@@ -34,13 +36,19 @@ For more information, see [Execution policy](/powershell/module/microsoft.powers
 
 ### Prerequisites
 
-Before you install the agent, ensure that you have the required role-based access control (RBAC) roles for each step.
+Before you install and configure the agent, ensure that the person performing each step has the required permissions. Local Windows permissions and Microsoft Entra role-based access control (RBAC) roles serve different purposes.
 
-|Step|RBAC role|
+| Step | Required permissions or role |
 |:---|:---|
-|Install agent on-premises| Search administrator, Copilot admin.|
-|Register the app in Entra ID| Azure App admin, Azure admin.|
-|Create the service account on the target servers|See the deployment guide for the connector.|
+| Install the agent on the Windows computer | Local administrator permissions on the computer. |
+| Sign in to the agent configuration app and register the agent | AI Administrator or Search Administrator in the Microsoft 365 tenant. |
+| Register and configure the app in Microsoft Entra ID | Application Administrator or Cloud Application Administrator. |
+| Grant tenant-wide admin consent for the app's Microsoft Graph application permissions | Privileged Role Administrator. |
+| Create the service account on the target servers | See the deployment guide for the connector. |
+
+If a row lists more than one Microsoft Entra role, you need only one of those roles for that step. Different administrators can complete different steps. **Copilot admin** isn't a Microsoft Entra built-in role name; use **AI Administrator** when assigning that role. For role descriptions, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
+
+Application Administrator and Cloud Application Administrator can configure the app, but they can't grant admin consent for Microsoft Graph application permissions. Have a Privileged Role Administrator complete the one-time consent step. Use just-in-time access, such as Microsoft Entra Privileged Identity Management (PIM), to activate the role only when needed. Remove elevated access when the consent step is complete.
 
 > [!NOTE]
 > If you're installing the Microsoft Graph connector agent in a Microsoft Government cloud environment, update the configuration in:
@@ -133,9 +141,9 @@ If you're upgrading the agent from version 1.x to version 2.x:
 
 ## Create and configure an app for the agent
 
-First, sign in and note that the minimum required privilege on the account is AI administrator. The agent asks you to provide authentication details.
+To sign in to the agent configuration app and register the agent, use an account with the AI Administrator or Search Administrator role. The agent asks you to provide authentication details for an app registered in Microsoft Entra ID.
 
-To create an app and generate the required authentication details:
+To create an app and generate the required authentication details, use an account with the Application Administrator or Cloud Application Administrator role. Have a Privileged Role Administrator grant admin consent in step 8:
 
 1. Go to the [Azure portal](https://portal.azure.com) and sign in by using admin credentials for the tenant.
 
