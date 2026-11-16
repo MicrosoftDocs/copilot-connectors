@@ -708,6 +708,9 @@ items:
     href: manage-federated-connectors.md
   - name: Admin-published federated connectors
     href: admin-published-federated-connectors.md
+    items:
+    - name: Salesforce (preview)
+      href: salesforce-admin-published-federated-connector.md
   - name: Set up custom federated connectors
     href: set-up-custom-federated-connectors.md
   - name: Generate a federated connector description
