@@ -19,6 +19,18 @@ For help with installation, see [Install the agent](connector-agent.md#install-t
 
 To download the latest version of the Microsoft Graph connector agent, see the [Microsoft Graph connector agent download page](https://aka.ms/gca).
 
+## Version 4.0.7.0 (*November 17, 2026*)
+
+* Added incremental identity crawling for the Confluence On-Premises connector, enabling more efficient processing of user and group changes between full crawls.
+* Improved incremental identity crawl reliability and accuracy. Identity crawls are now scheduled correctly after scheduled and on-demand full crawls, and user and group changes are checked against the data source to prevent outdated group memberships.
+* Improved delete detection to prevent indexed content from being removed when a crawl fails because of authentication errors.
+* Improved crawl reliability. Incremental crawls resume from the correct point after an agent restart, connections no longer get stuck in an incremental crawl state after a schema update, and pausing a connection pauses all of its active crawls.
+* Improved accuracy of crawl error reporting. Stale errors are cleared after successful crawls, and items that can't be processed are reported as item errors instead of being indexed as empty content.
+* Improved OAuth token refresh for the Jira Data Center and Confluence On-Premises connectors, reducing failures during crawls, connection edits and preview when tokens expire.
+* Improved SharePoint on-premises connector crawl reliability. Document libraries with unsupported custom fields, such as Lookup columns, now crawl successfully (Lookup column values aren't indexed), and items with missing optional metadata are indexed without losing content.
+* Fixed an issue where the file share connector skipped files when content parsing returned no properties. These files are now indexed using their file metadata.
+* Security improvements, bug fixes, and reliability improvements.
+
 ## Version 4.0.6.0 (*November 2, 2026*)
 
 * Updated the Chromium browser version to Chromium 156 (Enterprise websites connector uses to crawl dynamic sites).
