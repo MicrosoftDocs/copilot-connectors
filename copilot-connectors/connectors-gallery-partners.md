@@ -7,7 +7,7 @@ ms.audience: Admin
 ms.topic: landing-page
 ms.localizationpriority: medium
 description: "Find a list of Microsoft 365 Copilot connectors built and supported by partners, organized by categories, including a description and link to each connector website."
-ms.date: 04/27/2026
+ms.date: 11/16/2026
 ---
 # Partner-built connectors gallery
 
@@ -26,6 +26,30 @@ The following partner-built connectors are certified for Microsoft 365 Copilot. 
 |Box|Box|Enables users to search for and surface their Box content from within Microsoft 365 experiences. The Box connector helps Box and Microsoft users to explore, discover, and go to the content they need when they need it.  | [Box connector](https://support.box.com/hc/articles/4403605037587) |
 |CB Insights |CB Insights|Integrate proprietary CB Insights data and insights into Microsoft 365 Copilot to generate unique insights across Microsoft 365 applications. Access data for public and private companies like funding events, business relationships, predictive outlook, and more. The CBI connector allows you to research, analyze, and share trusted, data-backed insights to bet on the right markets, source the right companies, and stay ahead of competitors, helping sales, IT, finance, and more to make informed, data-driven decisions. | [CB Insights connector](https://www.cbinsights.com/copilot-connector/) |
 |getAbstract |getAbstract|Enhances Microsoft 365 Copilot with verified business knowledge from leading experts. The getAbstract connector delivers fully indexed and licensed knowledge from domains like leadership & strategy, sales, marketing, corporate Finance, digital transformation, and more - helping employees solve business issues in the flow of work. | [getAbstract connector](https://www.getabstract.com/en/connector) |
+
+## Accounting and finance
+
+The following table lists the available accounting and finance connectors.
+
+| Connector name | Publisher | Description | Learn more |
+| --- | --- | --- | --- |
+| Aleph | Aleph | Access Aleph data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Ask the Grid | Ask the Grid | Access Ask the Grid data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Bigdata.com | Bigdata.com | Access Bigdata.com data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Daloopa | Daloopa | Access Daloopa data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Deaglo AI | Deaglo AI | Access Deaglo AI data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| FINTRX | FINTRX | Access FINTRX data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| FX Maestro | FX Maestro | Access FX Maestro data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| GlobalSource Partners | GlobalSource Partners | Access GlobalSource Partners data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Intelligo | Intelligo | Access Intelligo data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Intuit QuickBooks | Intuit QuickBooks | Access Intuit QuickBooks data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Mobula | Mobula | Access Mobula data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| PitchBook | PitchBook | Access PitchBook data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Reflexivity - Search | Reflexivity - Search | Access Reflexivity - Search data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Rillet | Rillet | Access Rillet data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Rogo | Rogo | Access Rogo data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| SwitchWize Rates | SwitchWize Rates | Access SwitchWize Rates data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Verisk Underwriting Intelligence | Verisk Underwriting Intelligence | Access Verisk Underwriting Intelligence data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Collaboration and communication
 
@@ -46,6 +70,7 @@ The following table lists the collaboration and communication connectors that ar
 |Atlassian Jira Cloud|RheinInsights|Enables the Enterprise search and Microsoft 365 connector for indexing Atlassian Jira Cloud. Reliably indexes projects, issues, issue comments, and attachments. Comes with full metadata sets, advanced processing pipelines, and full support for Atlassian Jira Cloud's permission model. | [Atlassian Jira Cloud connector](https://www.rheininsights.com/en/connectors/jira-cloud.php) |
 |Atlassian Jira Cloud |ServiceNow|Secure enterprise search connector for reliably indexing content from Atlassian Jira and intelligently searching it with Microsoft Graph. It robustly indexes projects, issues, attachments, comments, work logs, issue histories, links, and profiles from on-premises Jira instances in near real-time. The connector fully supports Atlassian Confluence’s built-in user and group management. The connector also supports Confluence installations based on Microsoft Entra ID and other directory services. | [Atlassian Jira Cloud external content connector](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/ai-search/concept/atlassian-jira-cloud-external-content-connector.html) |
 |Atlassian Jira Issues|Accenture|Extracts issues from Jira, either inside the corporate firewall or to the Jira cloud. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
+| Atlassian Rovo | Atlassian Rovo | Access Atlassian Rovo data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |CB Insights\*|CB Insights|Integrate proprietary CB Insights data and insights into Microsoft 365 Copilot to generate unique insights across Microsoft 365 applications. Access data for public and private companies like funding events, business relationships, predictive outlook, and more. The CBI connector allows you to research, analyze, and share trusted, data-backed insights to bet on the right markets, source the right companies, and stay ahead of competitors, helping sales, IT, finance, and more to make informed, data-driven decisions.<br /><br />**\*Certified for Microsoft 365 Copilot.** | [CB Insights connector](https://www.cbinsights.com/copilot-connector/) |
 |Elite |BA Insight|BA Insight’s Elite connector provides a single point of access for lawyers to access firm content and knowledge in line with Elite content using Microsoft Search. | [Elite Connector for Search](https://www.bainsight.com/connectors/elite-connector-sharepoint-azure-elasticsearch/) |
 |GitHub Enterprise Cloud|RheinInsights| Reliably indexes all repositories, versioned files, wikis, issues, or discussions from GitHub Enterprise Cloud. Comes with full metadata sets, advanced processing pipelines, and full support for GitHub Enterprise Cloud's permission model. | [GitHub Enterprise Cloud connector](https://www.rheininsights.com/en/connectors/github-enterprise-cloud.php) |
@@ -76,6 +101,7 @@ The following table lists the collaboration and communication connectors that ar
 |Slack|ServiceNow|Secure enterprise search connector for reliably indexing content from Slack and intelligently searching it with Microsoft Graph. It robustly indexes messages, threads, and shared files from all public channels from Slack in near real-time. | [Slack external content connector](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/ai-search/concept/slack-external-content-connector.html) |
 |TeamForge|Accenture|Crawls content from a TeamForge server through its SOAP services. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
 |Trello | RheinInsights | Enables the Enterprise search and Microsoft 365 connector for indexing Trello. Reliably indexes Trello boards, cards, comments, and attachments. Comes with full metadata sets, advanced processing pipelines, and full support for Trello's permission model. | [Trello connector](https://www.rheininsights.com/en/connectors/trello.php) |
+| Zoom | Zoom | Access Zoom data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Content management systems
 
@@ -87,12 +113,15 @@ The following table lists the content management systems connectors that are ava
 |Bentley AssetWise |BA Insight|The BA Insight Bentley AssetWise connector makes it possible to surface content from AssetWise into a single consolidated search index, along with content from other repositories. | [Bentley AssetWise Connector for Search](https://uplandsoftware.com/bainsight/connectors/bentley-assetwise/) |
 |CuadraSTAR|BA Insight|Crawls content in CuadraSTAR and creates a single index that makes it possible to use Microsoft Search to find relevant information within CuadraSTAR, and over 70 other supported repositories, eliminating the need to perform separate searches. | [CuadraSTAR Connector for Search](https://uplandsoftware.com/bainsight/connectors/cuadrastar/) |
 |Documentum Document Query Language (DQL)|Accenture|The Aspire Documentum Document Query Language (DQL) connector crawls content from Documentum. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
+| DocuSign | DocuSign | Access DocuSign data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |Elasticsearch|Accenture|The Elasticsearch connector crawls content from an Elastic index using a user-defined query. It can identify updates automatically or use a timestamp in the index. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
+| Guru | Guru | Access Guru data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |HP Consolidated Archive (EAS)|BA Insight|BA Insight’s HP Consolidated Archive connector securely indexes both the full text and metadata of documents in archives into various search engines, including SharePoint Search and Azure Search. It enables a single searchable result set across content from multiple repositories. It allows organizations to tap into the wealth of information accessible within Consolidated Archive, SharePoint, and other repositories, making that data instantly actionable to users through search. | [HP Consolidated Archive Connector for Search](https://uplandsoftware.com/bainsight/connectors/hp-consolidated-archive/) |
 |IBM Content Manager|BA Insight|BA Insight's IBM Content Manager Connector honors the security of source applications and provides both full and incremental crawls so the users have the latest information available to them all the time. | [IBM Content Manager Connector for Search](https://uplandsoftware.com/bainsight/connectors/ibm-content-manager/) |
 |IBM WebSphere|BA Insight|Indexes both the full text and metadata of WebSphere objects into Microsoft's search engine, enabling a single searchable result set across content from multiple repositories. It allows organizations to tap into the wealth of information accessible within Microsoft platforms and makes that data instantly actionable to users through search. | [IBM WebSphere Connector for Search](https://uplandsoftware.com/bainsight/connectors/ibm-websphere/) |
 |iManage Cloud|BA Insight|Indexes both the full text and metadata of documents in the Work workspaces into the search engine. | [iManage Cloud Connector for Search](https://uplandsoftware.com/bainsight/connectors/imanage-cloud/) |
 |KMS Lighthouse Knowledge|KMS Lighthouse|The connector bridges organizational knowledge with Microsoft's ecosystem, enabling smart search across platforms. It securely indexes content while preserving existing access controls, bringing relevant knowledge to users exactly when they need it. | [KMS Lighthouse Knowledge connector](https://kmslh.com/integrations/) |
+| Kyber | Kyber | Access Kyber data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |Lucid|Lucid Software|Find the Lucid document you need without leaving Microsoft 365. Microsoft admins can connect Lucid with Copilot connectors to surface Lucid documents right in Microsoft 365, plus set user permissions so that documents stay secure. | [Lucid connector](https://lucid.co/marketplace/0953d9f2/microsoft-graph-connector) |
 |LumApps|LumApps|Empowers employees with seamless access to knowledge and resources across both LumApps and Microsoft 365. By using LumApps, Microsoft 365 Copilot seamlessly integrates information from LumApps' intranet, news, and community posts with Microsoft 365 data like SharePoint documents and Teams conversations. It allows employees to get comprehensive answers and collaborate more effectively, all within their familiar Microsoft 365 environment. | [LumApps connector](https://www.lumapps.com/platform/integrations/microsoft-365) |
 |Microsoft SharePoint 2013|RheinInsights| Reliably indexes all SharePoint sites, pages, lists, list items, and documents. Comes with full metadata sets, advanced processing pipelines, and full support for SharePoint 2013's permission model. | [Microsoft SharePoint 2013 connector](https://www.rheininsights.com/en/connectors/sharepoint-server.php) |
@@ -104,6 +133,7 @@ The following table lists the content management systems connectors that are ava
 |OpenText Documentum|BA Insight|BA Insight’s Documentum Connector securely indexes both the full text and metadata of Documentum objects into Microsoft Search, enabling a single searchable result set across content from multiple repositories. It is unlike some other connectors that surface Documentum records with Microsoft Search one at a time for process management. | [OpenText Documentum Connector for Search](https://uplandsoftware.com/bainsight/connectors/opentext-documentum/) |
 |OpenText Documentum Cloud|BA Insight|BA Insight’s OpenText Documentum Cloud connector securely indexes both the full text and metadata of Documentum objects into the search engine, enabling a single searchable result set across content from multiple repositories. | [OpenText Documentum Cloud connector](https://uplandsoftware.com/bainsight/connectors/opentext-documentum-cloud/) |
 |OpenText Livelink/RM|BA Insight|With BA Insight's OpenText Livelink connector, users can search both Livelink and Microsoft data with a single query. Security defined in Livelink is automatically reflected in the search experience, which ensures that users only see content for which they're authorized. Ultimately, users can find everything they need in one place. | [OpenText Content Server (LiveLink) Connector for Search](https://uplandsoftware.com/bainsight/connectors/opentext-content-server/) |
+| Orbit Connector | Orbit Connector | Access Orbit Connector data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |Panopto|Panopto|The Panopto connector enables federated search results from your Panopto video library. Panopto's powerful search results include all spoken words and words on the screen in any video content ingested into Panopto in over 20 supported languages, including Teams meeting recordings and other video assets. | [Panopto connector](https://github.com/Panopto/panopto-index-connector) |
 |ProLaw|BA Insight|Connects any portal to ProLaw, enabling information from ProLaw to be surfaced while respecting the user privileges within ProLaw. | [ProLaw Connector for Search](https://uplandsoftware.com/bainsight/connectors/prolaw/) |
 |S&P Global|S&P Global|Empowers clients by integrating S&P Global data directly into their Office 365 environment. This seamless integration allows users to access and surface critical S&P Global content within their familiar Microsoft tools like Copilot, SharePoint, Outlook, and Teams. The connector provides direct links to the wealth of information available on S&P Global platforms, enhancing productivity and decision-making by bringing data to your fingertips. | [S&P Global connector](https://www.marketplace.spglobal.com/en/solutions/microsoft-graph-connector-(6a8b56b9-4c0c-4ddc-85ed-21a4648ee569)) |
@@ -120,6 +150,7 @@ The following table lists the content management systems connectors that are ava
 |Sitecore|BA Insight|BA Insight's Sitecore connector honors the security of the source system and provides both full and incremental crawls so the users have the latest information available to them all the time. | [Sitecore Connector for Search](https://uplandsoftware.com/bainsight/connectors/sitecore/) |
 |Templafy Library|Templafy|Create brand-compliant presentations with Microsoft 365 Copilot by including only company-approved assets from the Templafy library. | [Templafy Library connector](https://support.templafy.com/hc/articles/24656260075549-How-to-enable-Microsoft-Graph-Connector-for-Templafy-Image-Library) |
 |West km|BA Insight|The BA Insight West km connector supports search across transaction and litigation documents, including the creation of custom search results pages. | [West km Connector for Search](https://uplandsoftware.com/bainsight/connectors/west-km/) |
+| WorkPoint | WorkPoint | Access WorkPoint data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |Zendesk Guide|ServiceNow|Secure enterprise search connector for reliably indexing content from Zendesk Guide and intelligently searching it with Microsoft Search. It robustly indexes pages, comments, and attachments from Zendesk Guide instances in near real-time. The connector fully supports Zendesk Guide's built-in user and group management and Zendesk Guide installations based on Microsoft Entra ID and other directory services. | [Zendesk Guide external content connector](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/ai-search/concept/zendesk-guide-external-content-connector.html) |
 |Zenya|Infoland|Allows your organization to search for documents, process flows, forms, questionnaires, and information cards, which are managed in the Zenya quality and risk management solution. It’s easier than ever for joint Zenya and Microsoft users to find the content they need. | [Zenya connector](https://zenya-software.com/solutions/technical-solutions/sharepoint-online/) |
 
@@ -129,11 +160,34 @@ The following table lists the customer relationship management connectors that a
 
 |Connector name|Publisher|Description| Learn more |
 |:------ |:----------- |:----------- | :----------- |
+| Amperity | Amperity | Access Amperity data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |Egnyte|BA Insight|Supports both full and incremental crawls and indexes with high throughput. | [Egnyte Connector for Search](https://uplandsoftware.com/bainsight/connectors/egnyte/) |
+| Meridian | Meridian | Access Meridian data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |Microsoft Dynamics 365|BA Insight|BA Insight's Microsoft Dynamics 365 CRM connector supports both on-premises CRM installations and Dynamics CRM Online. | [Microsoft Dynamics 365 Connector for Search](https://uplandsoftware.com/bainsight/connectors/microsoft-dynamics-crm/) |
 |Microsoft Dynamics 365 Cloud|BA Insight|BA Insight's Microsoft Dynamics 365 (Cloud version) CRM connector establishes a secure connection to the CRM application and maps the content from the CRM schema to the search engine schema. | [Microsoft Dynamics 365 Cloud Connector for Search](https://uplandsoftware.com/bainsight/connectors/microsoft-dynamics-365-cloud/) |
 |Salesforce|Accenture|Crawls content from any Salesforce Summer '16 (version 37). The connector retrieves the supported elements using the SOAP API and the user's Salesforce Chatter feeds using the REST API. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
 |Salesforce|BA Insight|Integrates Salesforce’s Service, Sales, and Marketing Cloud with Microsoft Search, making all the content within Salesforce available to all employees through this portal. | [Salesforce Connector for Search](https://uplandsoftware.com/bainsight/connectors/salesforce/) |
+| Salesforce (preview) | Salesforce | Access Salesforce data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Success.co | Success.co | Access Success.co data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+
+## Data analytics
+
+The following table lists the available data analytics connectors.
+
+| Connector name | Publisher | Description | Learn more |
+| --- | --- | --- | --- |
+| Atlan | Atlan | Access Atlan data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Cloud Factory Connector | Cloud Factory Connector | Access Cloud Factory Connector data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Euromonitor | Euromonitor | Access Euromonitor data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Forrester | Forrester | Access Forrester data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| GetWhys MCP | GetWhys MCP | Access GetWhys MCP data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Hebbia | Hebbia | Access Hebbia data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Infor | Infor | Access Infor data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Roboflow | Roboflow | Access Roboflow data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Sight Machine | Sight Machine | Access Sight Machine data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Synthetic Data Generator - Saifs AI | Synthetic Data Generator - Saifs AI | Access Synthetic Data Generator - Saifs AI data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Third Bridge | Third Bridge | Access Third Bridge data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Woodmac Data Intelligence | Woodmac Data Intelligence | Access Woodmac Data Intelligence data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Databases
 
@@ -159,6 +213,26 @@ The following table lists the database connectors that are available.
 |Practical Law|BA Insight|The BA Insight Practical Law Connector enables users to perform searches against the Practical Law database, eliminating the need to navigate to Practical Law directly. | [Practical Law Connector for Search](https://uplandsoftware.com/bainsight/connectors/practical-law/) |
 |Relational Databases|Accenture|Crawls content from relational databases using third-party Java Database Connectivity (JDBC) drivers. Updates are identified automatically or use an update table. An SQL select statement is used to control the data submitted. Access control lists can be extracted from a returned column. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
 
+## Site design
+
+The following table lists the available site design connectors.
+
+| Connector name | Publisher | Description | Learn more |
+| --- | --- | --- | --- |
+| Figma | Figma | Access Figma data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| IcePanel | IcePanel | Access IcePanel data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Wix | Wix | Access Wix data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| WordPress.com | WordPress.com | Access WordPress.com data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+
+## IT management tools
+
+The following table lists the available IT management tool connectors.
+
+| Connector name | Publisher | Description | Learn more |
+| --- | --- | --- | --- |
+| emem | emem | Access emem data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| GitHub | GitHub | Access GitHub data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+
 ## Developer tools
 
 The following table lists the developer tools connectors that are available.
@@ -183,6 +257,7 @@ The following table lists the files and documents connectors that are available.
 |Box|BA Insight|BA Insight's Box connector makes it possible to surface content from Box in SharePoint and other portals, enabling users to get integrated search results from SharePoint and Box. | [Box Connector for Search](https://uplandsoftware.com/bainsight/connectors/box/) |
 |Box\*|Box|Enables users to search for and surface their Box content from within Microsoft 365 experiences. The Box connector helps Box and Microsoft users to explore, discover, and go to the content they need when they need it.<br /><br />**\*Certified for Microsoft 365 Copilot.** | [Box connector](https://support.box.com/hc/articles/4403605037587) |
 |Box | ServiceNow | Secure enterprise search connector for reliably indexing content from Box and intelligently searching it with Microsoft Graph. It robustly indexes files, folders, comments, users, groups, and tasks from Box in near real-time. The connector fully supports Box’s built-in user and group management. | [Box external content connector](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/ai-search/concept/box-external-content-connector.html) |
+| Dropbox | Dropbox | Access Dropbox data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |File Share|BA Insight|BA Insight's File Share connector makes it possible to surface content from File Shares (Windows, Server Message Block/CIFS) in a single consolidated search index, along with content from other repositories. | [File Share Connector for Search](https://uplandsoftware.com/bainsight/connectors/file-share/) |
 |File Share and Network Shares|RheinInsights|Enables the Enterprise search and Microsoft 365 Copilot connector for indexing file shares. Reliably indexes all files from the given file share. Comes with full metadata sets, advanced processing pipelines, supporting UI features, and full support for the respective file share's permission model. | [File Share and Network Shares connector](https://www.rheininsights.com/en/connectors/file-share.php) |
 |File System|Accenture|The File System connector crawls local file (or locally mounted) systems, traversing folders to build a complete index. It generates a signature for each item to allow incremental updates of only changed items. Each file is submitted with its metadata (size, location, last accessed, etc.). | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
@@ -195,8 +270,39 @@ The following table lists the files and documents connectors that are available.
 |Nasuni File Share|Nasuni|Integrates external file share data into Microsoft 365, enhancing search, AI-driven content discovery, and advanced analytics. This connector allows seamless indexing of Nasuni data, enabling organizations to unlock the full potential of their distributed content through a unified search experience and personalized, AI-powered insights. It supports scalability with up to 20 paths per connector and optimizes performance for large datasets. | [Nasuni File Share connector](https://www.nasuni.com/partners/alliance-cloud-partners/graph-connector/) |
 |NetApp|NetApp|The NetApp connector for Microsoft 365 Copilot lets organizations connect their NetApp ONTAP files and data to Copilot without moving or changing the original data. This works for on-premises, cloud-based (Azure, AWS, and GCP), and virtual NetApp solutions. It allows users to easily access non-Microsoft 365 data for their Copilot and Copilot Studio needs. | [NetApp connector](https://community.netapp.com/t5/Tech-ONTAP-Blogs/Announcing-the-release-of-NetApp-Connector-v1-1-for-Microsoft-365-Copilot/ba-p/457980) |
 |OData via Rest|RheinInsights|Enables the Enterprise search and Microsoft 365 Copilot connector for flexibly indexing custom data via OData over REST. Easily provide your own data via SAP API Management, Google Apigee Management, or Azure API Management. It comes with full metadata sets of the provided documents, advanced processing pipelines, and support for custom permission models, also provided via an API endpoint. | [OData via Rest](https://www.rheininsights.com/en/connectors/odata.php) |
+| PDF4me | PDF4me | Access PDF4me data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |Server Message Block (SMB) File Share|Accenture|The SMB connector crawls files and directories across shared drives. It generates a signature for each item to allow incremental updates of only changed items. Each file is submitted with its metadata and access control lists. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
 |Simple Mail Transfer Protocol (SMTP)|Accenture|The Simple Mail Transfer Protocol (SMTP) connector processes e-mails sent to it. The email and attachments are submitted with metadata such as to, from, and subject. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
+
+## Health and life sciences
+
+The following table lists the available health and life sciences connectors.
+
+| Connector name | Publisher | Description | Learn more |
+| --- | --- | --- | --- |
+| Biomni Lab | Biomni Lab | Access Biomni Lab data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| EDEN by Basecamp Research | EDEN by Basecamp Research | Access EDEN by Basecamp Research data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+
+## Legal, HR, and recruiting
+
+The following table lists the available legal, HR, and recruiting connectors.
+
+| Connector name | Publisher | Description | Learn more |
+| --- | --- | --- | --- |
+| Backdocket for Microsoft 365 Copilot | Backdocket for Microsoft 365 Copilot | Access Backdocket for Microsoft 365 Copilot data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Bloomberg Law | Bloomberg Law | Access Bloomberg Law data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Clarivate IPOne CompuMark Trademarks | Clarivate IPOne CompuMark Trademarks | Access Clarivate IPOne CompuMark Trademarks data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| DeepJudge | DeepJudge | Access DeepJudge data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Juro | Juro | Access Juro data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Laki.ai | Laki.ai | Access Laki.ai data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| LAWGUE | LAWGUE | Access LAWGUE data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Legora | Legora | Access Legora data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Samaya AI | Samaya AI | Access Samaya AI data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Smarter Drafter MCP | Smarter Drafter MCP | Access Smarter Drafter MCP data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Solved Tax & Legal | Solved Tax & Legal | Access Solved Tax & Legal data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Teamflect | Teamflect | Access Teamflect data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Thomson Reuters HighQ | Thomson Reuters HighQ | Access Thomson Reuters HighQ data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Upwork | Upwork | Access Upwork data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Human resources and recruiting
 
@@ -212,6 +318,8 @@ The following table lists the available IT service management tools connectors.
 
 |Connector name|Publisher|Description| Learn more |
 |:------ |:----------- |:----------- | :----------- |
+| DeskDirector | DeskDirector | Access DeskDirector data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Dynamics 365 Service MCP | Dynamics 365 Service MCP | Access Dynamics 365 Service MCP data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 |Git|RheinInsights|Enables the Enterprise search and Microsoft 365 Copilot connector for indexing Git repositories. Reliably indexes branches from remote GIT repositories, versioned files and commit messages. Comes with full metadata sets, and advanced processing pipelines. | [Git connector](https://www.rheininsights.com/en/connectors/git.php) |
 |GitLab |ServiceNow|Secure enterprise search connector for reliably indexing content from GitLab and intelligently searching it with Microsoft Graph. It robustly indexes projects, files, folders, commit messages, issues, and wiki pages from GitLab in near real-time. | [GitLab external content connector](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/ai-search/concept/gitlab-external-content-connector.html) |
 |LDAP|BA Insight|Enables organizations to connect to any LDAP-compliant directory and index any record from it. Organizations can filter to specific subsets of the directory and retrieve only specific fields, making it simple to search for users, contracts, or groups stored anywhere in your directory. | [LDAP Connector for Search](https://uplandsoftware.com/bainsight/connectors/ldap/) |
@@ -219,6 +327,17 @@ The following table lists the available IT service management tools connectors.
 |ServiceNow|Accenture|Crawls content from ServiceNow. | [Contact Accenture](https://www.accenture.com/in-en/services/ecosystem-partners/microsoft)|
 |ServiceNow Cloud|BA Insight|Honors the security of the source system and provides both full and incremental crawls so users have the latest information available all the time. | [ServiceNow Cloud Connector for Search](https://uplandsoftware.com/bainsight/connectors/servicenow-cloud/) |
 |Veeva Vault|BA Insight|Securely indexes both the full text and metadata of Veeva Vault objects into Microsoft Search. It enables users to retrieve a single result set for content within Veeva Vault and Microsoft 365. | [Veeva Vault Connector for Search](https://uplandsoftware.com/bainsight/connectors/veeva-vault/) |
+
+## Reference
+
+The following table lists the available reference connectors.
+
+| Connector name | Publisher | Description | Learn more |
+| --- | --- | --- | --- |
+| IANS MCP Connector | IANS MCP Connector | Access IANS MCP Connector data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| MSDS Chain | MSDS Chain | Access MSDS Chain data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Senpilot | Senpilot | Access Senpilot data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Vergabe Dashboard | Vergabe Dashboard | Access Vergabe Dashboard data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Learning
 
@@ -228,6 +347,50 @@ The following table lists the learning connectors that are available.
 |:------ |:----------- |:----------- | :----------- |
 |getAbstrac\*|getAbstract|The getAbstract Copilot connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership and strategy, sales, marketing, corporate finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work.<br /><br />**\*Certified for Microsoft 365 Copilot.** | [getAbstract connector](https://www.getabstract.com/en/connector) |
 |Go1|Go1|Go1 integration with Microsoft Search allows your employees to find and access learning from Microsoft Search, in places like the Microsoft 365 app or SharePoint. Your employees can learn directly from Microsoft Search in their normal day-to-day routine. | [Go1 connector](https://www.go1.com/integrations/microsoft) |
+| Learnster | Learnster | Access Learnster data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+
+## Productivity
+
+The following table lists the available productivity connectors.
+
+| Connector name | Publisher | Description | Learn more |
+| --- | --- | --- | --- |
+| Eventtia MCP | Eventtia MCP | Access Eventtia MCP data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Rhythms | Rhythms | Access Rhythms data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Steady | Steady | Access Steady data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+
+## Project management
+
+The following table lists the available project management connectors.
+
+| Connector name | Publisher | Description | Learn more |
+| --- | --- | --- | --- |
+| Decisions | Decisions | Access Decisions data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Kowalah | Kowalah | Access Kowalah data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Perdoo | Perdoo | Access Perdoo data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Pipefy MCP | Pipefy MCP | Access Pipefy MCP data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Ruddr | Ruddr | Access Ruddr data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Sitemate | Sitemate | Access Sitemate data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Stack | Stack | Access Stack data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Stratws | Stratws | Access Stratws data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Versatile | Versatile | Access Versatile data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+
+## Sales and marketing
+
+The following table lists the available sales and marketing connectors.
+
+| Connector name | Publisher | Description | Learn more |
+| --- | --- | --- | --- |
+| Aria | Aria | Access Aria data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Clay | Clay | Access Clay data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Conductor | Conductor | Access Conductor data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| G2 | G2 | Access G2 data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Global Database | Global Database | Access Global Database data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Marketing Intelligence - Saifs AI | Marketing Intelligence - Saifs AI | Access Marketing Intelligence - Saifs AI data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Meltwater | Meltwater | Access Meltwater data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Seismic | Seismic | Access Seismic data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Servanta | Servanta | Access Servanta data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
+| Shopify | Shopify | Access Shopify data in real time through a federated connector. | [Federated connectors overview](federated-connectors-overview.md) |
 
 ## Social networks
 

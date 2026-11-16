@@ -6,7 +6,7 @@ author: jasonjoh
 ms.author: jasonjoh
 manager: calvind
 ms.reviewer: mansipakhale
-ms.date: 10/19/2026
+ms.date: 11/16/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ms.audience: Admin
@@ -55,22 +55,22 @@ Currently, federated connectors are available for the following data sources, or
 
 | Category | Data sources |
 | --- | --- |
-| Accounting and finance | Aiwyn Tax, CB Insights, Clarity AI, D&B Finance Analytics, D&B Risk Analytics, DiligenceSquared, FactSet, FinancialReports, Fiscal.ai, Fitch Solutions, Klardaten DATEV-Connector, LSEG, Mercury, Money Forward, Moody's, Morningstar, Morningstar Credit Analytics, MT Newswires, PrivCo, Quartr, S&P Kensho, Square, Syrto, Xero, Zacks, Zoho Books |
-| Collaboration | Gmail, Linear, Miro, TeamsMaestro, Trello |
-| Content management | PandaDoc, Templafy, TextMine |
-| CRM | Clarify, HubSpot, Intercom |
-| Data analytics | Amass, ARC Advisory AI, Ask Rystad, AskPolly, Contentsquare, DecisionPoint, Dovetail, EIU, IBISWorld, IDC, Mixpanel, MoSPI, Optiq Bridge US, Polar Analytics, Pulse by PassBy, Resilinc, S&P Global Energy, Statista, Synapse.org, Tastewise, Trellis, Wolfram |
-| Site design | Canva, Cloudinary, Excalidraw, Mobbin, Trimble SketchUp, Webflow |
-| IT management tools | Apify, Clerk, Context7, Enosix, GoDaddy, GraphOS MCP Tools, Hugging Face, Jam, pg-aiguide |
-| Training and tutorial | Article Galaxy, Articulate, Articulate EU, Autodesk Product Help, Learn365, Microsoft Learn, Padlet, QuizFlight, Scite, Siemens |
-| Files and documents | Box, Egnyte |
-| Health and life sciences | BioRender, CAS Connections, ClinicalTrials.gov, CMS Coverage, CMS Drug Data, CMS NPI Registry, Consensus, Cortellis Regulatory Intelligence, FDA Safety (openFDA), NyquistAI, Open Targets, PopHIVE, SciLeads, Smarts.bio |
-| Legal + HR and recruiting | BoardWise, Courtroom5, Descrybe Legal Engine, Dice, DirectCase Legal Search, Everlaw, Gusto, Harvey, Harvey AU, Harvey EU, iManage Work, Lawstronaut, Legal Data Hunter, LegalZoom, Litera, Midpage Legal Research, NetDocuments US, Relativity, SeekOut, Teamtailor, ZipRecruiter |
-| IT service management tools | Cloudflare, Malwarebytes |
-| Reference | AllTrails, bioRxiv, Blackbaud, ChEMBL, DrugBank, eSIM Copilot, Fibre2Fashion, Granted, ICD-10 Diagnosis Codes, Kindora Funder Discovery, MedlinePlus, Melon, PubMed, RxNorm & Drug Classes (NLM), SiteTrax.io, Stable Baseline, Tavily, Viator |
-| Productivity | Airtable, DeepL MCP, Fellow.ai, Fireflies, Gamma, GoLinks, Goodnotes, Google Calendar, Google Contacts, Granola, Mem, Memoket, Notion, SlidesGPT, Taskrabbit Booking Assistance |
-| Project management | Asana, awork, Dotted, Flow Studio Cowork, Make, monday.com, Nozbe, Onplana, Quire, Smartsheet, Strety |
-| Sales and marketing | Adobe Journey Optimizer, Ahrefs, Bigmind, Crossbeam, Customer.io, Grain, HG Insights, Highspot, Local Falcon, MailerLite, Sprouts.ai |
+| Accounting and finance | Aiwyn Tax, Aleph, Ask the Grid, Bigdata.com, CB Insights, Clarity AI, D&B Finance Analytics, D&B Risk Analytics, Daloopa, Deaglo AI, DiligenceSquared, FactSet, Financial Filings, FinancialReports, FINTRX, Fiscal.ai, Fitch Solutions, FX Maestro, GlobalSource Partners, Intelligo, Intuit QuickBooks, Klardaten DATEV-Connector, LSEG, Mercury, Mobula, Money Forward, Moody's, Morningstar, Morningstar Credit Analytics, MT Newswires, PitchBook, PrivCo, Quartr, Reflexivity - Search, Rillet, Rogo, S&P Kensho, Savvly MCP, Square, SwitchWize Rates, Syrto, Verisk Underwriting Intelligence, Vista Finance (Trimble), Xero, Zacks, Zoho Books |
+| Collaboration | Atlassian Rovo, Cisco Workspaces, Gmail, Linear, Miro, Slack, TeamsMaestro, Trello, Zoom |
+| Content management | DocuSign, Experlogix Smart Flows, Guru, Kyber, Orbit Connector, PandaDoc, Templafy, TextMine, WorkPoint |
+| CRM | Amperity, Business Applications, Clarify, D365 Customer Insights MCP, HubSpot, Intercom, Meridian, Salesforce (preview), Success.co, Zoho CRM |
+| Data analytics | Amass, ARC Advisory AI, Ask Rystad, AskPolly, Atlan, CData Connect AI, Cloud Factory Connector, Comscore, Contentsquare, DecisionPoint, Dovetail, EIU, Euromonitor, Forrester, GetWhys MCP, Hebbia, IBISWorld, IDC, Infor, Kpler, Mixpanel, MoSPI, Optiq Bridge US, Orion by Gravity, Oxford Economics, Polar Analytics, Pulse by PassBy, Resilinc, Roboflow, S&P Global Energy, Sight Machine, Snowflake, Statista, Synapse.org, Synthetic Data Generator - Saifs AI, Tastewise, Third Bridge, Trellis, Wolfram, Woodmac Data Intelligence |
+| Site design | Canva, Cloudinary, Excalidraw, Figma, IcePanel, Mobbin, Trimble SketchUp, Webflow, Wix, WordPress.com |
+| IT management tools | Apify, Clerk, Context7, emem, Enosix, GitHub, GoDaddy, GraphOS MCP Tools, Hugging Face, Jam, Microsoft 365 Admin Center, MongoDB, OneIQ ICG, pg-aiguide, Windows 365 |
+| Training and tutorial | Article Galaxy, Articulate, Articulate EU, Autodesk Product Help, getAbstract, Guidde, Learn365, Learnster, Microsoft Learn, Padlet, QuizFlight, Scite, Siemens |
+| Files and documents | Box, Dropbox, Egnyte, lumin, PDF4me |
+| Health and life sciences | Benchling, Biomni Lab, BioRender, CAS Connections, ClinicalTrials.gov, CMS Coverage, CMS Drug Data, CMS NPI Registry, Consensus, Cortellis Regulatory Intelligence, EDEN by Basecamp Research, FDA Safety (openFDA), Inductive Bio, Maven Bio, NyquistAI, Open Targets, PopHIVE, SciLeads, Smarts.bio |
+| Legal + HR and recruiting | Backdocket for Microsoft 365 Copilot, Bloomberg Law, BoardWise, Clarivate IPOne CompuMark Trademarks, Courtroom5, Darwinbox, DeepJudge, Descrybe Legal Engine, Dice, DirectCase Legal Search, Everlaw, Gusto, Harvey, Harvey AU, Harvey EU, iManage Work, Juro, Laki.ai, LAWGUE, Lawstronaut, Legal Data Hunter, LegalZoom, Legora, Litera, Midpage Legal Research, NetDocuments US, Patent Connector, Red Judicial Legal, Relativity, Samaya AI, SeekOut, Smarter Drafter MCP, Solved Tax & Legal, Teamflect, Teamtailor, Thomson Reuters HighQ, Upwork, ZipRecruiter |
+| IT service management tools | Cloudflare, DeskDirector, Dynamics 365 Service MCP, Incident Management MCP, Malwarebytes, S360 Breeze, ServiceNow, Zoho Desk |
+| Reference | AllTrails, bioRxiv, Blackbaud, ChEMBL, DrugBank, eSIM Copilot, Fibre2Fashion, Granted, IANS MCP Connector, ICD-10 Diagnosis Codes, Kindora Funder Discovery, MedlinePlus, Melon, MSDS Chain, PubMed, RxNorm & Drug Classes (NLM), Senpilot, SiteTrax.io, Stable Baseline, Tavily, Vergabe Dashboard, Viator |
+| Productivity | Airtable, Cronofy, DeepL MCP, Eventtia MCP, Fellow.ai, Fireflies, Gamma, GoLinks, Goodnotes, Google Calendar, Google Contacts, Granola, IFTTT MCP Server Streamable, Mem, Memoket, Notion, Rhythms, SlidesGPT, Steady, Taskrabbit Booking Assistance, Zapier |
+| Project management | Asana, awork, Azure DevOps, Businessmap, Decisions, Dotted, Flow Studio Cowork, Kowalah, Make, monday.com, Nozbe, Onplana, Perdoo, Pipefy MCP, Quire, Ruddr, Sitemate, Smartsheet, Stack, Stratws, Strety, Versatile |
+| Sales and marketing | Adobe Journey Optimizer, Ahrefs, Aria, Bigmind, Bitly, Clay, Conductor, Crossbeam, Customer.io, G2, Global Database, Grain, HG Insights, Highspot, LeadIQ MCP, Local Falcon, MailerLite, Marketing Intelligence - Saifs AI, Meltwater, Seismic, Servanta, Shopify, Sprouts.ai, Windsor.ai, ZINT, ZoomInfo GTM MCP |
 
 ISVs use a single connector manifest and single publishing pipeline for all connector types. For more information, see [ISV success guidance](/partner-center/membership/isv-success).
 
