@@ -4,7 +4,7 @@ description: Learn how to set up, publish, and troubleshoot admin-published fede
 author: anirudhyadavMS
 ms.author: anirudhyadav
 ms.reviewer: mansipakhale
-ms.date: 10/22/2026
+ms.date: 11/16/2026
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.audience: Admin
@@ -32,6 +32,8 @@ This article explains how admin-published FCCs work, how to set one up, how to t
 
 An admin-published FCC connects Copilot to your data in real time. When a user asks Copilot a question, Copilot retrieves data directly from the specified MCP server endpoint during the query. Data is retrieved into Copilot at query time and isn't indexed or stored permanently.
 
+Admin-published FCCs can also create, update, or delete data where the connector provides those tools, with the user's approval and subject to their permissions in the source system. Supported actions vary by connector. For example, the [Salesforce connector (preview)](salesforce-admin-published-federated-connector.md) supports both read and write actions.
+
 For these connectors, the MCP endpoint URL, the authentication configuration, or both can vary from one customer organization to another, so you supply those values. Microsoft initiates the draft connector for all other values, including the connector definition, quality evaluation, security reviews, and documentation.
 
 The following table shows the settings that can be specific to your organization.
@@ -51,7 +53,7 @@ Before you set up an admin-published FCC, make sure you have the following:
 - The MCP capability enabled in the source product, following the product's own setup documentation.
 - An MCP endpoint that is publicly accessible by Copilot.
 - The authentication details your product requires, for example, an OAuth application with its client ID and client secret. Connectors that use OAuth 2.0 with Dynamic Client Registration (DCR) don't need a preregistered client.
-- An MCP server that exposes at least one read-only tool.
+- An MCP server that exposes the tools required by the connector, with the necessary permissions in the source system.
 
 ## Set up an admin-published FCC
 
@@ -81,7 +83,7 @@ Use the following table to resolve common issues.
 | Missing permissions                                                | Confirm that the connecting app or account has the required permissions in the source system.                                                                                       |
 | MCP URL validation issues                                          | Confirm that the URL matches the product's expected format and is publicly reachable.                                                                                               |
 | Connector not visible to a user                                    | Confirm that the user is in the selected audience, and wait up to 30 minutes.                                                                                                       |
-| Validation failed: no read-only tools                              | Make sure the MCP server exposes at least one tool annotated as read-only. Admin-published FCCs currently support read-only tools only.                                             |
+| Required tools unavailable                                        | Confirm that the MCP server exposes the tools required by the connector and that the signed-in user has permission to use them. Check the connector's documentation for supported actions and setup requirements. |
 | Connector not used for relevant prompts                            | Confirm that the user is in the selected audience and signed in to the source system through the connector, and that the prompt relates to data the connector's tools can retrieve. |
 
 ## Benefits
@@ -107,6 +109,7 @@ The following connectors are published as admin-published FCCs. Check the connec
 | Connector  | MCP endpoint URL format                                                                                    | Authentication                                   |
 |------------|------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
 | Benchling  | `https://<tenant>.mcp.benchling.com/mcp`                                                                   | OAuth 2.0 with Dynamic Client Registration (DCR) |
+| [Salesforce (preview)](salesforce-admin-published-federated-connector.md) | `https://api.salesforce.com/platform/mcp/v1/platform/headless-360` | OAuth 2.0 (client ID and secret) |
 | ServiceNow | `https://<servicenowinstance>.service-now.com/sncapps/mcp-server/mcp/sn_itsm_mcp_server_itsm_default`      | OAuth 2.0 (client ID and secret)                 |
 | Snowflake  | `https://{account}.snowflakecomputing.com/api/v2/databases/{database}/schemas/{schema}/mcp-servers/{name}` | OAuth 2.0 (client ID and secret)                 |
 
