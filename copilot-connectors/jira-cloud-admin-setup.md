@@ -24,7 +24,7 @@ For information about how to deploy the connector, see [Deploy the Jira Cloud co
 
 Before you begin, make sure that you meet the following prerequisites:
 
-- You must be a **Jira Cloud site admin**.
+- You must be a **Jira Cloud site admin**. Coordinate with an **organization admin** to manage account access and grant the Jira app admin role in centralized user management. The administrator changing global permissions or company-managed permission and security schemes must also have **Administer Jira** permission.
 - Confirm that Jira REST APIs are enabled and accessible.
 - Make sure that your organization allows outbound connections to Microsoft Graph connector IPs if network restrictions apply.
 - Make sure that you have access to the [Atlassian Developer Console](https://developer.atlassian.com/console/myapps/).
@@ -35,7 +35,7 @@ Before you begin, make sure that you meet the following prerequisites:
 |------|------|
 | [Identify the Jira Cloud instance URL](#identify-the-jira-cloud-instance-url) | Jira admin |
 | [Enable API access](#enable-api-access) | Jira admin |
-| [Create an account and grant permissions](#create-an-account-and-grant-permissions) | Jira admin |
+| [Create an account and grant permissions](#create-an-account-and-grant-permissions) | Jira admin, with an organization admin for account access and Jira app admin role assignment |
 | [Choose an authentication method](#choose-an-authentication-method) | Jira admin |
 | [Review profile visibility for identity mapping](#review-profile-visibility-for-identity-mapping) | Jira admin |
 | [Estimate content scope](#estimate-content-scope) | Jira admin |
@@ -67,16 +67,21 @@ To create the account:
 - Go to **Directory** > **Users**.
 - Choose **Invite users** and enter a dedicated email address, such as `jira-connector@contoso.com`.
 - Under **Products**, select **Jira Software**.
-- Don't assign admin or project admin roles unless they're required for your indexing or security trimming scenario.
+- Grant the account only the permissions required for indexing and security trimming.
 
-Grant the account the permissions required for the connector.
+Grant these permissions to the account used to authenticate the connector:
 
-| Permission | Type | Required when |
-| :--- | :--- | :--- |
-| Browse projects | Project permission | Required for all projects that you want to index. |
-| Issue level security permissions | Issue-level security | Required only if the indexed projects use issue-level security. |
-| Browse users and groups | Global permission | Required when the connector is configured to show results only to people who have access to the source data. |
-| Administer Jira | Global permission | Required when the connector is configured to show results only to people who have access to the source data. |
+> [!NOTE]
+> Atlassian's current documentation uses **spaces** for projects and **work items** for issues. Depending on your Jira interface, you might see **Space settings**, **Browse spaces**, and **Work items** instead of **Project settings**, **Browse projects**, and **Issues**.
+
+| Permission | Type | Required when | Setup steps |
+| --- | --- | --- | --- |
+| Administer Jira | Global permission | Search permissions are set to **Only people with access to this data source**. | **Organization admin:** [**Atlassian Administration**](https://admin.atlassian.com/) > **Directory** > **Users** > account > **Grant access** > **Jira Administration** > **App admin**. Select **Grant access** and keep Jira user access. In Jira, open **Settings** > **System** > **Global permissions** and confirm the account's group has **Administer Jira**. |
+| Browse users and groups | Global permission | Search permissions are set to **Only people with access to this data source**. | **Settings** > **System** > [**Global permissions**](https://support.atlassian.com/jira-cloud-administration/docs/view-grant-revoke-global-permissions-in-jira/) > **Grant Permission**. Choose **Browse users and groups** and a group containing the account, then select **Add**. |
+| Browse projects | Project permission | All projects to index. | **Company-managed:** **Space settings** > [**Permissions**](https://support.atlassian.com/jira-cloud-administration/docs/grant-or-revoke-permissions-in-a-scheme/) > **Edit permissions** > **Browse projects** > **Update**. Include the account or its group in the grants.<br>**Team-managed:** **Space settings** > [**Access**](https://support.atlassian.com/jira-software-cloud/docs/add-people-to-team-managed-projects/) > **Add people**. Add the account as **Viewer** or another role that can view issues. |
+| Issue-level security access | Issue-level access | Restricted issues to index. | **Company-managed:** **Settings** > **Work items** > **Work item security schemes** > your scheme > [**Security Levels**](https://support.atlassian.com/jira-cloud-administration/docs/grant-users-access-to-security-levels-in-a-work-item-security-scheme/) > **Add**. Include the account or its group in each required level.<br>**Team-managed:** **Space settings** > **Access**. Assign the account a role allowed to view the [restricted issues](https://support.atlassian.com/jira-software-cloud/docs/restrict-access-to-an-issue-in-a-next-gen-project/). Check existing issues separately. |
+
+To verify access, sign in as the connector account. Open an unrestricted issue in each target project and a restricted issue for each security level or restriction in scope. Confirm that each intended issue is visible before configuring ingestion.
 
 ## Choose an authentication method
 
