@@ -719,6 +719,8 @@ items:
     href: submit-federated-connector.md
   - name: Terms and conditions
     href: /legal/m365-copilot-fcc-connectors/federated-connectors-terms?toc=/microsoft-365/copilot/connectors/toc.json&bc=/microsoft-365/copilot/connectors/breadcrumb/m365-copilot-connectors/toc.json
+- name: Connectors in Work IQ APIs
+  href: connectors-in-work-iq-apis.md
 - name: Configure Microsoft 365 Copilot extension
   href: copilot-extension.md
 - name: Manage connections
