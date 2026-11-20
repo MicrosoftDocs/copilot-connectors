@@ -13,6 +13,8 @@ ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
 ---
 
+<!-- cSpell:ignore souravpoddar harshkum msecd usgovarizona usgovtexas usgovvirginia usdodcentral usdodeast -->
+
 # Deploy connectors in the Microsoft 365 admin center
 
 This article describes how to set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center. The setup process is streamlined and requires minimal input, making it easy to create connections. You can also choose a custom setup to fine-tune specific settings.
@@ -49,7 +51,6 @@ Use the following steps to deploy a connector:
 
 1. Choose **Create** to deploy the connection. The connector begins indexing content using default settings.
 
-
 :::image type="content" alt-text="Screenshot that shows Connection creation screen for ServiceNow Knowledge Copilot connector." source="media/deployment-overview/aha-setup.png" lightbox="media/deployment-overview/aha-setup.png":::
 
 > [!NOTE]
@@ -68,7 +69,6 @@ For guidance, see [Enhance Copilot discovery of connector content](enhance-copil
 
 You can customize the default values for connector settings. On the connector page in the admin center, select **Custom setup**. This option includes three tabs:
 
-
 - **Users**
 - **Content**
 - **Sync**
@@ -83,8 +83,6 @@ On the **Users** tab, under **Access Permissions**, choose whether indexed data 
 - Everyone in the organization
 
 By default, the system maps users by matching their email to `UserPrincipalName` or `Mail` in Microsoft Entra ID. In the **Map Identities** section, you can provide a custom mapping formula.
-
-
 
 ### Content tab
 
@@ -101,7 +99,6 @@ On the **Content** tab, under **Manage properties**, you can:
 Select a **Content property** from the dropdown or use the default. This property supports full-text indexing, snippet generation, language detection, and relevance ranking.
 
 Use the system-generated **ResultSnippet** property in your result type to display dynamic snippets.
-
 
 #### Aliases
 
@@ -125,13 +122,11 @@ Assign semantic labels to source properties to integrate connector data into Mic
 
 Assign a property to the **title** label.
 
-
 Incorrect mapping labels can affect search experiences. Not all labels need to have a property assigned.
 
 #### Search schema attributes
 
 Set the search schema attributes to control the search functionality of each source property. A search schema helps determine what results are displayed on the search results page and what information end users can view and access.
-
 
 Search schema attributes include options to **Query**, **Search**, **Retrieve**, and **Refine**. The following table lists the supported attributes.
 
@@ -171,17 +166,6 @@ Configure crawl frequency and timing:
 
 If you leave fields blank, the system sets the optimal crawl times by default.
 
-
-### IP firewall rules
-
-To secure access, configure your firewall to allow Copilot connector service IP ranges.
-
-| Region | Microsoft 365 Enterprise | Microsoft 365 Government |
-| ------ | ------------------------ | ------------------------ |
-| NAM | 52.250.92.252/30, 52.224.250.216/30 | 52.245.230.216/30, 20.141.117.64/30 |
-| EUR | 20.54.41.208/30, 51.105.159.88/30 | NA|
-| APC | 52.139.188.212/30, 20.43.146.44/30 | NA |
-
 ## Connector setting guidelines
 
 ### Content property
@@ -197,7 +181,6 @@ Add aliases to properties by using the **Alias** column. Aliases are friendly na
 ### Semantic labels for source properties
 
 You can assign semantic labels to source properties. Microsoft provides semantic labels that add meaning to your data and enable integration across Microsoft 365 experiences, including Copilot, enhanced search, people cards, intelligent discovery, and more.
-
 
 The following table lists the supported semantic labels and their descriptions.
 
@@ -217,14 +200,12 @@ The properties on this page are preselected based on your data source, but you c
 
 The **title** label is the most important semantic label. Map a property to this label so that your connection can participate in the [result cluster experience](/microsoftsearch/result-cluster).
 
-
 Incorrect label mappings can degrade the search experience. Not all labels require a property assignment.
 
 ### Search schema attributes
 
 > [!NOTE]
 > You can't refine properties with the **int** data type, even if they're marked as refinable.
-
 
 Search schema attributes control how each source property behaves in search. The search schema determines which results appear on the search results page and what information users can view and access.
 
@@ -239,7 +220,7 @@ Copilot connectors support the following search schema attributes.
 
 For all connectors except the File share Copilot connector, you must manually configure custom types. To enable search capabilities, map the search schema to a set of properties. The connection configuration assistant selects a default schema based on the source properties you choose, but you can modify it by selecting the appropriate attributes for each property on the search schema page.
 
-:::image type="content" alt-text="Screenshot that shows how the schema for a connector can be customized." source="media/deployment-overview/manageschema.png" lightbox="media/deployment-overview/manageschema.png":::
+:::image type="content" alt-text="Screenshot that shows how the schema for a connector can be customized." source="media/deployment-overview/manage-schema.png" lightbox="media/deployment-overview/manage-schema.png":::
 
 ### Restrictions and recommendations for search schema settings
 
@@ -278,7 +259,7 @@ To customize the value of a schema property:
 1. Select **Save changes** at the bottom of the side panel.
 1. Select **Preview data** at the top of the **Content** tab and scroll to the customized property to validate the expression.
 
-**Example**
+#### Example
 
 Assume that a ServiceNow knowledge article URL in your organization looks like this:
 
@@ -320,10 +301,11 @@ To add rules:
 1. Use **Preview data** on the **Content** tab to validate the customized expression.
 
 > [!NOTE]
+>
 > - If an item matches multiple rules, the first rule in the list is applied.
 > - URL changes take effect in Copilot results after the next scheduled full crawl.
 
-**Example**
+#### Example rule
 
 To apply a different URL expression for ServiceNow knowledge articles in the **IT** and **HR Policy** knowledge bases, set **KbKnowledgeBase** as the filter, specify `IT, HR Policy` as the value, and use an expression such as:
 
@@ -377,11 +359,24 @@ Also consider the following:
 
 If your data source uses IP firewall rules, allow access to the Copilot connectors service by permitting the following IP ranges.
 
-| Region | Microsoft 365 Enterprise | Microsoft 365 Government |
-| --- | --- | --- |
-| NAM | 52.250.92.252/30, 52.224.250.216/30 | 52.245.230.216/30, 20.141.117.64/30 |
-| EUR | 20.54.41.208/30, 51.105.159.88/30 | N/A |
-| APC | 52.139.188.212/30, 20.43.146.44/30 | N/A |
+| Region             | IPv4 ranges (count)                                             | IPv4 total | IPv6 ranges (count)                                                                                                  | IPv6 total |
+|--------------------|-----------------------------------------------------------------|------------|----------------------------------------------------------------------------------------------------------------------|------------|
+| Southeast Asia     | 4.146.109.64/26 (64) 57.155.170.128/29 (8)                      | **72**     | 2603:1040:5:25::480/122 (64)                                                                                         | **64**     |
+| Australia East     | 172.146.5.0/26 (64) 172.146.5.64/27 (32) 172.146.3.48/29 (8)    | **104**    | 2603:1010:6:1b::780/122 (64)                                                                                         | **64**     |
+| Japan East         | 4.215.35.192/26 (64)                                            | **64**     | 2603:1040:407:18::7c0/122 (64)                                                                                       | **64**     |
+| West Europe        | 74.144.181.64/26 (64) 48.209.198.16/29 (8)                      | **72**     | 2603:1020:206:37::40/122 (64)                                                                                        | **64**     |
+| South Africa North | 4.221.240.128/26 (64)                                           | **64**     | 2603:1000:104:12::540/122 (64)                                                                                       | **64**     |
+| North Europe       | 172.129.196.192/26 (64) 72.145.53.72/29 (8)                     | **72**     | 2603:1020:5:2d::480/122 (64) 2603:1020:5:2d::500/121 (128) 2603:1020:5:2d::460/123 (32) 2603:1020:5:2d::4c0/124 (16) | **240**    |
+| Switzerland North  | 172.161.116.192/26 (64)                                         | **64**     | 2603:1020:a04:12::700/122 (64)                                                                                       | **64**     |
+| Italy North        | 172.133.12.64/26 (64)                                           | **64**     | 2603:1020:1204:f::6c0/122 (64)                                                                                       | **64**     |
+| West US 2          | 172.140.135.64/26 (64) 72.154.58.80/28 (16) 72.154.58.96/29 (8) | **88**     | 2603:1030:c06:35::3c0/122 (64)                                                                                       | **64**     |
+| East US            | 172.143.13.192/26 (64) 72.152.143.80/28 (16)                    | **80**     | 2603:1030:210:4a::640/122 (64)                                                                                       | **64**     |
+| usgovarizona       | 51.55.254.64/26 (64)                                            | **64**     | 2001:489a:3604:d::4c0/122 (64)                                                                                       | **64**     |
+| usgovtexas         | 57.17.75.0/26 (64)                                              | **64**     | 2001:489a:3403:d::480/122 (64)                                                                                       | **64**     |
+| usgovvirginia      | 57.17.106.192/26 (64)                                           | **64**     | 2001:489a:3103:f::2c0/122 (64)                                                                                       | **64**     |
+| usdodcentral       | 57.17.40.192/26 (64)                                            | **64**     | 2001:489a:3203:7::540/122 (64)                                                                                       | **64**     |
+| usdodeast          | 52.181.74.64/26 (64)                                            | **64**     | 2001:489a:3303:7::400/122 (64)                                                                                       | **64**     |
+| **Total**          |                                                                 | **1,064**  |                                                                                                                      | **1,136**  |
 
 ## Related content
 
