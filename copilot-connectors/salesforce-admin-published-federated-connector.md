@@ -1,18 +1,18 @@
 ---
-title: Salesforce connector (preview)
-description: Learn how to set up the Salesforce admin-published federated connector to use live CRM data and Salesforce skills in Microsoft 365 Copilot.
+title: Salesforce connector (preview) - Copilotforce
+description: Set up Copilotforce, the Salesforce admin-published federated connector, to use live CRM data and Salesforce skills in Microsoft 365 Copilot.
 author: anirudhyadavMS
 ms.author: anirudhyadav
 ms.reviewer: mansipakhale
-ms.date: 11/16/2026
+ms.date: 11/19/2026
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.audience: Admin
 ---
 
-# Salesforce connector (preview)
+# Salesforce connector (preview) - Copilotforce
 
-<!-- cSpell:ignore anirudhyadavMS anirudhyadav mansipakhale Agentforce MEDDIC SDR PKCE Northglass -->
+<!-- cSpell:ignore anirudhyadavMS anirudhyadav mansipakhale Agentforce MEDDIC SDR PKCE Northglass Copilotforce -->
 
 **Applies to:** Microsoft 365 Copilot Chat and Copilot Cowork
 **Audience:** Microsoft 365 administrators and Salesforce administrators.
@@ -24,7 +24,7 @@ ms.audience: Admin
 
 ## Overview
 
-The Salesforce connector brings live Salesforce CRM data and Salesforce-built skills into Microsoft 365 Copilot. Administrators configure and deploy the connector by using their existing Salesforce environment and authentication setup. Microsoft and Salesforce jointly maintain the connector, skills, and quality evaluations, so organizations don't need to build or maintain a custom integration.
+The Salesforce connector, also known as Copilotforce, brings live Salesforce CRM data and Salesforce-built skills into Microsoft 365 Copilot. Administrators configure and deploy the connector by using their existing Salesforce environment and authentication setup. Microsoft and Salesforce jointly maintain the connector, skills, and quality evaluations, so organizations don't need to build or maintain a custom integration.
 
 The connector uses the Salesforce beta Model Context Protocol (MCP) server, part of Salesforce Headless 360. Copilot uses the server's tools to discover available Salesforce operations at runtime rather than relying on a fixed list of operations.
 

@@ -25,9 +25,49 @@ The following table lists common errors that can occur during connector configur
 | **Connection settings** | Unable to reach the Jira cloud service for your Jira site. | Incorrect Jira site URL. |
 | **Connection settings** | The client doesn't have permission to perform the action. | Invalid API token provided for Basic authentication. |
 | **Connection settings** | "Something went wrong" error in OAuth pop-up window. | The scopes granted to the OAuth app don't match. The mismatched scopes are listed in the pop-up window. |
+| **Configuration (data preview)** | [Failed fetching sample data](#failed-fetching-sample-data) | An Atlassian app access rule might prevent the connector's OAuth app from accessing Jira issues. |
 | **Crawl time (post-configuration)** | Can't authenticate with the data source. Verify the credentials associated with this data source are correct. | The connector account doesn't have one or more permissions required to crawl Jira. |
 | **Crawl time (post-configuration)** | You don't have permission to access this data source. You can contact the owner of this data source to request permission. | If using OAuth, the app scopes might have changed, or the app might have expired or been deleted. If using Basic authentication, the API token might have expired or been deleted. |
 | **Crawl time (post-configuration)** | Error code: 1003 - You don't have permission to access this data source. Detailed error code: 7612 | The crawl account doesn't have **Browse projects** permission for the listed project (shown in the **Item ID** column). |
+
+## Failed fetching sample data
+
+If you see **Failed fetching sample data** when previewing data during connector configuration with OAuth authentication, check whether Atlassian app access rules restrict the connector's access to Jira issues. These rules can block the OAuth app even when the account used to authenticate can open the same issues in Jira. App access restrictions are one possible cause of this error, not the only cause.
+
+### Check Atlassian app access rules
+
+Ask your **Atlassian organization admin** to complete the following steps:
+
+1. Open [Atlassian Administration](https://admin.atlassian.com/) and select the organization that owns your Jira site, such as `contoso.atlassian.net`.
+
+2. Go to **Security** > **Data protection** > **Data security policy** > **Marketplace and custom app access**. These settings are in the organization admin portal, not Jira's **Global permissions** page.
+
+3. Review the active control settings and overrides for the affected Jira projects, which might be labeled as spaces in Atlassian Administration. Check whether they block the OAuth app used by your connection: **Microsoft 365 Copilot connector - Jira** for the Microsoft-managed OAuth option, or your own app for **Customized Atlassian Jira OAuth 2.0**.
+
+   On the **Default controls** tab, **Allowed** doesn't mean that every project is accessible to apps. Check **Overrides** for **Blocked** entries, as shown in the following example.
+
+   :::image type="content" source="media/jira-cloud/atlassian-default-app-access-controls.png" alt-text="Screenshot of Default controls showing an Allowed configuration and a Blocked override for 18 projects in one Jira instance." lightbox="media/jira-cloud/atlassian-default-app-access-controls.png":::
+
+4. If a rule blocks the app and your organization approves access, select **Create draft**, or **Edit** if a draft already exists. Open the **Custom app controls** tab.
+
+5. If the app doesn't already have a custom app control, select **Add app control**, select the app used by your connection, and then select **Add**. Otherwise, review its existing control.
+
+   The following example shows **Microsoft 365 Copilot connector - Jira** listed as **Allowed** on the **Custom app controls** tab.
+
+   :::image type="content" source="media/jira-cloud/atlassian-custom-app-access-controls.png" alt-text="Screenshot of Custom app controls showing Microsoft 365 Copilot connector - Jira with its configuration set to Allowed." lightbox="media/jira-cloud/atlassian-custom-app-access-controls.png":::
+
+6. Review the draft and confirm the app's access scope; new app controls allow all Atlassian apps and spaces by default. Adjust access if needed, then select **Activate** to replace the live configuration. Saving a draft alone doesn't apply the changes.
+
+> [!NOTE]
+> Allowing individual apps through custom app controls requires Atlassian Guard Standard or Premium. Available controls depend on your subscription. For current instructions and plan requirements, see [Block Marketplace and custom app access](https://support.atlassian.com/security-and-access-policies/docs/block-app-access/).
+
+### Retry the data preview
+
+Return to the Jira Cloud connector configuration in the Microsoft 365 admin center. Confirm that the configured OAuth app is the one the admin allowed, authenticate again if prompted, and retry the data preview. Verify that sample issue data loads successfully.
+
+If the error persists, or no app access rule blocks the connector, verify the connector account's **Browse projects** permission, issue-level access, required OAuth scopes, and project and JQL filters. See [General issue resolution steps](#general-issue-resolution-steps) and [Set up the Jira Cloud service for connector ingestion](jira-cloud-admin-setup.md).
+
+Before contacting support, collect the details in [Information to collect to open a support ticket](#information-to-collect-to-open-a-support-ticket). Also include the authentication method, OAuth app name, and screenshots of the error and relevant active app access settings. Don't include passwords, API tokens, client secrets, or access tokens.
 
 ## Project or issue not crawled
 
